@@ -7,3 +7,5 @@ api = 2
 
 ; This line removes wysiwyg module entirely
 ; projects[wysiwyg] = FALSE
+
+includes[adapt_wysiwyg] = FALSE
