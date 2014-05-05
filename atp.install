@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Example install file.
+ */
+ 
+ 
+ /**
+ * Implements hook_install().
+ */
+function atp_install() {
+
+  // Enable the profile specific theme.
+  theme_enable(array('atp_theme'));
+  variable_set('theme_default', 'atp_theme');
+  
+}
