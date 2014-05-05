@@ -6,6 +6,6 @@ core = 7.x
 api = 2
 
 ; This line removes wysiwyg module entirely
-; projects[wysiwyg] = FALSE
+projects[wysiwyg] = FALSE
+libraries[ckeditor] = FALSE
 
-includes[adapt_wysiwyg] = FALSE
