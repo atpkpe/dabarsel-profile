@@ -32,3 +32,10 @@ projects[workbench][subdir] = 'contrib'
 
 projects[workbench_moderation][type] = 'module'
 projects[workbench_moderation][subdir] = 'contrib'
+
+projects[linkit][type] = 'module'
+projects[linkit][subdir] = 'contrib'
+projects[linkit][download][branch] = '7.x-3.x'
+projects[linkit][download][type] = 'git'
+projects[linkit][download][url] = 'http://git.drupal.org/project/linkit.git'
+projects[linkit][download][revision] = '83e3ee6ff3a017680a287354aaa241a3120550fa'
