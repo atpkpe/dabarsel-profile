@@ -9,3 +9,5 @@ api = 2
 projects[wysiwyg] = FALSE
 libraries[ckeditor] = FALSE
 
+projects[media][download][revision] = 'e8f9228fe759ac3cc7ecb0c9c2baa027721f467e'
+
