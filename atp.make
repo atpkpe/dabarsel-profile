@@ -18,3 +18,16 @@ projects[adapt_basetheme][download][tag] = '0.5'
 ; ATP modules
 projects[ckeditor][type] = 'module'
 projects[ckeditor][subdir] = 'contrib'
+
+projects[masquerade][type] = 'module'
+projects[masquerade][subdir] = 'contrib'
+
+projects[workbench][type] = 'module'
+projects[workbench][subdir] = 'contrib'
+
+projects[workbench_moderation][type] = 'module'
+projects[workbench_moderation][subdir] = 'contrib'
+
+; Libraries.
+libraries[ckeditor][download][type] = get
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.3.2_edit.zip
