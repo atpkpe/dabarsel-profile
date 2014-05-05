@@ -31,7 +31,3 @@ projects[workbench][subdir] = 'contrib'
 
 projects[workbench_moderation][type] = 'module'
 projects[workbench_moderation][subdir] = 'contrib'
-
-; Libraries.
-libraries[ckeditor][download][type] = get
-libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.3.2_edit.zip
