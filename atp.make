@@ -18,6 +18,10 @@ projects[adapt_basetheme][download][tag] = '0.5'
 ; ATP modules
 projects[ckeditor][type] = 'module'
 projects[ckeditor][subdir] = 'contrib'
+projects[ckeditor][download][type] = 'git'
+projects[ckeditor][download][url] = 'http://git.drupal.org/project/ckeditor.git'
+projects[ckeditor][download][revision] = '71d53bebb03fa3e7b243c7b8acf144884965cd5c'
+projects[ckeditor][patch][] = 'http://drupal.org/files/issues/ckeditor-accomodate-latest-media-changes-53.patch'
 
 projects[masquerade][type] = 'module'
 projects[masquerade][subdir] = 'contrib'
