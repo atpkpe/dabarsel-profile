@@ -2,7 +2,8 @@
 ; Override settings from adapt_core module or
 ; remove module entirely with project by setting the corresponding key to FALSE:
 
-; This line removes wysiwyg module entirely
-; projects[wysiwyg] = FALS
+core = 7.x
+api = 2
 
-projects[wysiwyg] = FALSE
+; This line removes wysiwyg module entirely
+; projects[wysiwyg] = FALSE
