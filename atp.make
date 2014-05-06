@@ -23,6 +23,8 @@ projects[ckeditor][download][type] = 'git'
 projects[ckeditor][download][url] = 'http://git.drupal.org/project/ckeditor.git'
 projects[ckeditor][download][revision] = '71d53bebb03fa3e7b243c7b8acf144884965cd5c'
 projects[ckeditor][patch][] = 'http://drupal.org/files/issues/ckeditor-accomodate-latest-media-changes-53.patch'
+projects[ckeditor][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-media-plugin.patch'
+
 ; projects[ckeditor][patch][] = 'http://drupal.org/files/issues/ckeditor-remove-external-plugin-declarations-8-alt.patch'
 
 projects[masquerade][type] = 'module'
@@ -30,9 +32,17 @@ projects[masquerade][subdir] = 'contrib'
 
 projects[workbench][type] = 'module'
 projects[workbench][subdir] = 'contrib'
+projects[workbench][download][branch] = '7.x-1.x'
+projects[workbench][download][type] = 'git'
+projects[workbench][download][url] = 'http://git.drupal.org/project/workbench.git'
+projects[workbench][download][revision] = '6856e4a5b445ee802c898d27347bb45eb44ea43e'
 
 projects[workbench_moderation][type] = 'module'
 projects[workbench_moderation][subdir] = 'contrib'
+projects[workbench_moderation][download][branch] = '7.x-1.x'
+projects[workbench_moderation][download][type] = 'git'
+projects[workbench_moderation][download][url] = 'http://git.drupal.org/project/workbench_moderation.git'
+projects[workbench_moderation][download][revision] = 'a90378de5b1aea2b095ff5613eea44f55947f514'
 
 projects[linkit][type] = 'module'
 projects[linkit][subdir] = 'contrib'
