@@ -23,9 +23,8 @@ projects[ckeditor][download][type] = 'git'
 projects[ckeditor][download][url] = 'http://git.drupal.org/project/ckeditor.git'
 projects[ckeditor][download][revision] = '71d53bebb03fa3e7b243c7b8acf144884965cd5c'
 projects[ckeditor][patch][] = 'http://drupal.org/files/issues/ckeditor-accomodate-latest-media-changes-53.patch'
-projects[ckeditor][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-media-plugin.patch'
-
-; projects[ckeditor][patch][] = 'http://drupal.org/files/issues/ckeditor-remove-external-plugin-declarations-8-alt.patch'
+;projects[ckeditor][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-media-plugin.patch'
+;projects[ckeditor][patch][] = 'http://drupal.org/files/issues/ckeditor-remove-external-plugin-declarations-8-alt.patch'
 
 projects[masquerade][type] = 'module'
 projects[masquerade][subdir] = 'contrib'
