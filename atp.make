@@ -42,7 +42,7 @@ projects[workbench_moderation][download][branch] = '7.x-1.x'
 projects[workbench_moderation][download][type] = 'git'
 projects[workbench_moderation][download][url] = 'http://git.drupal.org/project/workbench_moderation.git'
 projects[workbench_moderation][download][revision] = 'a90378de5b1aea2b095ff5613eea44f55947f514'
-projects[workbench_moderation][patch][] = 'http://drupal.org/files/issues/workbench_moderation-panelizer_revisions-1402860-44_0.patch'
+; projects[workbench_moderation][patch][] = 'http://drupal.org/files/issues/workbench_moderation-panelizer_revisions-1402860-44_0.patch'
 
 projects[scheduler][type] = 'module'
 projects[scheduler][subdir] = 'contrib'
@@ -51,3 +51,13 @@ projects[scheduler][version] = '1.2'
 projects[scheduler_workbench][type] = 'module'
 projects[scheduler_workbench][subdir] = 'contrib'
 projects[scheduler_workbench][version] = '1.2'
+
+projects[scheduler_workbench][type] = 'module'
+projects[scheduler_workbench][subdir] = 'contrib'
+projects[scheduler_workbench][download][branch] = '7.x-1.x'
+projects[scheduler_workbench][download][type] = 'git'
+projects[scheduler_workbench][download][url] = 'http://git.drupal.org/project/scheduler_workbench.git'
+projects[scheduler_workbench][download][revision] = '50c62aefc69390a66cfa111b1b70c461506d046a'
+; add possibility to schedule revisions, https://drupal.org/node/2048999
+projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/scheduler_workbench-revision_publish-707484-22.patch'
+
