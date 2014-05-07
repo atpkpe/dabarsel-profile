@@ -54,8 +54,10 @@ projects[scheduler_workbench][download][branch] = '7.x-1.x'
 projects[scheduler_workbench][download][type] = 'git'
 projects[scheduler_workbench][download][url] = 'http://git.drupal.org/project/scheduler_workbench.git'
 projects[scheduler_workbench][download][revision] = '50c62aefc69390a66cfa111b1b70c461506d046a'
-; add possibility to schedule revisions, https://drupal.org/node/2048999
+; Only allow certain states to be published by scheduler, https://drupal.org/node/1955938
 projects[scheduler_workbench][patch][] = 'http://drupal.org/files/1966814-1-scheduler_workbench-tests.patch'
+projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/1955938-22-scheduler_workbench-only_publish_approved.patch'
+; Schedule revisions, https://drupal.org/node/2048999
 projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/scheduler_workbench-revision_publish-707484-22.patch'
 
 
