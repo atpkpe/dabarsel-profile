@@ -9,10 +9,16 @@ api = 2
 projects[wysiwyg] = FALSE
 projects[adapt_wysiwyg] = FALSE
 libraries[ckeditor] = FALSE
-projects[linkit] = FALSE
 
 projects[media][download][revision] = 'e8f9228fe759ac3cc7ecb0c9c2baa027721f467e'
 projects[file_entity][download][revision] = '13fa2b0bcb73d066b996bffed9f13c6a66ed924d'
+
+projects[linkit][type] = 'module'
+projects[linkit][subdir] = 'contrib'
+projects[linkit][download][branch] = '7.x-3.x'
+projects[linkit][download][type] = 'git'
+projects[linkit][download][url] = 'http://git.drupal.org/project/linkit.git'
+projects[linkit][download][revision] = '83e3ee6ff3a017680a287354aaa241a3120550fa'
 
 projects[panelizer][type] = 'module'
 projects[panelizer][subdir] = 'contrib'
