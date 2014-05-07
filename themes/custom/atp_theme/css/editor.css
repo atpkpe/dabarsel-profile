@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 /* GRIDS */
 /* MEDIA QUERIES */
 /* GRADIENTS */
@@ -6,7 +5,7 @@
 /* FORM ELEMENTS */
 .element-invisible { display: none; }
 
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: 'Open Sans', sans-serif; color: #333333; font-size: 13px; font-weight: 400; margin: 0px; padding: 0px; }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: sans-serif; color: #333333; font-size: 13px; font-weight: 400; margin: 0px; padding: 0px; }
 
 html { height: 100%; }
 

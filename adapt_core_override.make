@@ -13,3 +13,10 @@ projects[linkit] = FALSE
 
 projects[media][download][revision] = 'e8f9228fe759ac3cc7ecb0c9c2baa027721f467e'
 projects[file_entity][download][revision] = '13fa2b0bcb73d066b996bffed9f13c6a66ed924d'
+
+projects[panelizer][type] = 'module'
+projects[panelizer][subdir] = 'contrib'
+projects[panelizer][download][branch] = '7.x-3.x'
+projects[panelizer][download][type] = 'git'
+projects[panelizer][download][url] = 'http://git.drupal.org/project/panelizer.git'
+projects[panelizer][download][revision] = '72b5e0095c51484f5c8ea1c7da136242afb9be55'
