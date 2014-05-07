@@ -1,0 +1,4 @@
+name = ATP editing
+description = Functionality related to the editor experience.
+core = 7.x
+package = ATP
