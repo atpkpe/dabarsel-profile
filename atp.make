@@ -46,7 +46,7 @@ projects[workbench_moderation][patch][] = 'http://drupal.org/files/issues/workbe
 
 projects[scheduler][type] = 'module'
 projects[scheduler][subdir] = 'contrib'
-projects[schedule][version] = '1.2'
+projects[scheduler][version] = '1.2'
 
 projects[scheduler_workbench][type] = 'module'
 projects[scheduler_workbench][subdir] = 'contrib'

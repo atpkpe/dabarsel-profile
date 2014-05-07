@@ -2,13 +2,15 @@ name = atp
 description = atp
 core = 7.x
 
-; Core dependencies
-
 ; Adapt install module dependencies
 dependencies[] = adapt_core
 dependencies[] = adapt_media
 dependencies[] = adapt_wysiwyg
 
 ; Project dependencies
-
-; Project submodule dependencies
+dependencies[] = ckeditor
+dependencies[] = masquerade
+dependencies[] = workbench
+dependencies[] = workbench_moderation
+dependencies[] = scheduler
+dependencies[] = scheduler_workbench
