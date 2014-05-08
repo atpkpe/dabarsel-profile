@@ -16,6 +16,20 @@ projects[adapt_basetheme][download][url] = 'https://github.com/adaptdk/adapt_bas
 projects[adapt_basetheme][download][tag] = '0.5'
 
 ; ATP modules
+projects[i18n][type] = 'module'
+projects[i18n][subdir] = 'contrib'
+projects[i18n][download][branch] = '7.x-1.x'
+projects[i18n][download][type] = 'git'
+projects[i18n][download][url] = 'http://git.drupal.org/project/i18n.git'
+projects[i18n][download][revision] = '76b371ed1ff617f19bb4d47ba55a650b41febcab'
+
+projects[i18n_menu_overview][type] = 'module'
+projects[i18n_menu_overview][subdir] = 'contrib'
+projects[i18n_menu_overview][download][branch] = '7.x-3.x'
+projects[i18n_menu_overview][download][type] = 'git'
+projects[i18n_menu_overview][download][url] = 'http://git.drupal.org/project/i18n_menu_overview.git'
+projects[i18n_menu_overview][download][revision] = '07d0b07ddc9b7b6c7943d302a7b9d883ceffaa10'
+
 projects[ckeditor][type] = 'module'
 projects[ckeditor][subdir] = 'contrib'
 projects[ckeditor][download][branch] = '7.x-1.x'
