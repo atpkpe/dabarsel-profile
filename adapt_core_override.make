@@ -8,6 +8,7 @@ api = 2
 ; This line removes wysiwyg module entirely
 projects[wysiwyg] = FALSE
 projects[adapt_wysiwyg] = FALSE
+projects[menu_trail_by_path] = FALSE
 libraries[ckeditor] = FALSE
 
 projects[media][download][revision] = 'e8f9228fe759ac3cc7ecb0c9c2baa027721f467e'
