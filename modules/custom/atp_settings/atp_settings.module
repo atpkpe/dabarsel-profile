@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP settings feature.
+ */
+
+include_once 'atp_settings.features.inc';
