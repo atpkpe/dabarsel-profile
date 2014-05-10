@@ -23,10 +23,11 @@ function atp_page_field_group_info() {
     'label' => 'Content',
     'weight' => '0',
     'children' => array(
-      0 => 'field_page_manchet',
-      1 => 'field_page_body',
-      2 => 'field_page_image',
-      3 => 'title',
+      0 => 'field_page_body',
+      1 => 'field_page_image',
+      2 => 'field_page_manchet',
+      3 => 'language',
+      4 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

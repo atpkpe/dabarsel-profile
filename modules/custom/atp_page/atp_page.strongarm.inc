@@ -34,6 +34,9 @@ function atp_page_strongarm() {
         'xmlsitemap' => array(
           'weight' => '5',
         ),
+        'language' => array(
+          'weight' => '2',
+        ),
       ),
       'display' => array(),
     ),

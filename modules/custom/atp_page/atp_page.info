@@ -1,5 +1,5 @@
 name = ATP page
-description = Page content type
+description = Page related settings
 core = 7.x
 package = ATP
 dependencies[] = ctools
