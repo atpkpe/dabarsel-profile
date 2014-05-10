@@ -5,11 +5,20 @@
 core = 7.x
 api = 2
 
-; This line removes wysiwyg module entirely
-projects[wysiwyg] = FALSE
-projects[adapt_wysiwyg] = FALSE
+; This line removes menu_trail_by_path module entirely
 projects[menu_trail_by_path] = FALSE
-libraries[ckeditor] = FALSE
+
+projects[wysiwyg][type] = 'module'
+projects[wysiwyg][subdir] = 'contrib'
+projects[wysiwyg][download][branch] = '7.x-2.x'
+projects[wysiwyg][download][type] = 'git'
+projects[wysiwyg][download][url] = 'http://git.drupal.org/project/wysiwyg.git'
+projects[wysiwyg][download][revision] = '52e2675b9dc92d8d71ac421d59e12a7f5b53ca68'
+
+libraries[ckeditor][directory_name] = ckeditor
+libraries[ckeditor][download][type] = file
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.0_edit.zip
+libraries[ckeditor][type] = library
 
 projects[media][download][revision] = 'e8f9228fe759ac3cc7ecb0c9c2baa027721f467e'
 projects[file_entity][download][revision] = '13fa2b0bcb73d066b996bffed9f13c6a66ed924d'

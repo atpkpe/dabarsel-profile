@@ -30,16 +30,6 @@ projects[i18n_menu_overview][download][type] = 'git'
 projects[i18n_menu_overview][download][url] = 'http://git.drupal.org/project/i18n_menu_overview.git'
 projects[i18n_menu_overview][download][revision] = '07d0b07ddc9b7b6c7943d302a7b9d883ceffaa10'
 
-projects[ckeditor][type] = 'module'
-projects[ckeditor][subdir] = 'contrib'
-projects[ckeditor][download][branch] = '7.x-1.x'
-projects[ckeditor][download][type] = 'git'
-projects[ckeditor][download][url] = 'http://git.drupal.org/project/ckeditor.git'
-projects[ckeditor][download][revision] = '71d53bebb03fa3e7b243c7b8acf144884965cd5c'
-projects[ckeditor][patch][] = 'http://drupal.org/files/issues/ckeditor-accomodate-latest-media-changes-53.patch'
-;projects[ckeditor][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-media-plugin.patch'
-;projects[ckeditor][patch][] = 'http://drupal.org/files/issues/ckeditor-remove-external-plugin-declarations-8-alt.patch'
-
 projects[masquerade][type] = 'module'
 projects[masquerade][subdir] = 'contrib'
 
