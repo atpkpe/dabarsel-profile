@@ -64,7 +64,7 @@ function atp_settings_strongarm() {
     'name' => 'Danish',
     'native' => 'Dansk',
     'direction' => '0',
-    'enabled' => 1,
+    'enabled' => '1',
     'plurals' => '2',
     'formula' => '($n!=1)',
     'domain' => '',
@@ -309,7 +309,6 @@ function atp_settings_strongarm() {
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
     'file' => TRUE,
-    'node' => TRUE,
     'user' => TRUE,
   );
   $export['path_alias_whitelist'] = $strongarm;

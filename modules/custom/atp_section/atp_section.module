@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP section feature.
+ */
+
+include_once 'atp_section.features.inc';

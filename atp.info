@@ -12,6 +12,7 @@ dependencies[] = adapt_wysiwyg
 
 ; Project dependencies
 dependencies[] = link
+dependencies[] = diff
 dependencies[] = masquerade
 dependencies[] = workbench
 dependencies[] = workbench_moderation
@@ -27,4 +28,6 @@ dependencies[] = atp_settings
 dependencies[] = atp_structure
 dependencies[] = atp_workflow
 dependencies[] = atp_page
+dependencies[] = atp_section
+dependencies[] = atp_file
 dependencies[] = atp_permissions
