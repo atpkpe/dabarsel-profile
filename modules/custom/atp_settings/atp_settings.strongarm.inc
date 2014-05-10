@@ -65,12 +65,12 @@ function atp_settings_strongarm() {
     'native' => 'Dansk',
     'direction' => '0',
     'enabled' => 1,
-    'plurals' => 2,
+    'plurals' => '2',
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => '',
-    'weight' => -9,
-    'javascript' => '',
+    'weight' => '-10',
+    'javascript' => 'rM8fkA5um0OxF0dPWIM-ly7127aLdUvwKsNbWcGGpis',
   );
   $export['language_default'] = $strongarm;
 

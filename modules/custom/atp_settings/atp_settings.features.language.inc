@@ -21,7 +21,7 @@ function atp_settings_locale_default_languages() {
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => '',
-    'weight' => -9,
+    'weight' => -10,
   );
   // Exported language: en.
   $languages['en'] = array(
@@ -34,7 +34,7 @@ function atp_settings_locale_default_languages() {
     'formula' => '',
     'domain' => '',
     'prefix' => 'en',
-    'weight' => -10,
+    'weight' => -9,
   );
   return $languages;
 }

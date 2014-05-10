@@ -11,12 +11,14 @@ dependencies[] = adapt_media
 dependencies[] = adapt_wysiwyg
 
 ; Project dependencies
+dependencies[] = link
 dependencies[] = masquerade
 dependencies[] = workbench
 dependencies[] = workbench_moderation
 dependencies[] = scheduler
 dependencies[] = scheduler_workbench
 dependencies[] = i18n
+dependencies[] = i18n_node
 dependencies[] = i18n_menu
 dependencies[] = i18n_menu_overview
 
