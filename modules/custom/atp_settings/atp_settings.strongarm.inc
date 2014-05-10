@@ -34,6 +34,20 @@ function atp_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_menu_custom';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_menu_custom'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_menu_links';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_menu_links'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_string_allowed_formats';
   $strongarm->value = array(
     'filtered_html' => 'filtered_html',
@@ -70,7 +84,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'rM8fkA5um0OxF0dPWIM-ly7127aLdUvwKsNbWcGGpis',
+    'javascript' => 'B0JL6anEaKsnj1yESbYMOcQDRghoz5YouK1hhDpuRKg',
   );
   $export['language_default'] = $strongarm;
 
