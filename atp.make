@@ -7,6 +7,7 @@ projects[adapt_core][subdir] = 'global'
 projects[adapt_core][download][type] = 'git'
 projects[adapt_core][download][url] = 'https://github.com/adaptdk/adapt_core.git'
 projects[adapt_core][download][tag] = '1.5'
+projects[menu_trail_by_path] = FALSE
 
 ; Adapt Basetheme
 projects[adapt_basetheme][type] = 'theme'
