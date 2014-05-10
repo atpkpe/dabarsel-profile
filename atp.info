@@ -2,6 +2,9 @@ name = atp
 description = atp
 core = 7.x
 
+; Core submodules
+dependencies[] = translation
+
 ; Adapt install module dependencies
 dependencies[] = adapt_core
 dependencies[] = adapt_media
