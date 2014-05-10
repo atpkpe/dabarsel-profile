@@ -11,7 +11,6 @@ dependencies[] = adapt_media
 dependencies[] = adapt_wysiwyg
 
 ; Project dependencies
-dependencies[] = adminimal_theme
 dependencies[] = link
 dependencies[] = masquerade
 dependencies[] = workbench
