@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP data deployment feature.
+ */
+
+include_once 'atp_data_deployment.features.inc';

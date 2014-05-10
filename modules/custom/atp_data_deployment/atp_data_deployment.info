@@ -1,0 +1,13 @@
+name = ATP data deployment
+core = 7.x
+package = ATP
+dependencies[] = ctools
+dependencies[] = deploy
+dependencies[] = strongarm
+features[ctools][] = deploy:deploy_plans:1
+features[ctools][] = strongarm:strongarm:1
+features[deploy_plans][] = atp_test_content
+features[features_api][] = api:2
+features[uuid_entities][] = atp_test_content
+features[variable][] = site_frontpage
+project path = profiles/atp/modules/custom
