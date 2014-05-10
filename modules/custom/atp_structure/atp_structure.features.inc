@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * atp_settings.features.inc
+ * atp_structure.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function atp_settings_ctools_plugin_api($module = NULL, $api = NULL) {
+function atp_structure_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP structure feature.
+ */
+
+include_once 'atp_structure.features.inc';
