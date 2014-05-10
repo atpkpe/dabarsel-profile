@@ -20,7 +20,7 @@ function atp_settings_locale_default_languages() {
     'plurals' => 2,
     'formula' => '($n!=1)',
     'domain' => '',
-    'prefix' => 'da',
+    'prefix' => '',
     'weight' => -9,
   );
   // Exported language: en.
