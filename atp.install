@@ -11,8 +11,8 @@
 function atp_install() {
 
   // Enable the profile specific theme.
-  theme_enable(array('atp_theme'));
-  theme_enable(array('adminimal'));
+  theme_enable(array('atp_theme','adminimal'));
+  theme_disable(array('bartik'));
   variable_set('theme_default', 'atp_theme');
   
   // Disables the menu_trail_by_path module
