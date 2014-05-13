@@ -65,5 +65,12 @@ projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/1955938
 ; Schedule revisions, https://drupal.org/node/2048999
 projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/scheduler_workbench-revision_publish-707484-22.patch'
 
-
+projects[menu_view_unpublished][type] = 'module'
+projects[menu_view_unpublished][subdir] = 'contrib'
+projects[menu_view_unpublished][download][branch] = '7.x-1.x'
+projects[menu_view_unpublished][download][type] = 'git'
+projects[menu_view_unpublished][download][url] = 'http://git.drupal.org/project/menu_view_unpublished.git'
+projects[menu_view_unpublished][download][revision] = '14a55f40120874814fe7bd4acc44a2548801296d'
+; Add class to menu items, https://drupal.org/node/1801660
+projects[menu_view_unpublished][patch][] = 'https://drupal.org/files/issues/node-unpublishded-class-to-menus-1801660-1.patch'
 

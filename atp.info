@@ -22,6 +22,7 @@ dependencies[] = i18n
 dependencies[] = i18n_node
 dependencies[] = i18n_menu
 dependencies[] = i18n_menu_overview
+dependencies[] = menu_view_unpublished
 
 ; Project features
 dependencies[] = atp_settings
