@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * atp_page.features.field_base.inc
+ * atp_news.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function atp_page_field_default_field_bases() {
+function atp_news_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_page_body'
-  $field_bases['field_page_body'] = array(
+  // Exported field_base: 'field_news_body'
+  $field_bases['field_news_body'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_page_body',
+    'field_name' => 'field_news_body',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -37,13 +37,48 @@ function atp_page_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_page_image'
-  $field_bases['field_page_image'] = array(
+  // Exported field_base: 'field_news_categories'
+  $field_bases['field_news_categories'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_news_categories',
+    'foreign keys' => array(
+      'tid' => array(
+        'columns' => array(
+          'tid' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
+    ),
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'news_categories',
+          'parent' => 0,
+        ),
+      ),
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_news_image'
+  $field_bases['field_news_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_page_image',
+    'field_name' => 'field_news_image',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -67,13 +102,13 @@ function atp_page_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_page_summary'
-  $field_bases['field_page_summary'] = array(
+  // Exported field_base: 'field_news_summary'
+  $field_bases['field_news_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_page_summary',
+    'field_name' => 'field_news_summary',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(

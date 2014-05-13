@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP news feature.
+ */
+
+include_once 'atp_news.features.inc';

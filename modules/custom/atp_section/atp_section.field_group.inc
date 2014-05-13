@@ -24,7 +24,7 @@ function atp_section_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_section_body',
-      1 => 'field_section_manchet',
+      1 => 'field_section_summary',
       2 => 'language',
       3 => 'title',
     ),

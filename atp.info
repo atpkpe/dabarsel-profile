@@ -12,6 +12,8 @@ dependencies[] = adapt_wysiwyg
 
 ; Project dependencies
 dependencies[] = link
+dependencies[] = date
+dependencies[] = date_popup
 dependencies[] = diff
 dependencies[] = masquerade
 dependencies[] = workbench
@@ -21,6 +23,7 @@ dependencies[] = scheduler_workbench
 dependencies[] = i18n
 dependencies[] = i18n_node
 dependencies[] = i18n_menu
+dependencies[] = i18n_taxonomy
 dependencies[] = i18n_menu_overview
 dependencies[] = menu_view_unpublished
 
@@ -30,5 +33,7 @@ dependencies[] = atp_structure
 dependencies[] = atp_workflow
 dependencies[] = atp_page
 dependencies[] = atp_section
+dependencies[] = atp_news
+dependencies[] = atp_slide
 dependencies[] = atp_file
 dependencies[] = atp_permissions

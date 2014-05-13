@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP slide feature.
+ */
+
+include_once 'atp_slide.features.inc';

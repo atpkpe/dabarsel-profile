@@ -1,24 +1,24 @@
 <?php
 /**
  * @file
- * atp_page.features.field_instance.inc
+ * atp_news.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function atp_page_field_default_field_instances() {
+function atp_news_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-field_page_body'
-  $field_instances['node-page-field_page_body'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-news-field_news_body'
+  $field_instances['node-news-field_news_body'] = array(
+    'bundle' => 'news',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(
           'field_wrapper' => 0,
@@ -36,7 +36,7 @@ function atp_page_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_page_body',
+    'field_name' => 'field_news_body',
     'label' => 'Body',
     'required' => 0,
     'settings' => array(
@@ -59,14 +59,55 @@ function atp_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_page_image'
-  $field_instances['node-page-field_page_image'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-news-field_news_categories'
+  $field_instances['node-news-field_news_categories'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_news_categories',
+    'label' => 'News categories',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_news_image'
+  $field_instances['node-news-field_news_image'] = array(
+    'bundle' => 'news',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
         'module' => 'image',
         'settings' => array(
           'field_wrapper' => 0,
@@ -86,13 +127,13 @@ function atp_page_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_page_image',
+    'field_name' => 'field_news_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => 'images',
+      'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -127,9 +168,9 @@ function atp_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_page_summary'
-  $field_instances['node-page-field_page_summary'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-news-field_news_summary'
+  $field_instances['node-news-field_news_summary'] = array(
+    'bundle' => 'news',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -143,7 +184,7 @@ function atp_page_field_default_field_instances() {
           'label_wrapper' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -153,7 +194,7 @@ function atp_page_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_page_summary',
+    'field_name' => 'field_news_summary',
     'label' => 'Summary',
     'required' => 0,
     'settings' => array(
@@ -180,6 +221,7 @@ function atp_page_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Image');
+  t('News categories');
   t('Summary');
 
   return $field_instances;

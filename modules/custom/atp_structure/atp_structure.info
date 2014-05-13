@@ -13,7 +13,6 @@ features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-footer
 features[menu_custom][] = menu-top
-features[page_manager_handlers][] = site_template_panel_context
 features[variable][] = i18n_menu_overview_main-menu
 features[variable][] = i18n_menu_overview_menu-footer
 features[variable][] = i18n_menu_overview_menu-top

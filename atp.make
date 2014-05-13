@@ -74,3 +74,6 @@ projects[menu_view_unpublished][download][revision] = '14a55f40120874814fe7bd4ac
 ; Add class to menu items, https://drupal.org/node/1801660
 projects[menu_view_unpublished][patch][] = 'https://drupal.org/files/issues/node-unpublishded-class-to-menus-1801660-1.patch'
 
+projects[date][type] = 'module'
+projects[date][subdir] = 'contrib'
+projects[date][version] = '2.7'
