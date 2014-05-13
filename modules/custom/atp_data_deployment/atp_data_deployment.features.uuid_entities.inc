@@ -17,6 +17,10 @@ function atp_data_deployment_uuid_default_entities() {
       'cause' => FALSE,
     ),
     'comment' => 0,
+    'field_section_body' => array(),
+    'field_section_manchet' => array(),
+    'field_section_related' => array(),
+    'field_section_slides' => array(),
     'language' => 'da',
     'log' => 'Created by adaptadmin.',
     'path' => array(
