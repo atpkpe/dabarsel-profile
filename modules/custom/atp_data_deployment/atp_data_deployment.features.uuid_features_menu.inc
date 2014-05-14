@@ -1,0 +1,132 @@
+<?php
+/**
+ * @file
+ * atp_data_deployment.features.uuid_features_menu.inc
+ */
+
+/**
+ * Implements hook_menu_default_uuid_features_menu().
+ */
+function atp_data_deployment_menu_default_uuid_features_menu() {
+  $menu_uuid_links = array();
+
+  // Exported menu link: 004c07fd-c300-4cc7-9874-8eeca0070201
+  $menu_uuid_links['004c07fd-c300-4cc7-9874-8eeca0070201'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'Resultater & rapporter',
+    'options' => array(
+      'node_type' => 'section',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '004c07fd-c300-4cc7-9874-8eeca0070201',
+    'uuid_path' => 'node/a34caed2-b478-496a-9e16-4ed60706a280',
+  );
+  // Exported menu link: 53cc40ed-2782-48ca-94f6-6987f84679e4
+  $menu_uuid_links['53cc40ed-2782-48ca-94f6-6987f84679e4'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'Job',
+    'options' => array(
+      'node_type' => 'section',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => '53cc40ed-2782-48ca-94f6-6987f84679e4',
+    'uuid_path' => 'node/126c9a15-3172-4e21-9a34-8194fc363ca2',
+  );
+  // Exported menu link: 9d1fc520-d3ae-4414-bacd-56e1fabd3b54
+  $menu_uuid_links['9d1fc520-d3ae-4414-bacd-56e1fabd3b54'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'Om ATP',
+    'options' => array(
+      'node_type' => 'section',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'uuid' => '9d1fc520-d3ae-4414-bacd-56e1fabd3b54',
+    'uuid_path' => 'node/242906e5-3663-4679-9564-399ec3fd5431',
+  );
+  // Exported menu link: bbd725b6-ce67-42ed-b9d1-322f36117dd4
+  $menu_uuid_links['bbd725b6-ce67-42ed-b9d1-322f36117dd4'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'Presse',
+    'options' => array(
+      'node_type' => 'section',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => 'bbd725b6-ce67-42ed-b9d1-322f36117dd4',
+    'uuid_path' => 'node/2074d978-c018-4a38-9958-a1319fb23ed1',
+  );
+  // Exported menu link: c19ad1b7-cda9-4798-bda7-1a43b59d0322
+  $menu_uuid_links['c19ad1b7-cda9-4798-bda7-1a43b59d0322'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'I fokus',
+    'options' => array(
+      'node_type' => 'section',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => 'c19ad1b7-cda9-4798-bda7-1a43b59d0322',
+    'uuid_path' => 'node/b1f6ffd9-177e-4808-8fb0-73e718679b17',
+  );
+  // Exported menu link: e50f0574-2730-4e7d-bae3-d3a7edad891e
+  $menu_uuid_links['e50f0574-2730-4e7d-bae3-d3a7edad891e'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'Samfundsansvar',
+    'options' => array(
+      'node_type' => 'section',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => 'e50f0574-2730-4e7d-bae3-d3a7edad891e',
+    'uuid_path' => 'node/1b92d8ff-afeb-455f-a1bd-91fe74393f25',
+  );
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('I fokus');
+  t('Job');
+  t('Om ATP');
+  t('Presse');
+  t('Resultater & rapporter');
+  t('Samfundsansvar');
+
+  return $menu_uuid_links;
+}

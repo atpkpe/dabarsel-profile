@@ -13,332 +13,8 @@ function atp_data_deployment_uuid_default_entities() {
   $entities['atp_test_content'][] = (object) array(
     '__metadata' => array(
       'type' => 'node',
-      'uri' => 'node/ed1f8db3-78b8-41b7-a586-7ee1781e2cf8',
-      'cause' => FALSE,
-    ),
-    'comment' => 0,
-    'field_component_body' => array(),
-    'field_component_image' => array(),
-    'field_component_link' => array(
-      'und' => array(
-        0 => array(
-          'attributes' => array(),
-          'title' => 'Læs mere her',
-          'url' => 'http://www.adapt.dk',
-        ),
-      ),
-    ),
-    'field_component_summary' => array(
-      'und' => array(
-        0 => array(
-          'format' => 'filtered_html',
-          'value' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat.</p>',
-        ),
-      ),
-    ),
-    'language' => 'da',
-    'log' => 'Created by adaptadmin.',
-    'path' => array(
-      'pid' => NULL,
-      'source' => 'node/1',
-      'alias' => '',
-      'language' => 'da',
-    ),
-    'promote' => 0,
-    'rdf_mapping' => array(
-      'rdftype' => array(
-        0 => 'sioc:Item',
-        1 => 'foaf:Document',
-      ),
-      'title' => array(
-        'predicates' => array(
-          0 => 'dc:title',
-        ),
-      ),
-      'created' => array(
-        'predicates' => array(
-          0 => 'dc:date',
-          1 => 'dc:created',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-      'changed' => array(
-        'predicates' => array(
-          0 => 'dc:modified',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-      'body' => array(
-        'predicates' => array(
-          0 => 'content:encoded',
-        ),
-      ),
-      'uid' => array(
-        'predicates' => array(
-          0 => 'sioc:has_creator',
-        ),
-        'type' => 'rel',
-      ),
-      'name' => array(
-        'predicates' => array(
-          0 => 'foaf:name',
-        ),
-      ),
-      'comment_count' => array(
-        'predicates' => array(
-          0 => 'sioc:num_replies',
-        ),
-        'datatype' => 'xsd:integer',
-      ),
-      'last_activity' => array(
-        'predicates' => array(
-          0 => 'sioc:last_activity_date',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-    ),
-    'status' => 1,
-    'sticky' => 0,
-    'title' => 'Bliver du klogere på pension?',
-    'title_field' => array(
-      'da' => array(
-        0 => array(
-          'format' => NULL,
-          'value' => 'Bliver du klogere på pension?',
-        ),
-      ),
-    ),
-    'title_original' => 'Bliver du klogere på pension?',
-    'tnid' => 0,
-    'translate' => 0,
-    'type' => 'component',
-    'uid' => 1,
-    'uuid' => 'ed1f8db3-78b8-41b7-a586-7ee1781e2cf8',
-  );
-  $entities['atp_test_content'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'node',
-      'uri' => 'node/59cd7f72-b8d9-401a-979e-d2cfe70a5b63',
-      'cause' => FALSE,
-    ),
-    'comment' => 0,
-    'field_component_body' => array(),
-    'field_component_image' => array(),
-    'field_component_link' => array(
-      'und' => array(
-        0 => array(
-          'attributes' => array(),
-          'title' => 'Læs mere her',
-          'url' => 'http://www.adapt.dk',
-        ),
-      ),
-    ),
-    'field_component_summary' => array(
-      'und' => array(
-        0 => array(
-          'format' => 'filtered_html',
-          'value' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat.</p>',
-        ),
-      ),
-    ),
-    'language' => 'da',
-    'log' => 'Created by adaptadmin.',
-    'path' => array(
-      'pid' => NULL,
-      'source' => 'node/2',
-      'alias' => '',
-      'language' => 'da',
-    ),
-    'promote' => 0,
-    'rdf_mapping' => array(
-      'rdftype' => array(
-        0 => 'sioc:Item',
-        1 => 'foaf:Document',
-      ),
-      'title' => array(
-        'predicates' => array(
-          0 => 'dc:title',
-        ),
-      ),
-      'created' => array(
-        'predicates' => array(
-          0 => 'dc:date',
-          1 => 'dc:created',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-      'changed' => array(
-        'predicates' => array(
-          0 => 'dc:modified',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-      'body' => array(
-        'predicates' => array(
-          0 => 'content:encoded',
-        ),
-      ),
-      'uid' => array(
-        'predicates' => array(
-          0 => 'sioc:has_creator',
-        ),
-        'type' => 'rel',
-      ),
-      'name' => array(
-        'predicates' => array(
-          0 => 'foaf:name',
-        ),
-      ),
-      'comment_count' => array(
-        'predicates' => array(
-          0 => 'sioc:num_replies',
-        ),
-        'datatype' => 'xsd:integer',
-      ),
-      'last_activity' => array(
-        'predicates' => array(
-          0 => 'sioc:last_activity_date',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-    ),
-    'status' => 1,
-    'sticky' => 0,
-    'title' => '210 mia. kr.',
-    'title_field' => array(
-      'da' => array(
-        0 => array(
-          'format' => NULL,
-          'value' => '210 mia. kr.',
-        ),
-      ),
-    ),
-    'title_original' => '210 mia. kr.',
-    'tnid' => 0,
-    'translate' => 0,
-    'type' => 'component',
-    'uid' => 1,
-    'uuid' => '59cd7f72-b8d9-401a-979e-d2cfe70a5b63',
-  );
-  $entities['atp_test_content'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'node',
-      'uri' => 'node/cfe12e6d-afea-469c-a923-159f6f7cec47',
-      'cause' => FALSE,
-    ),
-    'comment' => 0,
-    'field_component_body' => array(),
-    'field_component_image' => array(),
-    'field_component_link' => array(
-      'und' => array(
-        0 => array(
-          'attributes' => array(),
-          'title' => 'Læs mere her',
-          'url' => 'http://www.adapt.dk',
-        ),
-      ),
-    ),
-    'field_component_summary' => array(
-      'und' => array(
-        0 => array(
-          'format' => 'filtered_html',
-          'value' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat.</p>',
-        ),
-      ),
-    ),
-    'language' => 'da',
-    'log' => 'Created by adaptadmin.',
-    'path' => array(
-      'pid' => NULL,
-      'source' => 'node/3',
-      'alias' => '',
-      'language' => 'da',
-    ),
-    'promote' => 0,
-    'rdf_mapping' => array(
-      'rdftype' => array(
-        0 => 'sioc:Item',
-        1 => 'foaf:Document',
-      ),
-      'title' => array(
-        'predicates' => array(
-          0 => 'dc:title',
-        ),
-      ),
-      'created' => array(
-        'predicates' => array(
-          0 => 'dc:date',
-          1 => 'dc:created',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-      'changed' => array(
-        'predicates' => array(
-          0 => 'dc:modified',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-      'body' => array(
-        'predicates' => array(
-          0 => 'content:encoded',
-        ),
-      ),
-      'uid' => array(
-        'predicates' => array(
-          0 => 'sioc:has_creator',
-        ),
-        'type' => 'rel',
-      ),
-      'name' => array(
-        'predicates' => array(
-          0 => 'foaf:name',
-        ),
-      ),
-      'comment_count' => array(
-        'predicates' => array(
-          0 => 'sioc:num_replies',
-        ),
-        'datatype' => 'xsd:integer',
-      ),
-      'last_activity' => array(
-        'predicates' => array(
-          0 => 'sioc:last_activity_date',
-        ),
-        'datatype' => 'xsd:dateTime',
-        'callback' => 'date_iso8601',
-      ),
-    ),
-    'status' => 1,
-    'sticky' => 0,
-    'title' => 'Arbejdsglæde',
-    'title_field' => array(
-      'da' => array(
-        0 => array(
-          'format' => NULL,
-          'value' => 'Arbejdsglæde',
-        ),
-      ),
-    ),
-    'title_original' => 'Arbejdsglæde',
-    'tnid' => 0,
-    'translate' => 0,
-    'type' => 'component',
-    'uid' => 1,
-    'uuid' => 'cfe12e6d-afea-469c-a923-159f6f7cec47',
-  );
-  $entities['atp_test_content'][] = (object) array(
-    '__metadata' => array(
-      'type' => 'node',
       'uri' => 'node/6792c2e7-f68d-483e-9ec6-420f35ba77ea',
-      'cause' => FALSE,
+      'cause' => 'node/f664b3be-0a06-4cbf-bfe7-c9287a9fc1d3',
     ),
     'comment' => 0,
     'field_component_body' => array(),
@@ -445,6 +121,526 @@ function atp_data_deployment_uuid_default_entities() {
   $entities['atp_test_content'][] = (object) array(
     '__metadata' => array(
       'type' => 'node',
+      'uri' => 'node/cfe12e6d-afea-469c-a923-159f6f7cec47',
+      'cause' => 'node/f664b3be-0a06-4cbf-bfe7-c9287a9fc1d3',
+    ),
+    'comment' => 0,
+    'field_component_body' => array(),
+    'field_component_image' => array(),
+    'field_component_link' => array(
+      'und' => array(
+        0 => array(
+          'attributes' => array(),
+          'title' => 'Læs mere her',
+          'url' => 'http://www.adapt.dk',
+        ),
+      ),
+    ),
+    'field_component_summary' => array(
+      'und' => array(
+        0 => array(
+          'format' => 'filtered_html',
+          'value' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat.</p>',
+        ),
+      ),
+    ),
+    'language' => 'da',
+    'log' => 'Created by adaptadmin.',
+    'path' => array(
+      'pid' => NULL,
+      'source' => 'node/3',
+      'alias' => '',
+      'language' => 'da',
+    ),
+    'promote' => 0,
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        0 => 'sioc:Item',
+        1 => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          0 => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          0 => 'dc:date',
+          1 => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          0 => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          0 => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          0 => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          0 => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          0 => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          0 => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'status' => 1,
+    'sticky' => 0,
+    'title' => 'Arbejdsglæde',
+    'title_field' => array(
+      'da' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Arbejdsglæde',
+        ),
+      ),
+    ),
+    'title_original' => 'Arbejdsglæde',
+    'tnid' => 0,
+    'translate' => 0,
+    'type' => 'component',
+    'uid' => 1,
+    'uuid' => 'cfe12e6d-afea-469c-a923-159f6f7cec47',
+  );
+  $entities['atp_test_content'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'node',
+      'uri' => 'node/59cd7f72-b8d9-401a-979e-d2cfe70a5b63',
+      'cause' => 'node/f664b3be-0a06-4cbf-bfe7-c9287a9fc1d3',
+    ),
+    'comment' => 0,
+    'field_component_body' => array(),
+    'field_component_image' => array(),
+    'field_component_link' => array(
+      'und' => array(
+        0 => array(
+          'attributes' => array(),
+          'title' => 'Læs mere her',
+          'url' => 'http://www.adapt.dk',
+        ),
+      ),
+    ),
+    'field_component_summary' => array(
+      'und' => array(
+        0 => array(
+          'format' => 'filtered_html',
+          'value' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat.</p>',
+        ),
+      ),
+    ),
+    'language' => 'da',
+    'log' => 'Created by adaptadmin.',
+    'path' => array(
+      'pid' => NULL,
+      'source' => 'node/2',
+      'alias' => '',
+      'language' => 'da',
+    ),
+    'promote' => 0,
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        0 => 'sioc:Item',
+        1 => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          0 => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          0 => 'dc:date',
+          1 => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          0 => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          0 => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          0 => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          0 => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          0 => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          0 => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'status' => 1,
+    'sticky' => 0,
+    'title' => '210 mia. kr.',
+    'title_field' => array(
+      'da' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => '210 mia. kr.',
+        ),
+      ),
+    ),
+    'title_original' => '210 mia. kr.',
+    'tnid' => 0,
+    'translate' => 0,
+    'type' => 'component',
+    'uid' => 1,
+    'uuid' => '59cd7f72-b8d9-401a-979e-d2cfe70a5b63',
+  );
+  $entities['atp_test_content'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'node',
+      'uri' => 'node/ed1f8db3-78b8-41b7-a586-7ee1781e2cf8',
+      'cause' => 'node/f664b3be-0a06-4cbf-bfe7-c9287a9fc1d3',
+    ),
+    'comment' => 0,
+    'field_component_body' => array(),
+    'field_component_image' => array(),
+    'field_component_link' => array(
+      'und' => array(
+        0 => array(
+          'attributes' => array(),
+          'title' => 'Læs mere her',
+          'url' => 'http://www.adapt.dk',
+        ),
+      ),
+    ),
+    'field_component_summary' => array(
+      'und' => array(
+        0 => array(
+          'format' => 'filtered_html',
+          'value' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat.</p>',
+        ),
+      ),
+    ),
+    'language' => 'da',
+    'log' => 'Created by adaptadmin.',
+    'path' => array(
+      'pid' => NULL,
+      'source' => 'node/1',
+      'alias' => '',
+      'language' => 'da',
+    ),
+    'promote' => 0,
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        0 => 'sioc:Item',
+        1 => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          0 => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          0 => 'dc:date',
+          1 => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          0 => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          0 => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          0 => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          0 => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          0 => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          0 => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'status' => 1,
+    'sticky' => 0,
+    'title' => 'Bliver du klogere på pension?',
+    'title_field' => array(
+      'da' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Bliver du klogere på pension?',
+        ),
+      ),
+    ),
+    'title_original' => 'Bliver du klogere på pension?',
+    'tnid' => 0,
+    'translate' => 0,
+    'type' => 'component',
+    'uid' => 1,
+    'uuid' => 'ed1f8db3-78b8-41b7-a586-7ee1781e2cf8',
+  );
+  $entities['atp_test_content'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'node',
+      'uri' => 'node/f664b3be-0a06-4cbf-bfe7-c9287a9fc1d3',
+      'cause' => FALSE,
+    ),
+    'comment' => 0,
+    'field_section_body' => array(),
+    'field_section_related' => array(
+      'und' => array(
+        0 => array(
+          'target_id' => '6792c2e7-f68d-483e-9ec6-420f35ba77ea',
+        ),
+        1 => array(
+          'target_id' => 'cfe12e6d-afea-469c-a923-159f6f7cec47',
+        ),
+        2 => array(
+          'target_id' => '59cd7f72-b8d9-401a-979e-d2cfe70a5b63',
+        ),
+        3 => array(
+          'target_id' => 'ed1f8db3-78b8-41b7-a586-7ee1781e2cf8',
+        ),
+      ),
+    ),
+    'field_section_slides' => array(),
+    'field_section_summary' => array(),
+    'language' => 'da',
+    'log' => 'Edited by adaptadmin.',
+    'panelizer' => array(
+      'default' => array(
+        'disabled' => FALSE,
+        'api_version' => 1,
+        'name' => 'node:section:frontpage:default',
+        'title' => 'Frontpage',
+        'panelizer_type' => 'node',
+        'panelizer_key' => 'section',
+        'no_blocks' => FALSE,
+        'css_id' => '',
+        'css' => '',
+        'pipeline' => 'standard',
+        'contexts' => array(),
+        'relationships' => array(),
+        'access' => array(),
+        'view_mode' => 'default',
+        'css_class' => '',
+        'title_element' => 'H2',
+        'link_to_entity' => TRUE,
+        'extra' => array(),
+        'display' => array(
+          'args' => array(),
+          'content' => array(
+            'new-e92df8fe-fbe5-4871-bff1-c8c3452b6508' => array(
+              'pid' => 'new-e92df8fe-fbe5-4871-bff1-c8c3452b6508',
+              'panel' => 'middle',
+              'type' => 'entity_field',
+              'subtype' => 'node:field_section_related',
+              'shown' => TRUE,
+              'access' => array(),
+              'configuration' => array(
+                'label' => 'hidden',
+                'formatter' => 'entityreference_entity_view',
+                'delta_limit' => 4,
+                'delta_offset' => 0,
+                'delta_reversed' => 0,
+                'formatter_settings' => array(
+                  'view_mode' => 'teaser',
+                  'links' => 0,
+                ),
+                'context' => 'panelizer',
+                'override_title' => 1,
+                'override_title_text' => '',
+              ),
+              'cache' => array(),
+              'style' => array(
+                'settings' => NULL,
+              ),
+              'css' => array(),
+              'extras' => array(),
+              'position' => 0,
+              'locks' => array(),
+              'uuid' => 'e92df8fe-fbe5-4871-bff1-c8c3452b6508',
+            ),
+          ),
+          'panels' => array(
+            'middle' => array(
+              0 => 'new-e92df8fe-fbe5-4871-bff1-c8c3452b6508',
+            ),
+          ),
+          'incoming_content' => NULL,
+          'css_id' => NULL,
+          'context' => array(),
+          'did' => 'new',
+          'renderer' => 'standard',
+          'layout' => 'onecol',
+          'layout_settings' => array(),
+          'panel_settings' => array(
+            'style_settings' => array(
+              'default' => NULL,
+              'middle' => NULL,
+            ),
+          ),
+          'cache' => array(),
+          'title' => '%node:title',
+          'uuid' => '5fc08c84-30ee-4420-87e9-603b983d68a4',
+          'hide_title' => 0,
+          'title_pane' => 0,
+        ),
+        'export_module' => 'atp_section',
+        'type' => 'Standard',
+        'export_type' => 2,
+        'in_code_only' => TRUE,
+        'table' => 'panelizer_defaults',
+        'did' => NULL,
+        'entity_id' => 11,
+        'revision_id' => 13,
+      ),
+    ),
+    'path' => array(
+      'pid' => NULL,
+      'source' => 'node/11',
+      'alias' => '',
+      'language' => 'da',
+    ),
+    'promote' => 0,
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        0 => 'sioc:Item',
+        1 => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          0 => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          0 => 'dc:date',
+          1 => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          0 => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          0 => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          0 => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          0 => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          0 => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          0 => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'status' => 1,
+    'sticky' => 0,
+    'title' => 'Forside',
+    'title_field' => array(
+      'da' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Forside',
+        ),
+      ),
+    ),
+    'tnid' => 0,
+    'translate' => 0,
+    'type' => 'section',
+    'uid' => 1,
+    'uuid' => 'f664b3be-0a06-4cbf-bfe7-c9287a9fc1d3',
+  );
+  $entities['atp_test_content'][] = (object) array(
+    '__metadata' => array(
+      'type' => 'node',
       'uri' => 'node/242906e5-3663-4679-9564-399ec3fd5431',
       'cause' => FALSE,
     ),
@@ -545,9 +741,9 @@ function atp_data_deployment_uuid_default_entities() {
       ),
     ),
     'path' => array(
-      'pid' => NULL,
+      'pid' => 7,
       'source' => 'node/5',
-      'alias' => '',
+      'alias' => 'om-atp',
       'language' => 'da',
     ),
     'promote' => 0,
@@ -617,7 +813,6 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
-    'title_original' => 'Om ATP',
     'tnid' => 0,
     'translate' => 0,
     'type' => 'section',
@@ -727,9 +922,9 @@ function atp_data_deployment_uuid_default_entities() {
       ),
     ),
     'path' => array(
-      'pid' => NULL,
+      'pid' => 6,
       'source' => 'node/6',
-      'alias' => '',
+      'alias' => 'job',
       'language' => 'da',
     ),
     'promote' => 0,
@@ -799,7 +994,6 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
-    'title_original' => 'Job',
     'tnid' => 0,
     'translate' => 0,
     'type' => 'section',
@@ -909,9 +1103,9 @@ function atp_data_deployment_uuid_default_entities() {
       ),
     ),
     'path' => array(
-      'pid' => NULL,
+      'pid' => 5,
       'source' => 'node/7',
-      'alias' => '',
+      'alias' => 'presse',
       'language' => 'da',
     ),
     'promote' => 0,
@@ -981,7 +1175,6 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
-    'title_original' => 'Presse',
     'tnid' => 0,
     'translate' => 0,
     'type' => 'section',
@@ -1091,9 +1284,9 @@ function atp_data_deployment_uuid_default_entities() {
       ),
     ),
     'path' => array(
-      'pid' => NULL,
+      'pid' => 4,
       'source' => 'node/8',
-      'alias' => '',
+      'alias' => 'samfundsansvar',
       'language' => 'da',
     ),
     'promote' => 0,
@@ -1163,7 +1356,6 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
-    'title_original' => 'Samfundsansvar',
     'tnid' => 0,
     'translate' => 0,
     'type' => 'section',
@@ -1273,9 +1465,9 @@ function atp_data_deployment_uuid_default_entities() {
       ),
     ),
     'path' => array(
-      'pid' => NULL,
+      'pid' => 3,
       'source' => 'node/9',
-      'alias' => '',
+      'alias' => 'resultater-rapporter',
       'language' => 'da',
     ),
     'promote' => 0,
@@ -1345,7 +1537,6 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
-    'title_original' => 'Resultater & rapporter',
     'tnid' => 0,
     'translate' => 0,
     'type' => 'section',
@@ -1360,40 +1551,50 @@ function atp_data_deployment_uuid_default_entities() {
     ),
     'comment' => 0,
     'field_section_body' => array(),
-    'field_section_related' => array(),
+    'field_section_related' => array(
+      'und' => array(
+        0 => array(
+          'target_id' => 'ed1f8db3-78b8-41b7-a586-7ee1781e2cf8',
+        ),
+      ),
+    ),
     'field_section_slides' => array(),
     'field_section_summary' => array(),
     'language' => 'da',
-    'log' => 'Created by adaptadmin.',
+    'log' => 'Edited by adaptadmin.',
     'panelizer' => array(
       'default' => array(
-        'disabled' => FALSE,
-        'api_version' => 1,
-        'name' => 'node:section:section_a4:default',
-        'title' => 'Section A4',
+        'pnid' => 2,
+        'name' => 'node:section:section_a3:default',
+        'title' => 'Section A3',
         'panelizer_type' => 'node',
         'panelizer_key' => 'section',
-        'no_blocks' => FALSE,
+        'no_blocks' => 0,
         'css_id' => '',
         'css' => '',
         'pipeline' => 'standard',
         'contexts' => array(),
         'relationships' => array(),
+        'did' => NULL,
         'access' => array(),
         'view_mode' => 'default',
         'css_class' => '',
         'title_element' => 'H2',
-        'link_to_entity' => TRUE,
+        'link_to_entity' => 1,
         'extra' => array(),
+        'table' => 'panelizer_defaults',
+        'type' => 'Overridden',
+        'export_type' => 3,
         'display' => array(
           'args' => array(),
           'content' => array(
-            'new-e92df8fe-fbe5-4871-bff1-c8c3452b6508' => array(
-              'pid' => 'new-e92df8fe-fbe5-4871-bff1-c8c3452b6508',
-              'panel' => 'middle',
+            2 => array(
+              'pid' => 2,
+              'did' => 2,
+              'panel' => 'quickfacts',
               'type' => 'entity_field',
               'subtype' => 'node:field_section_related',
-              'shown' => TRUE,
+              'shown' => 1,
               'access' => array(),
               'configuration' => array(
                 'label' => 'hidden',
@@ -1421,43 +1622,42 @@ function atp_data_deployment_uuid_default_entities() {
             ),
           ),
           'panels' => array(
-            'middle' => array(
-              0 => 'new-e92df8fe-fbe5-4871-bff1-c8c3452b6508',
+            'quickfacts' => array(
+              0 => 2,
             ),
           ),
           'incoming_content' => NULL,
           'css_id' => NULL,
           'context' => array(),
-          'did' => 'new',
+          'did' => 2,
           'renderer' => 'standard',
-          'layout' => 'onecol',
+          'layout' => 'section_a3',
           'layout_settings' => array(),
           'panel_settings' => array(
             'style_settings' => array(
               'default' => NULL,
               'middle' => NULL,
+              'area1' => NULL,
+              'area2' => NULL,
+              'area3' => NULL,
+              'quickfacts' => NULL,
             ),
           ),
           'cache' => array(),
           'title' => '%node:title',
-          'uuid' => '5fc08c84-30ee-4420-87e9-603b983d68a4',
           'hide_title' => 0,
           'title_pane' => 0,
+          'uuid' => '5fc08c84-30ee-4420-87e9-603b983d68a4',
         ),
         'export_module' => 'atp_section',
-        'type' => 'Standard',
-        'export_type' => 2,
-        'in_code_only' => TRUE,
-        'table' => 'panelizer_defaults',
-        'did' => NULL,
         'entity_id' => 10,
-        'revision_id' => 10,
+        'revision_id' => 16,
       ),
     ),
     'path' => array(
-      'pid' => NULL,
+      'pid' => 2,
       'source' => 'node/10',
-      'alias' => '',
+      'alias' => 'i-fokus',
       'language' => 'da',
     ),
     'promote' => 0,
@@ -1527,7 +1727,6 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
-    'title_original' => 'I fokus',
     'tnid' => 0,
     'translate' => 0,
     'type' => 'section',
