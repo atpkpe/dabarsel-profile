@@ -30,6 +30,7 @@ dependencies[] = menu_view_unpublished
 ; Project features
 dependencies[] = atp_settings
 dependencies[] = atp_structure
+dependencies[] = atp_layouts
 dependencies[] = atp_workflow
 dependencies[] = atp_page
 dependencies[] = atp_section
