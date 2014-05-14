@@ -1,0 +1,10 @@
+name = ATP news test content
+core = 7.x
+package = ATP test content
+dependencies[] = ctools
+dependencies[] = deploy
+features[ctools][] = deploy:deploy_plans:1
+features[deploy_plans][] = atp_test_content_news
+features[features_api][] = api:2
+features[uuid_entities][] = atp_test_content_news
+project path = profiles/atp/modules/custom
