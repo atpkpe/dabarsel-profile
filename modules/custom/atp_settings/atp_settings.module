@@ -5,3 +5,18 @@
  */
 
 include_once 'atp_settings.features.inc';
+
+/**
+ * Implements hook_system_info_alter().
+ *
+ * Hide features that are just examples from random modules.
+ */
+function atp_settings_system_info_alter(&$info, $file, $type) {
+  $ignored_modules = array(
+    'date_migrate_example'
+  );
+
+  if ($type == 'module' && in_array($file->name, $ignored_modules)) {
+    $info['hidden'] = TRUE;
+  }
+}
