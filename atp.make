@@ -77,3 +77,10 @@ projects[menu_view_unpublished][patch][] = 'https://drupal.org/files/issues/node
 projects[date][type] = 'module'
 projects[date][subdir] = 'contrib'
 projects[date][version] = '2.7'
+
+projects[uuid_features_menu][type] = 'module'
+projects[uuid_features_menu][subdir] = 'contrib'
+projects[uuid_features_menu][download][branch] = '7.x-1.x'
+projects[uuid_features_menu][download][type] = 'git'
+projects[uuid_features_menu][download][url] = 'http://git.drupal.org/sandbox/ioskevich/2163429.git'
+projects[uuid_features_menu][download][revision] = '1b3c154640455a193e717582b01815e4c10ab217'
