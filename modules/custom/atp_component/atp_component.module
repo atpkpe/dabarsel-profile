@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP component feature.
+ */
+
+include_once 'atp_component.features.inc';
