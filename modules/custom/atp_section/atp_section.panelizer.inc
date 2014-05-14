@@ -53,7 +53,7 @@ function atp_section_panelizer_defaults() {
     $pane->configuration = array(
       'label' => 'hidden',
       'formatter' => 'entityreference_entity_view',
-      'delta_limit' => '0',
+      'delta_limit' => '4',
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
