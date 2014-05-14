@@ -24,10 +24,10 @@ function atp_slide_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_slide_body',
-      1 => 'field_slide_link',
-      2 => 'field_slide_image',
-      3 => 'language',
-      4 => 'title',
+      1 => 'field_slide_image',
+      2 => 'field_slide_link',
+      3 => 'title_field',
+      4 => 'language',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

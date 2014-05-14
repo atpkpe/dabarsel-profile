@@ -48,7 +48,7 @@ function atp_page_strongarm() {
           'weight' => '5',
         ),
         'language' => array(
-          'weight' => '2',
+          'weight' => '-4',
         ),
       ),
       'display' => array(

@@ -63,7 +63,7 @@ function atp_section_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '2',
+          'weight' => '-4',
         ),
         'title' => array(
           'weight' => '1',

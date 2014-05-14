@@ -54,8 +54,8 @@ function atp_news_field_group_info() {
       1 => 'field_news_image',
       2 => 'field_news_summary',
       3 => 'field_news_publishdate',
-      4 => 'language',
-      5 => 'title',
+      4 => 'title_field',
+      5 => 'language',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

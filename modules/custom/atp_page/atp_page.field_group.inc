@@ -26,8 +26,8 @@ function atp_page_field_group_info() {
       0 => 'field_page_body',
       1 => 'field_page_image',
       2 => 'field_page_summary',
-      3 => 'language',
-      4 => 'title',
+      3 => 'title_field',
+      4 => 'language',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

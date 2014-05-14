@@ -62,7 +62,7 @@ function atp_component_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),

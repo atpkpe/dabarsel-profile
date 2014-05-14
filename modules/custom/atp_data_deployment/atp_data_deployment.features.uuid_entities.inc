@@ -103,6 +103,14 @@ function atp_data_deployment_uuid_default_entities() {
     'status' => 1,
     'sticky' => 0,
     'title' => 'Bliver du klogere på pension?',
+    'title_field' => array(
+      'da' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Bliver du klogere på pension?',
+        ),
+      ),
+    ),
     'tnid' => 0,
     'translate' => 0,
     'type' => 'component',
@@ -202,6 +210,14 @@ function atp_data_deployment_uuid_default_entities() {
     'status' => 1,
     'sticky' => 0,
     'title' => '210 mia. kr.',
+    'title_field' => array(
+      'da' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => '210 mia. kr.',
+        ),
+      ),
+    ),
     'tnid' => 0,
     'translate' => 0,
     'type' => 'component',
@@ -301,6 +317,14 @@ function atp_data_deployment_uuid_default_entities() {
     'status' => 1,
     'sticky' => 0,
     'title' => 'Arbejdsglæde',
+    'title_field' => array(
+      'da' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Arbejdsglæde',
+        ),
+      ),
+    ),
     'tnid' => 0,
     'translate' => 0,
     'type' => 'component',
@@ -400,6 +424,14 @@ function atp_data_deployment_uuid_default_entities() {
     'status' => 1,
     'sticky' => 0,
     'title' => 'Præsentation af årsregnskab',
+    'title_field' => array(
+      'da' => array(
+        0 => array(
+          'format' => NULL,
+          'value' => 'Præsentation af årsregnskab',
+        ),
+      ),
+    ),
     'tnid' => 0,
     'translate' => 0,
     'type' => 'component',
