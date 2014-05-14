@@ -55,7 +55,7 @@ function atp_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -164,6 +164,62 @@ function atp_news_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_news_publishdate'
+  $field_instances['node-news-field_news_publishdate'] = array(
+    'bundle' => 'news',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_news_publishdate',
+    'label' => 'Published date',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
       'weight' => 3,
     ),
   );
@@ -213,7 +269,7 @@ function atp_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -222,6 +278,7 @@ function atp_news_field_default_field_instances() {
   t('Body');
   t('Image');
   t('News categories');
+  t('Published date');
   t('Summary');
 
   return $field_instances;
