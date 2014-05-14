@@ -20,3 +20,10 @@ function atp_install() {
   module_disable(array('menu_trail_by_path'));
   
 }
+
+/**
+ *  Enable title module
+ */
+function atp_update_7001(&$sandbox) {
+  module_enable(array('title'));
+}
