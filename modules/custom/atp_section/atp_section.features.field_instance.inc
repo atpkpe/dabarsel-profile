@@ -26,7 +26,7 @@ function atp_section_field_default_field_instances() {
           'label_wrapper' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -167,7 +167,7 @@ function atp_section_field_default_field_instances() {
           'label_wrapper' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
