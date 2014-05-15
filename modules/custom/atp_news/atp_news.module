@@ -5,3 +5,45 @@
  */
 
 include_once 'atp_news.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory()
+ */
+function atp_news_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && $plugin == 'content_types') {
+    return 'plugins/content_types';
+  }
+}
+
+function atp_news_menu() {
+  $items = array();
+
+  $items['atp-news-list/ajax/refresh-view'] = array(
+    'title' => 'Bla bla',
+    'page callback' => 'atp_news_list_ajax_refresh_view',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function atp_news_list_ajax_refresh_view() {
+//  var_dump($_SERVER['HTTP_REFERER']);
+  $_GET['q'] = 'user?page=80';
+//  die($_SERVER['HTTP_REFERER']);
+
+  $view = views_get_view('news_list');
+  $view->set_display('default_display');
+  $view->set_arguments(array(3));
+  $view->set_pager_element(1);
+//  $output = $view->display_handler->execute();
+//  drupal_json_output(array('view' => $view->render()));
+  drupal_json_output(array('view' =>  $view->display_handler->execute()));
+  exit;
+}
+
+function atp_news_form_views_exposed_form_alter(&$form, &$form_state) {
+  if ($form['#id'] == 'views-exposed-form-news-list-default-display') {
+//    $form['#access'] = FALSE;
+  }
+}
