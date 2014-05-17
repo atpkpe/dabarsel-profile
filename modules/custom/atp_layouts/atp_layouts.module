@@ -79,7 +79,7 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
 */
 function atp_layouts_preprocess_node(&$vars) {
   $view_modes = atp_layouts_view_modes();
-  if ($view_modes[$vars['view_mode']]) {
+  if (!empty($view_modes[$vars['view_mode']])) {
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__' . $vars['view_mode'];
   }
 }
