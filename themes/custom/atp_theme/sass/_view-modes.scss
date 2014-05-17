@@ -27,7 +27,8 @@ div.view-mode-1-4-fact {
   }
 }
 
-div.view-mode-1-2-h, div.view-mode-1-2-l, div.view-mode-1-4-l {
+div.view-mode-1-2-h, div.view-mode-1-2-l, 
+div.view-mode-1-4-l, div.view-mode-1-1-l {
   @include clearfix;
   float: left;
   position: relative;
@@ -36,8 +37,7 @@ div.view-mode-1-2-h, div.view-mode-1-2-l, div.view-mode-1-4-l {
     position : absolute;
     left : 0;
     bottom : 0;
-    background-color: #000;
-    opacity: 0.7; 
+    background-color: rgba(0,0,0,0.5);
     width: 100%;
     padding: 10px;
     
@@ -77,6 +77,15 @@ div.view-mode-1-2-h {
 div.view-mode-1-4-l {
   width: (4 * $grid-in-px + 3 * $gutter-in-px);
   height: 126px;
+}
+
+div.view-mode-1-1-l {
+  h3 { text-transform:uppercase;}
+  height: 126px;
+  div.group-section-image-overlay { 
+    height: 100%;
+  }
+  p { width : 50%;} 
 }
 
 

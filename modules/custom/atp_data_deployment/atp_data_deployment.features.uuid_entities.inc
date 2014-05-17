@@ -931,6 +931,7 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
+    'field_section_image' => array(),
     'field_section_related' => array(
       'und' => array(
         0 => array(
@@ -1227,6 +1228,7 @@ function atp_data_deployment_uuid_default_entities() {
     'comment' => 0,
     'field_section_body' => array(),
     'field_section_facts' => array(),
+    'field_section_image' => array(),
     'field_section_related' => array(
       'und' => array(
         0 => array(
@@ -1491,7 +1493,7 @@ function atp_data_deployment_uuid_default_entities() {
         'callback' => 'date_iso8601',
       ),
     ),
-    'status' => 1,
+    'status' => 0,
     'sticky' => 0,
     'title' => 'I fokus',
     'title_field' => array(
@@ -1517,6 +1519,7 @@ function atp_data_deployment_uuid_default_entities() {
     'comment' => 0,
     'field_section_body' => array(),
     'field_section_facts' => array(),
+    'field_section_image' => array(),
     'field_section_related' => array(),
     'field_section_slides' => array(),
     'field_section_summary' => array(),
@@ -1804,7 +1807,7 @@ function atp_data_deployment_uuid_default_entities() {
         'callback' => 'date_iso8601',
       ),
     ),
-    'status' => 1,
+    'status' => 0,
     'sticky' => 0,
     'title' => 'Resultater & rapporter',
     'title_field' => array(
@@ -1830,6 +1833,7 @@ function atp_data_deployment_uuid_default_entities() {
     'comment' => 0,
     'field_section_body' => array(),
     'field_section_facts' => array(),
+    'field_section_image' => array(),
     'field_section_related' => array(),
     'field_section_slides' => array(),
     'field_section_summary' => array(),
@@ -2143,6 +2147,7 @@ function atp_data_deployment_uuid_default_entities() {
     'comment' => 0,
     'field_section_body' => array(),
     'field_section_facts' => array(),
+    'field_section_image' => array(),
     'field_section_related' => array(),
     'field_section_slides' => array(),
     'field_section_summary' => array(),
@@ -2456,6 +2461,7 @@ function atp_data_deployment_uuid_default_entities() {
     'comment' => 0,
     'field_section_body' => array(),
     'field_section_facts' => array(),
+    'field_section_image' => array(),
     'field_section_related' => array(),
     'field_section_slides' => array(),
     'field_section_summary' => array(),
@@ -2784,6 +2790,7 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
+    'field_section_image' => array(),
     'field_section_related' => array(
       'und' => array(
         0 => array(

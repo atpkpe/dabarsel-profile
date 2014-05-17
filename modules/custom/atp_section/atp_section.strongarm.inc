@@ -179,7 +179,7 @@ function atp_section_strongarm() {
             'visible' => FALSE,
           ),
           '1_1_l' => array(
-            'weight' => '4',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'token' => array(

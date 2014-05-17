@@ -10,5 +10,6 @@ features[features_api][] = api:2
 features[image][] = 225x126
 features[image][] = 470x126
 features[image][] = 470x272
+features[image][] = 960x126
 features[page_manager_handlers][] = site_template_panel_context
 project path = profiles/atp/modules/custom
