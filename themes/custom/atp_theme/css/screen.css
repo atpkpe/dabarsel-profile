@@ -46,8 +46,7 @@ header .main-menu ul { list-style-type: none; padding-left: 10px; }
 .page-wrapper:before, .page-wrapper:after { content: "."; display: block; height: 0; overflow: hidden; }
 .page-wrapper:after { clear: both; }
 
-#main { padding: 20px 0; }
-@media screen and (min-height: 500px) { #main { padding-bottom: 200px; } }
+#main { padding: 10px 0; }
 .not-front #main > div { margin: 0 auto; width: 960px; }
 @media screen and (max-width: 945px) { .not-front #main > div { width: 100%; padding: 0 10px; } }
 @media screen and (max-width: 700px) { .not-front #main > div { width: 100%; padding: 0; } }
@@ -94,19 +93,19 @@ div.view-mode-1-4-fact > p { text-align: left; margin: 10px 0; padding-top: 10px
 div.view-mode-1-4-fact > h3 { display: table-cell; height: 40px; vertical-align: middle; width: inherit; }
 div.view-mode-1-4-fact > a { background-color: #afc200; color: white; display: block; padding: 8px 0; }
 
-div.section-row div.has-sibling-right div.view-mode-1-4-fact { margin-right: 20px; }
+div.view-mode-1-2-h, div.view-mode-1-2-l, div.view-mode-1-4-l { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; float: left; position: relative; }
+div.view-mode-1-2-h:before, div.view-mode-1-2-h:after, div.view-mode-1-2-l:before, div.view-mode-1-2-l:after, div.view-mode-1-4-l:before, div.view-mode-1-4-l:after { content: "."; display: block; height: 0; overflow: hidden; }
+div.view-mode-1-2-h:after, div.view-mode-1-2-l:after, div.view-mode-1-4-l:after { clear: both; }
+div.view-mode-1-2-h .group-section-image-overlay, div.view-mode-1-2-l .group-section-image-overlay, div.view-mode-1-4-l .group-section-image-overlay { position: absolute; left: 0; bottom: 0; background-color: #000; opacity: 0.7; width: 100%; padding: 10px; }
+div.view-mode-1-2-h .group-section-image-overlay h3, div.view-mode-1-2-l .group-section-image-overlay h3, div.view-mode-1-4-l .group-section-image-overlay h3 { color: #FFF; }
+div.view-mode-1-2-h .group-section-image-overlay p, div.view-mode-1-2-l .group-section-image-overlay p, div.view-mode-1-4-l .group-section-image-overlay p { color: #FFF; margin: 0; }
 
-div.view-mode-1-2-h, div.view-mode-1-2-l { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; width: 470px; float: left; position: relative; }
-div.view-mode-1-2-h:before, div.view-mode-1-2-h:after, div.view-mode-1-2-l:before, div.view-mode-1-2-l:after { content: "."; display: block; height: 0; overflow: hidden; }
-div.view-mode-1-2-h:after, div.view-mode-1-2-l:after { clear: both; }
-div.view-mode-1-2-h .group-section-image-overlay, div.view-mode-1-2-l .group-section-image-overlay { position: absolute; left: 0; bottom: 0; background-color: #000; opacity: 0.7; width: 100%; padding: 10px; }
-div.view-mode-1-2-h .group-section-image-overlay h3, div.view-mode-1-2-l .group-section-image-overlay h3 { color: #FFF; }
-div.view-mode-1-2-h .group-section-image-overlay p, div.view-mode-1-2-l .group-section-image-overlay p { color: #FFF; margin: 0; }
+div.section-row div.not-first div.view-mode-1-2-l, div.section-row div.not-first div.view-mode-1-4-fact, div.section-row div.not-first div.view-mode-1-4-l { margin-left: 20px; margin-top: 10px; margin-bottom: 10px; }
 
-div.view-mode-1-2-l { height: 126px; }
+div.section-row div.first div.view-mode-1-2-h, div.section-row div.first div.view-mode-1-4-fact, div.section-row div.first div.view-mode-1-4-l { margin-top: 10px; margin-bottom: 10px; }
 
-div.view-mode-1-2-h { height: 272px; }
+div.view-mode-1-2-l { width: 470px; height: 126px; }
 
-div.section-row div.has-sibling-right div.view-mode-1-2-h, div.section-row div.has-sibling-right div.view-mode-1-2-l { margin-right: 20px; }
+div.view-mode-1-2-h { width: 470px; height: 272px; }
 
-div.section-row div.has-sibling-below div.view-mode-1-2-l { margin-bottom: 20px; }
+div.view-mode-1-4-l { width: 225px; height: 126px; }

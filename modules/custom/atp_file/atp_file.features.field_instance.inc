@@ -29,6 +29,18 @@ function atp_file_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      '1_4_h' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '1_4_l' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -87,6 +99,18 @@ function atp_file_field_default_field_instances() {
         'weight' => 1,
       ),
       '1_2_l' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      '1_4_h' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      '1_4_l' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

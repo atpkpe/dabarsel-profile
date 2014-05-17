@@ -27,13 +27,8 @@ div.view-mode-1-4-fact {
   }
 }
 
-div.section-row div.has-sibling-right div.view-mode-1-4-fact {
-  margin-right: $gutter-in-px;
-}
-
-div.view-mode-1-2-h, div.view-mode-1-2-l {
+div.view-mode-1-2-h, div.view-mode-1-2-l, div.view-mode-1-4-l {
   @include clearfix;
-  width: (8 * $grid-in-px + 7 * $gutter-in-px);
   float: left;
   position: relative;
       
@@ -52,19 +47,36 @@ div.view-mode-1-2-h, div.view-mode-1-2-l {
     
 }
 
+div.section-row div.not-first div.view-mode-1-2-l,
+div.section-row div.not-first div.view-mode-1-4-fact,
+div.section-row div.not-first div.view-mode-1-4-l,
+{
+  margin-left: $gutter-in-px;
+  margin-top: $gutter-in-px / 2 ;
+  margin-bottom: $gutter-in-px / 2;
+}
+
+div.section-row div.first div.view-mode-1-2-h,
+div.section-row div.first div.view-mode-1-4-fact,
+div.section-row div.first div.view-mode-1-4-l
+{
+  margin-top: $gutter-in-px / 2;
+  margin-bottom: $gutter-in-px / 2;
+}
+
 div.view-mode-1-2-l {
+  width: (8 * $grid-in-px + 7 * $gutter-in-px);
   height: 126px;
 }
 
 div.view-mode-1-2-h {
+  width: (8 * $grid-in-px + 7 * $gutter-in-px);
   height: 272px;
 }
 
-div.section-row div.has-sibling-right div.view-mode-1-2-h,
-div.section-row div.has-sibling-right div.view-mode-1-2-l {
-  margin-right: $gutter-in-px;
+div.view-mode-1-4-l {
+  width: (4 * $grid-in-px + 3 * $gutter-in-px);
+  height: 126px;
 }
 
-div.section-row div.has-sibling-below div.view-mode-1-2-l {
-  margin-bottom: $gutter-in-px;
-}
+

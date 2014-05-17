@@ -47,6 +47,12 @@ function atp_page_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      '1_4_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_4_l' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -75,6 +81,14 @@ function atp_page_strongarm() {
           ),
           '1_2_h' => array(
             'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_4_h' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_4_l' => array(
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
