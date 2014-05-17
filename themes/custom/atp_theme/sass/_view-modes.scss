@@ -30,3 +30,41 @@ div.view-mode-1-4-fact {
 div.section-row div.has-sibling-right div.view-mode-1-4-fact {
   margin-right: $gutter-in-px;
 }
+
+div.view-mode-1-2-h, div.view-mode-1-2-l {
+  @include clearfix;
+  width: (8 * $grid-in-px + 7 * $gutter-in-px);
+  float: left;
+  position: relative;
+      
+  .group-section-image-overlay {
+    position : absolute;
+    left : 0;
+    bottom : 0;
+    background-color: #000;
+    opacity: 0.7; 
+    width: 100%;
+    padding: 10px;
+    
+    h3 { color: #FFF; }
+    p { color: #FFF; margin:0; }
+  }
+    
+}
+
+div.view-mode-1-2-l {
+  height: 126px;
+}
+
+div.view-mode-1-2-h {
+  height: 272px;
+}
+
+div.section-row div.has-sibling-right div.view-mode-1-2-h,
+div.section-row div.has-sibling-right div.view-mode-1-2-l {
+  margin-right: $gutter-in-px;
+}
+
+div.section-row div.has-sibling-below div.view-mode-1-2-l {
+  margin-bottom: $gutter-in-px;
+}

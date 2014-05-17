@@ -24,7 +24,7 @@ function atp_page_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -33,6 +33,18 @@ function atp_page_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_2_l' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_2_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_4_fact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -55,6 +67,14 @@ function atp_page_strongarm() {
         'language' => array(
           'default' => array(
             'weight' => '3',
+            'visible' => FALSE,
+          ),
+          '1_2_l' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_2_h' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

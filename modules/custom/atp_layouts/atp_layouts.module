@@ -12,8 +12,8 @@ function atp_layouts_view_modes() {
   	'1_4_fact' => '1/4-fact',
   	//'1_4_h' => '1-4-H',
   	//'3_8_h' => '3-8-H',
-  	//'1_2_l' => '1-2-L',
-  	//'1_2_h' => '1-2-H',
+  	'1_2_l' => '1/2-L',
+  	'1_2_h' => '1/2-H',
   	//'3_4_h' => '3-4-H',
   	//'1_1_l' => '1-1-L',
   );
@@ -29,6 +29,10 @@ function atp_layouts_entity_info_alter(&$entity_info) {
 	    'label' => t($label),
 	    'custom settings' => FALSE,
 	  );
+     $entity_info['file']['view modes'][$key] = array(
+      'label' => t($label),
+      'custom settings' => FALSE,
+    );
   }
 }
 
@@ -41,6 +45,15 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
     'main' => 1,
     'footer' => 1,
     'header' => 1,
+  );
+
+  $view_modes_low = array(
+    '1_2_l' => 1,
+  );
+
+  $view_modes_high= array(
+    '1_2_h' => 1,
+    '1_4_fact' => 1,
   );
 
   $panel = $vars['pane']->panel;
@@ -68,7 +81,22 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
   }
 
   if ($count > 1 && $vars['pane']->position != $count - 1) {
-    $vars['classes_array'][] = 'has-sibling-right';
+
+    $this_pane_view_mode = $vars['pane']->configuration['formatter_settings']['view_mode'];
+
+    if (!empty($view_modes_high[$this_pane_view_mode])) {
+       $vars['classes_array'][] = 'has-sibling-right';
+    } else {
+      $next_pane = $vars['display']->panels[$panel][$vars['pane']->position+1];
+      $next_pane_view_mode = $vars['display']->content[$next_pane]->configuration['formatter_settings']['view_mode'];
+      if (!empty($view_modes_high[$next_pane_view_mode])) {
+        $vars['classes_array'][] = 'has-sibling-right';
+      }
+      if (!empty($view_modes_low[$next_pane_view_mode])) {
+        $vars['classes_array'][] = 'has-sibling-below';
+      }
+    }
+
   }
 
 }

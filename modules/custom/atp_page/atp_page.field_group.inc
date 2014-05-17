@@ -41,5 +41,69 @@ function atp_page_field_group_info() {
   );
   $export['group_page_content|node|page|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_section_image_overlay|node|page|1_2_h';
+  $field_group->group_name = 'group_section_image_overlay';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = '1_2_h';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Image overlay',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_page_summary',
+      1 => 'title_field',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image overlay',
+      'instance_settings' => array(
+        'classes' => 'group-section-image-overlay field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_section_image_overlay|node|page|1_2_h'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_section_image_overlay|node|page|1_2_l';
+  $field_group->group_name = 'group_section_image_overlay';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = '1_2_l';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Image overlay',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_page_summary',
+      1 => 'title_field',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image overlay',
+      'instance_settings' => array(
+        'classes' => 'group-section-image-overlay field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_section_image_overlay|node|page|1_2_l'] = $field_group;
+
   return $export;
 }

@@ -91,7 +91,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'b5zavNuXZ6qsdWEG6TvoD3pZeegQUvV3PJMZ8iIRpJc',
+    'javascript' => 'PRtXL-rJNYCQMwLBkH-NriYVlV3oXcK6oYk16vxD0xg',
   );
   $export['language_default'] = $strongarm;
 
@@ -330,6 +330,7 @@ function atp_settings_strongarm() {
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
     'file' => TRUE,
+    'node' => TRUE,
     'user' => TRUE,
   );
   $export['path_alias_whitelist'] = $strongarm;
