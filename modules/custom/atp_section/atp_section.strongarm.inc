@@ -45,7 +45,7 @@ function atp_section_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -57,6 +57,51 @@ function atp_section_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_4_L' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_4_H' => array(
+        'custom_settings' => TRUE,
+      ),
+      '3_8_H' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_2_L' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_2_H' => array(
+        'custom_settings' => TRUE,
+      ),
+      '3_4_H' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_1_L' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_4_l' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_4_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '3_8_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_2_l' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_2_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '3_4_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_1_l' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_4_fact' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -78,7 +123,67 @@ function atp_section_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+          '1_4_L' => array(
             'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_4_H' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '3_8_H' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_2_L' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_2_H' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '3_4_H' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_1_L' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_4_l' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_4_h' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '3_8_h' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_2_l' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_2_h' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '3_4_h' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_1_l' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'token' => array(
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),

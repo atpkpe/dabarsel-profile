@@ -1,14 +1,22 @@
-$red: #CB4043;
-$gray: #DADADA;
-$body-color: #fff;
+
+$red : #F42D64;
+
+/* ATP colors */
+$ligth-gray: #F2F1F0;
+$dark-gray: #424848;
+$gray: #E6E7E4;
+$atp-green: #AFC200;
+
+$body-color: $ligth-gray;
 $text-color: #333;
-$width: 1200;
+$width: 960;
 $content-width: $width * 1px;
 $border-radius: 4px;
 $border-width: 1px;
 $border-color: $gray;
 
 /* GRIDS */
-$grids: 12;
-$gutters-in-px: 20; //px
-$gutters: $gutters-in-px/(($width - (11*$gutters-in-px))/$grids);
+$grids: 16;
+$gutter: 20;
+$gutter-in-px: 20px;
+$grid-in-px: ($width - (($grids - 1) * $gutter)) / $grids;

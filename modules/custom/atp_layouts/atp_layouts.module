@@ -5,3 +5,81 @@
  */
 
 include_once 'atp_layouts.features.inc';
+
+
+function atp_layouts_view_modes() {
+  return array(
+  	'1_4_fact' => '1/4-fact',
+  	//'1_4_h' => '1-4-H',
+  	//'3_8_h' => '3-8-H',
+  	//'1_2_l' => '1-2-L',
+  	//'1_2_h' => '1-2-H',
+  	//'3_4_h' => '3-4-H',
+  	//'1_1_l' => '1-1-L',
+  );
+}
+
+/**
+* Implements hook_entity_info_alter().
+*/
+function atp_layouts_entity_info_alter(&$entity_info) {
+  $view_modes = atp_layouts_view_modes();
+  foreach($view_modes as $key => $label) {
+	  $entity_info['node']['view modes'][$key] = array(
+	    'label' => t($label),
+	    'custom settings' => FALSE,
+	  );
+  }
+}
+
+/**
+ * implements hook_preprocess_panels_pane
+ */
+function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
+
+  $site_template_panes = array(
+    'main' => 1,
+    'footer' => 1,
+    'header' => 1,
+  );
+
+  $panel = $vars['pane']->panel;
+
+  // Don't add anything to site template panes
+  if ($site_template_panes[$panel]) {
+    return;
+  }
+
+  // Add classes to panes.
+  $count = count($vars['display']->panels[$panel]);
+  if ($vars['pane']->position % 2) {
+    $vars['classes_array'][] = 'odd';
+  }
+  else {
+    $vars['classes_array'][] = 'even';
+  }
+
+  if ($vars['pane']->position == 0) {
+    $vars['classes_array'][] = 'first';
+  }
+
+  if ($vars['pane']->position == $count - 1) {
+    $vars['classes_array'][] = 'last';
+  }
+
+  if ($count > 1 && $vars['pane']->position != $count - 1) {
+    $vars['classes_array'][] = 'has-sibling-right';
+  }
+
+}
+
+/**
+* Implements hook_preprocess_node().
+* node--section--1-4-l.tpl.php.
+*/
+function atp_layouts_preprocess_node(&$vars) {
+  $view_modes = atp_layouts_view_modes();
+  if ($view_modes[$vars['view_mode']]) {
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__' . $vars['view_mode'];
+  }
+}

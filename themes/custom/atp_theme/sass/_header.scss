@@ -1,3 +1,30 @@
 /* HEADER */
 header {
+ 
+  .top-menu {
+    background-color: $dark-gray;
+    height: 30px;
+    ul { 
+      list-style-type: none;
+      padding-left: 10px;
+    }
+    li {
+      float : left;
+      margin-right: 20px;
+      margin-top: 5px;
+    }
+    li a { color : #FFF; }
+    li a.active { color : hotpink; }
+  }
+  
+  .main-menu {
+    background-color: #FFF;
+    border-bottom: 1px solid $atp-green;
+    height: 68px;
+    padding-top: 10px;
+    ul { 
+      list-style-type: none;
+      padding-left: 10px;
+    }
+   }
 }

@@ -1,3 +1,4 @@
+/* ATP colors */
 /* GRIDS */
 /* MEDIA QUERIES */
 /* GRADIENTS */
@@ -5,60 +6,92 @@
 /* FORM ELEMENTS */
 .element-invisible { display: none; }
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: sans-serif; color: #333333; font-size: 13px; font-weight: 400; margin: 0px; padding: 0px; }
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: "Tahoma", sans-serif; color: #333333; font-size: 13px; font-weight: 400; margin: 0px; padding: 0px; }
+* h1, * h2, * h3, * h4 { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
 html { height: 100%; }
 
-body { background: #fff; height: 100%; }
+body { background: #f2f1f0; height: 100%; }
 
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+h3 { font-size: 16px; }
 
 p { margin-bottom: 20px; }
 
 .content ul, .content ol { margin-left: 20px; }
 
-.form-required { color: #cb4043; }
+div.page-wrapper { margin: 0px auto; max-width: 960px; }
+
+.form-required { color: #f42d64; }
 
 .form-item { margin-bottom: 10px; }
 
-input.form-text { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background: #fff; border: 1px solid #dadada; width: 230px; height: 32px; padding: 0 10px; }
-input.form-submit { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; margin: 10px; cursor: pointer; height: 32px; line-height: 32px; padding: 0 15px; border: 0; color: #fff; }
+input.form-text { -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; background: #fff; border: 1px solid #e6e7e4; width: 230px; height: 32px; padding: 0 10px; }
+input.form-submit { -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; margin: 10px; cursor: pointer; height: 32px; line-height: 32px; padding: 0 15px; border: 0; color: #fff; }
 
 #user-login label { float: left; display: block; width: 100px; line-height: 32px; }
 
 /* HEADER */
-.page-wrapper { overflow: hidden; *zoom: 1; }
+header .top-menu { background-color: #424848; height: 30px; }
+header .top-menu ul { list-style-type: none; padding-left: 10px; }
+header .top-menu li { float: left; margin-right: 20px; margin-top: 5px; }
+header .top-menu li a { color: #FFF; }
+header .top-menu li a.active { color: hotpink; }
+header .main-menu { background-color: #FFF; border-bottom: 1px solid #afc200; height: 68px; padding-top: 10px; }
+header .main-menu ul { list-style-type: none; padding-left: 10px; }
+
+.page-wrapper { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
+.page-wrapper:before, .page-wrapper:after { content: "."; display: block; height: 0; overflow: hidden; }
+.page-wrapper:after { clear: both; }
 
 #main { padding: 20px 0; }
 @media screen and (min-height: 500px) { #main { padding-bottom: 200px; } }
-.not-front #main > div { margin: 0 auto; width: 1200px; }
+.not-front #main > div { margin: 0 auto; width: 960px; }
 @media screen and (max-width: 945px) { .not-front #main > div { width: 100%; padding: 0 10px; } }
 @media screen and (max-width: 700px) { .not-front #main > div { width: 100%; padding: 0; } }
 
-.onecol { overflow: hidden; *zoom: 1; margin: 0 auto; width: 1200px; margin-bottom: 20px; }
+.onecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; margin-bottom: 20px; }
+.onecol:before, .onecol:after { content: "."; display: block; height: 0; overflow: hidden; }
+.onecol:after { clear: both; }
 @media screen and (max-width: 945px) { .onecol { width: 100%; padding: 0 10px; } }
 @media screen and (max-width: 700px) { .onecol { width: 100%; padding: 0; } }
 
-.twocol-left { overflow: hidden; *zoom: 1; margin: 0 auto; width: 1200px; }
+.twocol-left { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; }
+.twocol-left:before, .twocol-left:after { content: "."; display: block; height: 0; overflow: hidden; }
+.twocol-left:after { clear: both; }
 @media screen and (max-width: 945px) { .twocol-left { width: 100%; padding: 0 10px; } }
 @media screen and (max-width: 700px) { .twocol-left { width: 100%; padding: 0; } }
-.twocol-left > .col1 { width: 23.72881%; float: left; margin-right: -100%; margin-left: 0; clear: none; }
-.twocol-left > .col2 { width: 74.57627%; float: right; margin-left: 0; margin-right: 0; clear: none; }
+.twocol-left > .col1 { width: 17.72152%; float: left; margin-right: -100%; margin-left: 0%; clear: none; }
+.twocol-left > .col2 { width: 55.6962%; float: left; margin-right: -100%; margin-left: 18.98734%; clear: none; }
 
-.twocol-right { overflow: hidden; *zoom: 1; margin: 0 auto; width: 1200px; }
+.twocol-right { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; }
+.twocol-right:before, .twocol-right:after { content: "."; display: block; height: 0; overflow: hidden; }
+.twocol-right:after { clear: both; }
 @media screen and (max-width: 945px) { .twocol-right { width: 100%; padding: 0 10px; } }
 @media screen and (max-width: 700px) { .twocol-right { width: 100%; padding: 0; } }
-.twocol-right > .col1 { width: 74.57627%; float: left; margin-right: -100%; margin-left: 0; clear: none; }
-.twocol-right > .col2 { width: 23.72881%; float: right; margin-left: 0; margin-right: 0; clear: none; }
+.twocol-right > .col1 { width: 55.6962%; float: left; margin-right: -100%; margin-left: 0%; clear: none; }
+.twocol-right > .col2 { width: 17.72152%; float: left; margin-right: -100%; margin-left: 56.96203%; clear: none; }
 
-.threecol { overflow: hidden; *zoom: 1; margin: 0 auto; width: 1200px; }
+.threecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; }
+.threecol:before, .threecol:after { content: "."; display: block; height: 0; overflow: hidden; }
+.threecol:after { clear: both; }
 @media screen and (max-width: 945px) { .threecol { width: 100%; padding: 0 10px; } }
 @media screen and (max-width: 700px) { .threecol { width: 100%; padding: 0; } }
-.threecol > .col1 { width: 23.72881%; float: left; margin-right: -100%; margin-left: 0; clear: none; }
-.threecol > .col2 { width: 49.15254%; float: left; margin-right: -100%; margin-left: 25.42373%; clear: none; }
-.threecol > .col3 { width: 23.72881%; float: right; margin-left: 0; margin-right: 0; clear: none; }
+.threecol > .col1 { width: 17.72152%; float: left; margin-right: -100%; margin-left: 0%; clear: none; }
+.threecol > .col2 { width: 36.70886%; float: left; margin-right: -100%; margin-left: 18.98734%; clear: none; }
+.threecol > .col3 { width: 17.72152%; float: left; margin-right: -100%; margin-left: 56.96203%; clear: none; }
 
 .pager { clear: both; text-align: center; }
 .pager li { background-image: none; display: inline; list-style-type: none; padding: 0.5em; }
 .pager li.current { font-weight: 700; }
+
+div.view-mode-1-4-fact { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; width: 225px; float: left; padding: 17px; border: 1px #e6e7e4 solid; background-color: #FFF; text-align: center; }
+div.view-mode-1-4-fact:before, div.view-mode-1-4-fact:after { content: "."; display: block; height: 0; overflow: hidden; }
+div.view-mode-1-4-fact:after { clear: both; }
+div.view-mode-1-4-fact > p { text-align: left; margin: 10px 0; padding-top: 10px; border-top: 1px solid gray; }
+div.view-mode-1-4-fact > h3 { display: table-cell; height: 40px; vertical-align: middle; width: inherit; }
+div.view-mode-1-4-fact > a { background-color: #afc200; color: white; display: block; padding: 8px 0; }
+
+div.section-row div.has-sibling-right div.view-mode-1-4-fact { margin-right: 20px; }

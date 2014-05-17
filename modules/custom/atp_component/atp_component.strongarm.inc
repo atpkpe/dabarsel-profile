@@ -43,7 +43,47 @@ function atp_component_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__component';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_4_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_4_l' => array(
+        'custom_settings' => FALSE,
+      ),
+      '3_8_h' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_2_l' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_2_h' => array(
+        'custom_settings' => FALSE,
+      ),
+      '3_4_h' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_1_l' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_4_fact' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'language' => array(
@@ -63,6 +103,18 @@ function atp_component_strongarm() {
         'language' => array(
           'teaser' => array(
             'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          '1_4_h' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          '1_4_fact' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

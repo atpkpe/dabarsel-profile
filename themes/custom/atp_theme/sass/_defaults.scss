@@ -12,8 +12,9 @@
 html {
   height: 100%;
 }
+
 body {
-  background: #fff;
+  background: $body-color;
   height: 100%;
 }
 
@@ -28,6 +29,7 @@ h1 {
 h2 {
 }
 h3 {
+  font-size : 16px;
 }
 p {
   margin-bottom: 20px;
@@ -37,4 +39,9 @@ p {
   ul, ol {
     margin-left: 20px;
   }
+}
+
+div.page-wrapper {
+  margin:0px auto;
+  max-width:960px;
 }

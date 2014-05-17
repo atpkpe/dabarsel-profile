@@ -73,10 +73,11 @@
 
 /* FONTS */
 @mixin font {
-  font-family: sans-serif;
+  font-family: "Tahoma", sans-serif;
   color: $text-color;
   font-size: 13px;
   font-weight: 400;
+  h1, h2, h3, h4 { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 }
 @mixin font-bold {
   font-weight: 700;

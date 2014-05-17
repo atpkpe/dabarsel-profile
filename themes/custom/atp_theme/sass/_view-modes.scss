@@ -1,0 +1,32 @@
+div.view-mode-1-4-fact {
+  @include clearfix;
+  width: (4 * $grid-in-px + 3 * $gutter-in-px);
+  float: left;
+  padding: 17px;
+  border: 1px $gray solid;
+  background-color: #FFF;
+  text-align: center;
+  >p { 
+   text-align: left;
+   margin: 10px 0;
+   padding-top: 10px;
+   border-top : 1px solid gray;
+  }
+  >h3 { 
+    display: table-cell;
+    height: 40px;
+    vertical-align: middle;
+    width: inherit;
+  }
+  >a { 
+    background-color: $atp-green;
+    color: white;
+    display: block;
+    padding: 8px 0;
+
+  }
+}
+
+div.section-row div.has-sibling-right div.view-mode-1-4-fact {
+  margin-right: $gutter-in-px;
+}

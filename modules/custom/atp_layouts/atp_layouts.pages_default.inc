@@ -102,7 +102,10 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'top-menu',
+      'css_class' => 'top-menu',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -134,7 +137,10 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'main-menu',
+      'css_class' => 'main-menu',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
