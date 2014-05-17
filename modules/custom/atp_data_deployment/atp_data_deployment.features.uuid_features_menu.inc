@@ -118,9 +118,30 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'uuid' => 'e50f0574-2730-4e7d-bae3-d3a7edad891e',
     'uuid_path' => 'node/1b92d8ff-afeb-455f-a1bd-91fe74393f25',
   );
+  // Exported menu link: fa9e0224-dd8c-11e3-be5c-28284e126ef0
+  $menu_uuid_links['fa9e0224-dd8c-11e3-be5c-28284e126ef0'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'ATP',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'uuid' => 'fa9e0224-dd8c-11e3-be5c-28284e126ef0',
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('ATP');
   t('I fokus');
   t('Job');
   t('Om ATP');
