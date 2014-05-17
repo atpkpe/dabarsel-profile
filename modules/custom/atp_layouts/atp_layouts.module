@@ -46,7 +46,7 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
   $panel = $vars['pane']->panel;
 
   // Don't add anything to site template panes
-  if ($site_template_panes[$panel]) {
+  if (!empty($site_template_panes[$panel])) {
     return;
   }
 
