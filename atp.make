@@ -78,6 +78,10 @@ projects[date][type] = 'module'
 projects[date][subdir] = 'contrib'
 projects[date][version] = '2.7'
 
+projects[field_group_link][type] = 'module'
+projects[field_group_link][subdir] = 'contrib'
+projects[field_group_link][version] = '1.0'
+
 projects[uuid_features_menu][type] = 'module'
 projects[uuid_features_menu][subdir] = 'contrib'
 projects[uuid_features_menu][download][branch] = '7.x-1.x'

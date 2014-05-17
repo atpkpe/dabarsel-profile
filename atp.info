@@ -16,6 +16,7 @@ dependencies[] = title
 dependencies[] = date
 dependencies[] = date_popup
 dependencies[] = diff
+dependencies[] = field_group_link
 dependencies[] = masquerade
 dependencies[] = workbench
 dependencies[] = workbench_moderation
