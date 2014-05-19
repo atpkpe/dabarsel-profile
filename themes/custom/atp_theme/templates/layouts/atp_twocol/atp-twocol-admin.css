@@ -1,0 +1,8 @@
+.twocol .left-col,
+.twocol .right-col { 
+  float: left; 
+}
+
+.twocol .left-col { margin-right: 10px; width: 25%; }
+.twocol .right-col { width: 73%; }
+.twocol .section-row { margin-bottom : 10px; }
