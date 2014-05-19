@@ -46,11 +46,11 @@ function atp_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_wrapper' => 0,
-          'item_wrapper' => 0,
+          'item_wrapper' => 'h1',
           'label_wrapper' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -368,7 +368,7 @@ function atp_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
