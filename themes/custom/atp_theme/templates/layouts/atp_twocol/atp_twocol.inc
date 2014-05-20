@@ -7,6 +7,7 @@ $plugin = array(
   'icon' => 'atp-twocol.png',
   'theme' => 'atp_twocol',
   'admin css' => 'atp-twocol-admin.css',
+  'css' => 'atp-twocol.css',
   'regions' => array(
     'left' => t('Left side'),
     'row1' => t('First row'),
