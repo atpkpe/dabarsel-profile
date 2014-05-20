@@ -62,9 +62,9 @@ function atp_page_panelizer_defaults() {
       'parent' => 'menu-top:0',
       'title_link' => 0,
       'admin_title' => '',
-      'level' => '2',
+      'level' => '3',
       'follow' => 0,
-      'depth' => '2',
+      'depth' => '1',
       'expanded' => 0,
       'sort' => 0,
       'override_title' => 1,
@@ -81,6 +81,25 @@ function atp_page_panelizer_defaults() {
     $pane->uuid = 'a795505c-7453-470a-aac5-7e2f3470055a';
     $display->content['new-a795505c-7453-470a-aac5-7e2f3470055a'] = $pane;
     $display->panels['left'][0] = 'new-a795505c-7453-470a-aac5-7e2f3470055a';
+    $pane = new stdClass();
+    $pane->pid = 'new-51c20a50-9bc1-4f89-beb1-d4fe4cc77923';
+    $pane->panel = 'row1';
+    $pane->type = 'page_breadcrumb';
+    $pane->subtype = 'page_breadcrumb';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '51c20a50-9bc1-4f89-beb1-d4fe4cc77923';
+    $display->content['new-51c20a50-9bc1-4f89-beb1-d4fe4cc77923'] = $pane;
+    $display->panels['row1'][0] = 'new-51c20a50-9bc1-4f89-beb1-d4fe4cc77923';
     $pane = new stdClass();
     $pane->pid = 'new-96f0eeaa-76d2-4cbc-a3db-9d19a9eb944f';
     $pane->panel = 'row2';
