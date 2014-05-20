@@ -30,6 +30,7 @@ dependencies[] = i18n_menu_overview
 dependencies[] = menu_view_unpublished
 dependencies[] = uuid_features_menu
 dependencies[] = panels_mini
+dependencies[] = multifield
 
 ; Project features
 dependencies[] = atp_settings
