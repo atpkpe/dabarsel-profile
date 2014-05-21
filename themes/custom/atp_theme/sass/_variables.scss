@@ -2,13 +2,15 @@
 $red : #F42D64;
 
 /* ATP colors */
-$ligth-gray: #F2F1F0;
-$dark-gray: #424848;
-$gray: #E6E7E4;
-$atp-green: #AFC200;
+$gray: rgb(230,231,228);
+$gray-light: rgb(242,241,240);
+$gray-dark: rgb(66,72,68);
+$green: rgb(173,194,0);
+$green-hover: rgb(124,149,0);
+$green-hover-header: rgb(173,194,0);
 
-$body-color: $ligth-gray;
-$text-color: #333;
+$body-color: $gray-light;
+$text-color: $gray-dark;
 $width: 960;
 $content-width: $width * 1px;
 $border-radius: 4px;

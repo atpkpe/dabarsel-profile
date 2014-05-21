@@ -4,10 +4,10 @@
 /* GRADIENTS */
 /* FONTS */
 /* FORM ELEMENTS */
+/* BTN */
 .element-invisible { display: none; }
 
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: "Tahoma", sans-serif; color: #333333; font-size: 13px; font-weight: 400; margin: 0px; padding: 0px; }
-* h1, * h2, * h3, * h4 { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: "Tahoma", sans-serif; color: #424844; font-size: 13px; margin: 0px; padding: 0px; }
 
 html { height: 100%; }
 
@@ -16,13 +16,13 @@ body { background: #f2f1f0; height: 100%; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+h1, h2, h3, h4, header * { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+
 h3 { font-size: 16px; }
 
 p { margin-bottom: 20px; }
 
 .content ul, .content ol { margin-left: 20px; }
-
-div.page-wrapper { margin: 0px auto; max-width: 960px; }
 
 .form-required { color: #f42d64; }
 
@@ -33,23 +33,39 @@ input.form-submit { -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-bor
 
 #user-login label { float: left; display: block; width: 100px; line-height: 32px; }
 
+body.admin-menu { margin-top: 28px !important; }
+
 /* HEADER */
-header .top-menu { background-color: #424848; height: 30px; }
-header .top-menu ul { list-style-type: none; padding-left: 10px; }
-header .top-menu li { float: left; margin-right: 20px; margin-top: 5px; }
-header .top-menu li a { color: #FFF; }
-header .top-menu li a.active { color: hotpink; }
-header .main-menu { background-color: #FFF; border-bottom: 1px solid #afc200; height: 68px; padding-top: 10px; }
-header .main-menu ul { list-style-type: none; padding-left: 10px; }
+header { background: #fff; height: 100px; }
+header:before { background: #424844; content: ""; position: absolute; width: 100%; height: 30px; z-index: 0; }
+header > .inner { margin: 0 auto; width: 960px; position: relative; }
+@media screen and (max-width: 945px) { header > .inner { width: 100%; padding: 0 10px; } }
+@media screen and (max-width: 700px) { header > .inner { width: 100%; padding: 0; } }
+header ul { list-style: none; margin: 0; padding: 0; }
+header li { float: left; }
+header li a:hover { color: #adc200; text-decoration: none; }
+
+#logo { position: absolute; left: 0; top: 51px; }
+
+.top-menu { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; position: absolute; left: 0; top: 0; }
+.top-menu:before, .top-menu:after { content: "."; display: block; height: 0; overflow: hidden; }
+.top-menu:after { clear: both; }
+.top-menu * { font-size: 11px; color: #fff; line-height: 30px; }
+.top-menu > ul > li { margin-right: 35px; }
+
+.main-menu { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; position: absolute; left: 100px; top: 30px; }
+.main-menu:before, .main-menu:after { content: "."; display: block; height: 0; overflow: hidden; }
+.main-menu:after { clear: both; }
+.main-menu * { font-size: 14px; }
+.main-menu > ul > li > a { padding: 0 20px; line-height: 70px; }
 
 .page-wrapper { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 .page-wrapper:before, .page-wrapper:after { content: "."; display: block; height: 0; overflow: hidden; }
 .page-wrapper:after { clear: both; }
 
-#main { padding: 10px 0; }
-.not-front #main > div { margin: 0 auto; width: 960px; }
-@media screen and (max-width: 945px) { .not-front #main > div { width: 100%; padding: 0 10px; } }
-@media screen and (max-width: 700px) { .not-front #main > div { width: 100%; padding: 0; } }
+#main { margin: 0 auto; width: 960px; }
+@media screen and (max-width: 945px) { #main { width: 100%; padding: 0 10px; } }
+@media screen and (max-width: 700px) { #main { width: 100%; padding: 0; } }
 
 .onecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; margin-bottom: 20px; }
 .onecol:before, .onecol:after { content: "."; display: block; height: 0; overflow: hidden; }
@@ -89,9 +105,10 @@ header .main-menu ul { list-style-type: none; padding-left: 10px; }
 div.view-mode-1-4-fact { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; width: 225px; float: left; padding: 17px; border: 1px #e6e7e4 solid; background-color: #FFF; text-align: center; }
 div.view-mode-1-4-fact:before, div.view-mode-1-4-fact:after { content: "."; display: block; height: 0; overflow: hidden; }
 div.view-mode-1-4-fact:after { clear: both; }
-div.view-mode-1-4-fact > p { text-align: left; margin: 10px 0; padding-top: 10px; border-top: 1px solid gray; }
+div.view-mode-1-4-fact > p { text-align: left; margin: 10px 0; padding-top: 10px; border-top: 1px solid #e6e7e4; }
 div.view-mode-1-4-fact > h3 { display: table-cell; height: 40px; vertical-align: middle; width: inherit; }
-div.view-mode-1-4-fact > a { background-color: #afc200; color: white; display: block; padding: 8px 0; }
+div.view-mode-1-4-fact > a { background: #adc200; color: #fff; display: block; line-height: 30px; }
+div.view-mode-1-4-fact > a:hover { background: #7c9500; text-decoration: none; }
 
 div.view-mode-1-2-h, div.view-mode-1-2-l, div.view-mode-1-4-l, div.view-mode-1-1-l { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; float: left; position: relative; }
 div.view-mode-1-2-h:before, div.view-mode-1-2-h:after, div.view-mode-1-2-l:before, div.view-mode-1-2-l:after, div.view-mode-1-4-l:before, div.view-mode-1-4-l:after, div.view-mode-1-1-l:before, div.view-mode-1-1-l:after { content: "."; display: block; height: 0; overflow: hidden; }

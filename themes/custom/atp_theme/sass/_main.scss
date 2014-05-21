@@ -2,14 +2,7 @@
   @include clearfix;
 }
 #main {
-  padding: 10px 0;
-  @media screen and (min-height: 500px) {
-  }
-  > div {
-    .not-front & {
-      @include content;
-    }
-  }
+  @include content;
 }
 .onecol {
   @include clearfix;

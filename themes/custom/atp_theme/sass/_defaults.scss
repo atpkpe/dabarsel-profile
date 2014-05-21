@@ -24,6 +24,10 @@ a {
     text-decoration: underline;
   }
 }
+
+h1, h2, h3, h4, header * {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 h1 {
 }
 h2 {
@@ -39,9 +43,4 @@ p {
   ul, ol {
     margin-left: 20px;
   }
-}
-
-div.page-wrapper {
-  margin:0px auto;
-  max-width:960px;
 }

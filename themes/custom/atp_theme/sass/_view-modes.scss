@@ -6,33 +6,29 @@ div.view-mode-1-4-fact {
   border: 1px $gray solid;
   background-color: #FFF;
   text-align: center;
-  >p { 
+  >p {
    text-align: left;
    margin: 10px 0;
    padding-top: 10px;
-   border-top : 1px solid gray;
+   border-top : 1px solid $gray;
   }
-  >h3 { 
+  >h3 {
     display: table-cell;
     height: 40px;
     vertical-align: middle;
     width: inherit;
   }
-  >a { 
-    background-color: $atp-green;
-    color: white;
-    display: block;
-    padding: 8px 0;
-
+  > a {
+    @include btn-green;
   }
 }
 
-div.view-mode-1-2-h, div.view-mode-1-2-l, 
+div.view-mode-1-2-h, div.view-mode-1-2-l,
 div.view-mode-1-4-l, div.view-mode-1-1-l {
   @include clearfix;
   float: left;
   position: relative;
-      
+
   .group-section-image-overlay {
     position : absolute;
     left : 0;
@@ -40,11 +36,11 @@ div.view-mode-1-4-l, div.view-mode-1-1-l {
     background-color: rgba(0,0,0,0.5);
     width: 100%;
     padding: 10px;
-    
+
     h3 { color: #FFF; }
     p { color: #FFF; margin:0; }
   }
-    
+
 }
 
 div.section-row div.not-first div.view-mode-1-2-l,
@@ -82,10 +78,10 @@ div.view-mode-1-4-l {
 div.view-mode-1-1-l {
   h3 { text-transform:uppercase;}
   height: 126px;
-  div.group-section-image-overlay { 
+  div.group-section-image-overlay {
     height: 100%;
   }
-  p { width : 50%;} 
+  p { width : 50%;}
 }
 
 
