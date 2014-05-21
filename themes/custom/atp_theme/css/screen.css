@@ -36,14 +36,23 @@ input.form-submit { -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-bor
 body.admin-menu { margin-top: 28px !important; }
 
 /* HEADER */
-header { background: #fff; height: 100px; }
+header { background: #fff; margin-bottom: 25px; }
 header:before { background: #424844; content: ""; position: absolute; width: 100%; height: 30px; z-index: 0; }
-header > .inner { margin: 0 auto; width: 960px; position: relative; }
-@media screen and (max-width: 945px) { header > .inner { width: 100%; padding: 0 10px; } }
-@media screen and (max-width: 700px) { header > .inner { width: 100%; padding: 0; } }
 header ul { list-style: none; margin: 0; padding: 0; }
 header li { float: left; }
+header li a { display: block; }
+header li a.active-trail { color: #adc200; }
 header li a:hover { color: #adc200; text-decoration: none; }
+header > div > .inner { margin: 0 auto; width: 960px; position: relative; }
+@media screen and (max-width: 945px) { header > div > .inner { width: 100%; padding: 0 10px; } }
+@media screen and (max-width: 700px) { header > div > .inner { width: 100%; padding: 0; } }
+header > .top { border-bottom: 1px solid #adc200; height: 100px; }
+header > .bottom { background: #e6e7e4; }
+header > .bottom .level-2 { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
+header > .bottom .level-2:before, header > .bottom .level-2:after { content: "."; display: block; height: 0; overflow: hidden; }
+header > .bottom .level-2:after { clear: both; }
+header > .bottom .level-2 li { line-height: 45px; }
+header > .bottom .level-2 a { padding: 0 30px; }
 
 #logo { position: absolute; left: 0; top: 51px; }
 

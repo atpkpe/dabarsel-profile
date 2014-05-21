@@ -1,7 +1,7 @@
 /* HEADER */
 header {
   background: #fff;
-  height: 100px;
+  margin-bottom: 25px;
   &:before {
     background: $gray-dark;
     content: "";
@@ -9,10 +9,6 @@ header {
     width: 100%;
     height: 30px;
     z-index: 0;
-  }
-  > .inner {
-    @include content;
-    position: relative;
   }
   ul {
     list-style: none;
@@ -22,9 +18,33 @@ header {
   li {
     float: left;
     a {
+      display: block;
+      &.active-trail {
+        color: $green-hover-header;
+      }
       &:hover {
         color: $green-hover-header;
         text-decoration: none;
+      }
+    }
+  }
+  > div > .inner {
+    @include content;
+    position: relative;
+  }
+  > .top {
+    border-bottom: 1px solid $green;
+    height: 100px;
+  }
+  > .bottom {
+    background: $gray;
+    .level-2 {
+      @include clearfix;
+      li {
+        line-height: 45px;
+      }
+      a {
+        padding: 0 30px;
       }
     }
   }
