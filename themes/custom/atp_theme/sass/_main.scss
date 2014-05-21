@@ -11,11 +11,10 @@
       border-left: 3px solid $green;
       a {
         &:hover {
-          color: $green;
           text-decoration: none;
         }
         &.active-trail {
-          color: $green;
+          color: $green-hover;
         }
       }
     }
