@@ -1,0 +1,43 @@
+@import "compass";
+@import "singularitygs";
+@import "variables";
+@import "mixins";
+
+.onecol {
+  @include clearfix;
+  @include content;
+  margin-bottom: 20px;
+}
+.twocol-left {
+  @include clearfix;
+  @include content;
+  > aside {
+    @include grid-span(3, 1);
+  }
+  > article {
+    @include grid-span(9, 4);
+  }
+}
+.twocol-right {
+  @include clearfix;
+  @include content;
+  > .col1 {
+    @include grid-span(9, 1);
+  }
+  > .col2 {
+    @include grid-span(3, 10);
+  }
+}
+.threecol {
+  @include clearfix;
+  @include content;
+  > .col1 {
+    @include grid-span(3, 1);
+  }
+  > .col2 {
+    @include grid-span(6, 4);
+  }
+  > .col3 {
+    @include grid-span(3,10);
+  }
+}

@@ -3,42 +3,21 @@
 }
 #main {
   @include content;
-}
-.onecol {
-  @include clearfix;
-  @include content;
-  margin-bottom: 20px;
-}
-.twocol-left {
-  @include clearfix;
-  @include content;
-  > .col1 {
-    @include grid-span(3, 1);
-  }
-  > .col2 {
-    @include grid-span(9, 4);
-  }
-}
-.twocol-right {
-  @include clearfix;
-  @include content;
-  > .col1 {
-    @include grid-span(9, 1);
-  }
-  > .col2 {
-    @include grid-span(3, 10);
-  }
-}
-.threecol {
-  @include clearfix;
-  @include content;
-  > .col1 {
-    @include grid-span(3, 1);
-  }
-  > .col2 {
-    @include grid-span(6, 4);
-  }
-  > .col3 {
-    @include grid-span(3,10);
+  aside {
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 10px 20px;
+      border-left: 3px solid $green;
+      a {
+        &:hover {
+          color: $green;
+          text-decoration: none;
+        }
+        &.active-trail {
+          color: $green;
+        }
+      }
+    }
   }
 }

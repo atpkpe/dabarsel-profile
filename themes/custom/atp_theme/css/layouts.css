@@ -1,0 +1,37 @@
+/* ATP colors */
+/* GRIDS */
+/* MEDIA QUERIES */
+/* GRADIENTS */
+/* FONTS */
+/* FORM ELEMENTS */
+/* BTN */
+.onecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; margin-bottom: 20px; }
+.onecol:before, .onecol:after { content: "."; display: block; height: 0; overflow: hidden; }
+.onecol:after { clear: both; }
+@media screen and (max-width: 945px) { .onecol { width: 100%; padding: 0 10px; } }
+@media screen and (max-width: 700px) { .onecol { width: 100%; padding: 0; } }
+
+.twocol-left { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; }
+.twocol-left:before, .twocol-left:after { content: "."; display: block; height: 0; overflow: hidden; }
+.twocol-left:after { clear: both; }
+@media screen and (max-width: 945px) { .twocol-left { width: 100%; padding: 0 10px; } }
+@media screen and (max-width: 700px) { .twocol-left { width: 100%; padding: 0; } }
+.twocol-left > aside { width: 17.72152%; float: left; margin-right: -100%; margin-left: 0%; clear: none; }
+.twocol-left > article { width: 55.6962%; float: left; margin-right: -100%; margin-left: 18.98734%; clear: none; }
+
+.twocol-right { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; }
+.twocol-right:before, .twocol-right:after { content: "."; display: block; height: 0; overflow: hidden; }
+.twocol-right:after { clear: both; }
+@media screen and (max-width: 945px) { .twocol-right { width: 100%; padding: 0 10px; } }
+@media screen and (max-width: 700px) { .twocol-right { width: 100%; padding: 0; } }
+.twocol-right > .col1 { width: 55.6962%; float: left; margin-right: -100%; margin-left: 0%; clear: none; }
+.twocol-right > .col2 { width: 17.72152%; float: left; margin-right: -100%; margin-left: 56.96203%; clear: none; }
+
+.threecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; }
+.threecol:before, .threecol:after { content: "."; display: block; height: 0; overflow: hidden; }
+.threecol:after { clear: both; }
+@media screen and (max-width: 945px) { .threecol { width: 100%; padding: 0 10px; } }
+@media screen and (max-width: 700px) { .threecol { width: 100%; padding: 0; } }
+.threecol > .col1 { width: 17.72152%; float: left; margin-right: -100%; margin-left: 0%; clear: none; }
+.threecol > .col2 { width: 36.70886%; float: left; margin-right: -100%; margin-left: 18.98734%; clear: none; }
+.threecol > .col3 { width: 17.72152%; float: left; margin-right: -100%; margin-left: 56.96203%; clear: none; }
