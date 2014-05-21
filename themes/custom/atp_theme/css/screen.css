@@ -107,7 +107,9 @@ div.view-mode-1-4-fact:before, div.view-mode-1-4-fact:after { content: "."; disp
 div.view-mode-1-4-fact:after { clear: both; }
 div.view-mode-1-4-fact > p { text-align: left; margin: 10px 0; padding-top: 10px; border-top: 1px solid #e6e7e4; }
 div.view-mode-1-4-fact > h3 { display: table-cell; height: 40px; vertical-align: middle; width: inherit; }
-div.view-mode-1-4-fact > a { background: #adc200; color: #fff; display: block; line-height: 30px; }
+div.view-mode-1-4-fact > a { background: #adc200; color: #fff; display: block; line-height: 30px; position: relative; }
+div.view-mode-1-4-fact > a:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10); opacity: 0.1; background: #000; content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; bottom: 1px; }
+div.view-mode-1-4-fact > a:after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; background: #000; content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; bottom: 0; }
 div.view-mode-1-4-fact > a:hover { background: #7c9500; text-decoration: none; }
 
 div.view-mode-1-2-h, div.view-mode-1-2-l, div.view-mode-1-4-l, div.view-mode-1-1-l { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; float: left; position: relative; }
