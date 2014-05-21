@@ -18,7 +18,7 @@ $border-width: 1px;
 $border-color: $gray;
 
 /* GRIDS */
+$output: 'float';
 $grids: 16;
-$gutter: 20;
-$gutter-in-px: 20px;
-$grid-in-px: ($width - (($grids - 1) * $gutter)) / $grids;
+$gutters-in-px: 20; //px
+$gutters: $gutters-in-px/(($width - (15*$gutters-in-px))/$grids);

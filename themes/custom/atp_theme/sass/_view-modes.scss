@@ -1,11 +1,17 @@
-div.view-mode-1-4-fact {
+.section-row {
   @include clearfix;
-  width: (4 * $grid-in-px + 3 * $gutter-in-px);
-  float: left;
+  margin-bottom: 20px;
+}
+
+.view-mode-1-4-fact {
+  @include grid-span(4,1);
+  background: #fff;
   padding: 17px;
   border: 1px $gray solid;
-  background-color: #FFF;
   text-align: center;
+  .not-first.last & {
+    @include grid-span(4,13);
+  }
   >p {
    text-align: left;
    margin: 10px 0;
@@ -18,17 +24,38 @@ div.view-mode-1-4-fact {
     vertical-align: middle;
     width: inherit;
   }
-  > a {
+  >a {
     @include btn-green;
   }
 }
 
+
+.view-mode-1-2-h, .view-mode-1-2-l {
+  @include grid-span(8,1);
+  .not-first & {
+    @include grid-span(8,9);
+  }
+}
+.view-mode-1-2-l, .view-mode-1-4-l {
+  margin-bottom: 20px;
+  .last & {
+    margin-bottom: 0;
+  }
+}
+.view-mode-1-1-l, .view-mode-1-2-l, .view-mode-1-4-l {
+  position: relative;
+  height: 126px;
+}
+.view-mode-1-1-h, .view-mode-1-2-h, .view-mode-1-4-h {
+  position: relative;
+  height: 272px;
+}
+
+
+
+
 div.view-mode-1-2-h, div.view-mode-1-2-l,
 div.view-mode-1-4-l, div.view-mode-1-1-l {
-  @include clearfix;
-  float: left;
-  position: relative;
-
   .group-section-image-overlay {
     position : absolute;
     left : 0;
@@ -43,41 +70,8 @@ div.view-mode-1-4-l, div.view-mode-1-1-l {
 
 }
 
-div.section-row div.not-first div.view-mode-1-2-l,
-div.section-row div.not-first div.view-mode-1-4-fact,
-div.section-row div.not-first div.view-mode-1-4-l,
-{
-  margin-left: $gutter-in-px;
-  margin-top: $gutter-in-px / 2 ;
-  margin-bottom: $gutter-in-px / 2;
-}
-
-div.section-row div.first div.view-mode-1-2-h,
-div.section-row div.first div.view-mode-1-4-fact,
-div.section-row div.first div.view-mode-1-4-l
-{
-  margin-top: $gutter-in-px / 2;
-  margin-bottom: $gutter-in-px / 2;
-}
-
-div.view-mode-1-2-l {
-  width: (8 * $grid-in-px + 7 * $gutter-in-px);
-  height: 126px;
-}
-
-div.view-mode-1-2-h {
-  width: (8 * $grid-in-px + 7 * $gutter-in-px);
-  height: 272px;
-}
-
-div.view-mode-1-4-l {
-  width: (4 * $grid-in-px + 3 * $gutter-in-px);
-  height: 126px;
-}
-
 div.view-mode-1-1-l {
   h3 { text-transform:uppercase;}
-  height: 126px;
   div.group-section-image-overlay {
     height: 100%;
   }

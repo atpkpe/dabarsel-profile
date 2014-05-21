@@ -85,34 +85,33 @@ header > .bottom .level-2 a { padding: 0 30px; }
 .pager li { background-image: none; display: inline; list-style-type: none; padding: 0.5em; }
 .pager li.current { font-weight: 700; }
 
-div.view-mode-1-4-fact { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; width: 225px; float: left; padding: 17px; border: 1px #e6e7e4 solid; background-color: #FFF; text-align: center; }
-div.view-mode-1-4-fact:before, div.view-mode-1-4-fact:after { content: "."; display: block; height: 0; overflow: hidden; }
-div.view-mode-1-4-fact:after { clear: both; }
-div.view-mode-1-4-fact > p { text-align: left; margin: 10px 0; padding-top: 10px; border-top: 1px solid #e6e7e4; }
-div.view-mode-1-4-fact > h3 { display: table-cell; height: 40px; vertical-align: middle; width: inherit; }
-div.view-mode-1-4-fact > a { background: #adc200; color: #fff; display: block; line-height: 30px; position: relative; }
-div.view-mode-1-4-fact > a:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10); opacity: 0.1; background: #000; content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; bottom: 1px; }
-div.view-mode-1-4-fact > a:after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; background: #000; content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; bottom: 0; }
-div.view-mode-1-4-fact > a:hover { background: #7c9500; text-decoration: none; }
+.section-row { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin-bottom: 20px; }
+.section-row:before, .section-row:after { content: "."; display: block; height: 0; overflow: hidden; }
+.section-row:after { clear: both; }
 
-div.view-mode-1-2-h, div.view-mode-1-2-l, div.view-mode-1-4-l, div.view-mode-1-1-l { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; float: left; position: relative; }
-div.view-mode-1-2-h:before, div.view-mode-1-2-h:after, div.view-mode-1-2-l:before, div.view-mode-1-2-l:after, div.view-mode-1-4-l:before, div.view-mode-1-4-l:after, div.view-mode-1-1-l:before, div.view-mode-1-1-l:after { content: "."; display: block; height: 0; overflow: hidden; }
-div.view-mode-1-2-h:after, div.view-mode-1-2-l:after, div.view-mode-1-4-l:after, div.view-mode-1-1-l:after { clear: both; }
+.view-mode-1-4-fact { width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; background: #fff; padding: 17px; border: 1px #e6e7e4 solid; text-align: center; }
+.not-first.last .view-mode-1-4-fact { width: 23.4375%; clear: right; float: right; margin-right: 0; }
+.view-mode-1-4-fact > p { text-align: left; margin: 10px 0; padding-top: 10px; border-top: 1px solid #e6e7e4; }
+.view-mode-1-4-fact > h3 { display: table-cell; height: 40px; vertical-align: middle; width: inherit; }
+.view-mode-1-4-fact > a { background: #adc200; color: #fff; display: block; line-height: 30px; position: relative; }
+.view-mode-1-4-fact > a:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10); opacity: 0.1; background: #000; content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; bottom: 1px; }
+.view-mode-1-4-fact > a:after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; background: #000; content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; bottom: 0; }
+.view-mode-1-4-fact > a:hover { background: #7c9500; text-decoration: none; }
+
+.view-mode-1-2-h, .view-mode-1-2-l { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
+.not-first .view-mode-1-2-h, .not-first .view-mode-1-2-l { width: 48.95833%; clear: right; float: right; margin-right: 0; }
+
+.view-mode-1-2-l, .view-mode-1-4-l { margin-bottom: 20px; }
+.last .view-mode-1-2-l, .last .view-mode-1-4-l { margin-bottom: 0; }
+
+.view-mode-1-1-l, .view-mode-1-2-l, .view-mode-1-4-l { position: relative; height: 126px; }
+
+.view-mode-1-1-h, .view-mode-1-2-h, .view-mode-1-4-h { position: relative; height: 272px; }
+
 div.view-mode-1-2-h .group-section-image-overlay, div.view-mode-1-2-l .group-section-image-overlay, div.view-mode-1-4-l .group-section-image-overlay, div.view-mode-1-1-l .group-section-image-overlay { position: absolute; left: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); width: 100%; padding: 10px; }
 div.view-mode-1-2-h .group-section-image-overlay h3, div.view-mode-1-2-l .group-section-image-overlay h3, div.view-mode-1-4-l .group-section-image-overlay h3, div.view-mode-1-1-l .group-section-image-overlay h3 { color: #FFF; }
 div.view-mode-1-2-h .group-section-image-overlay p, div.view-mode-1-2-l .group-section-image-overlay p, div.view-mode-1-4-l .group-section-image-overlay p, div.view-mode-1-1-l .group-section-image-overlay p { color: #FFF; margin: 0; }
 
-div.section-row div.not-first div.view-mode-1-2-l, div.section-row div.not-first div.view-mode-1-4-fact, div.section-row div.not-first div.view-mode-1-4-l { margin-left: 20px; margin-top: 10px; margin-bottom: 10px; }
-
-div.section-row div.first div.view-mode-1-2-h, div.section-row div.first div.view-mode-1-4-fact, div.section-row div.first div.view-mode-1-4-l { margin-top: 10px; margin-bottom: 10px; }
-
-div.view-mode-1-2-l { width: 470px; height: 126px; }
-
-div.view-mode-1-2-h { width: 470px; height: 272px; }
-
-div.view-mode-1-4-l { width: 225px; height: 126px; }
-
-div.view-mode-1-1-l { height: 126px; }
 div.view-mode-1-1-l h3 { text-transform: uppercase; }
 div.view-mode-1-1-l div.group-section-image-overlay { height: 100%; }
 div.view-mode-1-1-l p { width: 50%; }
