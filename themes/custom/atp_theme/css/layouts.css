@@ -5,6 +5,7 @@
 /* FONTS */
 /* FORM ELEMENTS */
 /* BTN */
+/* VIEWMODES */
 .onecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; margin-bottom: 20px; }
 .onecol:before, .onecol:after { content: "."; display: block; height: 0; overflow: hidden; }
 .onecol:after { clear: both; }

@@ -148,3 +148,34 @@
       text-decoration: none;
     }
 }
+
+/* VIEWMODES */
+@mixin view-mode($gridspan) {
+  @include float-span($gridspan);
+  margin-left: percentage($gutters-in-px/$width);
+  margin-right: 0;
+  margin-bottom: $margins;
+  overflow: hidden;
+  position: relative;
+  .first &, .section-row > &:first-child {
+    margin-left: 0;
+  }
+  .not-first & {
+    margin-left: percentage($gutters-in-px/$width);
+  }
+  .group-section-image-overlay {
+    background-color: rgba(0,0,0,0.5);
+    position : absolute;
+    left : 0;
+    bottom : 0;
+    width: 100%;
+    padding: 10px;
+    h3 {
+        color: #FFF;
+    }
+    p {
+        color: #FFF;
+        margin:0;
+    }
+  }
+}
