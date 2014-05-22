@@ -121,6 +121,7 @@
     display: block;
     color: #fff;
     line-height: 30px;
+    text-align: center;
     &:before {
       @include opacity(.1);
       background: #000;
@@ -178,6 +179,11 @@
   }
   .not-first & {
     margin-left: percentage($gutters-in-px/$width);
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
   }
   .group-section-image-overlay {
     @include view-mode-overlay;

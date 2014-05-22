@@ -1,7 +1,8 @@
+/* BREAKPOINTS */
+$mobile: "500px";
 
-$red : #F42D64;
-
-/* ATP colors */
+/* COLORS */
+$red: #c00;
 $gray: rgb(230,231,228);
 $gray-light: rgb(242,241,240);
 $gray-dark: rgb(66,72,68);
@@ -19,7 +20,8 @@ $border-color: $gray;
 
 /* GRIDS */
 $output: 'float';
-$grids: 16;
+$grid-count: 16;
+$grids: $grid-count;
 $gutters-in-px: 20; //px
 $margins: $gutters-in-px * 1px;
-$gutters: $gutters-in-px/(($width - (($grids - 1)*$gutters-in-px))/$grids);
+$gutters: $gutters-in-px/(($width - (($grid-count - 1)*$gutters-in-px))/$grid-count);

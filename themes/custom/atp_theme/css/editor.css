@@ -1,4 +1,5 @@
-/* ATP colors */
+/* BREAKPOINTS */
+/* COLORS */
 /* GRIDS */
 /* MEDIA QUERIES */
 /* GRADIENTS */
@@ -23,7 +24,9 @@ h1 { margin-bottom: 15px; font-weight: 400; font-size: 28px; }
 
 h3 { font-size: 16px; }
 
-p { margin-bottom: 20px; line-height: 22px; }
+p { margin-bottom: 20px; line-height: 18px; }
+
+blockquote { font-size: 16px; margin-bottom: 20px; }
 
 .content ul, .content ol { margin-left: 20px; }
 
