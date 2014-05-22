@@ -31,6 +31,9 @@
 .view-mode-1-1-l {
   position: relative;
   margin-bottom: $margins;
+  .group-section-image-overlay {
+    @include view-mode-overlay;
+  }
 }
 .view-mode-1-2-h, .view-mode-1-2-l {
   @include view-mode(8);

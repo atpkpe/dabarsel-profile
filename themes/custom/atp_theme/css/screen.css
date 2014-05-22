@@ -105,6 +105,9 @@ header > .bottom .level-2 a { padding: 0 30px; }
 .view-mode-1-4-fact > a:hover { background: #7c9500; text-decoration: none; }
 
 .view-mode-1-1-l { position: relative; margin-bottom: 20px; }
+.view-mode-1-1-l .group-section-image-overlay { background-color: rgba(0, 0, 0, 0.5); position: absolute; left: 0; bottom: 0; width: 100%; padding: 10px; }
+.view-mode-1-1-l .group-section-image-overlay h3 { color: #FFF; }
+.view-mode-1-1-l .group-section-image-overlay p { color: #FFF; margin: 0; }
 
 .view-mode-1-2-h, .view-mode-1-2-l { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; margin-left: 2.08333%; margin-right: 0; margin-bottom: 20px; overflow: hidden; position: relative; }
 .first .view-mode-1-2-h, .section-row > .view-mode-1-2-h:first-child, .first .view-mode-1-2-l, .section-row > .view-mode-1-2-l:first-child { margin-left: 0; }
