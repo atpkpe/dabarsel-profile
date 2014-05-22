@@ -174,7 +174,7 @@
   margin-bottom: $margins;
   margin-left: percentage($gutters-in-px/$width);
   border-left: 4px solid $green;
-  .first &, .section-row > &:first-child {
+  .first &, .section-row > &:first-child, &.first {
     margin-left: 0;
   }
   .not-first & {

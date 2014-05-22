@@ -102,7 +102,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .section-row:after { clear: both; }
 
 .view-mode-1-4-fact { width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; position: relative; overflow: hidden; margin-right: 0; margin-bottom: 20px; margin-left: 2.08333%; border-left: 4px solid #adc200; background: #fff; padding: 17px; border: 1px solid #e6e7e4; padding: 0 20px 20px 20px; }
-.first .view-mode-1-4-fact, .section-row > .view-mode-1-4-fact:first-child { margin-left: 0; }
+.first .view-mode-1-4-fact, .section-row > .view-mode-1-4-fact:first-child, .view-mode-1-4-fact.first { margin-left: 0; }
 .not-first .view-mode-1-4-fact { margin-left: 2.08333%; }
 .view-mode-1-4-fact a:hover { text-decoration: none; }
 .view-mode-1-4-fact .group-section-image-overlay { background: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; padding: 10px 20px; width: 100%; }
@@ -122,7 +122,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .view-mode-1-1-l .group-section-image-overlay p { margin: 0; color: #fff; }
 
 .view-mode-1-2-h, .view-mode-1-2-l { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; position: relative; overflow: hidden; margin-right: 0; margin-bottom: 20px; margin-left: 2.08333%; border-left: 4px solid #adc200; }
-.first .view-mode-1-2-h, .section-row > .view-mode-1-2-h:first-child, .first .view-mode-1-2-l, .section-row > .view-mode-1-2-l:first-child { margin-left: 0; }
+.first .view-mode-1-2-h, .section-row > .view-mode-1-2-h:first-child, .view-mode-1-2-h.first, .first .view-mode-1-2-l, .section-row > .view-mode-1-2-l:first-child, .view-mode-1-2-l.first { margin-left: 0; }
 .not-first .view-mode-1-2-h, .not-first .view-mode-1-2-l { margin-left: 2.08333%; }
 .view-mode-1-2-h a:hover, .view-mode-1-2-l a:hover { text-decoration: none; }
 .view-mode-1-2-h .group-section-image-overlay, .view-mode-1-2-l .group-section-image-overlay { background: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; padding: 10px 20px; width: 100%; }
@@ -130,7 +130,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .view-mode-1-2-h .group-section-image-overlay p, .view-mode-1-2-l .group-section-image-overlay p { margin: 0; color: #fff; }
 
 .view-mode-3-8-h, .view-mode-3-8-l { width: 36.19792%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; position: relative; overflow: hidden; margin-right: 0; margin-bottom: 20px; margin-left: 2.08333%; border-left: 4px solid #adc200; }
-.first .view-mode-3-8-h, .section-row > .view-mode-3-8-h:first-child, .first .view-mode-3-8-l, .section-row > .view-mode-3-8-l:first-child { margin-left: 0; }
+.first .view-mode-3-8-h, .section-row > .view-mode-3-8-h:first-child, .view-mode-3-8-h.first, .first .view-mode-3-8-l, .section-row > .view-mode-3-8-l:first-child, .view-mode-3-8-l.first { margin-left: 0; }
 .not-first .view-mode-3-8-h, .not-first .view-mode-3-8-l { margin-left: 2.08333%; }
 .view-mode-3-8-h a:hover, .view-mode-3-8-l a:hover { text-decoration: none; }
 .view-mode-3-8-h .group-section-image-overlay, .view-mode-3-8-l .group-section-image-overlay { background: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; padding: 10px 20px; width: 100%; }
@@ -138,7 +138,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .view-mode-3-8-h .group-section-image-overlay p, .view-mode-3-8-l .group-section-image-overlay p { margin: 0; color: #fff; }
 
 .view-mode-1-4-h, .view-mode-1-4-l { width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; position: relative; overflow: hidden; margin-right: 0; margin-bottom: 20px; margin-left: 2.08333%; border-left: 4px solid #adc200; }
-.first .view-mode-1-4-h, .section-row > .view-mode-1-4-h:first-child, .first .view-mode-1-4-l, .section-row > .view-mode-1-4-l:first-child { margin-left: 0; }
+.first .view-mode-1-4-h, .section-row > .view-mode-1-4-h:first-child, .view-mode-1-4-h.first, .first .view-mode-1-4-l, .section-row > .view-mode-1-4-l:first-child, .view-mode-1-4-l.first { margin-left: 0; }
 .not-first .view-mode-1-4-h, .not-first .view-mode-1-4-l { margin-left: 2.08333%; }
 .view-mode-1-4-h a:hover, .view-mode-1-4-l a:hover { text-decoration: none; }
 .view-mode-1-4-h .group-section-image-overlay, .view-mode-1-4-l .group-section-image-overlay { background: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; padding: 10px 20px; width: 100%; }

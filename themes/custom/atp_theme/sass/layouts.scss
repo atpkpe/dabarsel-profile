@@ -2,6 +2,7 @@
 @import "singularitygs";
 @import "variables";
 @import "mixins";
+@import "view-modes";
 
 .onecol {
   @include clearfix;
