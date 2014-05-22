@@ -36,17 +36,23 @@
     @include grid-span(8,9);
   }
 }
-.view-mode-1-2-l, .view-mode-1-4-l {
+.view-mode-1-4-h, .view-mode-1-4-l {
+  @include grid-span(4,1);
+  .not-first & {
+    @include grid-span(4,13);
+  }
+}
+.view-mode-1-2-l, .view-mode-3-8-l, .view-mode-1-4-l {
   margin-bottom: 20px;
   .last & {
     margin-bottom: 0;
   }
 }
-.view-mode-1-1-l, .view-mode-1-2-l, .view-mode-1-4-l {
+.view-mode-1-1-l .view-mode-1-2-l, .view-mode-3-8-l, .view-mode-1-4-l {
   position: relative;
   height: 126px;
 }
-.view-mode-1-1-h, .view-mode-1-2-h, .view-mode-1-4-h {
+.view-mode-1-1-h, .view-mode-1-2-h, .view-mode-3-8-h, .view-mode-1-4-h {
   position: relative;
   height: 272px;
 }
