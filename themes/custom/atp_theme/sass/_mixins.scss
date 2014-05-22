@@ -156,12 +156,12 @@
   left : 0;
   bottom : 0;
   width: 100%;
-  padding: 10px;
+  padding: 10px 20px;
   h3 {
-      color: #FFF;
+      color: #fff;
   }
   p {
-      color: #FFF;
+      color: #fff;
       margin:0;
   }
 }
@@ -172,6 +172,7 @@
   margin-bottom: $margins;
   overflow: hidden;
   position: relative;
+  border-left: 4px solid $green;
   .first &, .section-row > &:first-child {
     margin-left: 0;
   }

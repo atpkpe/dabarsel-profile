@@ -38,8 +38,8 @@
 .view-mode-1-2-h, .view-mode-1-2-l {
   @include view-mode(8);
 }
-.view-mode-1-4-h, .view-mode-1-4-l {
-  @include view-mode(4);
+.view-mode-3-8-h, .view-mode-3-8-l {
+  @include view-mode(6);
 }
 .view-mode-1-4-h, .view-mode-1-4-l {
   @include view-mode(4);
