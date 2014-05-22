@@ -4,16 +4,16 @@ header {
   margin-bottom: 25px;
   &:before {
     background: $gray-dark;
-    content: "";
     position: absolute;
+    z-index: 0;
     width: 100%;
     height: 30px;
-    z-index: 0;
+    content: "";
   }
   ul {
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
   }
   li {
     float: left;
@@ -33,8 +33,8 @@ header {
     position: relative;
   }
   > .top {
-    border-bottom: 1px solid $green;
     height: 100px;
+    border-bottom: 1px solid $green;
   }
   > .bottom {
     background: $gray;
@@ -51,17 +51,17 @@ header {
 }
 #logo {
   position: absolute;
-  left: 0;
   top: 51px;
+  left: 0;
 }
 .top-menu {
   @include clearfix;
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   * {
-    font-size: 11px;
     color: #fff;
+    font-size: 11px;
     line-height: 30px;
   }
   > ul {
@@ -73,8 +73,8 @@ header {
 .main-menu {
   @include clearfix;
   position: absolute;
-  left: 100px;
   top: 30px;
+  left: 100px;
   * {
     font-size: 14px;
   }

@@ -9,13 +9,13 @@
 .onecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; margin-bottom: 20px; }
 .onecol:before, .onecol:after { content: "."; display: block; height: 0; overflow: hidden; }
 .onecol:after { clear: both; }
-@media screen and (max-width: 945px) { .onecol { width: 100%; padding: 0 10px; } }
-@media screen and (max-width: 700px) { .onecol { width: 100%; padding: 0; } }
+@media screen and (max-width: 945px) { .onecol { padding: 0 10px; width: 100%; } }
+@media screen and (max-width: 700px) { .onecol { padding: 0; width: 100%; } }
 
 .twocol-left { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; }
 .twocol-left:before, .twocol-left:after { content: "."; display: block; height: 0; overflow: hidden; }
 .twocol-left:after { clear: both; }
-@media screen and (max-width: 945px) { .twocol-left { width: 100%; padding: 0 10px; } }
-@media screen and (max-width: 700px) { .twocol-left { width: 100%; padding: 0; } }
+@media screen and (max-width: 945px) { .twocol-left { padding: 0 10px; width: 100%; } }
+@media screen and (max-width: 700px) { .twocol-left { padding: 0; width: 100%; } }
 .twocol-left > aside { width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
 .twocol-left > article { width: 74.47917%; clear: right; float: right; margin-right: 0; }
