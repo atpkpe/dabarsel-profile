@@ -189,3 +189,9 @@
     @include view-mode-overlay;
   }
 }
+
+/* COLORS */
+@mixin menu-gradient {
+  background-color: rgb(255,255,255);
+  @include background-image-with-ms(linear-gradient(top,  rgb(255,255,255) 0%,rgb(66,72,68) 50%,rgb(255,255,255) 100%));
+}

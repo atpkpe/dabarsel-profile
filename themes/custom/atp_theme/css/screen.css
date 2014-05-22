@@ -7,6 +7,7 @@
 /* FORM ELEMENTS */
 /* BTN */
 /* VIEWMODES */
+/* COLORS */
 .element-invisible { display: none; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; color: #424844; font-size: 13px; font-family: "Tahoma", sans-serif; margin: 0px; padding: 0px; }
@@ -60,7 +61,7 @@ header > .bottom .level-2:after { clear: both; }
 header > .bottom .level-2 li { line-height: 45px; }
 header > .bottom .level-2 a { padding: 0 30px; }
 
-#logo { position: absolute; top: 51px; left: 0; }
+#logo { position: absolute; top: 50px; left: 0; }
 
 .top-menu { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; position: absolute; top: 0; left: 0; }
 .top-menu:before, .top-menu:after { content: "."; display: block; height: 0; overflow: hidden; }
@@ -72,6 +73,9 @@ header > .bottom .level-2 a { padding: 0 30px; }
 .main-menu:before, .main-menu:after { content: "."; display: block; height: 0; overflow: hidden; }
 .main-menu:after { clear: both; }
 .main-menu * { font-size: 14px; }
+.main-menu > ul > li { position: relative; }
+.main-menu > ul > li:after { background-color: white; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(50%, #424844), color-stop(100%, #ffffff)); background-image: -webkit-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -moz-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -o-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -ms-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); content: ""; display: block; width: 1px; height: 28px; position: absolute; right: 0; top: 21px; }
+.main-menu > ul > li.last:after { display: none; }
 .main-menu > ul > li > a { padding: 0 20px; line-height: 70px; }
 
 .page-wrapper { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
