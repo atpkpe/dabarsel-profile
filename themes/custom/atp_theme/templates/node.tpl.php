@@ -79,9 +79,5 @@
  *
  * @ingroup themeable
  */
- $class = 'view-mode-' . str_replace('_', '-', $view_mode);
 ?>
-<div class="<?php print $class; ?>">
-<?php print render($title_suffix); ?>
 <?php print render($content); ?>
-</div>

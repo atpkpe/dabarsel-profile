@@ -45,6 +45,7 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
     'main' => 1,
     'footer' => 1,
     'header' => 1,
+    'header-bottom' => 1,
   );
 
   $panel = $vars['pane']->panel;
@@ -52,6 +53,12 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
   // Don't add anything to site template panes
   if (!empty($site_template_panes[$panel])) {
     return;
+  }
+  
+  $configuration = $vars['pane']->configuration;
+  if (!empty($configuration['formatter_settings']['view_mode'])) {
+    $view_mode = $configuration['formatter_settings']['view_mode'];
+    $vars['classes_array'][] = 'view-mode-' . str_replace('_', '-', $view_mode);
   }
 
   // Add classes to panes.
