@@ -83,13 +83,13 @@ header {
       position: relative;
       &:after {
         @include menu-gradient;
-        content: "";
+        position: absolute;
+        top: 21px;
+        right: 0;
         display: block;
         width: 1px;
         height: 28px;
-        position: absolute;
-        right: 0;
-        top: 21px;
+        content: "";
       }
       &.last {
         &:after {

@@ -120,8 +120,8 @@
     position: relative;
     display: block;
     color: #fff;
-    line-height: 30px;
     text-align: center;
+    line-height: 30px;
     &:before {
       @include opacity(.1);
       background: #000;
@@ -152,7 +152,7 @@
 
 /* VIEWMODES */
 @mixin view-mode-overlay {
-  background-color: rgba(0,0,0,0.5);
+  background: $black-transparent;
   position : absolute;
   bottom : 0;
   left : 0;
@@ -192,6 +192,6 @@
 
 /* COLORS */
 @mixin menu-gradient {
-  background-color: rgb(255,255,255);
   @include background-image-with-ms(linear-gradient(top,  rgb(255,255,255) 0%,rgb(66,72,68) 50%,rgb(255,255,255) 100%));
+  background-color: rgb(255,255,255);
 }

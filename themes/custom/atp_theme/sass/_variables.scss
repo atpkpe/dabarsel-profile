@@ -3,15 +3,17 @@ $mobile: "500px";
 
 /* COLORS */
 $red: #c00;
+$black-transparent: rgba(0,0,0,0.5);
 $gray: rgb(230,231,228);
 $gray-light: rgb(242,241,240);
+$gray-semilight: rgb(95,95,95);
 $gray-dark: rgb(66,72,68);
 $green: rgb(173,194,0);
 $green-hover: rgb(124,149,0);
 $green-hover-header: rgb(173,194,0);
 
 $body-color: $gray-light;
-$text-color: $gray-dark;
+$text-color: $gray-semilight;
 $width: 960;
 $content-width: $width * 1px;
 $border-radius: 4px;

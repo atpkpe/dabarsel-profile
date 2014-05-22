@@ -5,10 +5,10 @@
   @include content;
   aside {
     .menu {
-      list-style: none;
       margin: 0;
       padding: 10px 20px;
       border-left: 3px solid $green;
+      list-style: none;
       a {
         &:hover {
           text-decoration: none;
