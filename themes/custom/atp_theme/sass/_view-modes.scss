@@ -11,10 +11,7 @@
   .not-first.last & {
     @include grid-span(4,13);
   }
-  >p {
-      padding-top: 20px;
-  }
-  >h3 {
+  h3 {
     display: table-cell;
     width: inherit;
     height: 70px;
@@ -23,7 +20,10 @@
     border-bottom : 1px solid $gray-dark;
     margin: 0;
   }
-  >a {
+  p {
+      padding-top: 20px;
+  }
+  a {
     @include btn-green;
   }
 }
