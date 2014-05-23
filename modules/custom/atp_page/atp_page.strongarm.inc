@@ -14,8 +14,21 @@ function atp_page_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_page';
-  $strongarm->value = 'edit-i18n';
+  $strongarm->value = 'edit-panelizer';
   $export['additional_settings__active_tab_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_multifield__tagged_entity_reference';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_multifield__tagged_entity_reference'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -35,6 +48,27 @@ function atp_page_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      '1_2_l' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_2_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_4_fact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_4_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_4_l' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_1_l' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -42,10 +76,10 @@ function atp_page_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '3',
         ),
         'xmlsitemap' => array(
-          'weight' => '5',
+          'weight' => '2',
         ),
         'language' => array(
           'weight' => '-4',
@@ -54,7 +88,27 @@ function atp_page_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '3',
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_2_l' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_2_h' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_4_h' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_4_l' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
@@ -143,10 +197,21 @@ function atp_page_strongarm() {
       'default' => array(
         'status' => 1,
         'default' => 0,
-        'default display' => 'node:page:default:default',
         'choice' => 1,
       ),
-      'teaser' => array(
+      '1_4_l' => array(
+        'status' => 0,
+        'default' => 0,
+        'default display' => 0,
+        'choice' => 0,
+      ),
+      '1_2_l' => array(
+        'status' => 0,
+        'default' => 0,
+        'default display' => 0,
+        'choice' => 0,
+      ),
+      '1_2_h' => array(
         'status' => 0,
         'default' => 0,
         'default display' => 0,
@@ -155,6 +220,23 @@ function atp_page_strongarm() {
     ),
   );
   $export['panelizer_defaults_node_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_taxonomy_term_related_categories';
+  $strongarm->value = array(
+    'status' => 0,
+    'view modes' => array(),
+  );
+  $export['panelizer_defaults_taxonomy_term_related_categories'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:page:default_selection';
+  $strongarm->value = 'node:page:standard_2_column:default';
+  $export['panelizer_node:page:default_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

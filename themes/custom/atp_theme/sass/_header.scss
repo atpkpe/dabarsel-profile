@@ -1,3 +1,147 @@
 /* HEADER */
 header {
+  background: #fff;
+  margin-bottom: 25px;
+  &:before {
+    background: $gray-dark;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 30px;
+    content: "";
+    @include device(phone){
+      display: none;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    float: left;
+    a {
+      display: block;
+      &.active-trail {
+        color: $green-hover-header;
+      }
+      &:hover {
+        color: $green-hover-header;
+        text-decoration: none;
+      }
+    }
+  }
+  > div > .inner {
+    @include content;
+    position: relative;
+  }
+  > .top {
+    height: 101px;
+    border-bottom: 1px solid $green;
+    @include device(phone){
+      height: 50px !important;
+      border: 0;
+    }
+    .front & {
+      height: 100px;
+      border: 0;
+    }
+  }
+  > .bottom {
+    background: $gray;
+    .level-2 {
+      @include clearfix;
+      li {
+        line-height: 45px;
+      }
+      a {
+        padding: 0 30px;
+      }
+    }
+  }
+}
+#logo {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  @include device(phone){
+    top: 10px;
+    left: 20px;
+  }
+}
+.top-menu {
+  @include clearfix;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include device(phone){
+    display: none;
+  }
+  * {
+    color: #fff;
+    font-size: 11px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  > ul {
+    > li {
+      margin-right: 35px;
+    }
+  }
+}
+.main-menu {
+  @include clearfix;
+  position: absolute;
+  top: 30px;
+  left: 88px;
+  @include device(phone){
+    display: none;
+  }
+  * {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  > ul {
+    > li {
+      position: relative;
+      &:after {
+        @include menu-gradient;
+        position: absolute;
+        top: 21px;
+        right: -1px;
+        display: block;
+        width: 1px;
+        height: 28px;
+        content: "";
+      }
+      &.last {
+        background: $gray;
+        &:before {
+          background: rgba(0,0,0,.3);
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 1px;
+          height: 70px;
+          content: "";
+        }
+        &:after {
+          background: rgba(0,0,0,.3);
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: 1px;
+          height: 70px;
+          content: "";
+        }
+      }
+      > a {
+        padding: 0 18px;
+        line-height: 70px;
+      }
+    }
+  }
 }

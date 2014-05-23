@@ -12,25 +12,44 @@
 html {
   height: 100%;
 }
+
 body {
-  background: #fff;
+  background: $body-color;
   height: 100%;
 }
 
 a {
   text-decoration: none;
   &:hover {
+    color: $green-hover;
     text-decoration: underline;
   }
 }
+
+h1, h2, h3, h4, header * {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 h1 {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 28px;
 }
 h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 h3 {
+  font-size : 16px;
 }
 p {
   margin-bottom: 20px;
+  line-height: 18px;
+}
+
+blockquote {
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
 .content {

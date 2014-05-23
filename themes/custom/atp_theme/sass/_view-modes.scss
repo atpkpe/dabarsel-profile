@@ -1,0 +1,60 @@
+.section-row {
+  @include clearfix;
+}
+
+.view-mode-1-4-fact {
+  @include view-mode(4);
+  background: #fff;
+  padding: 17px;
+  padding: 0 20px 20px 20px;
+  border: 1px solid $gray;
+  .not-first.last & {
+    @include grid-span(4,13);
+  }
+  h3 {
+    display: table-cell;
+    margin: 0;
+    width: inherit;
+    width: 100%;
+    height: 70px;
+    border-bottom : 1px solid $gray-dark;
+    vertical-align: middle;
+    text-align: center;
+    @include device(phone){
+      display: block;
+      height: auto;
+      padding: 10px 0;
+    }
+  }
+  p {
+      padding-top: 20px;
+  }
+  a {
+    @include btn-green;
+  }
+}
+
+.view-mode-1-1-l {
+  position: relative;
+  margin-bottom: $margins;
+  .group-section-image-overlay {
+    @include view-mode-overlay;
+  }
+}
+.view-mode-1-2-h, .view-mode-1-2-l {
+  @include view-mode(8);
+}
+.view-mode-3-8-h, .view-mode-3-8-l {
+  @include view-mode(6);
+}
+.view-mode-1-4-h, .view-mode-1-4-l {
+  @include view-mode(4);
+}
+.view-mode-1-1-l, .view-mode-1-2-l, .view-mode-3-8-l, .view-mode-1-4-l {
+  height: 126px;
+}
+.view-mode-1-1-h, .view-mode-1-2-h, .view-mode-3-8-h, .view-mode-1-4-h {
+  height: 272px;
+}
+
+

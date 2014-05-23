@@ -1,0 +1,22 @@
+.category-a {
+
+}
+.category-b {
+
+}
+.category-c {
+
+}
+.category-d {
+  margin-bottom: 15px;
+  > section {
+    @include clearfix;
+    background: #fff;
+    margin-bottom: 5px;
+    padding: $margins;
+    > article {
+      float: left;
+      width: percentage(1/2);
+    }
+  }
+}

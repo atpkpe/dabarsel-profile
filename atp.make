@@ -6,7 +6,7 @@ projects[adapt_core][type] = 'module'
 projects[adapt_core][subdir] = 'global'
 projects[adapt_core][download][type] = 'git'
 projects[adapt_core][download][url] = 'https://github.com/adaptdk/adapt_core.git'
-projects[adapt_core][download][tag] = '1.5'
+projects[adapt_core][download][tag] = '1.5.1'
 projects[menu_trail_by_path] = FALSE
 
 ; Adapt Basetheme
@@ -72,11 +72,15 @@ projects[menu_view_unpublished][download][type] = 'git'
 projects[menu_view_unpublished][download][url] = 'http://git.drupal.org/project/menu_view_unpublished.git'
 projects[menu_view_unpublished][download][revision] = '14a55f40120874814fe7bd4acc44a2548801296d'
 ; Add class to menu items, https://drupal.org/node/1801660
-projects[menu_view_unpublished][patch][] = 'https://drupal.org/files/issues/node-unpublishded-class-to-menus-1801660-1.patch'
+projects[menu_view_unpublished][patch][] = 'http://drupal.org/files/issues/node-unpublishded-class-to-menus-1801660-1.patch'
 
 projects[date][type] = 'module'
 projects[date][subdir] = 'contrib'
 projects[date][version] = '2.7'
+
+projects[field_group_link][type] = 'module'
+projects[field_group_link][subdir] = 'contrib'
+projects[field_group_link][version] = '1.0'
 
 projects[uuid_features_menu][type] = 'module'
 projects[uuid_features_menu][subdir] = 'contrib'
@@ -84,3 +88,12 @@ projects[uuid_features_menu][download][branch] = '7.x-1.x'
 projects[uuid_features_menu][download][type] = 'git'
 projects[uuid_features_menu][download][url] = 'http://git.drupal.org/sandbox/ioskevich/2163429.git'
 projects[uuid_features_menu][download][revision] = '1b3c154640455a193e717582b01815e4c10ab217'
+
+projects[multifield][type] = 'module'
+projects[multifield][subdir] = 'contrib'
+projects[multifield][download][branch] = '7.x-1.x'
+projects[multifield][download][type] = 'git'
+projects[multifield][download][url] = 'http://git.drupal.org/project/multifield.git'
+projects[multifield][download][revision] = '4e7a90e261d667c027eaa400bf490ffbf83f03a1'
+projects[multifield][patch][] = 'http://drupal.org/files/issues/multifield-features-2102265-12_0.patch'
+projects[multifield][patch][] = 'http://drupal.org/files/issues/i2041533-34.patch'

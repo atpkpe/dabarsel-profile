@@ -26,7 +26,8 @@ function atp_section_field_group_info() {
       0 => 'field_section_body',
       1 => 'field_section_summary',
       2 => 'title_field',
-      3 => 'language',
+      3 => 'field_section_image',
+      4 => 'language',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -39,6 +40,65 @@ function atp_section_field_group_info() {
     ),
   );
   $export['group_section_content|node|section|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_section_facts|node|section|form';
+  $field_group->group_name = 'group_section_facts';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'section';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Facts',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_section_facts',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-section-facts field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_section_facts|node|section|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_section_image_overlay|node|section|1_1_l';
+  $field_group->group_name = 'group_section_image_overlay';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'section';
+  $field_group->mode = '1_1_l';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Image overlay',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_section_body',
+      1 => 'title_field',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image overlay',
+      'instance_settings' => array(
+        'classes' => 'group-section-image-overlay',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_section_image_overlay|node|section|1_1_l'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

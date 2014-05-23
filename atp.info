@@ -16,6 +16,7 @@ dependencies[] = title
 dependencies[] = date
 dependencies[] = date_popup
 dependencies[] = diff
+dependencies[] = field_group_link
 dependencies[] = masquerade
 dependencies[] = workbench
 dependencies[] = workbench_moderation
@@ -28,6 +29,8 @@ dependencies[] = i18n_taxonomy
 dependencies[] = i18n_menu_overview
 dependencies[] = menu_view_unpublished
 dependencies[] = uuid_features_menu
+dependencies[] = panels_mini
+dependencies[] = multifield
 
 ; Project features
 dependencies[] = atp_settings

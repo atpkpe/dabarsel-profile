@@ -34,3 +34,17 @@ function atp_update_7001(&$sandbox) {
 function atp_update_7002(&$sandbox) {
   module_enable(array('uuid_features_menu'));
 }
+
+/**
+ *  Enable field_group_link and panels_mini module
+ */
+function atp_update_7003(&$sandbox) {
+  module_enable(array('field_group_link', 'panels_mini'));
+}
+
+/**
+ *  Enable multifield module
+ */
+function atp_update_7004(&$sandbox) {
+  module_enable(array('multifield'));
+}

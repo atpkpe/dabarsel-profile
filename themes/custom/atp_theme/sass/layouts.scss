@@ -1,0 +1,46 @@
+@import "compass";
+@import "singularitygs";
+@import "variables";
+@import "mixins";
+@import "view-modes";
+
+.onecol {
+  @include clearfix;
+  @include content;
+  margin-bottom: 20px;
+  @include device(phone){
+    padding: 0 10px;
+  }
+}
+.twocol-left {
+  @include clearfix;
+  @include content;
+  > aside {
+    @include grid-span(4, 1);
+    padding-top: 2*$margins;
+    @include device(phone){
+      width: 100%;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      display: none;
+    }
+  }
+  > article {
+    @include grid-span(12, 5);
+    padding-left: $margins;
+    border-left: 1px solid $gray;
+    @include device(phone){
+      width: 100%;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+/* ADMIN */
+.panel-region {
+  @include clearfix;
+  margin-bottom: $margins;
+}

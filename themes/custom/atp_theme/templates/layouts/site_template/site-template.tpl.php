@@ -8,7 +8,14 @@
 <div<?php print $css_id ? " id=\"$css_id\"" : ''; ?> class="page-wrapper">
   <?php if (!empty($content['header'])): ?>
     <header>
-      <div class="inner"><?php print $content['header']; ?></div>
+      <div class="top">
+        <div class="inner"><?php print $content['header']; ?></div>
+      </div>
+      <?php if (!empty($content['header-bottom'])): ?>
+        <div class="bottom">
+          <div class="inner"><?php print $content['header-bottom']; ?></div>
+        </div>
+      <?php endif; ?>
     </header>
   <?php endif; ?>
   <?php if (!empty($content['main'])): ?>
