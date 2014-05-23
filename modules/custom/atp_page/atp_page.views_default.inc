@@ -86,8 +86,50 @@ function atp_page_views_default_views() {
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: A */
+  $handler = $view->new_display('panel_pane', 'A', 'panel_pane_2');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'category-list-a';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Multifield: Page */
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['id'] = 'field_page_related_field_ter_related';
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['table'] = 'field_data_field_page_related';
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['field'] = 'field_page_related_field_ter_related';
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['label'] = '';
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['type'] = 'entityreference_entity_view';
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['settings'] = array(
+    'view_mode' => 'teaser',
+    'links' => 0,
+  );
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_related_field_ter_related']['delta_offset'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Indhold: Nid',
+    ),
+  );
+
+  /* Display: D */
+  $handler = $view->new_display('panel_pane', 'D', 'panel_pane_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'category-list-d';
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
       'type' => 'context',
@@ -107,8 +149,9 @@ function atp_page_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('All'),
-    t('Content pane'),
+    t('A'),
     t('View panes'),
+    t('D'),
   );
   $export['category_related'] = $view;
 

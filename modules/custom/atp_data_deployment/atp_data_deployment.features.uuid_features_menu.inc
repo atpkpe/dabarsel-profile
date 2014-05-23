@@ -169,7 +169,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => -49,
     'uuid' => 'e50f0574-2730-4e7d-bae3-d3a7edad891e',
