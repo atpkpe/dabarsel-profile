@@ -12,10 +12,6 @@
 }
 
 @mixin content{
-  @include device(tablet){
-    padding: 0 10px;
-    width: 100%;
-  }
   @include device(phone){
     padding: 0;
     width: 100%;
@@ -174,6 +170,12 @@
   margin-bottom: $margins;
   margin-left: percentage($gutters-in-px/$width);
   border-left: 4px solid $green;
+  @include device(phone){
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .section-row > &:first-child, &.first {
     margin-left: 0;
   }
