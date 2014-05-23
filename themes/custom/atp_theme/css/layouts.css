@@ -71,8 +71,8 @@
 .twocol-left:after { clear: both; }
 @media screen and (max-width: 945px) { .twocol-left { padding: 0 10px; width: 100%; } }
 @media screen and (max-width: 700px) { .twocol-left { padding: 0; width: 100%; } }
-.twocol-left > aside { width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
-.twocol-left > article { width: 74.47917%; clear: right; float: right; margin-right: 0; }
+.twocol-left > aside { width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; padding-top: 40px; }
+.twocol-left > article { width: 74.47917%; clear: right; float: right; margin-right: 0; padding-left: 20px; border-left: 1px solid #e6e7e4; }
 
 /* ADMIN */
 .panel-region { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin-bottom: 20px; }
