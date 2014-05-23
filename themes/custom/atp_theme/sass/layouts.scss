@@ -19,3 +19,9 @@
     @include grid-span(12, 5);
   }
 }
+
+/* ADMIN */
+.panel-region {
+  @include clearfix;
+  margin-bottom: $margins;
+}
