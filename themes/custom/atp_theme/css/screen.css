@@ -60,7 +60,7 @@ header li a:hover { color: #adc200; text-decoration: none; }
 header > div > .inner { margin: 0 auto; width: 960px; position: relative; }
 @media screen and (max-width: 945px) { header > div > .inner { padding: 0 10px; width: 100%; } }
 @media screen and (max-width: 700px) { header > div > .inner { padding: 0; width: 100%; } }
-header > .top { height: 100px; border-bottom: 1px solid #adc200; }
+header > .top { height: 101px; border-bottom: 1px solid #adc200; }
 header > .bottom { background: #e6e7e4; }
 header > .bottom .level-2 { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 header > .bottom .level-2:before, header > .bottom .level-2:after { content: "."; display: block; height: 0; overflow: hidden; }
@@ -76,14 +76,16 @@ header > .bottom .level-2 a { padding: 0 30px; }
 .top-menu * { color: #fff; font-size: 11px; line-height: 30px; }
 .top-menu > ul > li { margin-right: 35px; }
 
-.main-menu { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; position: absolute; top: 30px; left: 100px; }
+.main-menu { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; position: absolute; top: 30px; left: 88px; }
 .main-menu:before, .main-menu:after { content: "."; display: block; height: 0; overflow: hidden; }
 .main-menu:after { clear: both; }
-.main-menu * { font-size: 14px; }
+.main-menu * { text-transform: uppercase; font-weight: 600; font-size: 14px; }
 .main-menu > ul > li { position: relative; }
-.main-menu > ul > li:after { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(50%, #424844), color-stop(100%, #ffffff)); background-image: -webkit-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -moz-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -o-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -ms-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-color: white; position: absolute; top: 21px; right: 0; display: block; width: 1px; height: 28px; content: ""; }
-.main-menu > ul > li.last:after { display: none; }
-.main-menu > ul > li > a { padding: 0 20px; line-height: 70px; }
+.main-menu > ul > li:after { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(50%, #424844), color-stop(100%, #ffffff)); background-image: -webkit-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -moz-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -o-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-image: -ms-linear-gradient(top, #ffffff 0%, #424844 50%, #ffffff 100%); background-color: white; position: absolute; top: 21px; right: -1px; display: block; width: 1px; height: 28px; content: ""; }
+.main-menu > ul > li.last { background: #e6e7e4; }
+.main-menu > ul > li.last:before { background: rgba(0, 0, 0, 0.3); position: absolute; top: 0; left: 0; display: block; width: 1px; height: 70px; content: ""; }
+.main-menu > ul > li.last:after { background: rgba(0, 0, 0, 0.3); position: absolute; top: 0; right: 0; display: block; width: 1px; height: 70px; content: ""; }
+.main-menu > ul > li > a { padding: 0 18px; line-height: 70px; }
 
 .page-wrapper { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 .page-wrapper:before, .page-wrapper:after { content: "."; display: block; height: 0; overflow: hidden; }

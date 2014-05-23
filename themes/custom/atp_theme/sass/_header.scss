@@ -33,7 +33,7 @@ header {
     position: relative;
   }
   > .top {
-    height: 100px;
+    height: 101px;
     border-bottom: 1px solid $green;
   }
   > .bottom {
@@ -74,8 +74,10 @@ header {
   @include clearfix;
   position: absolute;
   top: 30px;
-  left: 100px;
+  left: 88px;
   * {
+    text-transform: uppercase;
+    font-weight: 600;
     font-size: 14px;
   }
   > ul {
@@ -85,19 +87,37 @@ header {
         @include menu-gradient;
         position: absolute;
         top: 21px;
-        right: 0;
+        right: -1px;
         display: block;
         width: 1px;
         height: 28px;
         content: "";
       }
       &.last {
+        background: $gray;
+        &:before {
+          background: rgba(0,0,0,.3);
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 1px;
+          height: 70px;
+          content: "";
+        }
         &:after {
-          display: none;
+          background: rgba(0,0,0,.3);
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: 1px;
+          height: 70px;
+          content: "";
         }
       }
       > a {
-        padding: 0 20px;
+        padding: 0 18px;
         line-height: 70px;
       }
     }
