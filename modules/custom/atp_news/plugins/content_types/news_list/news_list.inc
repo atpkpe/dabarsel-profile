@@ -4,11 +4,11 @@
  * by the system that includes this file.
  */
 $plugin = array(
-  'single' => TRUE,
+  'single' => FALSE,
   'icon' => 'news_list.png',
   'title' => t('News list'),
   'description' => t('Shows a list of news.'),
-  'category' => array(t('ATP News'), -9),
+  'category' => array(t('ATP'), -9),
   'edit form' => 'news_list_content_type_edit_form',
   'render callback' => 'news_list_content_type_render',
   'admin title' => 'news_list_content_type_admin_title',
@@ -47,7 +47,7 @@ function news_list_content_type_render($subtype, $conf, $panel_args, &$context) 
   switch ($conf['list_type']) {
     case 'filtered':
       // Create category 'buttons'.
-      foreach (taxonomy_get_tree(ATP_NEWS_TID_NEWS_CATEGORIES) as $term) {
+      foreach (taxonomy_get_tree(atp_news_get_news_categories_vocab_id()) as $term) {
         $news_category_items[] = sprintf(
           '<div class="news-filter-button %s" data-tid="%s">%s</div>',
           !empty($_GET['tid']) && in_array($term->tid, $_GET['tid']) ? 'active' : '',
@@ -57,9 +57,15 @@ function news_list_content_type_render($subtype, $conf, $panel_args, &$context) 
       }
       // Create filter list + attached js settings for the embeded ajax view.
       $block->content = array(
-        'filter' => array(
-          '#items' => $news_category_items,
-          '#theme' => 'item_list',
+        'filter-wrapper' => array(
+          '#type' => 'container',
+          '#attributes' => array(
+            'class' => 'news-filter',
+          ),
+          'filter' => array(
+            '#items' => $news_category_items,
+            '#theme' => 'item_list',
+          ),
         ),
         '#attached' => array(
           'js' => array(
@@ -152,7 +158,7 @@ function news_list_content_type_edit_form($form, &$form_state) {
   $conf += $form_state['plugin']['defaults'];
 
   $tid_categories = array();
-  foreach (taxonomy_get_tree(ATP_NEWS_TID_NEWS_CATEGORIES) as $term) {
+  foreach (taxonomy_get_tree(atp_news_get_news_categories_vocab_id()) as $term) {
     $tid_categories[$term->tid] = $term->name;
   }
   $list_type_options = news_list_type_options();

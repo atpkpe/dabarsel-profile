@@ -22,7 +22,6 @@ function atp_news_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'miktest';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -98,21 +97,6 @@ function atp_news_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'default_display');
-
-  /* Display: Archive */
-  $handler = $view->new_display('panel_pane', 'Archive', 'archive');
-  $handler->display->display_options['pane_title'] = 'News list archive';
-  $handler->display->display_options['pane_category']['name'] = 'ATP News';
-  $handler->display->display_options['pane_category']['weight'] = '0';
-  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
-  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 0;
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
   $translatables['news_list'] = array(
     t('Master'),
     t('more'),
@@ -131,9 +115,6 @@ function atp_news_views_default_views() {
     t('Has taxonomy term'),
     t('Content pane'),
     t('View panes'),
-    t('Archive'),
-    t('News list archive'),
-    t('ATP News'),
   );
   $export['news_list'] = $view;
 

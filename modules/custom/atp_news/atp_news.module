@@ -25,3 +25,12 @@ function atp_news_ctools_plugin_directory($module, $plugin) {
     return 'plugins/content_types';
   }
 }
+
+function atp_news_get_news_categories_vocab_id() {
+  $vid = &drupal_static(__FUNCTION__);
+  if (!isset($vid)) {
+    $vocab_categories = taxonomy_vocabulary_machine_name_load('news_categories');
+    $vid = $vocab_categories->vid;
+  }
+  return $vid;
+}
