@@ -48,10 +48,11 @@ input.form-submit { -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-bor
 
 body.admin-menu { margin-top: 28px !important; }
 
-.tabs { position: absolute; right: 0; line-height: 22px; }
-.tabs li { margin-left: 10px; }
+.tabs { background: #e6e7e4; position: absolute; top: 200px; right: 0; line-height: 22px; list-style: none; }
+@media screen and (max-width: 945px) { .tabs { display: none; } }
+.tabs a { display: block; padding: 5px 20px; }
 
-.messages { background: #fff; border: 1px solid #e6e7e4; padding: 20px; margin-bottom: 20px; }
+.messages { background: #fff; margin-bottom: 20px; padding: 20px; border: 1px solid #e6e7e4; }
 
 /* HEADER */
 header { background: #fff; margin-bottom: 25px; }

@@ -5,17 +5,26 @@ body {
 }
 
 .tabs {
+  background: $gray;
   position: absolute;
+  top: 200px;
   right: 0;
   line-height: 22px;
+  list-style: none;
+  @include device(tablet){
+    display: none;
+  }
   li {
-    margin-left: 10px;
+  }
+  a {
+    display: block;
+    padding: ($margins/4) $margins;
   }
 }
 
 .messages {
   background: #fff;
-  border: 1px solid $gray;
-  padding: 20px;
   margin-bottom: $margins;
+  padding: 20px;
+  border: 1px solid $gray;
 }
