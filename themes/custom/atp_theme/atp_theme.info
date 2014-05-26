@@ -19,7 +19,7 @@ stylesheets[all][] = css/screen.css
 
 ; scripts[] = js/modernizr.js
 ; scripts[] = js/jquery.placeholder.min.js
-; scripts[] = js/main.js
+scripts[] = js/main.js
 
 ; Panels layouts. You can place multiple layouts under the "layouts" folder.
 plugins[panels][layouts] = templates/layouts
