@@ -1,0 +1,2 @@
+// Javascript executed on every page load
+(function(e){e(".toggle-menu").click(function(){e("body").hasClass("show-menu")?e("body").removeClass("show-menu"):e("body").addClass("show-menu")});Drupal.behaviors.main={attach:function(e,t){}}})(jQuery);

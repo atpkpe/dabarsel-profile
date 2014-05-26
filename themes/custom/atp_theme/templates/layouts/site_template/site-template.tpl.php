@@ -9,7 +9,10 @@
   <?php if (!empty($content['header'])): ?>
     <header>
       <div class="top">
-        <div class="inner"><?php print $content['header']; ?></div>
+        <div class="inner">
+          <?php print $content['header']; ?>
+          <nav class="toggle-menu"></nav>
+        </div>
       </div>
       <?php if (!empty($content['header-bottom'])): ?>
         <div class="bottom">
