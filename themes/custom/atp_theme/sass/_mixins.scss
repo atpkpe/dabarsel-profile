@@ -1,7 +1,7 @@
 /* MEDIA QUERIES */
 @mixin device($media) {
   @if $media == phone {
-    @media screen and (max-width: 700px) { @content;}
+    @media screen and (max-width: 500px) { @content;}
   }
   @else if $media == tablet {
     @media screen and (max-width: 945px) { @content; }
@@ -12,10 +12,6 @@
 }
 
 @mixin content{
-  @include device(tablet){
-    padding: 0 10px;
-    width: 100%;
-  }
   @include device(phone){
     padding: 0;
     width: 100%;
@@ -174,7 +170,12 @@
   margin-bottom: $margins;
   margin-left: percentage($gutters-in-px/$width);
   border-left: 4px solid $green;
-  .first &, .section-row > &:first-child, &.first {
+  @include device(phone){
+    width: 100%;
+    float: none;
+    margin: 0 0 ($margins/2) 0;
+  }
+  .section-row > &:first-child, &.first {
     margin-left: 0;
   }
   .not-first & {
@@ -192,6 +193,6 @@
 
 /* COLORS */
 @mixin menu-gradient {
-  @include background-image-with-ms(linear-gradient(top,  rgb(255,255,255) 0%,rgb(66,72,68) 50%,rgb(255,255,255) 100%));
   background-color: rgb(255,255,255);
+  @include background-image-with-ms(linear-gradient(top,  rgb(255,255,255) 0%,$gray-semilight 50%,rgb(255,255,255) 100%));
 }

@@ -3,3 +3,19 @@ body {
     margin-top: 28px !important;
   }
 }
+
+.tabs {
+  position: absolute;
+  right: 0;
+  line-height: 22px;
+  li {
+    margin-left: 10px;
+  }
+}
+
+.messages {
+  background: #fff;
+  border: 1px solid $gray;
+  padding: 20px;
+  margin-bottom: $margins;
+}

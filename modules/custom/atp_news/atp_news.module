@@ -1,7 +1,36 @@
 <?php
 /**
  * @file
- * Code for the ATP news feature.
+ * Code for the ATP news.
  */
 
+define('ATP_NEWS_TID_NEWS_CATEGORIES', 1);
+
 include_once 'atp_news.features.inc';
+
+/**
+ * Implements hook_views_api().
+ */
+//function atp_news_views_api() {
+//  return array(
+//    'api' => 3,
+//  );
+//}
+
+/**
+ * Implements hook_ctools_plugin_directory()
+ */
+function atp_news_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && $plugin == 'content_types') {
+    return 'plugins/content_types';
+  }
+}
+
+function atp_news_get_news_categories_vocab_id() {
+  $vid = &drupal_static(__FUNCTION__);
+  if (!isset($vid)) {
+    $vocab_categories = taxonomy_vocabulary_machine_name_load('news_categories');
+    $vid = $vocab_categories->vid;
+  }
+  return $vid;
+}

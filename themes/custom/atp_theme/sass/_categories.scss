@@ -12,11 +12,11 @@
   > section {
     @include clearfix;
     background: #fff;
-    padding: $margins;
     margin-bottom: 5px;
+    padding: $margins;
     > article {
-      width: percentage(1/2);
       float: left;
+      width: percentage(1/2);
     }
   }
 }

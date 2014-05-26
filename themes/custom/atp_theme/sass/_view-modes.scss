@@ -6,24 +6,36 @@
   @include view-mode(4);
   background: #fff;
   padding: 17px;
-  border: 1px solid $gray;
   padding: 0 20px 20px 20px;
+  border: 1px solid $gray;
+  @include device(phone){
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .not-first.last & {
     @include grid-span(4,13);
   }
-  >p {
-      padding-top: 20px;
-  }
-  >h3 {
+  h3 {
     display: table-cell;
+    margin: 0;
     width: inherit;
+    width: 100%;
     height: 70px;
+    border-bottom : 1px solid $gray-dark;
     vertical-align: middle;
     text-align: center;
-    border-bottom : 1px solid $gray-dark;
-    margin: 0;
+    @include device(phone){
+      display: block;
+      height: auto;
+      padding: 10px 0;
+    }
   }
-  >a {
+  p {
+      padding-top: 20px;
+  }
+  a {
     @include btn-green;
   }
 }

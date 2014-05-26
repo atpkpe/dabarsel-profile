@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains atp news relevant install and update functions.
+ */
+
+/**
+ * Implements hook_disable().
+ */
+function atp_news_disable() {
+  $views = views_get_all_views();
+  foreach ($views as $view) {
+    foreach ($view->display as $display_key => $display_value) {
+      if (isset($view->display[$display_key]->display_options['exposed_form']['type'])) {
+        if ($view->display[$display_key]->display_options['exposed_form']['type'] == 'hidden') {
+          $view->display[$display_key]->display_options['exposed_form']['type'] = 'basic';
+          views_save_view($view);
+        }
+      }
+    }
+  }
+}
