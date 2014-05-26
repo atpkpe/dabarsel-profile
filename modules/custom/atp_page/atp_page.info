@@ -43,6 +43,7 @@ features[field_instance][] = node-page-title_field
 features[node][] = page
 features[panelizer_defaults][] = node:page:category_layout_a:default
 features[panelizer_defaults][] = node:page:category_layout_d:default
+features[panelizer_defaults][] = node:page:news_list:default
 features[panelizer_defaults][] = node:page:standard_2_column:default
 features[variable][] = additional_settings__active_tab_page
 features[variable][] = field_bundle_settings_node__page
