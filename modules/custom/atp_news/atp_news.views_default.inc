@@ -40,6 +40,26 @@ function atp_news_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Indhold: Updated date */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = '';
+  $handler->display->display_options['fields']['changed']['element_type'] = 'div';
+  $handler->display->display_options['fields']['changed']['element_class'] = 'date';
+  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['changed']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['changed']['date_format'] = 'adapt_long';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
+  $handler->display->display_options['fields']['changed']['timezone'] = 'Europe/Copenhagen';
   /* Field: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -47,6 +67,26 @@ function atp_news_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Field: Indhold: Summary */
+  $handler->display->display_options['fields']['field_news_summary']['id'] = 'field_news_summary';
+  $handler->display->display_options['fields']['field_news_summary']['table'] = 'field_data_field_news_summary';
+  $handler->display->display_options['fields']['field_news_summary']['field'] = 'field_news_summary';
+  $handler->display->display_options['fields']['field_news_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_news_summary']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_news_summary']['alter']['text'] = '[field_news_summary-value] ';
+  $handler->display->display_options['fields']['field_news_summary']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_news_summary']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_news_summary']['alter']['max_length'] = '200';
+  $handler->display->display_options['fields']['field_news_summary']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_news_summary']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_news_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_summary']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['field_news_summary']['element_wrapper_class'] = 'summary';
+  $handler->display->display_options['fields']['field_news_summary']['element_default_classes'] = FALSE;
   /* Sort criterion: Indhold: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -112,6 +152,7 @@ function atp_news_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('[field_news_summary-value] '),
     t('Has taxonomy term'),
     t('Content pane'),
     t('View panes'),
