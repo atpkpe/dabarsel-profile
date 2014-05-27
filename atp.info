@@ -34,6 +34,7 @@ dependencies[] = multifield
 
 ; Project features
 dependencies[] = atp_settings
+dependencies[] = atp_multifields
 dependencies[] = atp_structure
 dependencies[] = atp_layouts
 dependencies[] = atp_workflow

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * atp_page.features.taxonomy.inc
+ * atp_multifields.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function atp_page_taxonomy_default_vocabularies() {
+function atp_multifields_taxonomy_default_vocabularies() {
   return array(
     'related_categories' => array(
       'name' => 'Related categories',
