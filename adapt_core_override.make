@@ -28,7 +28,7 @@ libraries[ckeditor][download][type] = file
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.0_edit.zip
 libraries[ckeditor][type] = library
 
-projects[media][download][revision] = 'e8f9228fe759ac3cc7ecb0c9c2baa027721f467e'
+projects[media][download][revision] = '06936c017922c9931bebc8157cd1ba6067954438'
 projects[file_entity][download][revision] = '13fa2b0bcb73d066b996bffed9f13c6a66ed924d'
 
 projects[linkit][type] = 'module'

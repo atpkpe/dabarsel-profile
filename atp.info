@@ -32,6 +32,9 @@ dependencies[] = menu_view_unpublished
 dependencies[] = uuid_features_menu
 dependencies[] = panels_mini
 dependencies[] = multifield
+dependencies[] = views_tree
+dependencies[] = multiform
+dependencies[] = media_browser_plus
 
 ; Project features
 dependencies[] = atp_settings

@@ -101,3 +101,15 @@ projects[multifield][download][url] = 'http://git.drupal.org/project/multifield.
 projects[multifield][download][revision] = '4e7a90e261d667c027eaa400bf490ffbf83f03a1'
 projects[multifield][patch][] = 'http://drupal.org/files/issues/multifield-features-2102265-12_0.patch'
 projects[multifield][patch][] = 'http://drupal.org/files/issues/i2041533-34.patch'
+
+projects[media_browser_plus][type] = 'module'
+projects[media_browser_plus][subdir] = 'contrib'
+projects[media_browser_plus][version] = '3.0-beta3'
+
+projects[views_tree][type] = 'module'
+projects[views_tree][subdir] = 'contrib'
+projects[views_tree][version] = '2.0'
+
+projects[multiform][type] = 'module'
+projects[multiform][subdir] = 'contrib'
+projects[multiform][version] = '1.0'
