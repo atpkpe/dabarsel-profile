@@ -31,6 +31,10 @@ projects[i18n_menu_overview][download][type] = 'git'
 projects[i18n_menu_overview][download][url] = 'http://git.drupal.org/project/i18n_menu_overview.git'
 projects[i18n_menu_overview][download][revision] = '07d0b07ddc9b7b6c7943d302a7b9d883ceffaa10'
 
+projects[l10n_update][type] = 'module'
+projects[l10n_update][subdir] = 'contrib'
+projects[l10n_update][version] = '1.0'
+
 projects[masquerade][type] = 'module'
 projects[masquerade][subdir] = 'contrib'
 
