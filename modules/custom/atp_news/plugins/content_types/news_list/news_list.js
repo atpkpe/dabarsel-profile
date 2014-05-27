@@ -26,7 +26,6 @@
           success: function (xhr) {
             if (xhr[2] !== undefined) {
               var response = xhr[2];
-              console.log(response);
               $(response.selector)[response.method](response.data);
               Drupal.attachBehaviors(context, settings);
             }
