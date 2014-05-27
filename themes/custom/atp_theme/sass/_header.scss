@@ -1,5 +1,6 @@
 /* HEADER */
 header {
+  @include clearfix;
   background: #fff;
   margin-bottom: 25px;
   .front & {
@@ -20,9 +21,14 @@ header {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: block;
   }
   li {
     float: left;
+    @include device(phone){
+      display: block;
+      float: none;
+    }
     a {
       display: block;
       &.active-trail {
@@ -39,12 +45,15 @@ header {
     position: relative;
   }
   > .top {
-    height: 101px;
-    border-bottom: 1px solid $green;
     @include device(phone){
       height: 50px !important;
       border: 0;
+      .show-menu & {
+        height: auto !important;
+      }
     }
+    height: 101px;
+    border-bottom: 1px solid $green;
     .front & {
       height: 100px;
       border: 0;
@@ -67,9 +76,6 @@ header {
   }
 }
 #logo {
-  position: absolute;
-  top: 50px;
-  left: 0;
   @include device(phone){
     top: 20px;
     left: 20px;
@@ -78,20 +84,23 @@ header {
       height: auto;
     }
   }
+  position: absolute;
+  top: 50px;
+  left: 0;
 }
 .top-menu {
   @include clearfix;
-  position: absolute;
-  top: 0;
-  left: 0;
   @include device(phone){
     display: none;
   }
+  position: absolute;
+  top: 0;
+  left: 0;
   * {
     color: #fff;
+    text-transform: uppercase;
     font-size: 11px;
     line-height: 30px;
-    text-transform: uppercase;
   }
   > ul {
     > li {
@@ -106,6 +115,11 @@ header {
   right: 0;
   @include device(phone){
     display: none;
+    .show-menu & {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
   }
   * {
     text-transform: uppercase;
@@ -117,6 +131,9 @@ header {
       position: relative;
       &:after {
         @include menu-gradient;
+        @include device(phone){
+          display: none;
+        }
         position: absolute;
         top: 21px;
         right: -1px;
@@ -127,6 +144,9 @@ header {
       }
       &.last {
         background: $gray-light;
+        @include device(phone){
+          background: transparent;
+        }
         &:before {
           background: rgba(0,0,0,.1);
           position: absolute;
@@ -136,6 +156,9 @@ header {
           width: 1px;
           height: 70px;
           content: "";
+          @include device(phone){
+            display: none;
+          }
         }
         &:after {
           background: rgba(0,0,0,.1);
@@ -146,11 +169,18 @@ header {
           width: 1px;
           height: 70px;
           content: "";
+          @include device(phone){
+            display: none;
+          }
         }
       }
       > a {
         padding: 0 17px;
         line-height: 70px;
+        @include device(phone){
+          line-height: normal;
+          padding: ($margins/4) ($margins/2);
+        }
       }
     }
   }
@@ -159,25 +189,25 @@ header {
 /* MOBILE */
 .toggle-menu {
   position: absolute;
-  right: 20px;
   top: 20px;
+  right: 20px;
+  display: none;
   width: 16px;
   height: 12px;
   border-top: 2px solid $gray-dark;
   border-bottom: 2px solid $gray-dark;
   cursor: pointer;
-  display: none;
   @include device(phone){
     display: block;
   }
   &:before {
     background: $gray-dark;
-    content: "";
-    display: block;
-    width: 16px;
-    height: 2px;
     position: absolute;
     top: 3px;
     left: 0px;
+    display: block;
+    width: 16px;
+    height: 2px;
+    content: "";
   }
 }

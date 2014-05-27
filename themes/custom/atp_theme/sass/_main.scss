@@ -1,3 +1,9 @@
+.show-mobile {
+  display: none;
+  @include device(phone){
+    display: block;
+  }
+}
 .page-wrapper {
   @include clearfix;
 }
