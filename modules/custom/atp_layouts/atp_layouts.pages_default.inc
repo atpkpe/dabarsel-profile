@@ -263,6 +263,41 @@ function atp_layouts_default_page_manager_handlers() {
     $display->content['new-fb0a8b59-9943-447f-8cc9-38d4e35c9acd'] = $pane;
     $display->panels['header-bottom'][1] = 'new-fb0a8b59-9943-447f-8cc9-38d4e35c9acd';
     $pane = new stdClass();
+    $pane->pid = 'new-426a25ca-67c2-4e31-a89e-1e58bc64e41b';
+    $pane->panel = 'header-bottom';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'menu-top';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'menu_name' => 'menu-top',
+      'parent_mlid' => 0,
+      'parent' => 'menu-top:0',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '1',
+      'follow' => 'child',
+      'depth' => '3',
+      'expanded' => 1,
+      'sort' => 0,
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'level-2-3 show-mobile',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '426a25ca-67c2-4e31-a89e-1e58bc64e41b';
+    $display->content['new-426a25ca-67c2-4e31-a89e-1e58bc64e41b'] = $pane;
+    $display->panels['header-bottom'][2] = 'new-426a25ca-67c2-4e31-a89e-1e58bc64e41b';
+    $pane = new stdClass();
     $pane->pid = 'new-8faca364-aa62-4782-9f05-b16ac67320b4';
     $pane->panel = 'main';
     $pane->type = 'page_messages';
