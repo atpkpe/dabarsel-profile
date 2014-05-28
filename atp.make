@@ -118,4 +118,8 @@ projects[plupload][type] = 'module'
 projects[plupload][subdir] = 'contrib'
 projects[plupload][version] = '1.6'
 
-libraries[plupload] = 'https://github.com/moxiecode/plupload/archive/v1.5.8.zip'
+; plupload library
+libraries[plupload][download][type] = get
+libraries[plupload][download][url] = 'https://github.com/moxiecode/plupload/archive/v1.5.8.zip'
+libraries[plupload][destination] = libraries
+libraries[plupload][directory_name] = plupload
