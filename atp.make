@@ -113,3 +113,9 @@ projects[views_tree][version] = '2.0'
 projects[multiform][type] = 'module'
 projects[multiform][subdir] = 'contrib'
 projects[multiform][version] = '1.0'
+
+projects[plupload][type] = 'module'
+projects[plupload][subdir] = 'contrib'
+projects[plupload][version] = '1.6'
+
+libraries[plupload] = 'https://github.com/moxiecode/plupload/archive/v1.5.8.zip'

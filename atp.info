@@ -35,6 +35,7 @@ dependencies[] = multifield
 dependencies[] = views_tree
 dependencies[] = multiform
 dependencies[] = media_browser_plus
+dependencies[] = media_bulk_upload
 
 ; Project features
 dependencies[] = atp_settings
