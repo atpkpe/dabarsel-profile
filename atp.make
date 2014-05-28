@@ -113,6 +113,7 @@ projects[views_tree][version] = '2.0'
 projects[multiform][type] = 'module'
 projects[multiform][subdir] = 'contrib'
 projects[multiform][version] = '1.0'
+projects[multiform][patch][] = 'http://drupal.org/files/issues/drupal-7.27.patch'
 
 projects[plupload][type] = 'module'
 projects[plupload][subdir] = 'contrib'
