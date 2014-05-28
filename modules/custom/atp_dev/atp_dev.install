@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Utilities and tools for development.
+ */
+
+/**
+ * Implements hook_install();
+ */
+function atp_dev_install() {
+  $frontpage_path = sprintf('node/%s', atp_dev_get_frontpage_nid());
+  watchdog(
+    'atp_dev:install',
+    t('Setting front page path to %path', array('%path' => $frontpage_path))
+  );
+  variable_set('site_frontpage', $frontpage_path);
+}
