@@ -29,6 +29,10 @@ libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for
 libraries[ckeditor][type] = library
 
 projects[media][download][revision] = '06936c017922c9931bebc8157cd1ba6067954438'
+projects[media][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-media-plugin.patch'
+projects[media][patch][] = 'http://drupal.org/files/issues/media-wysiwyg-improve-our-macro-handling-2126755-100.patch'
+projects[media][patch][] = 'https://raw.githubusercontent.com/kevinchampion/imagex_patches/update-media-patch/contrib/media/media-ckeditor-bind-unbind-stripping.patch'
+
 projects[file_entity][download][revision] = '13fa2b0bcb73d066b996bffed9f13c6a66ed924d'
 
 projects[linkit][type] = 'module'
