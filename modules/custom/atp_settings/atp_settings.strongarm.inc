@@ -91,7 +91,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'PRtXL-rJNYCQMwLBkH-NriYVlV3oXcK6oYk16vxD0xg',
+    'javascript' => '5WcsUts102bHEWNO2pmd4ytMh1iHzI-p06tImCCrcWg',
   );
   $export['language_default'] = $strongarm;
 

@@ -261,13 +261,5 @@ function atp_file_file_default_displays() {
   );
   $export['image__preview__file_field_image'] = $file_display;
 
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'image__preview__file_field_media_large_icon';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['image__preview__file_field_media_large_icon'] = $file_display;
-
   return $export;
 }

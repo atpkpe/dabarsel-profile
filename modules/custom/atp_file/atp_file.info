@@ -42,7 +42,6 @@ features[file_display][] = image__preview__file_field_file_download_link
 features[file_display][] = image__preview__file_field_file_table
 features[file_display][] = image__preview__file_field_file_url_plain
 features[file_display][] = image__preview__file_field_image
-features[file_display][] = image__preview__file_field_media_large_icon
 features[variable][] = file_entity_file_upload_wizard_skip_file_type
 features[variable][] = file_entity_file_upload_wizard_skip_scheme
 features[variable][] = file_entity_max_filesize
