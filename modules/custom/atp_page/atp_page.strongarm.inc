@@ -56,6 +56,9 @@ function atp_page_strongarm() {
       '1_1_l' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser_with_img' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -96,6 +99,10 @@ function atp_page_strongarm() {
           ),
           'teaser' => array(
             'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'teaser_with_img' => array(
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
