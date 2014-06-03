@@ -107,6 +107,9 @@ function atp_section_strongarm() {
       'teaser_with_img' => array(
         'custom_settings' => TRUE,
       ),
+      '1_2_square' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -194,6 +197,10 @@ function atp_section_strongarm() {
             'visible' => FALSE,
           ),
           'teaser_with_img' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+          '1_2_square' => array(
             'weight' => '8',
             'visible' => FALSE,
           ),
