@@ -1,18 +1,13 @@
 .category-a {
-    article {
-      a {
-        @include block-std;
-      }
+  margin-bottom: $margins;
+  article {
+    a {
+      @include block-std;
     }
+  }
 }
 .category-b {
-
-}
-.category-c {
-
-}
-.category-d {
-  margin-bottom: 15px;
+  margin-bottom: $margins;
   > section {
     @include clearfix;
     background: #fff;
@@ -21,6 +16,35 @@
     > article {
       float: left;
       width: percentage(1/2);
+      a:hover { color: $green-hover-header; }
+    }
+  }
+}
+.category-c {
+  margin-bottom: $margins;
+  article {
+    a {
+      @include block-std;
+
+      height: $block-height - 6px;
+      img {
+        float: left;
+        margin: (-$margins) $margins 0 (-$margins);
+      }
+    }
+  }
+}
+.category-d {
+  margin-bottom: $margins;
+  > section {
+    @include clearfix;
+    background: #fff;
+    margin-bottom: 5px;
+    padding: $margins;
+    > article {
+      float: left;
+      width: percentage(1/2);
+      a:hover { color: $green-hover-header; }
     }
   }
 }
