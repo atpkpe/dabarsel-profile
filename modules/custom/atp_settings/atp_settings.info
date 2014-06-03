@@ -18,6 +18,7 @@ features[field_base][] = title_field
 features[filter][] = filtered_html
 features[filter][] = plain_text
 features[image][] = 120x120
+features[image][] = 1500x300
 features[language][] = da
 features[language][] = en
 features[linkit_profiles][] = editors
