@@ -81,6 +81,12 @@ function atp_page_field_default_field_bases() {
         ),
         'table' => 'taxonomy_term_data',
       ),
+      'field_ter_related_node' => array(
+        'columns' => array(
+          'field_ter_related_target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
     ),
     'indexes' => array(
       'field_ter_category_tid' => array(

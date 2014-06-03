@@ -145,10 +145,8 @@ function atp_page_views_default_views() {
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['type'] = 'entityreference_entity_view';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['settings'] = array(
-    'view_mode' => 'teaser',
-    'links' => 0,
+    'link' => 1,
   );
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['delta_offset'] = '0';
