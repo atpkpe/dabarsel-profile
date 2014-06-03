@@ -1,13 +1,16 @@
 /* BREAKPOINTS */
 /* COLORS */
 /* GRIDS */
+/*  HEIGHTS*/
 /* MEDIA QUERIES */
 /* GRADIENTS */
 /* FONTS */
 /* FORM ELEMENTS */
 /* BTN */
 /* VIEWMODES */
+/* SVG with PNG fallback and retina fallback */
 /* COLORS */
+/* Standard Block */
 .section-row { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 .section-row:before, .section-row:after { content: "."; display: block; height: 0; overflow: hidden; }
 .section-row:after { clear: both; }
@@ -80,7 +83,6 @@
 @media screen and (max-width: 500px) { .twocol-left > aside { width: 100%; float: none; margin-left: 0; margin-right: 0; display: none; } }
 .twocol-left > article { width: 74.47917%; clear: right; float: right; margin-right: 0; padding-left: 20px; border-left: 1px solid #e6e7e4; }
 @media screen and (max-width: 500px) { .twocol-left > article { width: 100%; float: none; margin-left: 0; margin-right: 0; padding: 0 10px; } }
-.twocol-left > article > xx.section-row > .even:first-child { margin-bottom: 20px; }
 
 /* ADMIN */
 .panel-region { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin-bottom: 20px; }

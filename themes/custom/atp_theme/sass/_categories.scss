@@ -1,5 +1,9 @@
 .category-a {
-
+    article {
+      a {
+        @include block-std;
+      }
+    }
 }
 .category-b {
 

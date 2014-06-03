@@ -9,8 +9,10 @@ $gray-light: rgb(242,241,240);
 $gray-semilight: rgb(95,95,95);
 $gray-dark: rgb(66,72,68);
 $green: rgb(173,194,0);
+$green-light: lighten($green, 50%);
 $green-hover: rgb(124,149,0);
-$green-hover-header: rgb(173,194,0);
+$green-hover-header: $green;
+$green-block-hover: rgb(209,219,122);
 
 $body-color: $gray-light;
 $text-color: $gray-semilight;
@@ -27,3 +29,7 @@ $grids: $grid-count;
 $gutters-in-px: 20; //px
 $margins: $gutters-in-px * 1px;
 $gutters: $gutters-in-px/(($width - (($grid-count - 1)*$gutters-in-px))/$grid-count);
+
+
+/*  HEIGHTS*/
+$block-height: 126px;
