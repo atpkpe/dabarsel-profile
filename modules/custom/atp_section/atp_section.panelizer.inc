@@ -52,6 +52,29 @@ function atp_section_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
+    $pane->panel = 'row1';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'slideshow-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
+    $display->content['new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0'] = $pane;
+    $display->panels['row1'][0] = 'new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
+    $pane = new stdClass();
     $pane->pid = 'new-ffc63af1-f51d-490b-87aa-6f930921c714';
     $pane->panel = 'row2';
     $pane->type = 'entity_field';
