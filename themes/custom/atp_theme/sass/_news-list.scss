@@ -19,11 +19,14 @@
 .news-list {
   section {
     margin-bottom: $margins;
+
     article {
       @include block-std;
+
       a {
         text-decoration: none;
       }
+
       .date {
         border-right: $border-width solid $border-color;
         float: left;

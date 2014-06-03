@@ -8,9 +8,9 @@
 /* FORM ELEMENTS */
 /* BTN */
 /* VIEWMODES */
+/* SVG with PNG fallback and retina fallback */
 /* COLORS */
 /* Standard Block */
-/* SVG with PNG fallback and retina fallback */
 .section-row { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 .section-row:before, .section-row:after { content: "."; display: block; height: 0; overflow: hidden; }
 .section-row:after { clear: both; }

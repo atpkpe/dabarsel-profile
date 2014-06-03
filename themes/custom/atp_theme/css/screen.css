@@ -8,9 +8,9 @@
 /* FORM ELEMENTS */
 /* BTN */
 /* VIEWMODES */
+/* SVG with PNG fallback and retina fallback */
 /* COLORS */
 /* Standard Block */
-/* SVG with PNG fallback and retina fallback */
 .element-invisible { display: none; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; color: #5f5f5f; font-size: 14px; font-family: "Tahoma", sans-serif; margin: 0px; padding: 0px; }
@@ -142,7 +142,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .category-a article a { display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-image: url(../images/arrow-r.svg); background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; }
 .no-svg .category-a article a { background-image: url(../images/arrow-r.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .category-a article a { background-image: url(../images/arrow-r@2x.png); } }
-.category-a article a:hover { background-image: url(../images/arrow-r.svg); text-decoration: none; background-color: #f8ffc2; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; color: #5f5f5f; }
+.category-a article a:hover { background-image: url(../images/arrow-r.svg); text-decoration: none; background-color: #d1db7a; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; color: #5f5f5f; }
 .no-svg .category-a article a:hover { background-image: url(../images/arrow-r.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .category-a article a:hover { background-image: url(../images/arrow-r@2x.png); } }
 .category-a article a a { text-decoration: none; }
@@ -163,7 +163,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .news-list section article { display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-image: url(../images/arrow-r.svg); background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; }
 .no-svg .news-list section article { background-image: url(../images/arrow-r.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .news-list section article { background-image: url(../images/arrow-r@2x.png); } }
-.news-list section article:hover { background-image: url(../images/arrow-r.svg); text-decoration: none; background-color: #f8ffc2; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; color: #5f5f5f; }
+.news-list section article:hover { background-image: url(../images/arrow-r.svg); text-decoration: none; background-color: #d1db7a; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; color: #5f5f5f; }
 .no-svg .news-list section article:hover { background-image: url(../images/arrow-r.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .news-list section article:hover { background-image: url(../images/arrow-r@2x.png); } }
 .news-list section article a { text-decoration: none; }
