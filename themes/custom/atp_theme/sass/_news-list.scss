@@ -1,15 +1,44 @@
+.news-filter {
+  margin-bottom: $margins;
+  li {
+    display: inline-block;
+    .news-filter-button {
+      cursor: pointer;
+      padding: 5px;
+      background-color: $green;
+      color: #fff;
+      &.active,
+      &:hover {
+        background-color: $green-light;
+        color: $text-color;
+      }
+    }
+  }
+}
+
 .news-list {
-  article {
-    @include block-std;
-    a {
-      text-decoration: none;
+  section {
+    margin-bottom: $margins;
+
+    article {
+      @include block-std;
+
+      a {
+        text-decoration: none;
+      }
+
+      .date {
+        border-right: $border-width solid $border-color;
+        float: left;
+        height: 100%;
+        margin-right: 12px;
+        padding-right: 12px;
+        width: 100px;
+      }
     }
-    .date {
-      border-right: $border-width solid $border-color;
-      float: left;
-      height: 100%;
-      margin-right: 12px;
-      padding-right: 12px;
-    }
+  }
+
+  .pager {
+    margin-bottom: $margins;
   }
 }

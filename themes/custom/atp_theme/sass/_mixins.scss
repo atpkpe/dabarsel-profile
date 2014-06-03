@@ -191,6 +191,25 @@
   }
 }
 
+/* SVG with PNG fallback and retina fallback */
+
+$image-path: '../images' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        }
+    }
+}
+
 /* COLORS */
 @mixin menu-gradient {
   background-color: rgb(255,255,255);
@@ -216,7 +235,7 @@
         &:hover {
           @include background-image('arrow-r');
           text-decoration: none;
-          background-color: $green-light;
+          background-color: $green-block-hover;
           background-size: 16px 28px;
           background-repeat: no-repeat;
           background-position: right 20px center;
@@ -230,21 +249,3 @@
         }
 }
 
-/* SVG with PNG fallback and retina fallback */
-
-$image-path: '../images' !default;
-$fallback-extension: 'png' !default;
-$retina-suffix: '@2x';
-@mixin background-image($name, $size:false){
-    background-image: url(#{$image-path}/#{$name}.svg);
-    @if($size){
-        background-size: $size;
-    }
-    .no-svg &{
-        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
-
-        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
-        }
-    }
-}
