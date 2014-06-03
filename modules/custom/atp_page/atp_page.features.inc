@@ -35,7 +35,7 @@ function atp_page_views_api($module = NULL, $api = NULL) {
 function atp_page_node_info() {
   $items = array(
     'page' => array(
-      'name' => t('Page'),
+      'name' => t('Side'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
