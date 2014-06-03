@@ -1,4 +1,23 @@
+.news-filter {
+  margin-bottom: $margins;
+  li {
+    display: inline-block;
+    .news-filter-button {
+      cursor: pointer;
+      padding: 5px;
+      background-color: $green;
+      color: $text-color;
+      &.active,
+      &:hover {
+        background-color: $green-light;
+      }
+    }
+
+  }
+}
+
 .news-list {
+
   article {
     @include block-std;
     a {
@@ -10,6 +29,7 @@
       height: 100%;
       margin-right: 12px;
       padding-right: 12px;
+      width: 100px;
     }
   }
 }

@@ -152,6 +152,11 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .category-d > section:after { clear: both; }
 .category-d > section > article { float: left; width: 50%; }
 
+.news-filter { margin-bottom: 20px; }
+.news-filter li { display: inline-block; }
+.news-filter li .news-filter-button { cursor: pointer; padding: 5px; background-color: #adc200; color: #5f5f5f; }
+.news-filter li .news-filter-button.active, .news-filter li .news-filter-button:hover { background-color: #f8ffc2; }
+
 .news-list article { display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-image: url(../images/arrow-r.svg); background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; }
 .no-svg .news-list article { background-image: url(../images/arrow-r.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .news-list article { background-image: url(../images/arrow-r@2x.png); } }
@@ -161,4 +166,4 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .news-list article a { text-decoration: none; }
 .news-list article a:hover { color: #5f5f5f; }
 .news-list article a { text-decoration: none; }
-.news-list article .date { border-right: 1px solid #e6e7e4; float: left; height: 100%; margin-right: 12px; padding-right: 12px; }
+.news-list article .date { border-right: 1px solid #e6e7e4; float: left; height: 100%; margin-right: 12px; padding-right: 12px; width: 100px; }

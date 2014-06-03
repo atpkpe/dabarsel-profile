@@ -11,7 +11,7 @@ $gray-dark: rgb(66,72,68);
 $green: rgb(173,194,0);
 $green-light: lighten($green, 50%);
 $green-hover: rgb(124,149,0);
-$green-hover-header: rgb(173,194,0);
+$green-hover-header: $green;
 
 $body-color: $gray-light;
 $text-color: $gray-semilight;
