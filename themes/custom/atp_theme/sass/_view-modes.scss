@@ -57,10 +57,8 @@
   @include view-mode(4);
 }
 .view-mode-1-1-l, .view-mode-1-2-l, .view-mode-3-8-l, .view-mode-1-4-l {
-  height: 126px;
+  height: $block-height;
 }
 .view-mode-1-1-h, .view-mode-1-2-h, .view-mode-3-8-h, .view-mode-1-4-h {
-  height: 272px;
+  height: ($block-height*2)+20px;
 }
-
-

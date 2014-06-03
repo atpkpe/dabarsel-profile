@@ -1,5 +1,28 @@
 .category-a {
+    article {
+      a {
+        display: block;
+        margin-bottom: 5px;
+        padding: $margins;
+        padding-right: $margins*1.5;
+        text-decoration: none;
+        height: $block-height;
+        @include background-image('arrow-r');
+        background-color: #fff;
+        background-size: 16px 28px;
+        background-repeat: no-repeat;
+        background-position: right 20px center;
 
+        &:hover {
+          @include background-image('arrow-r');
+          background-color: $green-light;
+          background-size: 16px 28px;
+          background-repeat: no-repeat;
+          background-position: right 20px center;
+          color: $text-color;
+        }
+      }
+    }
 }
 .category-b {
 
