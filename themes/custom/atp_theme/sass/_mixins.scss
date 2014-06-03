@@ -198,6 +198,38 @@
 }
 
 
+/* Standard Block */
+
+@mixin block-std {
+        display: block;
+        margin-bottom: 5px;
+        padding: $margins;
+        padding-right: $margins*2.5;
+        text-decoration: none;
+        height: $block-height;
+        @include background-image('arrow-r');
+        background-color: #fff;
+        background-size: 16px $block-height/4.5;
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+
+        &:hover {
+          @include background-image('arrow-r');
+          text-decoration: none;
+          background-color: $green-light;
+          background-size: 16px 28px;
+          background-repeat: no-repeat;
+          background-position: right 20px center;
+          color: $text-color;
+        }
+        a {
+          text-decoration: none;
+          &:hover {
+            color: $text-color;
+          }
+        }
+}
+
 /* SVG with PNG fallback and retina fallback */
 
 $image-path: '../images' !default;
