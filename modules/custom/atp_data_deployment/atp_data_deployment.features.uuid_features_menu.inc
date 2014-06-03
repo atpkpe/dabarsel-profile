@@ -28,6 +28,44 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'uuid' => '004c07fd-c300-4cc7-9874-8eeca0070201',
     'uuid_path' => 'node/a34caed2-b478-496a-9e16-4ed60706a280',
   );
+  // Exported menu link: 08954b4d-8b0f-4e72-84b3-415e1b340bc7
+  $menu_uuid_links['08954b4d-8b0f-4e72-84b3-415e1b340bc7'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'Kategori B',
+    'options' => array(
+      'node_type' => 'page',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'uuid' => '08954b4d-8b0f-4e72-84b3-415e1b340bc7',
+    'parent_uuid' => 'e50f0574-2730-4e7d-bae3-d3a7edad891e',
+    'uuid_path' => 'node/986679d1-ee2b-4d5a-85a4-3373f0aaadac',
+  );
+  // Exported menu link: 19f485ea-3202-482f-b6b4-7d7305f9d032
+  $menu_uuid_links['19f485ea-3202-482f-b6b4-7d7305f9d032'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'Kategori C',
+    'options' => array(
+      'node_type' => 'page',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'uuid' => '19f485ea-3202-482f-b6b4-7d7305f9d032',
+    'parent_uuid' => 'e50f0574-2730-4e7d-bae3-d3a7edad891e',
+    'uuid_path' => 'node/b176bbfa-7ae3-4217-9842-3f49e5631df2',
+  );
   // Exported menu link: 391e308e-e858-4d52-a91c-ee4968fbd491
   $menu_uuid_links['391e308e-e858-4d52-a91c-ee4968fbd491'] = array(
     'menu_name' => 'menu-top',
@@ -65,25 +103,6 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'uuid' => '53cc40ed-2782-48ca-94f6-6987f84679e4',
     'uuid_path' => 'node/126c9a15-3172-4e21-9a34-8194fc363ca2',
   );
-  // Exported menu link: 74c9b7ce-e016-11e3-a989-d1f96a278528
-  $menu_uuid_links['74c9b7ce-e016-11e3-a989-d1f96a278528'] = array(
-    'menu_name' => 'menu-top',
-    'router_path' => 'node/%',
-    'link_title' => 'Kategoriside',
-    'options' => array(
-      'node_type' => 'page',
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 0,
-    'weight' => 0,
-    'uuid' => '74c9b7ce-e016-11e3-a989-d1f96a278528',
-    'parent_uuid' => 'e50f0574-2730-4e7d-bae3-d3a7edad891e',
-    'uuid_path' => 'node/fac656d8-0de4-4bd1-8f3f-ab752af82e96',
-  );
   // Exported menu link: 74c9bb16-e016-11e3-a989-d1f96a278528
   $menu_uuid_links['74c9bb16-e016-11e3-a989-d1f96a278528'] = array(
     'menu_name' => 'menu-top',
@@ -100,8 +119,27 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'expanded' => 0,
     'weight' => 0,
     'uuid' => '74c9bb16-e016-11e3-a989-d1f96a278528',
-    'parent_uuid' => '74c9b7ce-e016-11e3-a989-d1f96a278528',
+    'parent_uuid' => 'e50f0574-2730-4e7d-bae3-d3a7edad891e',
     'uuid_path' => 'node/5318a2bf-5d2e-4d11-a674-97050f2bb29e',
+  );
+  // Exported menu link: 8c1eeee8-7bd4-46ef-a5c7-b87a929fd134
+  $menu_uuid_links['8c1eeee8-7bd4-46ef-a5c7-b87a929fd134'] = array(
+    'menu_name' => 'menu-top',
+    'router_path' => 'node/%',
+    'link_title' => 'Kategori D',
+    'options' => array(
+      'node_type' => 'page',
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'uuid' => '8c1eeee8-7bd4-46ef-a5c7-b87a929fd134',
+    'parent_uuid' => 'e50f0574-2730-4e7d-bae3-d3a7edad891e',
+    'uuid_path' => 'node/2da5bce7-e4b3-45cb-9ff1-e9662edddbcd',
   );
   // Exported menu link: 9d1fc520-d3ae-4414-bacd-56e1fabd3b54
   $menu_uuid_links['9d1fc520-d3ae-4414-bacd-56e1fabd3b54'] = array(
@@ -285,7 +323,9 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
   t('Info & selvbetjening');
   t('Job');
   t('Kategori A');
-  t('Kategoriside');
+  t('Kategori B');
+  t('Kategori C');
+  t('Kategori D');
   t('Markedsrisiko');
   t('Om ATP');
   t('Presse');
