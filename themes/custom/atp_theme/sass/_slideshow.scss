@@ -1,0 +1,25 @@
+.slideshow {
+  left: -50%;
+  min-width: 100%;
+  width: 200%;
+  img {
+    background-size: cover;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  ol {
+
+  }
+  .flex-direction-nav {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    .flex-next {
+      float: right;
+    }
+    .flex-prev {
+      float: left;
+    }
+  }
+}

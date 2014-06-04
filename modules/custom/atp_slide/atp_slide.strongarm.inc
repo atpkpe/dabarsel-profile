@@ -77,6 +77,9 @@ function atp_slide_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      '1_2_square' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -96,7 +99,7 @@ function atp_slide_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
