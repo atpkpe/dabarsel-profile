@@ -1,0 +1,23 @@
+.focus {
+  position: relative;
+  margin-bottom: $margins;
+  * {
+    color: #fff;
+  }
+  > div {
+    background: $black-transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: $block-height;
+    padding: (2*$margins) $margins;
+  }
+  h1 {
+    font-size: 22px;
+    margin-bottom: $margins/2;
+  }
+  p {
+    margin: 0;
+  }
+}
