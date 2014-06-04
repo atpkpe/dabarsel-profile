@@ -192,6 +192,12 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .news-list section article .date { border-right: 1px solid #e6e7e4; float: left; height: 100%; margin-right: 12px; padding-right: 12px; width: 100px; }
 .news-list .pager { margin-bottom: 20px; }
 
+.focus { position: relative; margin-bottom: 20px; }
+.focus * { color: #fff; }
+.focus > div { background: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0; width: 100%; height: 126px; padding: 40px 20px; }
+.focus h1 { font-size: 22px; margin-bottom: 10px; }
+.focus p { margin: 0; }
+
 .slideshow { left: -50%; min-width: 100%; width: 200%; margin-bottom: 20px; float: left; height: 300px; }
 .slideshow .group-wrapper { background: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; padding: 10px 20px; width: 100%; width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; position: relative; overflow: hidden; margin-right: 0; margin-bottom: 20px; margin-left: 2.08333%; border-left: 4px solid #adc200; position: absolute; top: 25%; left: 25%; width: 25%; bottom: auto; margin-left: 0; }
 .slideshow .group-wrapper h3 { color: #fff; }
@@ -223,14 +229,3 @@ footer { background: #e6e7e4; padding-top: 30px; }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .slideshow .flex-direction-nav a { background-image: url(../images/arrow-r@2x.png); } }
 .slideshow .flex-direction-nav .flex-next { right: 20px; }
 .slideshow .flex-direction-nav .flex-prev { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); left: 20px; }
-.focus { position: relative; margin-bottom: 20px; }
-.focus * { color: #fff; }
-.focus > div { background: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0; width: 100%; height: 126px; padding: 40px 20px; }
-.focus h1 { font-size: 22px; margin-bottom: 10px; }
-.focus p { margin: 0; }
-
-.slideshow { left: -50%; min-width: 100%; width: 200%; }
-.slideshow img { background-size: cover; height: auto; max-width: 100%; width: 100%; }
-.slideshow .flex-direction-nav { position: absolute; z-index: 100; width: 100%; }
-.slideshow .flex-direction-nav .flex-next { float: right; }
-.slideshow .flex-direction-nav .flex-prev { float: left; }
