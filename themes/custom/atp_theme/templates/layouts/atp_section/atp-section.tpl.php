@@ -5,6 +5,10 @@
  */
 ?>
 
+<?php if (!empty($content['slideshow'])): ?>
+  <div class="slideshow-wrapper"><?php print $content['slideshow']; ?></div>
+<?php endif; ?>
+
 <section<?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 <?php if (!empty($content['row1'])): ?>
   <section class="section-row onecol"><?php print $content['row1']; ?></section>

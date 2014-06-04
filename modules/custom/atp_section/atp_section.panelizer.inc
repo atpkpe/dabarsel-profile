@@ -41,6 +41,7 @@ function atp_section_panelizer_defaults() {
       'row4' => NULL,
       'row5' => NULL,
       'row2' => NULL,
+      'slideshow' => NULL,
     ),
     'row2' => array(
       'style' => 'naked',
@@ -52,31 +53,8 @@ function atp_section_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
-    $pane->panel = 'row1';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'slideshow-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'panelizer',
-      ),
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
-    $display->content['new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0'] = $pane;
-    $display->panels['row1'][0] = 'new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
-    $pane = new stdClass();
     $pane->pid = 'new-ffc63af1-f51d-490b-87aa-6f930921c714';
-    $pane->panel = 'row2';
+    $pane->panel = 'row1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_section_facts';
     $pane->shown = TRUE;
@@ -105,10 +83,10 @@ function atp_section_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = 'ffc63af1-f51d-490b-87aa-6f930921c714';
     $display->content['new-ffc63af1-f51d-490b-87aa-6f930921c714'] = $pane;
-    $display->panels['row2'][0] = 'new-ffc63af1-f51d-490b-87aa-6f930921c714';
+    $display->panels['row1'][0] = 'new-ffc63af1-f51d-490b-87aa-6f930921c714';
     $pane = new stdClass();
     $pane->pid = 'new-f754e3f7-0b3f-4395-922e-bccc6b844be6';
-    $pane->panel = 'row2';
+    $pane->panel = 'row1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_section_facts';
     $pane->shown = TRUE;
@@ -137,10 +115,10 @@ function atp_section_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = 'f754e3f7-0b3f-4395-922e-bccc6b844be6';
     $display->content['new-f754e3f7-0b3f-4395-922e-bccc6b844be6'] = $pane;
-    $display->panels['row2'][1] = 'new-f754e3f7-0b3f-4395-922e-bccc6b844be6';
+    $display->panels['row1'][1] = 'new-f754e3f7-0b3f-4395-922e-bccc6b844be6';
     $pane = new stdClass();
     $pane->pid = 'new-5759cabd-8bf3-482a-a308-b74d067b4e39';
-    $pane->panel = 'row2';
+    $pane->panel = 'row1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_section_facts';
     $pane->shown = TRUE;
@@ -169,10 +147,10 @@ function atp_section_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = '5759cabd-8bf3-482a-a308-b74d067b4e39';
     $display->content['new-5759cabd-8bf3-482a-a308-b74d067b4e39'] = $pane;
-    $display->panels['row2'][2] = 'new-5759cabd-8bf3-482a-a308-b74d067b4e39';
+    $display->panels['row1'][2] = 'new-5759cabd-8bf3-482a-a308-b74d067b4e39';
     $pane = new stdClass();
     $pane->pid = 'new-aa4678c9-1089-4125-a1c1-19fb073bd6c4';
-    $pane->panel = 'row2';
+    $pane->panel = 'row1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_section_facts';
     $pane->shown = TRUE;
@@ -201,7 +179,30 @@ function atp_section_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = 'aa4678c9-1089-4125-a1c1-19fb073bd6c4';
     $display->content['new-aa4678c9-1089-4125-a1c1-19fb073bd6c4'] = $pane;
-    $display->panels['row2'][3] = 'new-aa4678c9-1089-4125-a1c1-19fb073bd6c4';
+    $display->panels['row1'][3] = 'new-aa4678c9-1089-4125-a1c1-19fb073bd6c4';
+    $pane = new stdClass();
+    $pane->pid = 'new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
+    $pane->panel = 'slideshow';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'slideshow-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
+    $display->content['new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0'] = $pane;
+    $display->panels['slideshow'][0] = 'new-2cdc562d-305a-49e1-ba1c-c4fdd2e226b0';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

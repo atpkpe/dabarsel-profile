@@ -8,6 +8,7 @@ $plugin = array(
   'admin css' => '../../../css/layouts.css',
   'css' => '../../../css/layouts.css',
   'regions' => array(
+    'slideshow' => t('Slideshow'),
     'row1' => t('First row'),
     'row2' => t('Second row'),
     'row3' => t('Third row'),
