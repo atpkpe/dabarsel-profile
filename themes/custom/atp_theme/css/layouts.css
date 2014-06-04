@@ -78,7 +78,7 @@
 .view-mode-1-2-square a > div { padding: 20px 60px 0 0; }
 .view-mode-1-2-square img { float: left; margin-right: 20px; display: block; }
 
-.onecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; margin-bottom: 20px; }
+.onecol { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin: 0 auto; width: 960px; }
 .onecol:before, .onecol:after { content: "."; display: block; height: 0; overflow: hidden; }
 .onecol:after { clear: both; }
 @media screen and (max-width: 500px) { .onecol { padding: 0; width: 100%; } }

@@ -7,7 +7,6 @@
 .onecol {
   @include clearfix;
   @include content;
-  margin-bottom: 20px;
   @include device(phone){
     padding: 0 10px;
   }

@@ -57,6 +57,14 @@ p {
   line-height: 22px;
 }
 
+hr {
+  background: $gray;
+  border: 0;
+  height: 1px;
+  overflow: hidden;
+  margin: ($margins*.5) 0 $margins 0;
+}
+
 .field-field-page-summary *, blockquote {
   margin-bottom: 20px;
   font-size: 16px;

@@ -5,20 +5,21 @@
  */
 ?>
 
-<section class="onecol" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<section<?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 <?php if (!empty($content['row1'])): ?>
-  <section class="section-row"><?php print $content['row1']; ?></section>
+  <section class="section-row onecol"><?php print $content['row1']; ?></section>
 <?php endif; ?>
 <?php if (!empty($content['row2'])): ?>
-  <section class="section-row"><?php print $content['row2']; ?></section>
+  <section class="section-row onecol"><?php print $content['row2']; ?></section>
 <?php endif; ?>
 <?php if (!empty($content['row3'])): ?>
-  <section class="section-row"><?php print $content['row3']; ?></section>
+  <section class="section-row onecol"><?php print $content['row3']; ?></section>
 <?php endif; ?>
 <?php if (!empty($content['row4'])): ?>
-  <section class="section-row"><?php print $content['row4']; ?></section>
+  <section class="section-row onecol"><?php print $content['row4']; ?></section>
 <?php endif; ?>
+<hr>
 <?php if (!empty($content['row5'])): ?>
-  <section class="section-row"><?php print $content['row5']; ?></section>
+  <section class="section-row onecol"><?php print $content['row5']; ?></section>
 <?php endif; ?>
 </section>
