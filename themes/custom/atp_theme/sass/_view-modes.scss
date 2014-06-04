@@ -66,9 +66,10 @@
 .view-mode-1-2-square {
   @include float-span(8);
   @include clearfix;
+  @include block-std;
   background: #fff;
   margin: 0 0 ($margins/2) $margins;
-  height: $block-height;
+  padding: 0;
   overflow: hidden;
   @include device(phone){
     width: 100%;
