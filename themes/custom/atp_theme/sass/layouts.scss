@@ -4,6 +4,10 @@
 @import "mixins";
 @import "view-modes";
 
+* {
+  @include box-sizing(border-box);
+}
+
 .onecol {
   @include clearfix;
   @include content;
