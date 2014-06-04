@@ -2,24 +2,108 @@
   left: -50%;
   min-width: 100%;
   width: 200%;
+  margin-bottom: $margins;
+  float: left;
+  height: 300px;
+
+  .group-wrapper {
+    @include view-mode-overlay;
+    @include view-mode(4);
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 25%;
+    bottom: auto;
+    margin-left: 0;
+    h2 {
+      color: #fff;
+      font-size: 22px;
+      a {
+        font-size: 22px;
+        color: $green;
+        margin-top: 0;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+      margin-top: $margins;
+      display: inline-block;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
   img {
     background-size: cover;
     height: auto;
     max-width: 100%;
     width: 100%;
+    height: 300px;
+  }
+  @include device(phone){ // skal ligge efter images, ellers bliver den overskrevet
+    img {
+      width: auto;
+      max-width: inherit;
+    }
+    .group-wrapper {
+      width: 50%;
+    }
   }
   ol {
-
+    @include device(phone){
+      display: none;
+    }
+    bottom: $margins/2;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    > li {
+      @include opacity(0.6);
+      list-style-type: none;
+      display: inline;
+      cursor: pointer;
+    }
+    a {
+      background: $gray-light;
+      color: $gray-light;
+      border-radius: $margins;
+      width: $margins;
+      height: $margins;
+      display: inline-block;
+      line-height: $margins;
+      text-align: center;
+      margin-right: 10px;
+      &.flex-active {
+        background: $green;
+        color: $green;
+      }
+    }
   }
   .flex-direction-nav {
-    position: absolute;
     z-index: 100;
     width: 100%;
+    li { list-style: none; }
+    a {
+      @include background-image('arrow-r');
+      position: absolute;
+      color: rgba(0,0,0,0);
+      height: $margins*2.5;
+      background-repeat: no-repeat;
+      z-index: 100;
+      top: 125px; // sum = half of slide height and half arrow height
+    }
     .flex-next {
-      float: right;
+      right: $margins;
+
     }
     .flex-prev {
-      float: left;
+      @include rotate(180deg);
+      left: $margins;
     }
   }
 }
