@@ -21,9 +21,8 @@
     display: table-cell;
     margin: 0;
     width: inherit;
-    width: 100%;
+    width: inherit;
     height: 70px;
-    border-bottom : 1px solid $gray-dark;
     vertical-align: middle;
     text-align: center;
     @include device(phone){
@@ -33,6 +32,7 @@
     }
   }
   p {
+      border-top : 1px solid $gray-dark;
       padding-top: 20px;
   }
   a {

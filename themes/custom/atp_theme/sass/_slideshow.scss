@@ -1,4 +1,5 @@
 .slideshow {
+  position: relative;
   margin-bottom: $margins;
   float: left;
   height: 300px;
@@ -111,7 +112,7 @@
       @include background-image('arrow-slide-l');
       left: $margins;
       &:hover {
-      @include background-image('arrow-slide-r-hover');
+      @include background-image('arrow-slide-l-hover');
       }
     }
   }
