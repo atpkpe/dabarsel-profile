@@ -140,7 +140,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .pager li.current { font-weight: 700; }
 
 .category-a { margin-bottom: 20px; }
-.category-a article a { display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-image: url(../images/arrow-r.svg); background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; }
+.category-a article a { background-image: url(../images/arrow-r.svg); display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; }
 .no-svg .category-a article a { background-image: url(../images/arrow-r.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .category-a article a { background-image: url(../images/arrow-r@2x.png); } }
 .category-a article a:hover { background-image: url(../images/arrow-r.svg); text-decoration: none; background-color: #d1db7a; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; color: #5f5f5f; }
@@ -157,7 +157,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .category-b > section > article a:hover { color: #adc200; }
 
 .category-c { margin-bottom: 20px; }
-.category-c article a { display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-image: url(../images/arrow-r.svg); background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; height: 120px; }
+.category-c article a { background-image: url(../images/arrow-r.svg); display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; height: 120px; }
 .no-svg .category-c article a { background-image: url(../images/arrow-r.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .category-c article a { background-image: url(../images/arrow-r@2x.png); } }
 .category-c article a:hover { background-image: url(../images/arrow-r.svg); text-decoration: none; background-color: #d1db7a; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; color: #5f5f5f; }
@@ -180,7 +180,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .news-filter li .news-filter-button.active, .news-filter li .news-filter-button:hover { background-color: #f8ffc2; color: #5f5f5f; }
 
 .news-list section { margin-bottom: 20px; }
-.news-list section article { display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-image: url(../images/arrow-r.svg); background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; }
+.news-list section article { background-image: url(../images/arrow-r.svg); display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; text-decoration: none; height: 126px; background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; }
 .no-svg .news-list section article { background-image: url(../images/arrow-r.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .news-list section article { background-image: url(../images/arrow-r@2x.png); } }
 .news-list section article:hover { background-image: url(../images/arrow-r.svg); text-decoration: none; background-color: #d1db7a; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; color: #5f5f5f; }
@@ -191,3 +191,9 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .news-list section article a { text-decoration: none; }
 .news-list section article .date { border-right: 1px solid #e6e7e4; float: left; height: 100%; margin-right: 12px; padding-right: 12px; width: 100px; }
 .news-list .pager { margin-bottom: 20px; }
+
+.slideshow { left: -50%; min-width: 100%; width: 200%; }
+.slideshow img { background-size: cover; height: auto; max-width: 100%; width: 100%; }
+.slideshow .flex-direction-nav { position: absolute; z-index: 100; width: 100%; }
+.slideshow .flex-direction-nav .flex-next { float: right; }
+.slideshow .flex-direction-nav .flex-prev { float: left; }
