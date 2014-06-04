@@ -132,7 +132,7 @@ function atp_component_field_default_field_instances() {
         'settings' => array(
           'field_wrapper' => 0,
           'image_link' => '',
-          'image_style' => '120x120',
+          'image_style' => '126x126',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),

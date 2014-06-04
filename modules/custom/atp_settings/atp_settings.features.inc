@@ -22,10 +22,10 @@ function atp_settings_ctools_plugin_api($module = NULL, $api = NULL) {
 function atp_settings_image_default_styles() {
   $styles = array();
 
-  // Exported image style: 120x120.
-  $styles['120x120'] = array(
-    'name' => '120x120',
-    'label' => '120x120',
+  // Exported image style: 126x126.
+  $styles['126x126'] = array(
+    'name' => '126x126',
+    'label' => '126x126',
     'effects' => array(
       1 => array(
         'label' => 'Scale and crop',
@@ -37,8 +37,8 @@ function atp_settings_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 120,
-          'height' => 120,
+          'width' => 126,
+          'height' => 126,
         ),
         'weight' => 1,
       ),

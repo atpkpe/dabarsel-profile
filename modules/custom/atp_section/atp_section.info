@@ -26,6 +26,7 @@ features[field_base][] = field_section_image
 features[field_base][] = field_section_related
 features[field_base][] = field_section_slides
 features[field_base][] = field_section_summary
+features[field_group][] = group_infocus|node|section|1_1_l
 features[field_group][] = group_section_content|node|section|form
 features[field_group][] = group_section_facts|node|section|form
 features[field_group][] = group_section_image_overlay|node|section|1_1_l

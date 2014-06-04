@@ -13,6 +13,33 @@ function atp_section_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_infocus|node|section|1_1_l';
+  $field_group->group_name = 'group_infocus';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'section';
+  $field_group->mode = '1_1_l';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Focus',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_section_image',
+      1 => 'group_section_image_overlay',
+    ),
+    'format_type' => 'html5',
+    'format_settings' => array(
+      'label' => 'Focus',
+      'instance_settings' => array(
+        'classes' => 'focus',
+        'wrapper' => 'section',
+      ),
+    ),
+  );
+  $export['group_infocus|node|section|1_1_l'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_section_content|node|section|form';
   $field_group->group_name = 'group_section_content';
   $field_group->entity_type = 'node';
@@ -76,10 +103,10 @@ function atp_section_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'section';
   $field_group->mode = '1_1_l';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_infocus';
   $field_group->data = array(
     'label' => 'Image overlay',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_section_body',
       1 => 'title_field',
@@ -88,7 +115,7 @@ function atp_section_field_group_info() {
     'format_settings' => array(
       'label' => 'Image overlay',
       'instance_settings' => array(
-        'classes' => 'group-section-image-overlay',
+        'classes' => '',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
