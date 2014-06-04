@@ -32,6 +32,7 @@ features[field_group][] = group_section_facts|node|section|form
 features[field_group][] = group_section_image_overlay|node|section|1_1_l
 features[field_group][] = group_section_related|node|section|form
 features[field_group][] = group_section_slides|node|section|form
+features[field_group][] = group_txt|node|section|1_2_square
 features[field_group][] = group_wrapper|node|section|1_2_square
 features[field_group][] = group_wrapper|node|section|teaser
 features[field_group][] = group_wrapper|node|section|teaser_with_img

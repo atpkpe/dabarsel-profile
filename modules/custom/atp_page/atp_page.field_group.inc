@@ -185,6 +185,38 @@ function atp_page_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_txt|node|page|1_2_square';
+  $field_group->group_name = 'group_txt';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = '1_2_square';
+  $field_group->parent_name = 'group_wrapper';
+  $field_group->data = array(
+    'label' => 'Text',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_page_summary',
+      1 => 'title_field',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Text',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_txt|node|page|1_2_square'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_wrapper|node|page|1_2_square';
   $field_group->group_name = 'group_wrapper';
   $field_group->entity_type = 'node';
@@ -196,16 +228,16 @@ function atp_page_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_page_image',
-      1 => 'field_page_summary',
-      2 => 'title_field',
+      1 => 'group_txt',
     ),
     'format_type' => 'link',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'Wrapper',
       'instance_settings' => array(
         'link_to' => 'entity',
-        'classes' => 'group-wrapper field-group-link',
+        'classes' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_wrapper|node|page|1_2_square'] = $field_group;
