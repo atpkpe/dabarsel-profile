@@ -25,7 +25,6 @@
   article {
     a {
       @include block-std;
-      height: $block-height - 6px;
       img {
         float: left;
         margin: (-$margins) $margins 0 (-$margins);

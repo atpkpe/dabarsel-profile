@@ -44,3 +44,8 @@
   @include clearfix;
   margin-bottom: $margins;
 }
+.panels-dnd {
+  hr {
+    display: none;
+  }
+}
