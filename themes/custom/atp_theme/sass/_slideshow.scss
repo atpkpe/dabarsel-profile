@@ -39,7 +39,6 @@
   }
   img {
     background-size: cover;
-    height: auto;
     max-width: 100%;
     width: 100%;
     height: 300px;
@@ -89,20 +88,20 @@
     width: 100%;
     li { list-style: none; }
     a {
-      @include background-image('arrow-r');
       position: absolute;
       color: rgba(0,0,0,0);
-      height: $margins*2.5;
+      height: ($margins*2.5)+2;
       background-repeat: no-repeat;
       z-index: 100;
       top: 125px; // sum = half of slide height and half arrow height
     }
     .flex-next {
+      @include background-image('arrow-slide-r');
       right: $margins;
 
     }
     .flex-prev {
-      @include rotate(180deg);
+      @include background-image('arrow-slide-l');
       left: $margins;
     }
   }
