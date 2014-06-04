@@ -34,6 +34,7 @@ features[field_group][] = group_section_image_overlay|node|page|1_2_h
 features[field_group][] = group_section_image_overlay|node|page|1_2_l
 features[field_group][] = group_section_image_overlay|node|page|1_4_h
 features[field_group][] = group_section_image_overlay|node|page|1_4_l
+features[field_group][] = group_wrapper|node|page|1_2_square
 features[field_group][] = group_wrapper|node|page|teaser
 features[field_group][] = group_wrapper|node|page|teaser_with_img
 features[field_instance][] = node-page-field_page_body

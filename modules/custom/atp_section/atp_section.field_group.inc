@@ -157,6 +157,34 @@ function atp_section_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper|node|section|1_2_square';
+  $field_group->group_name = 'group_wrapper';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'section';
+  $field_group->mode = '1_2_square';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_section_image',
+      1 => 'field_section_summary',
+      2 => 'title_field',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'formatter' => 'open',
+      'instance_settings' => array(
+        'link_to' => 'entity',
+        'classes' => 'group-wrapper field-group-link',
+      ),
+    ),
+  );
+  $export['group_wrapper|node|section|1_2_square'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_wrapper|node|section|teaser';
   $field_group->group_name = 'group_wrapper';
   $field_group->entity_type = 'node';

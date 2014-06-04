@@ -12,12 +12,12 @@
 }
 
 @mixin content{
+  margin: 0 auto;
+  width: $content-width;
   @include device(phone){
     padding: 0;
     width: 100%;
   }
-  margin: 0 auto;
-  width: $content-width;
 }
 
 @mixin arrow($direction, $color, $size){
@@ -248,4 +248,3 @@ $retina-suffix: '@2x';
     }
   }
 }
-
