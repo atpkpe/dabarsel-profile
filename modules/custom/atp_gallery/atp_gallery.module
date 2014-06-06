@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP Gallery feature.
+ */
+
+include_once 'atp_gallery.features.inc';

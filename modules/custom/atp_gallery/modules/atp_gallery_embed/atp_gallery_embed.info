@@ -1,0 +1,5 @@
+name = ATP Gallery Embed
+description = Embed Gallery into WYSIWYG field
+core = 7.x
+package = ATP
+scripts[] = js/jquery.magnific-popup.min.js
