@@ -88,7 +88,11 @@ function atp_gallery_views_default_views() {
   /* Display: Main image */
   $handler = $view->new_display('panel_pane', 'Main image', 'panel_pane_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'slides';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'carousel';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -132,9 +136,11 @@ function atp_gallery_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'thumbnails';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'slides';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'slider';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -172,6 +178,7 @@ function atp_gallery_views_default_views() {
     t('sidste »'),
     t('Alle'),
     t('Main image'),
+    t('more'),
     t('View panes'),
     t('Thumbnails'),
   );
