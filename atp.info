@@ -51,4 +51,5 @@ dependencies[] = atp_component
 dependencies[] = atp_news
 dependencies[] = atp_slide
 dependencies[] = atp_file
+dependencies[] = atp_gallery
 dependencies[] = atp_permissions
