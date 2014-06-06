@@ -58,9 +58,6 @@ $slideshow-title: 22px;
     }
   }
   ol {
-    @include device(phone){
-      display: none;
-    }
     bottom: $margins/2;
     position: absolute;
     width: 100%;
