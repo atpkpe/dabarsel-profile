@@ -14,12 +14,17 @@ function atp_settings_filter_default_formats() {
   $formats['filtered_html'] = array(
     'format' => 'filtered_html',
     'name' => 'Filtered HTML',
-    'cache' => 1,
+    'cache' => 0,
     'status' => 1,
     'weight' => 0,
     'filters' => array(
-      'filter_html' => array(
+      'atp_gallery_embed' => array(
         'weight' => -50,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_html' => array(
+        'weight' => -49,
         'status' => 1,
         'settings' => array(
           'allowed_html' => '<a><em><strong><cite><blockquote><code><ul><ol><li><dl><dt><dd><img><h1><h2><h3><h4><p><span><br><table><tr><td><tbody><iframe>',
@@ -28,7 +33,7 @@ function atp_settings_filter_default_formats() {
         ),
       ),
       'media_filter' => array(
-        'weight' => -49,
+        'weight' => -48,
         'status' => 1,
         'settings' => array(),
       ),
@@ -45,7 +50,7 @@ function atp_settings_filter_default_formats() {
         ),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => -44,
+        'weight' => -45,
         'status' => 1,
         'settings' => array(),
       ),
