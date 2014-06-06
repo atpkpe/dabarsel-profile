@@ -229,7 +229,7 @@ $retina-suffix: '@2x';
   height: $block-height;
   overflow: hidden;
   background-color: #fff;
-  background-size: 16px $block-height/4.5;
+  background-size: 16px ($block-height/4.5);
   background-repeat: no-repeat;
   background-position: right $margins center;
 

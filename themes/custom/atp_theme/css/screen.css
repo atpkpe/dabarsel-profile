@@ -166,6 +166,8 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .category-c article a a { text-decoration: none; }
 .category-c article a a:hover { color: #5f5f5f; text-decoration: none; }
 .category-c article a img { float: left; margin: -20px 20px 0 -20px; }
+@media screen and (max-width: 500px) { .category-c article a { height: auto; }
+  .category-c article a img { display: none; } }
 
 .category-d { margin-bottom: 20px; }
 .category-d > section { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; background: #fff; margin-bottom: 5px; padding: 20px; }

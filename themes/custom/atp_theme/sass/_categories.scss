@@ -29,6 +29,12 @@
         float: left;
         margin: (-$margins) $margins 0 (-$margins);
       }
+      @include device(phone) {
+        height: auto;
+        img {
+          display: none;
+        }
+      }
     }
   }
 }
