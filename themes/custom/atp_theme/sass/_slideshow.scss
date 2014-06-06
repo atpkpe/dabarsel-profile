@@ -1,9 +1,13 @@
+$slideshow-height: 300px;
+$slideshow-title: 22px;
+
 .slideshow {
   position: relative;
   margin-bottom: $margins;
   float: left;
-  height: 300px;
+  height: $slideshow-height;
   width: 100%;
+  overflow: hidden;
 
   .group-wrapper {
     @include view-mode-overlay;
@@ -18,9 +22,9 @@
 
     h2 {
       color: #fff;
-      font-size: 22px;
+      font-size: $slideshow-title;
       a {
-        font-size: 22px;
+        font-size: $slideshow-title;
         color: $green;
         margin-top: 0;
         &:hover {
@@ -42,7 +46,7 @@
     background-size: cover;
     max-width: 100%;
     width: 100%;
-    height: 300px;
+    height: $slideshow-height;
   }
   @include device(phone){ // skal ligge efter images, ellers bliver den overskrevet
     img {
