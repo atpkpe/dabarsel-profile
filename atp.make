@@ -82,6 +82,10 @@ projects[date][type] = 'module'
 projects[date][subdir] = 'contrib'
 projects[date][version] = '2.7'
 
+projects[image_preset] = 'module'
+projects[image_preset][subdir] = 'contrib'
+projects[image_preset][version] = '1.0'
+
 projects[field_group_link][type] = 'module'
 projects[field_group_link][subdir] = 'contrib'
 projects[field_group_link][version] = '1.0'
