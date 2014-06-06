@@ -62,7 +62,12 @@ hr {
   border: 0;
   height: 1px;
   overflow: hidden;
-  margin: ($margins/2) 0 $margins 0;
+  margin: ($margins/2) auto $margins;
+  width: $width*1px;
+  @include device(phone) {
+    width: 100%;
+  }
+
 }
 
 .field-field-page-summary *, blockquote {
