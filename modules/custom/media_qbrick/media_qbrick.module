@@ -1,0 +1,139 @@
+<?php
+
+/**
+ * @file media_qbrick/media_qbrick.module
+ *
+ * Media: Qbrick provides a stream wrapper and formatters for videos provided
+ * by Qbrick, available at http://youtube.com/.
+ *
+ * @TODO:
+ * Get the Qbrick tab working.
+ *  - Search by video name, user name, and channel.
+ *  - Default to user's channel videos.
+ * Review all code and remove cruft.
+ * Assess if M:YT 3.x could be formatters added on to the OEmbed module.
+ */
+
+// A registry of variable_get defaults.
+include_once DRUPAL_ROOT . '/' . drupal_get_path('module', 'media_qbrick') . '/includes/media_qbrick.variables.inc';
+
+// Hooks and callbacks for integrating with File Entity module for display.
+include_once DRUPAL_ROOT . '/' . drupal_get_path('module', 'media_qbrick') . '/includes/media_qbrick.formatters.inc';
+
+/**
+ * Implements hook_media_internet_providers().
+ */
+function media_qbrick_media_internet_providers() {
+  $info['MediaInternetQbrickHandler'] = array(
+    'title' => t('Qbrick'),
+  );
+
+  return $info;
+}
+
+/**
+ * Implements hook_stream_wrappers().
+ */
+function media_qbrick_stream_wrappers() {
+  return array(
+    'qbrick' => array(
+      'name' => t('Qbrick videos'),
+      'class' => 'MediaQbrickStreamWrapper',
+      'description' => t('Videos provided by Qbrick.'),
+      'type' => STREAM_WRAPPERS_READ_VISIBLE,
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function media_qbrick_theme($existing, $type, $theme, $path) {
+  return array(
+    'media_qbrick_video' => array(
+      'variables' => array('uri' => NULL, 'options' => array()),
+      'file' => 'media_qbrick.theme.inc',
+      'path' => $path . '/includes',
+      'template' => 'media-qbrick-video',
+    ),
+  );
+}
+
+/**
+ * Implements hook_media_parse().
+ *
+ * @todo This hook should be deprecated. Refactor Media module to not call it
+ *   any more, since media_internet should be able to automatically route to the
+ *   appropriate handler.
+ */
+function media_qbrick_media_parse($embed_code) {
+  $handler = new MediaInternetQbrickHandler($embed_code);
+  return $handler->parse($embed_code);
+}
+
+/**
+ * Implements hook_file_mimetype_mapping_alter().
+ *
+ * Regster the video/youtube mimetype.
+ */
+function media_qbrick_file_mimetype_mapping_alter(&$mapping) {
+  $mapping['mimetypes'][] = 'video/qbrick';
+}
+
+/*
+ * Implements hook_file_default_types_alter().
+ *
+ * Adds the video/youtube fake mimetype to video files.
+ */
+function media_qbrick_file_default_types_alter(&$types) {
+  $types['video']->mimetypes[] = 'video/qbrick';
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function media_qbrick_ctools_plugin_api($owner, $api) {
+  static $api_versions = array(
+    'file_entity' => array(
+      'file_default_displays' => 1,
+    ),
+  );
+  if (isset($api_versions[$owner][$api])) {
+    return array('version' => $api_versions[$owner][$api]);
+  }
+}
+
+/**
+ * Check to ensure that a given id is valid.
+ *
+ * @param string $id
+ *   The Qbrick video id.
+ * @param boolean $refresh
+ *   (Defaults to FALSE) If TRUE, then reset the value from the cache.
+ * @return boolean
+ *   Returns TRUE if the video is valid.
+ *
+ * @TODO: How does this compare to MediaInternetQbrickHandler's validId
+ * method, and can we refactor the code to rely on only one of them?
+ */
+function media_qbrick_valid_id($id, $refresh = FALSE) {
+  $ids = &drupal_static(__FUNCTION__, array());
+
+  // Return our cached id if allowed, and it exists.
+  if (!$refresh && isset($ids[$id])) {
+    return $ids[$id];
+  }
+  elseif (!$refresh && !isset($ids[$id])) {
+    return $id;
+  }
+  elseif (!$refresh && $cache = cache_get('media_qbrick:id:' . $id, 'cache_media_xml')) {
+    $ids[$id] = $cache->data;
+    return $ids[$id];
+  }
+
+  $url = url(MEDIA_QBRICK_REST_API . '/' . $id);
+  $response = drupal_http_request($url, array('method' => 'HEAD'));
+  $ids[$id] = ($response->code == 200);
+  cache_set('media_qbrick:id:' . $id, $ids[$id], 'cache_media_xml', media_variable_get('xml_cache_expire', 3600));
+  return $ids[$id];
+}
