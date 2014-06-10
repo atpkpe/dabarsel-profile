@@ -76,6 +76,13 @@ header {
   }
 }
 #logo {
+  @include background-image('logo');
+  background-repeat: no-repeat;
+  width: 82px;
+  height: 30px;
+  img {
+    display: none;
+  }
   @include device(phone){
     top: 20px;
     left: 20px;
