@@ -42,6 +42,30 @@
     }
   }
 }
+.twocol-right {
+  @include clearfix;
+  @include content;
+  > aside {
+    @include grid-span(4, 13);
+    @include device(phone){
+      width: 100%;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      display: none;
+    }
+  }
+  > article {
+    @include grid-span(12, 1);
+    @include device(phone){
+      width: 100%;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 ($margins/2);
+    }
+  }
+}
 
 /* ADMIN */
 .panel-region {
