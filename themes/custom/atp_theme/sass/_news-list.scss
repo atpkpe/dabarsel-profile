@@ -36,6 +36,26 @@
         width: 100px;
       }
     }
+    @include device(phone){
+      article {
+        padding: $margins/2;
+        height: 100%;
+        h2 {
+          font-weight: bold;
+        }
+        p {
+          padding-right: $margins*2;
+        }
+        .date {
+          border-right: 0;
+          border-bottom: $border-width solid $border-color;
+          height: auto;
+          width: 100%;
+          margin-bottom: $margins/2;
+          padding-bottom: $margins/2;
+        }
+      }
+    }
   }
 
   .pager {

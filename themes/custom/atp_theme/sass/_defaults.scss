@@ -5,6 +5,7 @@
 * {
   @include box-sizing(border-box);
   @include font;
+  @include font-smoothing(antialiased);
   margin: 0px;
   padding: 0px;
 }
@@ -41,6 +42,9 @@ h2 {
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 18px;
+  * {
+    font-size: 18px;
+  }
 }
 h3 {
   margin-bottom: 5px;
