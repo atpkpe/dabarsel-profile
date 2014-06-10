@@ -67,7 +67,7 @@ function _atp_gallery_embed_replacements($matches) {
         controlNav: false,
         animationLoop: false,
         slideshow: false,
-        itemWidth: 131,
+        itemWidth: 120,
         itemMargin: 5,
         asNavFor: "div.carousel"
       });
@@ -89,7 +89,7 @@ function _atp_gallery_embed_replacements($matches) {
     $display = array(
       'label'=>'hidden',
       'type' => 'image',
-      'settings' => array('image_style' => '470x272')
+      'settings' => array('image_style' => 'gallery_large')
     );
 
     $field = field_get_items('node', $node, 'field_gallery_images');

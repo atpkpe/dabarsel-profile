@@ -1,0 +1,41 @@
+$gallery-button-size: 43px;
+
+.view-gallery {
+  button {
+    width: $gallery-button-size;
+    height: $gallery-button-size;
+    opacity: 1;
+    top:-22px;
+    right:-22px;
+    border-radius: $gallery-button-size;
+    background-color: #fff;
+    color: $green;
+  }
+  .thumbnails {
+    li {
+      max-width: 120px;
+    }
+    .slider {
+      position: relative;
+    }
+  }
+}
+.carousel {
+  position: relative;
+  .flex-direction-nav {
+    .flex-prev {
+      position: absolute;
+      left: 0;
+      top: 50%;
+    }
+    .flex-next {
+      position: absolute;
+      right: 0;
+      top: 50%;
+    }
+  }
+}
+.gallery-popup {
+  max-width: 665px;
+  height: auto;
+}

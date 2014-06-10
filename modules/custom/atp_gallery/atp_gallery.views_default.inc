@@ -116,7 +116,7 @@ function atp_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_gallery_images']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_gallery_images']['type'] = 'image_preset_field_image_preset';
   $handler->display->display_options['fields']['field_gallery_images']['settings'] = array(
-    'image_style' => '470x272',
+    'image_style' => 'gallery_large',
   );
   $handler->display->display_options['fields']['field_gallery_images']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_gallery_images']['delta_offset'] = '0';
