@@ -69,7 +69,7 @@
 
 .view-mode-1-1-h, .view-mode-1-2-h, .view-mode-3-8-h, .view-mode-1-4-h { height: 272px; }
 
-.view-mode-1-2-square { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; background-image: url(../images/arrow-r.svg); display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; height: 126px; overflow: hidden; background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; background: #fff; margin: 0 0 10px 20px; padding: 0; overflow: hidden; }
+.view-mode-1-2-square { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; background-image: url(../images/arrow-r.svg); display: block; margin-bottom: 5px; padding: 20px; padding-right: 50px; height: 126px; overflow: hidden; background-color: #fff; background-size: 16px 28px; background-repeat: no-repeat; background-position: right 20px center; margin: 0 0 10px 20px; padding: 0; overflow: hidden; }
 .view-mode-1-2-square:before, .view-mode-1-2-square:after { content: "."; display: block; height: 0; overflow: hidden; }
 .view-mode-1-2-square:after { clear: both; }
 .no-svg .view-mode-1-2-square { background-image: url(../images/arrow-r.png); }
