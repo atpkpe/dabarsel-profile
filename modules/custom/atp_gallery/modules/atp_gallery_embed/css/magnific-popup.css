@@ -6,6 +6,21 @@
   width: auto;
   max-width: 500px;
   margin: 20px auto;
+  height: 500px;
+}
+
+.gallery-popup div.slider {
+  position: absolute;
+  bottom: 20px;
+}
+
+.gallery-popup div.slider li {
+  float: left;
+}
+
+.gallery-popup div.slider li.flex-active-slide {
+  opacity: 0.65;
+  background: transparent;
 }
 
 /* Magnific Popup CSS */

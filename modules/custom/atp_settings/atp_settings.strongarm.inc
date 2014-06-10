@@ -112,7 +112,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'WefCtjq5b0jwK29t4FuHLI5W0EX_u_96vnhq8SDOdpE',
+    'javascript' => 'GRWmfxlNBqTMnMdfIZVNAFT2Nf36du_Cg3NZadsea90',
   );
   $export['language_default'] = $strongarm;
 
@@ -229,10 +229,18 @@ function atp_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'media_qbrick__cid';
+  $strongarm->value = 'D2F3E5F7';
+  $export['media_qbrick__cid'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'media_wysiwyg_wysiwyg_allowed_types';
   $strongarm->value = array(
     0 => 'image',
-    1 => 'document',
+    1 => 'video',
+    2 => 'document',
   );
   $export['media_wysiwyg_wysiwyg_allowed_types'] = $strongarm;
 
@@ -244,6 +252,7 @@ function atp_settings_strongarm() {
     0 => 'upload',
     1 => 'media_default--media_browser_1',
     2 => 'media_default--media_browser_my_files',
+    3 => 'media_internet',
   );
   $export['media_wysiwyg_wysiwyg_browser_plugins'] = $strongarm;
 

@@ -61,10 +61,23 @@ function _atp_gallery_embed_replacements($matches) {
   $(".ajax-popup-link").magnificPopup({
     type:"ajax",
     callbacks: { ajaxContentAdded: function() {
-    // Ajax content is loaded and appended to DOM
-      $(".flexslider").flexslider({
-         controlNav: "thumbnails",
-         manualControls: ".thumbnails section article",
+
+      $("div.slider").flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 131,
+        itemMargin: 5,
+        asNavFor: "div.carousel"
+      });
+
+      $("div.carousel").flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: true,
+        slideshow: false,
+        sync: "div.slider"
       });
     }
   }

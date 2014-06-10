@@ -47,6 +47,7 @@ features[variable][] = media_browser_plus_root_folder_tid
 features[variable][] = media_browser_plus_thumbnails_as_default_browser
 features[variable][] = media_browser_plus_thumbnails_as_default_browser_current
 features[variable][] = media_icon_base_directory
+features[variable][] = media_qbrick__cid
 features[variable][] = media_wysiwyg_wysiwyg_allowed_types
 features[variable][] = media_wysiwyg_wysiwyg_browser_plugins
 features[variable][] = media_wysiwyg_wysiwyg_upload_directory
