@@ -17,7 +17,9 @@ stylesheets[all][] = css/screen.css
 
 ; Scripts =====================================================================
 
-; scripts[] = js/modernizr.js
+; Using this script for = SVG
+scripts[] = js/modernizr.js
+
 ; scripts[] = js/jquery.placeholder.min.js
 scripts[] = js/main.js
 

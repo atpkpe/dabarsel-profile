@@ -1,3 +1,8 @@
+$filter-bg: $green;
+$filter-bg-hover: $green-light;
+$filter-text-color: #fff;
+$filter-text-color-hover: $text-color;
+
 .news-filter {
   margin-bottom: $margins;
   li {
@@ -5,12 +10,12 @@
     .news-filter-button {
       cursor: pointer;
       padding: 5px;
-      background-color: $green;
-      color: #fff;
+      background-color: $filter-bg;
+      color: $filter-text-color;
       &.active,
       &:hover {
-        background-color: $green-light;
-        color: $text-color;
+        background-color: $filter-bg-hover;
+        color: $filter-text-color-hover;
       }
     }
   }
