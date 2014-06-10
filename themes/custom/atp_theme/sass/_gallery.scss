@@ -14,6 +14,11 @@ $gallery-button-size: 43px;
   .thumbnails {
     li {
       max-width: 120px;
+      margin: 0 4px 0 4px;
+      &:last-child,
+      &:first-child {
+        margin: 0;
+      }
     }
     .slider {
       position: relative;
@@ -23,6 +28,9 @@ $gallery-button-size: 43px;
 .carousel {
   position: relative;
   .flex-direction-nav {
+    li {
+      list-style: none;
+    }
     .flex-prev {
       position: absolute;
       left: 0;
