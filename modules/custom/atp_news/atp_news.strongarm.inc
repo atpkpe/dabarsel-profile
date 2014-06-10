@@ -77,6 +77,9 @@ function atp_news_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      '1_2_square' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
