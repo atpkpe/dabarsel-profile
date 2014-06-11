@@ -101,9 +101,6 @@ $gallery-button-size: 43px;
         @include background-image('arrow-slide-r-hover');
       }
     }
-    .flex-active-slide {
-      opacity: 1!important;
-    }
   }
 }
 .gallery-popup {

@@ -18,10 +18,10 @@
   float: left;
 }
 
-.gallery-popup div.slider li.flex-active-slide {
+/*.gallery-popup div.slider li.flex-active-slide {
   opacity: 0.65;
   background: transparent;
-}
+}*/
 
 /* Magnific Popup CSS */
 .mfp-bg {
