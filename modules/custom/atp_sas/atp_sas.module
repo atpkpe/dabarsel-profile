@@ -1,0 +1,70 @@
+<?php
+/**
+ * @file
+ * Code for the ATP SAS.
+ */
+
+
+/**
+ * implements hook_menu
+ */
+function atp_sas_menu() {
+  $items = array();
+  $items['atp-sas/insert/nojs'] = array(
+    'page callback' => 'atp_sas_get_insert_form',
+    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['atp-sas/insert/ajax'] = array(
+      'delivery callback' => 'ajax_deliver'
+    ) + $items['atp-sas/insert/nojs'];
+  
+  return $items;
+}
+
+function atp_sas_get_insert_form($ajax) {
+  $is_ajax = $ajax === 'ajax';
+  $form = drupal_get_form('atp_sas_diag_token_insert_form');
+  if ($is_ajax) {
+    $form = drupal_render($form);
+    die($form);
+  }
+  else {
+    return $form;
+  }
+}
+
+/**
+ * Implements of hook_wysiwyg_include_directory().
+ */
+function atp_sas_wysiwyg_include_directory($type) {
+  return $type;
+}
+
+function atp_sas_diag_token_insert_form($form, &$form_state) {
+  drupal_add_library('system', 'ui.dialog');
+
+  $form['#tree'] = TRUE;
+  $form['diagrams'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Diagrams'),
+    '#prefix' => '<div id="sas-diagrams">',
+    '#suffix' => '</div>',
+  );
+  $form['diagrams']['example1'] = array(
+    '#type' => 'radios',
+    '#title' => t('2013 - Q1'),
+    '#options' => array('table' => 'table', 'piechart' => 'piechart'),
+    '#description' => t('Choose a diagram.'),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+    '#attributes' => array(
+      'class' => array('form-save-diagram'),
+    ),
+  );
+
+  return $form;
+}
