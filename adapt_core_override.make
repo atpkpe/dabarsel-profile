@@ -8,13 +8,7 @@ api = 2
 ; This line removes menu_trail_by_path module entirely
 projects[menu_trail_by_path] = FALSE
 
-projects[adminimal_theme][type] = 'module'
-projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][download][branch] = '7.x-1.x'
-projects[adminimal_theme][download][type] = 'git'
-projects[adminimal_theme][download][url] = 'http://git.drupal.org/project/adminimal_theme.git'
-projects[adminimal_theme][download][revision] = '40f8d1c89d5a3b23cf6bc2cfce00dca2f96b311c'
-projects[adminimal_theme][patch][] = 'http://drupal.org/files/issues/adminimal_theme-jquery-window-close-icon-2264009-1.patch'
+projects[adminimal_theme][version] = '1.5'
 
 projects[wysiwyg][type] = 'module'
 projects[wysiwyg][subdir] = 'contrib'
