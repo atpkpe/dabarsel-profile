@@ -136,8 +136,34 @@ $gallery-button-size: 43px;
   }
 }
 
-.ajax-popup-link > img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
+a.ajax-popup-link {
+  display: block;
+  float: right;
+  text-align: right;
+  position: relative;
+  margin: 10px;
+  margin-right: 0;
+  img {
+    width: 358px;
+    height: 215px;
+    text-align: right;
+    float: right;
+  }
+  &:after {
+    @include background-image('icon-zoom');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: center center;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+  }
+  &:hover:after {
+    @include background-image('icon-zoom-green');
+  }
 }
+

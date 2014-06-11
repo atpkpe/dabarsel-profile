@@ -291,4 +291,11 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .gallery-popup { max-width: 665px; height: auto; background-color: #e6e7e4; }
 .gallery-popup div.slider { bottom: 0; }
 
-.ajax-popup-link > img { max-width: 100%; width: 100%; height: auto; }
+a.ajax-popup-link { display: block; float: right; text-align: right; position: relative; margin: 10px; margin-right: 0; }
+a.ajax-popup-link img { width: 358px; height: 215px; text-align: right; float: right; }
+a.ajax-popup-link:after { background-image: url(../images/icon-zoom.svg); background-color: rgba(0, 0, 0, 0.5); background-repeat: no-repeat; background-size: 25px 25px; background-position: center center; width: 64px; height: 64px; position: absolute; content: ""; bottom: 0; right: 0; }
+.no-svg a.ajax-popup-link:after { background-image: url(../images/icon-zoom.png); }
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg a.ajax-popup-link:after { background-image: url(../images/icon-zoom@2x.png); } }
+a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.svg); }
+.no-svg a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.png); }
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green@2x.png); } }
