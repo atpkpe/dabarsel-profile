@@ -9,26 +9,53 @@ $gallery-button-size: 43px;
     right:-22px;
     border-radius: $gallery-button-size;
     background-color: #fff;
-    color: $green;
+    box-shadow: 0 0 8px 2px $black-transparent;
+    font-size: 36px;
+    font-weight: bold;
+    &.mfp-close-btn-in,
+    &.mfp-close {
+      color: $green-dark;
+    }
   }
 
 .carousel {
   position: relative;
-  height: 405px;
+  height: auto;
+  margin-bottom: 10px;
   .flex-direction-nav {
     li {
       list-style: none;
     }
     .flex-prev {
+      @include background-image('arrow-slide-l');
       position: absolute;
-      left: 0;
-      top: 50%;
+      width: 28px;
+      height: 50px;
+      left: 10px;
+      top: 45%;
+      background-repeat: no-repeat;
+      color: transparent;
+      &:hover {
+        @include background-image('arrow-slide-l-hover');
+      }
     }
     .flex-next {
+      @include background-image('arrow-slide-r');
       position: absolute;
-      right: 0;
-      top: 50%;
+      width: 28px;
+      height: 50px;
+      right: 10px;
+      top: 45%;
+      background-repeat: no-repeat;
+      color: transparent;
+      &:hover {
+        @include background-image('arrow-slide-r-hover');
+      }
     }
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -36,31 +63,55 @@ $gallery-button-size: 43px;
   .thumbnails {
     li {
       max-width: 120px;
-      margin: 0 4.5px 0 4.5px;
+      margin: 0 3.25px 0 3.25px;
       list-style: none;
-      &:last-child,
+      &:last-child {
+        margin-right: 0;
+      }
       &:first-child {
-        margin: 0;
+        margin-left: 0;
       }
     }
     .slider {
       position: relative;
     }
     .flex-prev {
+      @include background-image('arrow-slide-l');
       position: absolute;
-      top: 36px;
-      left: 0;
+      width: 14px;
+      height: 25px;
+      left: 5px;
+      top: 25px;
+      background-repeat: no-repeat;
+      color: transparent;
+      &:hover {
+        @include background-image('arrow-slide-l-hover');
+      }
     }
     .flex-next {
+      @include background-image('arrow-slide-r');
       position: absolute;
-      top: 36px;
-      right: 0;
+      width: 14px;
+      height: 25px;
+      right: 5px;
+      top: 25px;
+      background-repeat: no-repeat;
+      color: transparent;
+      &:hover {
+        @include background-image('arrow-slide-r-hover');
+      }
+    }
+    .flex-active-slide {
+      opacity: 1!important;
     }
   }
 }
 .gallery-popup {
   max-width: 665px;
   height: auto;
+  div.slider {
+    bottom: 0;
+  }
 }
 
 .ajax-popup-link > img {
