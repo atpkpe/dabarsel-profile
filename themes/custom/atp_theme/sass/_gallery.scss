@@ -31,6 +31,9 @@ $gallery-button-size: 43px;
       list-style: none;
     }
     a {
+      @include transition-property(all);
+      @include transition-duration(0.2s);
+      @include transition-timing-function(ease);
       position: absolute;
       width: 56px;
       height: 60px;
@@ -40,6 +43,12 @@ $gallery-button-size: 43px;
       background-size: 28px 50px;
       background-position: center center;
       color: transparent;
+      opacity: 1;
+      visibility: visible;
+      &.flex-disabled {
+        visibility:hidden;
+        opacity: 0;
+      }
     }
     .flex-prev {
       @include background-image('arrow-slide-dark-l');
@@ -98,6 +107,9 @@ $gallery-button-size: 43px;
     }
     a.flex-prev,
     a.flex-next {
+      @include transition-property(all);
+      @include transition-duration(0.2s);
+      @include transition-timing-function(ease);
       position: absolute;
       width: 28px;
       height: 30px;
@@ -108,7 +120,12 @@ $gallery-button-size: 43px;
       background-size: 14px 25px;
       background-position: center center;
       color: transparent;
-
+      opacity: 1;
+      visibility: visible;
+      &.flex-disabled {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
     .flex-prev {
       @include background-image('arrow-slide-dark-l');
@@ -119,7 +136,6 @@ $gallery-button-size: 43px;
     }
     .flex-next {
       @include background-image('arrow-slide-dark-r');
-
       right: -15px;
       &:hover {
         @include background-image('arrow-slide-r-hover');
@@ -166,4 +182,3 @@ a.ajax-popup-link {
     @include background-image('icon-zoom-green');
   }
 }
-
