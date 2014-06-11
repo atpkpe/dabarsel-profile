@@ -55,7 +55,7 @@ function atp_sas_diag_token_insert_form($form, &$form_state) {
   $form['diagrams']['example1'] = array(
     '#type' => 'radios',
     '#title' => t('2013 - Q1'),
-    '#options' => array('table' => 'table', 'piechart' => 'piechart'),
+    '#options' => array('grid' => 'grid', 'pie' => 'pie'),
     '#description' => t('Choose a diagram.'),
   );
   $form['submit'] = array(
