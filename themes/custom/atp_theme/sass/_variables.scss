@@ -28,8 +28,9 @@ $output: 'float';
 $grid-count: 16;
 $grids: $grid-count;
 $gutters-in-px: 20; //px
-$margins: $gutters-in-px * 1px;
 $gutters: $gutters-in-px/(($width - (($grid-count - 1)*$gutters-in-px))/$grid-count);
+$margins: $gutters-in-px * 1px;
+$margins-pct: percentage($gutters-in-px/$width);
 
 
 /*  HEIGHTS*/

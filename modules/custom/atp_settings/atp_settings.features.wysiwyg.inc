@@ -47,6 +47,7 @@ function atp_settings_wysiwyg_default_profiles() {
           'linkit' => 1,
         ),
         'drupal' => array(
+          'sas_diag' => 1,
           'media' => 1,
         ),
       ),
@@ -60,7 +61,7 @@ function atp_settings_wysiwyg_default_profiles() {
       'css_path' => '%t/css/editor.css',
       'stylesSet' => '',
       'block_formats' => 'p,h2,h3,h4,div',
-      'advanced__active_tab' => 'edit-appearance',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 0,
     ),
     'rdf_mapping' => array(),

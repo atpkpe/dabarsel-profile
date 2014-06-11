@@ -80,16 +80,19 @@ header {
   background-repeat: no-repeat;
   width: 82px;
   height: 30px;
-  img {
-    display: none;
+  @include device(tablet-portrait){
+    left: $margins/2;
   }
   @include device(phone){
-    top: 20px;
-    left: 20px;
+    top: $margins;
+    left: $margins;
     img {
       width: 41px;
       height: auto;
     }
+  }
+  img {
+    display: none;
   }
   position: absolute;
   top: 50px;
@@ -97,6 +100,9 @@ header {
 }
 .top-menu {
   @include clearfix;
+  @include device(tablet-portrait){
+    padding: 0 $margins/2;
+  }
   @include device(phone){
     display: none;
   }
@@ -132,6 +138,9 @@ header {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
+    @include device(tablet-portrait){
+      font-size: 12px;
+    }
   }
   > ul {
     > li {
@@ -184,6 +193,9 @@ header {
       > a {
         padding: 0 17px;
         line-height: 70px;
+        @include device(tablet-portrait){
+          padding: ($margins/4) ($margins/2);
+        }
         @include device(phone){
           line-height: normal;
           padding: ($margins/4) ($margins/2);
