@@ -56,6 +56,11 @@ $gallery-button-size: 43px;
   img {
     width: 100%;
     height: auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
 }
 
@@ -71,6 +76,18 @@ $gallery-button-size: 43px;
       &:first-child {
         margin-left: 0;
       }
+      &.flex-active-slide {
+        img {
+          border: 2px solid $gray-dark;
+        }
+      }
+    }
+    img {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
     }
     .slider {
       position: relative;
@@ -114,4 +131,5 @@ $gallery-button-size: 43px;
 .ajax-popup-link > img {
   max-width: 100%;
   width: 100%;
+  height: auto;
 }
