@@ -3,6 +3,12 @@
   @if $media == phone {
     @media screen and (max-width: 500px) { @content;}
   }
+  @if $media == phone {
+    @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { @content;}
+  }
+  @else if $media == tablet-portrait {
+    @media screen and (max-width: 960px) { @content; }
+  }
   @else if $media == tablet {
     @media screen and (max-width: 945px) { @content; }
   }
@@ -14,6 +20,10 @@
 @mixin content{
   margin: 0 auto;
   width: $content-width;
+  @include device(tablet-portrait){
+    padding: 0;
+    width: 100%;
+  }
   @include device(phone){
     padding: 0;
     width: 100%;
@@ -170,7 +180,7 @@
   overflow: hidden;
   margin-right: 0;
   margin-bottom: $margins;
-  margin-left: percentage($gutters-in-px/$width);
+  margin-left: $margins-pct;
   border-left: 4px solid $green;
   @include device(phone){
     width: 100%;
