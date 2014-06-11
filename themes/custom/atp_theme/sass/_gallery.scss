@@ -61,6 +61,7 @@ $gallery-button-size: 43px;
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+    outline: 0;
   }
 }
 
@@ -68,7 +69,7 @@ $gallery-button-size: 43px;
   .thumbnails {
     li {
       max-width: 120px;
-      margin: 0 3.25px 0 3.25px;
+      margin: 0 3.1px 0 3.1px;
       list-style: none;
       &:last-child {
         margin-right: 0;
