@@ -67,7 +67,7 @@ function _atp_gallery_embed_replacements($matches) {
         controlNav: false,
         animationLoop: false,
         slideshow: false,
-        itemWidth: 120,
+        itemWidth: 121,
         itemMargin: 5,
         asNavFor: "div.carousel"
       });

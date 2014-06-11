@@ -16,6 +16,10 @@ $gallery-button-size: 43px;
     &.mfp-close {
       color: $green-dark;
     }
+    @include device(phone) {
+      top: 0;
+      right: 0;
+    }
   }
 
 .carousel {
@@ -38,17 +42,17 @@ $gallery-button-size: 43px;
       color: transparent;
     }
     .flex-prev {
-      @include background-image('arrow-slide-l-hover');
+      @include background-image('arrow-slide-dark-l');
       left: -20px;
       &:hover {
-        @include background-image('arrow-slide-l');
+        @include background-image('arrow-slide-l-hover');
       }
     }
     .flex-next {
-      @include background-image('arrow-slide-r-hover');
+      @include background-image('arrow-slide-dark-r');
       right: -20px;
       &:hover {
-        @include background-image('arrow-slide-r');
+        @include background-image('arrow-slide-r-hover');
       }
     }
   }
@@ -107,17 +111,18 @@ $gallery-button-size: 43px;
 
     }
     .flex-prev {
-      @include background-image('arrow-slide-l-hover');
+      @include background-image('arrow-slide-dark-l');
       left: -15px;
       &:hover {
-        @include background-image('arrow-slide-l');
+        @include background-image('arrow-slide-l-hover');
       }
     }
     .flex-next {
-      @include background-image('arrow-slide-r-hover');
+      @include background-image('arrow-slide-dark-r');
+
       right: -15px;
       &:hover {
-        @include background-image('arrow-slide-r');
+        @include background-image('arrow-slide-r-hover');
       }
     }
   }
