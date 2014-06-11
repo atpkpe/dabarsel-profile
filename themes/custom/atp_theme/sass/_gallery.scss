@@ -26,30 +26,29 @@ $gallery-button-size: 43px;
     li {
       list-style: none;
     }
-    .flex-prev {
-      @include background-image('arrow-slide-l');
+    a {
       position: absolute;
-      width: 28px;
-      height: 50px;
-      left: 10px;
+      width: 56px;
+      height: 60px;
       top: 45%;
       background-repeat: no-repeat;
+      background-color: $gray;
+      background-size: 28px 50px;
+      background-position: center center;
       color: transparent;
+    }
+    .flex-prev {
+      @include background-image('arrow-slide-l-hover');
+      left: -20px;
       &:hover {
-        @include background-image('arrow-slide-l-hover');
+        @include background-image('arrow-slide-l');
       }
     }
     .flex-next {
-      @include background-image('arrow-slide-r');
-      position: absolute;
-      width: 28px;
-      height: 50px;
-      right: 10px;
-      top: 45%;
-      background-repeat: no-repeat;
-      color: transparent;
+      @include background-image('arrow-slide-r-hover');
+      right: -20px;
       &:hover {
-        @include background-image('arrow-slide-r-hover');
+        @include background-image('arrow-slide-r');
       }
     }
   }
@@ -93,30 +92,32 @@ $gallery-button-size: 43px;
     .slider {
       position: relative;
     }
-    .flex-prev {
-      @include background-image('arrow-slide-l');
+    a.flex-prev,
+    a.flex-next {
       position: absolute;
-      width: 14px;
-      height: 25px;
-      left: 5px;
+      width: 28px;
+      height: 30px;
       top: 25px;
       background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-color: $gray;
+      background-size: 14px 25px;
+      background-position: center center;
       color: transparent;
+
+    }
+    .flex-prev {
+      @include background-image('arrow-slide-l-hover');
+      left: -15px;
       &:hover {
-        @include background-image('arrow-slide-l-hover');
+        @include background-image('arrow-slide-l');
       }
     }
     .flex-next {
-      @include background-image('arrow-slide-r');
-      position: absolute;
-      width: 14px;
-      height: 25px;
-      right: 5px;
-      top: 25px;
-      background-repeat: no-repeat;
-      color: transparent;
+      @include background-image('arrow-slide-r-hover');
+      right: -15px;
       &:hover {
-        @include background-image('arrow-slide-r-hover');
+        @include background-image('arrow-slide-r');
       }
     }
   }
@@ -124,6 +125,7 @@ $gallery-button-size: 43px;
 .gallery-popup {
   max-width: 665px;
   height: auto;
+  background-color: $gray;
   div.slider {
     bottom: 0;
   }
