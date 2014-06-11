@@ -76,7 +76,7 @@
           autoresize: true,
           namespace: 'jquery_ui_dialog_default_ns',
           dialogClass: 'jquery_ui_dialog-dialog',
-          title: Drupal.t('Insert'),
+          title: Drupal.t('Insert SAS diagram'),
           buttons: btns,
           width: '70%',
           close: dialogClose
