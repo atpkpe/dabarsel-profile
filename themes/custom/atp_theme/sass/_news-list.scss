@@ -1,3 +1,8 @@
+$filter-bg: $green;
+$filter-bg-hover: $green-light;
+$filter-text-color: #fff;
+$filter-text-color-hover: $text-color;
+
 .news-filter {
   margin-bottom: $margins;
   li {
@@ -5,12 +10,12 @@
     .news-filter-button {
       cursor: pointer;
       padding: 5px;
-      background-color: $green;
-      color: #fff;
+      background-color: $filter-bg;
+      color: $filter-text-color;
       &.active,
       &:hover {
-        background-color: $green-light;
-        color: $text-color;
+        background-color: $filter-bg-hover;
+        color: $filter-text-color-hover;
       }
     }
   }
@@ -25,15 +30,38 @@
 
       a {
         text-decoration: none;
+        display: block;
+        height: 100%;
       }
 
-      .date {
+      .date, .date-display-single {
         border-right: $border-width solid $border-color;
         float: left;
         height: 100%;
-        margin-right: 12px;
-        padding-right: 12px;
+        margin-right: $margins/2;
+        padding-right: $margins/2;
         width: 100px;
+        display: block;
+      }
+    }
+    @include device(phone){
+      article {
+        padding: $margins/2;
+        height: 100%;
+        h2 {
+          font-weight: bold;
+        }
+        p {
+          padding-right: $margins*2;
+        }
+        .date {
+          border-right: 0;
+          border-bottom: $border-width solid $border-color;
+          height: auto;
+          width: 100%;
+          margin-bottom: $margins/2;
+          padding-bottom: $margins/2;
+        }
       }
     }
   }

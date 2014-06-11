@@ -206,7 +206,7 @@ function atp_news_field_default_field_instances() {
         'module' => 'date',
         'settings' => array(
           'field_wrapper' => 0,
-          'format_type' => 'long',
+          'format_type' => 'adapt_long',
           'fromto' => 'both',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
@@ -218,9 +218,19 @@ function atp_news_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'format_type' => 'adapt_long',
+          'fromto' => '',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
         'weight' => 3,
       ),
       'teaser_with_img' => array(
@@ -279,7 +289,7 @@ function atp_news_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'smart_trim',
         'settings' => array(
-          'field_wrapper' => 0,
+          'field_wrapper' => 'p',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
           'more_link' => 0,
@@ -293,7 +303,7 @@ function atp_news_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser_with_img' => array(
         'label' => 'hidden',
@@ -365,12 +375,12 @@ function atp_news_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'field_wrapper' => 0,
-          'item_wrapper' => 'h3',
+          'field_wrapper' => 'h3',
+          'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser_with_img' => array(
         'label' => 'hidden',

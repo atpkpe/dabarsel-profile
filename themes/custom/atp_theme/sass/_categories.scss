@@ -29,6 +29,11 @@
         float: left;
         margin: (-$margins) $margins 0 (-$margins);
       }
+      @include device(phone) {
+        img {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -43,6 +48,18 @@
       float: left;
       width: percentage(1/2);
       a:hover { color: $green-hover-header; }
+    }
+  }
+}
+@include device(phone) {
+  .category-a,
+  .category-b,
+  .category-c,
+  .category-d {
+    article {
+      a {
+        height: auto;
+      }
     }
   }
 }

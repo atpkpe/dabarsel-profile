@@ -65,8 +65,29 @@ function atp_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_compression_type';
+  $strongarm->value = 'none';
+  $export['jquery_update_compression_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_admin_version';
+  $strongarm->value = '';
+  $export['jquery_update_jquery_admin_version'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_cdn';
+  $strongarm->value = 'google';
+  $export['jquery_update_jquery_cdn'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_jquery_version';
-  $strongarm->value = '1.5';
+  $strongarm->value = '1.7';
   $export['jquery_update_jquery_version'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -91,7 +112,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => '5WcsUts102bHEWNO2pmd4ytMh1iHzI-p06tImCCrcWg',
+    'javascript' => 'GRWmfxlNBqTMnMdfIZVNAFT2Nf36du_Cg3NZadsea90',
   );
   $export['language_default'] = $strongarm;
 
@@ -208,10 +229,18 @@ function atp_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'media_qbrick__cid';
+  $strongarm->value = 'D2F3E5F7';
+  $export['media_qbrick__cid'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'media_wysiwyg_wysiwyg_allowed_types';
   $strongarm->value = array(
     0 => 'image',
-    1 => 'document',
+    1 => 'video',
+    2 => 'document',
   );
   $export['media_wysiwyg_wysiwyg_allowed_types'] = $strongarm;
 
@@ -223,6 +252,7 @@ function atp_settings_strongarm() {
     0 => 'upload',
     1 => 'media_default--media_browser_1',
     2 => 'media_default--media_browser_my_files',
+    3 => 'media_internet',
   );
   $export['media_wysiwyg_wysiwyg_browser_plugins'] = $strongarm;
 
@@ -412,6 +442,31 @@ function atp_settings_strongarm() {
   $strongarm->name = 'site_default_country';
   $strongarm->value = 'DK';
   $export['site_default_country'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'theme_atp_theme_settings';
+  $strongarm->value = array(
+    'css_to_keep' => 'magnific-popup.css',
+    'js_to_strip' => '',
+    'toggle_logo' => 1,
+    'toggle_name' => 1,
+    'toggle_slogan' => 1,
+    'toggle_node_user_picture' => 1,
+    'toggle_comment_user_picture' => 1,
+    'toggle_comment_user_verification' => 1,
+    'toggle_favicon' => 1,
+    'toggle_main_menu' => 1,
+    'toggle_secondary_menu' => 1,
+    'default_logo' => 1,
+    'logo_path' => '',
+    'logo_upload' => '',
+    'default_favicon' => 1,
+    'favicon_path' => '',
+    'favicon_upload' => '',
+  );
+  $export['theme_atp_theme_settings'] = $strongarm;
 
   return $export;
 }

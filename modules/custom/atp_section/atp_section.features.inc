@@ -28,7 +28,7 @@ function atp_section_ctools_plugin_api($module = NULL, $api = NULL) {
 function atp_section_node_info() {
   $items = array(
     'section' => array(
-      'name' => t('Section'),
+      'name' => t('Sektion'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

@@ -82,8 +82,9 @@ function atp_news_field_group_info() {
     'label' => 'Wrapper',
     'weight' => '7',
     'children' => array(
-      0 => 'field_news_summary',
-      1 => 'title_field',
+      0 => 'field_news_publishdate',
+      1 => 'field_news_summary',
+      2 => 'title_field',
     ),
     'format_type' => 'link',
     'format_settings' => array(

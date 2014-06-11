@@ -79,6 +79,7 @@
 @mixin font-smoothing($smoothing){
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   -webkit-font-smoothing: $smoothing;
+  -moz-osx-font-smoothing: grayscale;
 }
 @mixin box-header {
     @include font-bold;
@@ -143,6 +144,7 @@
     &:hover {
       background: $green-hover;
       text-decoration: none;
+      color: #fff;
     }
 }
 
@@ -228,7 +230,7 @@ $retina-suffix: '@2x';
   height: $block-height;
   overflow: hidden;
   background-color: #fff;
-  background-size: 16px $block-height/4.5;
+  background-size: 16px 28px;
   background-repeat: no-repeat;
   background-position: right $margins center;
 

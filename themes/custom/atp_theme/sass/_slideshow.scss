@@ -1,25 +1,30 @@
+$slideshow-height: 300px;
+$slideshow-title: 22px;
+
 .slideshow {
-  left: -50%;
-  min-width: 100%;
-  width: 200%;
+  position: relative;
   margin-bottom: $margins;
   float: left;
-  height: 300px;
+  height: $slideshow-height;
+  width: 100%;
+  overflow: hidden;
 
   .group-wrapper {
     @include view-mode-overlay;
     @include view-mode(4);
     position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 25%;
+    width: 480px; // half of the grid
+    top: 60px;
+    left:0;
     bottom: auto;
-    margin-left: 0;
+    right: 480px; // let the content follow the 960grid
+    margin: 0 auto;
+
     h2 {
       color: #fff;
-      font-size: 22px;
+      font-size: $slideshow-title;
       a {
-        font-size: 22px;
+        font-size: $slideshow-title;
         color: $green;
         margin-top: 0;
         &:hover {
@@ -41,7 +46,7 @@
     background-size: cover;
     max-width: 100%;
     width: 100%;
-    height: 300px;
+    height: $slideshow-height;
   }
   @include device(phone){ // skal ligge efter images, ellers bliver den overskrevet
     img {
@@ -49,13 +54,10 @@
       max-width: inherit;
     }
     .group-wrapper {
-      width: 50%;
+      left: 0;
     }
   }
   ol {
-    @include device(phone){
-      display: none;
-    }
     bottom: $margins/2;
     position: absolute;
     width: 100%;
@@ -84,6 +86,9 @@
     }
   }
   .flex-direction-nav {
+    @include device(phone){
+      display: none;
+    }
     z-index: 100;
     width: 100%;
     li { list-style: none; }
@@ -94,15 +99,22 @@
       background-repeat: no-repeat;
       z-index: 100;
       top: 125px; // sum = half of slide height and half arrow height
+
     }
     .flex-next {
       @include background-image('arrow-slide-r');
       right: $margins;
+      &:hover {
+      @include background-image('arrow-slide-r-hover');
+      }
 
     }
     .flex-prev {
       @include background-image('arrow-slide-l');
       left: $margins;
+      &:hover {
+      @include background-image('arrow-slide-l-hover');
+      }
     }
   }
 }

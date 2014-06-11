@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * Implementation of hook_filter_info()
+ */
+function atp_gallery_embed_filter_info() {
+
+  $filters['atp_gallery_embed'] = array(
+    'title' => t('Insert gallery'),
+    'description' => t('By including the syntax [[gallery:(node_id)]], this filter will embed the gallery with given NID'),
+    'prepare callback' => '_atp_gallery_embed_prepare',
+    'process callback' => '_atp_gallery_embed_process',
+    'tips callback'  => '_atp_gallery_embed_tips',
+    'cache' => FALSE,
+  );
+
+  return $filters;
+
+}
+
+/**
+ * Prepare callback for hook_filter
+ */
+function _atp_gallery_embed_prepare($text, $filter, $format, $langcode, $cache, $cache_id) {
+  return $text;
+}
+
+/**
+ * Process callback for hook_filter
+ */
+function _atp_gallery_embed_process($text, $filter, $format, $langcode, $cache, $cache_id) {
+  return preg_replace_callback('/\[\[gallery:(\d+)(\s.*)?\]\]/', '_atp_gallery_embed_replacements', $text);
+}
+
+/**
+ * Tips callback for hook_filter
+ */
+function _atp_gallery_embed_tips($filter, $format, $long) {
+  return t('[[gallery:123]] - Insert a gallery');
+}
+
+/**
+ * Provides the replacement html to be rendered in place of the embed code.
+ *
+ * @param $matches
+ *    numeric node id that has been captured by preg_replace_callback
+ * @return
+ *    The rendered HTML replacing the embed code
+ */
+function _atp_gallery_embed_replacements($matches) {
+
+  $node = node_load($matches[1]);
+
+  if ($node != FALSE) { //  && node_access('view', $node) && $node->status) {
+
+    drupal_add_css(drupal_get_path('module', 'atp_gallery_embed') . '/css/magnific-popup.css');
+
+    flexslider_add();
+
+    drupal_add_js('jQuery(document).ready(function ($) {
+  $(".ajax-popup-link").magnificPopup({
+    type:"ajax",
+    callbacks: { ajaxContentAdded: function() {
+
+      $("div.slider").flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 120,
+        itemMargin: 5,
+        asNavFor: "div.carousel"
+      });
+
+      $("div.carousel").flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: true,
+        slideshow: false,
+        sync: "div.slider"
+      });
+    }
+  }
+
+  });
+});
+  ', array('type' => 'inline'));
+
+    $display = array(
+      'label'=>'hidden',
+      'type' => 'image',
+      'settings' => array('image_style' => 'gallery_large')
+    );
+
+    $field = field_get_items('node', $node, 'field_gallery_images');
+    $view = field_view_value('node', $node, 'field_gallery_images', $field[0], $display);
+    return '<div class="gallery"><a href="/overlay/' . $node->nid . '/gallery" class="ajax-popup-link">' . render($view) . '</a></div>';
+  }
+
+}
+
+/**
+* Implements hook_menu().
+*/
+function atp_gallery_embed_menu() {
+
+  $items['overlay/%/gallery'] = array(
+    'title' => 'Gallery',
+    'page callback' => 'atp_gallery_embed_render',
+    'page arguments' => array(1),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+function atp_gallery_embed_render($nid) {
+  echo views_embed_view('gallery', 'panel_pane_1', $nid);
+}
+
+
+

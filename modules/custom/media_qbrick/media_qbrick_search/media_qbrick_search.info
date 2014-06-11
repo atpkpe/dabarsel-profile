@@ -1,0 +1,7 @@
+name = Media: Qbrick Search
+description = Provides Qbrick video search support for File Entity and the Media module.
+package = "Media"
+core = 7.x
+dependencies[] = media_qbrick
+
+files[] = includes/MediaQbrickBrowser.inc

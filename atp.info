@@ -15,6 +15,7 @@ dependencies[] = link
 dependencies[] = title
 dependencies[] = date
 dependencies[] = date_popup
+dependencies[] = image_preset
 dependencies[] = diff
 dependencies[] = field_group_link
 dependencies[] = masquerade
@@ -35,7 +36,7 @@ dependencies[] = panels_mini
 dependencies[] = multifield
 dependencies[] = views_tree
 dependencies[] = multiform
-dependencies[] = media_browser_plus
+;dependencies[] = media_browser_plus
 dependencies[] = media_bulk_upload
 
 ; Project features
@@ -50,4 +51,6 @@ dependencies[] = atp_component
 dependencies[] = atp_news
 dependencies[] = atp_slide
 dependencies[] = atp_file
+dependencies[] = atp_gallery
+dependencies[] = atp_gallery_embed
 dependencies[] = atp_permissions

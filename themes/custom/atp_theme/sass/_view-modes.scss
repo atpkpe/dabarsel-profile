@@ -6,7 +6,7 @@
   @include view-mode(4);
   background: #fff;
   padding: 17px;
-  padding: 0 20px 20px 20px;
+  padding: 0 $margins $margins $margins;
   border: 1px solid $gray;
   @include device(phone){
     width: 100%;
@@ -21,9 +21,8 @@
     display: table-cell;
     margin: 0;
     width: inherit;
-    width: 100%;
+    width: inherit;
     height: 70px;
-    border-bottom : 1px solid $gray-dark;
     vertical-align: middle;
     text-align: center;
     @include device(phone){
@@ -33,6 +32,7 @@
     }
   }
   p {
+      border-top : 1px solid $gray-dark;
       padding-top: 20px;
   }
   a {
@@ -67,15 +67,9 @@
   @include float-span(8);
   @include clearfix;
   @include block-std;
-  background: #fff;
   margin: 0 0 ($margins/2) $margins;
   padding: 0;
   overflow: hidden;
-  @include device(phone){
-    width: 100%;
-    float: none;
-    margin: 0 0 ($margins/2) 0;
-  }
   &.first {
     margin-left: 0;
   }
@@ -89,5 +83,19 @@
     float: left;
     margin-right: $margins;
     display: block;
+  }
+  @include device(phone){ // have to be in the end to overwrite
+    width: 100%;
+    float: none;
+    margin: 0 0 ($margins/2) 0;
+    padding: $margins ($margins*1.5) $margins $margins;
+    img {
+      display: none;
+    }
+    a {
+      > div {
+        padding: 0;
+      }
+    }
   }
 }

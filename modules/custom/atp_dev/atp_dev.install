@@ -8,6 +8,7 @@
  * Implements hook_install();
  */
 function atp_dev_install() {
+  module_load_include('module', 'atp_dev');
   $frontpage_path = sprintf('node/%s', atp_dev_get_frontpage_nid());
   watchdog(
     'atp_dev:install',
