@@ -157,7 +157,7 @@ function atp_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_gallery_images']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_gallery_images']['type'] = 'image_preset_field_image_preset';
   $handler->display->display_options['fields']['field_gallery_images']['settings'] = array(
-    'image_style' => '126x126',
+    'image_style' => 'gallery_thumb',
   );
   $handler->display->display_options['fields']['field_gallery_images']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_gallery_images']['delta_offset'] = '0';
@@ -178,7 +178,6 @@ function atp_gallery_views_default_views() {
     t('sidste »'),
     t('Alle'),
     t('Main image'),
-    t('more'),
     t('View panes'),
     t('Thumbnails'),
   );
