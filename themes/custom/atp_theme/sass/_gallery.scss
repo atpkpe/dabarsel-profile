@@ -11,22 +11,10 @@ $gallery-button-size: 43px;
     background-color: #fff;
     color: $green;
   }
-  .thumbnails {
-    li {
-      max-width: 120px;
-      margin: 0 4px 0 4px;
-      &:last-child,
-      &:first-child {
-        margin: 0;
-      }
-    }
-    .slider {
-      position: relative;
-    }
-  }
-}
+
 .carousel {
   position: relative;
+  height: 405px;
   .flex-direction-nav {
     li {
       list-style: none;
@@ -43,7 +31,39 @@ $gallery-button-size: 43px;
     }
   }
 }
+
+
+  .thumbnails {
+    li {
+      max-width: 120px;
+      margin: 0 4.5px 0 4.5px;
+      list-style: none;
+      &:last-child,
+      &:first-child {
+        margin: 0;
+      }
+    }
+    .slider {
+      position: relative;
+    }
+    .flex-prev {
+      position: absolute;
+      top: 36px;
+      left: 0;
+    }
+    .flex-next {
+      position: absolute;
+      top: 36px;
+      right: 0;
+    }
+  }
+}
 .gallery-popup {
   max-width: 665px;
   height: auto;
+}
+
+.ajax-popup-link > img {
+  max-width: 100%;
+  width: 100%;
 }
