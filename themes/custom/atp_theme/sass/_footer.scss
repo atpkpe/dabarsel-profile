@@ -2,3 +2,45 @@ footer {
   background: $gray;
   padding-top: 30px;
 }
+.footer-menu {
+  @include content;
+  @include clearfix;
+  padding-bottom: $margins;
+  li {
+    list-style: none;
+  }
+  a {
+    color: $gray-green;
+    line-height: 22px;
+    border-bottom: 1px solid $gray-green;
+    font-size: 13px;
+    &:hover {
+      color: $green;
+      border-bottom: 1px solid $green;
+    }
+  }
+  > ul {
+    > li {
+      width: 25%;
+      @include view-mode(4);
+      border-left: 0;
+      float: left;
+      @include device(phone) {
+        padding: 10px;
+      }
+      > a {
+        color: $gray-dark;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-bottom: 6px;
+        margin-bottom: 4px;
+        display: inline-block;
+        width: 100%;
+        &:hover {
+          color: $gray-dark;
+          border-bottom: 1px solid $gray-green;
+        }
+      }
+    }
+  }
+}

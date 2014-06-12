@@ -103,6 +103,26 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'uuid' => '53cc40ed-2782-48ca-94f6-6987f84679e4',
     'uuid_path' => 'node/126c9a15-3172-4e21-9a34-8194fc363ca2',
   );
+  // Exported menu link: 6b9ce347-f21c-11e3-a020-080027880ca6
+  $menu_uuid_links['6b9ce347-f21c-11e3-a020-080027880ca6'] = array(
+    'menu_name' => 'menu-top',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Kontakt',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'uuid' => '6b9ce347-f21c-11e3-a020-080027880ca6',
+  );
   // Exported menu link: 74c9bb16-e016-11e3-a989-d1f96a278528
   $menu_uuid_links['74c9bb16-e016-11e3-a989-d1f96a278528'] = array(
     'menu_name' => 'menu-top',
@@ -326,6 +346,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
   t('Kategori B');
   t('Kategori C');
   t('Kategori D');
+  t('Kontakt');
   t('Markedsrisiko');
   t('Om ATP');
   t('Presse');

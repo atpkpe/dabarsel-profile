@@ -84,7 +84,7 @@ header {
     left: $margins/2;
   }
   @include device(phone){
-    top: $margins;
+    top: $margins/2;
     left: $margins;
     img {
       width: 41px;
@@ -98,6 +98,18 @@ header {
   top: 50px;
   left: 0;
 }
+.languages {
+  float: right;
+  a {
+    color: $gray-light;
+    line-height: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    &.active {
+      display: none;
+    }
+  }
+}
 .top-menu {
   @include clearfix;
   @include device(tablet-portrait){
@@ -106,7 +118,6 @@ header {
   @include device(phone){
     display: none;
   }
-  position: absolute;
   top: 0;
   left: 0;
   * {
@@ -118,6 +129,9 @@ header {
   > ul {
     > li {
       margin-right: 35px;
+      &.last {
+        float: right;
+      }
     }
   }
 }
@@ -159,7 +173,6 @@ header {
         content: "";
       }
       &.last {
-        background: $gray-light;
         @include device(phone){
           background: transparent;
         }

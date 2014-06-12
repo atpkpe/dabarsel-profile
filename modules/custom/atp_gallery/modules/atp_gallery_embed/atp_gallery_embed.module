@@ -56,10 +56,12 @@ function _atp_gallery_embed_replacements($matches) {
     drupal_add_css(drupal_get_path('module', 'atp_gallery_embed') . '/css/magnific-popup.css');
 
     flexslider_add();
+    $load_text = t('Loading...');
 
     drupal_add_js('jQuery(document).ready(function ($) {
   $(".ajax-popup-link").magnificPopup({
     type:"ajax",
+    tLoading: "'.$load_text.'",
     callbacks: { ajaxContentAdded: function() {
 
       $("div.slider").flexslider({
@@ -75,7 +77,7 @@ function _atp_gallery_embed_replacements($matches) {
       $("div.carousel").flexslider({
         animation: "slide",
         controlNav: false,
-        animationLoop: true,
+        animationLoop: false,
         slideshow: false,
         sync: "div.slider"
       });

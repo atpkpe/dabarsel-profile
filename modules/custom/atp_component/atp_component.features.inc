@@ -22,7 +22,7 @@ function atp_component_ctools_plugin_api($module = NULL, $api = NULL) {
 function atp_component_node_info() {
   $items = array(
     'component' => array(
-      'name' => t('Component'),
+      'name' => t('Komponent'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
