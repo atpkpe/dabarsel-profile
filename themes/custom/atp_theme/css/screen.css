@@ -131,7 +131,6 @@ header > .bottom .level-2 a { padding: 0 30px; }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .main-menu > ul > li:after { background-image: url(../images/linear-gradient(top, #ffffff 0%, #5f5f5f 50%, #ffffff 100%)@2x.png); } }
 @media screen and (max-width: 500px) { .main-menu > ul > li:after { display: none; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li:after { display: none; } }
-.main-menu > ul > li.last { background: #f2f1f0; }
 @media screen and (max-width: 500px) { .main-menu > ul > li.last { background: transparent; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li.last { background: transparent; } }
 .main-menu > ul > li.last:before { background: rgba(0, 0, 0, 0.1); position: absolute; top: 0; left: 0; display: block; width: 1px; height: 70px; content: ""; }
