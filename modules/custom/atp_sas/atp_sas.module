@@ -4,12 +4,17 @@
  * Code for the ATP SAS.
  */
 
-
 /**
  * implements hook_menu
  */
 function atp_sas_menu() {
   $items = array();
+  $items['atp-sas/chart-test'] = array(
+    'page callback' => 'atp_sas_chart_test',
+//    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
   $items['atp-sas/insert/nojs'] = array(
     'page callback' => 'atp_sas_get_insert_form',
     'page arguments' => array(2),
@@ -21,6 +26,10 @@ function atp_sas_menu() {
     ) + $items['atp-sas/insert/nojs'];
   
   return $items;
+}
+
+function atp_sas_init() {
+
 }
 
 function atp_sas_get_insert_form($ajax) {
@@ -55,7 +64,12 @@ function atp_sas_diag_token_insert_form($form, &$form_state) {
   $form['diagrams']['example1'] = array(
     '#type' => 'radios',
     '#title' => t('2013 - Q1'),
-    '#options' => array('grid' => 'grid', 'pie' => 'pie'),
+    '#options' => array(
+      'bar' => 'bar',
+      'line' => 'line',
+      'pie' => 'pie',
+      'table' => 'table',
+    ),
     '#description' => t('Choose a diagram.'),
   );
   $form['submit'] = array(
@@ -67,4 +81,14 @@ function atp_sas_diag_token_insert_form($form, &$form_state) {
   );
 
   return $form;
+}
+
+function atp_sas_chart_test() {
+  drupal_add_js('https://www.google.com/jsapi', 'external');
+  drupal_add_js(drupal_get_path('module', 'atp_sas') . '/js/atp_sas.js');
+  return '<div id="chart_div"></div>';
+}
+
+function askdjhaskjashjkasdk() {
+  $diag = sasDiagFactory::create('XML_Bar_ExampleFig5');
 }
