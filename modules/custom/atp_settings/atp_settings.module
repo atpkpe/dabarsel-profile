@@ -29,3 +29,23 @@ function atp_settings_wysiwyg_editor_settings_alter(&$settings, $context) {
     $settings['allowedContent'] = TRUE;
   }
 }
+
+/**
+* Implements hook_variable_info().
+*/
+function atp_settings_variable_info($options) {
+  $variables['gss_api_key'] = array(
+    'title' => t('GoogleSite Search API key'),
+  );
+  return $variables;
+}
+
+/**
+ * Implements hook_variable_info_alter().
+ * Only variables which have the "localize" property set to TRUE, can be
+ * used as language specific variables.
+ */
+function atp_settings_variable_info_alter(&$variables, $options) {
+  $variables['gss_api_key']['localize'] = TRUE;
+}
+
