@@ -38,14 +38,13 @@ function news_list_content_type_render($subtype, $conf, $panel_args, &$context) 
     $view->display_handler->set_option('pager', $pager);
   }
 
-  // Render view.
-  $view_content = $view->preview();
-
   $block = new stdClass();
   $block->content = array();
 
   switch ($conf['list_type']) {
     case 'filtered':
+      // Render view.
+      $view_content = $view->preview();
       // Create category 'buttons'.
       foreach (taxonomy_get_tree(atp_news_get_news_categories_vocab_id()) as $term) {
         $news_category_items[] = sprintf(
@@ -101,6 +100,9 @@ function news_list_content_type_render($subtype, $conf, $panel_args, &$context) 
 
     case 'fixed_categories':
       $view->exposed_input['tid'] = $categories;
+      // Render view.
+      $view_content = $view->preview();
+
       break;
   }
   // Render view no matter which list type is chosen.
