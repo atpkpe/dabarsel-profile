@@ -32,6 +32,7 @@
         <?php print $content['footer']; ?>
       </section>
       <section>
+        <?php print $content['bottom']; ?>
       </section>
     </footer>
   <?php endif; ?>

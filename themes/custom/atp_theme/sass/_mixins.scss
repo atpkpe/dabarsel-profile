@@ -103,21 +103,14 @@
 
 /* FORM ELEMENTS */
 @mixin form-text {
-    @include border-radius($border-radius);
     background: #fff;
-    padding: 0 10px;
-    width: 230px;
-    height: 32px;
+    padding: 0 $margins/2;
+    width: 500px;
+    height: 2*$margins;
     border: $border-width solid $gray;
 }
 @mixin submit {
-    @include border-radius($border-radius);
-    margin: 10px;
-    padding: 0 15px;
-    height: 32px;
-    border: 0;
-    color: #fff;
-    line-height: 32px;
+    @include btn-green;
     cursor: pointer;
 }
 

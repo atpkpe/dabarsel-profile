@@ -10,5 +10,6 @@ $plugin = array(
     'header-bottom' => t('Header bottom'),
     'main' => t('Main'),
     'footer' => t('Footer'),
+    'bottom' => t('Bottom'),
   ),
 );
