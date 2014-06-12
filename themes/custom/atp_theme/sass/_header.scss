@@ -173,34 +173,12 @@ header {
         content: "";
       }
       &.last {
-        @include device(phone){
-          background: transparent;
-        }
-        &:before {
-          background: rgba(0,0,0,.1);
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: block;
-          width: 1px;
-          height: 70px;
-          content: "";
-          @include device(phone){
-            display: none;
-          }
-        }
-        &:after {
-          background: rgba(0,0,0,.1);
-          position: absolute;
-          top: 0;
-          right: 0;
-          display: block;
-          width: 1px;
-          height: 70px;
-          content: "";
-          @include device(phone){
-            display: none;
-          }
+        $tmp: (70px - 32px)/2;
+        padding: $tmp 0;
+        > a {
+          @include border-radius(20px);
+          border: 1px solid $gray;
+          line-height: 32px;
         }
       }
       > a {
