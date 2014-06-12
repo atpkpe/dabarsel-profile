@@ -5,10 +5,12 @@
 .view-mode-1-4-fact {
   @include view-mode(4);
   background: #fff;
+  height: 240px;
   padding: 17px;
   padding: 0 $margins $margins $margins;
   border: 1px solid $gray;
   @include device(phone){
+    height: auto;
     width: 100%;
     float: none;
     margin-left: 0;
@@ -34,6 +36,7 @@
   p {
       border-top : 1px solid $gray-dark;
       padding-top: 20px;
+      margin-bottom: 30px;
   }
   a {
     @include btn-green;

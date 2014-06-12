@@ -28,7 +28,12 @@
   <?php endif; ?>
   <?php if (!empty($content['footer'])): ?>
     <footer>
-      <?php print $content['footer']; ?>
+      <section>
+        <?php print $content['footer']; ?>
+      </section>
+      <section>
+        <?php print $content['bottom']; ?>
+      </section>
     </footer>
   <?php endif; ?>
 </div>
