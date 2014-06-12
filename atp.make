@@ -6,7 +6,7 @@ projects[adapt_core][type] = 'module'
 projects[adapt_core][subdir] = 'global'
 projects[adapt_core][download][type] = 'git'
 projects[adapt_core][download][url] = 'https://github.com/adaptdk/adapt_core.git'
-projects[adapt_core][download][tag] = '1.5.1'
+projects[adapt_core][download][tag] = '1.5.2'
 projects[menu_trail_by_path] = FALSE
 
 ; Adapt Basetheme
@@ -116,8 +116,7 @@ projects[views_tree][version] = '2.0'
 
 projects[multiform][type] = 'module'
 projects[multiform][subdir] = 'contrib'
-projects[multiform][version] = '1.0'
-projects[multiform][patch][] = 'http://drupal.org/files/issues/drupal-7.27.patch'
+projects[multiform][version] = '1.1'
 
 projects[plupload][type] = 'module'
 projects[plupload][subdir] = 'contrib'
