@@ -1,4 +1,10 @@
 name = ATP SAS
-description = Handles parsing of diagrams deliverd by SAS.
+description = Handles parsing of diagrams delivered by SAS.
 core = 7.x
 package = ATP
+
+files[] = includes/sas_diag.inc
+files[] = includes/sas_diag.bar.inc
+files[] = includes/sas_diag.line.inc
+files[] = includes/sas_diag.pie.inc
+files[] = includes/sas_diag.table.inc
