@@ -84,7 +84,7 @@ header {
     left: $margins/2;
   }
   @include device(phone){
-    top: $margins;
+    top: $margins/2;
     left: $margins;
     img {
       width: 41px;
