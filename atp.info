@@ -39,6 +39,7 @@ dependencies[] = views_tree
 dependencies[] = multiform
 ;dependencies[] = media_browser_plus
 dependencies[] = media_bulk_upload
+dependencies[] = gss
 
 ; Project features
 dependencies[] = atp_settings
