@@ -101,9 +101,9 @@ header > .bottom .level-2 a { padding: 0 30px; }
 .no-svg #logo { background-image: url(../images/logo.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg #logo { background-image: url(../images/logo@2x.png); } }
 @media screen and (max-width: 960px) { #logo { left: 10px; } }
-@media screen and (max-width: 500px) { #logo { top: 20px; left: 20px; }
+@media screen and (max-width: 500px) { #logo { top: 10px; left: 20px; }
   #logo img { width: 41px; height: auto; } }
-@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { #logo { top: 20px; left: 20px; }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { #logo { top: 10px; left: 20px; }
   #logo img { width: 41px; height: auto; } }
 #logo img { display: none; }
 
