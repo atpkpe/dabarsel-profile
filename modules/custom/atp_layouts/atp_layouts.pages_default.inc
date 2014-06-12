@@ -196,6 +196,31 @@ function atp_layouts_default_page_manager_handlers() {
     $display->content['new-c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84'] = $pane;
     $display->panels['header'][2] = 'new-c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84';
     $pane = new stdClass();
+    $pane->pid = 'new-0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03';
+    $pane->panel = 'header';
+    $pane->type = 'block';
+    $pane->subtype = 'locale-language';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'languages',
+    );
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03';
+    $display->content['new-0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03'] = $pane;
+    $display->panels['header'][3] = 'new-0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03';
+    $pane = new stdClass();
     $pane->pid = 'new-17a620bf-0997-4e75-ac1f-3381aec47aa5';
     $pane->panel = 'header-bottom';
     $pane->type = 'menu_tree';
