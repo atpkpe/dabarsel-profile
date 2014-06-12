@@ -1,0 +1,4 @@
+name = ATP SAS
+description = Handles parsing of diagrams deliverd by SAS.
+core = 7.x
+package = ATP
