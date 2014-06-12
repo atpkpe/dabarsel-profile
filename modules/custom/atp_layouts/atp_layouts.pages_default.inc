@@ -85,8 +85,8 @@ function atp_layouts_default_page_manager_handlers() {
       'admin_title' => '',
       'level' => '1',
       'follow' => 0,
-      'depth' => '0',
-      'expanded' => 0,
+      'depth' => '2',
+      'expanded' => 1,
       'sort' => 0,
       'override_title' => 1,
       'override_title_text' => '',
@@ -95,7 +95,10 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'footer-menu',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
