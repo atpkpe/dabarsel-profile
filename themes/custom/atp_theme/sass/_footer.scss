@@ -1,6 +1,9 @@
 footer {
   background: $gray;
   padding-top: 30px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 .footer-menu {
   @include content;
