@@ -100,6 +100,7 @@ header {
 }
 .languages {
   float: right;
+  margin-right: 15px;
   a {
     color: $gray-light;
     line-height: 30px;
@@ -131,6 +132,7 @@ header {
       margin-right: 35px;
       &.last {
         float: right;
+        margin-right: 15px;
       }
     }
   }
