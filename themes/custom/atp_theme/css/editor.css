@@ -37,9 +37,7 @@ h4 { margin-bottom: 5px; font-weight: bold; font-size: 14px; }
 
 p { margin-bottom: 20px; line-height: 22px; }
 
-hr { background: #e6e7e4; border: 0; height: 1px; overflow: hidden; margin: 10px auto 20px; width: 960px; }
-@media screen and (max-width: 500px) { hr { width: 100%; } }
-@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { hr { width: 100%; } }
+hr { background: #e6e7e4; border: 0; height: 1px; overflow: hidden; margin: 0 0 20px 0; }
 
 .field-field-page-summary *, blockquote { margin-bottom: 20px; font-size: 16px; line-height: 22px; }
 
