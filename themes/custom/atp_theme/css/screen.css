@@ -111,8 +111,8 @@ header > .bottom .level-2 a { padding: 0 30px; }
 #logo img { display: none; }
 
 .languages { float: right; margin-right: 15px; }
-.languages a { color: #f2f1f0; line-height: 30px; font-size: 11px; text-transform: uppercase; }
-.languages a.active { display: none; }
+.languages li > * { color: #f2f1f0; line-height: 30px; font-size: 11px; text-transform: uppercase; }
+.languages li > *.active { display: none; }
 
 .top-menu { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; top: 0; left: 0; }
 .top-menu:before, .top-menu:after { content: "."; display: block; height: 0; overflow: hidden; }

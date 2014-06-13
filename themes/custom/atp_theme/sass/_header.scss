@@ -101,7 +101,7 @@ header {
 .languages {
   float: right;
   margin-right: 15px;
-  a {
+  li > * {
     color: $gray-light;
     line-height: 30px;
     font-size: 11px;
