@@ -27,20 +27,20 @@ function atp_settings_image_default_styles() {
     'name' => '126x126',
     'label' => '126x126',
     'effects' => array(
-      1 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
+      18 => array(
+        'label' => 'Focal Point Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>Focal Point</em>.',
+        'effect callback' => 'focal_point_scale_and_crop_effect',
         'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'image_resize_form',
         'summary theme' => 'image_resize_summary',
-        'module' => 'image',
-        'name' => 'image_scale_and_crop',
+        'module' => 'focal_point',
+        'name' => 'focal_point_scale_and_crop',
         'data' => array(
           'width' => 126,
           'height' => 126,
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );
@@ -50,20 +50,20 @@ function atp_settings_image_default_styles() {
     'name' => '1500x300',
     'label' => '1500x300',
     'effects' => array(
-      2 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
+      21 => array(
+        'label' => 'Focal Point Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>Focal Point</em>.',
+        'effect callback' => 'focal_point_scale_and_crop_effect',
         'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'image_resize_form',
         'summary theme' => 'image_resize_summary',
-        'module' => 'image',
-        'name' => 'image_scale_and_crop',
+        'module' => 'focal_point',
+        'name' => 'focal_point_scale_and_crop',
         'data' => array(
           'width' => 1500,
           'height' => 300,
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );
