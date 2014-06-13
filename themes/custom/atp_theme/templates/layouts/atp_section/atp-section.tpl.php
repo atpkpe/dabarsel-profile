@@ -22,7 +22,6 @@
 <?php if (!empty($content['row4'])): ?>
   <section class="section-row onecol"><?php print $content['row4']; ?></section>
 <?php endif; ?>
-<hr>
 <?php if (!empty($content['row5'])): ?>
   <section class="section-row onecol"><?php print $content['row5']; ?></section>
 <?php endif; ?>

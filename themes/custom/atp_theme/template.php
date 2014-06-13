@@ -28,6 +28,10 @@ function atp_theme_links__locale_block($variables) {
       }
       
       $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
+      
+      // Goto frontpage if no translation exist
+      if (empty($link['href']))
+        $link['href'] = '<front>';
 
       if (isset($link['href'])) {
         // Remove the 'language-link' class
@@ -48,10 +52,4 @@ function atp_theme_links__locale_block($variables) {
   }
 
   return $output;
-}
-
-function atp_theme_language_switch_links_alter(&$links, $type, $path) {
-  /*foreach ($links as &$language) {
-  }
-  */
 }

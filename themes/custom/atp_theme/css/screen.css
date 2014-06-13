@@ -37,9 +37,7 @@ h4 { margin-bottom: 5px; font-weight: bold; font-size: 14px; }
 
 p { margin-bottom: 20px; line-height: 22px; }
 
-hr { background: #e6e7e4; border: 0; height: 1px; overflow: hidden; margin: 10px auto 20px; width: 960px; }
-@media screen and (max-width: 500px) { hr { width: 100%; } }
-@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { hr { width: 100%; } }
+hr { background: #e6e7e4; border: 0; height: 1px; overflow: hidden; margin: 0 0 20px 0; }
 
 .field-field-page-summary *, blockquote { margin-bottom: 20px; font-size: 16px; line-height: 22px; }
 
@@ -97,8 +95,9 @@ header > .bottom { background: #e6e7e4; }
 header > .bottom .level-2 { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 header > .bottom .level-2:before, header > .bottom .level-2:after { content: "."; display: block; height: 0; overflow: hidden; }
 header > .bottom .level-2:after { clear: both; }
+header > .bottom .level-2 * { font-size: 13px; }
 header > .bottom .level-2 li { line-height: 45px; }
-header > .bottom .level-2 a { padding: 0 30px; }
+header > .bottom .level-2 a { padding: 0 20px; }
 
 #logo { background-image: url(../images/logo.svg); background-repeat: no-repeat; width: 82px; height: 30px; position: absolute; top: 50px; left: 0; }
 .no-svg #logo { background-image: url(../images/logo.png); }
@@ -111,8 +110,8 @@ header > .bottom .level-2 a { padding: 0 30px; }
 #logo img { display: none; }
 
 .languages { float: right; margin-right: 15px; }
-.languages a { color: #f2f1f0; line-height: 30px; font-size: 11px; text-transform: uppercase; }
-.languages a.active { display: none; }
+.languages li > * { color: #f2f1f0; line-height: 30px; font-size: 11px; text-transform: uppercase; }
+.languages li > *.active { display: none; }
 
 .top-menu { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; top: 0; left: 0; }
 .top-menu:before, .top-menu:after { content: "."; display: block; height: 0; overflow: hidden; }
@@ -140,11 +139,12 @@ header > .bottom .level-2 a { padding: 0 30px; }
 @media screen and (max-width: 500px) { .main-menu > ul > li:after { display: none; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li:after { display: none; } }
 .main-menu > ul > li.last { padding: 19px 0; }
-.main-menu > ul > li.last > a { -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 1px solid #e6e7e4; line-height: 32px; }
-.main-menu > ul > li > a { padding: 0 17px; line-height: 70px; }
+.main-menu > ul > li.last > a { -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 1px solid #e6e7e4; line-height: 32px; height: auto; }
+.main-menu > ul > li > a { padding: 0 17px; line-height: 70px; height: 70px; }
 @media screen and (max-width: 960px) { .main-menu > ul > li > a { padding: 5px 10px; } }
 @media screen and (max-width: 500px) { .main-menu > ul > li > a { line-height: normal; padding: 5px 10px; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li > a { line-height: normal; padding: 5px 10px; } }
+.main-menu > ul > li > a.active-trail { border-bottom: 4px solid #adc200; }
 
 /* MOBILE */
 .toggle-menu { position: absolute; top: 20px; right: 20px; display: none; width: 16px; height: 12px; border-top: 2px solid #424844; border-bottom: 2px solid #424844; cursor: pointer; }
@@ -273,6 +273,8 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .focus > div { background: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0; width: 100%; height: 126px; padding: 40px 20px; }
 .focus h1 { font-size: 22px; margin-bottom: 10px; }
 .focus p { margin: 0; }
+
+#mini-panel-four_facts { border-top: 1px solid #e6e7e4; padding-top: 20px; }
 
 .slideshow { position: relative; margin-bottom: 20px; float: left; height: 300px; width: 100%; overflow: hidden; z-index: 0; }
 .slideshow .group-wrapper { background: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; padding: 10px 20px; width: 100%; width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; position: relative; overflow: hidden; margin-right: 0; margin-bottom: 20px; margin-left: 2.08333%; border-left: 4px solid #adc200; position: absolute; width: 480px; top: 60px; left: 0; bottom: auto; right: 480px; margin: 0 auto; }

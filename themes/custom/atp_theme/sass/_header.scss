@@ -66,11 +66,14 @@ header {
     }
     .level-2 {
       @include clearfix;
+      * {
+        font-size: 13px;
+      }
       li {
         line-height: 45px;
       }
       a {
-        padding: 0 30px;
+        padding: 0 $margins;
       }
     }
   }
@@ -101,7 +104,7 @@ header {
 .languages {
   float: right;
   margin-right: 15px;
-  a {
+  li > * {
     color: $gray-light;
     line-height: 30px;
     font-size: 11px;
@@ -181,17 +184,23 @@ header {
           @include border-radius(20px);
           border: 1px solid $gray;
           line-height: 32px;
+          height: auto;
         }
       }
       > a {
         padding: 0 17px;
-        line-height: 70px;
+        $tmp: 70px;
+        line-height: $tmp;
+        height: $tmp;
         @include device(tablet-portrait){
           padding: ($margins/4) ($margins/2);
         }
         @include device(phone){
           line-height: normal;
           padding: ($margins/4) ($margins/2);
+        }
+        &.active-trail {
+          border-bottom: 4px solid $green-hover-header;
         }
       }
     }
