@@ -126,6 +126,10 @@ projects[gss][type] = 'module'
 projects[gss][subdir] = 'contrib'
 projects[gss][version] = '1.11'
 
+projects[focal_point][type] = 'module'
+projects[focal_point][subdir] = 'contrib'
+projects[focal_point][version] = '1.0-alpha4'
+
 ; plupload library
 libraries[plupload][download][type] = get
 libraries[plupload][download][url] = 'https://github.com/moxiecode/plupload/archive/v1.5.8.zip'
