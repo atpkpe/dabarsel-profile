@@ -190,6 +190,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
         'title' => '',
       ),
       'alter' => TRUE,
+      'identifier' => 'main-menu_atp-som-pensionsforvalter:<front>',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -198,26 +199,6 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'expanded' => 0,
     'weight' => -50,
     'uuid' => 'a9609d05-e26f-11e3-8111-080027880ca6',
-  );
-  // Exported menu link: a9609ee0-e26f-11e3-8111-080027880ca6
-  $menu_uuid_links['a9609ee0-e26f-11e3-8111-080027880ca6'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'ATP som investor',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
   );
   // Exported menu link: a960a282-e26f-11e3-8111-080027880ca6
   $menu_uuid_links['a960a282-e26f-11e3-8111-080027880ca6'] = array(
@@ -230,6 +211,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
         'title' => '',
       ),
       'alter' => TRUE,
+      'identifier' => 'main-menu_atp-som-administrator:<front>',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -250,6 +232,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
         'title' => '',
       ),
       'alter' => TRUE,
+      'identifier' => 'main-menu_info--selvbetjening:<front>',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -336,7 +319,6 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
   // Translatables
   // Included for use with string extractors like potx.
   t('ATP som administrator');
-  t('ATP som investor');
   t('ATP som pensionsforvalter');
   t('Dilemma');
   t('I fokus');

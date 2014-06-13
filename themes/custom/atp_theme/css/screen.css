@@ -95,8 +95,9 @@ header > .bottom { background: #e6e7e4; }
 header > .bottom .level-2 { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 header > .bottom .level-2:before, header > .bottom .level-2:after { content: "."; display: block; height: 0; overflow: hidden; }
 header > .bottom .level-2:after { clear: both; }
+header > .bottom .level-2 * { font-size: 13px; }
 header > .bottom .level-2 li { line-height: 45px; }
-header > .bottom .level-2 a { padding: 0 30px; }
+header > .bottom .level-2 a { padding: 0 20px; }
 
 #logo { background-image: url(../images/logo.svg); background-repeat: no-repeat; width: 82px; height: 30px; position: absolute; top: 50px; left: 0; }
 .no-svg #logo { background-image: url(../images/logo.png); }
@@ -138,11 +139,12 @@ header > .bottom .level-2 a { padding: 0 30px; }
 @media screen and (max-width: 500px) { .main-menu > ul > li:after { display: none; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li:after { display: none; } }
 .main-menu > ul > li.last { padding: 19px 0; }
-.main-menu > ul > li.last > a { -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 1px solid #e6e7e4; line-height: 32px; }
-.main-menu > ul > li > a { padding: 0 17px; line-height: 70px; }
+.main-menu > ul > li.last > a { -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 1px solid #e6e7e4; line-height: 32px; height: auto; }
+.main-menu > ul > li > a { padding: 0 17px; line-height: 70px; height: 70px; }
 @media screen and (max-width: 960px) { .main-menu > ul > li > a { padding: 5px 10px; } }
 @media screen and (max-width: 500px) { .main-menu > ul > li > a { line-height: normal; padding: 5px 10px; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li > a { line-height: normal; padding: 5px 10px; } }
+.main-menu > ul > li > a.active-trail { border-bottom: 4px solid #adc200; }
 
 /* MOBILE */
 .toggle-menu { position: absolute; top: 20px; right: 20px; display: none; width: 16px; height: 12px; border-top: 2px solid #424844; border-bottom: 2px solid #424844; cursor: pointer; }

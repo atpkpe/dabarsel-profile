@@ -10,6 +10,220 @@
 function atp_data_deployment_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: main-menu_afkast--portfljer:<front>
+  $menu_links['main-menu_afkast--portfljer:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Afkast & Portføljer',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_afkast--portfljer:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_atp-som-investor:node/35',
+  );
+  // Exported menu link: main-menu_atp-som-administrator:<front>
+  $menu_links['main-menu_atp-som-administrator:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'ATP som administrator',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_atp-som-administrator:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: main-menu_atp-som-investor:node/35
+  $menu_links['main-menu_atp-som-investor:node/35'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'node/35',
+    'router_path' => 'node/%',
+    'link_title' => 'ATP som investor',
+    'options' => array(
+      'node_type' => 'section',
+      'alter' => TRUE,
+      'identifier' => 'main-menu_atp-som-investor:node/35',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: main-menu_atp-som-pensionsforvalter:<front>
+  $menu_links['main-menu_atp-som-pensionsforvalter:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'ATP som pensionsforvalter',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_atp-som-pensionsforvalter:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: main-menu_info--selvbetjening:<front>
+  $menu_links['main-menu_info--selvbetjening:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Info & selvbetjening',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_info--selvbetjening:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+  );
+  // Exported menu link: main-menu_investeringsstrategier:<front>
+  $menu_links['main-menu_investeringsstrategier:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Investeringsstrategier',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_investeringsstrategier:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_atp-som-investor:node/35',
+  );
+  // Exported menu link: main-menu_overblik:<front>
+  $menu_links['main-menu_overblik:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Overblik',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_overblik:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_atp-som-investor:node/35',
+  );
+  // Exported menu link: main-menu_resultater--omkostninger:<front>
+  $menu_links['main-menu_resultater--omkostninger:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Resultater & omkostninger',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_resultater--omkostninger:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_atp-som-investor:node/35',
+  );
+  // Exported menu link: main-menu_risiko:<front>
+  $menu_links['main-menu_risiko:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Risiko',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_risiko:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_atp-som-investor:node/35',
+  );
+  // Exported menu link: main-menu_samfund--investering:<front>
+  $menu_links['main-menu_samfund--investering:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Samfund & investering',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_samfund--investering:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_atp-som-investor:node/35',
+  );
   // Exported menu link: menu-bottom-menu_find-hjlp:<front>
   $menu_links['menu-bottom-menu_find-hjlp:<front>'] = array(
     'menu_name' => 'menu-bottom-menu',
@@ -559,7 +773,9 @@ function atp_data_deployment_menu_default_menu_links() {
   t('ATP Livslang Pension');
   t('ATP som administrator');
   t('ATP som investor');
+  t('ATP som pensionsforvalter');
   t('Afkast');
+  t('Afkast & Portføljer');
   t('Ansvarlige investeringer');
   t('Atp som pensionsforvalter');
   t('Boligstøtte');
@@ -568,17 +784,22 @@ function atp_data_deployment_menu_default_menu_links() {
   t('Find hjælp');
   t('For erhverv');
   t('For private');
+  t('Info & selvbetjening');
   t('Info og selvbetjening');
   t('Investeringsstrategi');
+  t('Investeringsstrategier');
   t('Investeringsvirksomheden');
   t('LG');
   t('Længere levetid');
+  t('Overblik');
   t('Pensionsvirksomheden');
   t('Politik');
+  t('Resultater & omkostninger');
   t('Resultater og omkostninger');
   t('Risiko');
   t('SP');
   t('Samfund');
+  t('Samfund & investering');
   t('Sitemap');
   t('Udbetaling Danmark');
 
