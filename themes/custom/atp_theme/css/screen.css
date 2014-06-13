@@ -382,11 +382,17 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 
 .ui-helper-hidden-accessible { display: none; }
 
-.ui-autocomplete { background-color: #fff; width: auto !important; height: auto !important; float: left; }
+.ui-autocomplete { background-color: #fff; }
+.ui-autocomplete#ui-id-1 { position: absolute !important; width: auto !important; height: auto !important; float: left; top: 30px !important; left: inherit !important; right: 0 !important; border: 1px solid #e6e7e4; z-index: 100; }
 .ui-autocomplete li { width: 100%; list-style: none; float: left; clear: left; }
 .ui-autocomplete li:hover { cursor: pointer; background-color: #adc200; }
 .ui-autocomplete li:hover a { color: #fff; text-decoration: none; }
 .ui-autocomplete li a { display: inline-block; width: 100%; height: 100%; padding: 5px 10px; }
+.ui-autocomplete#ui-id-2 { margin: 0 auto; width: 960px; font-size: 20px; line-height: 20px; width: 960 !important; height: auto; position: absolute !important; border: 1px solid #e6e7e4; left: 0 !important; }
+@media screen and (max-width: 960px) { .ui-autocomplete#ui-id-2 { padding: 0; width: 100%; } }
+@media screen and (max-width: 500px) { .ui-autocomplete#ui-id-2 { padding: 0; width: 100%; } }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .ui-autocomplete#ui-id-2 { padding: 0; width: 100%; } }
+.ui-autocomplete#ui-id-2 li { float: none; }
 
 .search-form.gss { margin: 0 auto; width: 960px; /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; float: none; position: relative; }
 @media screen and (max-width: 960px) { .search-form.gss { padding: 0; width: 100%; } }
