@@ -45,12 +45,13 @@
  */
  ?>
 <li class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <h3 class="gss-title"<?php print $title_attributes; ?>>
-    <a href="<?php print $url; ?>"><?php print $title; ?></a>
+  <a href="<?php print $url; ?>"><h3 class="gss-title"<?php print $title_attributes; ?>>
+    <?php print $title; ?>
   </h3>
-  <div class="gss-search-snippet-info">
+  <span class="gss-search-snippet-info">
     <?php if ($snippet) : ?>
       <p class="gss-search-snippet"<?php print $content_attributes; ?>><?php print $snippet; ?></p>
     <?php endif; ?>
-  </div>
+  </span>
+  </a>
 </li>
