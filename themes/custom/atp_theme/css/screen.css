@@ -376,7 +376,7 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 
 .gss { float: right; line-height: 30px; }
 .gss input.form-text { background-color: #e6e7e4; width: 113px; height: 16px; padding: 0 20px 0 5px; }
-.gss input.form-submit { background-image: url(../images/icon-search.svg); background-size: 12px 12px; background-color: transparent; position: absolute; width: 12px; height: 12px; top: 9px; right: 5px; border: 0; color: transparent; }
+.gss input.form-submit { background-image: url(../images/icon-search.svg); background-size: 12px 12px; background-color: transparent; position: absolute; width: 12px; height: 12px; top: 9px; right: 5px; border: 0; text-indent: -200px; overflow: hidden; }
 .no-svg .gss input.form-submit { background-image: url(../images/icon-search.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .gss input.form-submit { background-image: url(../images/icon-search@2x.png); } }
 
