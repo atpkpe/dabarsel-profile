@@ -190,7 +190,9 @@ function sites_preview_url_outbound_alter(&$path, &$options, $original_path) {
   }
 }
 
-
+/**
+ *  Implements hook_panels_pane_prerender
+ */
 function sites_panels_pane_prerender($pane) {
   if ($pane->type == 'menu_tree') {
     $main_menu = sites_get_current_menu_source('main_menu');
