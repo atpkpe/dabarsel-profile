@@ -55,7 +55,7 @@ abstract class sasDiag {
         '#type' => 'container',
         '#attributes' => array(
           'id' => $this->selector,
-          'style' => 'width: 80%; height: 100%',
+          'style' => 'width: 100%; height: 100%',
         ),
       ),
       '#attached' => array(
@@ -93,6 +93,20 @@ abstract class sasDiag {
 
   protected function constructSelector($id) {
     return sprintf('sas-diag-%s', $id);
+  }
+
+  protected function optionsAxisLabels() {
+    $header_attr_map = array(
+      'xlabel' => 'hAxis',
+      'ylabel' => 'vAxis',
+    );
+    $options = array();
+    foreach ($this->xml->headers->attributes() as $name => $value) {
+      if (!empty($value) && !empty($header_attr_map[$name])) {
+        $options[$header_attr_map[$name]] = array('title' => (string)$value);
+      }
+    }
+    return $options;
   }
 
   protected abstract function defineOptions();

@@ -4,12 +4,22 @@
 
 (function ($) {
 
-
   Drupal.behaviors.atp_sas_diag = {
+
     attach: function(context, settings) {
       if (typeof settings.atp_sas_diag == 'undefined') {
         return;
       }
+      $(window).on("debouncedresize", function( event ) {
+        Drupal.behaviors.atp_sas_diag.draw(context, settings);
+      });
+      $(window).on("throttledresize", function( event ) {
+        Drupal.behaviors.atp_sas_diag.draw(context, settings);
+      });
+      Drupal.behaviors.atp_sas_diag.draw(context, settings);
+    },
+
+    draw: function(context, settings) {
       var diag = settings.atp_sas_diag;
       var google = settings.google;
 
@@ -31,24 +41,26 @@
             }
             data.addRows(diagInstance.data['rows']);
             break;
+
+          case 'lineSimple':
+            var googleChartsType = 'LineChart';
+            var data = new google.visualization.DataTable();
+            var header = diagInstance.data['header'];
+            for (var i in header) {
+              data.addColumn(header[i].type, header[i].data);
+            }
+            data.addRows(diagInstance.data['rows']);
+            break;
         }
 
         var chart = new google.visualization[googleChartsType](
           document.getElementById(selector)
         );
-        $(window).on("debouncedresize", function( event ) {
-          chart.draw(data, diagInstance.options);
-        });
-        $(window).on("throttledresize", function( event ) {
-          chart.draw(data, diagInstance.options);
-        });
 
         chart.draw(data, diagInstance.options);
       }
-
-
-
     }
+
   }
 
   Drupal.settings.google = google;
