@@ -1,6 +1,6 @@
 <?php
 /**
- * sas_diag.pie.inc
+ * sas_diag.circle.inc
  * User: mikkel@adapt.dk
  * Date: 6/12/14 - 10:55 AM
  */

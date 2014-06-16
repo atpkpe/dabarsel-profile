@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<title>Figur 3 - dansk</title>
+	<summary>Figuren "ATP's aktivfordeling ultimo 1. kvartal 2014" viser, hvordan aktiverne i investeringsporteføljen – målt ved eksponering – var fordelt på de enkelte risikoklasser.</summary>
+	<date>2014-06-11 11:11:21</date>
+	<type>circle</type>
+	<headers>
+		<head>
+			<item>Aktier</item>
+			<item>Kredit</item>
+			<item>Renter</item>
+			<item>Råvarer</item>
+			<item>Inflation</item>
+		</head>
+	</headers>
+	<values>
+		<value>
+			<item name="Aktier">56</item>
+		</value>
+		<value>
+			<item name="Kredit">7</item>
+		</value>
+		<value>
+			<item name="Renter">10</item>
+		</value>
+		<value>
+			<item name="Råvarer">9</item>
+		</value>
+		<value>
+			<item name="Inflation">19</item>
+		</value>
+	</values>
+</data>
