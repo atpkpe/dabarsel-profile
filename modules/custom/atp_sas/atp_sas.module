@@ -84,11 +84,6 @@ function atp_sas_diag_token_insert_form($form, &$form_state) {
 }
 
 function atp_sas_chart_test() {
-  drupal_add_js('https://www.google.com/jsapi', 'external');
-  drupal_add_js(drupal_get_path('module', 'atp_sas') . '/js/atp_sas.js');
-  return '<div id="chart_div"></div>';
-}
-
-function askdjhaskjashjkasdk() {
-  $diag = sasDiagFactory::create('XML_Bar_ExampleFig5');
+  $diag = sasDiagFactory::create('DQ1_FIG5_HistoriskeResultater_Bar');
+  return $diag->render();
 }

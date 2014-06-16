@@ -124,11 +124,22 @@ projects[plupload][version] = '1.6'
 
 projects[gss][type] = 'module'
 projects[gss][subdir] = 'contrib'
-projects[gss][version] = '1.11'
+projects[gss][download][branch] = '7.x-1.x'
+projects[gss][download][type] = 'git'
+projects[gss][download][url] = 'http://git.drupal.org/project/gss.git'
+projects[gss][download][revision] = '1d92c2c5a8a79cf1e481555e9637899b757b2e75'
+projects[gss][patch][] = 'http://drupal.org/files/issues/gss-autocomple-overlay-2286797-1.patch'
 
 projects[focal_point][type] = 'module'
 projects[focal_point][subdir] = 'contrib'
 projects[focal_point][version] = '1.0-alpha4'
+
+projects[purl][type] = 'module'
+projects[purl][subdir] = 'contrib'
+projects[purl][download][branch] = '7.x-1.x'
+projects[purl][download][type] = 'git'
+projects[purl][download][url] = 'http://git.drupal.org/project/purl.git'
+projects[purl][download][revision] = '469e8668685de4a573e06b29742f6de41771e02c'
 
 ; plupload library
 libraries[plupload][download][type] = get
