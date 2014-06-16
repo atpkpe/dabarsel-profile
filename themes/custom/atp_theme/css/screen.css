@@ -293,7 +293,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 .slideshow .group-wrapper h2 a:hover { color: #fff; }
 .slideshow .group-wrapper a { color: #fff; text-decoration: underline; margin-top: 20px; display: inline-block; }
 .slideshow .group-wrapper a:hover { color: #adc200; }
-.slideshow img { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; background-size: cover; max-width: 100%; width: 100%; height: 300px; }
+.slideshow img { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; height: 300px; position: absolute; left: 50%; margin-left: -800px; }
 @media screen and (max-width: 500px) { .slideshow img { width: auto; max-width: inherit; }
   .slideshow .group-wrapper { left: 0; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .slideshow img { width: auto; max-width: inherit; }
