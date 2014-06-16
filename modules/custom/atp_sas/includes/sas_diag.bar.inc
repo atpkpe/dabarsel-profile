@@ -34,10 +34,12 @@ class sasDiagBar extends sasDiag {
     $head = (array)$this->xml->headers->head;
     $head_items = $head['item'];
     $data = array();
-    $data['header'][] = array('type' => 'string', 'data' => '&nbsp;');
+
     foreach ($head_items as $head_item) {
       $data['header'][] = array('type' => 'number', 'data' => $head_item);
     }
+    $header_count = count($data['header']);
+
     foreach ($this->xml->values as $value) {
       foreach($value as $entry) {
         $row = array((string)$entry['name']);
@@ -48,8 +50,21 @@ class sasDiagBar extends sasDiag {
           $i++;
         }
         $data['rows'][] = $row;
+
+        // If row count is bigger than head count then pad header.
+        $row_count = count($row);
+        $row_header_diff = $row_count - $header_count;
+        if ($row_header_diff) {
+          $data['header'] = array_pad(
+            $data['header'],
+            -1 * abs($row_count),
+            array('type' => 'string', 'data' => '&nbsp;')
+          );
+        }
+
       }
     }
+
     return $data;
   }
 
