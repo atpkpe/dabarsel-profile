@@ -7,8 +7,16 @@
 
 class sasDiagLine extends sasDiag {
 
-  public function __construct($xml) {
-    parent::__construct($xml);
+  public function __construct($id, $xml) {
+    parent::__construct($id, $xml);
+  }
+
+  protected function defineOptions(){
+
+  }
+
+  protected function defineData() {
+
   }
 
 }

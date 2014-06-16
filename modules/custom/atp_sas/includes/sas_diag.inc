@@ -17,6 +17,7 @@ abstract class sasDiag {
   const colDarkGrey = '#6E6E6E';
   const colWhite = '#FFFFFF';
 
+  protected $id;
   protected $title;
   protected $summary;
   protected $date;
@@ -34,6 +35,7 @@ abstract class sasDiag {
   );
 
   public function __construct($id, $xml) {
+    $this->id = $id;
     $this->selector = $this->constructSelector($id);
     $this->xml = $xml;
     $this->setProperties();
@@ -48,28 +50,38 @@ abstract class sasDiag {
   }
 
   public function render() {
-    drupal_add_js('https://www.google.com/jsapi', 'external');
-
     return array(
-      'diag-wrapper' => array(
+      'diag-wrapper-' . $this->id => array(
         '#type' => 'container',
         '#attributes' => array(
           'id' => $this->selector,
+          'style' => 'width: 80%; height: 100%',
         ),
       ),
       '#attached' => array(
         'js' => array(
           array(
-            'data' => drupal_get_path('module', 'atp_sas') . sprintf('/js/sas_diag.%s.js', $this->type),
+            'data' => drupal_get_path('module', 'atp_sas') . '/js/sas_diag.js',
+            'type' => 'file',
+          ),
+          array(
+            'data' => drupal_get_path('theme', 'atp_theme') .'/js/jquery.throttledresize.js',
+            'type' => 'file',
+          ),
+          array(
+            'data' => drupal_get_path('theme', 'atp_theme') .'/js/jquery.debouncedresize.js',
             'type' => 'file',
           ),
           array(
             'data' => array(
               'atp_sas_diag' => array(
-                'type' => $this->type,
-                'selector' => $this->selector,
-                'options' => $this->options,
-                'data' => $this->data,
+                'charts' => array(
+                  $this->selector => array(
+                    'type' => $this->type,
+                    'options' => $this->options,
+                    'data' => $this->data,
+                  ),
+                ),
               ),
             ),
             'type' => 'setting',
