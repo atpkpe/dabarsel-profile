@@ -65,6 +65,13 @@
   }
 }
 
+@mixin user-select($option) {
+  -webkit-user-select: $option;
+  -khtml-user-select: $option;
+  -moz-user-select: $option;
+  -o-user-select: $option;
+}
+
 /* GRADIENTS */
 @mixin background-image-with-ms($image) {
   @include background-image($image);

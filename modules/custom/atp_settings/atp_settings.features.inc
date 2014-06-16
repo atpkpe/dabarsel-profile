@@ -45,10 +45,10 @@ function atp_settings_image_default_styles() {
     ),
   );
 
-  // Exported image style: 1500x300.
-  $styles['1500x300'] = array(
-    'name' => '1500x300',
-    'label' => '1500x300',
+  // Exported image style: 1600x300.
+  $styles['1600x300'] = array(
+    'name' => '1600x300',
+    'label' => '1600x300',
     'effects' => array(
       21 => array(
         'label' => 'Focal Point Scale And Crop',
@@ -60,7 +60,7 @@ function atp_settings_image_default_styles() {
         'module' => 'focal_point',
         'name' => 'focal_point_scale_and_crop',
         'data' => array(
-          'width' => 1500,
+          'width' => 1600,
           'height' => 300,
         ),
         'weight' => 2,

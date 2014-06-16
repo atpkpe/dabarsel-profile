@@ -195,9 +195,11 @@ function sites_preview_url_outbound_alter(&$path, &$options, $original_path) {
  */
 function sites_panels_pane_prerender($pane) {
   if ($pane->type == 'menu_tree') {
-    $main_menu = sites_get_current_menu_source('main_menu');
-    $pane->configuration['menu_name'] = $main_menu;
-    $pane->configuration['parent'] = $main_menu . ':0';
+    if ($pane->configuration['menu_name'] == 'main-menu') {
+      $main_menu = sites_get_current_menu_source('main_menu');
+      $pane->configuration['menu_name'] = $main_menu;
+      $pane->configuration['parent'] = $main_menu . ':0';
+    }
   }
 }
 

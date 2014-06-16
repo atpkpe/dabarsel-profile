@@ -74,6 +74,8 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
 
   $form = array();
 
+  $languages = language_list();
+
   $form['title'] = array(
     '#title' => t('Site title (used in administrative interface only)'),
     '#type' => 'textfield',
@@ -97,19 +99,14 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#default_value' => $site->front_page,
   );
 
-  $form['site_name'] = array(
-    '#title' => t('Site name'),
-    '#description' => t('Used by some themes.  Will be visible to users.'),
-    '#type' => 'textfield',
-    '#default_value' => $site->name,
-  );
-
-  $form['secondary_menu'] = array(
-    '#title' => t('Secondary menu'),
-    '#description' => t('Unique menu name of the menu to insert into $secondary_menu (leave blank to use default Secondary menu)'),
-    '#type' => 'textfield',
-    '#default_value' => $site->menu_secondary_menu,
-  );
+  foreach($languages as $language) {
+    $form['site_name'][$language->language] = array(
+      '#title' => t('Site name') . " <small>($language->name)</small>",
+      '#description' => t('Used by some themes.  Will be visible to users.'),
+      '#type' => 'textfield',
+      '#default_value' => $site->name,
+    );
+  }
 
   $form['theme'] = array(
     '#type' => 'select',
@@ -119,24 +116,13 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#default_value' => $site->theme,
   );
 
-  // This subsite does not have a menu yet. We allow the user to automatically
-  // create one.
-  if (empty($site->menu_main_menu)) {
-    $form['main_menu'] = array(
-      '#title' => t('Main menu'),
-      '#description' => t('Unique menu name of the menu to insert into $main_menu (leave blank to use default Main menu)'),
-      '#type' => 'checkbox',
-      '#default_value' => 1,
-    );
-  }
-  else {
-    $form['main_menu'] = array(
-      '#title' => t('Main menu'),
-      '#description' => t('Unique menu name of the menu to insert into $main_menu (leave blank to use default Main menu)'),
-      '#type' => 'textfield',
-      '#default_value' => $site->menu_main_menu,
-    );
-  }
+  $form['main_menu'] = array(
+    '#title' => t('Main menu'),
+    '#description' => t('Unique menu name of the menu to insert into $main_menu (leave blank to use default Main menu)'),
+    '#type' => 'textfield',
+    '#default_value' => $site->menu_main_menu,
+  );
+
   // Add context prefix form
   $form['purl'] = purl_form('sites', $site_id, $site->purl_prefix);
 
@@ -195,7 +181,7 @@ function sites_site_form_submit($form, &$form_state) {
   $site->machine_name = $form_state['values']['machine_name'];
   $site->name = $form_state['values']['site_name'];
   $site->menu_main_menu = $form_state['values']['main_menu'];
-  $site->menu_secondary_menu = $form_state['values']['secondary_menu'];
+  //$site->menu_secondary_menu = $form_state['values']['secondary_menu'];
   $site->theme = $form_state['values']['theme'];
   if (isset($form_state['values']['purl']['value'])) {
     $site->purl_prefix = $form_state['values']['purl']['value'];
@@ -205,10 +191,10 @@ function sites_site_form_submit($form, &$form_state) {
   // Automatically create a menu.
   if (empty($site_id)) {
     // Create a context.
-    SiteResourcesController::createContext($site);
+    //SiteResourcesController::createContext($site);
     // Create a main menu.
     if ($form_state['values']['main_menu'] === 1) {
-      SiteResourcesController::createMenu($site, 'main_menu');
+      //SiteResourcesController::createMenu($site, 'main_menu');
     }
   }
   // Site already exists, check if node paths needs updating.

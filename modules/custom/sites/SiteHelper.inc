@@ -17,6 +17,9 @@ class SiteHelper {
    *   Form element, ready to be used by FAP.
    */
   public static function buildSiteFormElement($node) {
+       
+    // print_r( $node );
+
     // Build the sites #options.
     $sites = SiteController::getSites();
     $sites_options = array();
@@ -34,10 +37,10 @@ class SiteHelper {
 
     // If we're in a subsite and no sites are selected, we check the current
     // subsite by default.
-    $site = SiteController::getCurrentSite();
-    if (empty($default) && isset($site->sid)) {
-      $default[$site->sid] = $site->sid;
-    }
+    //$site = SiteController::getCurrentSite();
+    //if (empty($default) && isset($site->sid)) {
+    //  $default[$site->sid] = $site->sid;
+    //}
 
     $form_element = array(
       'sites-options' => array(
@@ -51,7 +54,7 @@ class SiteHelper {
           '#description' => t('Select site to publish this node to. Leaving blank will allow node to be published everywhere.'),
           '#type' => 'checkboxes',
           '#size' => 5,
-          '#multiple' => TRUE,
+          '#multiple' => FALSE,
           '#parents' => array('sites'),
           '#default_value' => $default,
           '#options' => $sites_options,

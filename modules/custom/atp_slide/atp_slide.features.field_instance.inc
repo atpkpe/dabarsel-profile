@@ -71,7 +71,7 @@ function atp_slide_field_default_field_instances() {
         'settings' => array(
           'field_wrapper' => 0,
           'image_link' => '',
-          'image_style' => '1500x300',
+          'image_style' => '1600x300',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
