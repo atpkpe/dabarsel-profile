@@ -1,0 +1,138 @@
+// top input search
+.gss {
+  float: right;
+  line-height: 30px;
+  input.form-text {
+    background-color: $gray;
+    width: 113px;
+    height: 16px;
+    padding: 0 20px 0 5px;
+  }
+  input.form-submit {
+    @include background-image('icon-search');
+    background-size: 12px 12px;
+    background-color: transparent;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 9px;
+    right: 5px;
+    border: 0;
+    color: transparent;
+  }
+}
+
+// autocomplete
+.ui-helper-hidden-accessible {
+  display: none;
+}
+.ui-autocomplete {
+  background-color: #fff;
+  &#ui-id-1 {
+    position: absolute!important;
+    width: auto!important;
+    height: auto!important;
+    float: left;
+    top: 30px!important;
+    left: inherit!important;
+    right: 0!important;
+    border: 1px solid $gray;
+    z-index: 100;
+  }
+  li {
+    width: 100%;
+    list-style: none;
+    float: left;
+    clear: left;
+    &:hover {
+      cursor: pointer;
+      background-color: $green;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      padding: 5px 10px;
+    }
+  }
+  &#ui-id-2 {
+    @include content;
+    font-size: 20px;
+    line-height: 20px;
+    width: ($width)!important;
+    height: auto;
+    position: absolute !important;
+    border: 1px solid $gray;
+    left: 0!important;
+    li {
+      float: none;
+    }
+  }
+}
+
+// List page
+.search-form.gss {
+  @include content;
+  @include clearfix;
+  float: none;
+  position: relative;
+}
+.search-form.gss {
+  input#edit-keys.form-text {
+    font-size: 20px;
+    height: 40px;
+    padding: 0 10px;
+    width: 100%;
+  }
+  .form-submit {
+    background-size: 22px 22px;
+    width: 22px;
+    height: 22px;
+    top: 39px;
+    right: 15px;
+  }
+}
+.google-search-results {
+  @include content;
+  @include clearfix;
+  margin-bottom: $margins;
+  h3 {
+    b {
+      font-size: 16px;
+    }
+  }
+  b {
+    color: $green;
+  }
+  li.gss-result {
+    @include block-std;
+    padding: 0;
+        &:hover b{
+    color: $green-dark;
+  }
+    a {
+      padding: 20px 50px 20px 20px;
+      display: block;
+    }
+  }
+}
+.searchhead {
+  @include content;
+  @include clearfix;
+}
+.google-search-pager {
+  margin-bottom: $margins;
+  li {
+    padding: 0;
+    a {
+      padding: 0.5em;
+    }
+  }
+}
+.searchhead {
+  margin-bottom: $margins;
+}

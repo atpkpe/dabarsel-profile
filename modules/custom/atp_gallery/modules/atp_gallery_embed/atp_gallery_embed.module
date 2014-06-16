@@ -1,6 +1,108 @@
 <?php
 
 /**
+ * Implements hook_menu
+ */
+function atp_gallery_embed_menu() {
+  $items = array();
+
+  $items['overlay/%/gallery'] = array(
+    'title' => 'Gallery',
+    'page callback' => 'atp_gallery_embed_render',
+    'page arguments' => array(1),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+  );
+
+  $items['admin/gallery/insert/nojs'] = array(
+    'page callback' => 'atp_gallery_embed_insert',
+    'page arguments' => array(3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['admin/gallery/insert/ajax'] = array(
+      'delivery callback' => 'ajax_deliver'
+  ) + $items['admin/gallery/insert/nojs'];
+
+  return $items;
+}
+
+function atp_gallery_embed_insert($ajax) {
+  $is_ajax = $ajax === 'ajax';
+  $form = drupal_get_form('atp_gallery_embed_insert_form');
+  if ($is_ajax) {
+    $form = drupal_render($form);
+    die($form);
+  }
+  else {
+    return $form;
+  }
+}
+
+/**
+ *  Implement hook_form
+ */
+function atp_gallery_embed_insert_form($form, &$form_state) {
+  drupal_add_library('system', 'ui.dialog');
+
+  $query = new EntityFieldQuery();
+  $entities = $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'gallery')
+    ->propertyCondition('status', 1)
+    ->execute();
+
+  if (isset($entities['node'])) {
+
+    $galleries = entity_load('node', array_keys($entities['node']));
+
+    foreach ($galleries as $id => &$gallery) {
+      $gallery = $gallery->title;
+    }
+
+    $form['galleries'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Galleries'),
+      '#prefix' => '<div id="galleries">',
+      '#suffix' => '</div>',
+    );
+
+    $form['galleries']['select'] = array(
+      '#type' => 'radios',
+      '#options' => $galleries,
+      '#description' => t('Choose a gallery.'),
+    );
+
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Submit'),
+    );
+
+  }
+
+  return $form;
+}
+
+/**
+ * Register a directory containing Wysiwyg plugins.
+ *
+ * @param $type
+ *   The type of objects being collected: either 'plugins' or 'editors'.
+ * @return
+ *   A sub-directory of the implementing module that contains the corresponding
+ *   plugin files. This directory must only contain integration files for
+ *   Wysiwyg module.
+ */
+function atp_gallery_embed_wysiwyg_include_directory($type) {
+  switch ($type) {
+    case 'plugins':
+      // You can just return $type, if you place your Wysiwyg plugins into a
+      // sub-directory named 'plugins'.
+      return $type;
+  }
+}
+
+/**
  * Implementation of hook_filter_info()
  */
 function atp_gallery_embed_filter_info() {
@@ -99,22 +201,6 @@ function _atp_gallery_embed_replacements($matches) {
     return '<div class="gallery"><a href="/overlay/' . $node->nid . '/gallery" class="ajax-popup-link">' . render($view) . '</a></div>';
   }
 
-}
-
-/**
-* Implements hook_menu().
-*/
-function atp_gallery_embed_menu() {
-
-  $items['overlay/%/gallery'] = array(
-    'title' => 'Gallery',
-    'page callback' => 'atp_gallery_embed_render',
-    'page arguments' => array(1),
-    'type' => MENU_CALLBACK,
-    'access arguments' => array('access content'),
-  );
-
-  return $items;
 }
 
 function atp_gallery_embed_render($nid) {
