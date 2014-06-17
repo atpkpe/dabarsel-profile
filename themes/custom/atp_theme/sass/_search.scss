@@ -7,6 +7,7 @@
     width: 113px;
     height: 16px;
     padding: 0 20px 0 5px;
+    margin-top: 7px; //chromefix
   }
   input.form-submit {
     @include background-image('icon-search');
