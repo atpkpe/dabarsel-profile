@@ -87,7 +87,7 @@
 /* FONTS */
 @mixin font {
   color: $text-color;
-  font-size: 14px;
+  font-size: $default-fontsize;
   font-family: "Tahoma", sans-serif;
 }
 @mixin font-bold {

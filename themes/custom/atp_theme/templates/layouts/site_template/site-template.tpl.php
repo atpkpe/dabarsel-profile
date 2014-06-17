@@ -11,7 +11,10 @@
       <div class="top">
         <div class="inner">
           <?php print $content['header']; ?>
-          <nav class="toggle-menu"></nav>
+          <nav class="show-mobile toggle-menu"></nav>
+          <nav class="mobile-menu">
+            <?php print $content['mobile-menu']; ?>
+          </nav>
         </div>
       </div>
       <?php if (!empty($content['header-bottom'])): ?>
