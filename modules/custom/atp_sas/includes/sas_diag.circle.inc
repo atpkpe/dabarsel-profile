@@ -21,14 +21,17 @@ class sasDiagCircle extends sasDiag {
       ),
       'pieSliceBorderColor' => 'none',
       'pieSliceTextStyle' => array('color' => '#333'),
-//      'is3D' => 'true',
+      'pieSliceText' => 'none',
+      'backgroundColor.stroke' => 'red',
+      'backgroundColor.strokeWidth' => '10',
+      //      'is3D' => 'true',
       'colors' => array(
-        self::colLightGreen,
-        self::colGreen,
         self::colDarkGreen,
-        self::colLightGrey,
-        self::colGrey,
-        self::colDarkGrey,
+        self::colGreen,
+        self::colLightGreen,
+        self::colLighterGreen,
+        self::colLightestGreen,
+        self::colWhiteGreen,
       ),
     );
   }

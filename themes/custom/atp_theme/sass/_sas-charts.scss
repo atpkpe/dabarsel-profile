@@ -1,0 +1,12 @@
+// Tables
+.sas-table {
+  width: 100%;
+  tr {
+    background-color: #fff;
+    line-height: 30px;
+    > tr {
+      margin-bottom: 20px;
+    }
+  }
+
+}

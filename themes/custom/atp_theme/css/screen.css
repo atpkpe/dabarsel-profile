@@ -463,3 +463,7 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 .google-search-pager li a { padding: 0.5em; }
 
 .searchhead { margin-bottom: 20px; }
+
+.sas-table { width: 100%; }
+.sas-table tr { background-color: #fff; line-height: 30px; }
+.sas-table tr > tr { margin-bottom: 20px; }

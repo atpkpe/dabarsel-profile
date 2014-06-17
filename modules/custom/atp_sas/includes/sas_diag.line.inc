@@ -14,7 +14,7 @@ class sasDiagLine extends sasDiag {
 
   protected function defineOptions(){
     $options = $this->optionsAxisLabels();
-    $options['colors'] = array(self::colDarkGreen);
+    $options['colors'] = array(self::colLightGreen);
     $options['legend']['position'] = 'none';
     $options['chartArea']['backgroundColor'] = self::colLightGrey;
     $options['vAxis']['gridlines']['color'] = self::colWhite;
