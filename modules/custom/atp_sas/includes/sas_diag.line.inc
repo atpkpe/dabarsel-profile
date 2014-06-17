@@ -32,15 +32,13 @@ class sasDiagLine extends sasDiag {
     $data = array();
     $data['rows'] = array();
     $header = array('');
-    $group_count = count($this->xml->values->children());
-//    var_dump($group_count); die;
+    
     $group_rows = array();
     $g = 0;
     foreach ($this->xml->values->children() as $value) {
       $header[] = (string) $value->attributes()->name;
       foreach ($value->children() as $item) {
         $value = str_replace(',', '.', (string) $item);
-//        var_dump($data['rows'][$item_count - 1]);
         $group_rows[$g][] = (float) $value;
       }
       $g++;
@@ -70,38 +68,10 @@ class sasDiagLine extends sasDiag {
     return $data;
   }
 
-  protected function defineDataOld() {
-    $options = $this->defineOptions();
-    $data = array();
-    $data['header'] = array(
-      array('type' => 'string', 'data' => 'point'),
-      array('type' => 'number', 'data' => $options['vAxis']['title']),
-    );
-
-    foreach ($this->xml->values->children() as $value) {
-      foreach ($value->children() as $item) {
-        $value = str_replace(',', '.', (string) $item);
-        $data['rows'][] = array('', (float) $value);
-      }
-    }
-    return $data;
-  }
-
 }
 
 /*
-  var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
-        ]);
-
-        var options = {
-          title: 'Company Performance'
-        };
-
+ * 
  <?xml version="1.0" encoding="UTF-8"?>
 <data>
 	<title>Figur 13 - dansk</title>

@@ -44,6 +44,10 @@ class sasDiagTable extends sasDiag {
     $table = array(
       '#theme' => 'table',
       '#rows' => $rows,
+      '#attributes' => array (
+        'class' => array('sas-table'),
+        'cellspacing' => array(0),
+      ),
     );
 //    var_dump($rows);
 //    die;

@@ -9,6 +9,9 @@
       $("body").addClass("show-menu");
     }
   });
+  $('.level-2-3').bind( "touchstart, click", function(){
+    $(this).toggleClass("expand");
+  });
   Drupal.behaviors.main = {
   attach: function(context, settings) {
 
