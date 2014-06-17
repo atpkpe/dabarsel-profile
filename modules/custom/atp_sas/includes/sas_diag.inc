@@ -9,10 +9,13 @@
 
 abstract class sasDiag {
 
-  const colLightGreen = '#E8EEB9';
-  const colGreen = '#BDCE33';
-  const colDarkGreen = '#7C9500';
-  const colLightGrey = '#DCDCDC';
+  const colWhiteGreen = '#e8efba';
+  const colLightestGreen = '#d1de75';
+  const colLighterGreen = '#bccf37';
+  const colLightGreen = '#acc20e';
+  const colGreen = '#7b9507';
+  const colDarkGreen = '#4c5d02';
+  const colLightGrey = '#e6e7e4';
   const colGrey = '#A2A2A2';
   const colDarkGrey = '#6E6E6E';
   const colWhite = '#FFFFFF';
@@ -55,7 +58,7 @@ abstract class sasDiag {
         '#type' => 'container',
         '#attributes' => array(
           'id' => $this->selector,
-          'style' => 'width: 80%; height: 100%',
+          'style' => 'width: 100%; height: 100%',
         ),
       ),
       '#attached' => array(
@@ -93,6 +96,20 @@ abstract class sasDiag {
 
   protected function constructSelector($id) {
     return sprintf('sas-diag-%s', $id);
+  }
+
+  protected function optionsAxisLabels() {
+    $header_attr_map = array(
+      'xlabel' => 'hAxis',
+      'ylabel' => 'vAxis',
+    );
+    $options = array();
+    foreach ($this->xml->headers->attributes() as $name => $value) {
+      if (!empty($value) && !empty($header_attr_map[$name])) {
+        $options[$header_attr_map[$name]] = array('title' => (string)$value);
+      }
+    }
+    return $options;
   }
 
   protected abstract function defineOptions();

@@ -12,21 +12,11 @@ class sasDiagBar extends sasDiag {
   }
 
   protected function defineOptions() {
-    $header_attr_map = array(
-      'xlabel' => 'hAxis',
-      'ylabel' => 'vAxis',
-    );
-
-    foreach ($this->xml->headers->attributes() as $name => $value) {
-      if (!empty($value) && !empty($header_attr_map[$name])) {
-        $options[$header_attr_map[$name]] = array('title' => (string)$value);
-      }
-    }
-
-    $options['colors'] = array(self::colDarkGrey, self::colGreen);
+    $options = $this->optionsAxisLabels();
+    $options['colors'] = array(self::colLightGreen, self::colGreen);
     $options['chartArea']['backgroundColor'] = self::colLightGrey;
     $options['vAxis']['gridlines']['color'] = self::colWhite;
-
+    $options['vAxis']['baselineColor'] = 'none';
     return $options;
   }
 
