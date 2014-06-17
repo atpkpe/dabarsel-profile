@@ -322,7 +322,9 @@ header {
   border-top: 1px solid $gray;
   border-bottom: 1px solid $gray;
   .show-menu & {
-    display: block;
+    @include device(phone){
+      display: block;
+    }
   }
   * {
     text-transform: uppercase;

@@ -31,7 +31,7 @@
   <?php endif; ?>
   <?php if (!empty($content['footer'])): ?>
     <footer>
-      <section>
+      <section class="onecol">
         <?php print $content['footer']; ?>
       </section>
       <section>

@@ -185,7 +185,8 @@ header > .bottom .level-2-3 h2:after { display: block; border: 0; width: 0; heig
 .toggle-menu:before { background: #424844; position: absolute; top: 3px; left: 0px; display: block; width: 16px; height: 2px; content: ""; }
 
 .mobile-menu { display: none; padding: 0 0 20px 0; border-top: 1px solid #e6e7e4; border-bottom: 1px solid #e6e7e4; }
-.show-menu .mobile-menu { display: block; }
+@media screen and (max-width: 500px) { .show-menu .mobile-menu { display: block; } }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .show-menu .mobile-menu { display: block; } }
 .mobile-menu * { text-transform: uppercase; font-weight: 600; font-size: 14px; }
 .mobile-menu a { padding: 10px; }
 .mobile-menu a:after { content: attr(title); display: block; text-transform: none; font-weight: 400; }
