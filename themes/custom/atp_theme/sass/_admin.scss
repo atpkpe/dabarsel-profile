@@ -1,7 +1,14 @@
 body {
   &.admin-menu {
     margin-top: 28px !important;
-    margin-bottom: -28px;
+    @include device(phone){
+      margin-top: 0 !important;
+    }
+  }
+}
+#admin-menu {
+  @include device(phone){
+    display: none;
   }
 }
 

@@ -1,5 +1,10 @@
 // top input search
 .gss {
+  @include device(phone){
+    &#search-block-form {
+      display: none;
+    }
+  }
   float: right;
   line-height: 30px;
   input.form-text {
@@ -7,6 +12,7 @@
     width: 113px;
     height: 16px;
     padding: 0 20px 0 5px;
+    margin-top: 7px; //chromefix
   }
   input.form-submit {
     @include background-image('icon-search');
@@ -95,6 +101,7 @@
     height: 22px;
     top: 39px;
     right: 15px;
+    margin-top: 7px;
   }
 }
 .google-search-results {
