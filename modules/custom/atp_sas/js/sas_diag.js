@@ -42,14 +42,9 @@
             data.addRows(diagInstance.data['rows']);
             break;
 
-          case 'lineSimple':
+          case 'line':
             var googleChartsType = 'LineChart';
-            var data = new google.visualization.DataTable();
-            var header = diagInstance.data['header'];
-            for (var i in header) {
-              data.addColumn(header[i].type, header[i].data);
-            }
-            data.addRows(diagInstance.data['rows']);
+            var data = google.visualization.arrayToDataTable(diagInstance.data['rows']);
             break;
         }
 

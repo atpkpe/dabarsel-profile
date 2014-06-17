@@ -24,10 +24,17 @@ class sasDiagBar extends sasDiag {
     $head = (array)$this->xml->headers->head;
     $head_items = $head['item'];
     $data = array();
-
-    foreach ($head_items as $head_item) {
-      $data['header'][] = array('type' => 'number', 'data' => $head_item);
+    // If only one header item then process that item.
+    if (is_string($head_items)) {
+      $data['header'][] = array('type' => 'number', 'data' => $head_items);
     }
+    // Otherwise treat is an array.
+    else {
+      foreach ($head_items as $head_item) {
+        $data['header'][] = array('type' => 'number', 'data' => $head_item);
+      }
+    }
+
     $header_count = count($data['header']);
 
     foreach ($this->xml->values as $value) {
