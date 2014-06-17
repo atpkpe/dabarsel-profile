@@ -480,5 +480,5 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 .searchhead { margin-bottom: 20px; }
 
 .sas-table { width: 100%; }
-.sas-table tr { background-color: #fff; line-height: 30px; }
-.sas-table tr > tr { margin-bottom: 20px; }
+.sas-table tr { background-color: #fff; }
+.sas-table tr > td { border-bottom: 10px solid #f2f1f0; line-height: 30px; }
