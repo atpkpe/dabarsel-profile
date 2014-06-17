@@ -86,6 +86,9 @@
 }
 
 /* FONTS */
+@mixin header-fontfamily {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 @mixin font {
   color: $text-color;
   font-size: $default-fontsize;
