@@ -187,7 +187,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'link_title' => 'ATP som pensionsforvalter',
     'options' => array(
       'attributes' => array(
-        'title' => '',
+        'title' => 'For private og erhverv',
       ),
       'alter' => TRUE,
     ),
@@ -207,7 +207,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'link_title' => 'ATP som investor',
     'options' => array(
       'attributes' => array(
-        'title' => '',
+        'title' => 'Bag om Pension',
       ),
       'alter' => TRUE,
     ),
@@ -247,7 +247,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'link_title' => 'Info & selvbetjening',
     'options' => array(
       'attributes' => array(
-        'title' => '',
+        'title' => 'Bag om ordning og ydelser',
       ),
       'alter' => TRUE,
     ),

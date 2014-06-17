@@ -43,11 +43,10 @@ header {
   > div > .inner {
     @include content;
     position: relative;
-    @include device(phone){
-      padding-top: 50px;
-    }
   }
   > .top {
+    height: 101px;
+    border-bottom: 1px solid $green;
     @include device(phone){
       height: 50px !important;
       border: 0;
@@ -55,20 +54,26 @@ header {
         height: auto !important;
       }
     }
-    height: 101px;
-    border-bottom: 1px solid $green;
     .front & {
       height: 100px;
       border: 0;
+    }
+    > .inner {
+      @include device(phone){
+        padding-top: 50px;
+      }
     }
   }
   > .bottom {
     background: $gray;
     @include device(phone){
-      display: none;
+      background: transparent;
     }
     .level-2 {
       @include clearfix;
+      @include device(phone){
+        display: none;
+      }
       * {
         font-size: 13px;
       }
@@ -77,6 +82,40 @@ header {
       }
       a {
         padding: 0 $margins;
+      }
+    }
+    .level-2-3 {
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+      > ul {
+        background: #fff;
+        display: none;
+        margin-top: -1 * ($margins/2);
+        position: relative;
+        z-index: 10;
+        border-left: ($margins/2) solid $body-color;
+        border-right: ($margins/2) solid $body-color;
+        ul {
+          margin-left: $margins/2;
+        }
+      }
+      h2 {
+        @include font;
+        padding: $margins/2;
+        border: ($margins/2) solid $body-color;
+        margin: 0;
+        position: relative;
+        z-index: 5;
+        &:after {
+          @include arrow(bottom, $gray-dark, 9px);
+          content: "";
+          position: absolute;
+          right: $margins/2;
+          top: $margins*.75;
+        }
       }
     }
   }
@@ -94,7 +133,6 @@ header {
   }
   @include device(phone){
     top: $margins/2;
-    left: $margins;
     img {
       width: 41px;
       height: auto;
@@ -113,8 +151,7 @@ header {
     clear: both;
     margin: 0;
     display: none;
-    border: 1px solid $gray;
-    border-bottom: 0;
+    border-top: 1px solid $gray;
     .show-menu & {
       display: block;
     }
@@ -132,6 +169,7 @@ header {
       @include device(phone){
         color: $text-color;
         font-size: $default-fontsize;
+        line-height: normal;
       }
       &.active {
         display: none;
@@ -264,14 +302,30 @@ header {
 .mobile-menu {
   display: none;
   padding: 0 0 $margins 0;
-  border: 1px solid $gray;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
   .show-menu & {
     display: block;
   }
-  li {
+  * {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  a {
     padding: ($margins/2);
+    &:after {
+      content: attr(title);
+      display: block;
+      text-transform: none;
+      font-weight: 400;
+    }
+    &.active {
+      color: $green-hover-header;
+    }
   }
   .mobile-main {
+    margin-bottom: $margins/2;
     li {
       border-bottom: 1px solid $gray;
     }
