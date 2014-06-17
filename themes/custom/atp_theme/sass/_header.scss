@@ -85,10 +85,23 @@ header {
       }
     }
     .level-2-3 {
-      &:hover {
+      &.expand {
         ul {
           display: block;
         }
+        h2 {
+          &:after {
+            @include arrow(top, $gray-dark, 9px);
+          }
+        }
+      }
+      * {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      a {
+        padding: $margins/2
       }
       > ul {
         background: #fff;
@@ -100,6 +113,10 @@ header {
         border-right: ($margins/2) solid $body-color;
         ul {
           margin-left: $margins/2;
+          * {
+            text-transform: none;
+            font-weight: 400;
+          }
         }
       }
       h2 {

@@ -32,6 +32,7 @@
 
 @mixin arrow($direction, $color, $size){
   display: block;
+  border: 0;
   width: 0;
   height: 0;
   @if $direction == 'top' {
