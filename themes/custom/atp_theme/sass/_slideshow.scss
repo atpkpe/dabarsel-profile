@@ -93,7 +93,9 @@ $slideshow-title: 22px;
       display: none;
     }
     z-index: 100;
-    width: 100%;
+    position: relative;
+    max-width: 1600px; // the size of the slideshow image
+    margin: 0 auto;
     li { list-style: none; }
     a {
       position: absolute;
