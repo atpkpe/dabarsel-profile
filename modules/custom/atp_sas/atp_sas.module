@@ -89,8 +89,7 @@ function atp_sas_chart_test() {
   $diags[] = sasDiagFactory::create('DQ1_FIG3a_Risikoklasser_Circle');
   $diags[] = sasDiagFactory::create('DQ1_FIG5_HistoriskeResultater_Bar');
   $diags[] = sasDiagFactory::create('DQ1_FIG13_Indkomst_Line');
-//  $diags[] = sasDiagFactory::create('DQ1_FIG5_HistoriskeResultater_Bar');
-//  $diags[] = sasDiagFactory::create('DQ1_FIG5_HistoriskeResultater_Bar');
+  $diags[] = sasDiagFactory::create('EQ1_FIG11_InvestmentPortfolio_Table');
 
   $output = array();
   foreach ($diags as $diag) {

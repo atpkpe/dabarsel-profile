@@ -21,7 +21,7 @@ class sasDiagCircle extends sasDiag {
       ),
       'pieSliceBorderColor' => 'none',
       'pieSliceTextStyle' => array('color' => '#333'),
-      'is3D' => 'true',
+//      'is3D' => 'true',
       'colors' => array(
         self::colLightGreen,
         self::colGreen,
