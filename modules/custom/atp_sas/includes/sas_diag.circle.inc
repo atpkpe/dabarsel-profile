@@ -13,15 +13,14 @@ class sasDiagCircle extends sasDiag {
 
   protected function defineOptions(){
     return array(
-      'pieSliceText' => 'value',
+      'pieSliceText' => 'value%',
       'chartArea' => array(
-        'width' => '100%',
-        'height' => '100%',
-        'top' => '20',
+        // 'width' => '100%',
+        // 'height' => '770px',
+        // 'top' => '20',
       ),
       'pieSliceBorderColor' => 'none',
-      'pieSliceTextStyle' => array('color' => '#333'),
-      'pieSliceText' => 'none',
+      'pieSliceTextStyle' => array('color' => '#fff', 'fontName' => 'Tahoma'),
       'backgroundColor.stroke' => 'red',
       'backgroundColor.strokeWidth' => '10',
       //      'is3D' => 'true',
