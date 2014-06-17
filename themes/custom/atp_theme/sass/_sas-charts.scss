@@ -3,9 +3,9 @@
   width: 100%;
   tr {
     background-color: #fff;
-    line-height: 30px;
-    > tr {
-      margin-bottom: 20px;
+    > td {
+      border-bottom: ($margins/2) solid $gray-light;
+      line-height: 30px;
     }
   }
 
