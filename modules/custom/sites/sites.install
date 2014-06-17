@@ -65,13 +65,6 @@ function sites_schema() {
         'not null' => TRUE,
         'default' => '',
       ),
-      'name' => array(
-        'description' => 'Name of the site.',
-        'type' => 'varchar',
-        'length' => 256,
-        'not null' => TRUE,
-        'default' => '',
-      ),
       'front_page' => array(
         'description' => 'Front page of the site.',
         'type' => 'varchar',
@@ -79,15 +72,29 @@ function sites_schema() {
         'not null' => TRUE,
         'default' => '',
       ),
-      'menu_main_menu' => array(
-        'description' => 'Which menu to use as main menu.',
+      'contact_page' => array(
+        'description' => 'Contact page of the site.',
         'type' => 'varchar',
         'length' => 256,
         'not null' => TRUE,
         'default' => '',
       ),
-      'menu_secondary_menu' => array(
-        'description' => 'Which menu to use as secondary menu.',
+      'language_switcher' => array(
+        'description' => 'Show language switcher on the site.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'sharing_links' => array(
+        'description' => 'Show sharing links ont he site.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'menu_main_menu' => array(
+        'description' => 'Which menu to use as main menu.',
         'type' => 'varchar',
         'length' => 256,
         'not null' => TRUE,
@@ -103,6 +110,47 @@ function sites_schema() {
     ),
     'primary key' => array('sid'),
     'unique key' => array('machine_name'),
+  );
+
+$schema['sites_multilanguage'] = array(
+    'description' => 'sites_multilanguage',
+    'fields' => array(
+      'sid' => array(
+        'description' => 'The site id.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'primary key' => TRUE,
+        'unique' => TRUE,
+      ),
+      'language' => array(
+        'description' => 'Language of the site.',
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'name' => array(
+        'description' => 'Name of the site.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'footer' => array(
+        'description' => 'Footer text.',
+        'type' => 'text',
+        'not null' => FALSE,
+      ),
+      'footer_format' => array(
+        'description' => 'Footer text format.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ),
+    'primary key' => array('sid', 'language'),
   );
 
   $schema['site_node'] = array(

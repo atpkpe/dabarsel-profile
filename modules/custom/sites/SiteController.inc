@@ -74,6 +74,19 @@ class SiteController {
               ->execute()
               ->fetchObject();
 
+   // Get site multilanguage data from database.
+   $result_multilanguage = db_select('sites_multilanguage', 's')
+              ->fields('s')
+              ->condition('sid', $site_id)
+              ->execute()
+              ->fetchAll();
+
+    foreach ($result_multilanguage as $m) {
+      $result->name[$m->language] = $m->name;
+      $result->footer[$m->language] = $m->footer;
+      $result->footer_format[$m->language] = $m->footer_format;
+    }
+
     // Convert the raw database result to a Site instance.
     $site = self::createSiteFromRawData($result);
 
@@ -84,25 +97,23 @@ class SiteController {
     return $site;
   }
 
-  public static function getSiteByName($site_name) {
-    if (empty($site_name)) {
+  public static function getSiteByName($machine_name) {
+    if (empty($machine_name)) {
       return FALSE;
     }
 
-    // Get site data from database.
+    // Get site sid from database.
     $result = db_select('sites', 's')
-      ->fields('s')
-      ->condition('machine_name', $site_name)
+      ->fields('s', array('sid'))
+      ->condition('machine_name', $machine_name)
       ->execute()
-      ->fetchObject();
+      ->fetchField();
 
     if(empty($result)) {
       return FALSE;
     }
-    // Convert the raw database result to a Site instance.
-    $site = self::createSiteFromRawData($result);
 
-    return $site;
+    return self::getSite($result);
   }
 
   /**
@@ -145,15 +156,23 @@ class SiteController {
     db_delete('sites')
       ->condition('sid', $site_id)
       ->execute();
+
+    // Delete corresponding row from sites_multilanguage table.
+    db_delete('sites_multilanguage')
+      ->condition('sid', $site_id)
+      ->execute();
+
     // Delete site node information.
     db_delete('site_node')
       ->condition('sid', $site_id)
       ->execute();
+
     // delete PURL prefix
     purl_delete(array(
       'provider' => 'sites',
       'id' => $site_id,
     ));
+
     // Delete site's resources.
     SiteResourcesController::deleteResources($site);
   }
@@ -165,23 +184,22 @@ class SiteController {
    *   Site machine name.
    */
   public static function deleteSiteByName($machine_name) {
-    $site = self::getSiteByName($machine_name);
+    if (empty($machine_name)) {
+      return FALSE;
+    }
 
-    // Delete corresponding row from sites table.
-    db_delete('sites')
+    // Get site sid from database.
+    $sid = db_select('sites', 's')
+      ->fields('s', array('sid'))
       ->condition('machine_name', $machine_name)
-      ->execute();
-    // Delete site node information.
-    db_delete('site_node')
-      ->condition('sid', $site->sid)
-      ->execute();
-    // delete PURL prefix
-    purl_delete(array(
-      'provider' => 'sites',
-      'id' => $site->sid,
-    ));
-    // Delete site's resources.
-    SiteResourcesController::deleteResources($site);
+      ->execute()
+      ->fetchField();
+
+    if(empty($result)) {
+      return FALSE;
+    }
+
+    self::deleteSite($sid);
   }
 
   /**
@@ -208,7 +226,7 @@ class SiteController {
       purl_disable(TRUE);
       $operation_links = self::getOperationLinks($site);
       $rows[] = array(
-        'data' => array(l($site->name, $site->purl_prefix), $site->title, $site->purl_prefix, $operation_links['edit'] . ' ' . $operation_links['delete'])
+        'data' => array($site->title, $site->purl_prefix, $operation_links['edit'] . ' ' . $operation_links['delete'])
       );
     }
 
@@ -241,7 +259,7 @@ class SiteController {
   protected static function getSitesTableInfo() {
     // Build the table header: Name | Title | Url | Actions.
     $header = array(
-      array('data' => 'Name', 'field' => 'name', 'sort' => 'asc',),
+      //array('data' => 'Name', 'field' => 'name', 'sort' => 'asc',),
       array('data' => 'Title', 'field' => 'title',),
       array('data' => 'Url', 'field' => 'purl_prefix',),
       array('data' => ''),
@@ -254,7 +272,7 @@ class SiteController {
       ->extend('TableSort')
       ->limit(10)
       ->orderByHeader($header)
-      ->fields('s', array('sid', 'name', 'title', 'purl_prefix',))
+      ->fields('s', array('sid', 'title', 'purl_prefix',))
       ->execute();
 
     return array('results' => $results, 'header' => $header, 'query' => $query);
@@ -268,7 +286,11 @@ class SiteController {
 
     // We're not currently in any subsite context.
     $operation_links['edit']    = l(t('edit'), 'admin/structure/sites/edit/' . $site->sid);
-    $operation_links['delete']  = l(t('delete'), 'admin/structure/sites/delete/' . $site->sid);
+    if ($site->sid > 1) {
+      $operation_links['delete']  = l(t('delete'), 'admin/structure/sites/delete/' . $site->sid);
+    } else {
+      $operation_links['delete']  = '';
+    }
     $operation_links['add']     = l(t('Add a new site'), 'admin/structure/sites/add');
 
     return $operation_links;
@@ -278,7 +300,10 @@ class SiteController {
    * Creates a site object based on raw data.
    */
   public static function createSiteFromRawData($raw_data) {
-    $properties = array('sid', 'purl_prefix', 'title', 'machine_name', 'name', 'front_page', 'menu_main_menu', 'menu_secondary_menu', 'theme');
+    $properties = array('sid', 'purl_prefix', 'title', 'machine_name', 'name',
+                        'front_page', 'menu_main_menu', 'menu_secondary_menu', 'theme',
+                        'footer', 'footer_format','language_switcher','sharing_links'
+                       );
     $site = new Site();
     if (is_array($raw_data)) {
       foreach ($properties as $property) {

@@ -99,12 +99,29 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#default_value' => $site->front_page,
   );
 
-  foreach($languages as $language) {
-    $form['site_name'][$language->language] = array(
+  $form['contact_page'] = array(
+    '#title' => t('Contact page'),
+    '#description' => t('Leave blank to use sitewide contact menu or enter a specific page'),
+    '#type' => 'textfield',
+    '#default_value' => $site->contact_page,
+  );
+
+  foreach($languages as $lang => $language) {
+    $form['site_name_' . $lang] = array(
       '#title' => t('Site name') . " <small>($language->name)</small>",
       '#description' => t('Used by some themes.  Will be visible to users.'),
       '#type' => 'textfield',
-      '#default_value' => $site->name,
+      '#default_value' => $site->name[$lang],
+    );
+  }
+
+  foreach($languages as $lang => $language) {
+    $form['footer_' . $lang] = array(
+      '#title' => t('Footer text') . " <small>($language->name)</small>",
+      '#description' => t('Footer text'),
+      '#type' => 'text_format',
+      '#format' => $site->footer_format[$lang],
+      '#default_value' => $site->footer[$lang],
     );
   }
 
@@ -114,6 +131,22 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#description' => t('Select an active theme for this site.'),
     '#options' => $active_themes,
     '#default_value' => $site->theme,
+  );
+
+  $form['language_switcher'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show language switcher'),
+    '#description' => t('Check this if the language switcher should be visible.'),
+    '#options' => array(0 => t('No'), 1 => t('Yes')),
+    '#default_value' => $site->language_switcher,
+  );
+
+  $form['sharing_links'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show sharing links'),
+    '#description' => t('Check this if the sharing links should be visible.'),
+    '#options' => array(0 => t('No'), 1 => t('Yes')),
+    '#default_value' => $site->sharing_links,
   );
 
   $form['main_menu'] = array(
@@ -178,14 +211,25 @@ function sites_site_form_submit($form, &$form_state) {
   // @todo create a helper function for this.
   $site->title = $form_state['values']['title'];
   $site->front_page = $form_state['values']['front_page'];
+  $site->contact_page = $form_state['values']['contact_page'];
   $site->machine_name = $form_state['values']['machine_name'];
-  $site->name = $form_state['values']['site_name'];
   $site->menu_main_menu = $form_state['values']['main_menu'];
-  //$site->menu_secondary_menu = $form_state['values']['secondary_menu'];
   $site->theme = $form_state['values']['theme'];
+
   if (isset($form_state['values']['purl']['value'])) {
     $site->purl_prefix = $form_state['values']['purl']['value'];
   }
+
+  $languages = language_list();
+  foreach($languages as $lang => $language) {
+    $site->footer[$lang] = $form_state['values']['footer_' . $lang]['value'];
+    $site->footer_format[$lang] = $form_state['values']['footer_' . $lang]['format'];
+    $site->name[$lang] = $form_state['values']['site_name_' . $lang];
+  }
+
+  $site->language_switcher = $form_state['values']['language_switcher'];
+  $site->sharing_links = $form_state['values']['sharing_links'];
+
   // Save the site object.
   $site->save();
   // Automatically create a menu.
