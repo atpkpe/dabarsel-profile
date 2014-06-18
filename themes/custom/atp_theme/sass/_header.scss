@@ -66,6 +66,7 @@ header {
   }
   > .bottom {
     background: $gray;
+    clear: both;
     @include device(phone){
       background: transparent;
     }
