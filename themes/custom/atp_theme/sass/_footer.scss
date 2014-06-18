@@ -18,6 +18,9 @@ footer {
     > li {
       @include float-span(4);
       float: left;
+      @include device(phone){
+        @include float-span(16);
+      }
       &.last {
         margin-right: 0;
       }
@@ -87,6 +90,9 @@ footer {
   @include float-span(8);
   margin-right: 0;
   margin-bottom: $margins;
+  @include device(phone){
+    @include float-span(16);
+  }
   h2 {
     font-weight: 600;
     text-transform: uppercase;

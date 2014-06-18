@@ -1391,12 +1391,12 @@ function atp_section_panelizer_defaults() {
       'list_type' => 'fixed_categories',
       'categories' => array(
         4 => '4',
-        6 => 0,
-        7 => 0,
         3 => 0,
+        1 => 0,
+        2 => 0,
       ),
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'News',
     );
     $pane->cache = array();
     $pane->style = array(
