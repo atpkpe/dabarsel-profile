@@ -22,7 +22,7 @@ class SiteHelper {
     $sites = SiteController::getSites();
     $sites_options = array();
     foreach ($sites as $site) {
-      $sites_options[$site->sid] = $site->name;
+      $sites_options[$site->sid] = $site->title;
     }
 
     // Get the default sites value.
