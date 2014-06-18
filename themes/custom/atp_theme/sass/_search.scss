@@ -1,5 +1,8 @@
+$mobile-side-padding: ($margins/2);
+
+
 .toggle-search {
-  background: url('../images/icon-search.svg') no-repeat left top;
+  @include background-image('icon-search');
   background-size: 16px auto;
   width: 16px;
   height: 16px;
@@ -26,7 +29,7 @@
   margin-top: ($container-height - $input-height)/2;
   @include device(phone){
     width: 100%;
-    padding: 0  $margins/2
+    padding: 0  $mobile-side-padding;
   }
   input.form-text {
     background-color: $gray;
@@ -185,6 +188,6 @@
 @include device(phone) {
   .search-form.gss,
   .google-search-results {
-    padding: 0 10px;
+    padding: 0 $mobile-side-padding;
   }
 }
