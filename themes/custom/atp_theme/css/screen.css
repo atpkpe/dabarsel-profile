@@ -206,6 +206,8 @@ header > .bottom .level-2-3 h2:after { display: block; border: 0; width: 0; heig
 #main aside .menu a:hover { text-decoration: none; }
 #main aside .menu a.active-trail { color: #7c9500; }
 
+.bc { margin-bottom: 20px; }
+
 footer { background: #e6e7e4; padding-top: 30px; }
 footer > section { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 footer > section:before, footer > section:after { content: "."; display: block; height: 0; overflow: hidden; }
