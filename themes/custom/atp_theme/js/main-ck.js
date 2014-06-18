@@ -1,2 +1,2 @@
 // Javascript executed on every page load
-(function(e){e(".toggle-menu").click(function(){e("body").hasClass("show-menu")?e("body").removeClass("show-menu"):e("body").addClass("show-menu")});e(".level-2-3").bind("touchstart, click",function(){e(this).toggleClass("expand")});Drupal.behaviors.main={attach:function(e,t){}}})(jQuery);
+(function(e){e(".toggle-menu").click(function(){e("body").hasClass("show-menu")?e("body").removeClass("show-menu"):e("body").addClass("show-menu")});e(".toggle-search").click(function(){e("body").hasClass("show-search")?e("body").removeClass("show-search"):e("body").addClass("show-search")});e(".level-2-3").bind("touchstart, click",function(){e(this).toggleClass("expand")});Drupal.behaviors.main={attach:function(e,t){}}})(jQuery);

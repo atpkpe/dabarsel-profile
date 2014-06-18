@@ -11,6 +11,7 @@
       <div class="top">
         <div class="inner">
           <?php print $content['header']; ?>
+          <nav class="show-mobile toggle-search"></nav>
           <nav class="show-mobile toggle-menu"></nav>
           <nav class="mobile-menu">
             <?php print $content['mobile-menu']; ?>

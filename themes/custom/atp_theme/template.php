@@ -4,6 +4,15 @@
  * Overwrite theme_links().
  * Specifically for language switcher
  */
+
+function atp_theme_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+  if (!empty($breadcrumb)) {
+    $output .= '<div class="bc">' . implode(' <span>-<span> ', $breadcrumb) . '</div>';
+    return $output;
+  }
+}
+
 function atp_theme_links__locale_block($variables) {
   $links = $variables['links'];
 
@@ -26,9 +35,9 @@ function atp_theme_links__locale_block($variables) {
       if ($i == $num_links) {
         $class[] = 'last';
       }
-      
+
       $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
-      
+
       // Goto frontpage if no translation exist
       if (empty($link['href']))
         $link['href'] = '<front>';

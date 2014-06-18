@@ -9,6 +9,13 @@
       $("body").addClass("show-menu");
     }
   });
+  $(".toggle-search").click(function(){
+    if($("body").hasClass("show-search")) {
+      $("body").removeClass("show-search");
+    } else {
+      $("body").addClass("show-search");
+    }
+  });
   $('.level-2-3').bind( "touchstart, click", function(){
     $(this).toggleClass("expand");
   });
