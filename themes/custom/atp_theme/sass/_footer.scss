@@ -1,11 +1,49 @@
 footer {
   background: $gray;
   padding-top: 30px;
+  > section {
+    @include clearfix;
+  }
 }
 .footer-menu {
   @include content;
   @include clearfix;
   padding-bottom: $margins;
+  ul {
+    list-style: none;
+  }
+  > ul {
+    @include content;
+    @include clearfix;
+    > li {
+      @include float-span(4);
+      float: left;
+      &.last {
+        margin-right: 0;
+      }
+      > a {
+        @include header-fontfamily;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 1px solid $gray-green;
+        display: block;
+        font-size: 13px;
+        line-height: 30px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      li {
+        a {
+          color: $gray-light;
+          padding-right: 20px;
+          line-height: 42px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+  /*
   li {
     list-style: none;
   }
@@ -41,6 +79,27 @@ footer {
           border-bottom: 1px solid $gray-green;
         }
       }
+    }
+  }
+  */
+}
+.shortcuts {
+  @include float-span(8);
+  margin-right: 0;
+  margin-bottom: $margins;
+  h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid $gray-green;
+    display: block;
+    font-size: 13px;
+    line-height: 30px;
+  }
+  ul {
+    list-style: none;
+    a {
+      text-decoration: underline;
+      line-height: 22px;
     }
   }
 }

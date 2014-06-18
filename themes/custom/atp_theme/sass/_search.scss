@@ -1,31 +1,71 @@
+$mobile-side-padding: ($margins/2);
+
+
+.toggle-search {
+  @include background-image('icon-search');
+  background-size: 16px auto;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 18px;
+  right: 44px;
+}
+
 // top input search
-.gss {
+#search-block-form {
   @include device(phone){
-    &#search-block-form {
-      display: none;
-    }
+    display: none;
   }
+  .show-search & {
+    display: block;
+  }
+}
+.gss {
+  $container-height: 30px;
+  $input-height: 16px;
   float: right;
-  line-height: 30px;
+  position: relative;
+  width: 113px;
+  margin-top: ($container-height - $input-height)/2;
+  @include device(phone){
+    width: 100%;
+    padding: 0  $mobile-side-padding;
+  }
   input.form-text {
     background-color: $gray;
-    width: 113px;
-    height: 16px;
+    width: 100%;
+    height: $input-height;
     padding: 0 20px 0 5px;
-    margin-top: 7px; //chromefix
+    font-size: 11px;
+    border: 0;
+    margin: 0;
+    display: block;
+    @include device(phone){
+      width: 100%;
+      height: 32px;
+      font-size: 13px;
+    }
   }
   input.form-submit {
     @include background-image('icon-search');
     background-size: 12px 12px;
     background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
     position: absolute;
     width: 12px;
-    height: 12px;
-    top: 9px;
+    height: 16px;
+    top: 0;
     right: 5px;
     border: 0;
     text-indent: -200px;
     overflow: hidden;
+    @include device(phone){
+      background-size: 16px 16px;
+      width: 16px;
+      height: 32px;
+      right: 15px;
+    }
   }
 }
 
@@ -40,9 +80,9 @@
     width: auto!important;
     height: auto!important;
     float: left;
-    top: 30px!important;
-    left: inherit!important;
-    right: 0!important;
+    top: 23px!important;
+    // left: inherit!important;
+    // right: 0!important;
     border: 1px solid $gray;
     z-index: 100;
   }
@@ -99,11 +139,12 @@
     background-size: 22px 22px;
     width: 22px;
     height: 22px;
-    top: 39px;
+    top: 20px;
     right: 15px;
     margin-top: 7px;
   }
 }
+
 .google-search-results {
   @include content;
   @include clearfix;
@@ -143,4 +184,10 @@
 }
 .searchhead {
   margin-bottom: $margins;
+}
+@include device(phone) {
+  .search-form.gss,
+  .google-search-results {
+    padding: 0 $mobile-side-padding;
+  }
 }

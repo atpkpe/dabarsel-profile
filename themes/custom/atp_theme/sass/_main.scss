@@ -25,3 +25,10 @@
     }
   }
 }
+.bc {
+  margin-bottom: $margins;
+  * {
+    color: $gray-green;
+    font-size: 12px;
+  }
+}

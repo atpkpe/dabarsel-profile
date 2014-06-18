@@ -66,6 +66,7 @@ header {
   }
   > .bottom {
     background: $gray;
+    clear: both;
     @include device(phone){
       background: transparent;
     }
@@ -121,6 +122,7 @@ header {
       }
       h2 {
         @include font;
+        font-weight: 400;
         padding: $margins/2;
         border: ($margins/2) solid $body-color;
         margin: 0;
@@ -295,7 +297,7 @@ header {
 .toggle-menu {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 10px;
   width: 16px;
   height: 12px;
   border-top: 2px solid $gray-dark;
@@ -322,7 +324,9 @@ header {
   border-top: 1px solid $gray;
   border-bottom: 1px solid $gray;
   .show-menu & {
-    display: block;
+    @include device(phone){
+      display: block;
+    }
   }
   * {
     text-transform: uppercase;

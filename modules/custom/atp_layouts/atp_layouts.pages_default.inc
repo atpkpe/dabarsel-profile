@@ -145,7 +145,7 @@ function atp_layouts_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'shorcuts',
+      'css_class' => 'shortcuts',
     );
     $pane->extras = array();
     $pane->position = 1;
