@@ -1,12 +1,27 @@
+.toggle-search {
+  background: url('../images/icon-search.svg') no-repeat left top;
+  background-size: 16px auto;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 18px;
+  right: 44px;
+}
+
 // top input search
-.gss {
+#search-block-form {
   @include device(phone){
-    &#search-block-form {
-      display: none;
-    }
+    display: none;
+
   }
+  .show-search & {
+    display: block;
+  }
+}
+.gss {
   float: right;
   line-height: 30px;
+  position: relative;
   input.form-text {
     background-color: $gray;
     width: 113px;
