@@ -430,15 +430,15 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 .gss { float: right; line-height: 30px; }
 @media screen and (max-width: 500px) { .gss#search-block-form { display: none; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .gss#search-block-form { display: none; } }
-.gss input.form-text { background-color: #e6e7e4; width: 113px; height: 16px; padding: 0 20px 0 5px; margin-top: 7px; }
-.gss input.form-submit { background-image: url(../images/icon-search.svg); background-size: 12px 12px; background-color: transparent; position: absolute; width: 12px; height: 12px; top: 9px; right: 5px; border: 0; text-indent: -200px; overflow: hidden; }
+.gss input.form-text { background-color: #e6e7e4; width: 113px; height: 16px; padding: 0 20px 0 5px; margin-top: 7px; font-size: 11px; }
+.gss input.form-submit { background-image: url(../images/icon-search.svg); background-size: 12px 12px; background-color: transparent; position: absolute; width: 12px; height: 12px; top: 11px; right: 5px; border: 0; text-indent: -200px; overflow: hidden; }
 .no-svg .gss input.form-submit { background-image: url(../images/icon-search.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .gss input.form-submit { background-image: url(../images/icon-search@2x.png); } }
 
 .ui-helper-hidden-accessible { display: none; }
 
 .ui-autocomplete { background-color: #fff; }
-.ui-autocomplete#ui-id-1 { position: absolute !important; width: auto !important; height: auto !important; float: left; top: 30px !important; left: inherit !important; right: 0 !important; border: 1px solid #e6e7e4; z-index: 100; }
+.ui-autocomplete#ui-id-1 { position: absolute !important; width: auto !important; height: auto !important; float: left; top: 30px !important; border: 1px solid #e6e7e4; z-index: 100; }
 .ui-autocomplete li { width: 100%; list-style: none; float: left; clear: left; }
 .ui-autocomplete li:hover { cursor: pointer; background-color: #adc200; }
 .ui-autocomplete li:hover a { color: #fff; text-decoration: none; }
@@ -491,6 +491,13 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 
 .searchhead { margin-bottom: 20px; }
 
-.sas-table { width: 100%; }
+@media screen and (max-width: 500px) { .search-form.gss, .google-search-results { padding: 0 10px; } }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .search-form.gss, .google-search-results { padding: 0 10px; } }
+body.admin-menu ul#ui-id-1.ui-autocomplete { top: 58px !important; }
+
+.sas-table { width: 100%; background-color: #f2f1f0; empty-cells: hide; padding: 20px; }
 .sas-table tr { background-color: #fff; }
-.sas-table tr > td { border-bottom: 10px solid #f2f1f0; line-height: 30px; }
+.sas-table tr > td { border-top: 2.5px solid #f2f1f0; line-height: 30px; }
+.sas-table .format-strong { font-weight: bold; }
+.sas-table .pos-left { padding-left: 20px; text-align: left; }
+.sas-table .pos-right { text-align: right; padding-right: 20px; }

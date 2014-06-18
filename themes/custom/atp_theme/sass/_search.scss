@@ -13,6 +13,7 @@
     height: 16px;
     padding: 0 20px 0 5px;
     margin-top: 7px; //chromefix
+    font-size: 11px;
   }
   input.form-submit {
     @include background-image('icon-search');
@@ -21,7 +22,7 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    top: 9px;
+    top: 11px;
     right: 5px;
     border: 0;
     text-indent: -200px;
@@ -41,8 +42,8 @@
     height: auto!important;
     float: left;
     top: 30px!important;
-    left: inherit!important;
-    right: 0!important;
+    // left: inherit!important;
+    // right: 0!important;
     border: 1px solid $gray;
     z-index: 100;
   }
@@ -95,6 +96,7 @@
     padding: 0 10px;
     width: 100%;
   }
+
   .form-submit {
     background-size: 22px 22px;
     width: 22px;
@@ -104,6 +106,7 @@
     margin-top: 7px;
   }
 }
+
 .google-search-results {
   @include content;
   @include clearfix;
@@ -144,3 +147,11 @@
 .searchhead {
   margin-bottom: $margins;
 }
+@include device(phone) {
+  .search-form.gss,
+  .google-search-results {
+    padding: 0 10px;
+  }
+}
+
+  body.admin-menu ul#ui-id-1.ui-autocomplete { top: 58px!important; } // fix when admin menu is shown
