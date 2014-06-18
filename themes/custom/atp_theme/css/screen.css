@@ -233,12 +233,12 @@ a { color: $gray-green; line-height: 22px; border-bottom: 1px solid $gray-green;
 .footer-menu > ul:after { clear: both; }
 .footer-menu > ul > li { width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; float: left; }
 .footer-menu > ul > li.last { margin-right: 0; }
-.footer-menu > ul > li > a { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; }
+.footer-menu > ul > li > a { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; line-height: 30px; }
 .footer-menu > ul > li > a:hover { text-decoration: none; }
 .footer-menu > ul > li li a { color: #f2f1f0; padding-right: 20px; line-height: 42px; line-height: 22px; }
 
 .shortcuts { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; margin-right: 0; margin-bottom: 20px; }
-.shortcuts h2 { font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; }
+.shortcuts h2 { font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; line-height: 30px; }
 .shortcuts ul { list-style: none; }
 .shortcuts ul a { text-decoration: underline; line-height: 22px; }
 
