@@ -17,8 +17,6 @@ class SiteHelper {
    *   Form element, ready to be used by FAP.
    */
   public static function buildSiteFormElement($node) {
-       
-    // print_r( $node );
 
     // Build the sites #options.
     $sites = SiteController::getSites();
@@ -37,10 +35,10 @@ class SiteHelper {
 
     // If we're in a subsite and no sites are selected, we check the current
     // subsite by default.
-    //$site = SiteController::getCurrentSite();
-    //if (empty($default) && isset($site->sid)) {
-    //  $default[$site->sid] = $site->sid;
-    //}
+    $site = SiteController::getCurrentSite();
+    if (empty($default) && isset($site->sid)) {
+      $default[$site->sid] = $site->sid;
+    }
 
     $form_element = array(
       'sites-options' => array(
@@ -115,9 +113,9 @@ class SiteHelper {
    */
   public static function validateSiteForm(&$form, &$form_state) {
     // Check that site name is unique.
-    if (self::siteNameIsUnique($form_state) === FALSE) {
-      form_set_error('site_name', t('Site name should be unique.'));
-    }
+    //if (self::siteNameIsUnique($form_state) === FALSE) {
+    //  form_set_error('site_name', t('Site name should be unique.'));
+    //}
   }
 
   /**
