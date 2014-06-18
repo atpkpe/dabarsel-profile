@@ -1,12 +1,25 @@
 // Tables
 .sas-table {
   width: 100%;
+  background-color: $gray-light;
+  empty-cells: hide;
+  padding: $margins;
   tr {
     background-color: #fff;
     > td {
-      border-bottom: ($margins/2) solid $gray-light;
+      border-top: ($margins/8) solid $gray-light;
       line-height: 30px;
     }
   }
-
+  .format-strong {
+    font-weight: bold;
+  }
+  .pos-left {
+    padding-left: $margins;
+    text-align: left;
+  }
+  .pos-right {
+    text-align: right;
+    padding-right: $margins;
+  }
 }
