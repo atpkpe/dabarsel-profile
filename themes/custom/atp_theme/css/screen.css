@@ -444,7 +444,9 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 .no-svg a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green@2x.png); } }
 
-.toggle-search { background: url("../images/icon-search.svg") no-repeat left top; background-size: 16px auto; width: 16px; height: 16px; position: absolute; top: 18px; right: 44px; }
+.toggle-search { background-image: url(../images/icon-search.svg); background-size: 16px auto; width: 16px; height: 16px; position: absolute; top: 18px; right: 44px; }
+.no-svg .toggle-search { background-image: url(../images/icon-search.png); }
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .toggle-search { background-image: url(../images/icon-search@2x.png); } }
 
 @media screen and (max-width: 500px) { #search-block-form { display: none; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { #search-block-form { display: none; } }
