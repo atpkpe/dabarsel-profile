@@ -451,7 +451,7 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 .ui-helper-hidden-accessible { display: none; }
 
 .ui-autocomplete { background-color: #fff; }
-.ui-autocomplete#ui-id-1 { position: absolute !important; width: auto !important; height: auto !important; float: left; top: 30px !important; border: 1px solid #e6e7e4; z-index: 100; }
+.ui-autocomplete#ui-id-1 { position: absolute !important; width: auto !important; height: auto !important; float: left; top: 23px !important; border: 1px solid #e6e7e4; z-index: 100; }
 .ui-autocomplete li { width: 100%; list-style: none; float: left; clear: left; }
 .ui-autocomplete li:hover { cursor: pointer; background-color: #adc200; }
 .ui-autocomplete li:hover a { color: #fff; text-decoration: none; }
@@ -470,7 +470,7 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 .search-form.gss:after { clear: both; }
 
 .search-form.gss input#edit-keys.form-text { font-size: 20px; height: 40px; padding: 0 10px; width: 100%; }
-.search-form.gss .form-submit { background-size: 22px 22px; width: 22px; height: 22px; top: 39px; right: 15px; margin-top: 7px; }
+.search-form.gss .form-submit { background-size: 22px 22px; width: 22px; height: 22px; top: 20px; right: 15px; margin-top: 7px; }
 
 .google-search-results { margin: 0 auto; width: 960px; /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; margin-bottom: 20px; }
 @media screen and (max-width: 960px) { .google-search-results { padding: 0; width: 100%; } }
@@ -506,8 +506,6 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 
 @media screen and (max-width: 500px) { .search-form.gss, .google-search-results { padding: 0 10px; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .search-form.gss, .google-search-results { padding: 0 10px; } }
-body.admin-menu ul#ui-id-1.ui-autocomplete { top: 58px !important; }
-
 .sas-table { width: 100%; background-color: #f2f1f0; empty-cells: hide; padding: 20px; }
 .sas-table tr { background-color: #fff; }
 .sas-table tr > td { border-top: 2.5px solid #f2f1f0; line-height: 30px; }
