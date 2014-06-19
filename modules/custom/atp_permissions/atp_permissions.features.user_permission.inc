@@ -611,20 +611,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: 'administer panelizer taxonomy_term sites defaults'.
-  $permissions['administer panelizer taxonomy_term sites defaults'] = array(
-    'name' => 'administer panelizer taxonomy_term sites defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer user user defaults'.
-  $permissions['administer panelizer user user defaults'] = array(
-    'name' => 'administer panelizer user user defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'administer panels layouts'.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
@@ -1883,15 +1869,6 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'filter',
-  );
-
-  // Exported permission: 'use workbench_media add form'.
-  $permissions['use workbench_media add form'] = array(
-    'name' => 'use workbench_media add form',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'workbench_media',
   );
 
   // Exported permission: 'use workbench_moderation my drafts tab'.
