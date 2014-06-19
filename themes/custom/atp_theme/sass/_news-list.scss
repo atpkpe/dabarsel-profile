@@ -8,14 +8,14 @@ $filter-text-color-hover: $text-color;
   li {
     display: inline-block;
     .news-filter-button {
+      background-color: $filter-bg-hover;
+      color: $filter-text-color-hover;
       cursor: pointer;
-      padding: 5px;
-      background-color: $filter-bg;
-      color: $filter-text-color;
+      padding: $margins/4;
       &.active,
       &:hover {
-        background-color: $filter-bg-hover;
-        color: $filter-text-color-hover;
+        background-color: $filter-bg;
+      color: $filter-text-color;
       }
     }
   }
