@@ -4,6 +4,9 @@
  * Code for the ATP SAS.
  */
 
+
+define('ATP_SAS_DIAG_BROWSER_ROOT_PATH', 'profiles/atp/modules/custom/atp_sas/test');
+
 /**
  * implements hook_menu
  */
@@ -85,7 +88,7 @@ function atp_sas_get_dir_sctructure($dir) {
     RecursiveIteratorIterator::SELF_FIRST
   );
   $files->setMaxDepth(0);
-  dd($dir);
+
   if ($files->callHasChildren()) {
     foreach ($files as $child) {
       if ($child->isDir()) {
@@ -110,14 +113,14 @@ function atp_sas_get_dir_sctructure($dir) {
 }
 
 function atp_sas_ajax_get_file_browser($json = FALSE) {
-  $default_path = drupal_get_path('module', 'atp_sas') . '/test';
-  $path = !empty($_GET['path']) ? $_GET['path'] : $default_path;
+  $root_path = variable_get('atp_sas_diag_browser_root_path', ATP_SAS_DIAG_BROWSER_ROOT_PATH);
+  $path = !empty($_GET['path']) ? $_GET['path'] : $root_path;
   $structure = atp_sas_get_dir_sctructure($path);
-  $items = array();
+  $file_structure_items = array();
   foreach ($structure as $item) {
     switch ($item['type']) {
       case 'dir':
-        $items[] = l(
+        $file_structure_items[] = l(
           $item['node']->getFilename(),
           'atp-sas/ajax/browser/json',
           array(
@@ -133,7 +136,7 @@ function atp_sas_ajax_get_file_browser($json = FALSE) {
       case 'file':
         $diag_id = str_replace('.xml', '', $item['node']->getFilename());
         $diag = sasDiagFactory::create($diag_id, $item['node']->getPath());
-        $items[] = l(
+        $file_structure_items[] = l(
           $diag_id,
           '',
           array(
@@ -150,15 +153,51 @@ function atp_sas_ajax_get_file_browser($json = FALSE) {
         break;
     }
   }
+  $file_browser_button_items = array();
+  $file_browser_button_items[] = l(
+    t('Back'),
+    'atp-sas/ajax/browser/json',
+    array(
+      'query' => array(
+        'path' => preg_replace(
+          '#(.*)/[^/]+[/]?$#s',
+          '$1',
+          $item['node']->getPath()
+        )
+      ),
+      'attributes' => array(
+        'class' => array(
+          'sas-browser-item-dir',
+        ),
+      ),
+    )
+  );
   $output = array(
-    'dir_structure' => array(
+    'file_browser_wrapper' => array(
       '#type' => 'container',
       '#attributes' => array(
-        'id' => 'sas-dir-browser',
+        'id' => 'sas-file-browser',
       ),
-      'browser' => array(
-        '#items' => $items,
+      'file_structure_wrapper' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'id' => 'sas-file-structure',
+        ),
+        'file_structure' => array(
+          '#items' => $file_structure_items,
+          '#theme' => 'item_list',
+        ),
+      ),
+    ),
+    'file_browser_buttons_wrapper' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'id' => 'sas-file-browser-buttons',
+      ),
+      'file_browser_buttons_wrapper' => array(
+        '#items' => $file_browser_button_items,
         '#theme' => 'item_list',
+        '#access' => $path != $root_path,
       ),
     ),
   );
