@@ -47,9 +47,14 @@
           $(this).dialog("close");
         };
 
-        dialogdiv.find('.form-save-diagram').click(function(evt) {
+
+        $('.sas-browser-item-file').live('click', function(evt) {
           evt.preventDefault();
-          settings.sasDiagId = $('#sas-diagrams input:radio:checked', dialogdiv).val();
+          settings.sasDiag = {
+            id: $(this).data('id'),
+            path: $(this).data('path'),
+            type: $(this).data('type')
+          }
           var content = Drupal.wysiwyg.plugins['sas_diag']._getPlaceholder(settings);
           Drupal.wysiwyg.instances[instanceId].insert(content);
           dialogdiv.dialog("close");
@@ -79,8 +84,13 @@
      * Replace all <!--sasDiag--> tags with the icon.
      */
     attach: function(content, settings, instanceId) {
-      var reg = new RegExp("\\[sasDiag:"+ "([^\\]]+)" +"\\]", "gi");
-      content = content.replace(reg, '<p>&nbsp;</p><p class="sas-diag sas-diag-id-$1">This is a $1</p>');
+      var reg = /\[\[sasDiag\|id:([^|]+)\|path:([^|]+)\|type:([^\]]+)\]\]/gim;
+      content = content.replace(reg, function(token, id, path, type){
+        settings.sasDiag = {id: id, path: path, type: type};
+        return Drupal.wysiwyg.plugins['sas_diag']._getPlaceholder(settings);
+      });
+
+
       return content;
     },
 
@@ -88,21 +98,52 @@
      * Replace the icons with <!--sasDiag--> tags in content upon detaching editor.
      */
     detach: function(content, settings, instanceId) {
-      var reg = new RegExp('<p>&nbsp;</p><p class="sas-diag sas-diag-id-([^"]+)">[^<]+</p>', "gi");
-      content = content.replace(reg, '[sasDiag:$1]');
-      return content;
+      var container = $('<div>').html(content);
+      $('img.wysiwyg-sas-diag', container).each(function(){
+        var data = $(this).data();
+        var sasDiagProps = [];
+        for(var prop in data) {
+          sasDiagProps.push(prop + ':' + data[prop]);
+        }
+        $(this).replaceWith('[[sasDiag|' + sasDiagProps.join('|') + ']]');
+      });
+      return container.html();;
     },
 
     /**
      * Helper function to return a HTML placeholder.
      */
     _getPlaceholder: function (settings) {
-      if(settings.sasDiagId) {
-        return '[sasDiag:' + settings.sasDiagId + ']';
+      if (settings.sasDiag) {
+        var sasDiag = settings.sasDiag;
+        var src = settings.path + '/' + '/images/chart_' + sasDiag.type + '.png';
+        var dataAttributes = [];
+        for (var prop in sasDiag) {
+          dataAttributes.push('data-' + prop + '="' + sasDiag[prop] + '"');
+        }
+        return '<img style="display:block" src="' + src +'" ' + dataAttributes.join(' ') + ' title="' + sasDiag.id + '" class="wysiwyg-sas-diag drupal-content" />';
       }
       return '';
     }
 
+  };
+
+  Drupal.behaviors.atp_sas_diag_browser = {
+    attach: function(context, settings) {
+      $('.sas-browser-item-dir').click(function(event) {
+        event.preventDefault();
+        var $link = $(this);
+        $.ajax({
+          url: $link.attr('href'),
+          type: 'post',
+          dataType: 'json',
+          success: function (xhr) {
+            $('#sas-dir-browser-wrapper').html(xhr);
+            Drupal.attachBehaviors(context, settings);
+          }
+        });
+      });
+    }
   };
 
 })(jQuery);

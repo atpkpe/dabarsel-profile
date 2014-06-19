@@ -9,14 +9,14 @@
  */
 function atp_sas_menu() {
   $items = array();
-  $items['atp-sas/chart-test'] = array(
-    'page callback' => 'atp_sas_chart_test',
-//    'page arguments' => array(2),
-    'access callback' => TRUE,
-    'type' => MENU_CALLBACK,
-  );
+//  $items['atp-sas/chart-test'] = array(
+//    'page callback' => 'atp_sas_chart_test',
+////    'page arguments' => array(2),
+//    'access callback' => TRUE,
+//    'type' => MENU_CALLBACK,
+//  );
   $items['atp-sas/insert/nojs'] = array(
-    'page callback' => 'atp_sas_get_insert_form',
+    'page callback' => 'atp_sas_get_file_browser',
     'page arguments' => array(2),
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
@@ -24,23 +24,50 @@ function atp_sas_menu() {
   $items['atp-sas/insert/ajax'] = array(
       'delivery callback' => 'ajax_deliver'
     ) + $items['atp-sas/insert/nojs'];
-  
+
+  $items['atp-sas/ajax/browser/json'] = array(
+    'page callback' => 'atp_sas_ajax_get_file_browser',
+    'access callback' => TRUE,
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
-function atp_sas_init() {
+/**
+ * Implementation of hook_filter_info()
+ */
+function atp_sas_filter_info() {
+
+  $filters['atp_sas_diag_embed'] = array(
+    'title' => t('Insert diagram'),
+    'description' => t('By including the syntax [[sasDiag:(settings)], this filter will embed a diagram.'),
+    'process callback' => '_atp_sas_diag_embed_process',
+    'tips callback'  => '_atp_sas_diag_embed_tips',
+    'cache' => FALSE,
+  );
+
+  return $filters;
 
 }
 
-function atp_sas_get_insert_form($ajax) {
+function atp_sas_get_file_browser($ajax) {
   $is_ajax = $ajax === 'ajax';
-  $form = drupal_get_form('atp_sas_diag_token_insert_form');
+  $output = array();
+  $output['sas_dir_browser_wrapper'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'id' => 'sas-dir-browser-wrapper',
+    ),
+  );
+  $output['sas_dir_browser_wrapper'] += atp_sas_ajax_get_file_browser();
   if ($is_ajax) {
-    $form = drupal_render($form);
-    die($form);
+    $render = render($output);
+    die($render);
   }
   else {
-    return $form;
+    return $output;
   }
 }
 
@@ -51,40 +78,129 @@ function atp_sas_wysiwyg_include_directory($type) {
   return $type;
 }
 
-function atp_sas_diag_token_insert_form($form, &$form_state) {
-  drupal_add_library('system', 'ui.dialog');
+function atp_sas_get_dir_sctructure($dir) {
+  $structure = array();
+  $files = new RecursiveIteratorIterator(
+    new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS),
+    RecursiveIteratorIterator::SELF_FIRST
+  );
+  $files->setMaxDepth(0);
+  dd($dir);
+  if ($files->callHasChildren()) {
+    foreach ($files as $child) {
+      if ($child->isDir()) {
+        $structure[] = array(
+          'type' => 'dir',
+          'node' => $child,
+        );
+      }
+    }
+  }
+  else {
+    foreach ($files as $child) {
+      if ($child->isFile()) {
+        $structure[] = array(
+          'type' => 'file',
+          'node' => $child,
+        );
+      }
+    }
+  }
+  return $structure;
+}
 
-  $form['#tree'] = TRUE;
-  $form['diagrams'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Diagrams'),
-    '#prefix' => '<div id="sas-diagrams">',
-    '#suffix' => '</div>',
-  );
-  $form['diagrams']['example1'] = array(
-    '#type' => 'radios',
-    '#title' => t('2013 - Q1'),
-    '#options' => array(
-      'bar' => 'bar',
-      'line' => 'line',
-      'pie' => 'pie',
-      'table' => 'table',
+function atp_sas_ajax_get_file_browser($json = FALSE) {
+  $default_path = drupal_get_path('module', 'atp_sas') . '/test';
+  $path = !empty($_GET['path']) ? $_GET['path'] : $default_path;
+  $structure = atp_sas_get_dir_sctructure($path);
+  $items = array();
+  foreach ($structure as $item) {
+    switch ($item['type']) {
+      case 'dir':
+        $items[] = l(
+          $item['node']->getFilename(),
+          'atp-sas/ajax/browser/json',
+          array(
+            'query' => array('path' => $item['node']->getPath() . '/' . $item['node']->getFilename()),
+            'attributes' => array(
+              'class' => array(
+                'sas-browser-item-dir',
+              ),
+            ),
+          )
+        );
+        break;
+      case 'file':
+        $diag_id = str_replace('.xml', '', $item['node']->getFilename());
+        $diag = sasDiagFactory::create($diag_id, $item['node']->getPath());
+        $items[] = l(
+          $diag_id,
+          '',
+          array(
+            'attributes' => array(
+              'data-path' => $item['node']->getPath(),
+              'data-id' => $diag_id,
+              'data-type' => $diag->getType(),
+              'class' => array(
+                'sas-browser-item-file',
+              ),
+            ),
+          )
+        );
+        break;
+    }
+  }
+  $output = array(
+    'dir_structure' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'id' => 'sas-dir-browser',
+      ),
+      'browser' => array(
+        '#items' => $items,
+        '#theme' => 'item_list',
+      ),
     ),
-    '#description' => t('Choose a diagram.'),
   );
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Submit'),
-    '#attributes' => array(
-      'class' => array('form-save-diagram'),
-    ),
-  );
+  if ($json) {
+    $output = render($output);
+    drupal_json_output($output);
+    die;
+  }
+  else {
+    return $output;
+  }
 
-  return $form;
+}
+
+/**
+ * Process callback for hook_filter
+ */
+function _atp_sas_diag_embed_process($text, $filter, $format, $langcode, $cache, $cache_id) {
+  drupal_add_js('https://www.google.com/jsapi', 'external');
+  return preg_replace_callback(
+    '/\[\[sasDiag\|id:([^|]+)\|path:([^|]+)\|type:([^\]]+)\]\]/',
+    function($m){
+      $diag = sasDiagFactory::create($m[1], $m[2]);
+      $output = $diag->render();
+      return render($output);
+    },
+  $text);
+}
+
+/**
+ * Tips callback for hook_filter
+ */
+function _atp_sas_diag_embed_tips($filter, $format, $long) {
+  return t('[[sasDiag|id:(xml file name without extension)|path:(path to xml file)|type:(type of diagram)]] - Insert a diagram.');
 }
 
 function atp_sas_chart_test() {
+  // Atodo: sas root path variable.
   drupal_add_js('https://www.google.com/jsapi', 'external');
+  drupal_add_js(drupal_get_path('module', 'atp_sas') . '/js/sas_diag.js');
+  drupal_add_js(drupal_get_path('theme', 'atp_theme') .'/js/jquery.throttledresize.js');
+  drupal_add_js(drupal_get_path('theme', 'atp_theme') .'/js/jquery.debouncedresize.js');
   $diags = array();
   $diags[] = sasDiagFactory::create('DQ1_FIG3a_Risikoklasser_Circle');
   $diags[] = sasDiagFactory::create('DQ1_FIG5_HistoriskeResultater_Bar');
