@@ -75,7 +75,10 @@ function atp_page_strongarm() {
           'weight' => '2',
         ),
         'language' => array(
-          'weight' => '-4',
+          'weight' => '2',
+        ),
+        'workbench_access' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(

@@ -1231,36 +1231,6 @@ function atp_page_panelizer_defaults() {
     $pane->uuid = '658ff852-c137-4d20-ab15-832d4f974813';
     $display->content['new-658ff852-c137-4d20-ab15-832d4f974813'] = $pane;
     $display->panels['row2'][2] = 'new-658ff852-c137-4d20-ab15-832d4f974813';
-    $pane = new stdClass();
-    $pane->pid = 'new-ed8b4b9b-d34e-45d4-9359-21c5cc8adc2c';
-    $pane->panel = 'row3';
-    $pane->type = 'news_list';
-    $pane->subtype = 'news_list';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '3',
-      'list_type' => 'filtered',
-      'categories' => array(
-        3 => 0,
-        4 => 0,
-        1 => 0,
-        2 => 0,
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'ed8b4b9b-d34e-45d4-9359-21c5cc8adc2c';
-    $display->content['new-ed8b4b9b-d34e-45d4-9359-21c5cc8adc2c'] = $pane;
-    $display->panels['row3'][0] = 'new-ed8b4b9b-d34e-45d4-9359-21c5cc8adc2c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-658ff852-c137-4d20-ab15-832d4f974813';
   $panelizer->display = $display;
