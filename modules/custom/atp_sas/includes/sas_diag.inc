@@ -60,6 +60,10 @@ abstract class sasDiag {
           'id' => $this->selector,
           'style' => 'width: 100%; height: 400px',
         ),
+        'nbsp' => array(
+          '#type' => 'markup',
+          '#markup' => '&nbsp;',
+        ),
       ),
       '#attached' => array(
         'js' => array(
@@ -110,6 +114,10 @@ abstract class sasDiag {
       }
     }
     return $options;
+  }
+
+  public function getType() {
+    return $this->type;
   }
 
   protected abstract function defineOptions();

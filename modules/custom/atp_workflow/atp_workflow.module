@@ -1,5 +1,20 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the ATP workflow feature.
  */
+
+include_once 'atp_workflow.features.inc';
+
+/**
+ *  Implement hook_workbench_access_node_element_alter
+ */
+function atp_workflow_workbench_access_node_element_alter(&$element) {
+
+  // Set default value for new nodes to first option
+  if (empty($element['#default_value'])) {
+  	$keys = array_keys($element['#options']);
+    $element['#default_value'] = array($keys[1]);
+  }
+
+}

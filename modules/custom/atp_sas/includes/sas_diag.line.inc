@@ -9,51 +9,69 @@ class sasDiagLine extends sasDiag {
 
   public function __construct($id, $xml) {
     parent::__construct($id, $xml);
-    $this->type = 'lineSimple';
   }
 
   protected function defineOptions(){
     $options = $this->optionsAxisLabels();
-    $options['colors'] = array(self::colLightGreen);
+    $options['colors'] = array(
+      self::colDarkGreen,
+      self::colDarkGrey,
+      self::colGreen,
+      self::colLightGrey,
+      self::colLightGreen,
+      self::colGrey,
+    );
     $options['legend']['position'] = 'none';
     $options['chartArea']['backgroundColor'] = self::colLightGrey;
     $options['vAxis']['gridlines']['color'] = self::colWhite;
     $options['vAxis']['baselineColor'] = 'none';
-    $options['hAxis']['title'] = (string) $this->xml->values->value->attributes()->name;
     return $options;
   }
 
   protected function defineData() {
-    $options = $this->defineOptions();
     $data = array();
-    $data['header'] = array(
-      array('type' => 'string', 'data' => 'point'),
-      array('type' => 'number', 'data' => $options['vAxis']['title']),
-    );
+    $data['rows'] = array();
+    $header = array('');
+    
+    $group_rows = array();
+    $g = 0;
     foreach ($this->xml->values->children() as $value) {
+      $header[] = (string) $value->attributes()->name;
       foreach ($value->children() as $item) {
         $value = str_replace(',', '.', (string) $item);
-        $data['rows'][] = array('', (float) $value);
+        $group_rows[$g][] = (float) $value;
       }
+      $g++;
     }
+
+    $last_count = $max_group_id = 0;
+    foreach ($group_rows as $id => $group) {
+      $group_count = count($group);
+      if ($group_count > $last_count) {
+        $max_group_id = $id;
+      }
+      $last_count = $group_count;
+    }
+    foreach($group_rows[$max_group_id] as $g_row_id => $g_row){
+      $row = array('');
+      foreach($group_rows as &$group) {
+        if (!isset($group[$g_row_id])) {
+          $group[$g_row_id] = 'null';
+        }
+        $row[] = $group[$g_row_id];
+      }
+      $data['rows'][] = $row;
+    }
+
+    array_unshift($data['rows'], $header);
+
     return $data;
   }
 
 }
 
 /*
-  var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
-        ]);
-
-        var options = {
-          title: 'Company Performance'
-        };
-
+ * 
  <?xml version="1.0" encoding="UTF-8"?>
 <data>
 	<title>Figur 13 - dansk</title>
