@@ -3,3 +3,16 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ *  Implement hook_workbench_access_node_element_alter
+ */
+function atp_workflow_workbench_access_node_element_alter(&$element) {
+
+  // Set default value for new nodes to first option
+  if (empty($element['#default_value'])) {
+  	$keys = array_keys($element['#options']);
+    $element['#default_value'] = array($keys[1]);
+  }
+
+}
