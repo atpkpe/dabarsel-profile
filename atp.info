@@ -21,6 +21,7 @@ dependencies[] = field_group_link
 dependencies[] = masquerade
 dependencies[] = workbench
 dependencies[] = workbench_moderation
+dependencies[] = workbench_access
 dependencies[] = scheduler
 dependencies[] = scheduler_workbench
 dependencies[] = i18n
