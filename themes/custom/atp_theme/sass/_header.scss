@@ -274,17 +274,10 @@ header {
         }
       }
       > a {
-        padding: 0 17px;
+        @include padding(0, 1, 0, 1);
         $tmp: 70px;
         line-height: $tmp;
         height: $tmp;
-        @include device(tablet-portrait){
-          padding: ($margins/4) ($margins/2);
-        }
-        @include device(phone){
-          line-height: normal;
-          padding: ($margins/4) ($margins/2);
-        }
         &.active-trail {
           border-bottom: 4px solid $green-hover-header;
         }

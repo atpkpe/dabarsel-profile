@@ -85,6 +85,34 @@
 
 }
 
+/* MARGINS n PADDINGS */
+@mixin padding($pt:0, $pr:0, $pb:0, $pl:0) {
+  @if $pt > 0 { padding-top: $margins * $pt; }
+  @if $pr > 0 { padding-right: $margins * $pr; }
+  @if $pb > 0 { padding-bottom: $margins * $pb; }
+  @if $pl > 0 { padding-left: $margins * $pl; }
+  $tmp: $margins/2;
+  @include device(tablet-portrait) {
+    @if $pt > 0 { padding-top: $tmp * $pt; }
+    @if $pr > 0 { padding-right: $tmp * $pr; }
+    @if $pb > 0 { padding-bottom: $tmp * $pb; }
+    @if $pl > 0 { padding-left: $tmp * $pl; }
+  }
+}
+@mixin margin($pt:0, $pr:0, $pb:0, $pl:0) {
+  @if $pt > 0 { margin-top: $margins * $pt; }
+  @if $pr > 0 { margin-right: $margins * $pr; }
+  @if $pb > 0 { margin-bottom: $margins * $pb; }
+  @if $pl > 0 { margin-left: $margins * $pl; }
+  $tmp: $margins/2;
+  @include device(tablet-portrait) {
+    @if $pt > 0 { margin-top: $tmp * $pt; }
+    @if $pr > 0 { margin-right: $tmp * $pr; }
+    @if $pb > 0 { margin-bottom: $tmp * $pb; }
+    @if $pl > 0 { margin-left: $tmp * $pl; }
+  }
+}
+
 /* FONTS */
 @mixin header-fontfamily {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;

@@ -60,3 +60,4 @@ dependencies[] = atp_gallery
 dependencies[] = atp_gallery_embed
 dependencies[] = atp_permissions
 dependencies[] = atp_sas
+dependencies[] = atp_toolbar

@@ -21,6 +21,113 @@ function atp_permissions_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
+  // Exported permission: 'access administration pages'.
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access all views'.
+  $permissions['access all views'] = array(
+    'name' => 'access all views',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'views',
+  );
+
+  // Exported permission: 'access content'.
+  $permissions['access content'] = array(
+    'name' => 'access content',
+    'roles' => array(
+      'Author' => 'Author',
+      'Site administrator' => 'Site administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'access content overview'.
+  $permissions['access content overview'] = array(
+    'name' => 'access content overview',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'access contextual links'.
+  $permissions['access contextual links'] = array(
+    'name' => 'access contextual links',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'contextual',
+  );
+
+  // Exported permission: 'access devel information'.
+  $permissions['access devel information'] = array(
+    'name' => 'access devel information',
+    'roles' => array(),
+    'module' => 'devel',
+  );
+
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'media',
+  );
+
+  // Exported permission: 'access rules debug'.
+  $permissions['access rules debug'] = array(
+    'name' => 'access rules debug',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'rules',
+  );
+
+  // Exported permission: 'access site in maintenance mode'.
+  $permissions['access site in maintenance mode'] = array(
+    'name' => 'access site in maintenance mode',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access site reports'.
+  $permissions['access site reports'] = array(
+    'name' => 'access site reports',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access user profiles'.
+  $permissions['access user profiles'] = array(
+    'name' => 'access user profiles',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'user',
+  );
+
   // Exported permission: 'access workbench'.
   $permissions['access workbench'] = array(
     'name' => 'access workbench',
@@ -31,12 +138,342 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench',
   );
 
+  // Exported permission: 'access workbench access by role'.
+  $permissions['access workbench access by role'] = array(
+    'name' => 'access workbench access by role',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_access',
+  );
+
+  // Exported permission: 'add media from remote sources'.
+  $permissions['add media from remote sources'] = array(
+    'name' => 'add media from remote sources',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'media_internet',
+  );
+
+  // Exported permission: 'administer actions'.
+  $permissions['administer actions'] = array(
+    'name' => 'administer actions',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer advanced pane settings'.
+  $permissions['administer advanced pane settings'] = array(
+    'name' => 'administer advanced pane settings',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer content translations'.
+  $permissions['administer content translations'] = array(
+    'name' => 'administer content translations',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'i18n_node',
+  );
+
+  // Exported permission: 'administer content types'.
+  $permissions['administer content types'] = array(
+    'name' => 'administer content types',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'administer default config'.
+  $permissions['administer default config'] = array(
+    'name' => 'administer default config',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'defaultconfig',
+  );
+
+  // Exported permission: 'administer deployments'.
+  $permissions['administer deployments'] = array(
+    'name' => 'administer deployments',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'deploy',
+  );
+
+  // Exported permission: 'administer entity view modes'.
+  $permissions['administer entity view modes'] = array(
+    'name' => 'administer entity view modes',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'entity_view_mode',
+  );
+
+  // Exported permission: 'administer features'.
+  $permissions['administer features'] = array(
+    'name' => 'administer features',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'administer fieldable panels panes'.
+  $permissions['administer fieldable panels panes'] = array(
+    'name' => 'administer fieldable panels panes',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'administer fieldgroups'.
+  $permissions['administer fieldgroups'] = array(
+    'name' => 'administer fieldgroups',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'field_group',
+  );
+
+  // Exported permission: 'administer file types'.
+  $permissions['administer file types'] = array(
+    'name' => 'administer file types',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'administer files'.
+  $permissions['administer files'] = array(
+    'name' => 'administer files',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'administer filters'.
+  $permissions['administer filters'] = array(
+    'name' => 'administer filters',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'administer flexslider'.
+  $permissions['administer flexslider'] = array(
+    'name' => 'administer flexslider',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'flexslider',
+  );
+
+  // Exported permission: 'administer google analytics'.
+  $permissions['administer google analytics'] = array(
+    'name' => 'administer google analytics',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'googleanalytics',
+  );
+
+  // Exported permission: 'administer image styles'.
+  $permissions['administer image styles'] = array(
+    'name' => 'administer image styles',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'image',
+  );
+
+  // Exported permission: 'administer languages'.
+  $permissions['administer languages'] = array(
+    'name' => 'administer languages',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: 'administer linkit'.
+  $permissions['administer linkit'] = array(
+    'name' => 'administer linkit',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'linkit',
+  );
+
+  // Exported permission: 'administer main-menu_da'.
+  $permissions['administer main-menu_da'] = array(
+    'name' => 'administer main-menu_da',
+    'roles' => array(),
+    'module' => 'i18n_menu_overview',
+  );
+
+  // Exported permission: 'administer main-menu_en'.
+  $permissions['administer main-menu_en'] = array(
+    'name' => 'administer main-menu_en',
+    'roles' => array(),
+    'module' => 'i18n_menu_overview',
+  );
+
+  // Exported permission: 'administer masquerade'.
+  $permissions['administer masquerade'] = array(
+    'name' => 'administer masquerade',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'masquerade',
+  );
+
+  // Exported permission: 'administer media browser'.
+  $permissions['administer media browser'] = array(
+    'name' => 'administer media browser',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'media',
+  );
+
+  // Exported permission: 'administer menu'.
+  $permissions['administer menu'] = array(
+    'name' => 'administer menu',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'menu',
+  );
+
+  // Exported permission: 'administer menu-footer_da'.
+  $permissions['administer menu-footer_da'] = array(
+    'name' => 'administer menu-footer_da',
+    'roles' => array(),
+    'module' => 'i18n_menu_overview',
+  );
+
+  // Exported permission: 'administer menu-footer_en'.
+  $permissions['administer menu-footer_en'] = array(
+    'name' => 'administer menu-footer_en',
+    'roles' => array(),
+    'module' => 'i18n_menu_overview',
+  );
+
+  // Exported permission: 'administer menu-top_da'.
+  $permissions['administer menu-top_da'] = array(
+    'name' => 'administer menu-top_da',
+    'roles' => array(),
+    'module' => 'i18n_menu_overview',
+  );
+
+  // Exported permission: 'administer menu-top_en'.
+  $permissions['administer menu-top_en'] = array(
+    'name' => 'administer menu-top_en',
+    'roles' => array(),
+    'module' => 'i18n_menu_overview',
+  );
+
+  // Exported permission: 'administer mini panels'.
+  $permissions['administer mini panels'] = array(
+    'name' => 'administer mini panels',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels_mini',
+  );
+
+  // Exported permission: 'administer modules'.
+  $permissions['administer modules'] = array(
+    'name' => 'administer modules',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer multifield'.
+  $permissions['administer multifield'] = array(
+    'name' => 'administer multifield',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'multifield',
+  );
+
+  // Exported permission: 'administer nodes'.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'administer page manager'.
+  $permissions['administer page manager'] = array(
+    'name' => 'administer page manager',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'page_manager',
+  );
+
+  // Exported permission: 'administer pane access'.
+  $permissions['administer pane access'] = array(
+    'name' => 'administer pane access',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
   // Exported permission: 'administer panelizer'.
   $permissions['administer panelizer'] = array(
     'name' => 'administer panelizer',
     'roles' => array(
       'Developer' => 'Developer',
     ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node component defaults'.
+  $permissions['administer panelizer node component defaults'] = array(
+    'name' => 'administer panelizer node component defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node gallery defaults'.
+  $permissions['administer panelizer node gallery defaults'] = array(
+    'name' => 'administer panelizer node gallery defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node news defaults'.
+  $permissions['administer panelizer node news defaults'] = array(
+    'name' => 'administer panelizer node news defaults',
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
@@ -104,6 +541,211 @@ function atp_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node section choice'.
+  $permissions['administer panelizer node section choice'] = array(
+    'name' => 'administer panelizer node section choice',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node section content'.
+  $permissions['administer panelizer node section content'] = array(
+    'name' => 'administer panelizer node section content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node section context'.
+  $permissions['administer panelizer node section context'] = array(
+    'name' => 'administer panelizer node section context',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node section defaults'.
+  $permissions['administer panelizer node section defaults'] = array(
+    'name' => 'administer panelizer node section defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node section layout'.
+  $permissions['administer panelizer node section layout'] = array(
+    'name' => 'administer panelizer node section layout',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node section overview'.
+  $permissions['administer panelizer node section overview'] = array(
+    'name' => 'administer panelizer node section overview',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node section settings'.
+  $permissions['administer panelizer node section settings'] = array(
+    'name' => 'administer panelizer node section settings',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node slide defaults'.
+  $permissions['administer panelizer node slide defaults'] = array(
+    'name' => 'administer panelizer node slide defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term news_categories defaults'.
+  $permissions['administer panelizer taxonomy_term news_categories defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term news_categories defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer taxonomy_term related_categories defaults'.
+  $permissions['administer panelizer taxonomy_term related_categories defaults'] = array(
+    'name' => 'administer panelizer taxonomy_term related_categories defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panels layouts'.
+  $permissions['administer panels layouts'] = array(
+    'name' => 'administer panels layouts',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer panels styles'.
+  $permissions['administer panels styles'] = array(
+    'name' => 'administer panels styles',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer pathauto'.
+  $permissions['administer pathauto'] = array(
+    'name' => 'administer pathauto',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'pathauto',
+  );
+
+  // Exported permission: 'administer permissions'.
+  $permissions['administer permissions'] = array(
+    'name' => 'administer permissions',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'administer rules'.
+  $permissions['administer rules'] = array(
+    'name' => 'administer rules',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'rules',
+  );
+
+  // Exported permission: 'administer scheduler'.
+  $permissions['administer scheduler'] = array(
+    'name' => 'administer scheduler',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'scheduler',
+  );
+
+  // Exported permission: 'administer search'.
+  $permissions['administer search'] = array(
+    'name' => 'administer search',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'search',
+  );
+
+  // Exported permission: 'administer site configuration'.
+  $permissions['administer site configuration'] = array(
+    'name' => 'administer site configuration',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer software updates'.
+  $permissions['administer software updates'] = array(
+    'name' => 'administer software updates',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer taxonomy'.
+  $permissions['administer taxonomy'] = array(
+    'name' => 'administer taxonomy',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'administer themes'.
+  $permissions['administer themes'] = array(
+    'name' => 'administer themes',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer url aliases'.
+  $permissions['administer url aliases'] = array(
+    'name' => 'administer url aliases',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'path',
+  );
+
+  // Exported permission: 'administer users'.
+  $permissions['administer users'] = array(
+    'name' => 'administer users',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'administer uuid'.
+  $permissions['administer uuid'] = array(
+    'name' => 'administer uuid',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'uuid',
+  );
+
+  // Exported permission: 'administer views'.
+  $permissions['administer views'] = array(
+    'name' => 'administer views',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'views',
+  );
+
   // Exported permission: 'administer workbench'.
   $permissions['administer workbench'] = array(
     'name' => 'administer workbench',
@@ -111,6 +753,15 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'workbench',
+  );
+
+  // Exported permission: 'administer workbench access'.
+  $permissions['administer workbench access'] = array(
+    'name' => 'administer workbench access',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_access',
   );
 
   // Exported permission: 'administer workbench moderation'.
@@ -122,6 +773,69 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'administer xmlsitemap'.
+  $permissions['administer xmlsitemap'] = array(
+    'name' => 'administer xmlsitemap',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'xmlsitemap',
+  );
+
+  // Exported permission: 'assign workbench access'.
+  $permissions['assign workbench access'] = array(
+    'name' => 'assign workbench access',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_access',
+  );
+
+  // Exported permission: 'batch update workbench access'.
+  $permissions['batch update workbench access'] = array(
+    'name' => 'batch update workbench access',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_access',
+  );
+
+  // Exported permission: 'block IP addresses'.
+  $permissions['block IP addresses'] = array(
+    'name' => 'block IP addresses',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'bypass file access'.
+  $permissions['bypass file access'] = array(
+    'name' => 'bypass file access',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'bypass node access'.
+  $permissions['bypass node access'] = array(
+    'name' => 'bypass node access',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'bypass rules access'.
+  $permissions['bypass rules access'] = array(
+    'name' => 'bypass rules access',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'rules',
+  );
+
   // Exported permission: 'bypass workbench moderation'.
   $permissions['bypass workbench moderation'] = array(
     'name' => 'bypass workbench moderation',
@@ -131,14 +845,782 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: 'flush caches'.
-  $permissions['flush caches'] = array(
-    'name' => 'flush caches',
+  // Exported permission: 'cancel account'.
+  $permissions['cancel account'] = array(
+    'name' => 'cancel account',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'change layouts in place editing'.
+  $permissions['change layouts in place editing'] = array(
+    'name' => 'change layouts in place editing',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'change own username'.
+  $permissions['change own username'] = array(
+    'name' => 'change own username',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'create component content'.
+  $permissions['create component content'] = array(
+    'name' => 'create component content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create fieldable image'.
+  $permissions['create fieldable image'] = array(
+    'name' => 'create fieldable image',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'create fieldable image_text'.
+  $permissions['create fieldable image_text'] = array(
+    'name' => 'create fieldable image_text',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'create fieldable text'.
+  $permissions['create fieldable text'] = array(
+    'name' => 'create fieldable text',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'create files'.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'create gallery content'.
+  $permissions['create gallery content'] = array(
+    'name' => 'create gallery content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create mini panels'.
+  $permissions['create mini panels'] = array(
+    'name' => 'create mini panels',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels_mini',
+  );
+
+  // Exported permission: 'create news content'.
+  $permissions['create news content'] = array(
+    'name' => 'create news content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create page content'.
+  $permissions['create page content'] = array(
+    'name' => 'create page content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create section content'.
+  $permissions['create section content'] = array(
+    'name' => 'create section content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create slide content'.
+  $permissions['create slide content'] = array(
+    'name' => 'create slide content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create url aliases'.
+  $permissions['create url aliases'] = array(
+    'name' => 'create url aliases',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'path',
+  );
+
+  // Exported permission: 'delete any audio files'.
+  $permissions['delete any audio files'] = array(
+    'name' => 'delete any audio files',
     'roles' => array(
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete any component content'.
+  $permissions['delete any component content'] = array(
+    'name' => 'delete any component content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any document files'.
+  $permissions['delete any document files'] = array(
+    'name' => 'delete any document files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete any gallery content'.
+  $permissions['delete any gallery content'] = array(
+    'name' => 'delete any gallery content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any image files'.
+  $permissions['delete any image files'] = array(
+    'name' => 'delete any image files',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete any news content'.
+  $permissions['delete any news content'] = array(
+    'name' => 'delete any news content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any page content'.
+  $permissions['delete any page content'] = array(
+    'name' => 'delete any page content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any section content'.
+  $permissions['delete any section content'] = array(
+    'name' => 'delete any section content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any slide content'.
+  $permissions['delete any slide content'] = array(
+    'name' => 'delete any slide content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any video files'.
+  $permissions['delete any video files'] = array(
+    'name' => 'delete any video files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete fieldable image'.
+  $permissions['delete fieldable image'] = array(
+    'name' => 'delete fieldable image',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'delete fieldable image_text'.
+  $permissions['delete fieldable image_text'] = array(
+    'name' => 'delete fieldable image_text',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'delete fieldable text'.
+  $permissions['delete fieldable text'] = array(
+    'name' => 'delete fieldable text',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'delete own audio files'.
+  $permissions['delete own audio files'] = array(
+    'name' => 'delete own audio files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own component content'.
+  $permissions['delete own component content'] = array(
+    'name' => 'delete own component content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own document files'.
+  $permissions['delete own document files'] = array(
+    'name' => 'delete own document files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own gallery content'.
+  $permissions['delete own gallery content'] = array(
+    'name' => 'delete own gallery content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own image files'.
+  $permissions['delete own image files'] = array(
+    'name' => 'delete own image files',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own news content'.
+  $permissions['delete own news content'] = array(
+    'name' => 'delete own news content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own page content'.
+  $permissions['delete own page content'] = array(
+    'name' => 'delete own page content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own section content'.
+  $permissions['delete own section content'] = array(
+    'name' => 'delete own section content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own slide content'.
+  $permissions['delete own slide content'] = array(
+    'name' => 'delete own slide content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own video files'.
+  $permissions['delete own video files'] = array(
+    'name' => 'delete own video files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete revisions'.
+  $permissions['delete revisions'] = array(
+    'name' => 'delete revisions',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete terms in news_categories'.
+  $permissions['delete terms in news_categories'] = array(
+    'name' => 'delete terms in news_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in related_categories'.
+  $permissions['delete terms in related_categories'] = array(
+    'name' => 'delete terms in related_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in sites'.
+  $permissions['delete terms in sites'] = array(
+    'name' => 'delete terms in sites',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'display drupal links'.
+  $permissions['display drupal links'] = array(
+    'name' => 'display drupal links',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
     'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'download any audio files'.
+  $permissions['download any audio files'] = array(
+    'name' => 'download any audio files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download any document files'.
+  $permissions['download any document files'] = array(
+    'name' => 'download any document files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download any image files'.
+  $permissions['download any image files'] = array(
+    'name' => 'download any image files',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download any video files'.
+  $permissions['download any video files'] = array(
+    'name' => 'download any video files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download own audio files'.
+  $permissions['download own audio files'] = array(
+    'name' => 'download own audio files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download own document files'.
+  $permissions['download own document files'] = array(
+    'name' => 'download own document files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download own image files'.
+  $permissions['download own image files'] = array(
+    'name' => 'download own image files',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'download own video files'.
+  $permissions['download own video files'] = array(
+    'name' => 'download own video files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit any audio files'.
+  $permissions['edit any audio files'] = array(
+    'name' => 'edit any audio files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit any component content'.
+  $permissions['edit any component content'] = array(
+    'name' => 'edit any component content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any document files'.
+  $permissions['edit any document files'] = array(
+    'name' => 'edit any document files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit any gallery content'.
+  $permissions['edit any gallery content'] = array(
+    'name' => 'edit any gallery content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any image files'.
+  $permissions['edit any image files'] = array(
+    'name' => 'edit any image files',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit any news content'.
+  $permissions['edit any news content'] = array(
+    'name' => 'edit any news content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any page content'.
+  $permissions['edit any page content'] = array(
+    'name' => 'edit any page content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any section content'.
+  $permissions['edit any section content'] = array(
+    'name' => 'edit any section content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any slide content'.
+  $permissions['edit any slide content'] = array(
+    'name' => 'edit any slide content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any video files'.
+  $permissions['edit any video files'] = array(
+    'name' => 'edit any video files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit fieldable image'.
+  $permissions['edit fieldable image'] = array(
+    'name' => 'edit fieldable image',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit fieldable image_text'.
+  $permissions['edit fieldable image_text'] = array(
+    'name' => 'edit fieldable image_text',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit fieldable text'.
+  $permissions['edit fieldable text'] = array(
+    'name' => 'edit fieldable text',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit own audio files'.
+  $permissions['edit own audio files'] = array(
+    'name' => 'edit own audio files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own component content'.
+  $permissions['edit own component content'] = array(
+    'name' => 'edit own component content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own document files'.
+  $permissions['edit own document files'] = array(
+    'name' => 'edit own document files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own gallery content'.
+  $permissions['edit own gallery content'] = array(
+    'name' => 'edit own gallery content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own image files'.
+  $permissions['edit own image files'] = array(
+    'name' => 'edit own image files',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own news content'.
+  $permissions['edit own news content'] = array(
+    'name' => 'edit own news content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own page content'.
+  $permissions['edit own page content'] = array(
+    'name' => 'edit own page content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own section content'.
+  $permissions['edit own section content'] = array(
+    'name' => 'edit own section content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own slide content'.
+  $permissions['edit own slide content'] = array(
+    'name' => 'edit own slide content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own video files'.
+  $permissions['edit own video files'] = array(
+    'name' => 'edit own video files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit terms in news_categories'.
+  $permissions['edit terms in news_categories'] = array(
+    'name' => 'edit terms in news_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in related_categories'.
+  $permissions['edit terms in related_categories'] = array(
+    'name' => 'edit terms in related_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in sites'.
+  $permissions['edit terms in sites'] = array(
+    'name' => 'edit terms in sites',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'execute php code'.
+  $permissions['execute php code'] = array(
+    'name' => 'execute php code',
+    'roles' => array(),
+    'module' => 'devel',
+  );
+
+  // Exported permission: 'flush caches'.
+  $permissions['flush caches'] = array(
+    'name' => 'flush caches',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'generate features'.
+  $permissions['generate features'] = array(
+    'name' => 'generate features',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'import media'.
+  $permissions['import media'] = array(
+    'name' => 'import media',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'media_bulk_upload',
+  );
+
+  // Exported permission: 'manage features'.
+  $permissions['manage features'] = array(
+    'name' => 'manage features',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'masquerade as admin'.
+  $permissions['masquerade as admin'] = array(
+    'name' => 'masquerade as admin',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'masquerade',
+  );
+
+  // Exported permission: 'masquerade as any user'.
+  $permissions['masquerade as any user'] = array(
+    'name' => 'masquerade as any user',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'masquerade',
+  );
+
+  // Exported permission: 'masquerade as user'.
+  $permissions['masquerade as user'] = array(
+    'name' => 'masquerade as user',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'masquerade',
+  );
+
+  // Exported permission: 'menu view unpublished'.
+  $permissions['menu view unpublished'] = array(
+    'name' => 'menu view unpublished',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'menu_view_unpublished',
   );
 
   // Exported permission: 'moderate content from approved to published'.
@@ -184,15 +1666,209 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'notify of path changes'.
+  $permissions['notify of path changes'] = array(
+    'name' => 'notify of path changes',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'pathauto',
+  );
+
+  // Exported permission: 'opt-in or out of tracking'.
+  $permissions['opt-in or out of tracking'] = array(
+    'name' => 'opt-in or out of tracking',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'googleanalytics',
+  );
+
+  // Exported permission: 'override default scheduler time'.
+  $permissions['override default scheduler time'] = array(
+    'name' => 'override default scheduler time',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'scheduler_workbench',
+  );
+
+  // Exported permission: 'preview focal point'.
+  $permissions['preview focal point'] = array(
+    'name' => 'preview focal point',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'focal_point',
+  );
+
+  // Exported permission: 'revert revisions'.
+  $permissions['revert revisions'] = array(
+    'name' => 'revert revisions',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'schedule (un)publishing of nodes'.
+  $permissions['schedule (un)publishing of nodes'] = array(
+    'name' => 'schedule (un)publishing of nodes',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'scheduler',
+  );
+
   // Exported permission: 'search content'.
   $permissions['search content'] = array(
     'name' => 'search content',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'search',
+  );
+
+  // Exported permission: 'select account cancellation method'.
+  $permissions['select account cancellation method'] = array(
+    'name' => 'select account cancellation method',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'switch users'.
+  $permissions['switch users'] = array(
+    'name' => 'switch users',
+    'roles' => array(),
+    'module' => 'devel',
+  );
+
+  // Exported permission: 'translate admin strings'.
+  $permissions['translate admin strings'] = array(
+    'name' => 'translate admin strings',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'translate content'.
+  $permissions['translate content'] = array(
+    'name' => 'translate content',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'translation',
+  );
+
+  // Exported permission: 'translate interface'.
+  $permissions['translate interface'] = array(
+    'name' => 'translate interface',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: 'translate user-defined strings'.
+  $permissions['translate user-defined strings'] = array(
+    'name' => 'translate user-defined strings',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'use PHP for tracking visibility'.
+  $permissions['use PHP for tracking visibility'] = array(
+    'name' => 'use PHP for tracking visibility',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'googleanalytics',
+  );
+
+  // Exported permission: 'use advanced search'.
+  $permissions['use advanced search'] = array(
+    'name' => 'use advanced search',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'search',
+  );
+
+  // Exported permission: 'use ipe with page manager'.
+  $permissions['use ipe with page manager'] = array(
+    'name' => 'use ipe with page manager',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use page manager'.
+  $permissions['use page manager'] = array(
+    'name' => 'use page manager',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'page_manager',
+  );
+
+  // Exported permission: 'use panels caching features'.
+  $permissions['use panels caching features'] = array(
+    'name' => 'use panels caching features',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use panels dashboard'.
+  $permissions['use panels dashboard'] = array(
+    'name' => 'use panels dashboard',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use panels in place editing'.
+  $permissions['use panels in place editing'] = array(
+    'name' => 'use panels in place editing',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use panels locks'.
+  $permissions['use panels locks'] = array(
+    'name' => 'use panels locks',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use text format filtered_html'.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'filter',
   );
 
   // Exported permission: 'use workbench_moderation my drafts tab'.
@@ -225,6 +1901,18 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'view files'.
+  $permissions['view files'] = array(
+    'name' => 'view files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'view moderation history'.
   $permissions['view moderation history'] = array(
     'name' => 'view moderation history',
@@ -245,6 +1933,67 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'view own files'.
+  $permissions['view own files'] = array(
+    'name' => 'view own files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'view own private files'.
+  $permissions['view own private files'] = array(
+    'name' => 'view own private files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'view own unpublished content'.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'view pane admin links'.
+  $permissions['view pane admin links'] = array(
+    'name' => 'view pane admin links',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'view private files'.
+  $permissions['view private files'] = array(
+    'name' => 'view private files',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: 'view revisions'.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'view the administration theme'.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
@@ -254,6 +2003,25 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'view workbench access information'.
+  $permissions['view workbench access information'] = array(
+    'name' => 'view workbench access information',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_access',
+  );
+
+  // Exported permission: 'view workbench taxonomy pages'.
+  $permissions['view workbench taxonomy pages'] = array(
+    'name' => 'view workbench taxonomy pages',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_access',
   );
 
   return $permissions;

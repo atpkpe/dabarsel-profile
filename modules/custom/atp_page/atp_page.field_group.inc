@@ -28,6 +28,7 @@ function atp_page_field_group_info() {
       2 => 'field_page_summary',
       3 => 'title_field',
       4 => 'language',
+      5 => 'workbench_access',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
