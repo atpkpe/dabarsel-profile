@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the ATP workflow feature.
  */
+
+include_once 'atp_workflow.features.inc';
 
 /**
  *  Implement hook_workbench_access_node_element_alter
