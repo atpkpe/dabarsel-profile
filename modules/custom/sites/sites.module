@@ -23,7 +23,8 @@ function sites_init() {
   global $conf;
   $site = SiteController::getCurrentSite();
   if (!empty($site) && $site->sid > 1) {
-    $conf['site_name'] = $site->name;
+    global $language;
+    $conf['site_name'] = $site->name[$language->language];
   }
 
 }
@@ -201,11 +202,15 @@ function sites_preview_url_outbound_alter(&$path, &$options, $original_path) {
 function sites_panels_pane_prerender($pane) {
   $site = SiteController::getCurrentSite();
 
+  //dpr($pane->type . ':' . print_r($pane->configuration,TRUE));
+
   if ($pane->type == 'menu_tree' && $site->sid > 1) {
     if ($pane->configuration['menu_name'] == 'main-menu') {
       $main_menu = sites_get_current_menu_source('main_menu');
       $pane->configuration['menu_name'] = $main_menu;
       $pane->configuration['parent'] = $main_menu . ':0';
+      $pane->title = 'TEST';
+      //dpr($pane->configuration['menu_name']);
     }
   }
 }
