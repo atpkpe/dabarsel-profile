@@ -53,6 +53,13 @@ projects[workbench_moderation][download][url] = 'http://git.drupal.org/project/w
 projects[workbench_moderation][download][revision] = 'a90378de5b1aea2b095ff5613eea44f55947f514'
 ; projects[workbench_moderation][patch][] = 'http://drupal.org/files/issues/workbench_moderation-panelizer_revisions-1402860-44_0.patch'
 
+projects[workbench_access][type] = 'module'
+projects[workbench_access][subdir] = 'contrib'
+projects[workbench_access][download][branch] = '7.x-1.x'
+projects[workbench_access][download][type] = 'git'
+projects[workbench_access][download][url] = 'http://git.drupal.org/project/workbench_access.git'
+projects[workbench_access][download][revision] = 'dc60f628aa8ba6d5f8dd09c0ebe40c047a0518ce'
+
 projects[scheduler][type] = 'module'
 projects[scheduler][subdir] = 'contrib'
 projects[scheduler][version] = '1.2'
