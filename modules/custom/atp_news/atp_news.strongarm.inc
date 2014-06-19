@@ -182,8 +182,32 @@ function atp_news_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_defaults_node_news';
   $strongarm->value = array(
-    'status' => 0,
-    'view modes' => array(),
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+        'selection' => 0,
+      ),
+      'default' => array(
+        'status' => 1,
+        'default' => 0,
+        'choice' => 1,
+      ),
+      'teaser' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+        'selection' => 0,
+      ),
+      'teaser_with_img' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+        'selection' => 0,
+      ),
+    ),
   );
   $export['panelizer_defaults_node_news'] = $strongarm;
 

@@ -4,6 +4,7 @@
 /*  HEIGHTS*/
 /* MEDIA QUERIES */
 /* GRADIENTS */
+/* MARGINS n PADDINGS */
 /* FONTS */
 /* FORM ELEMENTS */
 /* BTN */
@@ -172,10 +173,8 @@ header > .bottom .level-2-3 h2:after { display: block; border: 0; width: 0; heig
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li:after { display: none; } }
 .main-menu > ul > li.last { padding: 19px 0; }
 .main-menu > ul > li.last > a { -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 1px solid #e6e7e4; line-height: 32px; height: auto; }
-.main-menu > ul > li > a { padding: 0 17px; line-height: 70px; height: 70px; }
-@media screen and (max-width: 960px) { .main-menu > ul > li > a { padding: 5px 10px; } }
-@media screen and (max-width: 500px) { .main-menu > ul > li > a { line-height: normal; padding: 5px 10px; } }
-@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li > a { line-height: normal; padding: 5px 10px; } }
+.main-menu > ul > li > a { padding-right: 20px; padding-left: 20px; line-height: 70px; height: 70px; }
+@media screen and (max-width: 960px) { .main-menu > ul > li > a { padding-right: 10px; padding-left: 10px; } }
 .main-menu > ul > li > a.active-trail { border-bottom: 4px solid #adc200; }
 
 /* MOBILE */
@@ -530,3 +529,15 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 .sas-table .format-strong { font-weight: bold; }
 .sas-table .pos-left { padding-left: 20px; text-align: left; }
 .sas-table .pos-right { text-align: right; padding-right: 20px; }
+
+.toolbox { float: right; position: relative; }
+.toolbox .print, .toolbox .share { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; width: 26px; height: 26px; display: block; text-indent: -200px; overflow: hidden; float: left; margin-left: 10px; cursor: pointer; }
+.toolbox .print:hover, .toolbox .share:hover { background-color: #adc200; }
+.toolbox .print { background: #d1d1d1 url("../images/print.png") no-repeat center center; }
+.svg .toolbox .print { background-image: url("../images/print.svg"); background-size: 16px auto; }
+.toolbox .share { background: #d1d1d1 url("../images/share.png") no-repeat center center; }
+.svg .toolbox .share { background-image: url("../images/share.svg"); background-size: 19px auto; }
+.toolbox .addthis_toolbox { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background: #d1d1d1; position: absolute; width: 110px; padding: 10px 0; right: 0; top: 30px; border: 1px solid #c4c4c4; display: none; }
+.show-share .toolbox .addthis_toolbox { display: block; }
+.toolbox .addthis_toolbox a { display: block; padding: 5px 10px; }
+.toolbox .addthis_toolbox span { display: block; float: left; margin-right: 5px; }

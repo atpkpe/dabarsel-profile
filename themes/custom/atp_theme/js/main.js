@@ -16,6 +16,13 @@
       $("body").addClass("show-search");
     }
   });
+  $(".share").click(function(){
+    if($("body").hasClass("show-share")) {
+      $("body").removeClass("show-share");
+    } else {
+      $("body").addClass("show-share");
+    }
+  });
   $('.level-2-3').bind( "touchstart, click", function(){
     $(this).toggleClass("expand");
   });

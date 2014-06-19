@@ -192,31 +192,49 @@ function atp_page_strongarm() {
       'page_manager' => array(
         'status' => 0,
         'default' => 0,
-        'default display' => 0,
         'choice' => 0,
+        'selection' => 0,
       ),
       'default' => array(
         'status' => 1,
         'default' => 0,
         'choice' => 1,
       ),
+      'teaser' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+        'selection' => 0,
+      ),
       '1_4_l' => array(
         'status' => 0,
         'default' => 0,
-        'default display' => 0,
         'choice' => 0,
+        'selection' => 0,
       ),
       '1_2_l' => array(
         'status' => 0,
         'default' => 0,
-        'default display' => 0,
         'choice' => 0,
+        'selection' => 0,
+      ),
+      '1_2_square' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+        'selection' => 0,
       ),
       '1_2_h' => array(
         'status' => 0,
         'default' => 0,
-        'default display' => 0,
         'choice' => 0,
+        'selection' => 0,
+      ),
+      'teaser_with_img' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+        'selection' => 0,
       ),
     ),
   );
