@@ -1,9 +1,0 @@
-name = ATP SAS test content
-core = 7.x
-package = ATP test content
-dependencies[] = ctools
-dependencies[] = deploy
-features[ctools][] = deploy:deploy_plans:1
-features[deploy_plans][] = atp_test_content_sas
-features[features_api][] = api:2
-project path = profiles/atp/modules/custom

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the ATP SAS test content feature.
- */
-
-include_once 'atp_sas_test_content.features.inc';
