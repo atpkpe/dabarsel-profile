@@ -1,18 +1,20 @@
 <?php
 
+
+/**
+ * Implement hook_theme_breadcrumb
+ */
+function atp_theme_breadcrumb($variables) {
+  if (!empty($variables['breadcrumb'])) {
+    return '<div class="bc">' . implode(' <span>-</span> ', $variables['breadcrumb']) . '</div>';
+  }
+  return '';
+}
+
 /**
  * Overwrite theme_links().
  * Specifically for language switcher
  */
-
-function atp_theme_breadcrumb($variables) {
-  $breadcrumb = $variables['breadcrumb'];
-  if (!empty($breadcrumb)) {
-    $output .= '<div class="bc">' . implode(' <span>-<span> ', $breadcrumb) . '</div>';
-    return $output;
-  }
-}
-
 function atp_theme_links__locale_block($variables) {
   $links = $variables['links'];
 
