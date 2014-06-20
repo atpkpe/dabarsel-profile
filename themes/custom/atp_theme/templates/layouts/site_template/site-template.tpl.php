@@ -36,12 +36,10 @@
       <?php print $content['footer']; ?>
     </section>
     <?php endif; ?>
-
     <?php if (!empty($content['bottom'])): ?>  
     <section>
       <?php print $content['bottom']; ?>
-    </section>
+    </section class="bottom">
     <?php endif; ?>
   </footer>
-
 </div>

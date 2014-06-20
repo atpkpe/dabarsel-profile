@@ -173,8 +173,7 @@ header > .bottom .level-2-3 h2:after { display: block; border: 0; width: 0; heig
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li:after { display: none; } }
 .main-menu > ul > li.last { padding: 19px 0; }
 .main-menu > ul > li.last > a { -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 1px solid #e6e7e4; line-height: 32px; height: auto; }
-.main-menu > ul > li > a { padding-right: 20px; padding-left: 20px; line-height: 70px; height: 70px; }
-@media screen and (max-width: 960px) { .main-menu > ul > li > a { padding-right: 10px; padding-left: 10px; } }
+.main-menu > ul > li > a { padding: 0 15px; line-height: 70px; height: 70px; }
 .main-menu > ul > li > a.active-trail { border-bottom: 4px solid #adc200; }
 
 /* MOBILE */
@@ -212,6 +211,7 @@ footer { background: #e6e7e4; padding-top: 30px; }
 footer > section { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 footer > section:before, footer > section:after { content: "."; display: block; height: 0; overflow: hidden; }
 footer > section:after { clear: both; }
+footer .bottom { background: #424844; }
 
 .footer-menu { margin: 0 auto; width: 960px; /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; padding-bottom: 20px; /*
 li { list-style: none;
@@ -248,15 +248,14 @@ a { color: $gray-green; line-height: 22px; border-bottom: 1px solid $gray-green;
 .shortcuts ul { list-style: none; }
 .shortcuts ul a { text-decoration: underline; line-height: 22px; }
 
-.bottom-menu { background-color: #424844; }
-.bottom-menu .menu { margin: 0 auto; width: 960px; /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
-@media screen and (max-width: 960px) { .bottom-menu .menu { padding: 0; width: 100%; } }
-@media screen and (max-width: 500px) { .bottom-menu .menu { padding: 0; width: 100%; } }
-@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .bottom-menu .menu { padding: 0; width: 100%; } }
-.bottom-menu .menu:before, .bottom-menu .menu:after { content: "."; display: block; height: 0; overflow: hidden; }
-.bottom-menu .menu:after { clear: both; }
-.bottom-menu .menu li { list-style: none; float: left; }
-.bottom-menu .menu a { color: #f2f1f0; padding-right: 20px; line-height: 42px; }
+.bottom-menu { margin: 0 auto; width: 960px; /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
+@media screen and (max-width: 960px) { .bottom-menu { padding: 0; width: 100%; } }
+@media screen and (max-width: 500px) { .bottom-menu { padding: 0; width: 100%; } }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .bottom-menu { padding: 0; width: 100%; } }
+.bottom-menu:before, .bottom-menu:after { content: "."; display: block; height: 0; overflow: hidden; }
+.bottom-menu:after { clear: both; }
+.bottom-menu li { list-style: none; float: left; }
+.bottom-menu a { color: #f2f1f0; padding-right: 20px; line-height: 42px; }
 
 .pager { clear: both; text-align: center; }
 .pager li { background-image: none; display: inline; list-style-type: none; padding: 0.5em; }
