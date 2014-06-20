@@ -37,9 +37,9 @@
     </section>
     <?php endif; ?>
     <?php if (!empty($content['bottom'])): ?>  
-    <section>
+    <section class="bottom">
       <?php print $content['bottom']; ?>
-    </section class="bottom">
+    </section>
     <?php endif; ?>
   </footer>
 </div>
