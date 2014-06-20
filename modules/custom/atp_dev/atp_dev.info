@@ -5,4 +5,5 @@ package = ATP
 dependencies[] = deploy_ui
 dependencies[] = atp_data_deployment
 dependencies[] = atp_news_test_content
+dependencies[] = atp_sas_test_content
 project path = profiles/atp/modules/custom
