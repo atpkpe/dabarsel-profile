@@ -44,6 +44,13 @@ function sites_schema() {
         'primary key' => TRUE,
         'unique' => TRUE,
       ),
+      'site_term' => array(
+        'description' => 'Site term.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+        'default' => 0,
+      ),
       'title' => array(
         'description' => 'The site\'s administrative title.',
         'type' => 'varchar',
@@ -152,7 +159,7 @@ $schema['sites_multilanguage'] = array(
     ),
     'primary key' => array('sid', 'language'),
   );
-
+  /*
   $schema['site_node'] = array(
     'description' => 'site_node',
     'fields' => array(
@@ -191,6 +198,7 @@ $schema['sites_multilanguage'] = array(
     ),
     'primary key' => array('sid', 'nid', 'vid'),
   );
+  */
 
   return $schema;
 }

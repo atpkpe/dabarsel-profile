@@ -59,9 +59,17 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
   $site = NULL;
   if (!$site_id) {
     $site = new Site();
+    $site_terms = FALSE;
   }
   else {
     $site = SiteController::getSite($site_id);
+
+    $site_taxonomy = taxonomy_vocabulary_machine_name_load('sites');
+    $terms = taxonomy_get_tree($site_taxonomy->vid);
+    foreach ($terms as $data) {
+      $site_terms[$data->tid] = $data->name;
+    }
+
   }
 
   // Get a list of active themes.
@@ -159,6 +167,15 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
   // Add context prefix form
   $form['purl'] = purl_form('sites', $site_id, $site->purl_prefix);
 
+  if ( $site_terms ) {
+    $form['site_term'] = array (
+      '#title' => 'Site term',
+      '#type' => 'select',
+      '#options' => $site_terms,
+      '#default_value' => $site->site_term,
+    );
+  }
+
   $form['site_id'] = array(
     '#type' => 'hidden',
     '#value' => $site_id,
@@ -169,6 +186,7 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#value' => t('Save'),
     '#type' => 'submit',
   );
+
   if ($site_id) {
     $form['actions']['delete'] = array(
       '#type' => 'link',
@@ -216,6 +234,12 @@ function sites_site_form_submit($form, &$form_state) {
   $site->menu_main_menu = $form_state['values']['main_menu'];
   $site->theme = $form_state['values']['theme'];
 
+  if (isset($form_state['values']['site_term'])) {
+    $site->site_term =  $form_state['values']['site_term'];
+  } else {
+    SiteResourcesController::createTerm($site);
+  }
+
   if (isset($form_state['values']['purl']['value'])) {
     $site->purl_prefix = $form_state['values']['purl']['value'];
   }
@@ -237,9 +261,9 @@ function sites_site_form_submit($form, &$form_state) {
     // Create a context.
     //SiteResourcesController::createContext($site);
     // Create a main menu.
-    if ($form_state['values']['main_menu'] === 1) {
+    //if ($form_state['values']['main_menu'] === 1) {
       //SiteResourcesController::createMenu($site, 'main_menu');
-    }
+    //}
   }
   // Site already exists, check if node paths needs updating.
   else if ($form['purl']['value']['#default_value'] !== $form_state['values']['purl']['value']) {
@@ -287,6 +311,7 @@ function sites_site_delete_form_submit($form, &$form_state) {
       purl_disable('TRUE');
     }
   }
+
   SiteController::deleteSite($site_id);
 
   drupal_set_message(t('The site @name has been deleted', array('@name' => $site->name)));

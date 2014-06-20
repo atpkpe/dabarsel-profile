@@ -8,6 +8,18 @@
 class SiteResourcesController {
 
   /**
+   *  Create site term
+   */
+  public static function createTerm(&$site) {
+    $site_taxonomy = taxonomy_vocabulary_machine_name_load('sites');
+    $term = new stdClass();
+    $term->name = $site->title;
+    $term->vid = $site_taxonomy->vid;
+    taxonomy_term_save($term);
+    $site->site_term = $term->tid;
+  }
+
+  /**
    * Deletes resources for a given site.
    *
    * @param Site $site.
@@ -27,6 +39,7 @@ class SiteResourcesController {
     if ($menu) {
       menu_delete($menu);
     }
+
     // Delete the alias.
     $path = path_load($site->purl_prefix);
     if (! empty($path)) {

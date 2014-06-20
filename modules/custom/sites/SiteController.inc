@@ -128,17 +128,29 @@ class SiteController {
   public static function getSitesByNode($node) {
     $sites = array();
 
-    $query = db_select('site_node', 's');
-    $query->join('purl', 'p', 's.sid = p.id');
-    $results = $query->fields('s')
-              ->fields('p')
+    //$query = db_select('site_node', 's');
+    //$query->join('purl', 'p', 's.sid = p.id');
+    //$results = $query->fields('s')
+    //          ->fields('p')
+    //          ->condition('nid', $node->nid)
+    //          ->condition('vid', $node->vid)
+    //          ->execute();
+
+    $query = db_select('`workbench_access_node`', 'w');
+    $query->join('sites', 's', 'w.access_id = s.site_term');
+    //$query->join('purl', 'p', 's.sid = p.id');
+    $results = $query
+              //->fields('w', array('access_id'))
+              ->fields('s', array('sid'))
+              //->fields('p')
               ->condition('nid', $node->nid)
-              ->condition('vid', $node->vid)
               ->execute();
 
     while ($site = $results->fetchObject()) {
       $sites[$site->sid] = $site;
     }
+
+    //dpr($sites);
 
     return $sites;
   }
@@ -163,9 +175,9 @@ class SiteController {
       ->execute();
 
     // Delete site node information.
-    db_delete('site_node')
-      ->condition('sid', $site_id)
-      ->execute();
+    //db_delete('site_node')
+    //  ->condition('sid', $site_id)
+    //  ->execute();
 
     // delete PURL prefix
     purl_delete(array(
@@ -302,7 +314,8 @@ class SiteController {
   public static function createSiteFromRawData($raw_data) {
     $properties = array('sid', 'purl_prefix', 'title', 'machine_name', 'name',
                         'front_page', 'menu_main_menu', 'menu_secondary_menu', 'theme',
-                        'footer', 'footer_format','language_switcher','sharing_links'
+                        'footer', 'footer_format','language_switcher','sharing_links',
+                        'site_term'
                        );
     $site = new Site();
     if (is_array($raw_data)) {
