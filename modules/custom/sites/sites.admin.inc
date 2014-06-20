@@ -102,14 +102,14 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
 
   $form['front_page'] = array(
     '#title' => t('Front page'),
-    '#description' => t('Leave blank to use sitewide frontpage'),
+    '#description' => t('Enter internal URL of the subsite frontpage ( node/xxx )'),
     '#type' => 'textfield',
     '#default_value' => $site->front_page,
   );
 
   $form['contact_page'] = array(
     '#title' => t('Contact page'),
-    '#description' => t('Leave blank to use sitewide contact menu or enter a specific page'),
+    '#description' => t('Enter internal URL of the subsite contact page ( node/xxx )'),
     '#type' => 'textfield',
     '#default_value' => $site->contact_page,
   );
@@ -159,9 +159,9 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
 
   $form['main_menu'] = array(
     '#title' => t('Main menu'),
-    '#description' => t('Unique menu name of the menu to insert into $main_menu (leave blank to use default Main menu)'),
-    '#type' => 'textfield',
-    '#default_value' => $site->menu_main_menu,
+    '#description' => t('Unique menu name of the menu to insert into $main_menu'),
+    '#type' => 'markup',
+    '#value' => $site->menu_main_menu,
   );
 
   // Add context prefix form
@@ -231,13 +231,13 @@ function sites_site_form_submit($form, &$form_state) {
   $site->front_page = $form_state['values']['front_page'];
   $site->contact_page = $form_state['values']['contact_page'];
   $site->machine_name = $form_state['values']['machine_name'];
-  $site->menu_main_menu = $form_state['values']['main_menu'];
   $site->theme = $form_state['values']['theme'];
 
   if (isset($form_state['values']['site_term'])) {
     $site->site_term =  $form_state['values']['site_term'];
   } else {
     SiteResourcesController::createTerm($site);
+    SiteResourcesController::createMenu($site);
   }
 
   if (isset($form_state['values']['purl']['value'])) {
@@ -256,19 +256,14 @@ function sites_site_form_submit($form, &$form_state) {
 
   // Save the site object.
   $site->save();
-  // Automatically create a menu.
-  if (empty($site_id)) {
-    // Create a context.
-    //SiteResourcesController::createContext($site);
-    // Create a main menu.
-    //if ($form_state['values']['main_menu'] === 1) {
-      //SiteResourcesController::createMenu($site, 'main_menu');
-    //}
+
+  if (!empty($site_id)) {
+    // Site already exists, check if node paths needs updating.
+    if ($form['purl']['value']['#default_value'] !== $form_state['values']['purl']['value']) {
+      SiteResourcesController::updatePaths($site_id, $form['purl']['value']['#default_value'], $form_state['values']['purl']['value']);
+    }
   }
-  // Site already exists, check if node paths needs updating.
-  else if ($form['purl']['value']['#default_value'] !== $form_state['values']['purl']['value']) {
-    SiteResourcesController::updatePaths($site_id, $form['purl']['value']['#default_value'], $form_state['values']['purl']['value']);
-  }
+
   // Redirect to the sites admin overview page.
   $form_state['redirect'] = 'admin/structure/sites';
 }

@@ -1,0 +1,4 @@
+name = Sites locale
+description = Integrates sites with locale
+core = 7.x
+dependencies[] = sites
