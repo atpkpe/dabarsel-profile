@@ -274,7 +274,7 @@ header {
         }
       }
       > a {
-        @include padding(0, 1, 0, 1);
+        padding: 0 15px;
         $tmp: 70px;
         line-height: $tmp;
         height: $tmp;

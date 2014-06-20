@@ -24,6 +24,6 @@
     <?php endif; ?>
   </article>
   <aside>
-    <?php print $content['left']; ?>
+    <?php print $content['right']; ?>
   </aside >
 </div>

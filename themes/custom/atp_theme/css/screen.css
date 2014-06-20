@@ -173,8 +173,7 @@ header > .bottom .level-2-3 h2:after { display: block; border: 0; width: 0; heig
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .main-menu > ul > li:after { display: none; } }
 .main-menu > ul > li.last { padding: 19px 0; }
 .main-menu > ul > li.last > a { -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 1px solid #e6e7e4; line-height: 32px; height: auto; }
-.main-menu > ul > li > a { padding-right: 20px; padding-left: 20px; line-height: 70px; height: 70px; }
-@media screen and (max-width: 960px) { .main-menu > ul > li > a { padding-right: 10px; padding-left: 10px; } }
+.main-menu > ul > li > a { padding: 0 15px; line-height: 70px; height: 70px; }
 .main-menu > ul > li > a.active-trail { border-bottom: 4px solid #adc200; }
 
 /* MOBILE */

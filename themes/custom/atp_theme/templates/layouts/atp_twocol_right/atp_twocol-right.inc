@@ -14,6 +14,6 @@ $plugin = array(
     'row3' => t('Third row'),
     'row4' => t('Fourth row'),
     'row5' => t('Fifth row'),
-    'right' => t('Left side'),
+    'right' => t('Right side'),
   ),
 );
