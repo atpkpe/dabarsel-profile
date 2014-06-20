@@ -21,7 +21,7 @@ function atp_sas_test_content_uuid_default_entities() {
       'und' => array(
         0 => array(
           'format' => 'filtered_html',
-          'value' => '<p>Her er graferne:</p><p>[[null]]</p><p>[[null]]</p><p>[[null]]</p><p>[[null]]</p><p>[[null]]</p><p>[[null]]</p>',
+          'value' => '<p>Her er graferne:</p><p>[[sasDiag|id:DQ1_FIG17_Omsætning_Line_ReelDATA|path:profiles/atp/modules/custom/atp_sas/test/Tabeller og grafer til ATP som investor/2014/Q1|type:line]]</p><p>[[sasDiag|id:DQ1_FIG13_Indkomst_Line|path:profiles/atp/modules/custom/atp_sas/test/Tabeller og grafer til ATP som investor/2014/Q1|type:line]]</p><p>[[sasDiag|id:DQ1_FIG3a_Risikoklasser_Circle|path:profiles/atp/modules/custom/atp_sas/test/Tabeller og grafer til ATP som investor/2014/Q1|type:circle]]</p><p>[[sasDiag|id:DQ1_FIG5_HistoriskeResultater_Bar|path:profiles/atp/modules/custom/atp_sas/test/Tabeller og grafer til ATP som investor/2014/Q2|type:bar]]</p><p>[[sasDiag|id:DQ1_FIG8_Investeringsomkostninger_Table|path:profiles/atp/modules/custom/atp_sas/test/Tabeller og grafer til ATP som investor/2014/Q2|type:table]]</p><p>[[sasDiag|id:EQ1_FIG11_InvestmentPortfolio_Table|path:profiles/atp/modules/custom/atp_sas/test/Tabeller og grafer til ATP som investor/2014/Q2|type:table]]</p>',
         ),
       ),
     ),
