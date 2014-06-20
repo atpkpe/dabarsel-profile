@@ -23,11 +23,6 @@ function atp_settings_filter_default_formats() {
         'status' => 1,
         'settings' => array(),
       ),
-      'atp_sas_diag_embed' => array(
-        'weight' => -50,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'filter_html' => array(
         'weight' => -49,
         'status' => 1,
@@ -37,25 +32,30 @@ function atp_settings_filter_default_formats() {
           'filter_html_nofollow' => 0,
         ),
       ),
-      'media_filter' => array(
+      'atp_sas_diag_embed' => array(
         'weight' => -48,
         'status' => 1,
         'settings' => array(),
       ),
-      'filter_autop' => array(
+      'media_filter' => array(
         'weight' => -47,
         'status' => 1,
         'settings' => array(),
       ),
-      'filter_url' => array(
+      'filter_autop' => array(
         'weight' => -46,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_url' => array(
+        'weight' => -45,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => -45,
+        'weight' => -44,
         'status' => 1,
         'settings' => array(),
       ),
