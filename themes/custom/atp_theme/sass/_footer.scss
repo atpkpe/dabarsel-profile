@@ -4,6 +4,9 @@ footer {
   > section {
     @include clearfix;
   }
+  .bottom {
+    background: $gray-dark;
+  }
 }
 .footer-menu {
   @include content;
@@ -110,18 +113,15 @@ footer {
   }
 }
 .bottom-menu {
-  background-color: $gray-dark;
-  .menu {
-    @include content;
-    @include clearfix;
-    li {
-      list-style: none;
-      float: left;
-    }
-    a {
-      color: $gray-light;
-      padding-right: 20px;
-      line-height: 42px;
-    }
+  @include content;
+  @include clearfix;
+  li {
+    list-style: none;
+    float: left;
+  }
+  a {
+    color: $gray-light;
+    padding-right: 20px;
+    line-height: 42px;
   }
 }

@@ -35,7 +35,7 @@
       <section class="onecol">
         <?php print $content['footer']; ?>
       </section>
-      <section>
+      <section class="bottom">
         <?php print $content['bottom']; ?>
       </section>
     </footer>
