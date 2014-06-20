@@ -23,6 +23,11 @@ function atp_settings_filter_default_formats() {
         'status' => 1,
         'settings' => array(),
       ),
+      'atp_sas_diag_embed' => array(
+        'weight' => -50,
+        'status' => 1,
+        'settings' => array(),
+      ),
       'filter_html' => array(
         'weight' => -49,
         'status' => 1,

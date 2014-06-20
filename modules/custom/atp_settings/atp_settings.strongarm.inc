@@ -189,7 +189,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'OMQOdYh8F36ZOQsq3qAP17JbSOlNdKv86o-xqddJpQ0',
+    'javascript' => 'vE8ytTB4XrMp84nc-dmkMUppcR0U97lEDqWyBg6M6EA',
   );
   $export['language_default'] = $strongarm;
 
