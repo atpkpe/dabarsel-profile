@@ -54,7 +54,15 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->type = 'menu_tree';
     $pane->subtype = 'menu-bottom-menu';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_subsite',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'menu_name' => 'menu-bottom-menu',
       'parent_mlid' => 0,
@@ -84,12 +92,39 @@ function atp_layouts_default_page_manager_handlers() {
     $display->content['new-7c335331-d116-4f75-938e-cf613c87f493'] = $pane;
     $display->panels['bottom'][0] = 'new-7c335331-d116-4f75-938e-cf613c87f493';
     $pane = new stdClass();
+    $pane->pid = 'new-3f98bad1-e744-4cf3-afeb-a4f92f707a72';
+    $pane->panel = 'bottom';
+    $pane->type = 'site_bottom';
+    $pane->subtype = 'site_bottom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '3f98bad1-e744-4cf3-afeb-a4f92f707a72';
+    $display->content['new-3f98bad1-e744-4cf3-afeb-a4f92f707a72'] = $pane;
+    $display->panels['bottom'][1] = 'new-3f98bad1-e744-4cf3-afeb-a4f92f707a72';
+    $pane = new stdClass();
     $pane->pid = 'new-0207cc58-2f42-4508-a661-a58414527c06';
     $pane->panel = 'footer';
     $pane->type = 'menu_tree';
     $pane->subtype = 'main-menu';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_subsite',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'menu_name' => 'main-menu',
       'parent_mlid' => 0,
@@ -124,7 +159,15 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->type = 'menu_tree';
     $pane->subtype = 'menu-footer';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_subsite',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'menu_name' => 'menu-footer',
       'parent_mlid' => 0,
@@ -181,7 +224,15 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->type = 'block';
     $pane->subtype = 'locale-language';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_language_switcher',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 1,
       'override_title_text' => '',
@@ -226,7 +277,15 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->type = 'menu_tree';
     $pane->subtype = 'menu-top';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_subsite',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'menu_name' => 'menu-top',
       'parent_mlid' => 0,
@@ -261,7 +320,15 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->type = 'menu_tree';
     $pane->subtype = 'main-menu';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_subsite',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'menu_name' => 'main-menu',
       'parent_mlid' => 0,
