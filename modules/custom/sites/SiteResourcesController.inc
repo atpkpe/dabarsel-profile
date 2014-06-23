@@ -16,6 +16,17 @@ class SiteResourcesController {
     $term->name = $site->title;
     $term->vid = $site_taxonomy->vid;
     taxonomy_term_save($term);
+
+    // Tell workbench access that this term is used for access control.
+    $section = array(
+      'access_id' => $term->tid,
+      'access_type' => 'taxonomy',
+      'access_scheme' => 'taxonomy',
+      'access_type_id' => 'sites',
+    );
+
+    workbench_access_section_save($section);
+
     $site->site_term = $term->tid;
   }
 
