@@ -358,6 +358,25 @@ function atp_layouts_default_page_manager_handlers() {
     $display->content['new-c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84'] = $pane;
     $display->panels['header'][4] = 'new-c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84';
     $pane = new stdClass();
+    $pane->pid = 'new-dc7776ed-32a3-43c8-8ab6-3fd5567b121e';
+    $pane->panel = 'header';
+    $pane->type = 'site_contact';
+    $pane->subtype = 'site_contact';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $pane->uuid = 'dc7776ed-32a3-43c8-8ab6-3fd5567b121e';
+    $display->content['new-dc7776ed-32a3-43c8-8ab6-3fd5567b121e'] = $pane;
+    $display->panels['header'][5] = 'new-dc7776ed-32a3-43c8-8ab6-3fd5567b121e';
+    $pane = new stdClass();
     $pane->pid = 'new-17a620bf-0997-4e75-ac1f-3381aec47aa5';
     $pane->panel = 'header-bottom';
     $pane->type = 'menu_tree';

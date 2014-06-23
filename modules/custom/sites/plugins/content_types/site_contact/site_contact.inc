@@ -19,11 +19,12 @@ function site_contact_content_type_render($subtype, $conf, $panel_args, &$contex
   if ($current_site->sid == 1) return;
 
   global $language;
+
   $block = new stdClass();
   $block->content = array(
     'view' => array(
       '#type' => 'markup',
-      '#markup' => l(t('Contact'), $current_site->contact_page),
+      '#markup' => '<div class="subsite-contact">' . l(t('Contact'), $current_site->contact_page) . '</div>',
     ),
   );
   return $block;
