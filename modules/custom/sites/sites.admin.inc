@@ -60,6 +60,8 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
   if (!$site_id) {
     $site = new Site();
     $site_terms = FALSE;
+    $menues = FALSE;
+    $site->theme = 'atp_theme';
   }
   else {
     $site = SiteController::getSite($site_id);
@@ -69,6 +71,8 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     foreach ($terms as $data) {
       $site_terms[$data->tid] = $data->name;
     }
+
+    $menues =  menu_get_menus( );
 
   }
 
@@ -84,38 +88,56 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
 
   $languages = language_list();
 
-  $form['title'] = array(
-    '#title' => t('Site title (used in administrative interface only)'),
-    '#type' => 'textfield',
-    '#default_value' => $site->title,
+  $form['settings'] = array( '#type' => 'vertical_tabs' );
+
+  $form['general'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('General settings'),
+    '#collapsible' => TRUE,
+    '#group' => 'settings'
   );
 
-  $form['machine_name'] = array(
+  $form['general']['title'] = array(
+    '#title' => t('Admin title (used in administrative interface only)'),
+    '#type' => 'textfield',
+    '#default_value' => $site->title,
+    '#group' => 'settings'
+  );
+
+  $form['general']['machine_name'] = array(
     '#title' => t('Machine name for site title'),
     '#type' => 'machine_name',
     '#default_value' => $site->machine_name,
     '#machine_name' => array(
-      'source' => array('title'),
+      'source' => array('general', 'title'),
       'exists' => 'sites_machine_name_exists',
     ),
   );
 
-  $form['front_page'] = array(
-    '#title' => t('Front page'),
-    '#description' => t('Enter internal URL of the subsite frontpage ( node/xxx )'),
-    '#type' => 'textfield',
-    '#default_value' => $site->front_page,
-  );
+  // Add context prefix form
+  $form['general']['purl'] = purl_form('sites', $site_id, $site->purl_prefix);
 
-  $form['contact_page'] = array(
-    '#title' => t('Contact page'),
-    '#description' => t('Enter internal URL of the subsite contact page ( node/xxx )'),
-    '#type' => 'textfield',
-    '#default_value' => $site->contact_page,
-  );
+  if ($menues) {
+    $form['general']['main_menu'] = array(
+      '#title' => t('Main menu'),
+      '#description' => t('The menu to use instead of the $main_menu'),
+      '#type' => 'select',
+      '#default_value' => $site->menu_main_menu,
+      '#options' => $menues,
+    );
+  }
+
+  if ($site_terms) {
+    $form['general']['site_term'] = array (
+      '#title' => 'Site term',
+      '#type' => 'select',
+      '#options' => $site_terms,
+      '#default_value' => $site->site_term,
+    );
+  }
 
   foreach($languages as $lang => $language) {
-    $form['site_name_' . $lang] = array(
+    $form['general']['site_name_' . $lang] = array(
       '#title' => t('Site name') . " <small>($language->name)</small>",
       '#description' => t('Used by some themes.  Will be visible to users.'),
       '#type' => 'textfield',
@@ -123,8 +145,29 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     );
   }
 
+  $form['content'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Content'),
+    '#collapsible' => TRUE,
+    '#group' => 'settings'
+  );
+
+  $form['content']['front_page'] = array(
+    '#title' => t('Front page'),
+    '#description' => t('Enter internal URL of the subsite frontpage ( node/xxx )'),
+    '#type' => 'textfield',
+    '#default_value' => $site->front_page,
+  );
+
+  $form['content']['contact_page'] = array(
+    '#title' => t('Contact page'),
+    '#description' => t('Enter internal URL of the subsite contact page ( node/xxx )'),
+    '#type' => 'textfield',
+    '#default_value' => $site->contact_page,
+  );
+
   foreach($languages as $lang => $language) {
-    $form['footer_' . $lang] = array(
+    $form['content']['footer_' . $lang] = array(
       '#title' => t('Footer text') . " <small>($language->name)</small>",
       '#description' => t('Footer text'),
       '#type' => 'text_format',
@@ -133,7 +176,14 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     );
   }
 
-  $form['theme'] = array(
+  $form['display'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Display settings'),
+    '#collapsible' => TRUE,
+    '#group' => 'settings'
+  );
+
+  $form['display']['theme'] = array(
     '#type' => 'select',
     '#title' => t('Theme'),
     '#description' => t('Select an active theme for this site.'),
@@ -141,7 +191,7 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#default_value' => $site->theme,
   );
 
-  $form['language_switcher'] = array(
+  $form['display']['language_switcher'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show language switcher'),
     '#description' => t('Check this if the language switcher should be visible.'),
@@ -149,32 +199,13 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#default_value' => $site->language_switcher,
   );
 
-  $form['sharing_links'] = array(
+  $form['display']['sharing_links'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show sharing links'),
     '#description' => t('Check this if the sharing links should be visible.'),
     '#options' => array(0 => t('No'), 1 => t('Yes')),
     '#default_value' => $site->sharing_links,
   );
-
-  $form['main_menu'] = array(
-    '#title' => t('Main menu'),
-    '#description' => t('Unique menu name of the menu to insert into $main_menu'),
-    '#type' => 'markup',
-    '#value' => $site->menu_main_menu,
-  );
-
-  // Add context prefix form
-  $form['purl'] = purl_form('sites', $site_id, $site->purl_prefix);
-
-  if ( $site_terms ) {
-    $form['site_term'] = array (
-      '#title' => 'Site term',
-      '#type' => 'select',
-      '#options' => $site_terms,
-      '#default_value' => $site->site_term,
-    );
-  }
 
   $form['site_id'] = array(
     '#type' => 'hidden',
@@ -187,7 +218,7 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#type' => 'submit',
   );
 
-  if ($site_id) {
+  if ($site_id && $site_id > 1) {
     $form['actions']['delete'] = array(
       '#type' => 'link',
       '#href' => 'admin/structure/sites/delete/' . $site_id,
@@ -235,6 +266,7 @@ function sites_site_form_submit($form, &$form_state) {
 
   if (isset($form_state['values']['site_term'])) {
     $site->site_term =  $form_state['values']['site_term'];
+    $site->menu_main_menu = $form_state['values']['main_menu'];
   } else {
     SiteResourcesController::createTerm($site);
     SiteResourcesController::createMenu($site);
@@ -259,8 +291,8 @@ function sites_site_form_submit($form, &$form_state) {
 
   if (!empty($site_id)) {
     // Site already exists, check if node paths needs updating.
-    if ($form['purl']['value']['#default_value'] !== $form_state['values']['purl']['value']) {
-      SiteResourcesController::updatePaths($site_id, $form['purl']['value']['#default_value'], $form_state['values']['purl']['value']);
+    if ($form['general']['purl']['value']['#default_value'] !== $form_state['values']['purl']['value']) {
+      SiteResourcesController::updatePaths($site_id, $form['general']['purl']['value']['#default_value'], $form_state['values']['purl']['value']);
     }
   }
 
