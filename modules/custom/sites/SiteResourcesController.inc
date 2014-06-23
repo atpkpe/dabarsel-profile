@@ -61,6 +61,7 @@ class SiteResourcesController {
     $menu['title'] = 'Subsite:' . $site->title;
     $menu['description'] = 'Menu for the ' . $site->title . ' subsite';
     $menu['menu_name'] = str_replace(' ', '-', drupal_strtolower($site->title));
+    $menu['i18n_mode'] = 5; // Translate and Localize.
     menu_save($menu);
     $site->menu_main_menu = $menu['menu_name'];
   }
@@ -85,19 +86,6 @@ class SiteResourcesController {
     // We use this query for performance reasons. Db_query() is used because the
     // replace function can not be called with db_update.
     db_query("UPDATE url_alias SET alias = REPLACE(alias, :prev, :new) WHERE source IN (:nodes)", array(':prev' => $original_path . '/', ':new' => $new_path . '/', ':nodes' => $nodes));
-  }
-
-  /**
-   * Prepare a context object.
-   */
-  public static function contextObjectPrepare() {
-    $context = new stdClass;
-    $context->disabled = FALSE;
-    $context->api_version = 3;
-    $context->tag = 'sites';
-    $context->reactions = array();
-    $context->condition_mode = 0;
-    return $context;
   }
 
 }

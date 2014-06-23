@@ -174,11 +174,6 @@ class SiteController {
       ->condition('sid', $site_id)
       ->execute();
 
-    // Delete site node information.
-    //db_delete('site_node')
-    //  ->condition('sid', $site_id)
-    //  ->execute();
-
     // delete PURL prefix
     purl_delete(array(
       'provider' => 'sites',
