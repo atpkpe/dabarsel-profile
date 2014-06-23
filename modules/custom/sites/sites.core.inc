@@ -10,7 +10,7 @@
  */
 function sites_set_current_site($sid) {
 
-  // Activate the Context module context condition
+  // Activate the Context module context condition.
   if (module_exists('context') && $plugin = context_get_plugin('condition', 'site')) {
     $plugin->execute($sid);
   }
@@ -19,13 +19,11 @@ function sites_set_current_site($sid) {
   $site = SiteController::getSite($sid);
   SiteController::setCurrentSite($site);
 
-  // Handle per-site front page overrides
-  if (!empty($site->front_page)) {
-    if ($_GET['q'] == variable_get('site_frontpage', 'node')) {
-      $_GET['q'] = $site->front_page; // This will require module weights to be set appropriately
-      // Alternate method: drupal_goto($site->front_page);
-    }
+  // Handle per-site front page overrides.
+  if (drupal_is_front_page() && !empty($site->front_page) && $site->sid > 1) {
+    $_GET['q'] = $site->front_page;
   }
+
 }
 
 /**
