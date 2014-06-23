@@ -5,25 +5,25 @@
  */
 $plugin = array(
   'single' => FALSE,
-  'title' => t('Subsite bottom'),
-  'description' => t('Shows the site bottom for subsites.'),
+  'title' => t('Site footer text'),
+  'description' => t('Shows the site footer text for the main site.'),
   'category' => array(t('ATP'), -9),
-  'render callback' => 'site_bottom_content_type_render',
+  'render callback' => 'site_footer_text_content_type_render',
 );
 
 /**
  * Content pane render function.
  */
-function site_bottom_content_type_render($subtype, $conf, $panel_args, &$context) {
+function site_footer_text_content_type_render($subtype, $conf, $panel_args, &$context) {
   $current_site = SiteController::getCurrentSite();
-  if ($current_site->sid == 1) return;
+  if ($current_site->sid != 1) return;
 
   global $language;
   $block = new stdClass();
   $block->content = array(
     'view' => array(
       '#type' => 'markup',
-      '#markup' => '<div class="site-bottom-text">' . $current_site->footer[$language->language] . '</div>',
+      '#markup' => '<div class="site-footer-text">' . $current_site->footer[$language->language] . '</div>',
     ),
   );
   return $block;

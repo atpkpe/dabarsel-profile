@@ -6,7 +6,7 @@
  */
 
 module_load_include('inc', 'sites', 'site');
-module_load_include('context.inc', 'sites');
+//module_load_include('context.inc', 'sites');
 module_load_include('core.inc', 'sites');
 module_load_include('purl.inc', 'sites');
 

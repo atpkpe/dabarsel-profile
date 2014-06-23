@@ -21,7 +21,14 @@ function sites_set_current_site($sid) {
 
   // Handle per-site front page overrides.
   if (drupal_is_front_page() && !empty($site->front_page) && $site->sid > 1) {
-    $_GET['q'] = $site->front_page;
+    $nid = explode('node/', $site->front_page);
+    $translations = translation_node_get_translations($nid[1]);
+    if ($translations) {
+      global $language;
+      $_GET['q'] = 'node/' . $translations[$language->language]->nid;
+    } else {
+      $_GET['q'] = $site->front_page;
+    }
   }
 
 }
