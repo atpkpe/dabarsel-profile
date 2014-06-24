@@ -148,6 +148,10 @@ projects[purl][download][type] = 'git'
 projects[purl][download][url] = 'http://git.drupal.org/project/purl.git'
 projects[purl][download][revision] = '469e8668685de4a573e06b29742f6de41771e02c'
 
+projects[memcache][type] = 'module'
+projects[memcache][subdir] = 'contrib'
+projects[memcache][version] = '1.2'
+
 ; plupload library
 libraries[plupload][download][type] = get
 libraries[plupload][download][url] = 'https://github.com/moxiecode/plupload/archive/v1.5.8.zip'
