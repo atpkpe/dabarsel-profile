@@ -138,6 +138,20 @@ header {
       }
     }
   }
+  h1 {
+    $tmp: 70px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    line-height: $tmp;
+    height: $tmp;
+    @include device(tablet-portrait){
+      font-size: 12px;
+    }
+  }
 }
 #logo {
   @include background-image('logo');
@@ -342,6 +356,21 @@ header {
     margin-bottom: $margins/2;
     li {
       border-bottom: 1px solid $gray;
+    }
+  }
+}
+
+.subsite-contact {
+  float: right;
+  margin-right: 15px;
+  * {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 30px;
+    &:hover {
+      color: $green-hover-header;
+      text-decoration: none;
     }
   }
 }
