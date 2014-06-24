@@ -42,6 +42,7 @@ function atp_settings_wysiwyg_default_profiles() {
           'RemoveFormat' => 1,
           'Format' => 1,
           'Table' => 1,
+          'Iframe' => 1,
         ),
         'linkit' => array(
           'linkit' => 1,

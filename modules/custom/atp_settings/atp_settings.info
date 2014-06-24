@@ -17,7 +17,6 @@ features[ctools][] = linkit:linkit_profiles:1
 features[ctools][] = strongarm:strongarm:1
 features[custom_date_formats][] = d. F Y
 features[custom_date_formats][] = d. F Y - G:i
-features[custom_date_formats][] = d. F Y G:i
 features[custom_date_formats][] = d. F Y \k\l. G:i
 features[custom_date_formats][] = d/m/Y
 features[date_format_types][] = atp_long
