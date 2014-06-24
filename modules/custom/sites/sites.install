@@ -15,6 +15,36 @@ function sites_uninstall() {
 }
 
 /**
+ * Implement hook_install
+ */
+
+function sites_install() {
+
+  // Create the default site.
+  $site = new Site();
+  $site->title = 'ATP';
+  $site->front_page = '';
+  $site->contact_page = '';
+  $site->machine_name = 'atp-main';
+  $site->theme = 'atp_theme';
+
+  $site->menu_main_menu = 'main-menu';
+  SiteResourcesController::createTerm($site);
+
+  $site->purl_prefix = 'atp-main';
+
+  $site->name['da'] = 'ATP';
+  $site->name['en'] = 'ATP';
+
+  $site->language_switcher = 1;
+  $site->sharing_links = 1;
+
+  $site->save();
+
+}
+
+
+/**
  * Implements hook_enable().
  */
 function sites_enable() {
