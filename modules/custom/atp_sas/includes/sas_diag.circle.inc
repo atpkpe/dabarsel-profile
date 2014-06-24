@@ -13,7 +13,7 @@ class sasDiagCircle extends sasDiag {
 
   protected function defineOptions(){
     return array(
-      //'backgroundColor' => '#f2f1f0', option if the background color isnt grey
+      'backgroundColor' => 'transparent',
       'pieSliceText' => 'value',
       'pieSliceBorderColor' => 'none',
       'pieSliceTextStyle' => array('color' => '#fff', 'fontName' => 'Tahoma'),

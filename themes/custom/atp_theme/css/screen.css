@@ -534,10 +534,9 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 
 @media screen and (max-width: 500px) { .search-form.gss, .google-search-results { padding: 0 10px; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .search-form.gss, .google-search-results { padding: 0 10px; } }
-.sas-table { width: 100%; background-color: #f2f1f0; empty-cells: hide; padding: 20px; }
-.sas-table tr { background-color: #fff; }
-.sas-table tr > td { border-top: 2.5px solid #f2f1f0; line-height: 30px; }
-.sas-table .format-strong { font-weight: bold; }
+.sas-table { width: 100%; padding: 20px; }
+.sas-table tr td { border-bottom: 1px solid #c4c4c4; line-height: 30px; }
+.sas-table .format-strong, .sas-table .header { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-weight: 600; }
 .sas-table .pos-left { padding-left: 20px; text-align: left; }
 .sas-table .pos-right { text-align: right; padding-right: 20px; }
 

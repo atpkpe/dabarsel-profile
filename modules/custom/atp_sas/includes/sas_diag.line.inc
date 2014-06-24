@@ -13,6 +13,7 @@ class sasDiagLine extends sasDiag {
 
   protected function defineOptions(){
     $options = $this->optionsAxisLabels();
+    $options['backgroundColor'] = 'transparent';
     $options['colors'] = array(
       self::colDarkGreen,
       self::colDarkGrey,
@@ -32,7 +33,7 @@ class sasDiagLine extends sasDiag {
     $data = array();
     $data['rows'] = array();
     $header = array('');
-    
+
     $group_rows = array();
     $g = 0;
     foreach ($this->xml->values->children() as $value) {
@@ -71,7 +72,7 @@ class sasDiagLine extends sasDiag {
 }
 
 /*
- * 
+ *
  <?xml version="1.0" encoding="UTF-8"?>
 <data>
 	<title>Figur 13 - dansk</title>
