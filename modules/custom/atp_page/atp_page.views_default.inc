@@ -249,7 +249,6 @@ function atp_page_views_default_views() {
     t('Faldende'),
     t('Alle'),
     t('A'),
-    t('more'),
     t('View panes'),
     t('B'),
     t('C'),
