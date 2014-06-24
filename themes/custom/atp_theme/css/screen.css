@@ -42,8 +42,8 @@ hr { background: #e6e7e4; border: 0; height: 1px; overflow: hidden; margin: 0 0 
 
 .field-field-page-summary *, blockquote { margin-bottom: 20px; font-size: 16px; line-height: 22px; }
 
-.field-field-page-body ul, .field-field-page-body ol { margin: 0 0 15px 20px; }
-.field-field-page-body li { margin-bottom: 5px; line-height: 22px; }
+.field-field-page-body ul, .field-field-page-body ol, .cke_editable ul, .cke_editable ol { margin: 0 0 15px 20px; }
+.field-field-page-body li, .cke_editable li { margin-bottom: 5px; line-height: 22px; }
 
 .form-required { color: #cc0000; }
 
@@ -75,6 +75,7 @@ header { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.app
 header:before, header:after { content: "."; display: block; height: 0; overflow: hidden; }
 header:after { clear: both; }
 .front header { margin: 0; }
+.node-type-page header { margin-bottom: 25px; }
 header:before { background: #424844; position: absolute; z-index: 0; width: 100%; height: 30px; content: ""; }
 @media screen and (max-width: 500px) { header:before { display: none; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { header:before { display: none; } }
@@ -268,6 +269,15 @@ a { color: $gray-green; line-height: 22px; border-bottom: 1px solid $gray-green;
 .bottom-menu:after { clear: both; }
 .bottom-menu li { list-style: none; float: left; }
 .bottom-menu a { color: #f2f1f0; padding-right: 20px; line-height: 42px; }
+
+.site-bottom-text { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
+@media screen and (max-width: 500px) { .site-bottom-text { width: 100%; float: none; margin: 0; } }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .site-bottom-text { width: 100%; float: none; margin: 0; } }
+.site-bottom-text h2 { font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; line-height: 30px; }
+.site-bottom-text > p { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
+@media screen and (max-width: 500px) { .site-bottom-text > p { width: 100%; float: none; } }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .site-bottom-text > p { width: 100%; float: none; } }
+.site-bottom-text ul { list-style: none; margin-left: 0; }
 
 .pager { clear: both; text-align: center; }
 .pager li { background-image: none; display: inline; list-style-type: none; padding: 0.5em; }

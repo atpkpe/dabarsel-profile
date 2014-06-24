@@ -6,6 +6,9 @@ header {
   .front & {
     margin: 0;
   }
+  .node-type-page & {
+    margin-bottom: 25px;
+  }
   &:before {
     background: $gray-dark;
     position: absolute;

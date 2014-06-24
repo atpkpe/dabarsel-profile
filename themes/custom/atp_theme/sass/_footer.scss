@@ -29,12 +29,7 @@ footer {
       }
       > a {
         @include header-fontfamily;
-        font-weight: 600;
-        text-transform: uppercase;
-        border-bottom: 1px solid $gray-green;
-        display: block;
-        font-size: 13px;
-        line-height: 30px;
+        @include footer-h2;
         &:hover {
           text-decoration: none;
         }
@@ -97,12 +92,7 @@ footer {
     @include float-span(16);
   }
   h2 {
-    font-weight: 600;
-    text-transform: uppercase;
-    border-bottom: 1px solid $gray-green;
-    display: block;
-    font-size: 13px;
-    line-height: 30px;
+    @include footer-h2;
   }
   ul {
     list-style: none;
@@ -123,5 +113,27 @@ footer {
     color: $gray-light;
     padding-right: 20px;
     line-height: 42px;
+  }
+}
+.site-bottom-text {
+  @include float-span(8);
+  @include device(phone){
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  h2 {
+    @include footer-h2;
+  }
+  > p {
+    @include float-span(8);
+    @include device(phone){
+      width: 100%;
+      float: none;
+    }
+  }
+  ul {
+    list-style: none;
+    margin-left: 0;
   }
 }

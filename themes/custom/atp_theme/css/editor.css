@@ -42,7 +42,7 @@ hr { background: #e6e7e4; border: 0; height: 1px; overflow: hidden; margin: 0 0 
 
 .field-field-page-summary *, blockquote { margin-bottom: 20px; font-size: 16px; line-height: 22px; }
 
-.field-field-page-body ul, .field-field-page-body ol { margin: 0 0 15px 20px; }
-.field-field-page-body li { margin-bottom: 5px; line-height: 22px; }
+.field-field-page-body ul, .field-field-page-body ol, .cke_editable ul, .cke_editable ol { margin: 0 0 15px 20px; }
+.field-field-page-body li, .cke_editable li { margin-bottom: 5px; line-height: 22px; }
 
 body { padding: 20px; }

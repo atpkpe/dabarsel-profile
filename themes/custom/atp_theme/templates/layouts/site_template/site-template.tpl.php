@@ -32,14 +32,14 @@
   <?php endif; ?>
   <footer>
     <?php if (!empty($content['footer'])): ?>
-    <section class="onecol">
-      <?php print $content['footer']; ?>
-    </section>
+      <section class="onecol">
+        <?php print $content['footer']; ?>
+      </section>
     <?php endif; ?>
-    <?php if (!empty($content['bottom'])): ?>  
-    <section class="bottom">
-      <?php print $content['bottom']; ?>
-    </section>
+    <?php if (!empty($content['bottom'])): ?>
+      <section class="bottom">
+        <?php print $content['bottom']; ?>
+      </section>
     <?php endif; ?>
   </footer>
 </div>
