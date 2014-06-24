@@ -207,6 +207,12 @@ header > .bottom .level-2-3 h2:after { display: block; border: 0; width: 0; heig
 .bc { margin-bottom: 20px; }
 .bc * { color: #8b9088; font-size: 12px; }
 
+.date { float: left; font-size: 16px; line-height: 22px; margin-right: 10px; }
+.date * { font-size: 16px; }
+
+.summary { font-size: 16px; }
+.summary * { font-size: 16px; }
+
 footer { background: #e6e7e4; padding-top: 30px; }
 footer > section { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 footer > section:before, footer > section:after { content: "."; display: block; height: 0; overflow: hidden; }

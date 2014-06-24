@@ -31,6 +31,7 @@ features[field_instance][] = node-news-field_news_publishdate
 features[field_instance][] = node-news-field_news_summary
 features[field_instance][] = node-news-title_field
 features[node][] = news
+features[panelizer_defaults][] = node:news:standard_2_col:default
 features[panelizer_defaults][] = node:news:standard_2_column:default
 features[taxonomy][] = news_categories
 features[variable][] = additional_settings__active_tab_news
