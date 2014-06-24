@@ -1097,7 +1097,15 @@ function atp_page_panelizer_defaults() {
     $pane->type = 'menu_tree';
     $pane->subtype = 'menu-top';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_subsite',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'menu_name' => 'menu-top',
       'parent_mlid' => 0,
@@ -1129,7 +1137,15 @@ function atp_page_panelizer_defaults() {
     $pane->type = 'menu_tree';
     $pane->subtype = 'main-menu';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_subsite',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'menu_name' => 'main-menu',
       'parent_mlid' => 0,
@@ -1156,12 +1172,60 @@ function atp_page_panelizer_defaults() {
     $display->content['new-88a2a404-996a-4747-8a00-4eda16885f3d'] = $pane;
     $display->panels['left'][1] = 'new-88a2a404-996a-4747-8a00-4eda16885f3d';
     $pane = new stdClass();
+    $pane->pid = 'new-40a8f64a-d951-4c09-80c3-7e2cdefb8308';
+    $pane->panel = 'left';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'main-menu';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_subsite',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'menu_name' => 'main-menu',
+      'parent_mlid' => 0,
+      'parent' => 'main-menu:0',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '1',
+      'follow' => 0,
+      'depth' => '2',
+      'expanded' => 0,
+      'sort' => 0,
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '40a8f64a-d951-4c09-80c3-7e2cdefb8308';
+    $display->content['new-40a8f64a-d951-4c09-80c3-7e2cdefb8308'] = $pane;
+    $display->panels['left'][2] = 'new-40a8f64a-d951-4c09-80c3-7e2cdefb8308';
+    $pane = new stdClass();
     $pane->pid = 'new-ac50784b-b76d-4561-aaee-cd698a3b4151';
     $pane->panel = 'row1';
     $pane->type = 'tools';
     $pane->subtype = 'tools';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_sharing',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
