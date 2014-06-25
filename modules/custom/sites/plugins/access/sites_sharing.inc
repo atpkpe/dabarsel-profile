@@ -21,7 +21,7 @@ $plugin = array(
  */
 function sites_sharing_links_ctools_access_check($conf, $context) {
   $current_site = SiteController::getCurrentSite();
-  return !empty($sharing_links->language_switcher);
+  return $current_site->sharing_links == 1;
 }
 
 /**
