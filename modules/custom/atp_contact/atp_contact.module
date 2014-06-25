@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP contact feature.
+ */
+
+include_once 'atp_contact.features.inc';
