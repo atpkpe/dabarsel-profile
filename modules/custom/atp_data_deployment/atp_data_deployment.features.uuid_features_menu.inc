@@ -1082,6 +1082,678 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'uuid' => '9d1fc520-d3ae-4414-bacd-56e1fabd3b54',
     'uuid_path' => 'node/242906e5-3663-4679-9564-399ec3fd5431',
   );
+  // Exported menu link: a273d184-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d184-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Administrationsforretningen',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => 'a273d184-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a960a282-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: a273d220-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d220-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Pension & Sikring',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => 'a273d220-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a960a282-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: a273d2ba-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d2ba-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Udbetaling Danmark',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => 'a273d2ba-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a960a282-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: a273d353-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d353-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Udbetaling Danmark - internationalt',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => 'a273d353-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a960a282-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: a273d632-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d632-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Spørgsmål og svar',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => 'a273d632-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a960a282-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: a273d6d7-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d6d7-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'ATP Livslang Pension',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => 'a273d6d7-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273d76b-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d76b-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Privat',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a960a332-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: a273d7ff-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d7ff-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Erhverv',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a960a332-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: a273d893-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d893-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'SUPP',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => 'a273d893-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273d924-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d924-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Feriekonto',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => 'a273d924-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273d9b9-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273d9b9-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'LG',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => 'a273d9b9-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273da4d-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273da4d-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'AUB - Arbejdsgivernes uddannelsesbidrag',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => 'a273da4d-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273dade-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273dade-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'AES - Arbejdsmarkedets Erhvervssygdomssikring',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'uuid' => 'a273dade-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273db6f-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273db6f-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Skattenedslag for seniorer',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -44,
+    'uuid' => 'a273db6f-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273dc03-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273dc03-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Folkepension',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -43,
+    'uuid' => 'a273dc03-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273dc92-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273dc92-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Førtidspension',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -42,
+    'uuid' => 'a273dc92-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273dd20-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273dd20-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Boligstøtte',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -41,
+    'uuid' => 'a273dd20-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273ddb1-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273ddb1-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Barselsdagpenge',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -40,
+    'uuid' => 'a273ddb1-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273de43-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273de43-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Familieydelser',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -39,
+    'uuid' => 'a273de43-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273ded1-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273ded1-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'International pension',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -38,
+    'uuid' => 'a273ded1-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273df62-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273df62-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Social sikring i udlandet',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -37,
+    'uuid' => 'a273df62-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d76b-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273dff4-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273dff4-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'ATP Livslang Pension',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => 'a273dff4-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e082-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e082-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'FerieKonto',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => 'a273e082-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e111-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e111-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'AUB - Arbejdsgivernes uddannelsesbidrag',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => 'a273e111-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e19f-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e19f-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'AES - Arbejdsmarkedets Erhvervssygdomssikring',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => 'a273e19f-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e37d-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e37d-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'http://barsel.dk',
+    'router_path' => '',
+    'link_title' => 'Barsel.dk',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => 'a273e37d-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e417-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e417-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'DA-Barsel',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'uuid' => 'a273e417-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e49f-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e49f-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'LG',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -44,
+    'uuid' => 'a273e49f-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e531-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e531-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Finansieringsbidrag',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -43,
+    'uuid' => 'a273e531-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e5bf-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e5bf-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Samlet Betaling',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -42,
+    'uuid' => 'a273e5bf-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e650-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e650-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Barselsdagpenge',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -41,
+    'uuid' => 'a273e650-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: a273e6df-fc48-11e3-a37a-080027880ca6
+  $menu_uuid_links['a273e6df-fc48-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'International social sikring?',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -40,
+    'uuid' => 'a273e6df-fc48-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a273d7ff-fc48-11e3-a37a-080027880ca6',
+  );
   // Exported menu link: a9609d05-e26f-11e3-8111-080027880ca6
   $menu_uuid_links['a9609d05-e26f-11e3-8111-080027880ca6'] = array(
     'menu_name' => 'main-menu',
@@ -1137,7 +1809,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 1,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => -48,
     'uuid' => 'a960a282-e26f-11e3-8111-080027880ca6',
@@ -1157,7 +1829,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 1,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => -47,
     'uuid' => 'a960a332-e26f-11e3-8111-080027880ca6',
@@ -1238,13 +1910,17 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('AES - Arbejdsmarkedets Erhvervssygdomssikring');
+  t('ATP Livslang Pension');
   t('ATP og Solvens II');
   t('ATP som administrator');
   t('ATP som investor');
   t('ATP som pensionsforvalter');
   t('ATP\'s komité');
   t('ATP-indlæg på generalforsamlinger');
+  t('AUB - Arbejdsgivernes uddannelsesbidrag');
   t('Absolut målsætning');
+  t('Administrationsforretningen');
   t('Afdækning');
   t('Afdækning og investering');
   t('Afdækningsporteføljen');
@@ -1252,15 +1928,28 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
   t('Aktier');
   t('Aktivt ejerskab');
   t('Ansvarlig investeringer');
+  t('Barsel.dk');
+  t('Barselsdagpenge');
+  t('Boligstøtte');
+  t('DA-Barsel');
   t('Datterselskaber');
   t('Dilemma');
   t('Dilemmaer');
   t('Din pensionsguide');
+  t('Erhverv');
   t('FAQ');
+  t('Familieydelser');
+  t('FerieKonto');
+  t('Feriekonto');
+  t('Finansieringsbidrag');
+  t('Folkepension');
   t('Forskning og udvikler');
+  t('Førtidspension');
   t('I fokus');
   t('Inflation');
   t('Info & selvbetjening');
+  t('International pension');
+  t('International social sikring?');
   t('Investering');
   t('Investeringsforretningen');
   t('Investeringsporteføljen');
@@ -1272,6 +1961,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
   t('Kategori D');
   t('Kontakt');
   t('Kredit');
+  t('LG');
   t('Levetidsrisiko');
   t('Længere levetid');
   t('Markedsrisiko');
@@ -1279,8 +1969,10 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
   t('Om ATP');
   t('Omkostninger');
   t('Organisation');
+  t('Pension & Sikring');
   t('Pensionsforretningen');
   t('Presse');
+  t('Privat');
   t('Renter');
   t('Resultater & rapporter');
   t('Resultater og omkostninger');
@@ -1292,8 +1984,15 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
   t('Rundt om ATP');
   t('Råvarer');
   t('SP');
+  t('SUPP');
   t('Samfundsansvar');
+  t('Samlet Betaling');
+  t('Skattenedslag for seniorer');
+  t('Social sikring i udlandet');
+  t('Spørgsmål og svar');
   t('Sådan gør vi');
+  t('Udbetaling Danmark');
+  t('Udbetaling Danmark - internationalt');
   t('Vision og kultur');
   t('Øvrige risici');
 

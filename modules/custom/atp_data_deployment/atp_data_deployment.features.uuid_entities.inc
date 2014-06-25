@@ -2671,7 +2671,7 @@ function atp_data_deployment_uuid_default_entities() {
     'filemime' => 'image/jpeg',
     'filename' => 'dreng_i_trae.jpg',
     'filesize' => 77397,
-    'focal_point' => '',
+    'focal_point' => '24,29',
     'metadata' => array(
       'height' => 247,
       'width' => 452,
@@ -2833,7 +2833,7 @@ function atp_data_deployment_uuid_default_entities() {
     'filemime' => 'image/jpeg',
     'filename' => 'dilemma-sproejtemidler.jpg',
     'filesize' => 91496,
-    'focal_point' => '',
+    'focal_point' => '28,20',
     'metadata' => array(
       'height' => 183,
       'width' => 454,
@@ -2872,7 +2872,7 @@ function atp_data_deployment_uuid_default_entities() {
           'filemime' => 'image/jpeg',
           'filename' => 'dilemma-sproejtemidler.jpg',
           'filesize' => 91496,
-          'focal_point' => '',
+          'focal_point' => '28,20',
           'height' => 183,
           'metadata' => array(
             'height' => 183,
@@ -3021,7 +3021,7 @@ function atp_data_deployment_uuid_default_entities() {
           'filemime' => 'image/jpeg',
           'filename' => 'dreng_i_trae.jpg',
           'filesize' => 77397,
-          'focal_point' => '',
+          'focal_point' => '24,29',
           'height' => 247,
           'metadata' => array(
             'height' => 247,
@@ -4299,7 +4299,7 @@ function atp_data_deployment_uuid_default_entities() {
           'filemime' => 'image/jpeg',
           'filename' => 'dilemma-sproejtemidler.jpg',
           'filesize' => 91496,
-          'focal_point' => '',
+          'focal_point' => '28,20',
           'height' => 183,
           'metadata' => array(
             'height' => 183,
@@ -5922,7 +5922,7 @@ function atp_data_deployment_uuid_default_entities() {
           'filemime' => 'image/jpeg',
           'filename' => 'dreng_i_trae.jpg',
           'filesize' => 77397,
-          'focal_point' => '',
+          'focal_point' => '24,29',
           'height' => 247,
           'metadata' => array(
             'height' => 247,
