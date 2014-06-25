@@ -36,7 +36,6 @@ footer {
       }
       li {
         a {
-          color: $gray-light;
           padding-right: 20px;
           line-height: 42px;
           line-height: 22px;
@@ -115,7 +114,7 @@ footer {
     line-height: 42px;
   }
 }
-.site-bottom-text {
+.site-footer-text {
   @include float-span(8);
   @include device(phone){
     width: 100%;

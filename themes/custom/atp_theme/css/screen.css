@@ -254,7 +254,7 @@ a { color: $gray-green; line-height: 22px; border-bottom: 1px solid $gray-green;
 .footer-menu > ul > li.last { margin-right: 0; }
 .footer-menu > ul > li > a { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; line-height: 30px; }
 .footer-menu > ul > li > a:hover { text-decoration: none; }
-.footer-menu > ul > li li a { color: #f2f1f0; padding-right: 20px; line-height: 42px; line-height: 22px; }
+.footer-menu > ul > li li a { padding-right: 20px; line-height: 42px; line-height: 22px; }
 
 .shortcuts { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; margin-right: 0; margin-bottom: 20px; }
 @media screen and (max-width: 500px) { .shortcuts { width: 100%; clear: right; float: right; margin-right: 0; } }
@@ -272,14 +272,14 @@ a { color: $gray-green; line-height: 22px; border-bottom: 1px solid $gray-green;
 .bottom-menu li { list-style: none; float: left; }
 .bottom-menu a { color: #f2f1f0; padding-right: 20px; line-height: 42px; }
 
-.site-bottom-text { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
-@media screen and (max-width: 500px) { .site-bottom-text { width: 100%; float: none; margin: 0; } }
-@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .site-bottom-text { width: 100%; float: none; margin: 0; } }
-.site-bottom-text h2 { font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; line-height: 30px; }
-.site-bottom-text > p { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
-@media screen and (max-width: 500px) { .site-bottom-text > p { width: 100%; float: none; } }
-@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .site-bottom-text > p { width: 100%; float: none; } }
-.site-bottom-text ul { list-style: none; margin-left: 0; }
+.site-footer-text { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
+@media screen and (max-width: 500px) { .site-footer-text { width: 100%; float: none; margin: 0; } }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .site-footer-text { width: 100%; float: none; margin: 0; } }
+.site-footer-text h2 { font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; line-height: 30px; }
+.site-footer-text > p { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
+@media screen and (max-width: 500px) { .site-footer-text > p { width: 100%; float: none; } }
+@media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .site-footer-text > p { width: 100%; float: none; } }
+.site-footer-text ul { list-style: none; margin-left: 0; }
 
 .pager { clear: both; text-align: center; }
 .pager li { background-image: none; display: inline; list-style-type: none; padding: 0.5em; }

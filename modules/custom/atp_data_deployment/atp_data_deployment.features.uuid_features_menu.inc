@@ -103,6 +103,909 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'uuid' => '53cc40ed-2782-48ca-94f6-6987f84679e4',
     'uuid_path' => 'node/126c9a15-3172-4e21-9a34-8194fc363ca2',
   );
+  // Exported menu link: 67fff26b-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff26b-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Pensionsforretningen',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '67fff26b-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609d05-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff2fc-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff2fc-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Din pensionsguide',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '67fff2fc-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609d05-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff38a-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff38a-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Rundt om ATP',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '67fff38a-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609d05-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff419-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff419-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Længere levetid',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => '67fff419-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609d05-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff4a5-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff4a5-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'SP',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => '67fff4a5-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609d05-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff69b-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff69b-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Investeringsforretningen',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '67fff69b-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff72d-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff72d-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Investeringsstrategi',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '67fff72d-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff7b3-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff7b3-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Resultater og omkostninger',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '67fff7b3-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff83f-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff83f-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Afkast',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => '67fff83f-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fff8ca-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fff8ca-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Risiko',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => '67fff8ca-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 67fffab0-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fffab0-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Vision og kultur',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '67fffab0-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff69b-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 67fffb42-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fffb42-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Organisation',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '67fffb42-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff69b-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 67fffbca-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fffbca-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Datterselskaber',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '67fffbca-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff69b-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 67fffc53-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fffc53-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Forskning og udvikler',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => '67fffc53-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff69b-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 67fffcdc-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fffcdc-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Kontakt',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => '67fffcdc-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff69b-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 67fffec2-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67fffec2-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Afdækning og investering',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '67fffec2-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff72d-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 67ffff51-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67ffff51-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Risikokapital og individuelt reservekrav',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '67ffff51-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff72d-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 67ffffda-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['67ffffda-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Risikospredning og forsikringsstrategier',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '67ffffda-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff72d-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000063-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000063-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Afdækning',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '68000063-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff7b3-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 6800022a-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['6800022a-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Absolut målsætning',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => '6800022a-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff72d-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 680002d7-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['680002d7-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Investering',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '680002d7-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff7b3-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000363-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000363-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Omkostninger',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '68000363-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff7b3-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000527-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000527-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Afdækningsporteføljen',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '68000527-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff83f-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 680006ac-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['680006ac-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Investeringsporteføljen',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '680006ac-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff83f-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000737-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000737-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Renter',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '68000737-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff83f-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000902-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000902-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Kredit',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => '68000902-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff83f-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000998-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000998-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Aktier',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => '68000998-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff83f-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000b5d-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000b5d-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Inflation',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'uuid' => '68000b5d-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff83f-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000be9-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000be9-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Råvarer',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -44,
+    'uuid' => '68000be9-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff83f-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000dfb-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000dfb-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Markedsrisiko',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '68000dfb-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff8ca-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000ee9-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000ee9-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Levetidsrisiko',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '68000ee9-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff8ca-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68000fac-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68000fac-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Øvrige risici',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '68000fac-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff8ca-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68001068-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68001068-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'ATP og Solvens II',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => '68001068-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '67fff8ca-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68001126-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68001126-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Ansvarlig investeringer',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -45,
+    'uuid' => '68001126-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 680011e1-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['680011e1-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Retningslinjer',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '680011e1-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '68001126-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 6800129f-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['6800129f-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'ATP\'s komité',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '6800129f-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '68001126-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 6800135a-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['6800135a-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Netværk',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'uuid' => '6800135a-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '68001126-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68001415-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68001415-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Sådan gør vi',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'uuid' => '68001415-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '68001126-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 680014d6-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['680014d6-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Dilemmaer',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'uuid' => '680014d6-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '68001126-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68001594-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68001594-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'FAQ',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'uuid' => '68001594-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '68001126-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 68001652-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['68001652-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Aktivt ejerskab',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -44,
+    'uuid' => '68001652-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
+  );
+  // Exported menu link: 6800170d-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['6800170d-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Retningslinjer for aktivt ejerskab',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'uuid' => '6800170d-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '68001652-fc36-11e3-a37a-080027880ca6',
+  );
+  // Exported menu link: 680017cb-fc36-11e3-a37a-080027880ca6
+  $menu_uuid_links['680017cb-fc36-11e3-a37a-080027880ca6'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'ATP-indlæg på generalforsamlinger',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'uuid' => '680017cb-fc36-11e3-a37a-080027880ca6',
+    'parent_uuid' => '68001652-fc36-11e3-a37a-080027880ca6',
+  );
   // Exported menu link: 6b9ce347-f21c-11e3-a020-080027880ca6
   $menu_uuid_links['6b9ce347-f21c-11e3-a020-080027880ca6'] = array(
     'menu_name' => 'menu-top',
@@ -194,7 +1097,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 1,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => -50,
     'uuid' => 'a9609d05-e26f-11e3-8111-080027880ca6',
@@ -214,7 +1117,7 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 1,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => -49,
     'uuid' => 'a9609ee0-e26f-11e3-8111-080027880ca6',
@@ -335,23 +1238,64 @@ function atp_data_deployment_menu_default_uuid_features_menu() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('ATP og Solvens II');
   t('ATP som administrator');
   t('ATP som investor');
   t('ATP som pensionsforvalter');
+  t('ATP\'s komité');
+  t('ATP-indlæg på generalforsamlinger');
+  t('Absolut målsætning');
+  t('Afdækning');
+  t('Afdækning og investering');
+  t('Afdækningsporteføljen');
+  t('Afkast');
+  t('Aktier');
+  t('Aktivt ejerskab');
+  t('Ansvarlig investeringer');
+  t('Datterselskaber');
   t('Dilemma');
+  t('Dilemmaer');
+  t('Din pensionsguide');
+  t('FAQ');
+  t('Forskning og udvikler');
   t('I fokus');
+  t('Inflation');
   t('Info & selvbetjening');
+  t('Investering');
+  t('Investeringsforretningen');
+  t('Investeringsporteføljen');
+  t('Investeringsstrategi');
   t('Job');
   t('Kategori A');
   t('Kategori B');
   t('Kategori C');
   t('Kategori D');
   t('Kontakt');
+  t('Kredit');
+  t('Levetidsrisiko');
+  t('Længere levetid');
   t('Markedsrisiko');
+  t('Netværk');
   t('Om ATP');
+  t('Omkostninger');
+  t('Organisation');
+  t('Pensionsforretningen');
   t('Presse');
+  t('Renter');
   t('Resultater & rapporter');
+  t('Resultater og omkostninger');
+  t('Retningslinjer');
+  t('Retningslinjer for aktivt ejerskab');
+  t('Risiko');
+  t('Risikokapital og individuelt reservekrav');
+  t('Risikospredning og forsikringsstrategier');
+  t('Rundt om ATP');
+  t('Råvarer');
+  t('SP');
   t('Samfundsansvar');
+  t('Sådan gør vi');
+  t('Vision og kultur');
+  t('Øvrige risici');
 
   return $menu_uuid_links;
 }
