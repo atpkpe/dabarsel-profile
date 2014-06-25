@@ -8,6 +8,8 @@ api = 2
 ; This line removes menu_trail_by_path module entirely
 projects[menu_trail_by_path] = FALSE
 
+projects[adminimal_theme][version] = '1.16'
+
 projects[wysiwyg][type] = 'module'
 projects[wysiwyg][subdir] = 'contrib'
 projects[wysiwyg][download][branch] = '7.x-2.x'
