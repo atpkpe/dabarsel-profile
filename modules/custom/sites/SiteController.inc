@@ -128,21 +128,10 @@ class SiteController {
   public static function getSitesByNode($node) {
     $sites = array();
 
-    //$query = db_select('site_node', 's');
-    //$query->join('purl', 'p', 's.sid = p.id');
-    //$results = $query->fields('s')
-    //          ->fields('p')
-    //          ->condition('nid', $node->nid)
-    //          ->condition('vid', $node->vid)
-    //          ->execute();
-
     $query = db_select('`workbench_access_node`', 'w');
     $query->join('sites', 's', 'w.access_id = s.site_term');
-    //$query->join('purl', 'p', 's.sid = p.id');
     $results = $query
-              //->fields('w', array('access_id'))
               ->fields('s', array('sid'))
-              //->fields('p')
               ->condition('nid', $node->nid)
               ->execute();
 
@@ -150,10 +139,62 @@ class SiteController {
       $sites[$site->sid] = $site;
     }
 
-    //dpr($sites);
-
     return $sites;
   }
+
+ /**
+  *  Load site object by term id.
+  */
+  public static function getSiteByTerm($tid) {
+
+    if (empty($tid)) {
+      return FALSE;
+    }
+
+    // Get site sid from database.
+    $result = db_select('sites', 's')
+      ->fields('s', array('sid'))
+      ->condition('site_term', $tid)
+      ->execute()
+      ->fetchField();
+
+    if (empty($result)) {
+      return FALSE;
+    }
+
+    return self::getSite($result);
+  }
+
+/**
+  *  Load site object by term id.
+  */
+  public static function getMenusByTerm($tids) {
+
+    if (empty($tids)) {
+      return FALSE;
+    }
+
+    // Get site sid from database.
+    $result = db_select('sites', 's')
+      ->fields('s', array('menu_main_menu'))
+      ->condition('site_term', $tids, 'IN')
+      ->execute()
+      ->fetchAll();
+
+    if (empty($result)) {
+      return FALSE;
+    }
+
+    $menus = array();
+    foreach ($result as $row) {
+      $menus[$row->menu_main_menu] = $row->menu_main_menu;
+    }
+
+    return $menus;
+
+  }
+
+
 
   /**
    * Deletes a site and all it's resources.

@@ -270,24 +270,15 @@ function sites_user_logout($account) {
 /**
  * Implements hook_form_alter().
  *
- * Adds sites checkboxes to the node add/edit form.
  */
-/*
 function sites_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form['type']) && isset($form['#node'])) {
     if ($form['type']['#value'] . '_node_form' == $form_id) {
-      $node = $form['#node'];
-      $sites_form_elements = SiteHelper::buildSiteFormElement($node);
-      // Add the sites checkboxes.
-      $form['sites-options'] = $sites_form_elements['sites-options'];
-      // Alter the node form: restrict the available menu options if we're in a
-      // site.
+      // Alter the node form: restrict the available menu options
       SiteHelper::alterNodeForm($form);
-      $form['actions']['submit']['#submit'][] = 'sites_node_form_submit';
     }
   }
 }
-*/
 
 /**
  * Handles submit for node form.
@@ -315,25 +306,6 @@ function sites_node_load($nodes, $types) {
     $node->sites = SiteController::getSitesByNode($node);
   }
 }
-
-/**
- * Implements hook_node_insert().
- */
-
-/*function sites_node_insert($node) {
-  if (isset($node->sites)) {
-    _sites_attach_node_to_sites($node);
-  }
-}*/
-
-/**
- * Implements hook_node_update().
- */
-/*function sites_node_update($node) {
-  if (isset($node->sites)) {
-    _sites_attach_node_to_sites($node);
-  }
-}*/
 
 /**
  * Check the implementation of hook_sites_access with the heaviest weight
