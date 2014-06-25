@@ -1,8 +1,10 @@
 footer {
   background: $gray;
-  padding-top: 30px;
   > section {
     @include clearfix;
+  }
+  .onecol {
+    padding-top: 30px;
   }
   .bottom {
     background: $gray-dark;
@@ -37,7 +39,6 @@ footer {
       li {
         a {
           padding-right: 20px;
-          line-height: 42px;
           line-height: 22px;
         }
       }
@@ -134,5 +135,22 @@ footer {
   ul {
     list-style: none;
     margin-left: 0;
+  }
+}
+
+.site-bottom-text {
+  text-align: center;
+  * {
+    color: #fff;
+    line-height: 42px;
+  }
+  ul {
+    width: auto;
+    margin: 0 auto;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    padding: 0 $margins/2;
   }
 }

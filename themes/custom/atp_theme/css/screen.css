@@ -222,10 +222,11 @@ header h1 { text-transform: uppercase; font-weight: 600; font-size: 14px; positi
 .summary { font-size: 16px; }
 .summary * { font-size: 16px; }
 
-footer { background: #e6e7e4; padding-top: 30px; }
+footer { background: #e6e7e4; }
 footer > section { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; }
 footer > section:before, footer > section:after { content: "."; display: block; height: 0; overflow: hidden; }
 footer > section:after { clear: both; }
+footer .onecol { padding-top: 30px; }
 footer .bottom { background: #424844; }
 
 .footer-menu { margin: 0 auto; width: 960px; /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; padding-bottom: 20px; /*
@@ -254,7 +255,7 @@ a { color: $gray-green; line-height: 22px; border-bottom: 1px solid $gray-green;
 .footer-menu > ul > li.last { margin-right: 0; }
 .footer-menu > ul > li > a { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid #8b9088; display: block; font-size: 13px; line-height: 30px; }
 .footer-menu > ul > li > a:hover { text-decoration: none; }
-.footer-menu > ul > li li a { padding-right: 20px; line-height: 42px; line-height: 22px; }
+.footer-menu > ul > li li a { padding-right: 20px; line-height: 22px; }
 
 .shortcuts { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; margin-right: 0; margin-bottom: 20px; }
 @media screen and (max-width: 500px) { .shortcuts { width: 100%; clear: right; float: right; margin-right: 0; } }
@@ -280,6 +281,11 @@ a { color: $gray-green; line-height: 22px; border-bottom: 1px solid $gray-green;
 @media screen and (max-width: 500px) { .site-footer-text > p { width: 100%; float: none; } }
 @media screen and (min-width: 500px) and (max-width: 960px) and (orientation: landscape) { .site-footer-text > p { width: 100%; float: none; } }
 .site-footer-text ul { list-style: none; margin-left: 0; }
+
+.site-bottom-text { text-align: center; }
+.site-bottom-text * { color: #fff; line-height: 42px; }
+.site-bottom-text ul { width: auto; margin: 0 auto; list-style: none; }
+.site-bottom-text li { display: inline-block; padding: 0 10px; }
 
 .pager { clear: both; text-align: center; }
 .pager li { background-image: none; display: inline; list-style-type: none; padding: 0.5em; }
