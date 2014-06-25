@@ -201,7 +201,7 @@ function atp_file_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'image_style' => '225x126',
+    'image_style' => '',
     'image_link' => '',
   );
   $export['image__default__file_field_image'] = $file_display;
