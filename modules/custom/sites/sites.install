@@ -25,7 +25,7 @@ function sites_install() {
   $site->title = 'ATP';
   $site->front_page = '';
   $site->contact_page = '';
-  $site->machine_name = 'atp-main';
+  $site->machine_name = 'atp_main';
   $site->theme = 'atp_theme';
 
   $site->menu_main_menu = 'main-menu';
@@ -35,6 +35,12 @@ function sites_install() {
 
   $site->name['da'] = 'ATP';
   $site->name['en'] = 'ATP';
+
+  $site->footer['da'] = 'Footer tekst, ændre under sites konfiguration';
+  $site->footer_format['da'] = 'filtered_html';
+
+  $site->footer['en'] = 'Footer text, change under sites config';
+  $site->footer_format['en'] = 'filtered_html';
 
   $site->language_switcher = 1;
   $site->sharing_links = 1;
