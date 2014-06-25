@@ -20,12 +20,12 @@ libraries[ckeditor][download][type] = file
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.0_edit.zip
 libraries[ckeditor][type] = library
 
-projects[media][download][revision] = '06936c017922c9931bebc8157cd1ba6067954438'
+projects[media][download][revision] = 'fe09f096029e7c495f0023afd7192aa081f0e080'
 projects[media][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-media-plugin.patch'
 projects[media][patch][] = 'http://drupal.org/files/issues/media-wysiwyg-improve-our-macro-handling-2126755-100.patch'
 projects[media][patch][] = 'https://raw.githubusercontent.com/kevinchampion/imagex_patches/update-media-patch/contrib/media/media-ckeditor-bind-unbind-stripping.patch'
 
-projects[file_entity][download][revision] = '13fa2b0bcb73d066b996bffed9f13c6a66ed924d'
+projects[file_entity][download][revision] = '5e9c095beeaf2484d69f754cb3410f48180a2a3c'
 
 projects[linkit][type] = 'module'
 projects[linkit][subdir] = 'contrib'
