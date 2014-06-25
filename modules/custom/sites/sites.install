@@ -29,7 +29,7 @@ function sites_install() {
   $site->theme = 'atp_theme';
 
   $site->menu_main_menu = 'main-menu';
-  SiteResourcesController::createTerm($site);
+  // SiteResourcesController::createTerm($site);
 
   $site->purl_prefix = 'atp-main';
 
