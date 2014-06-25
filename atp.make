@@ -115,7 +115,10 @@ projects[multifield][patch][] = 'http://drupal.org/files/issues/i2041533-34.patc
 
 projects[media_browser_plus][type] = 'module'
 projects[media_browser_plus][subdir] = 'contrib'
-projects[media_browser_plus][version] = '3.0-beta3'
+projects[media_browser_plus][download][branch] = '7.x-3.x'
+projects[media_browser_plus][download][type] = 'git'
+projects[media_browser_plus][download][url] = 'http://git.drupal.org/project/media_browser_plus.git'
+projects[media_browser_plus][download][revision] = '0e5759ec0c6c5685aed69082630f9f811c0ff8f9 '
 
 projects[views_tree][type] = 'module'
 projects[views_tree][subdir] = 'contrib'
