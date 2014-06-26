@@ -33,7 +33,10 @@ projects[i18n_menu_overview][download][revision] = '07d0b07ddc9b7b6c7943d302a7b9
 
 projects[l10n_update][type] = 'module'
 projects[l10n_update][subdir] = 'contrib'
-projects[l10n_update][version] = '1.0'
+projects[l10n_update][download][branch] = '7.x-2.x'
+projects[l10n_update][download][type] = 'git'
+projects[l10n_update][download][url] = 'http://git.drupal.org/project/l10n_update.git'
+projects[l10n_update][download][revision] = '476c07e9ec71828fd6af00c5b6e7ce7b0ef46665'
 
 projects[masquerade][type] = 'module'
 projects[masquerade][subdir] = 'contrib'
