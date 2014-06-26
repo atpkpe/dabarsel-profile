@@ -268,7 +268,7 @@ header {
     > li {
       position: relative;
       &:after {
-        @include menu-gradient;
+        @extend %menu-gradient;
         @include device(phone){
           display: none;
         }

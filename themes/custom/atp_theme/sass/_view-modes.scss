@@ -68,9 +68,9 @@
 }
 
 .view-mode-1-2-square {
+  @extend %block-std;
   @include float-span(8);
   @include clearfix;
-  @include block-std;
   margin: 0 0 ($margins/2) $margins-pct;
   padding: 0;
   overflow: hidden;

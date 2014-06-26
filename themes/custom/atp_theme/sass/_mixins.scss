@@ -155,58 +155,16 @@ $image-path: '../images' !default;
 $fallback-extension: 'png' !default;
 $retina-suffix: '@2x';
 @mixin background-image($name, $size:false){
-    background-image: url(#{$image-path}/#{$name}.svg);
-    @if($size){
-        background-size: $size;
-    }
-    .no-svg &{
-        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
-
-        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
-        }
-    }
-}
-
-/* COLORS */
-@mixin menu-gradient {
-  background-color: rgb(255,255,255);
-  @include background-image-with-ms(linear-gradient(top,  rgb(255,255,255) 0%,$gray-semilight 50%,rgb(255,255,255) 100%));
-}
-
-
-/* Standard Block */
-
-@mixin block-std {
-  @include background-image('arrow-r');
-  display: block;
-  margin-bottom: $margins/4;
-  padding: $margins;
-  padding-right: $margins*2.5;
-  height: $block-height;
-  overflow: hidden;
-  background-color: #fff;
-  background-size: 16px 28px;
-  background-repeat: no-repeat;
-  background-position: right $margins center;
-  @include device(phone){
-    background-position: right $margins/2 center;
-    padding: $margins/2;
-    padding-right: $margins*2;
+  background-image: url(#{$image-path}/#{$name}.svg);
+  @if($size){
+    background-size: $size;
   }
-  &:hover {
-    @include background-image('arrow-r');
-    text-decoration: none;
-    background-color: $green-block-hover;
-    background-size: 16px 28px;
-    background-repeat: no-repeat;
-    color: $text-color;
-  }
-  a {
-    text-decoration: none;
-    &:hover {
-      color: $text-color;
-      text-decoration: none;
+  .no-svg &{
+    background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
     }
   }
 }
+
+

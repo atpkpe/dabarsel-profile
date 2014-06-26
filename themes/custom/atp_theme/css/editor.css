@@ -8,8 +8,6 @@
 /* FONTS */
 /* VIEWMODES */
 /* SVG with PNG fallback and retina fallback */
-/* COLORS */
-/* Standard Block */
 /* FONTS */
 h1, h2, h3, h4, header * { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
@@ -17,6 +15,8 @@ h1, h2, h3, h4, header * { font-family: "Lucida Sans Unicode", "Lucida Grande", 
 
 /* BTN */
 /* FORM ELEMENTS */
+/* COLORS */
+/* Standard Block */
 .element-invisible { display: none; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0px; padding: 0px; outline: 0; }

@@ -158,7 +158,7 @@ $mobile-side-padding: ($margins/2);
     color: $green;
   }
   li.gss-result {
-    @include block-std;
+    @extend %block-std;
     padding: 0;
         &:hover b{
     color: $green-dark;

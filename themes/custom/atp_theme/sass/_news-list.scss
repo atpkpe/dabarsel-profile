@@ -26,8 +26,7 @@ $filter-text-color-hover: $text-color;
     margin-bottom: $margins;
 
     article {
-      @include block-std;
-
+      @extend %block-std;
       a {
         text-decoration: none;
         display: block;

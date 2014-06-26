@@ -2,7 +2,7 @@
   margin-bottom: $margins;
   article {
     a {
-      @include block-std;
+      @extend %block-std;
     }
   }
 }
@@ -24,7 +24,7 @@
   margin-bottom: $margins;
   article {
     a {
-      @include block-std;
+      @extend %block-std;
       img {
         float: left;
         margin: (-$margins) $margins 0 (-$margins);
