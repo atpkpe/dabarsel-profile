@@ -210,6 +210,7 @@ header h1 { text-transform: uppercase; font-weight: 600; font-size: 14px; positi
 .page-wrapper:after { clear: both; }
 
 #main aside .menu { margin: 0; padding: 10px 20px; border-left: 3px solid #adc200; list-style: none; }
+#main aside .menu a { display: block; line-height: 22px; }
 #main aside .menu a:hover { text-decoration: none; }
 #main aside .menu a.active-trail { color: #7c9500; }
 
@@ -331,6 +332,7 @@ a { color: $gray-green; line-height: 22px; border-bottom: 1px solid $gray-green;
 .category-d > section:before, .category-d > section:after { content: "."; display: block; height: 0; overflow: hidden; }
 .category-d > section:after { clear: both; }
 .category-d > section > article { float: left; width: 50%; }
+.category-d > section > article a { display: block; line-height: 22px; }
 .category-d > section > article a:hover { color: #adc200; }
 
 @media screen and (max-width: 500px) { .category-a article a, .category-b article a, .category-c article a, .category-d article a { height: auto; } }
