@@ -17,7 +17,7 @@ class SiteHelper {
 
     if (!isset($form['nid']['#value'])) {
       $terms = array_keys($form['workbench_access']['workbench_access']['#options']);
-      array_shift($terms);
+      array_shift($terms);  // Remove the "select site" item.
     } else {
       $terms = $form['workbench_access']['workbench_access']['#default_value'];
     }

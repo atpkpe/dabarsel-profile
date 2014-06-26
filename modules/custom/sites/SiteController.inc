@@ -177,7 +177,7 @@ class SiteController {
 
     // Get site sid from database.
     $result = db_select('sites', 's')
-      ->fields('s', array('menu_main_menu'))
+      ->fields('s', array('sid','menu_main_menu'))
       ->condition('site_term', $tids, 'IN')
       ->execute()
       ->fetchAll();
@@ -189,6 +189,11 @@ class SiteController {
     $menus = array();
     foreach ($result as $row) {
       $menus[$row->menu_main_menu] = $row->menu_main_menu;
+      if ($row->sid == 1) {
+        $menus['menu-footer'] = 'menu-footer';
+        $menus['menu-bottom-menu'] = 'menu-bottom-menu';
+        $menus['menu-top'] = 'menu-top';
+      }
     }
 
     return $menus;

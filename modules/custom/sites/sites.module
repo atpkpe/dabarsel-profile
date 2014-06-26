@@ -20,16 +20,15 @@ function sites_init() {
   }
 
   // Set current site name
-  global $conf;
   $site = SiteController::getCurrentSite();
   if (!empty($site) && $site->sid > 1) {
+    global $conf;
     global $language;
     $lang = $language->language;
     $conf['site_name'] = $site->name[$lang];
     $conf['gss_api_key'] = $site->gss_api_key[$lang];
     $settings['gss']['key'] = $site->gss_api_key[$lang];
     drupal_add_js($settings, 'setting');
-    //dpr($conf);
   }
 
 }
