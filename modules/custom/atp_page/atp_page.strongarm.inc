@@ -69,10 +69,10 @@ function atp_page_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'language' => array(
           'weight' => '2',

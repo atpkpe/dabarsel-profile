@@ -570,3 +570,11 @@ a.ajax-popup-link:hover:after { background-image: url(../images/icon-zoom-green.
 .show-share .toolbox .addthis_toolbox { display: block; }
 .toolbox .addthis_toolbox a { display: block; padding: 5px 10px; }
 .toolbox .addthis_toolbox span { display: block; float: left; margin-right: 5px; }
+
+.contact { /* for IE 6/7 */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); /* non-JS fallback */ *zoom: 1; background: #fff; padding: 20px; margin-bottom: 20px; }
+.contact:before, .contact:after { content: "."; display: block; height: 0; overflow: hidden; }
+.contact:after { clear: both; }
+.contact h2 { margin-bottom: 10px; }
+.contact h3 { font-size: 13px; margin-bottom: 10px; }
+.contact > div { width: 23.4375%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; }
+.contact > div:last-child { width: 48.95833%; clear: right; float: left; margin-left: 0; margin-right: 2.08333%; margin: 0; }

@@ -1611,6 +1611,38 @@ function atp_page_panelizer_defaults() {
     $pane->uuid = '658ff852-c137-4d20-ab15-832d4f974813';
     $display->content['new-658ff852-c137-4d20-ab15-832d4f974813'] = $pane;
     $display->panels['row2'][2] = 'new-658ff852-c137-4d20-ab15-832d4f974813';
+    $pane = new stdClass();
+    $pane->pid = 'new-02510879-df8b-4d8b-ab40-ea975a64ef8f';
+    $pane->panel = 'row3';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_page_contacts';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'entityreference_entity_view',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'view_mode' => 'teaser',
+        'links' => 0,
+      ),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '02510879-df8b-4d8b-ab40-ea975a64ef8f';
+    $display->content['new-02510879-df8b-4d8b-ab40-ea975a64ef8f'] = $pane;
+    $display->panels['row3'][0] = 'new-02510879-df8b-4d8b-ab40-ea975a64ef8f';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-658ff852-c137-4d20-ab15-832d4f974813';
   $panelizer->display = $display;

@@ -30,15 +30,9 @@ function atp_contact_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_wrapper' => 0,
-          'item_wrapper' => 0,
-          'label_wrapper' => 0,
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -80,10 +74,15 @@ function atp_contact_field_default_field_instances() {
         'weight' => 4,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 'div',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -134,7 +133,7 @@ function atp_contact_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -167,6 +166,8 @@ function atp_contact_field_default_field_instances() {
           'video' => 0,
         ),
         'browser_plugins' => array(
+          'media_browser_plus--media_browser_my_files' => 0,
+          'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
           'media_internet' => 0,
@@ -199,10 +200,15 @@ function atp_contact_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 'h3',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -249,10 +255,15 @@ function atp_contact_field_default_field_instances() {
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 'div',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -299,10 +310,15 @@ function atp_contact_field_default_field_instances() {
         'weight' => 2,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 'div',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -330,6 +346,60 @@ function atp_contact_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-contact-title_field'
+  $field_instances['node-contact-title_field'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 'h2',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Name',
+    'required' => 1,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
@@ -337,6 +407,7 @@ function atp_contact_field_default_field_instances() {
   t('Image');
   t('Job title');
   t('Mobile');
+  t('Name');
   t('Phone');
 
   return $field_instances;

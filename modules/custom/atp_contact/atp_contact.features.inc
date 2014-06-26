@@ -19,11 +19,11 @@ function atp_contact_ctools_plugin_api($module = NULL, $api = NULL) {
 function atp_contact_node_info() {
   $items = array(
     'contact' => array(
-      'name' => t('Contact'),
+      'name' => t('Kontakt'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
   );

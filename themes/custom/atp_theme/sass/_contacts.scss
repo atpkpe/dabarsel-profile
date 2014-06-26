@@ -1,0 +1,20 @@
+.contact {
+  @include clearfix;
+  background: #fff;
+  padding: $margins;
+  margin-bottom: $margins;
+  h2 {
+    margin-bottom: $margins/2;
+  }
+  h3 {
+    font-size: 13px;
+    margin-bottom: $margins/2;
+  }
+  > div {
+    @include float-span(4);
+    &:last-child {
+      @include float-span(8);
+      margin: 0;
+    }
+  }
+}
