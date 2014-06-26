@@ -20,6 +20,15 @@ function sites_uninstall() {
 
 function sites_install() {
 
+  // Create the sites vocubulary.
+  $vocabulary = (object) array(
+    'name' => 'Site vocabulary',
+    'description' => 'This vocabulary is used for sites',
+    'machine_name' => 'sites',
+  );
+
+  taxonomy_vocabulary_save($vocabulary);
+
   // Create the default site.
   $site = new Site();
   $site->title = 'ATP';
@@ -29,7 +38,8 @@ function sites_install() {
   $site->theme = 'atp_theme';
 
   $site->menu_main_menu = 'main-menu';
-  // SiteResourcesController::createTerm($site);
+
+  SiteResourcesController::createTerm($site);
 
   $site->purl_prefix = 'atp-main';
 
@@ -175,6 +185,13 @@ $schema['sites_multilanguage'] = array(
       ),
       'name' => array(
         'description' => 'Name of the site.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'gss_api_key' => array(
+        'description' => 'Google Site Search API key.',
         'type' => 'varchar',
         'length' => 255,
         'not null' => TRUE,

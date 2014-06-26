@@ -34,37 +34,6 @@ function sites_set_current_site($sid) {
 }
 
 /**
- * Clear all records in site_node for a given nid, then re-add the
- * current set of site/node relationships.
- *
- * @param int $nid
- *   Unique node id.
- * @param array $sids
- *   Array of unique site ids.
- *
- * @return void.
- */
-function _sites_attach_node_to_sites($node) {
-  $sids = array_filter($node->sites);
-
-  db_delete('site_node')
-    ->condition('nid', $node->nid)
-    ->condition('vid', $node->vid)
-    ->execute();
-
-  foreach ($sids as $sid => $site) {
-    db_insert('site_node')
-      ->fields(array(
-        'nid' => $node->nid,
-        'vid' => $node->vid,
-        'sid' => $sid,
-      ))
-      ->execute();
-  }
-
-}
-
-/**
  * Get the unique name of the menu to be used in place of the menu specified
  * in the $menu_name argument (right now, can only be main_menu or
  * secondary_menu).

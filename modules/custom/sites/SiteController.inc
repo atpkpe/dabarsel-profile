@@ -85,6 +85,7 @@ class SiteController {
       $result->name[$m->language] = $m->name;
       $result->footer[$m->language] = $m->footer;
       $result->footer_format[$m->language] = $m->footer_format;
+      $result->gss_api_key[$m->language] = $m->gss_api_key;
     }
 
     // Convert the raw database result to a Site instance.
@@ -348,10 +349,10 @@ class SiteController {
    * Creates a site object based on raw data.
    */
   public static function createSiteFromRawData($raw_data) {
-    $properties = array('sid', 'purl_prefix', 'title', 'machine_name', 'name',
-                        'front_page', 'menu_main_menu', 'menu_secondary_menu', 'theme',
-                        'footer', 'footer_format','language_switcher','sharing_links',
-                        'site_term', 'contact_page'
+    $properties = array('sid', 'purl_prefix', 'title', 'machine_name',
+                        'front_page', 'menu_main_menu', 'menu_secondary_menu',
+                        'theme', 'language_switcher','sharing_links',
+                        'site_term', 'contact_page',
                        );
     $site = new Site();
     if (is_array($raw_data)) {

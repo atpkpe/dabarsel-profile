@@ -64,7 +64,7 @@ function sites_ctools_access_summary($conf, $context) {
 
   $names = array();
   foreach (array_filter($conf['sids']) as $sid) {
-    $names[] = check_plain($sites[$sid]->name);
+    $names[] = check_plain($sites[$sid]->title);
   }
 
   if (empty($names)) {

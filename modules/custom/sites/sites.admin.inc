@@ -176,6 +176,22 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     );
   }
 
+  $form['search'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Search'),
+    '#collapsible' => TRUE,
+    '#group' => 'settings'
+  );
+
+  foreach($languages as $lang => $language) {
+    $form['content']['gss_api_key_' . $lang] = array(
+      '#title' => t('GSS API key') . " <small>($language->name)</small>",
+      '#description' => t('Google Site Search API key'),
+      '#type' => 'textfield',
+      '#default_value' => $site->gss_api_key[$lang],
+    );
+  }
+
   $form['display'] = array(
     '#type' => 'fieldset',
     '#title' => t('Display settings'),
@@ -281,6 +297,7 @@ function sites_site_form_submit($form, &$form_state) {
     $site->footer[$lang] = $form_state['values']['footer_' . $lang]['value'];
     $site->footer_format[$lang] = $form_state['values']['footer_' . $lang]['format'];
     $site->name[$lang] = $form_state['values']['site_name_' . $lang];
+    $site->gss_api_key[$lang] = $form_state['values']['gss_api_key_' . $lang];
   }
 
   $site->language_switcher = $form_state['values']['language_switcher'];
