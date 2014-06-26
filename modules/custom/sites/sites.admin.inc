@@ -184,7 +184,7 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
   );
 
   foreach($languages as $lang => $language) {
-    $form['content']['gss_api_key_' . $lang] = array(
+    $form['search']['gss_api_key_' . $lang] = array(
       '#title' => t('GSS API key') . " <small>($language->name)</small>",
       '#description' => t('Google Site Search API key'),
       '#type' => 'textfield',

@@ -352,7 +352,8 @@ class SiteController {
     $properties = array('sid', 'purl_prefix', 'title', 'machine_name',
                         'front_page', 'menu_main_menu', 'menu_secondary_menu',
                         'theme', 'language_switcher','sharing_links',
-                        'site_term', 'contact_page',
+                        'site_term', 'contact_page', 'footer', 'footer_format',
+                        'name', 'gss_api_key',
                        );
     $site = new Site();
     if (is_array($raw_data)) {

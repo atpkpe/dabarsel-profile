@@ -16,9 +16,8 @@ $plugin = array(
  */
 function site_contact_content_type_render($subtype, $conf, $panel_args, &$context) {
   $current_site = SiteController::getCurrentSite();
-  if ($current_site->sid == 1) return;
 
-  global $language;
+  if ($current_site->sid == 1 || empty($current_site->contact_page)) return;
 
   $block = new stdClass();
   $block->content = array(

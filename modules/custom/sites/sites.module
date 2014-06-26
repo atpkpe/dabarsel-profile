@@ -24,7 +24,12 @@ function sites_init() {
   $site = SiteController::getCurrentSite();
   if (!empty($site) && $site->sid > 1) {
     global $language;
-    $conf['site_name'] = $site->name[$language->language];
+    $lang = $language->language;
+    $conf['site_name'] = $site->name[$lang];
+    $conf['gss_api_key'] = $site->gss_api_key[$lang];
+    $settings['gss']['key'] = $site->gss_api_key[$lang];
+    drupal_add_js($settings, 'setting');
+    //dpr($conf);
   }
 
 }

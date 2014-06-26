@@ -23,22 +23,7 @@ class Site {
   public $footer_format;
   public $language_switcher;
   public $sharing_links;
-
-  /**
-   * Constructor of class Site().
-   */
-  /* apparently NOT USED, so commented out..
-  function __construct($title = '', $purl_prefix = '', $name = '', $front_page = '', $mpl = '', $msl = '', $theme = '', $sid = NULL) {
-    $this->title = $title;
-    $this->purl_prefix = $purl_prefix;
-    $this->name = $name;
-    $this->front_page = $front_page;
-    $this->menu_main_menu = $mpl;
-    $this->menu_secondary_menu = $msl;
-    $this->theme = $theme;
-    $this->sid = $sid;
-  }
-  */
+  public $gss_api_key;
 
   /**
    * Function for saving or updating information about sites.
@@ -74,6 +59,7 @@ class Site {
     $record->sid = $this->sid;
     $record->language = $lang;
     $record->name = $this->name[$lang];
+    $record->gss_api_key = $this->gss_api_key[$lang];
     $record->footer = $this->footer[$lang];
     $record->footer_format = $this->footer_format[$lang];
     return $record;
