@@ -47,7 +47,13 @@
     > article {
       float: left;
       width: percentage(1/2);
-      a:hover { color: $green-hover-header; }
+      a {
+        display: block;
+        line-height: 22px;
+        &:hover {
+          color: $green-hover-header;
+        }
+      }
     }
   }
 }
