@@ -241,7 +241,7 @@ function atp_section_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -1,
+      'weight' => 5,
     ),
   );
 
@@ -600,7 +600,7 @@ function atp_section_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => -3,
+      'weight' => 3,
     ),
   );
 
@@ -1198,7 +1198,7 @@ function atp_section_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -2,
+      'weight' => 4,
     ),
   );
 
@@ -1387,7 +1387,7 @@ function atp_section_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 1,
     ),
   );
 
