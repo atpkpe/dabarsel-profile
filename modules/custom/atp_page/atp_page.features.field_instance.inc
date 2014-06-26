@@ -554,7 +554,7 @@ function atp_page_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'field_wrapper' => 'h3',
+          'field_wrapper' => 'h2',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),

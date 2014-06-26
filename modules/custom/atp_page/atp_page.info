@@ -12,7 +12,6 @@ dependencies[] = file_entity
 dependencies[] = image
 dependencies[] = media
 dependencies[] = multifield
-dependencies[] = node
 dependencies[] = panelizer
 dependencies[] = smart_trim
 dependencies[] = strongarm

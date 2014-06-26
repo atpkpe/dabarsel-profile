@@ -112,12 +112,12 @@
   @include device(phone){
     padding: $margins/2;
   }
-  h3 {
-      color: #fff;
+  * {
+    color: #fff;
   }
   p {
-      margin:0;
-      color: #fff;
+    margin:0;
+
   }
 }
 
