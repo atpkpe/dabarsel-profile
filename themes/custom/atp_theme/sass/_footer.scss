@@ -11,14 +11,14 @@ footer {
   }
 }
 .footer-menu {
-  @include content;
+  @extend %content;
   @include clearfix;
   padding-bottom: $margins;
   ul {
     list-style: none;
   }
   > ul {
-    @include content;
+    @extend %content;
     @include clearfix;
     > li {
       @include float-span(4);
@@ -30,8 +30,8 @@ footer {
         margin-right: 0;
       }
       > a {
-        @include header-fontfamily;
-        @include footer-h2;
+        @extend %header-fontfamily;
+        @extend %footer-h2;
         margin-bottom: $margins/2;
         &:hover {
           text-decoration: none;
@@ -46,45 +46,6 @@ footer {
       }
     }
   }
-  /*
-  li {
-    list-style: none;
-  }
-  a {
-    color: $gray-green;
-    line-height: 22px;
-    border-bottom: 1px solid $gray-green;
-    font-size: 13px;
-    &:hover {
-      color: $green;
-      border-bottom: 1px solid $green;
-    }
-  }
-  > ul {
-    > li {
-      width: 25%;
-      @include view-mode(4);
-      border-left: 0;
-      float: left;
-      @include device(phone) {
-        padding: 10px;
-      }
-      > a {
-        color: $gray-dark;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding-bottom: 6px;
-        margin-bottom: 4px;
-        display: inline-block;
-        width: 100%;
-        &:hover {
-          color: $gray-dark;
-          border-bottom: 1px solid $gray-green;
-        }
-      }
-    }
-  }
-  */
 }
 .shortcuts {
   @include float-span(8);
@@ -94,7 +55,7 @@ footer {
     @include float-span(16);
   }
   h2 {
-    @include footer-h2;
+    @extend %footer-h2;
   }
   ul {
     list-style: none;
@@ -105,7 +66,7 @@ footer {
   }
 }
 .bottom-menu {
-  @include content;
+  @extend %content;
   @include clearfix;
   li {
     list-style: none;
@@ -125,7 +86,7 @@ footer {
     margin: 0;
   }
   h2 {
-    @include footer-h2;
+    @extend %footer-h2;
   }
   > p {
     @include float-span(8);

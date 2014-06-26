@@ -6,10 +6,10 @@
 }
 input {
   &.form-text {
-    @include form-text;
+    @extend %form-text;
   }
   &.form-submit {
-    @include submit;
+    @extend %submit;
   }
 }
 #user-login {

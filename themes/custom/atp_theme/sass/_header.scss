@@ -44,7 +44,7 @@ header {
     }
   }
   > div > .inner {
-    @include content;
+    @extend %content;
     position: relative;
   }
   > .top {
@@ -124,7 +124,7 @@ header {
         }
       }
       h2 {
-        @include font;
+        @extend %font;
         font-weight: 400;
         padding: $margins/2;
         border: ($margins/2) solid $body-color;

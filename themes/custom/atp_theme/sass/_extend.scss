@@ -1,0 +1,84 @@
+%content {
+  margin: 0 auto;
+  width: $content-width;
+  @include device(tablet-portrait){
+    padding: 0;
+    width: 100%;
+  }
+  @include device(phone){
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/* FONTS */
+%header-fontfamily {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+%font {
+  color: $text-color;
+  font-size: $default-fontsize;
+  font-family: "Tahoma", sans-serif;
+}
+%font-bold {
+  font-weight: 700;
+}
+%footer-h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid $gray-green;
+  display: block;
+  font-size: 13px;
+  line-height: 30px;
+}
+
+/* BTN */
+%btn-green {
+  background: $green;
+  position: relative;
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  &:before {
+    @include opacity(.1);
+    background: #000;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    content: "";
+  }
+  &:after {
+    @include opacity(.3);
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    content: "";
+  }
+  &:hover {
+    background: $green-hover;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+/* FORM ELEMENTS */
+%form-text {
+    background: #fff;
+    padding: 0 $margins/2;
+    width: 500px;
+    height: 2*$margins;
+    border: $border-width solid $gray;
+}
+%submit {
+  @extend %btn-green;
+  cursor: pointer;
+}
+

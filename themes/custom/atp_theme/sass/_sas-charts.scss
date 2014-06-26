@@ -9,7 +9,7 @@
     }
   }
   .format-strong, .header {
-    @include header-fontfamily;
+    @extend %header-fontfamily;
     font-weight: 600;
   }
   .pos-left {

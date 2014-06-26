@@ -2,6 +2,7 @@
 @import "singularitygs";
 @import "variables";
 @import "mixins";
+@import "extend";
 @import "view-modes";
 
 * {
@@ -9,15 +10,15 @@
 }
 
 .onecol {
+  @extend %content;
   @include clearfix;
-  @include content;
   @include device(phone){
     padding: 0 10px;
   }
 }
 .twocol-left {
+  @extend %content;
   @include clearfix;
-  @include content;
   @include margin(0,0,1,0);
   > aside {
     @include grid-span(4, 1);
@@ -44,8 +45,8 @@
   }
 }
 .twocol-right {
+  @extend %content;
   @include clearfix;
-  @include content;
   @include margin(0,0,1,0);
   > aside {
     @include grid-span(4, 13);

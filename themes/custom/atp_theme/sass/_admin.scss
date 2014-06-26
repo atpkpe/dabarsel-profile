@@ -19,6 +19,9 @@ body {
   right: 0;
   line-height: 22px;
   list-style: none;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 2px 0 2px 2px;
   @include device(tablet){
     display: none;
   }
