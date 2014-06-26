@@ -51,10 +51,11 @@ function atp_section_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_section_body',
-      1 => 'field_section_summary',
-      2 => 'title_field',
-      3 => 'field_section_image',
+      1 => 'field_section_image',
+      2 => 'field_section_summary',
+      3 => 'title_field',
       4 => 'language',
+      5 => 'workbench_access',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
