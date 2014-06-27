@@ -1,0 +1,4 @@
+
+name = ATP signup
+core = 7.x
+package = ATP
