@@ -60,11 +60,11 @@ function atp_page_views_default_views() {
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['field'] = 'field_page_related_field_ter_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['label'] = '';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
-  /* Sort criterion: Indhold: Page related (field_page_related:delta) */
+  /* Sort criterion: Content: Page related (field_page_related:delta) */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_page_related';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
-  /* Contextual filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -76,7 +76,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
-  /* Filter criterion: Indhold: Published */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -242,7 +242,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['relationship'] = 'field_page_related_field_ter_category_tid';
-  /* Sort criterion: Indhold: Page related (field_page_related:delta) */
+  /* Sort criterion: Content: Page related (field_page_related:delta) */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_page_related';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
@@ -266,6 +266,7 @@ function atp_page_views_default_views() {
     t('Faldende'),
     t('Alle'),
     t('A'),
+    t('more'),
     t('View panes'),
     t('B'),
     t('C'),
