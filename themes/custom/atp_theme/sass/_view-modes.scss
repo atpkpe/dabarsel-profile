@@ -101,3 +101,13 @@
     }
   }
 }
+
+.view-mode-1-2-h-l {
+  @include grid-span(8,9);
+  height: ($block-height*2)+20px;
+  overflow: hidden;
+  blockquote, blockquote * {
+    font-size: 22px;
+    line-height: normal;
+  }
+}
