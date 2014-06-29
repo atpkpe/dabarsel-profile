@@ -1882,15 +1882,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'show text format dropdown'.
-  $permissions['show text format dropdown'] = array(
-    'name' => 'show text format dropdown',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'hide_formats',
-  );
-
   // Exported permission: 'switch users'.
   $permissions['switch users'] = array(
     'name' => 'switch users',
