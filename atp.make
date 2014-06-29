@@ -136,6 +136,10 @@ projects[jammer][type] = 'module'
 projects[jammer][subdir] = 'contrib'
 projects[jammer][version] = '1.3'
 
+projects[hide_formats][type] = 'module'
+projects[hide_formats][subdir] = 'contrib'
+projects[hide_formats][version] = '1.1'
+
 projects[plupload][type] = 'module'
 projects[plupload][subdir] = 'contrib'
 projects[plupload][version] = '1.6'

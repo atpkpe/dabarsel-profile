@@ -16,7 +16,7 @@ function atp_settings_wysiwyg_default_profiles() {
     'editor' => 'ckeditor',
     'settings' => array(
       'default' => 1,
-      'user_choose' => 1,
+      'user_choose' => 0,
       'show_toggle' => 1,
       'theme' => 'advanced',
       'language' => 'en',
@@ -63,7 +63,7 @@ function atp_settings_wysiwyg_default_profiles() {
       'css_path' => '%t/css/editor.css',
       'stylesSet' => '',
       'block_formats' => 'p,h2,h3,h4,div',
-      'advanced__active_tab' => 'edit-basic',
+      'advanced__active_tab' => 'edit-paste',
       'forcePasteAsPlainText' => 0,
     ),
     'rdf_mapping' => array(),

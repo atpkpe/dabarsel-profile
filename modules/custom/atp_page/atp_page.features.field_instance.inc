@@ -382,7 +382,12 @@ function atp_page_field_default_field_instances() {
   // Exported field_instance: 'node-page-field_page_summary'
   $field_instances['node-page-field_page_summary'] = array(
     'bundle' => 'page',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'REMOVERR',
+        'format' => 'plain_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -541,6 +546,7 @@ function atp_page_field_default_field_instances() {
       'type' => 'text_textarea',
       'weight' => 4,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-page-title_field'

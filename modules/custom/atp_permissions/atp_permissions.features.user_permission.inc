@@ -478,6 +478,13 @@ function atp_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node contact defaults'.
+  $permissions['administer panelizer node contact defaults'] = array(
+    'name' => 'administer panelizer node contact defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panelizer node gallery defaults'.
   $permissions['administer panelizer node gallery defaults'] = array(
     'name' => 'administer panelizer node gallery defaults',
@@ -950,9 +957,7 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'create contact content'.
   $permissions['create contact content'] = array(
     'name' => 'create contact content',
-    'roles' => array(
-      'Author' => 'Author',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1426,9 +1431,7 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'edit any contact content'.
   $permissions['edit any contact content'] = array(
     'name' => 'edit any contact content',
-    'roles' => array(
-      'Author' => 'Author',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1561,9 +1564,7 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'edit own contact content'.
   $permissions['edit own contact content'] = array(
     'name' => 'edit own contact content',
-    'roles' => array(
-      'Author' => 'Author',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1881,6 +1882,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'show text format dropdown'.
+  $permissions['show text format dropdown'] = array(
+    'name' => 'show text format dropdown',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'hide_formats',
+  );
+
   // Exported permission: 'switch users'.
   $permissions['switch users'] = array(
     'name' => 'switch users',
@@ -2039,6 +2049,51 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'view author options'.
+  $permissions['view author options'] = array(
+    'name' => 'view author options',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
+  // Exported permission: 'view body options'.
+  $permissions['view body options'] = array(
+    'name' => 'view body options',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
+  // Exported permission: 'view comment preview button'.
+  $permissions['view comment preview button'] = array(
+    'name' => 'view comment preview button',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
+  // Exported permission: 'view comment settings'.
+  $permissions['view comment settings'] = array(
+    'name' => 'view comment settings',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
+  // Exported permission: 'view delete button'.
+  $permissions['view delete button'] = array(
+    'name' => 'view delete button',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
   // Exported permission: 'view files'.
   $permissions['view files'] = array(
     'name' => 'view files',
@@ -2049,6 +2104,15 @@ function atp_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'view menu options'.
+  $permissions['view menu options'] = array(
+    'name' => 'view menu options',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
   );
 
   // Exported permission: 'view moderation history'.
@@ -2111,6 +2175,24 @@ function atp_permissions_user_default_permissions() {
     'module' => 'panels',
   );
 
+  // Exported permission: 'view path options'.
+  $permissions['view path options'] = array(
+    'name' => 'view path options',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
+  // Exported permission: 'view preview button'.
+  $permissions['view preview button'] = array(
+    'name' => 'view preview button',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
   // Exported permission: 'view private files'.
   $permissions['view private files'] = array(
     'name' => 'view private files',
@@ -2119,6 +2201,24 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'view revision information'.
+  $permissions['view revision information'] = array(
+    'name' => 'view revision information',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
+  // Exported permission: 'view revision log textarea'.
+  $permissions['view revision log textarea'] = array(
+    'name' => 'view revision log textarea',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
   );
 
   // Exported permission: 'view revisions'.
@@ -2132,6 +2232,24 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'view submit button'.
+  $permissions['view submit button'] = array(
+    'name' => 'view submit button',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
+  // Exported permission: 'view teaser controls'.
+  $permissions['view teaser controls'] = array(
+    'name' => 'view teaser controls',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
+  );
+
   // Exported permission: 'view the administration theme'.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
@@ -2141,6 +2259,15 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'view user delete button'.
+  $permissions['view user delete button'] = array(
+    'name' => 'view user delete button',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'jammer',
   );
 
   // Exported permission: 'view workbench access information'.
