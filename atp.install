@@ -17,6 +17,8 @@ function atp_install() {
   // For some reason it cannot be deactivated in the makefile
   module_disable(array('menu_trail_by_path'));
   drupal_uninstall_modules(array('menu_trail_by_path'));
+
+  atp_create_users();
 }
 
 function atp_create_users() {
@@ -30,7 +32,7 @@ function atp_create_users() {
   $edit = array();
   $edit['name']   = 'author';
   $edit['mail']   = 'tom+author@adapt.dk';
-  $edit['roles']  = array($author_role->rid => $author_role->rid, $atp_role => $atp_role);
+  $edit['roles']  = array($author_role->rid => $author_role->rid, $atp_role->rid => $atp_role->rid);
   $edit['pass']   = 'QRbYRmppxcnH';
   $edit['status'] = 1;
   $account = user_save(drupal_anonymous_user(), $edit);
