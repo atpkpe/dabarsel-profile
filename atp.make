@@ -38,13 +38,6 @@ projects[l10n_update][download][type] = 'git'
 projects[l10n_update][download][url] = 'http://git.drupal.org/project/l10n_update.git'
 projects[l10n_update][download][revision] = '476c07e9ec71828fd6af00c5b6e7ce7b0ef46665'
 
-projects[i18nviews][type] = 'module'
-projects[i18nviews][subdir] = 'contrib'
-projects[i18nviews][download][branch] = '7.x-3.x'
-projects[i18nviews][download][type] = 'git'
-projects[i18nviews][download][url] = 'http://git.drupal.org/project/i18nviews.git'
-projects[i18nviews][download][revision] = '26bd52c4664b0fec8155273f0c0f3ab8a5a2ef66'
-
 projects[masquerade][type] = 'module'
 projects[masquerade][subdir] = 'contrib'
 

@@ -33,7 +33,6 @@ dependencies[] = i18n_taxonomy
 dependencies[] = i18n_menu_overview
 dependencies[] = i18n_variable
 dependencies[] = i18n_panels
-dependencies[] = i18nviews
 dependencies[] = l10n_update
 dependencies[] = menu_view_unpublished
 dependencies[] = uuid_features_menu
