@@ -34,3 +34,9 @@ msgstr "Skal godkendes"
 
 msgid "My Workbench"
 msgstr "Workbench"
+
+msgid "Text formatting help"
+msgstr "Tekstformat"
+
+msgid "Summary"
+msgstr "Manchet"

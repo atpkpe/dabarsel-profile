@@ -49,7 +49,6 @@ function atp_gallery_embed_insert_form($form, &$form_state) {
   $query = new EntityFieldQuery();
   $entities = $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'gallery')
-    ->propertyCondition('status', 1)
     ->execute();
 
   if (isset($entities['node'])) {

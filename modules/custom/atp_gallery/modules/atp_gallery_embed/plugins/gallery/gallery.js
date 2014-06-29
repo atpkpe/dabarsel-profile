@@ -1,6 +1,5 @@
 (function ($) {
 
-// @todo Array syntax required; 'gallery' is a predefined token in JavaScript.
 Drupal.wysiwyg.plugins['gallery'] = {
 
   /**
@@ -24,13 +23,12 @@ Drupal.wysiwyg.plugins['gallery'] = {
     else {
       // Prevent duplicating a teaser gallery.
       // @todo data.content is the selection only; needs access to complete content.
-      if (data.content.match(/<!--gallery-->/)) {
+      if (data.content.match(/\[\[gallery.+\]\]/)) {
         return;
       }
-      var content = '<!--gallery-->';
+      //var content = '<!--gallery-->';
     }
     if (typeof content != 'undefined') {
-      //Drupal.wysiwyg.instances[instanceId].insert(content);
       Drupal.wysiwyg.plugins.gallery.insert_form(data, settings, instanceId)
     }
   },
@@ -52,10 +50,10 @@ Drupal.wysiwyg.plugins['gallery'] = {
           $(this).dialog("close");
         };
 
-        dialogdiv.find('.form-save-diagram').click(function(evt) {
+        dialogdiv.find('input.form-submit').click(function(evt) {
           evt.preventDefault();
-          settings.sasDiagId = $('#sas-diagrams input:radio:checked', dialogdiv).val();
-          var content = Drupal.wysiwyg.plugins['sas_diag']._getPlaceholder(settings);
+          settings.galleryId = $('#edit-galleries input:radio:checked', dialogdiv).val();
+          var content = Drupal.wysiwyg.plugins['gallery']._getPlaceholder(settings);
           Drupal.wysiwyg.instances[instanceId].insert(content);
           dialogdiv.dialog("close");
         });
@@ -83,15 +81,20 @@ Drupal.wysiwyg.plugins['gallery'] = {
 
 
   /**
-   * Replace all <!--gallery--> tags with images.
+   * Replace all [[gallery:id]] tags with images.
    */
   attach: function(content, settings, instanceId) {
-    content = content.replace(/<!--gallery-->/g, this._getPlaceholder(settings));
+    var reg = /\[\[gallery:(.+)\]\]/gim;
+    content = content.replace(reg, function(token, id){
+        settings.galleryId = id;
+        return Drupal.wysiwyg.plugins['gallery']._getPlaceholder(settings);
+      });
+
     return content;
   },
 
   /**
-   * Replace images with <!--gallery--> tags in content upon detaching editor.
+   * Replace images with [[gallery:id]] tags in content upon detaching editor.
    */
   detach: function(content, settings, instanceId) {
     var $content = $('<div>' + content + '</div>'); // No .outerHTML() in jQuery :(
@@ -99,8 +102,8 @@ Drupal.wysiwyg.plugins['gallery'] = {
     // #474908: IE 8 breaks when using jQuery methods to replace the elements.
     // @todo Add a generic implementation for all Drupal plugins for this.
     $.each($('img.wysiwyg-gallery', $content), function (i, elem) {
-      elem.parentNode.insertBefore(document.createComment('gallery'), elem);
-      elem.parentNode.removeChild(elem);
+      var data = ($(this).data());
+      $(this).replaceWith('[[gallery:' + data.galleryId + ']]');
     });
     return $content.html();
   },
@@ -109,7 +112,9 @@ Drupal.wysiwyg.plugins['gallery'] = {
    * Helper function to return a HTML placeholder.
    */
   _getPlaceholder: function (settings) {
-    return '<img src="' + settings.path + '/images/galleryplaceholder.png" alt="&lt;--gallery-&gt;" title="&lt;--gallery--&gt;" class="wysiwyg-gallery drupal-content" />';
+    return '<img src="' + settings.path +
+      '/images/galleryplaceholder.png" alt="Gallery" title="Gallery" class="wysiwyg-gallery drupal-content" data-gallery-id="'
+      + settings.galleryId +'"/>';
   }
 };
 
