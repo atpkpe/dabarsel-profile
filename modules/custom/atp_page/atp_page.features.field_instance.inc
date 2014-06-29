@@ -384,7 +384,7 @@ function atp_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => array(
       0 => array(
-        'value' => 'REMOVERR',
+        'value' => '',
         'format' => 'plain_text',
       ),
     ),
