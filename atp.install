@@ -19,6 +19,8 @@ function atp_install() {
   drupal_uninstall_modules(array('menu_trail_by_path'));
 
   atp_create_users();
+
+  variable_set('site_frontpage', 'node/12');
 }
 
 function atp_create_users() {
