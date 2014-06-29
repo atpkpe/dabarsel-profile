@@ -136,10 +136,6 @@ projects[jammer][type] = 'module'
 projects[jammer][subdir] = 'contrib'
 projects[jammer][version] = '1.3'
 
-projects[hide_formats][type] = 'module'
-projects[hide_formats][subdir] = 'contrib'
-projects[hide_formats][version] = '1.1'
-
 projects[plupload][type] = 'module'
 projects[plupload][subdir] = 'contrib'
 projects[plupload][version] = '1.6'
@@ -174,4 +170,6 @@ libraries[plupload][destination] = libraries
 libraries[plupload][directory_name] = plupload
 libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-16.patch"
 
+projects[adminimal_theme][type] = 'module'
+projects[adminimal_theme][subdir] = 'contrib'
 projects[adminimal_theme][version] = '1.16'
