@@ -52,10 +52,11 @@ function atp_news_field_group_info() {
     'children' => array(
       0 => 'field_news_body',
       1 => 'field_news_image',
-      2 => 'field_news_summary',
-      3 => 'field_news_publishdate',
+      2 => 'field_news_publishdate',
+      3 => 'field_news_summary',
       4 => 'title_field',
       5 => 'language',
+      6 => 'workbench_access',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

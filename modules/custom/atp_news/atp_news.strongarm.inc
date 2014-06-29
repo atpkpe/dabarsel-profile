@@ -84,7 +84,7 @@ function atp_news_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '-4',
+          'weight' => '2',
         ),
         'title' => array(
           'weight' => '1',
@@ -94,6 +94,9 @@ function atp_news_strongarm() {
         ),
         'xmlsitemap' => array(
           'weight' => '3',
+        ),
+        'workbench_access' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(

@@ -13,6 +13,85 @@ function atp_layouts_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'node_view_panel_context';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -99;
+  $handler->conf = array(
+    'title' => 'Gallery preview',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'entity_bundle:node',
+          'settings' => array(
+            'type' => array(
+              'gallery' => 'gallery',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'atp_onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'row1' => NULL,
+      'row2' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'eb8d5fd7-6699-4efd-a4c2-701d6bed7788';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-717c701a-5733-4ab5-9df7-4a87e3aad248';
+    $pane->panel = 'row1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Vis galleri',
+      'body' => '<p>[[gallery:%node:nid]]</p><p>&nbsp;</p>',
+      'format' => 'filtered_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '717c701a-5733-4ab5-9df7-4a87e3aad248';
+    $display->content['new-717c701a-5733-4ab5-9df7-4a87e3aad248'] = $pane;
+    $display->panels['row1'][0] = 'new-717c701a-5733-4ab5-9df7-4a87e3aad248';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-717c701a-5733-4ab5-9df7-4a87e3aad248';
+  $handler->conf['display'] = $display;
+  $export['node_view_panel_context'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'site_template_panel_context';
   $handler->task = 'site_template';
   $handler->subtask = '';

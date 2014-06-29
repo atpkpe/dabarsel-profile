@@ -23,8 +23,9 @@ function atp_gallery_field_group_info() {
     'label' => 'Content',
     'weight' => '0',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_gallery_images',
+      0 => 'field_gallery_images',
+      1 => 'title_field',
+      2 => 'workbench_access',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

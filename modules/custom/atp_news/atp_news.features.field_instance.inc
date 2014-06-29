@@ -61,7 +61,7 @@ function atp_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 6,
     ),
   );
 
@@ -191,7 +191,7 @@ function atp_news_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => -2,
+      'weight' => 4,
     ),
   );
 
@@ -263,14 +263,19 @@ function atp_news_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => -3,
+      'weight' => 3,
     ),
   );
 
   // Exported field_instance: 'node-news-field_news_summary'
   $field_instances['node-news-field_news_summary'] = array(
     'bundle' => 'news',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+        'format' => 'plain_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -346,8 +351,9 @@ function atp_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -1,
+      'weight' => 5,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-news-title_field'
@@ -412,7 +418,7 @@ function atp_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 1,
     ),
   );
 

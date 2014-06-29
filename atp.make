@@ -131,6 +131,10 @@ projects[multiform][type] = 'module'
 projects[multiform][subdir] = 'contrib'
 projects[multiform][version] = '1.1'
 
+projects[jammer][type] = 'module'
+projects[jammer][subdir] = 'contrib'
+projects[jammer][version] = '1.3'
+
 projects[plupload][type] = 'module'
 projects[plupload][subdir] = 'contrib'
 projects[plupload][version] = '1.6'

@@ -1,10 +1,9 @@
 <?php
 /**
  * @file
- * Example install file.
+ * ATP install file.
  */
- 
- 
+
  /**
  * Implements hook_install().
  */
@@ -14,11 +13,37 @@ function atp_install() {
   theme_enable(array('atp_theme','adminimal'));
   theme_disable(array('bartik'));
   variable_set('theme_default', 'atp_theme');
-  
   // Disables the menu_trail_by_path module
   // For some reason it cannot be deactivated in the makefile
   module_disable(array('menu_trail_by_path'));
-  
+  drupal_uninstall_modules(array('menu_trail_by_path'));
+}
+
+function atp_create_users() {
+
+  $author_role = user_role_load_by_name('Author');
+  $editor_role = user_role_load_by_name('Editor');
+
+  $atp_role = user_role_load_by_name('atp.dk');
+
+  // Create author user
+  $edit = array();
+  $edit['name']   = 'author';
+  $edit['mail']   = 'tom+author@adapt.dk';
+  $edit['roles']  = array($author_role->rid => $author_role->rid, $atp_role => $atp_role);
+  $edit['pass']   = 'QRbYRmppxcnH';
+  $edit['status'] = 1;
+  $account = user_save(drupal_anonymous_user(), $edit);
+
+  // Create author user
+  $edit = array();
+  $edit['name']   = 'editor';
+  $edit['mail']   = 'tom+editor@adapt.dk';
+  $edit['roles']  = array($editor_role->rid => $editor_role->rid, $atp_role->rid => $atp_role->rid);
+  $edit['pass']   = 'GFDRF4sdxcnf';
+  $edit['status'] = 1;
+  $account = user_save(drupal_anonymous_user(), $edit);
+
 }
 
 /**

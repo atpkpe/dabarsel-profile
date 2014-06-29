@@ -19,19 +19,31 @@ function atp_permissions_user_default_roles() {
   // Exported role: Developer.
   $roles['Developer'] = array(
     'name' => 'Developer',
-    'weight' => 3,
+    'weight' => 2,
   );
 
   // Exported role: Editor.
   $roles['Editor'] = array(
     'name' => 'Editor',
+    'weight' => 6,
+  );
+
+  // Exported role: Extended layout.
+  $roles['Extended layout'] = array(
+    'name' => 'Extended layout',
     'weight' => 5,
   );
 
   // Exported role: Site administrator.
   $roles['Site administrator'] = array(
     'name' => 'Site administrator',
-    'weight' => 2,
+    'weight' => 3,
+  );
+
+  // Exported role: atp.dk.
+  $roles['atp.dk'] = array(
+    'name' => 'atp.dk',
+    'weight' => 7,
   );
 
   return $roles;

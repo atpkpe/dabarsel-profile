@@ -90,7 +90,7 @@ function atp_component_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '-4',
+          'weight' => '2',
         ),
         'title' => array(
           'weight' => '-5',
@@ -100,6 +100,9 @@ function atp_component_strongarm() {
         ),
         'xmlsitemap' => array(
           'weight' => '30',
+        ),
+        'workbench_access' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(

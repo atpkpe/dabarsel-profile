@@ -45,6 +45,7 @@ dependencies[] = media_browser_plus
 dependencies[] = media_bulk_upload
 dependencies[] = gss
 dependencies[] = focal_point
+dependencies[] = jammer
 
 ; Project features
 dependencies[] = atp_settings

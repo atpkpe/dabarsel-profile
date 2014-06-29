@@ -92,11 +92,28 @@ function atp_gallery_strongarm() {
         'xmlsitemap' => array(
           'weight' => '4',
         ),
+        'workbench_access' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__gallery'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_gallery';
+  $strongarm->value = 1;
+  $export['i18n_node_extended_gallery'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_gallery';
+  $strongarm->value = array();
+  $export['i18n_node_options_gallery'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -123,7 +140,10 @@ function atp_gallery_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_gallery';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'moderation',
+    1 => 'revision',
+  );
   $export['node_options_gallery'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -175,14 +195,14 @@ function atp_gallery_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_publish_allow_state_gallery';
-  $strongarm->value = '';
+  $strongarm->value = 'approved';
   $export['scheduler_publish_allow_state_gallery'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_publish_enable_gallery';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['scheduler_publish_enable_gallery'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -231,7 +251,7 @@ function atp_gallery_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_enable_gallery';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['scheduler_unpublish_enable_gallery'] = $strongarm;
 
   $strongarm = new stdClass();

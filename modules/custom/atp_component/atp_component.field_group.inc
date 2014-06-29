@@ -24,11 +24,12 @@ function atp_component_field_group_info() {
     'weight' => '34',
     'children' => array(
       0 => 'field_component_body',
-      1 => 'field_component_summary',
-      2 => 'field_component_image',
-      3 => 'field_component_link',
+      1 => 'field_component_image',
+      2 => 'field_component_link',
+      3 => 'field_component_summary',
       4 => 'title_field',
       5 => 'language',
+      6 => 'workbench_access',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

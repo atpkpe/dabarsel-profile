@@ -57,6 +57,7 @@ function atp_permissions_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -142,8 +143,8 @@ function atp_permissions_user_default_permissions() {
   $permissions['access workbench access by role'] = array(
     'name' => 'access workbench access by role',
     'roles' => array(
-      'Author' => 'Author',
       'Developer' => 'Developer',
+      'atp.dk' => 'atp.dk',
     ),
     'module' => 'workbench_access',
   );
@@ -180,6 +181,7 @@ function atp_permissions_user_default_permissions() {
   $permissions['administer content translations'] = array(
     'name' => 'administer content translations',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
     ),
     'module' => 'i18n_node',
@@ -325,14 +327,18 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer main-menu_da'.
   $permissions['administer main-menu_da'] = array(
     'name' => 'administer main-menu_da',
-    'roles' => array(),
+    'roles' => array(
+      'atp.dk' => 'atp.dk',
+    ),
     'module' => 'i18n_menu_overview',
   );
 
   // Exported permission: 'administer main-menu_en'.
   $permissions['administer main-menu_en'] = array(
     'name' => 'administer main-menu_en',
-    'roles' => array(),
+    'roles' => array(
+      'atp.dk' => 'atp.dk',
+    ),
     'module' => 'i18n_menu_overview',
   );
 
@@ -358,6 +364,7 @@ function atp_permissions_user_default_permissions() {
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -367,28 +374,36 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer menu-footer_da'.
   $permissions['administer menu-footer_da'] = array(
     'name' => 'administer menu-footer_da',
-    'roles' => array(),
+    'roles' => array(
+      'atp.dk' => 'atp.dk',
+    ),
     'module' => 'i18n_menu_overview',
   );
 
   // Exported permission: 'administer menu-footer_en'.
   $permissions['administer menu-footer_en'] = array(
     'name' => 'administer menu-footer_en',
-    'roles' => array(),
+    'roles' => array(
+      'atp.dk' => 'atp.dk',
+    ),
     'module' => 'i18n_menu_overview',
   );
 
   // Exported permission: 'administer menu-top_da'.
   $permissions['administer menu-top_da'] = array(
     'name' => 'administer menu-top_da',
-    'roles' => array(),
+    'roles' => array(
+      'atp.dk' => 'atp.dk',
+    ),
     'module' => 'i18n_menu_overview',
   );
 
   // Exported permission: 'administer menu-top_en'.
   $permissions['administer menu-top_en'] = array(
     'name' => 'administer menu-top_en',
-    'roles' => array(),
+    'roles' => array(
+      'atp.dk' => 'atp.dk',
+    ),
     'module' => 'i18n_menu_overview',
   );
 
@@ -470,9 +485,51 @@ function atp_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node news choice'.
+  $permissions['administer panelizer node news choice'] = array(
+    'name' => 'administer panelizer node news choice',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node news content'.
+  $permissions['administer panelizer node news content'] = array(
+    'name' => 'administer panelizer node news content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node news context'.
+  $permissions['administer panelizer node news context'] = array(
+    'name' => 'administer panelizer node news context',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panelizer node news defaults'.
   $permissions['administer panelizer node news defaults'] = array(
     'name' => 'administer panelizer node news defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node news layout'.
+  $permissions['administer panelizer node news layout'] = array(
+    'name' => 'administer panelizer node news layout',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node news overview'.
+  $permissions['administer panelizer node news overview'] = array(
+    'name' => 'administer panelizer node news overview',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node news settings'.
+  $permissions['administer panelizer node news settings'] = array(
+    'name' => 'administer panelizer node news settings',
     'roles' => array(),
     'module' => 'panelizer',
   );
@@ -683,6 +740,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer sites'.
+  $permissions['administer sites'] = array(
+    'name' => 'administer sites',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'sites',
+  );
+
   // Exported permission: 'administer software updates'.
   $permissions['administer software updates'] = array(
     'name' => 'administer software updates',
@@ -881,6 +947,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create contact content'.
+  $permissions['create contact content'] = array(
+    'name' => 'create contact content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create fieldable image'.
   $permissions['create fieldable image'] = array(
     'name' => 'create fieldable image',
@@ -1001,10 +1076,18 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any contact content'.
+  $permissions['delete any contact content'] = array(
+    'name' => 'delete any contact content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any document files'.
   $permissions['delete any document files'] = array(
     'name' => 'delete any document files',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -1111,10 +1194,18 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own contact content'.
+  $permissions['delete own contact content'] = array(
+    'name' => 'delete own contact content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete own document files'.
   $permissions['delete own document files'] = array(
     'name' => 'delete own document files',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -1188,10 +1279,21 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete terms in media_folders'.
+  $permissions['delete terms in media_folders'] = array(
+    'name' => 'delete terms in media_folders',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in news_categories'.
   $permissions['delete terms in news_categories'] = array(
     'name' => 'delete terms in news_categories',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1232,6 +1334,7 @@ function atp_permissions_user_default_permissions() {
   $permissions['download any document files'] = array(
     'name' => 'download any document files',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -1273,6 +1376,7 @@ function atp_permissions_user_default_permissions() {
   $permissions['download own document files'] = array(
     'name' => 'download own document files',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -1319,10 +1423,20 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any contact content'.
+  $permissions['edit any contact content'] = array(
+    'name' => 'edit any contact content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any document files'.
   $permissions['edit any document files'] = array(
     'name' => 'edit any document files',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -1444,10 +1558,20 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own contact content'.
+  $permissions['edit own contact content'] = array(
+    'name' => 'edit own contact content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own document files'.
   $permissions['edit own document files'] = array(
     'name' => 'edit own document files',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -1520,10 +1644,21 @@ function atp_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit terms in media_folders'.
+  $permissions['edit terms in media_folders'] = array(
+    'name' => 'edit terms in media_folders',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in news_categories'.
   $permissions['edit terms in news_categories'] = array(
     'name' => 'edit terms in news_categories',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1688,6 +1823,7 @@ function atp_permissions_user_default_permissions() {
   $permissions['override default scheduler time'] = array(
     'name' => 'override default scheduler time',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
     ),
     'module' => 'scheduler_workbench',
@@ -1865,7 +2001,9 @@ function atp_permissions_user_default_permissions() {
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
+      'Editor' => 'Editor',
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'filter',
