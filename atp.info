@@ -64,3 +64,4 @@ dependencies[] = atp_permissions
 dependencies[] = atp_sas
 dependencies[] = atp_toolbar
 dependencies[] = atp_contact
+dependencies[] = atp_signup

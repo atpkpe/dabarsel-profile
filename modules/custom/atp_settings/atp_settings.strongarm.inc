@@ -189,7 +189,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'lMC2bK5UJekoYg3wqBTXC_U4CVNeA9PpQIkCae38ubY',
+    'javascript' => 'lLtXIwRhe-8h-mUUDx66z6SSdEvvjlRpqyloMLHkl3E',
   );
   $export['language_default'] = $strongarm;
 
@@ -202,9 +202,9 @@ function atp_settings_strongarm() {
       'callbacks' => array(
         'language' => 'locale_language_from_url',
         'switcher' => 'locale_language_switcher_url',
-        'url_rewrite' => 'locale_language_url_rewrite_url',
+        'url_rewrite' => 'sites_locale_language_url_rewrite_url',
       ),
-      'file' => 'includes/locale.inc',
+      'file' => 'profiles/atp/modules/custom/sites_locale/sites_locale.module',
     ),
     'language-default' => array(
       'callbacks' => array(
@@ -237,9 +237,9 @@ function atp_settings_strongarm() {
       'callbacks' => array(
         'language' => 'locale_language_from_url',
         'switcher' => 'locale_language_switcher_url',
-        'url_rewrite' => 'locale_language_url_rewrite_url',
+        'url_rewrite' => 'sites_locale_language_url_rewrite_url',
       ),
-      'file' => 'includes/locale.inc',
+      'file' => 'profiles/atp/modules/custom/sites_locale/sites_locale.module',
     ),
     'locale-url-fallback' => array(
       'callbacks' => array(

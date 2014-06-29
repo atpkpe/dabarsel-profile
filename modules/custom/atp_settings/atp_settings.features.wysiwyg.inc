@@ -34,6 +34,7 @@ function atp_settings_wysiwyg_default_profiles() {
           'Indent' => 1,
           'Undo' => 1,
           'Unlink' => 1,
+          'Blockquote' => 1,
           'Source' => 1,
           'Copy' => 1,
           'Paste' => 1,
