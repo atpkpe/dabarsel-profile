@@ -6168,52 +6168,6 @@ function atp_data_deployment_uuid_default_entities() {
   );
   $entities['atp_test_content'][] = (object) array(
     '__metadata' => array(
-      'type' => 'user',
-      'uri' => 'user/cd5b1e1d-6823-40c3-b426-c215d37df7e0',
-      'cause' => 'node/3c6318a7-601e-4148-83e6-bc15b0a97bc2',
-    ),
-    'init' => '',
-    'language' => '',
-    'mail' => 'tom+author@adapt.dk',
-    'name' => 'author',
-    'pass' => '$S$Dl6mGXb2IsGHZUdFQaIimUtIEFp6mSfoqSmqp0dsfjGHEuBBA1mS',
-    'picture' => 0,
-    'rdf_mapping' => array(
-      'rdftype' => array(
-        0 => 'sioc:UserAccount',
-      ),
-      'name' => array(
-        'predicates' => array(
-          0 => 'foaf:name',
-        ),
-      ),
-      'homepage' => array(
-        'predicates' => array(
-          0 => 'foaf:page',
-        ),
-        'type' => 'rel',
-      ),
-    ),
-    'roles' => array(
-      2 => 'authenticated user',
-      5 => 'Author',
-      8 => 'atp.dk',
-    ),
-    'signature' => '',
-    'signature_format' => NULL,
-    'status' => 1,
-    'theme' => '',
-    'timezone' => NULL,
-    'url_alias' => array(
-      0 => array(
-        'alias' => 'users/author',
-        'language' => 'und',
-      ),
-    ),
-    'uuid' => 'cd5b1e1d-6823-40c3-b426-c215d37df7e0',
-  );
-  $entities['atp_test_content'][] = (object) array(
-    '__metadata' => array(
       'type' => 'node',
       'uri' => 'node/3c6318a7-601e-4148-83e6-bc15b0a97bc2',
       'cause' => FALSE,
