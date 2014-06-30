@@ -7,6 +7,7 @@ api = 2
 
 ; This line removes menu_trail_by_path module entirely
 projects[menu_trail_by_path] = FALSE
+projects[adapt_page] = FALSE
 
 projects[wysiwyg][type] = 'module'
 projects[wysiwyg][subdir] = 'contrib'
