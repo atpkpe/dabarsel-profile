@@ -32,7 +32,7 @@ projects[linkit][subdir] = 'contrib'
 projects[linkit][download][branch] = '7.x-3.x'
 projects[linkit][download][type] = 'git'
 projects[linkit][download][url] = 'http://git.drupal.org/project/linkit.git'
-projects[linkit][download][revision] = '83e3ee6ff3a017680a287354aaa241a3120550fa'
+projects[linkit][download][revision] = 'f769dc2a4eba71f7d38e2b9a7586c3a02c1f3b62'
 
 projects[panelizer][type] = 'module'
 projects[panelizer][subdir] = 'contrib'
