@@ -132,6 +132,11 @@ projects[multiform][type] = 'module'
 projects[multiform][subdir] = 'contrib'
 projects[multiform][version] = '1.1'
 
+
+projects[webform][type] = 'module'
+projects[webform][subdir] = 'contrib'
+projects[webform][version] = '4.0-rc4'
+
 projects[jammer][type] = 'module'
 projects[jammer][subdir] = 'contrib'
 projects[jammer][version] = '1.3'
