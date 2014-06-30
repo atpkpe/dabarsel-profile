@@ -668,13 +668,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: 'administer panelizer taxonomy_term related_categories defaults'.
-  $permissions['administer panelizer taxonomy_term related_categories defaults'] = array(
-    'name' => 'administer panelizer taxonomy_term related_categories defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'administer panels layouts'.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
@@ -1302,13 +1295,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in related_categories'.
-  $permissions['delete terms in related_categories'] = array(
-    'name' => 'delete terms in related_categories',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'delete terms in sites'.
   $permissions['delete terms in sites'] = array(
     'name' => 'delete terms in sites',
@@ -1663,13 +1649,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'edit terms in related_categories'.
-  $permissions['edit terms in related_categories'] = array(
-    'name' => 'edit terms in related_categories',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'edit terms in sites'.
   $permissions['edit terms in sites'] = array(
     'name' => 'edit terms in sites',
@@ -2001,6 +1980,18 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'use text format filtered_html'.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Editor' => 'Editor',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format simple_html'.
+  $permissions['use text format simple_html'] = array(
+    'name' => 'use text format simple_html',
     'roles' => array(
       'Author' => 'Author',
       'Developer' => 'Developer',
