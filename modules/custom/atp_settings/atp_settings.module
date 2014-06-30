@@ -36,7 +36,24 @@ function atp_settings_wysiwyg_editor_settings_alter(&$settings, $context) {
  */
 function atp_settings_element_info_alter(&$type) {
   $type['text_format']['#process'][] = 'atp_settings_element_process_text_format';
+  $type['textfield']['#process'][] = 'atp_settings_element_process_textfield';
 }
+
+/**
+ * Process function for textfield element.
+ *
+ * @see mysite_element_info_alter().
+ * @see https://drupal.org/node/2104275
+ */
+function atp_settings_element_process_textfield($element) {
+
+  if (!empty($element['#field_name']) && $element['#field_name'] == 'field_twt_title') {
+    $element['#title'] = FALSE;
+  }
+
+  return $element;
+}
+
 
 /**
  * Process function for text_format element.
@@ -45,9 +62,24 @@ function atp_settings_element_info_alter(&$type) {
  * @see https://drupal.org/node/2104275
  */
 function atp_settings_element_process_text_format($element) {
+
   $element['format']['#collapsible'] = TRUE;
   $element['format']['#collapsed'] = TRUE;
   $element['format']['#title'] = t('Text formatting help');
+
+  if ( $element['#field_name'] == 'field_twt_text' ) {
+    $element['value']['#title'] = FALSE;
+    if (empty($element['#default_value'])) {
+      $element['format']['format']['#default_value'] = 'simple_html';
+    }
+  }
+
+  if ( $element['#field_name'] == 'field_page_summary' ) {
+    if (empty($element['#default_value'])) {
+      $element['format']['format']['#default_value'] = 'plain_text';
+    }
+  }
+
   return $element;
 }
 

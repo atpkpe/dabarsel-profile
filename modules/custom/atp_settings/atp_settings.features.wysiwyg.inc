@@ -19,7 +19,7 @@ function atp_settings_wysiwyg_default_profiles() {
       'user_choose' => 0,
       'show_toggle' => 1,
       'theme' => 'advanced',
-      'language' => 'en',
+      'language' => 'da',
       'buttons' => array(
         'default' => array(
           'Bold' => 1,
@@ -44,11 +44,14 @@ function atp_settings_wysiwyg_default_profiles() {
           'Format' => 1,
           'Table' => 1,
           'Iframe' => 1,
+          'SpellChecker' => 1,
+          'Scayt' => 1,
         ),
         'linkit' => array(
           'linkit' => 1,
         ),
         'drupal' => array(
+          'gallery' => 1,
           'sas_diag' => 1,
           'media' => 1,
         ),
@@ -63,8 +66,44 @@ function atp_settings_wysiwyg_default_profiles() {
       'css_path' => '%t/css/editor.css',
       'stylesSet' => '',
       'block_formats' => 'p,h2,h3,h4,div',
-      'advanced__active_tab' => 'edit-paste',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 0,
+    ),
+    'rdf_mapping' => array(),
+  );
+
+  // Exported profile: simple_html
+  $profiles['simple_html'] = array(
+    'format' => 'simple_html',
+    'editor' => 'ckeditor',
+    'settings' => array(
+      'default' => 1,
+      'user_choose' => 0,
+      'show_toggle' => 1,
+      'theme' => '',
+      'language' => 'en',
+      'buttons' => array(
+        'default' => array(
+          'Bold' => 1,
+          'BulletedList' => 1,
+          'NumberedList' => 1,
+        ),
+        'linkit' => array(
+          'linkit' => 1,
+        ),
+      ),
+      'toolbarLocation' => 'top',
+      'resize_enabled' => 1,
+      'default_toolbar_grouping' => 0,
+      'simple_source_formatting' => 0,
+      'acf_mode' => 0,
+      'acf_allowed_content' => '',
+      'css_setting' => 'self',
+      'css_path' => '%t/css/editor.css',
+      'stylesSet' => '',
+      'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
+      'advanced__active_tab' => 'edit-css',
+      'forcePasteAsPlainText' => 1,
     ),
     'rdf_mapping' => array(),
   );
