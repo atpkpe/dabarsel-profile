@@ -103,41 +103,50 @@ function atp_page_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_page_related'
-  $field_bases['field_page_related'] = array(
+  // Exported field_base: 'field_page_relations'
+  $field_bases['field_page_relations'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_page_related',
+    'field_name' => 'field_page_relations',
     'foreign keys' => array(
-      'field_ter_category_tid' => array(
+      'node' => array(
         'columns' => array(
-          'field_ter_category_tid' => 'tid',
+          'target_id' => 'nid',
         ),
-        'table' => 'taxonomy_term_data',
+        'table' => 'node',
       ),
     ),
     'indexes' => array(
-      'field_ter_category_tid' => array(
-        0 => 'field_ter_category_tid',
-      ),
-      'field_ter_related_target_id' => array(
-        0 => 'field_ter_related_target_id',
-      ),
-      'id' => array(
-        0 => 'id',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'multifield',
+    'module' => 'entityreference',
     'settings' => array(
-      'entity_translation_sync' => array(
-        0 => 'id',
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'component' => 'component',
+          'news' => 'news',
+          'page' => 'page',
+          'section' => 'section',
+        ),
       ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'tagged_entity_reference',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_page_summary'
@@ -165,6 +174,49 @@ function atp_page_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_page_twt'
+  $field_bases['field_page_twt'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_page_twt',
+    'foreign keys' => array(
+      'field_twt_text_format' => array(
+        'columns' => array(
+          'field_twt_text_format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+      'field_twt_title_format' => array(
+        'columns' => array(
+          'field_twt_title_format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'field_twt_text_format' => array(
+        0 => 'field_twt_text_format',
+      ),
+      'field_twt_title_format' => array(
+        0 => 'field_twt_title_format',
+      ),
+      'id' => array(
+        0 => 'id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'multifield',
+    'settings' => array(
+      'entity_translation_sync' => array(
+        0 => 'id',
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'text_with_title',
   );
 
   return $field_bases;

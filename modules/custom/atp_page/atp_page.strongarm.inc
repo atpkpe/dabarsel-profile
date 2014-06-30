@@ -69,10 +69,10 @@ function atp_page_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'language' => array(
           'weight' => '2',
@@ -242,16 +242,6 @@ function atp_page_strongarm() {
     ),
   );
   $export['panelizer_defaults_node_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_taxonomy_term_related_categories';
-  $strongarm->value = array(
-    'status' => 0,
-    'view modes' => array(),
-  );
-  $export['panelizer_defaults_taxonomy_term_related_categories'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

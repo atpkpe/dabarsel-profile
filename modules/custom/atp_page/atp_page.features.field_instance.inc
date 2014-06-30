@@ -307,8 +307,8 @@ function atp_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_page_related'
-  $field_instances['node-page-field_page_related'] = array(
+  // Exported field_instance: 'node-page-field_page_relations'
+  $field_instances['node-page-field_page_relations'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -330,7 +330,7 @@ function atp_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
       '1_4_l' => array(
         'label' => 'above',
@@ -340,15 +340,15 @@ function atp_page_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'multifield',
+        'module' => 'entityreference',
         'settings' => array(
           'field_wrapper' => 0,
           'item_wrapper' => 0,
           'label_wrapper' => 0,
-          'view_mode' => 'default',
+          'link' => FALSE,
         ),
-        'type' => 'multifield_default',
-        'weight' => 5,
+        'type' => 'entityreference_label',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -360,23 +360,28 @@ function atp_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_page_related',
-    'label' => 'Page related',
+    'field_name' => 'field_page_relations',
+    'label' => 'page relations',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'multifield',
-      'settings' => array(),
-      'type' => 'multifield_default',
-      'weight' => 4,
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 5,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-page-field_page_summary'
@@ -549,6 +554,79 @@ function atp_page_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-page-field_page_twt'
+  $field_instances['node-page-field_page_twt'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'These fields are used in contact overview, and FAQ. The items can be reordered.',
+    'display' => array(
+      '1_2_h' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '1_2_l' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '1_2_square' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '1_4_l' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'multifield',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'multifield_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser_with_img' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_page_twt',
+    'label' => 'Text with title',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'multifield',
+      'settings' => array(),
+      'type' => 'multifield_default',
+      'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-page-title_field'
   $field_instances['node-page-title_field'] = array(
     'bundle' => 'page',
@@ -684,9 +762,11 @@ function atp_page_field_default_field_instances() {
   t('Body');
   t('Contacts');
   t('Image');
-  t('Page related');
   t('Summary');
+  t('Text with title');
+  t('These fields are used in contact overview, and FAQ. The items can be reordered.');
   t('Titel');
+  t('page relations');
 
   return $field_instances;
 }

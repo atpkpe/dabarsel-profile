@@ -47,20 +47,20 @@ function atp_page_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Felt: Multifield: Category */
+  /* Felt: Handler mangler eller er i stykker */
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['id'] = 'field_page_related_field_ter_category';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['table'] = 'field_data_field_page_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['field'] = 'field_page_related_field_ter_category';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['label'] = '';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['element_label_colon'] = FALSE;
-  /* Felt: Multifield: Page */
+  /* Felt: Handler mangler eller er i stykker */
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['id'] = 'field_page_related_field_ter_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['table'] = 'field_data_field_page_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['field'] = 'field_page_related_field_ter_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['label'] = '';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indhold: Page related (field_page_related:delta) */
+  /* Sorteringskriterie: Handler mangler eller er i stykker */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_page_related';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
@@ -76,13 +76,6 @@ function atp_page_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
-  /* Filterkriterie: Indhold: Udgivet */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
   /* Display: A */
   $handler = $view->new_display('panel_pane', 'A', 'panel_pane_2');
@@ -98,21 +91,24 @@ function atp_page_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Multifield: Page */
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['id'] = 'field_page_related_field_ter_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['table'] = 'field_data_field_page_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['field'] = 'field_page_related_field_ter_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['label'] = '';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['alter']['trim_whitespace'] = TRUE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['type'] = 'entityreference_entity_view';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['settings'] = array(
+  /* Felt: Indhold: page relations */
+  $handler->display->display_options['fields']['field_page_relations']['id'] = 'field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['table'] = 'field_data_field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['field'] = 'field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['label'] = '';
+  $handler->display->display_options['fields']['field_page_relations']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['type'] = 'entityreference_entity_view';
+  $handler->display->display_options['fields']['field_page_relations']['settings'] = array(
     'view_mode' => 'teaser',
     'links' => 0,
   );
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_page_relations']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indhold: page relations (field_page_relations:delta) */
+  $handler->display->display_options['sorts']['delta_1']['id'] = 'delta_1';
+  $handler->display->display_options['sorts']['delta_1']['table'] = 'field_data_field_page_relations';
+  $handler->display->display_options['sorts']['delta_1']['field'] = 'delta';
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
       'type' => 'context',
@@ -138,19 +134,25 @@ function atp_page_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Multifield: Page */
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['id'] = 'field_page_related_field_ter_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['table'] = 'field_data_field_page_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['field'] = 'field_page_related_field_ter_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['label'] = '';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['alter']['trim_whitespace'] = TRUE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['settings'] = array(
+  /* Felt: Indhold: page relations */
+  $handler->display->display_options['fields']['field_page_relations']['id'] = 'field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['table'] = 'field_data_field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['field'] = 'field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['label'] = '';
+  $handler->display->display_options['fields']['field_page_relations']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['field_page_relations']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_page_relations']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['settings'] = array(
     'link' => 1,
   );
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_page_relations']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indhold: page relations (field_page_relations:delta) */
+  $handler->display->display_options['sorts']['delta_1']['id'] = 'delta_1';
+  $handler->display->display_options['sorts']['delta_1']['table'] = 'field_data_field_page_relations';
+  $handler->display->display_options['sorts']['delta_1']['field'] = 'delta';
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
       'type' => 'context',
@@ -176,21 +178,25 @@ function atp_page_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Multifield: Page */
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['id'] = 'field_page_related_field_ter_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['table'] = 'field_data_field_page_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['field'] = 'field_page_related_field_ter_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['label'] = '';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['alter']['trim_whitespace'] = TRUE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['type'] = 'entityreference_entity_view';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['settings'] = array(
+  /* Felt: Indhold: page relations */
+  $handler->display->display_options['fields']['field_page_relations']['id'] = 'field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['table'] = 'field_data_field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['field'] = 'field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['label'] = '';
+  $handler->display->display_options['fields']['field_page_relations']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['type'] = 'entityreference_entity_view';
+  $handler->display->display_options['fields']['field_page_relations']['settings'] = array(
     'view_mode' => 'teaser_with_img',
     'links' => 0,
   );
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_page_relations']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indhold: page relations (field_page_relations:delta) */
+  $handler->display->display_options['sorts']['delta_1']['id'] = 'delta_1';
+  $handler->display->display_options['sorts']['delta_1']['table'] = 'field_data_field_page_relations';
+  $handler->display->display_options['sorts']['delta_1']['field'] = 'delta';
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
       'type' => 'context',
@@ -207,44 +213,30 @@ function atp_page_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'category-d';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Category term */
-  $handler->display->display_options['relationships']['field_page_related_field_ter_category_tid']['id'] = 'field_page_related_field_ter_category_tid';
-  $handler->display->display_options['relationships']['field_page_related_field_ter_category_tid']['table'] = 'field_data_field_page_related';
-  $handler->display->display_options['relationships']['field_page_related_field_ter_category_tid']['field'] = 'field_page_related_field_ter_category_tid';
-  $handler->display->display_options['relationships']['field_page_related_field_ter_category_tid']['ui_name'] = 'Category term';
-  $handler->display->display_options['relationships']['field_page_related_field_ter_category_tid']['label'] = 'Category term';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Multifield: Category */
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['id'] = 'field_page_related_field_ter_category';
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['table'] = 'field_data_field_page_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['field'] = 'field_page_related_field_ter_category';
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['label'] = '';
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['type'] = 'i18n_taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_category']['delta_offset'] = '0';
-  /* Felt: Multifield: Page */
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['id'] = 'field_page_related_field_ter_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['table'] = 'field_data_field_page_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['field'] = 'field_page_related_field_ter_related';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['label'] = '';
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['settings'] = array(
-    'link' => 1,
-  );
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_page_related_field_ter_related']['delta_offset'] = '0';
+  /* Felt: Multifield: Title */
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['id'] = 'field_page_twt_field_twt_title';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['table'] = 'field_data_field_page_twt';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['field'] = 'field_page_twt_field_twt_title';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['label'] = '';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['delta_offset'] = '0';
+  /* Felt: Multifield: Text */
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['id'] = 'field_page_twt_field_twt_text';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['table'] = 'field_data_field_page_twt';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['field'] = 'field_page_twt_field_twt_text';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['label'] = '';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Ord i ordforråd: Vægt */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['relationship'] = 'field_page_related_field_ter_category_tid';
-  /* Sorteringskriterie: Indhold: Page related (field_page_related:delta) */
+  /* Sorteringskriterie: Indhold: Text with title (field_page_twt:delta) */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
-  $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_page_related';
+  $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_page_twt';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
@@ -270,7 +262,6 @@ function atp_page_views_default_views() {
     t('B'),
     t('C'),
     t('D'),
-    t('Category term'),
   );
   $export['category_related'] = $view;
 
