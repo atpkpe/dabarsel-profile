@@ -19,7 +19,42 @@ function atp_install() {
   drupal_uninstall_modules(array('menu_trail_by_path'));
 
   atp_create_users();
+  atp_add_translations();
 
+}
+
+function atp_add_translations() {
+
+  $translations = array(
+    "Create content" => "Tilføj indhold",
+    "My content" => "Mit indhold",
+    "My Profile" => "Min Profil",
+    "News" => "Nyhed",
+    "Gallery" => "Galleri",
+    "My drafts" => "Mine kladder",
+    "Needs review" => "Skal godkendes",
+    "My Workbench" => "Workbench",
+    "Text formatting help" => "Tekstformat",
+    "Summary" => "Manchet",
+  );
+
+  foreach ($translations as $source => $translation) {
+    atp_add_translation($source, $translation);
+  }
+
+}
+
+/**
+ * [Helper function to be used by update fundtions]
+ * @param  [type] $source      [the source string]
+ * @param  [type] $translation [the translated string]
+ */
+function atp_add_translation($source, $translation, $langcode = 'da') {
+  $report = array('skips'=>0, 'updates'=>0, 'deletes'=>0, 'additions'=>0 );
+  $textgroup = 'default'; // field , node, default, menu ...
+  $mode = LOCALE_IMPORT_OVERWRITE; // LOCALE_IMPORT_KEEP
+  $location = '';
+  _locale_import_one_string_db($report, $langcode, $context, $source, $translation, $textgroup, $location, $mode);
 }
 
 function atp_create_users() {
@@ -53,29 +88,9 @@ function atp_create_users() {
 }
 
 /**
- *  Enable title module
+ *  Enable xxx module
  */
-function atp_update_7001(&$sandbox) {
-  module_enable(array('title'));
-}
+//function atp_update_7001(&$sandbox) {
+  // module_enable(array('xxx'));
+//}
 
-/**
- *  Enable uuid_features_menu module
- */
-function atp_update_7002(&$sandbox) {
-  module_enable(array('uuid_features_menu'));
-}
-
-/**
- *  Enable field_group_link and panels_mini module
- */
-function atp_update_7003(&$sandbox) {
-  module_enable(array('field_group_link', 'panels_mini'));
-}
-
-/**
- *  Enable multifield module
- */
-function atp_update_7004(&$sandbox) {
-  module_enable(array('multifield'));
-}
