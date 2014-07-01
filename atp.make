@@ -184,4 +184,4 @@ libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1
 
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][version] = '1.16'
+projects[adminimal_theme][version] = '1.17'
