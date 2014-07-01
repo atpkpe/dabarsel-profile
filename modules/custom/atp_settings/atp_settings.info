@@ -83,7 +83,6 @@ features[variable][] = language_negotiation_language_url
 features[variable][] = language_types
 features[variable][] = media_browser_plus_disable_default_view
 features[variable][] = media_browser_plus_filesystem_folders
-features[variable][] = media_browser_plus_root_folder_tid
 features[variable][] = media_browser_plus_thumbnails_as_default_browser
 features[variable][] = media_browser_plus_thumbnails_as_default_browser_current
 features[variable][] = media_icon_base_directory

@@ -380,7 +380,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'zOM9Hmoh2HzUB3W6YN_myD9iHVm8OpVr9LcXr5OKNYI',
+    'javascript' => '72r1tkXagA1FMIoEtnVSs94sWZ81a3EJBWkxfwMeBM0',
   );
   $export['language_default'] = $strongarm;
 
@@ -465,13 +465,6 @@ function atp_settings_strongarm() {
   $strongarm->name = 'media_browser_plus_filesystem_folders';
   $strongarm->value = 0;
   $export['media_browser_plus_filesystem_folders'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'media_browser_plus_root_folder_tid';
-  $strongarm->value = '1';
-  $export['media_browser_plus_root_folder_tid'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
