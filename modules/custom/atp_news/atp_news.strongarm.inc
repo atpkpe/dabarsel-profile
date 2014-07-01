@@ -14,7 +14,7 @@ function atp_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_news';
-  $strongarm->value = 'edit-i18n';
+  $strongarm->value = 'edit-panelizer';
   $export['additional_settings__active_tab_news'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -190,8 +190,8 @@ function atp_news_strongarm() {
       'page_manager' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       'default' => array(
         'status' => 1,
@@ -201,14 +201,14 @@ function atp_news_strongarm() {
       'teaser' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       'teaser_with_img' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
     ),
   );
@@ -223,6 +223,13 @@ function atp_news_strongarm() {
     'view modes' => array(),
   );
   $export['panelizer_defaults_taxonomy_term_news_categories'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:news:default_selection';
+  $strongarm->value = 'node:news:standard_2_col:default';
+  $export['panelizer_node:news:default_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

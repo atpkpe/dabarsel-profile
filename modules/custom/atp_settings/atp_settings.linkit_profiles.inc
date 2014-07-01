@@ -117,15 +117,15 @@ function atp_settings_default_linkit_profiles() {
   $linkit_profile->profile_type = '2';
   $linkit_profile->data = array(
     'search_plugins' => array(
-      'entity:taxonomy_term' => array(
-        'enabled' => 1,
+      'entity:file' => array(
+        'enabled' => 0,
         'weight' => '-10',
       ),
       'entity:node' => array(
         'enabled' => 1,
         'weight' => '-10',
       ),
-      'entity:file' => array(
+      'entity:taxonomy_term' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
@@ -137,11 +137,26 @@ function atp_settings_default_linkit_profiles() {
     'entity:node' => array(
       'result_description' => '',
       'bundles' => array(
-        'page' => 0,
+        'news' => 'news',
+        'section' => 'section',
+        'page' => 'page',
+        'webform' => 'webform',
+        'gallery' => 0,
+        'component' => 0,
+        'contact' => 0,
         'slide' => 0,
       ),
       'group_by_bundle' => 0,
-      'include_unpublished' => 0,
+      'include_unpublished' => 1,
+    ),
+    'entity:taxonomy_term' => array(
+      'result_description' => '',
+      'bundles' => array(
+        'sites' => 0,
+        'media_folders' => 0,
+        'news_categories' => 0,
+      ),
+      'group_by_bundle' => 0,
     ),
     'entity:file' => array(
       'result_description' => '',
@@ -158,9 +173,6 @@ function atp_settings_default_linkit_profiles() {
         'thumbnail' => 'thumbnail',
         'dimensions' => 'dimensions',
       ),
-    ),
-    'entity:taxonomy_term' => array(
-      'result_description' => '',
     ),
     'entity:user' => array(
       'result_description' => '',

@@ -33,6 +33,7 @@ function atp_settings_wysiwyg_default_profiles() {
           'Outdent' => 1,
           'Indent' => 1,
           'Undo' => 1,
+          'Link' => 1,
           'Unlink' => 1,
           'Blockquote' => 1,
           'Source' => 1,
@@ -47,8 +48,8 @@ function atp_settings_wysiwyg_default_profiles() {
           'SpellChecker' => 1,
           'Scayt' => 1,
         ),
-        'linkit' => array(
-          'linkit' => 1,
+        'drupal_path' => array(
+          'Link' => 1,
         ),
         'drupal' => array(
           'gallery' => 1,
@@ -87,9 +88,10 @@ function atp_settings_wysiwyg_default_profiles() {
           'Bold' => 1,
           'BulletedList' => 1,
           'NumberedList' => 1,
+          'Link' => 1,
         ),
-        'linkit' => array(
-          'linkit' => 1,
+        'drupal_path' => array(
+          'Link' => 1,
         ),
       ),
       'toolbarLocation' => 'top',
@@ -102,7 +104,7 @@ function atp_settings_wysiwyg_default_profiles() {
       'css_path' => '%t/css/editor.css',
       'stylesSet' => '',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-      'advanced__active_tab' => 'edit-css',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 1,
     ),
     'rdf_mapping' => array(),

@@ -132,7 +132,6 @@ projects[multiform][type] = 'module'
 projects[multiform][subdir] = 'contrib'
 projects[multiform][version] = '1.1'
 
-
 projects[webform][type] = 'module'
 projects[webform][subdir] = 'contrib'
 projects[webform][version] = '4.0-rc4'
@@ -144,6 +143,10 @@ projects[jammer][version] = '1.3'
 projects[plupload][type] = 'module'
 projects[plupload][subdir] = 'contrib'
 projects[plupload][version] = '1.6'
+
+projects[ckeditor_link][type] = 'module'
+projects[ckeditor_link][subdir] = 'contrib'
+projects[ckeditor_link][version] = '2.3'
 
 projects[gss][type] = 'module'
 projects[gss][subdir] = 'contrib'

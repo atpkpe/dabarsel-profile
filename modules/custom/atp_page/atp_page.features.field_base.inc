@@ -141,6 +141,7 @@ function atp_page_field_default_field_bases() {
           'news' => 'news',
           'page' => 'page',
           'section' => 'section',
+          'webform' => 'webform',
         ),
       ),
       'target_type' => 'node',

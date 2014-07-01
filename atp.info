@@ -12,6 +12,7 @@ dependencies[] = adapt_wysiwyg
 
 ; Project dependencies
 dependencies[] = link
+dependencies[] = ckeditor_link
 dependencies[] = title
 dependencies[] = date
 dependencies[] = date_popup
