@@ -41,6 +41,26 @@ function atp_permissions_user_default_permissions() {
     'module' => 'views',
   );
 
+  // Exported permission: 'access all webform results'.
+  $permissions['access all webform results'] = array(
+    'name' => 'access all webform results',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'access ckeditor link'.
+  $permissions['access ckeditor link'] = array(
+    'name' => 'access ckeditor link',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'ckeditor_link',
+  );
+
   // Exported permission: 'access content'.
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -90,6 +110,26 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'media',
+  );
+
+  // Exported permission: 'access own webform results'.
+  $permissions['access own webform results'] = array(
+    'name' => 'access own webform results',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'access own webform submissions'.
+  $permissions['access own webform submissions'] = array(
+    'name' => 'access own webform submissions',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'access rules debug'.
@@ -159,6 +199,35 @@ function atp_permissions_user_default_permissions() {
     'module' => 'media_internet',
   );
 
+  // Exported permission: 'add terms in media_folders'.
+  $permissions['add terms in media_folders'] = array(
+    'name' => 'add terms in media_folders',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'taxonomy_access_fix',
+  );
+
+  // Exported permission: 'add terms in news_categories'.
+  $permissions['add terms in news_categories'] = array(
+    'name' => 'add terms in news_categories',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'taxonomy_access_fix',
+  );
+
+  // Exported permission: 'add terms in sites'.
+  $permissions['add terms in sites'] = array(
+    'name' => 'add terms in sites',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'taxonomy_access_fix',
+  );
+
   // Exported permission: 'administer actions'.
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
@@ -175,6 +244,15 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'panels',
+  );
+
+  // Exported permission: 'administer ckeditor link'.
+  $permissions['administer ckeditor link'] = array(
+    'name' => 'administer ckeditor link',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'ckeditor_link',
   );
 
   // Exported permission: 'administer content translations'.
@@ -214,6 +292,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'deploy',
   );
 
+  // Exported permission: 'administer devel menu items'.
+  $permissions['administer devel menu items'] = array(
+    'name' => 'administer devel menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'administer entity view modes'.
   $permissions['administer entity view modes'] = array(
     'name' => 'administer entity view modes',
@@ -230,6 +317,15 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'administer features menu items'.
+  $permissions['administer features menu items'] = array(
+    'name' => 'administer features menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: 'administer fieldable panels panes'.
@@ -324,6 +420,16 @@ function atp_permissions_user_default_permissions() {
     'module' => 'linkit',
   );
 
+  // Exported permission: 'administer main-menu menu items'.
+  $permissions['administer main-menu menu items'] = array(
+    'name' => 'administer main-menu menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'atp.dk' => 'atp.dk',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'administer main-menu_da'.
   $permissions['administer main-menu_da'] = array(
     'name' => 'administer main-menu_da',
@@ -340,6 +446,15 @@ function atp_permissions_user_default_permissions() {
       'atp.dk' => 'atp.dk',
     ),
     'module' => 'i18n_menu_overview',
+  );
+
+  // Exported permission: 'administer management menu items'.
+  $permissions['administer management menu items'] = array(
+    'name' => 'administer management menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: 'administer masquerade'.
@@ -364,11 +479,30 @@ function atp_permissions_user_default_permissions() {
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
-      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'menu',
+  );
+
+  // Exported permission: 'administer menu-bottom-menu menu items'.
+  $permissions['administer menu-bottom-menu menu items'] = array(
+    'name' => 'administer menu-bottom-menu menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'atp.dk' => 'atp.dk',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer menu-footer menu items'.
+  $permissions['administer menu-footer menu items'] = array(
+    'name' => 'administer menu-footer menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'atp.dk' => 'atp.dk',
+    ),
+    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: 'administer menu-footer_da'.
@@ -387,6 +521,16 @@ function atp_permissions_user_default_permissions() {
       'atp.dk' => 'atp.dk',
     ),
     'module' => 'i18n_menu_overview',
+  );
+
+  // Exported permission: 'administer menu-top menu items'.
+  $permissions['administer menu-top menu items'] = array(
+    'name' => 'administer menu-top menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'atp.dk' => 'atp.dk',
+    ),
+    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: 'administer menu-top_da'.
@@ -432,6 +576,15 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'multifield',
+  );
+
+  // Exported permission: 'administer navigation menu items'.
+  $permissions['administer navigation menu items'] = array(
+    'name' => 'administer navigation menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: 'administer nodes'.
@@ -661,6 +814,55 @@ function atp_permissions_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: 'administer panelizer node webform choice'.
+  $permissions['administer panelizer node webform choice'] = array(
+    'name' => 'administer panelizer node webform choice',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform content'.
+  $permissions['administer panelizer node webform content'] = array(
+    'name' => 'administer panelizer node webform content',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform context'.
+  $permissions['administer panelizer node webform context'] = array(
+    'name' => 'administer panelizer node webform context',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform defaults'.
+  $permissions['administer panelizer node webform defaults'] = array(
+    'name' => 'administer panelizer node webform defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform layout'.
+  $permissions['administer panelizer node webform layout'] = array(
+    'name' => 'administer panelizer node webform layout',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform overview'.
+  $permissions['administer panelizer node webform overview'] = array(
+    'name' => 'administer panelizer node webform overview',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node webform settings'.
+  $permissions['administer panelizer node webform settings'] = array(
+    'name' => 'administer panelizer node webform settings',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: 'administer panelizer taxonomy_term news_categories defaults'.
   $permissions['administer panelizer taxonomy_term news_categories defaults'] = array(
     'name' => 'administer panelizer taxonomy_term news_categories defaults',
@@ -783,6 +985,15 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: 'administer user-menu menu items'.
+  $permissions['administer user-menu menu items'] = array(
+    'name' => 'administer user-menu menu items',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: 'administer users'.
@@ -950,7 +1161,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'create contact content'.
   $permissions['create contact content'] = array(
     'name' => 'create contact content',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'node',
   );
 
@@ -1057,6 +1270,24 @@ function atp_permissions_user_default_permissions() {
     'module' => 'path',
   );
 
+  // Exported permission: 'create webform content'.
+  $permissions['create webform content'] = array(
+    'name' => 'create webform content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete all webform submissions'.
+  $permissions['delete all webform submissions'] = array(
+    'name' => 'delete all webform submissions',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'delete any audio files'.
   $permissions['delete any audio files'] = array(
     'name' => 'delete any audio files',
@@ -1146,6 +1377,13 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete any webform content'.
+  $permissions['delete any webform content'] = array(
+    'name' => 'delete any webform content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete fieldable image'.
@@ -1266,11 +1504,26 @@ function atp_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'delete own webform content'.
+  $permissions['delete own webform content'] = array(
+    'name' => 'delete own webform content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own webform submissions'.
+  $permissions['delete own webform submissions'] = array(
+    'name' => 'delete own webform submissions',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'delete revisions'.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
     'roles' => array(
-      'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
     ),
@@ -1395,6 +1648,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit all webform submissions'.
+  $permissions['edit all webform submissions'] = array(
+    'name' => 'edit all webform submissions',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'edit any audio files'.
   $permissions['edit any audio files'] = array(
     'name' => 'edit any audio files',
@@ -1417,7 +1679,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'edit any contact content'.
   $permissions['edit any contact content'] = array(
     'name' => 'edit any contact content',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'node',
   );
 
@@ -1498,6 +1762,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit any webform content'.
+  $permissions['edit any webform content'] = array(
+    'name' => 'edit any webform content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit fieldable image'.
   $permissions['edit fieldable image'] = array(
     'name' => 'edit fieldable image',
@@ -1550,7 +1823,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'edit own contact content'.
   $permissions['edit own contact content'] = array(
     'name' => 'edit own contact content',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'node',
   );
 
@@ -1629,6 +1904,25 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own webform content'.
+  $permissions['edit own webform content'] = array(
+    'name' => 'edit own webform content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own webform submissions'.
+  $permissions['edit own webform submissions'] = array(
+    'name' => 'edit own webform submissions',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'edit terms in media_folders'.
@@ -1745,6 +2039,13 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'moderate content from draft to deleted'.
+  $permissions['moderate content from draft to deleted'] = array(
+    'name' => 'moderate content from draft to deleted',
+    'roles' => array(),
+    'module' => 'workbench_moderation',
+  );
+
   // Exported permission: 'moderate content from draft to needs_review'.
   $permissions['moderate content from draft to needs_review'] = array(
     'name' => 'moderate content from draft to needs_review',
@@ -1752,6 +2053,13 @@ function atp_permissions_user_default_permissions() {
       'Author' => 'Author',
       'Developer' => 'Developer',
     ),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'moderate content from draft to published'.
+  $permissions['moderate content from draft to published'] = array(
+    'name' => 'moderate content from draft to published',
+    'roles' => array(),
     'module' => 'workbench_moderation',
   );
 
@@ -1778,6 +2086,13 @@ function atp_permissions_user_default_permissions() {
     'roles' => array(
       'Developer' => 'Developer',
     ),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'moderate content from published to deleted'.
+  $permissions['moderate content from published to deleted'] = array(
+    'name' => 'moderate content from published to deleted',
+    'roles' => array(),
     'module' => 'workbench_moderation',
   );
 

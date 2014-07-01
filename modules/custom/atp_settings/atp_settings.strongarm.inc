@@ -256,7 +256,7 @@ function atp_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'jammer_node_promoted';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['jammer_node_promoted'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -274,6 +274,7 @@ function atp_settings_strongarm() {
     'gallery' => 'gallery',
     'component' => 'component',
     'contact' => 'contact',
+    'slide' => 'slide',
   );
   $export['jammer_path_options'] = $strongarm;
 
@@ -379,7 +380,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'hfPomSM3JCiTLnRv_JcYgnhQE5SLdZT3DyFvuyJgO2s',
+    'javascript' => 'MVEFmdPWMDkSDLfibHSYzWmJ6B3N_qoJ9C5gFuM-ugE',
   );
   $export['language_default'] = $strongarm;
 

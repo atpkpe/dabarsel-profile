@@ -14,7 +14,7 @@ function atp_component_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_component';
-  $strongarm->value = 'edit-i18n';
+  $strongarm->value = 'edit-scheduler';
   $export['additional_settings__active_tab_component'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -285,7 +285,7 @@ function atp_component_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_moderation_state_component';
-  $strongarm->value = 'published';
+  $strongarm->value = 'draft';
   $export['scheduler_unpublish_moderation_state_component'] = $strongarm;
 
   $strongarm = new stdClass();

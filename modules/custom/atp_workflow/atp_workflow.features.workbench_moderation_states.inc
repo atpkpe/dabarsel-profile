@@ -15,6 +15,12 @@ function atp_workflow_workbench_moderation_export_states() {
       'description' => 'Ready for publishing',
       'weight' => -8,
     ),
+    'deleted' => array(
+      'name' => 'deleted',
+      'label' => 'Deleted',
+      'description' => 'Mark content to be deleted',
+      'weight' => 0,
+    ),
     'draft' => array(
       'name' => 'draft',
       'label' => 'Draft',

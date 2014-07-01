@@ -49,7 +49,7 @@ function atp_slide_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'flexslider';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: Indhold: Slides */
+  /* Felt: Indhold: Slides */
   $handler->display->display_options['fields']['field_section_slides']['id'] = 'field_section_slides';
   $handler->display->display_options['fields']['field_section_slides']['table'] = 'field_data_field_section_slides';
   $handler->display->display_options['fields']['field_section_slides']['field'] = 'field_section_slides';
@@ -62,21 +62,22 @@ function atp_slide_views_default_views() {
   );
   $handler->display->display_options['fields']['field_section_slides']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_section_slides']['delta_offset'] = '0';
-  /* Sort criterion: Indhold: Slides (field_section_slides:delta) */
+  /* Sorteringskriterie: Indhold: Slides (field_section_slides:delta) */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_section_slides';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
-  /* Contextual filter: Indhold: Nid */
+  /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
   $handler->display->display_options['arguments']['nid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Alle';
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
-  /* Filter criterion: Indhold: Udgivet */
+  /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -111,7 +112,7 @@ function atp_slide_views_default_views() {
     t('‹ forrige'),
     t('næste ›'),
     t('sidste »'),
-    t('All'),
+    t('Alle'),
     t('Slideshow'),
     t('View panes'),
   );
