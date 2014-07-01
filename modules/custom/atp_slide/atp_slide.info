@@ -10,6 +10,7 @@ dependencies[] = flexslider_views
 dependencies[] = image
 dependencies[] = link
 dependencies[] = media
+dependencies[] = node
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = views

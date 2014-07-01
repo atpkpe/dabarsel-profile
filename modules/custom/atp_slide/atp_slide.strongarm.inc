@@ -95,6 +95,9 @@ function atp_slide_strongarm() {
         'xmlsitemap' => array(
           'weight' => '4',
         ),
+        'workbench_access' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(
         'language' => array(

@@ -27,7 +27,7 @@ function atp_slide_field_group_info() {
       1 => 'field_slide_image',
       2 => 'field_slide_link',
       3 => 'title_field',
-      4 => 'language',
+      4 => 'workbench_access',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
