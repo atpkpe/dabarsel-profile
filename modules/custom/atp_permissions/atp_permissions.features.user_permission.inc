@@ -761,7 +761,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node section choice'.
   $permissions['administer panelizer node section choice'] = array(
     'name' => 'administer panelizer node section choice',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'panelizer',
   );
 
@@ -817,7 +819,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node webform choice'.
   $permissions['administer panelizer node webform choice'] = array(
     'name' => 'administer panelizer node webform choice',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'panelizer',
   );
 
@@ -2132,6 +2136,16 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'focal_point',
+  );
+
+  // Exported permission: 'reference unpublished nodes'.
+  $permissions['reference unpublished nodes'] = array(
+    'name' => 'reference unpublished nodes',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'entityreference_unpublished_node',
   );
 
   // Exported permission: 'revert revisions'.

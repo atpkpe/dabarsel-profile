@@ -57,16 +57,16 @@ function atp_component_strongarm() {
         'custom_settings' => FALSE,
       ),
       '1_4_l' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       '3_8_h' => array(
         'custom_settings' => FALSE,
       ),
       '1_2_l' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       '1_2_h' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       '3_4_h' => array(
         'custom_settings' => FALSE,
@@ -84,6 +84,15 @@ function atp_component_strongarm() {
         'custom_settings' => TRUE,
       ),
       'teaser_with_img' => array(
+        'custom_settings' => TRUE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_2_square' => array(
         'custom_settings' => TRUE,
       ),
     ),
@@ -112,8 +121,8 @@ function atp_component_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
           ),
           '1_4_h' => array(
             'weight' => '0',
@@ -125,6 +134,22 @@ function atp_component_strongarm() {
           ),
           'teaser_with_img' => array(
             'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '1_4_l' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_2_h' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          '1_2_l' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '1_2_square' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

@@ -6,7 +6,6 @@
 
 include_once 'atp_layouts.features.inc';
 
-
 function atp_layouts_view_modes() {
   return array(
   	'1_4_fact' => '1/4-fact',
@@ -21,6 +20,14 @@ function atp_layouts_view_modes() {
   );
 }
 
+function atp_layouts_image_view_modes() {
+  return array(
+    '2_wide' => '2col wide (715x300)',
+    '1_wide' => '1col wide (960x300)',
+    'original' => 'Original',
+  );
+}
+
 /**
 * Implements hook_entity_info_alter().
 */
@@ -31,11 +38,16 @@ function atp_layouts_entity_info_alter(&$entity_info) {
 	    'label' => t($label),
 	    'custom settings' => FALSE,
 	  );
-     $entity_info['file']['view modes'][$key] = array(
+  }
+
+  $view_modes = atp_layouts_image_view_modes();
+  foreach($view_modes as $key => $label) {
+    $entity_info['file']['view modes'][$key] = array(
       'label' => t($label),
       'custom settings' => FALSE,
     );
   }
+
 }
 
 /**
@@ -48,6 +60,8 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
     'footer' => 1,
     'header' => 1,
     'header-bottom' => 1,
+    'bottom' => 1,
+    'mobile-menu' => 1,
   );
 
   $panel = $vars['pane']->panel;
@@ -56,10 +70,18 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
   if (!empty($site_template_panes[$panel])) {
     return;
   }
-  
+
   $configuration = $vars['pane']->configuration;
+
+  // Add view mode class for referenced entity.
   if (!empty($configuration['formatter_settings']['view_mode'])) {
     $view_mode = $configuration['formatter_settings']['view_mode'];
+    $vars['classes_array'][] = 'view-mode-' . str_replace('_', '-', $view_mode);
+  }
+
+  // Add view mode class for rendered entity.
+  if (!empty($configuration['view_mode'])) {
+    $view_mode = $configuration['view_mode'];
     $vars['classes_array'][] = 'view-mode-' . str_replace('_', '-', $view_mode);
   }
 

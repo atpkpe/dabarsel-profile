@@ -475,6 +475,7 @@ function atp_section_field_default_field_instances() {
       'type' => 'entityreference_autocomplete',
       'weight' => 6,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-section-field_section_image'
