@@ -129,7 +129,7 @@ projects[media_browser_plus][subdir] = 'contrib'
 projects[media_browser_plus][download][branch] = '7.x-3.x'
 projects[media_browser_plus][download][type] = 'git'
 projects[media_browser_plus][download][url] = 'http://git.drupal.org/project/media_browser_plus.git'
-projects[media_browser_plus][download][revision] = '0e5759ec0c6c5685aed69082630f9f811c0ff8f9'
+projects[media_browser_plus][download][revision] = '56c5c80c46334887b50a06f505d7864678e7a336'
 projects[media_browser_plus][patch][] = 'http://www.drupal.org/files/issues/media_browser_plus-admin-permission-2223841-1.patch'
 
 projects[views_tree][type] = 'module'
