@@ -92,6 +92,10 @@ projects[taxonomy_access_fix] = 'module'
 projects[taxonomy_access_fix][subdir] = 'contrib'
 projects[taxonomy_access_fix][version] = '2.1'
 
+projects[menu_admin_per_menu] = 'module'
+projects[menu_admin_per_menu][subdir] = 'contrib'
+projects[menu_admin_per_menu][version] = '1.0'
+
 projects[date][type] = 'module'
 projects[date][subdir] = 'contrib'
 projects[date][version] = '2.7'
