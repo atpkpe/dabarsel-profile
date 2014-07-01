@@ -49,6 +49,7 @@ dependencies[] = gss
 dependencies[] = focal_point
 dependencies[] = jammer
 dependencies[] = taxonomy_access_fix
+dependencies[] = menu_admin_per_menu
 
 ; Project features
 dependencies[] = atp_settings
