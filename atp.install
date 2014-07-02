@@ -100,9 +100,9 @@ function atp_create_users() {
 }
 
 /**
- *  Enable xxx module
+ *  Enable ultimate_cron module
  */
-//function atp_update_7001(&$sandbox) {
-  // module_enable(array('xxx'));
-//}
+function atp_update_7001(&$sandbox) {
+   module_enable(array('ultimate_cron'));
+}
 
