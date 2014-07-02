@@ -910,6 +910,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer rh_node'.
+  $permissions['administer rh_node'] = array(
+    'name' => 'administer rh_node',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'rabbit_hole',
+  );
+
   // Exported permission: 'administer rules'.
   $permissions['administer rules'] = array(
     'name' => 'administer rules',
@@ -1106,6 +1115,16 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'bypass rh_node'.
+  $permissions['bypass rh_node'] = array(
+    'name' => 'bypass rh_node',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'rabbit_hole',
   );
 
   // Exported permission: 'bypass rules access'.
@@ -2039,7 +2058,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'moderate content from approved to published'.
   $permissions['moderate content from approved to published'] = array(
     'name' => 'moderate content from approved to published',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'workbench_moderation',
   );
 
@@ -2063,14 +2084,18 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'moderate content from draft to published'.
   $permissions['moderate content from draft to published'] = array(
     'name' => 'moderate content from draft to published',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'workbench_moderation',
   );
 
   // Exported permission: 'moderate content from needs_review to approved'.
   $permissions['moderate content from needs_review to approved'] = array(
     'name' => 'moderate content from needs_review to approved',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'workbench_moderation',
   );
 
@@ -2080,6 +2105,7 @@ function atp_permissions_user_default_permissions() {
     'roles' => array(
       'Author' => 'Author',
       'Developer' => 'Developer',
+      'Editor' => 'Editor',
     ),
     'module' => 'workbench_moderation',
   );
@@ -2089,6 +2115,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'moderate content from needs_review to published',
     'roles' => array(
       'Developer' => 'Developer',
+      'Editor' => 'Editor',
     ),
     'module' => 'workbench_moderation',
   );
@@ -2096,7 +2123,18 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'moderate content from published to deleted'.
   $permissions['moderate content from published to deleted'] = array(
     'name' => 'moderate content from published to deleted',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'moderate content from published to draft'.
+  $permissions['moderate content from published to draft'] = array(
+    'name' => 'moderate content from published to draft',
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'workbench_moderation',
   );
 
@@ -2126,6 +2164,15 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'scheduler_workbench',
+  );
+
+  // Exported permission: 'php redirect rh_node'.
+  $permissions['php redirect rh_node'] = array(
+    'name' => 'php redirect rh_node',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'rabbit_hole',
   );
 
   // Exported permission: 'preview focal point'.

@@ -96,6 +96,10 @@ projects[menu_admin_per_menu] = 'module'
 projects[menu_admin_per_menu][subdir] = 'contrib'
 projects[menu_admin_per_menu][version] = '1.0'
 
+projects[rabbit_hole] = 'module'
+projects[rabbit_hole][subdir] = 'contrib'
+projects[rabbit_hole][version] = '2.22'
+
 projects[date][type] = 'module'
 projects[date][subdir] = 'contrib'
 projects[date][version] = '2.7'

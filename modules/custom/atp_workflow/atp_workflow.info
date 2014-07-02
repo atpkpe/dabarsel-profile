@@ -38,4 +38,5 @@ features[workbench_moderation_transitions][] = needs_review:approved
 features[workbench_moderation_transitions][] = needs_review:draft
 features[workbench_moderation_transitions][] = needs_review:published
 features[workbench_moderation_transitions][] = published:deleted
+features[workbench_moderation_transitions][] = published:draft
 project path = profiles/atp/modules/custom

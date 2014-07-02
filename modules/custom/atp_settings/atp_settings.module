@@ -7,6 +7,16 @@
 include_once 'atp_settings.features.inc';
 
 /**
+ * Implement hook_menu_alter
+ * Disable the /node page
+ */
+function atp_settings_menu_alter(&$items) {
+  if (isset($items['node'])) {
+    unset($items['node']);
+  }
+}
+
+/**
  * Implements hook_system_info_alter().
  *
  * Hide features that are just examples from random modules.

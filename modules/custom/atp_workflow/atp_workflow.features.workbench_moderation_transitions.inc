@@ -41,6 +41,10 @@ function atp_workflow_workbench_moderation_export_transitions() {
       'from_name' => 'published',
       'to_name' => 'deleted',
     ),
+    'published:draft' => array(
+      'from_name' => 'published',
+      'to_name' => 'draft',
+    ),
   );
   return $items;
 }

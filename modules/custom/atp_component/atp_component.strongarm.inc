@@ -14,7 +14,7 @@ function atp_component_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_component';
-  $strongarm->value = 'edit-scheduler';
+  $strongarm->value = 'edit-rabbit-hole';
   $export['additional_settings__active_tab_component'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -228,6 +228,48 @@ function atp_component_strongarm() {
     'view modes' => array(),
   );
   $export['panelizer_defaults_node_component'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'redirect_setting_name_component';
+  $strongarm->value = 'rh_node_redirect';
+  $export['redirect_setting_name_component'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_module_component';
+  $strongarm->value = 'rh_node';
+  $export['rh_module_component'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_component';
+  $strongarm->value = '2';
+  $export['rh_node_action_component'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_override_component';
+  $strongarm->value = 0;
+  $export['rh_node_override_component'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_component';
+  $strongarm->value = 'http://www.adapt.dk';
+  $export['rh_node_redirect_component'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_response_component';
+  $strongarm->value = '301';
+  $export['rh_node_redirect_response_component'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -13,13 +13,13 @@ function atp_workflow_workbench_moderation_export_states() {
       'name' => 'approved',
       'label' => 'Approved',
       'description' => 'Ready for publishing',
-      'weight' => -8,
+      'weight' => -7,
     ),
     'deleted' => array(
       'name' => 'deleted',
       'label' => 'Deleted',
       'description' => 'Mark content to be deleted',
-      'weight' => 0,
+      'weight' => -9,
     ),
     'draft' => array(
       'name' => 'draft',
@@ -31,13 +31,13 @@ function atp_workflow_workbench_moderation_export_states() {
       'name' => 'needs_review',
       'label' => 'Needs Review',
       'description' => 'Ready for moderation',
-      'weight' => -9,
+      'weight' => -8,
     ),
     'published' => array(
       'name' => 'published',
       'label' => 'Published',
       'description' => 'Make this version live',
-      'weight' => -7,
+      'weight' => -6,
     ),
   );
   return $items;
