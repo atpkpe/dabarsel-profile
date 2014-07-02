@@ -819,9 +819,7 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node webform choice'.
   $permissions['administer panelizer node webform choice'] = array(
     'name' => 'administer panelizer node webform choice',
-    'roles' => array(
-      'Author' => 'Author',
-    ),
+    'roles' => array(),
     'module' => 'panelizer',
   );
 
@@ -908,15 +906,6 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: 'administer rh_node'.
-  $permissions['administer rh_node'] = array(
-    'name' => 'administer rh_node',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'rabbit_hole',
   );
 
   // Exported permission: 'administer rules'.
@@ -1117,16 +1106,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'bypass rh_node'.
-  $permissions['bypass rh_node'] = array(
-    'name' => 'bypass rh_node',
-    'roles' => array(
-      'Author' => 'Author',
-      'Developer' => 'Developer',
-    ),
-    'module' => 'rabbit_hole',
-  );
-
   // Exported permission: 'bypass rules access'.
   $permissions['bypass rules access'] = array(
     'name' => 'bypass rules access',
@@ -1184,9 +1163,7 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'create contact content'.
   $permissions['create contact content'] = array(
     'name' => 'create contact content',
-    'roles' => array(
-      'Author' => 'Author',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1702,9 +1679,7 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'edit any contact content'.
   $permissions['edit any contact content'] = array(
     'name' => 'edit any contact content',
-    'roles' => array(
-      'Author' => 'Author',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1846,9 +1821,7 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'edit own contact content'.
   $permissions['edit own contact content'] = array(
     'name' => 'edit own contact content',
-    'roles' => array(
-      'Author' => 'Author',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -2164,15 +2137,6 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'scheduler_workbench',
-  );
-
-  // Exported permission: 'php redirect rh_node'.
-  $permissions['php redirect rh_node'] = array(
-    'name' => 'php redirect rh_node',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'rabbit_hole',
   );
 
   // Exported permission: 'preview focal point'.

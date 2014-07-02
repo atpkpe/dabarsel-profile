@@ -9,7 +9,6 @@ dependencies[] = field_group
 dependencies[] = image
 dependencies[] = link
 dependencies[] = media
-dependencies[] = node
 dependencies[] = smart_trim
 dependencies[] = strongarm
 dependencies[] = text
