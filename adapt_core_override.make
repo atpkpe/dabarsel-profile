@@ -9,6 +9,8 @@ api = 2
 projects[menu_trail_by_path] = FALSE
 projects[adapt_page] = FALSE
 
+projects[adminimal_theme][version] = '1.17'
+
 projects[entity][type] = 'module'
 projects[entity][subdir] = 'contrib'
 projects[entity][download][branch] = '7.x-1.x'
