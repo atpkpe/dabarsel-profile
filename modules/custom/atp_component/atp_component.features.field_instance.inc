@@ -336,7 +336,7 @@ function atp_component_field_default_field_instances() {
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -363,6 +363,7 @@ function atp_component_field_default_field_instances() {
       'type' => 'link_field',
       'weight' => 6,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-component-field_component_summary'
