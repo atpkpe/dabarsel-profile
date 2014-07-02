@@ -59,29 +59,41 @@ function atp_add_translation($source, $translation, $langcode = 'da') {
 
 function atp_create_users() {
 
-  $author_role = user_role_load_by_name('Author');
+  $author_role = user_role_load_by_name('Author'); 
   $editor_role = user_role_load_by_name('Editor');
-
+  $extended_role = user_role_load_by_name('Extended layout');
   $atp_role = user_role_load_by_name('atp.dk');
 
   // Create author user
+  $roles = array($author_role->rid => $author_role->rid, $atp_role->rid => $atp_role->rid);
   $edit = array();
   $edit['name']   = 'author';
   $edit['mail']   = 'tom+author@adapt.dk';
-  $edit['roles']  = array($author_role->rid => $author_role->rid, $atp_role->rid => $atp_role->rid);
+  $edit['roles']  = $roles;
   $edit['pass']   = 'QRbYRmppxcnH';
   $edit['status'] = 1;
   $account = user_save(drupal_anonymous_user(), $edit);
 
-  // Create author user
+  // Create author+editor user
+  $roles[$editor_role->rid] = $editor_role->rid;
   $edit = array();
   $edit['name']   = 'editor';
   $edit['mail']   = 'tom+editor@adapt.dk';
-  $edit['roles']  = array($editor_role->rid => $editor_role->rid, $atp_role->rid => $atp_role->rid);
+  $edit['roles']  = $roles;
   $edit['pass']   = 'GFDRF4sdxcnf';
   $edit['status'] = 1;
   $account = user_save(drupal_anonymous_user(), $edit);
-
+  
+  // Create author+editor+advanced layout user
+  $roles[$extended_role->rid] = $extended_role->rid;
+  $edit = array();
+  $edit['name']   = 'extended';
+  $edit['mail']   = 'tom+extended@adapt.dk';
+  $edit['roles']  = $roles;
+  $edit['pass']   = 'KJSDtert4dFHJ';
+  $edit['status'] = 1;
+  $account = user_save(drupal_anonymous_user(), $edit);
+  
   // Add users from the atp.dk role to workbench access realm "atp"
   workbench_access_role_section_save($atp_role->rid, 1, 'taxonomy');
 
