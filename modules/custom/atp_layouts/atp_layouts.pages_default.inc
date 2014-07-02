@@ -154,6 +154,7 @@ function atp_layouts_default_page_manager_handlers() {
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
       'override_title_text' => '',
+      'use_context' => '1',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -178,6 +179,7 @@ function atp_layouts_default_page_manager_handlers() {
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
       'override_title_text' => '',
+      'use_context' => '1',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -202,6 +204,7 @@ function atp_layouts_default_page_manager_handlers() {
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
       'override_title_text' => '',
+      'use_context' => '1',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -226,6 +229,7 @@ function atp_layouts_default_page_manager_handlers() {
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
       'override_title_text' => '',
+      'use_context' => '1',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -250,6 +254,7 @@ function atp_layouts_default_page_manager_handlers() {
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
       'override_title_text' => '',
+      'use_context' => '1',
     );
     $pane->cache = array();
     $pane->style = array(
