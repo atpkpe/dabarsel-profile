@@ -9,6 +9,14 @@ api = 2
 projects[menu_trail_by_path] = FALSE
 projects[adapt_page] = FALSE
 
+projects[entity][type] = 'module'
+projects[entity][subdir] = 'contrib'
+projects[entity][download][branch] = '7.x-1.x'
+projects[entity][download][type] = 'git'
+projects[entity][download][url] = 'http://git.drupal.org/project/entity.git'
+projects[entity][download][revision] = '4d2cc6fb1ecba4409cb8d1b813133366dea2c460'
+projects[entity][patch][] = 'http://www.drupal.org/files/issues/2020325-entity-data-from-context-17.patch'
+
 projects[wysiwyg][type] = 'module'
 projects[wysiwyg][subdir] = 'contrib'
 projects[wysiwyg][download][branch] = '7.x-2.x'
