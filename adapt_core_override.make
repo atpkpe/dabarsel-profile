@@ -9,7 +9,12 @@ api = 2
 projects[menu_trail_by_path] = FALSE
 projects[adapt_page] = FALSE
 
-projects[adminimal_theme][version] = '1.17'
+projects[adminimal_theme][type] = 'module'
+projects[adminimal_theme][subdir] = 'contrib'
+projects[adminimal_theme][download][branch] = '7.x-1.x'
+projects[adminimal_theme][download][type] = 'git'
+projects[adminimal_theme][download][url] = 'http://git.drupal.org/project/adminimal_theme.git'
+projects[adminimal_theme][download][revision] = '18764126fe8ff6ebe91d6e95c026d4cb9a6c6228'
 
 projects[entity][type] = 'module'
 projects[entity][subdir] = 'contrib'

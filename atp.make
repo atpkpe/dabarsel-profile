@@ -189,7 +189,3 @@ libraries[plupload][download][url] = 'https://github.com/moxiecode/plupload/arch
 libraries[plupload][destination] = libraries
 libraries[plupload][directory_name] = plupload
 libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-16.patch"
-
-projects[adminimal_theme][type] = 'theme'
-projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][version] = '1.17'
