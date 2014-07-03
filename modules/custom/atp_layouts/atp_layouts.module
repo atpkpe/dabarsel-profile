@@ -107,8 +107,6 @@ function atp_layouts_preprocess_panels_pane(&$vars, $hook) {
   if ($vars['pane']->position > 0) {
      $vars['classes_array'][] = 'not-first';
   }
-
-
 }
 
 /**

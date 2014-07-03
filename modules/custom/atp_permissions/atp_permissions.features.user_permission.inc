@@ -611,6 +611,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'administer pane access',
     'roles' => array(
       'Developer' => 'Developer',
+      'Extended layout' => 'Extended layout',
     ),
     'module' => 'panels',
   );
@@ -655,7 +656,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node news content'.
   $permissions['administer panelizer node news content'] = array(
     'name' => 'administer panelizer node news content',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
@@ -683,7 +686,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node news overview'.
   $permissions['administer panelizer node news overview'] = array(
     'name' => 'administer panelizer node news overview',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
@@ -709,6 +714,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'administer panelizer node page content',
     'roles' => array(
       'Developer' => 'Developer',
+      'Extended layout' => 'Extended layout',
     ),
     'module' => 'panelizer',
   );
@@ -745,6 +751,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'administer panelizer node page overview',
     'roles' => array(
       'Developer' => 'Developer',
+      'Extended layout' => 'Extended layout',
     ),
     'module' => 'panelizer',
   );
@@ -770,7 +777,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node section content'.
   $permissions['administer panelizer node section content'] = array(
     'name' => 'administer panelizer node section content',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
@@ -798,7 +807,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node section overview'.
   $permissions['administer panelizer node section overview'] = array(
     'name' => 'administer panelizer node section overview',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
@@ -826,7 +837,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node webform content'.
   $permissions['administer panelizer node webform content'] = array(
     'name' => 'administer panelizer node webform content',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
@@ -854,7 +867,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node webform overview'.
   $permissions['administer panelizer node webform overview'] = array(
     'name' => 'administer panelizer node webform overview',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
@@ -886,6 +901,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'administer panels styles',
     'roles' => array(
       'Developer' => 'Developer',
+      'Extended layout' => 'Extended layout',
     ),
     'module' => 'panels',
   );
@@ -2292,6 +2308,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'use panels caching features',
     'roles' => array(
       'Developer' => 'Developer',
+      'Extended layout' => 'Extended layout',
     ),
     'module' => 'panels',
   );
@@ -2319,6 +2336,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'use panels locks',
     'roles' => array(
       'Developer' => 'Developer',
+      'Extended layout' => 'Extended layout',
     ),
     'module' => 'panels',
   );

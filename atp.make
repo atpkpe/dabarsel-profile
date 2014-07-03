@@ -54,7 +54,7 @@ projects[workbench_moderation][download][branch] = '7.x-1.x'
 projects[workbench_moderation][download][type] = 'git'
 projects[workbench_moderation][download][url] = 'http://git.drupal.org/project/workbench_moderation.git'
 projects[workbench_moderation][download][revision] = 'a90378de5b1aea2b095ff5613eea44f55947f514'
-; projects[workbench_moderation][patch][] = 'http://drupal.org/files/issues/workbench_moderation-panelizer_revisions-1402860-44_0.patch'
+projects[workbench_moderation][patch][] = 'http://www.drupal.org/files/issues/workbench_moderation-panelizer_revisions-1402860-47.patch'
 
 projects[workbench_access][type] = 'module'
 projects[workbench_access][subdir] = 'contrib'
