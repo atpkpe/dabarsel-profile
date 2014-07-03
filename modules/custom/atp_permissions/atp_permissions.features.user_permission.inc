@@ -1163,7 +1163,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'create contact content'.
   $permissions['create contact content'] = array(
     'name' => 'create contact content',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'node',
   );
 
@@ -1679,7 +1681,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'edit any contact content'.
   $permissions['edit any contact content'] = array(
     'name' => 'edit any contact content',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'node',
   );
 
@@ -1821,7 +1825,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'edit own contact content'.
   $permissions['edit own contact content'] = array(
     'name' => 'edit own contact content',
-    'roles' => array(),
+    'roles' => array(
+      'Author' => 'Author',
+    ),
     'module' => 'node',
   );
 
