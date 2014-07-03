@@ -126,7 +126,7 @@ function atp_settings_default_linkit_profiles() {
         'weight' => '-10',
       ),
       'entity:taxonomy_term' => array(
-        'enabled' => 1,
+        'enabled' => 0,
         'weight' => '-10',
       ),
       'entity:user' => array(
@@ -137,12 +137,12 @@ function atp_settings_default_linkit_profiles() {
     'entity:node' => array(
       'result_description' => '',
       'bundles' => array(
+        'component' => 'component',
         'news' => 'news',
         'section' => 'section',
         'page' => 'page',
         'webform' => 'webform',
         'gallery' => 0,
-        'component' => 0,
         'contact' => 0,
         'slide' => 0,
       ),
