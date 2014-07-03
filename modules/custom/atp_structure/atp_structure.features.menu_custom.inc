@@ -29,7 +29,7 @@ function atp_structure_menu_default_menu_custom() {
   // Exported menu: menu-footer.
   $menus['menu-footer'] = array(
     'menu_name' => 'menu-footer',
-    'title' => 'Footer menu',
+    'title' => 'More shortcuts',
     'description' => '',
     'language' => 'und',
     'i18n_mode' => 5,
@@ -45,8 +45,8 @@ function atp_structure_menu_default_menu_custom() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Bottom menu');
-  t('Footer menu');
   t('Main menu');
+  t('More shortcuts');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
   t('Top menu');
 

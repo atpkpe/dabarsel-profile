@@ -87,7 +87,7 @@ function atp_create_users() {
   $edit['pass']   = 'GFDRF4sdxcnf';
   $edit['status'] = 1;
   $account = user_save(drupal_anonymous_user(), $edit);
-  
+
   // Create author+editor+advanced layout user
   $roles[$extended_role->rid] = $extended_role->rid;
   $edit = array();
@@ -97,7 +97,7 @@ function atp_create_users() {
   $edit['pass']   = 'KJSDtert4dFHJ';
   $edit['status'] = 1;
   $account = user_save(drupal_anonymous_user(), $edit);
-  
+
   // Add users from the atp.dk role to workbench access realm "atp"
   workbench_access_role_section_save($atp_role->rid, 1, 'taxonomy');
 
@@ -109,3 +109,12 @@ function atp_create_users() {
 function atp_update_7001(&$sandbox) {
    module_enable(array('ultimate_cron'));
 }
+
+/**
+ *  Enable ultimate_cron module
+ */
+function atp_update_7002(&$sandbox) {
+  atp_add_translation('More shortcuts', 'Flere genveje');
+}
+
+
