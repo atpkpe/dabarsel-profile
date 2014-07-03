@@ -10,6 +10,97 @@
 function atp_file_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'file-image-field_file_description'
+  $field_instances['file-image-field_file_description'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Text inserted under the image in some view modes',
+    'display' => array(
+      '1_wide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '1_wide_text' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+      '2_wide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '2_wide_text' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'original' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_file_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'file-image-field_file_image_alt_text'
   $field_instances['file-image-field_file_image_alt_text'] = array(
     'bundle' => 'image',
@@ -47,11 +138,23 @@ function atp_file_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 2,
       ),
+      '1_wide_text' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       '2_wide' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 2,
+      ),
+      '2_wide_text' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'default' => array(
         'label' => 'above',
@@ -140,11 +243,23 @@ function atp_file_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      '1_wide_text' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       '2_wide' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
+      ),
+      '2_wide_text' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'above',
@@ -200,6 +315,8 @@ function atp_file_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Alt Text');
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
+  t('Description');
+  t('Text inserted under the image in some view modes');
   t('Title Text');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
 

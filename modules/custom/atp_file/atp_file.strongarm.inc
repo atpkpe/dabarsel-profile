@@ -49,9 +49,22 @@ function atp_file_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      '2_wide_text' => array(
+        'custom_settings' => TRUE,
+      ),
+      '1_wide_text' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'filename' => array(
+          'weight' => '-10',
+        ),
+        'preview' => array(
+          'weight' => '-5',
+        ),
+      ),
       'display' => array(
         'file' => array(
           'default' => array(
@@ -67,6 +80,14 @@ function atp_file_strongarm() {
             'visible' => TRUE,
           ),
           'original' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          '2_wide_text' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          '1_wide_text' => array(
             'weight' => '0',
             'visible' => TRUE,
           ),
