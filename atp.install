@@ -32,10 +32,14 @@ function atp_add_translations() {
     "News" => "Nyhed",
     "Gallery" => "Galleri",
     "My drafts" => "Mine kladder",
-    "Needs review" => "Skal godkendes",
+    "Needs review" => "Klar til godkendelse",
     "My Workbench" => "Workbench",
     "Text formatting help" => "Tekstformat",
     "Summary" => "Manchet",
+    "Panelizer" => "Skabeloner",
+    'Facts' => 'Linkbokse',
+    "Contacts" => "Kontakter",
+    "My sections" => "Mine sites",
   );
 
   foreach ($translations as $source => $translation) {
@@ -105,4 +109,3 @@ function atp_create_users() {
 function atp_update_7001(&$sandbox) {
    module_enable(array('ultimate_cron'));
 }
-
