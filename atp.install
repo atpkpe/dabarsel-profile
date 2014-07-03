@@ -115,6 +115,7 @@ function atp_update_7001(&$sandbox) {
  */
 function atp_update_7002(&$sandbox) {
   atp_add_translation('More shortcuts', 'Flere genveje');
+  atp_add_translation("default for '@bundle'", 'standard');
 }
 
 
