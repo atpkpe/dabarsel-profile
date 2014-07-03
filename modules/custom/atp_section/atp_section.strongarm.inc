@@ -287,8 +287,8 @@ function atp_section_strongarm() {
       'page_manager' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       'default' => array(
         'status' => 1,
@@ -298,44 +298,44 @@ function atp_section_strongarm() {
       'teaser' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_4_l' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_2_l' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_2_square' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_2_h' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_1_l' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       'teaser_with_img' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
     ),
   );
@@ -345,7 +345,7 @@ function atp_section_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:section:default_selection';
-  $strongarm->value = 'node:section:frontpage:default';
+  $strongarm->value = 'node:section:section_a3:default';
   $export['panelizer_node:section:default_selection'] = $strongarm;
 
   $strongarm = new stdClass();
