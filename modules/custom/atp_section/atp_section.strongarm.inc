@@ -14,7 +14,7 @@ function atp_section_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_section';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_section'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -241,8 +241,10 @@ function atp_section_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_section';
   $strongarm->value = array(
-    0 => 'main-menu',
-    1 => 'menu-top',
+    0 => 'menu-bottom-menu',
+    1 => 'menu-footer',
+    2 => 'main-menu',
+    3 => 'menu-top',
   );
   $export['menu_options_section'] = $strongarm;
 
@@ -250,7 +252,7 @@ function atp_section_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_section';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'menu-footer:0';
   $export['menu_parent_section'] = $strongarm;
 
   $strongarm = new stdClass();

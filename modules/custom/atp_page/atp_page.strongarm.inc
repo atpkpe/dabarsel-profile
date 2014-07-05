@@ -14,7 +14,7 @@ function atp_page_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_page';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -149,8 +149,10 @@ function atp_page_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_page';
   $strongarm->value = array(
-    0 => 'main-menu',
-    1 => 'menu-top',
+    0 => 'menu-bottom-menu',
+    1 => 'menu-footer',
+    2 => 'main-menu',
+    3 => 'menu-top',
   );
   $export['menu_options_page'] = $strongarm;
 
@@ -158,7 +160,7 @@ function atp_page_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_page';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'menu-footer:0';
   $export['menu_parent_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -195,8 +197,8 @@ function atp_page_strongarm() {
       'page_manager' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       'default' => array(
         'status' => 1,
@@ -206,38 +208,38 @@ function atp_page_strongarm() {
       'teaser' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_4_l' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_2_l' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_2_square' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       '1_2_h' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       'teaser_with_img' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
     ),
   );
