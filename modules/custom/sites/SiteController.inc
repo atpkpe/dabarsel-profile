@@ -200,7 +200,23 @@ class SiteController {
 
   }
 
+/**
+  *  Add subsite menus
+  */
+  public static function addSiteMenus(&$menus) {
 
+    // Get site sid from database.
+    $result = db_select('sites', 's')
+      ->fields('s', array('menu_main_menu'))
+      ->condition('sid', 1, '>')
+      ->execute()
+      ->fetchAll();
+
+    foreach ($result as $row) {
+      $menus[$row->menu_main_menu] = $row->menu_main_menu;
+    }
+
+  }
 
   /**
    * Deletes a site and all it's resources.

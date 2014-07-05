@@ -19,17 +19,26 @@ function sites_init() {
     strongarm_set_conf(TRUE);
   }
 
+  global $conf;
+  global $language;
+
+  // Make sure all subsite menus are valid options
+  foreach (array('page', 'section', 'webform') as $type) {
+    SiteController::addSiteMenus($conf['menu_options_' . $type]);
+  }
+
   // Set current site name
   $site = SiteController::getCurrentSite();
-  if (!empty($site) && $site->sid > 1) {
-    global $conf;
-    global $language;
-    $lang = $language->language;
-    $conf['site_name'] = $site->name[$lang];
-    $conf['gss_api_key'] = $site->gss_api_key[$lang];
-    $settings['gss']['key'] = $site->gss_api_key[$lang];
-    drupal_add_js($settings, 'setting');
+
+  if (empty($site) || $site->sid == 1) {
+    return;
   }
+
+  $lang = $language->language;
+  $conf['site_name'] = $site->name[$lang];
+  $conf['gss_api_key'] = $site->gss_api_key[$lang];
+  $settings['gss']['key'] = $site->gss_api_key[$lang];
+  drupal_add_js($settings, 'setting');
 
 }
 
