@@ -2339,7 +2339,7 @@ function atp_page_panelizer_defaults() {
       'parent' => 'main-menu:0',
       'title_link' => 0,
       'admin_title' => '',
-      'level' => '2',
+      'level' => '1',
       'follow' => 0,
       'depth' => '2',
       'expanded' => 0,
