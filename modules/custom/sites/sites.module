@@ -171,28 +171,23 @@ function sites_admin_paths_alter(&$paths) {
  * - Adds site prefix to content admin.
  * - Removes prefix from node aliases if prefix was added on node update.
  */
-function sites_preview_url_outbound_alter(&$path, &$options, $original_path) {
-  // we'll rewrite the outbound url for node/edit and node/delete
-  // I only do this so that all links on admin/content are being redirected properly
-  // only when we are not in a site.
+function sites_url_outbound_alter(&$path, &$options, $original_path) {
 
-  /*if (current_path() == 'admin/content') {
+  // Rewrite the outbound url for node/edit and node/delete
+  // TODO : Make something similar for Workbench
+  if (current_path() == 'admin/content') {
     purl_disable(TRUE);
-    if (isset($options['title'])) {
-      if ($options['title'] == 'edit' || $options['title'] == 'delete') {
-        if ($options['href']) {
-          $paths = explode('/', $options['href']);
-          if ($paths[0] == 'node') {
-            $nid = $paths[1];
-            $sites = SiteController::getSitesByNode($nid);
-            foreach ($sites as $site) {
-              $path = $site->value . '/' . $path;
-            }
-          }
+    if (!empty($options['href'])) {
+      $paths = explode('/', $options['href']);
+      if ($paths[0] == 'node' && ($paths[2] == 'edit' || $paths[2] == 'delete')) {
+        $sites = SiteController::getSitesByNode($paths[1]);
+        if (empty($sites[1])) { // Don't do anything for the main site
+          $site = array_shift($sites);
+          $path = $site->purl_prefix . '/' . $path;
         }
       }
     }
-  }*/
+  }
 
   // Remove the purl prefix from node aliases that already have a purl prefix.
   if (stripos($path, 'node/') === 0) {
@@ -294,29 +289,11 @@ function sites_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Handles submit for node form.
- *
- * Redirect to the subsite when saving a node, to avoid access denied.
- */
-/*function sites_node_form_submit($form, &$form_state) {
-  $node_sites = array_filter($form_state['values']['sites']);
-  $current_sid  = SiteController::getCurrentSite()->sid;
-  if (!in_array($current_sid, $node_sites)) {
-    $form_state['redirect'] = urL($form_state['redirect'], array(
-      'absolute' => TRUE,
-      // Use first site from selected to redirect to.
-      'purl' => array('provider' => 'sites', 'id' => reset($node_sites)),
-    ));
-  }
-}
-*/
-
-/**
  * Implements hook_node_load().
  */
 function sites_node_load($nodes, $types) {
   foreach ($nodes as $node) {
-    $node->sites = SiteController::getSitesByNode($node);
+    $node->sites = SiteController::getSitesByNode($node->nid);
   }
 }
 

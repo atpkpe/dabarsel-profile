@@ -126,14 +126,15 @@ class SiteController {
    * @return array $sites
    *   Array of site information.
    */
-  public static function getSitesByNode($node) {
+  public static function getSitesByNode($nid) {
+
     $sites = array();
 
     $query = db_select('`workbench_access_node`', 'w');
     $query->join('sites', 's', 'w.access_id = s.site_term');
     $results = $query
-              ->fields('s', array('sid'))
-              ->condition('nid', $node->nid)
+              ->fields('s')
+              ->condition('nid', $nid)
               ->execute();
 
     while ($site = $results->fetchObject()) {

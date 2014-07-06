@@ -4,7 +4,6 @@ package = "Sites"
 dependencies[] = purl
 core = 7.x
 
-files[] = plugins/context_condition_site.inc
 files[] = views/plugins/sites_access_plugin.inc
 files[] = views/handlers/sites_handler_filter_site.inc
 files[] = views/handlers/sites_handler_filter_site_current.inc

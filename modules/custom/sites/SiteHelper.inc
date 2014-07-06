@@ -50,26 +50,26 @@ class SiteHelper {
    */
   public static function validateSiteForm(&$form, &$form_state) {
     // Check that site name is unique.
-    //if (self::siteNameIsUnique($form_state) === FALSE) {
-    //  form_set_error('site_name', t('Site name should be unique.'));
-    //}
+    if (self::siteTitleIsUnique($form_state) === FALSE) {
+      form_set_error('title', t('Site title should be unique.'));
+    }
   }
 
   /**
-   * Checks if a site name is unique.
+   * Checks if a site title is unique.
    *
    * @param array $form_state
    *   Form state.
    *
    * @return bool
-   *   True if site name is unique, false otherwise.
+   *   True if site title is unique, false otherwise.
    */
-  public static function siteNameIsUnique($form_state) {
+  public static function siteTitleIsUnique($form_state) {
     // Check that the site name is unique.
     $sites = SiteController::getSites();
 
     foreach ($sites as $site) {
-      if ($site->name == $form_state['values']['site_name'] && $site->sid !== $form_state['values']['site_id']) {
+      if ($site->title == $form_state['values']['title'] && $site->sid !== $form_state['values']['site_id']) {
         return FALSE;
       }
     }

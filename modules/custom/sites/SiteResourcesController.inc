@@ -77,12 +77,20 @@ class SiteResourcesController {
    *   The new path, after the site's purl prefix was changed.
    */
   public static function updatePaths($site_id, $original_path, $new_path) {
+
     // Get all nodes linked to this subsite.
-    $result = db_select('site_node', 'n')->fields('n', array('nid'))->condition('sid', $site_id)->execute();
+    $query = db_select('sites', 's');
+    $query->join('workbench_access_node', 'w', 'w.access_id = s.site_term');
+    $results = $query
+              ->fields('w', array('nid'))
+              ->condition('sid', $site_id)
+              ->execute();
+
     $nodes = array();
-    while ($node = $result->fetchObject()) {
-      $nodes[] = 'node/' . $node->nid;
+    while ($nid = $results->fetchField()) {
+     $nodes[] = 'node/' . $nid;
     }
+
     // We use this query for performance reasons. Db_query() is used because the
     // replace function can not be called with db_update.
     db_query("UPDATE url_alias SET alias = REPLACE(alias, :prev, :new) WHERE source IN (:nodes)", array(':prev' => $original_path . '/', ':new' => $new_path . '/', ':nodes' => $nodes));
