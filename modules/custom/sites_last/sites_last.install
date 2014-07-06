@@ -1,13 +1,15 @@
 <?php
 
 /**
- * Implement hook_install
+ * Implements hook_enable().
  */
-
-function sites_last_install() {
-  // Set module weight higher than the Workbench Moderation (weigth=5)
+function sites_last_enable() {
+  /* Needs to be loaded after the workbench access */
   db_update('system')
-    ->fields(array('weight' => 10))
-    ->condition('name', 'sites_last', '=')
-    ->execute();
+  ->fields(array(
+    'weight' => 7,
+  ))
+  ->condition('name', 'sites_last')
+  ->condition('type', 'module')
+  ->execute();
 }

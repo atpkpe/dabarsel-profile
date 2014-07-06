@@ -10,11 +10,6 @@
  */
 function sites_set_current_site($sid) {
 
-  // Activate the Context module context condition.
-  if (module_exists('context') && $plugin = context_get_plugin('condition', 'site')) {
-    $plugin->execute($sid);
-  }
-
   // Make the sid and full site object easily available to other functionality
   $site = SiteController::getSite($sid);
   SiteController::setCurrentSite($site);

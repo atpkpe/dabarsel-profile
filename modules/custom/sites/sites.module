@@ -132,21 +132,6 @@ function sites_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
- * Implements hook_features_api().
- */
-function sites_features_api() {
-  return array(
-    'sites' => array(
-      'name' => t('Sites config'),
-      'default_hook' => 'sites_defaults',
-      'default_file' => FEATURES_DEFAULTS_INCLUDED,
-      'feature_source' => TRUE,
-      'file' => drupal_get_path('module', 'sites') . '/sites.features.inc',
-    ),
-  );
-}
-
-/**
  * Implements hook_admin_paths().
  *
  * Adds the sites admin paths as admin paths, so the admin theme is used.
@@ -164,7 +149,6 @@ function sites_admin_paths_alter(&$paths) {
   }
 }
 
-
 /**
  * Implements hook_url_outbound_alter().
  *
@@ -173,37 +157,36 @@ function sites_admin_paths_alter(&$paths) {
  */
 function sites_url_outbound_alter(&$path, &$options, $original_path) {
 
-  // Rewrite the outbound url for node/edit and node/delete
-  // TODO : Make something similar for Workbench
-  if (current_path() == 'admin/content') {
+  // Rewrite the outbound url for admin/content and workbench pages.
+  if (current_path() == 'admin/content' || stripos(current_path(), 'admin/workbench') === 0) {
     purl_disable(TRUE);
-    if (!empty($options['href'])) {
-      $paths = explode('/', $options['href']);
-      if ($paths[0] == 'node' && ($paths[2] == 'edit' || $paths[2] == 'delete')) {
-        $sites = SiteController::getSitesByNode($paths[1]);
-        if (empty($sites[1])) { // Don't do anything for the main site
-          $site = array_shift($sites);
-          $path = $site->purl_prefix . '/' . $path;
+    $paths = explode('/', $path);
+    if ($paths[0] == 'node') {
+      $sites = SiteController::getSitesByNode($paths[1]);
+      if (empty($sites[1]) && $paths[1] != 'add') { // Don't do anything for the main site
+        $site = array_shift($sites);
+
+        if (!empty($paths[4]) && $paths[4] == 'change-state') {
+          return;
         }
+
+        // Prefix the edit/delete urls.
+        if (!empty($paths[2]) && ( $paths[2] == 'edit' || $paths[2] == 'delete')) {
+          $path = $site->purl_prefix . '/' . $path;
+          return;
+        }
+
+        // Use aliases when present for view links.
+        $alias = drupal_get_path_alias($path);
+        $path = $site->purl_prefix . '/' . $alias;
+        // When this alias option is set to TRUE drupal will not attempt to
+        // override the alias again.
+        $options['alias'] = TRUE;
       }
+
     }
   }
 
-  // Remove the purl prefix from node aliases that already have a purl prefix.
-  if (stripos($path, 'node/') === 0) {
-    $alias = drupal_get_path_alias($path);
-    $site = SiteController::getCurrentSite();
-    $parts = explode('/', $alias);
-    // Only remove the prefix if the alias is already prefixed.
-    if ($alias && isset($site->purl_prefix) && $parts[0] === $site->purl_prefix && count($parts) > 1) {
-      array_shift($parts);
-      // Set the path to the alias.
-      $path = implode('/', $parts);
-      // When this alias option is set to TRUE drupal will not attempt to
-      // override the alias again.
-      $options['alias'] = TRUE;
-    }
-  }
 }
 
 /**
@@ -223,38 +206,6 @@ function sites_panels_pane_prerender($pane) {
   }
 
 }
-
-/**
- * Implements template_preprocess_page.
- */
-/*
-function sites_process_page(&$vars) {
-  // Some themes acquire their primary_links and secondary_links variables via
-  // these variables.  For themes that do not, we have provided a Strongarm
-  // implementation in sites_strongarm()
-  if ($pl = sites_get_current_menu_source('main_menu')) {
-    $vars['main_menu'] = module_exists('i18n_menu') ? i18n_menu_navigation_links($pl) : menu_navigation_links($pl);
-  }
-  if ($sl = sites_get_current_menu_source('secondary_menu')) {
-    $vars['secondary_menu'] = module_exists('i18n_menu') ? i18n_menu_navigation_links($sl) : menu_navigation_links($sl);
-  }
-}
-*/
-
-/**
- * Implements template_preprocess_page.
- */
-/*function sites_preprocess_page(&$vars) {
-  $site = SiteController::getCurrentSite();
-  if (!empty($site)) {
-    $vars['front_page'] = url('<front>', array(
-        'absolute' => TRUE,
-        'purl'     => array('provider' => 'sites', 'id' => $site->sid),
-      )
-    );
-  }
-}
-*/
 
 /**
  * Implements hook_permission().

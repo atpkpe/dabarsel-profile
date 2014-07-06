@@ -59,7 +59,6 @@ function sites_install() {
 
 }
 
-
 /**
  * Implements hook_enable().
  */
