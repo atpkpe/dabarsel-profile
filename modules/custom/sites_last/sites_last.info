@@ -1,5 +1,5 @@
-name = "Last"
-description = "The last module"
+name = "Sites last"
+description = "The last module, for sites related things dependent on heigh module weigth."
 package = "Sites"
-dependencies[] = purl
+dependencies[] = sites
 core = 7.x

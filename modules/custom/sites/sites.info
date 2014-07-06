@@ -1,5 +1,5 @@
 name = "Sites"
-description = "Sites integrates PURL and Context directly."
+description = "Sites integrates PURL to provided subsite functionality."
 package = "Sites"
 dependencies[] = purl
 core = 7.x
@@ -10,10 +10,3 @@ files[] = views/handlers/sites_handler_filter_site_current.inc
 files[] = SiteResourcesController.inc
 files[] = SiteHelper.inc
 files[] = SiteController.inc
-
-; Information added by Drupal.org packaging script on 2013-12-07
-version = "7.x-2.x-dev"
-core = "7.x"
-project = "sites"
-datestamp = "1386428605"
-
