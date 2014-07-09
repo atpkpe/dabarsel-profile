@@ -263,10 +263,15 @@ function atp_component_field_default_field_instances() {
     'description' => '',
     'display' => array(
       '1_2_h' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_wrapper' => 'div',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'link_title_plain',
+        'weight' => 7,
       ),
       '1_2_l' => array(
         'label' => 'above',
@@ -380,11 +385,13 @@ function atp_component_field_default_field_instances() {
           'field_wrapper' => 'p',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
-          'more_link' => FALSE,
+          'more_link' => 0,
           'more_text' => 'Read more',
           'summary_handler' => 'full',
           'trim_length' => 300,
-          'trim_options' => array(),
+          'trim_options' => array(
+            'text' => 'text',
+          ),
           'trim_suffix' => '...',
           'trim_type' => 'chars',
         ),
@@ -415,7 +422,7 @@ function atp_component_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'smart_trim',
         'settings' => array(
-          'field_wrapper' => 0,
+          'field_wrapper' => 'p',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
           'more_link' => 0,
@@ -441,7 +448,7 @@ function atp_component_field_default_field_instances() {
           'more_link' => 0,
           'more_text' => 'Read more',
           'summary_handler' => 'full',
-          'trim_length' => 90,
+          'trim_length' => 70,
           'trim_options' => array(
             'text' => 'text',
           ),
@@ -613,13 +620,22 @@ function atp_component_field_default_field_instances() {
       ),
       '1_4_l' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'smart_trim',
         'settings' => array(
-          'field_wrapper' => '',
-          'item_wrapper' => '',
-          'label_wrapper' => '',
+          'field_wrapper' => 'p',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 60,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
         ),
-        'type' => 'text_plain',
+        'type' => 'smart_trim_format',
         'weight' => 8,
       ),
       'default' => array(

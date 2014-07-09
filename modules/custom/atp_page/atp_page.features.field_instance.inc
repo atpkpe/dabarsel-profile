@@ -692,13 +692,22 @@ function atp_page_field_default_field_instances() {
       ),
       '1_4_l' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'smart_trim',
         'settings' => array(
-          'field_wrapper' => 'h3',
+          'field_wrapper' => 'p',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 60,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
         ),
-        'type' => 'text_plain',
+        'type' => 'smart_trim_format',
         'weight' => 0,
       ),
       'default' => array(

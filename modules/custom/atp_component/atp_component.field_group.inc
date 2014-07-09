@@ -56,8 +56,9 @@ function atp_component_field_group_info() {
     'label' => 'Image overlay',
     'weight' => '1',
     'children' => array(
-      0 => 'field_component_summary',
-      1 => 'title_field',
+      0 => 'field_component_link',
+      1 => 'field_component_summary',
+      2 => 'title_field',
     ),
     'format_type' => 'link',
     'format_settings' => array(
