@@ -965,6 +965,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'administer sites',
     'roles' => array(
       'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'sites',
   );
