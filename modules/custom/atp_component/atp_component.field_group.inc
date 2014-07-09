@@ -46,6 +46,34 @@ function atp_component_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_component_link|node|component|1_4_fact';
+  $field_group->group_name = 'group_component_link';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'component';
+  $field_group->mode = '1_4_fact';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Link wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_component_link',
+      1 => 'field_component_summary',
+      2 => 'title_field',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'formatter' => 'open',
+      'instance_settings' => array(
+        'link_to' => 'entity',
+        'classes' => 'group-component-link field-group-link',
+      ),
+    ),
+  );
+  $export['group_component_link|node|component|1_4_fact'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_section_image_overlay|node|component|1_2_h';
   $field_group->group_name = 'group_section_image_overlay';
   $field_group->entity_type = 'node';

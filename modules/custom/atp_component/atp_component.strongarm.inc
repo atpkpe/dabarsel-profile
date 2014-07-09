@@ -129,7 +129,7 @@ function atp_component_strongarm() {
             'visible' => TRUE,
           ),
           '1_4_fact' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'teaser_with_img' => array(

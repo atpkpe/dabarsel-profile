@@ -40,6 +40,10 @@
   color: #fff;
   text-align: center;
   line-height: 30px;
+  padding: 0 $margins/2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   &:before {
     @include opacity(.1);
     background: #000;

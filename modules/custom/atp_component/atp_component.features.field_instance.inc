@@ -39,7 +39,7 @@ function atp_component_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
       '1_4_h' => array(
         'label' => 'above',
@@ -150,7 +150,7 @@ function atp_component_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       '1_4_h' => array(
         'label' => 'above',
@@ -289,12 +289,12 @@ function atp_component_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
-          'field_wrapper' => 0,
+          'field_wrapper' => 'div',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
-        'type' => 'link_default',
-        'weight' => 2,
+        'type' => 'link_title_plain',
+        'weight' => 3,
       ),
       '1_4_h' => array(
         'label' => 'above',
@@ -448,7 +448,7 @@ function atp_component_field_default_field_instances() {
           'more_link' => 0,
           'more_text' => 'Read more',
           'summary_handler' => 'full',
-          'trim_length' => 70,
+          'trim_length' => 60,
           'trim_options' => array(
             'text' => 'text',
           ),
@@ -456,7 +456,7 @@ function atp_component_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 1,
+        'weight' => 2,
       ),
       '1_4_h' => array(
         'label' => 'above',
@@ -600,17 +600,23 @@ function atp_component_field_default_field_instances() {
       ),
       '1_4_fact' => array(
         'label' => 'hidden',
-        'module' => 'title',
+        'module' => 'smart_trim',
         'settings' => array(
           'field_wrapper' => 'h3',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 30,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
         ),
-        'type' => 'title_linked',
-        'weight' => 0,
+        'type' => 'smart_trim_format',
+        'weight' => 1,
       ),
       '1_4_h' => array(
         'label' => 'above',

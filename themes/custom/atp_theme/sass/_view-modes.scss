@@ -36,11 +36,13 @@
   }
   p {
       border-top : 1px solid $gray-dark;
-      padding-top: 20px;
-      margin-bottom: 30px;
+      padding-top: $margins;
+      margin-bottom: $margins;
   }
   a {
-    @extend %btn-green;
+    > div {
+      @extend %btn-green;
+    }
   }
 }
 

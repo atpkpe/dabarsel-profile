@@ -21,6 +21,7 @@ features[field_base][] = field_component_image
 features[field_base][] = field_component_link
 features[field_base][] = field_component_summary
 features[field_group][] = group_component_content|node|component|form
+features[field_group][] = group_component_link|node|component|1_4_fact
 features[field_group][] = group_section_image_overlay|node|component|1_2_h
 features[field_group][] = group_section_image_overlay|node|component|1_2_l
 features[field_group][] = group_section_image_overlay|node|component|1_2_square
