@@ -27,7 +27,7 @@ function atp_settings_filter_default_formats() {
         'weight' => -49,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a><em><strong><cite><blockquote><code><ul><ol><li><dl><dt><dd><img><h1><h2><h3><h4><p><span><br><table><tr><td><tbody><iframe>',
+          'allowed_html' => '<a><em><strong><cite><blockquote><code><ul><ol><li><dl><dt><dd><img><h1><h2><h3><h4><p><span><br><table><tr><td><th><tbody><iframe><div>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
