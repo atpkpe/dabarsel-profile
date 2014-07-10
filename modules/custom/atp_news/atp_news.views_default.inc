@@ -164,6 +164,7 @@ function atp_news_views_default_views() {
     t('[field_news_summary-value] '),
     t('Har taksonomiterm'),
     t('Content pane'),
+    t('more'),
     t('View panes'),
   );
   $export['news_list'] = $view;
