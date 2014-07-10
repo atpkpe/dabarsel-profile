@@ -461,6 +461,43 @@ function atp_page_panelizer_defaults() {
     $display->content['new-658ff852-c137-4d20-ab15-832d4f974813'] = $pane;
     $display->panels['row2'][2] = 'new-658ff852-c137-4d20-ab15-832d4f974813';
     $pane = new stdClass();
+    $pane->pid = 'new-67d38cc0-e7b1-425d-8e8c-fc205b6ce741';
+    $pane->panel = 'row3';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_page_relations_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'title_linked',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'title_style' => 'h2',
+        'title_link' => '',
+        'title_class' => '',
+      ),
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'default',
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pagerelations-title',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '67d38cc0-e7b1-425d-8e8c-fc205b6ce741';
+    $display->content['new-67d38cc0-e7b1-425d-8e8c-fc205b6ce741'] = $pane;
+    $display->panels['row3'][0] = 'new-67d38cc0-e7b1-425d-8e8c-fc205b6ce741';
+    $pane = new stdClass();
     $pane->pid = 'new-30865622-b27d-473c-8e70-6f16c01f7770';
     $pane->panel = 'row3';
     $pane->type = 'views_panes';
@@ -478,11 +515,11 @@ function atp_page_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '30865622-b27d-473c-8e70-6f16c01f7770';
     $display->content['new-30865622-b27d-473c-8e70-6f16c01f7770'] = $pane;
-    $display->panels['row3'][0] = 'new-30865622-b27d-473c-8e70-6f16c01f7770';
+    $display->panels['row3'][1] = 'new-30865622-b27d-473c-8e70-6f16c01f7770';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-658ff852-c137-4d20-ab15-832d4f974813';
   $panelizer->display = $display;

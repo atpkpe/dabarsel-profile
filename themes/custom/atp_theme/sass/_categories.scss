@@ -12,10 +12,11 @@
     @include clearfix;
     background: #fff;
     margin-bottom: 5px;
-    padding: $margins;
+    padding: $margins $margins;
     > article {
       float: left;
       width: percentage(1/2);
+      margin-bottom: $margins/2;
       a:hover { color: $green-hover-header; }
     }
   }
@@ -67,5 +68,14 @@
         height: auto;
       }
     }
+  }
+}
+.pagerelations-title {
+  @include clearfix;
+  background: #fff;
+  padding: $margins $margins 0 $margins;
+  margin: 0;
+  h2 {
+    margin: 0;
   }
 }
