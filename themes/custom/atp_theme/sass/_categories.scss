@@ -17,6 +17,14 @@
       float: left;
       width: percentage(1/2);
       margin-bottom: $margins/2;
+      padding-right: $margins/2;
+      &:nth-child(2n+2) {
+        padding-right: 0;
+        padding-left: $margins/2;
+      }
+      &:nth-child(2n+3) {
+        clear: left;
+      }
       a:hover { color: $green-hover-header; }
     }
   }

@@ -1083,6 +1083,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'assign workbench access',
     'roles' => array(
       'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'workbench_access',
   );
