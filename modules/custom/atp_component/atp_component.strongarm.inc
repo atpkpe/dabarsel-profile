@@ -156,7 +156,7 @@ function atp_component_strongarm() {
             'visible' => FALSE,
           ),
           '1_4_compressed' => array(
-            'weight' => '6',
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),

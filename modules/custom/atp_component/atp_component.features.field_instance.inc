@@ -39,7 +39,7 @@ function atp_component_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
       '1_4_fact' => array(
         'label' => 'hidden',
@@ -156,7 +156,7 @@ function atp_component_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 2,
       ),
       '1_4_fact' => array(
         'label' => 'above',
@@ -465,7 +465,7 @@ function atp_component_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 3,
       ),
       '1_4_fact' => array(
         'label' => 'hidden',
