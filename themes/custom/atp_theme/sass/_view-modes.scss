@@ -37,7 +37,8 @@
   p {
       border-top : 1px solid $gray-dark;
       padding-top: $margins;
-      margin-bottom: $margins;
+      margin-bottom: 0;
+      height: 110px
   }
   a {
     > div {
