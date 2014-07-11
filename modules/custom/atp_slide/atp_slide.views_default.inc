@@ -114,6 +114,7 @@ function atp_slide_views_default_views() {
     t('sidste »'),
     t('Alle'),
     t('Slideshow'),
+    t('more'),
     t('View panes'),
   );
   $export['slideshow'] = $view;

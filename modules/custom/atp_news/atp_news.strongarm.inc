@@ -80,6 +80,9 @@ function atp_news_strongarm() {
       '1_2_square' => array(
         'custom_settings' => FALSE,
       ),
+      '1_4_compressed' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

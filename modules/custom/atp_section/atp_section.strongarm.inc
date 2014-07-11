@@ -110,6 +110,9 @@ function atp_section_strongarm() {
       '1_2_square' => array(
         'custom_settings' => TRUE,
       ),
+      '1_4_compressed' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

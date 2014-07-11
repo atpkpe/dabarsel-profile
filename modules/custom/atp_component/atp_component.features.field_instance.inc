@@ -35,6 +35,12 @@ function atp_component_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
+      '1_4_compressed' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       '1_4_fact' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -145,6 +151,12 @@ function atp_component_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 1,
+      ),
+      '1_4_compressed' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       '1_4_fact' => array(
         'label' => 'above',
@@ -284,6 +296,17 @@ function atp_component_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
+      ),
+      '1_4_compressed' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_wrapper' => 'div',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'link_title_plain',
+        'weight' => 2,
       ),
       '1_4_fact' => array(
         'label' => 'hidden',
@@ -436,6 +459,12 @@ function atp_component_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
+        'weight' => 4,
+      ),
+      '1_4_compressed' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       '1_4_fact' => array(
@@ -597,6 +626,17 @@ function atp_component_field_default_field_instances() {
         ),
         'type' => 'text_plain',
         'weight' => 3,
+      ),
+      '1_4_compressed' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 'p',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 1,
       ),
       '1_4_fact' => array(
         'label' => 'hidden',

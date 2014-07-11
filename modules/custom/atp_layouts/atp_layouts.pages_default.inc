@@ -132,6 +132,7 @@ function atp_layouts_default_page_manager_handlers() {
       'default' => NULL,
       'row1' => NULL,
       'row2' => NULL,
+      'row3' => NULL,
     ),
     'row2' => array(
       'style' => 'naked',
@@ -267,6 +268,31 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->uuid = 'd531435d-2044-40f0-b0be-fb7db5038386';
     $display->content['new-d531435d-2044-40f0-b0be-fb7db5038386'] = $pane;
     $display->panels['row2'][2] = 'new-d531435d-2044-40f0-b0be-fb7db5038386';
+    $pane = new stdClass();
+    $pane->pid = 'new-d7817418-4342-40f3-919d-190c006b1c18';
+    $pane->panel = 'row3';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => '1_4_compressed',
+      'use_context' => '0',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd7817418-4342-40f3-919d-190c006b1c18';
+    $display->content['new-d7817418-4342-40f3-919d-190c006b1c18'] = $pane;
+    $display->panels['row3'][0] = 'new-d7817418-4342-40f3-919d-190c006b1c18';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-a6c82549-d7ed-469b-9001-8e9b387ab228';
   $handler->conf['display'] = $display;

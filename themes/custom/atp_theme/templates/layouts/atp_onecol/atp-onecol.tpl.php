@@ -13,5 +13,8 @@
     <?php if (!empty($content['row2'])): ?>
       <div class="section-row"><?php print $content['row2']; ?></div>
     <?php endif; ?>
+    <?php if (!empty($content['row3'])): ?>
+      <div class="section-row"><?php print $content['row3']; ?></div>
+    <?php endif; ?>
   </article>
 </div>

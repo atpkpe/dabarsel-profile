@@ -68,6 +68,9 @@ function atp_page_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      '1_4_compressed' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

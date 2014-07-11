@@ -11,5 +11,6 @@ $plugin = array(
   'regions' => array(
     'row1' => t('First row'),
     'row2' => t('Second row'),
+    'row3' => t('Third row'),
   ),
 );

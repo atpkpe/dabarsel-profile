@@ -2607,7 +2607,7 @@ function atp_page_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'view_mode' => '1_4_fact',
+        'view_mode' => '1_4_compressed',
         'links' => 0,
       ),
       'context' => 'panelizer',

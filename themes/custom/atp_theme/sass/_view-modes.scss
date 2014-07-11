@@ -113,3 +113,21 @@
     line-height: normal;
   }
 }
+.view-mode-1-4-compressed {
+  // NOT PRETTY SHOULD BE FIXED
+  > div > div {
+    @include float-span(4);
+    margin: 0 $margins $margins 0;
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+      > p {
+        min-height: 50px;
+      }
+      > div {
+        @extend %btn-green;
+      }
+    }
+  }
+}
