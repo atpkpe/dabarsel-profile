@@ -47,6 +47,48 @@ function atp_contact_strongarm() {
       '1_4_compressed' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_4_fact' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_4_l' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_2_l' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_2_square' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_2_h' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_1_l' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_with_img' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

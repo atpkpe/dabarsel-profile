@@ -25,7 +25,7 @@ function atp_contact_field_default_field_instances() {
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 4,
       ),
       'teaser' => array(
@@ -42,7 +42,7 @@ function atp_contact_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contact_email',
-    'label' => 'Email',
+    'label' => 'E-mail',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -357,7 +357,7 @@ function atp_contact_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Email');
+  t('E-mail');
   t('Image');
   t('Job title');
   t('Mobile');
