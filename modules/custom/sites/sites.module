@@ -137,6 +137,9 @@ function sites_ctools_plugin_directory($module, $plugin) {
  * Adds the sites admin paths as admin paths, so the admin theme is used.
  */
 function sites_admin_paths_alter(&$paths) {
+  // Tmp fix to admin theme fail
+  return;
+
   $method = variable_get('purl_method_sites', 'path');
   if ($method == 'path') {
     $paths_copy = $paths;
