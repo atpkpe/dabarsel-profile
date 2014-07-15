@@ -115,7 +115,7 @@ function atp_file_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'file_entity_max_filesize';
-  $strongarm->value = '8 MB';
+  $strongarm->value = '30 MB';
   $export['file_entity_max_filesize'] = $strongarm;
 
   return $export;
