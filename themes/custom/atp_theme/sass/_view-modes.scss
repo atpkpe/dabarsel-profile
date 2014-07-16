@@ -114,21 +114,20 @@
     line-height: normal;
   }
 }
-.view-mode-1-4-compressed {
-  // NOT PRETTY SHOULD BE FIXED
-  > div > div {
-    @include float-span(4);
-    margin: 0 $margins $margins 0;
-    a {
-      &:hover {
-        text-decoration: none;
-      }
-      > p {
-        min-height: 50px;
-      }
-      > div {
-        @extend %btn-green;
-      }
-    }
+.vm-1-4-compressed {
+  @include float-span(4);
+  display: block;
+  margin: 0 $margins $margins 0;
+  &:hover {
+    text-decoration: none;
+  }
+  .twocol-left & {
+    @include float-span(5);
+  }
+  > p {
+    min-height: 50px;
+  }
+  > div {
+    @extend %btn-green;
   }
 }

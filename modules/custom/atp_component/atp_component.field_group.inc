@@ -64,7 +64,7 @@ function atp_component_field_group_info() {
       'label' => 'Link wrapper',
       'instance_settings' => array(
         'link_to' => 'field_component_link',
-        'classes' => '',
+        'classes' => 'vm-1-4-compressed',
       ),
       'formatter' => 'open',
     ),
