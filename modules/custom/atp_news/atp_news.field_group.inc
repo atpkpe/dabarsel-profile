@@ -90,7 +90,7 @@ function atp_news_field_group_info() {
       'label' => 'Image overlay',
       'instance_settings' => array(
         'link_to' => 'entity',
-        'classes' => '',
+        'classes' => 'group-section-image-overlay',
       ),
       'formatter' => 'open',
     ),
