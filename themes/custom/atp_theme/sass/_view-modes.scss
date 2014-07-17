@@ -125,7 +125,8 @@
     @include float-span(5);
   }
   > p {
-    min-height: 50px;
+    height: 75px;
+    margin: 0;
   }
   > div {
     @extend %btn-green;
