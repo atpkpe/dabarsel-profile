@@ -17,6 +17,12 @@ function atp_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      '1_4_l' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -72,6 +78,12 @@ function atp_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      '1_4_l' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -118,6 +130,19 @@ function atp_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      '1_4_l' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'image_link' => 'content',
+          'image_style' => '225x126',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'image',
@@ -201,6 +226,12 @@ function atp_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      '1_4_l' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'date',
@@ -279,6 +310,12 @@ function atp_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      '1_4_l' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -363,6 +400,26 @@ function atp_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      '1_4_l' => array(
+        'label' => 'hidden',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'field_wrapper' => 'p',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 60,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'title',

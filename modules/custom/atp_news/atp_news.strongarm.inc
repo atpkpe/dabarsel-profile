@@ -60,7 +60,7 @@ function atp_news_strongarm() {
         'custom_settings' => FALSE,
       ),
       '1_4_l' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       '1_2_l' => array(
         'custom_settings' => FALSE,
@@ -81,6 +81,12 @@ function atp_news_strongarm() {
         'custom_settings' => FALSE,
       ),
       '1_4_compressed' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -114,6 +120,10 @@ function atp_news_strongarm() {
           ),
           'teaser_with_img' => array(
             'weight' => '2',
+            'visible' => FALSE,
+          ),
+          '1_4_l' => array(
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),

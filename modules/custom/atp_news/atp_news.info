@@ -24,6 +24,7 @@ features[field_base][] = field_news_publishdate
 features[field_base][] = field_news_summary
 features[field_group][] = group_news_categories|node|news|form
 features[field_group][] = group_news_content|node|news|form
+features[field_group][] = group_news_image_overlay|node|news|1_4_l
 features[field_group][] = group_wrapper|node|news|teaser
 features[field_group][] = group_wrapper|node|news|teaser_with_img
 features[field_instance][] = node-news-field_news_body
