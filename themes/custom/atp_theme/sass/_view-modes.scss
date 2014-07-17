@@ -130,4 +130,8 @@
   > div {
     @extend %btn-green;
   }
+  // WEIRD LANGUAGE LABEL ISSUE FIX
+  .form-item {
+    display: none;
+  }
 }
