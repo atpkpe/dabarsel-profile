@@ -130,8 +130,11 @@
   > div {
     @extend %btn-green;
   }
+}
+.view-mode-1-4-compressed {
   // WEIRD LANGUAGE LABEL ISSUE FIX
   .form-item {
     display: none;
   }
+
 }
