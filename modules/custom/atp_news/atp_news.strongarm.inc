@@ -203,8 +203,8 @@ function atp_news_strongarm() {
       'page_manager' => array(
         'status' => 0,
         'default' => 0,
-        'default display' => 0,
         'choice' => 0,
+        'selection' => 0,
       ),
       'default' => array(
         'status' => 1,
@@ -214,14 +214,20 @@ function atp_news_strongarm() {
       'teaser' => array(
         'status' => 0,
         'default' => 0,
-        'default display' => 0,
         'choice' => 0,
+        'selection' => 0,
+      ),
+      '1_4_l' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+        'selection' => 0,
       ),
       'teaser_with_img' => array(
         'status' => 0,
         'default' => 0,
-        'default display' => 0,
         'choice' => 0,
+        'selection' => 0,
       ),
     ),
   );
