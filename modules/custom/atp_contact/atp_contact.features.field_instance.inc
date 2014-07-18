@@ -42,7 +42,7 @@ function atp_contact_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contact_email',
-    'label' => 'E-mail',
+    'label' => 'E-mail:',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -223,7 +223,7 @@ function atp_contact_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contact_mobile',
-    'label' => 'Mobile',
+    'label' => 'Mobil:',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -278,7 +278,7 @@ function atp_contact_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contact_phone',
-    'label' => 'Phone',
+    'label' => 'Tlf.:',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -357,12 +357,12 @@ function atp_contact_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('E-mail');
+  t('E-mail:');
   t('Image');
   t('Job title');
-  t('Mobile');
+  t('Mobil:');
   t('Name');
-  t('Phone');
+  t('Tlf.:');
 
   return $field_instances;
 }
