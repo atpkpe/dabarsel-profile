@@ -41,6 +41,9 @@ $filter-text-color-hover: $text-color;
         padding-right: $margins/2;
         width: 100px;
         display: block;
+        span {
+          display: block;
+        }
       }
     }
     @include device(phone){

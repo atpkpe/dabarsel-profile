@@ -253,7 +253,7 @@ function atp_news_field_default_field_instances() {
         'module' => 'date',
         'settings' => array(
           'field_wrapper' => 0,
-          'format_type' => 'adapt_long',
+          'format_type' => 'atp_short',
           'fromto' => '',
           'item_wrapper' => 0,
           'label_wrapper' => 0,

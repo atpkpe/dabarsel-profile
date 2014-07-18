@@ -21,6 +21,7 @@ function atp_settings_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function atp_settings_custom_date_formats() {
   $custom_date_formats = array();
+  $custom_date_formats['\\<\\s\\p\\a\\n\\>d F\\<\\/\\s\\p\\a\\n\\> Y'] = '\\<\\s\\p\\a\\n\\>d F\\<\\/\\s\\p\\a\\n\\> Y';
   $custom_date_formats['d. F Y'] = 'd. F Y';
   $custom_date_formats['d. F Y - G:i'] = 'd. F Y - G:i';
   $custom_date_formats['d. F Y \\k\\l. G:i'] = 'd. F Y \\k\\l. G:i';

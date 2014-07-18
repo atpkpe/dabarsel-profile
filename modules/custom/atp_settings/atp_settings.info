@@ -16,6 +16,7 @@ dependencies[] = text
 dependencies[] = wysiwyg
 features[ctools][] = linkit:linkit_profiles:1
 features[ctools][] = strongarm:strongarm:1
+features[custom_date_formats][] = \<\s\p\a\n\>d F\<\/\s\p\a\n\> Y
 features[custom_date_formats][] = d. F Y
 features[custom_date_formats][] = d. F Y - G:i
 features[custom_date_formats][] = d. F Y \k\l. G:i
