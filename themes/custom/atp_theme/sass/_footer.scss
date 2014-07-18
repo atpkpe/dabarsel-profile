@@ -107,6 +107,7 @@ footer {
 }
 
 .site-bottom-text {
+  @extend %content;
   text-align: center;
   * {
     color: #fff;
@@ -120,5 +121,8 @@ footer {
   li {
     display: inline-block;
     padding: 0 $margins/2;
+  }
+  table {
+    margin: 0 auto;
   }
 }
