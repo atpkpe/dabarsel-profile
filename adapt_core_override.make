@@ -5,13 +5,8 @@
 core = 7.x
 api = 2
 
-; This line removes menu_trail_by_path module entirely
-projects[menu_trail_by_path] = FALSE
-projects[adapt_page] = FALSE
-projects[googleanalytics] = FALSE
-
-projects[adminimal_theme] = FALSE
 projects[adminimal_theme][type] = 'theme'
+projects[adminimal_theme][version] = '1.17'
 projects[adminimal_theme][subdir] = 'contrib'
 projects[adminimal_theme][download][branch] = '7.x-1.x'
 projects[adminimal_theme][download][type] = 'git'
