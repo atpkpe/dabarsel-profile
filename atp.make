@@ -110,7 +110,7 @@ projects[image_preset][version] = '1.0'
 
 projects[field_group_link][type] = 'module'
 projects[field_group_link][subdir] = 'contrib'
-projects[field_group_link][version] = '1.2'
+projects[field_group_link][version] = '1.3'
 
 projects[uuid_features_menu][type] = 'module'
 projects[uuid_features_menu][subdir] = 'contrib'
