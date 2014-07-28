@@ -10,9 +10,8 @@ projects[menu_trail_by_path] = FALSE
 projects[adapt_page] = FALSE
 projects[google_analytics] = FALSE
 
-projects[adminimal_theme][type] = 'module'
+projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][version] = '1.17'
 projects[adminimal_theme][download][branch] = '7.x-1.x'
 projects[adminimal_theme][download][type] = 'git'
 projects[adminimal_theme][download][url] = 'http://git.drupal.org/project/adminimal_theme.git'
@@ -35,7 +34,7 @@ projects[wysiwyg][download][revision] = '52e2675b9dc92d8d71ac421d59e12a7f5b53ca6
 
 libraries[ckeditor][directory_name] = ckeditor
 libraries[ckeditor][download][type] = file
-libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.2_edit.zip
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.3_edit.zip
 libraries[ckeditor][type] = library
 
 projects[media][download][revision] = 'fe09f096029e7c495f0023afd7192aa081f0e080'
