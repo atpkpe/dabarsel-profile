@@ -38,7 +38,7 @@ projects[media][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-m
 projects[media][patch][] = 'http://drupal.org/files/issues/media-wysiwyg-improve-our-macro-handling-2126755-100.patch'
 projects[media][patch][] = 'https://raw.githubusercontent.com/kevinchampion/imagex_patches/update-media-patch/contrib/media/media-ckeditor-bind-unbind-stripping.patch'
 
-projects[file_entity][download][revision] = '20f3070edaf60a25a75ef022d8fc345769d0f72d'
+projects[file_entity][download][revision] = '5e9c095beeaf2484d69f754cb3410f48180a2a3c'
 
 projects[linkit][type] = 'module'
 projects[linkit][subdir] = 'contrib'
