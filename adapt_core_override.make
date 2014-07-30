@@ -38,14 +38,16 @@ projects[media][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-m
 projects[media][patch][] = 'http://drupal.org/files/issues/media-wysiwyg-improve-our-macro-handling-2126755-100.patch'
 projects[media][patch][] = 'https://raw.githubusercontent.com/kevinchampion/imagex_patches/update-media-patch/contrib/media/media-ckeditor-bind-unbind-stripping.patch'
 
-projects[file_entity][download][revision] = '5e9c095beeaf2484d69f754cb3410f48180a2a3c'
+projects[file_entity][download][revision] = '58b80010a4fd0e6944a4fe5ea8dbe6fed775523e'
+projects[file_entity][patch][] = 'http://www.drupal.org/files/issues/file_entity-validate-not-executing-2.patch'
 
 projects[linkit][type] = 'module'
 projects[linkit][subdir] = 'contrib'
 projects[linkit][download][branch] = '7.x-3.x'
 projects[linkit][download][type] = 'git'
 projects[linkit][download][url] = 'http://git.drupal.org/project/linkit.git'
-projects[linkit][download][revision] = 'f769dc2a4eba71f7d38e2b9a7586c3a02c1f3b62'
+projects[linkit][download][revision] = '79d91215cfd69bd968e9dce2f4d0e764dca6ed7f'
+projects[linkit][patch][] = 'http://www.drupal.org/files/issues/2158107-9-linking-to-direct-downloads-of-files.patch'
 
 projects[panelizer][type] = 'module'
 projects[panelizer][subdir] = 'contrib'
