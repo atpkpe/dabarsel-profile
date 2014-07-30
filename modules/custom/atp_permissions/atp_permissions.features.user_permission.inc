@@ -384,15 +384,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'flexslider',
   );
 
-  // Exported permission: 'administer google analytics'.
-  $permissions['administer google analytics'] = array(
-    'name' => 'administer google analytics',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'googleanalytics',
-  );
-
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -2144,15 +2135,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'pathauto',
   );
 
-  // Exported permission: 'opt-in or out of tracking'.
-  $permissions['opt-in or out of tracking'] = array(
-    'name' => 'opt-in or out of tracking',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'googleanalytics',
-  );
-
   // Exported permission: 'override default scheduler time'.
   $permissions['override default scheduler time'] = array(
     'name' => 'override default scheduler time',
@@ -2267,15 +2249,6 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'i18n_string',
-  );
-
-  // Exported permission: 'use PHP for tracking visibility'.
-  $permissions['use PHP for tracking visibility'] = array(
-    'name' => 'use PHP for tracking visibility',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'googleanalytics',
   );
 
   // Exported permission: 'use advanced search'.
