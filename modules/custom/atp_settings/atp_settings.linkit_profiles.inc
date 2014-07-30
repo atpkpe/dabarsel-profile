@@ -118,7 +118,7 @@ function atp_settings_default_linkit_profiles() {
   $linkit_profile->data = array(
     'search_plugins' => array(
       'entity:file' => array(
-        'enabled' => 0,
+        'enabled' => 1,
         'weight' => '-10',
       ),
       'entity:node' => array(
@@ -161,14 +161,15 @@ function atp_settings_default_linkit_profiles() {
     'entity:file' => array(
       'result_description' => '',
       'bundles' => array(
+        'document' => 'document',
         'image' => 0,
         'video' => 0,
         'audio' => 0,
-        'document' => 0,
       ),
       'group_by_bundle' => 0,
       'show_scheme' => 0,
       'group_by_scheme' => 0,
+      'direct_download' => 1,
       'image_extra_info' => array(
         'thumbnail' => 'thumbnail',
         'dimensions' => 'dimensions',

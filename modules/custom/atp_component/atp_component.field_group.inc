@@ -90,11 +90,12 @@ function atp_component_field_group_info() {
     ),
     'format_type' => 'link',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'Link wrapper',
       'instance_settings' => array(
-        'link_to' => 'entity',
+        'link_to' => 'field_component_link',
         'classes' => 'group-component-link field-group-link',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_component_link|node|component|1_4_fact'] = $field_group;
