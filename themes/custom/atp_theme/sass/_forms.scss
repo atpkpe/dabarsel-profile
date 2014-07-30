@@ -31,6 +31,7 @@ textarea {
   background: #fff;
   padding: $margins;
   margin-bottom: $margins;
+  .description { margin: $margins 0px; }
 }
 #user-login {
   label {
