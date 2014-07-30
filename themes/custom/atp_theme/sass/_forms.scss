@@ -1,8 +1,17 @@
 .form-required {
   color: $red;
 }
-.form-item {
+.form-item, .mc-field-group {
   margin-bottom: 10px;
+}
+label {
+  width: 100%;
+  max-width: 140px;
+  display: inline-block;
+  margin-bottom: 10px;
+  li & {
+    display: inline;
+  }
 }
 input {
   &.form-text {
@@ -12,11 +21,40 @@ input {
     @extend %submit;
   }
 }
+textarea {
+  @extend %form-text;
+  height: auto;
+  padding: 10px;
+  margin-top: 10px;
+}
+.webform-client-form {
+  background: #fff;
+  padding: $margins;
+  margin-bottom: $margins;
+}
 #user-login {
   label {
     float: left;
     display: block;
     width: 100px;
     line-height: 32px;
+  }
+}
+
+/* Mailchimp form */
+#mc_embed_signup {
+  background: #fff;
+  padding: $margins;
+  margin-bottom: $margins;
+}
+
+.mc-field-group.input-group {
+  margin-top: 30px;
+  li {
+    list-style: none;
+    input {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
   }
 }
