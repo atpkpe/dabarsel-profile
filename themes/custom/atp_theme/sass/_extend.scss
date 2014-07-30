@@ -77,13 +77,19 @@
 %form-text {
     background: #fff;
     padding: 0 $margins/2;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 2*$margins;
     border: $border-width solid $gray;
+    &:focus { border: $border-width solid $green; }
 }
 %submit {
   @extend %btn-green;
   cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid #798800;
+  &:hover { border-bottom: 1px solid #576800; }
 }
 
 /* COLORS */
