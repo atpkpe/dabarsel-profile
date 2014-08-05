@@ -102,7 +102,7 @@ projects[menu_admin_per_menu][version] = '1.0'
 
 projects[date][type] = 'module'
 projects[date][subdir] = 'contrib'
-projects[date][version] = '2.7'
+projects[date][version] = '2.8'
 
 projects[image_preset] = 'module'
 projects[image_preset][subdir] = 'contrib'
@@ -146,7 +146,7 @@ projects[multiform][version] = '1.1'
 
 projects[webform][type] = 'module'
 projects[webform][subdir] = 'contrib'
-projects[webform][version] = '4.0-rc4'
+projects[webform][version] = '4.0-rc5'
 
 projects[jammer][type] = 'module'
 projects[jammer][subdir] = 'contrib'
