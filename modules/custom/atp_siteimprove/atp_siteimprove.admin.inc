@@ -67,7 +67,7 @@ function atp_siteimprove_admin_settings_form($form_state) {
   $form['advanced']['atp_siteimprove_js_scope'] = array(
     '#type' => 'select',
     '#title' => t('JavaScript scope'),
-    '#description' => t('Google recommends adding the external JavaScript files to the header for performance reasons. If <em>Multiple top-level domains</em> has been selected, this setting will be forced to header.'),
+    '#description' => t('Google recommends adding the external JavaScript files to the header for performance reasons.'),
     '#options' => array(
       'footer' => t('Footer'),
       'header' => t('Header'),
