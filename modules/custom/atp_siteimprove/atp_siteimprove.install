@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Installation file for Atp Siteimprove module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function atp_siteimprove_uninstall() {
+  variable_del('atp_siteimprove_snippet');
+  variable_del('atp_siteimprove_js_scope');
+  variable_del('atp_siteimprove_pages');
+  variable_del('atp_siteimprove_visibility_pages');
+}
