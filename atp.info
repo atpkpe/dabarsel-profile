@@ -52,6 +52,8 @@ dependencies[] = jammer
 dependencies[] = taxonomy_access_fix
 dependencies[] = menu_admin_per_menu
 dependencies[] = ultimate_cron
+dependencies[] = css_injector
+dependencies[] = js_injector
 ; dependencies[] = rabbit_hole
 
 ; Project features
