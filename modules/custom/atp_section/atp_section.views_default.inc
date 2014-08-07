@@ -47,6 +47,12 @@ function atp_section_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Overskrift: Global: Ufiltreret tekst */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h2>%1</h2>';
+  $handler->display->display_options['header']['area_text_custom']['tokenize'] = TRUE;
   /* Felt: Handler mangler eller er i stykker */
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['id'] = 'field_page_related_field_ter_category';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['table'] = 'field_data_field_page_related';
@@ -139,6 +145,7 @@ function atp_section_views_default_views() {
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
+    t('<h2>%1</h2>'),
     t('Alle'),
     t('F'),
     t('View panes'),

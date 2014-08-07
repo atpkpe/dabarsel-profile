@@ -66,6 +66,44 @@
     }
   }
 }
+.section-category-f {
+  > section {
+    @include clearfix;
+    background: #fff;
+    height: 395px;
+    padding: $margins;
+    @include device(tablet) {
+      height: 535px;
+    }
+    @include device(phone) {
+      height: auto;
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 10px;
+      &:hover {
+        color: $green-hover-header;
+      }
+    }
+    article {
+      margin-bottom: 20px;
+    }
+  }
+  .first & {
+    @include view-mode(8);
+    margin-left: 0px;
+    border-left: 0px;
+  }
+  .last & {
+    @include view-mode(8);
+    margin-left: $margins-pct !important;
+    border-left: 0px;
+    @include device(phone) {
+      margin-left: 0px !important;
+      margin-top: 30px;
+    }
+  }
+}
 @include device(phone) {
   .category-a,
   .category-b,
