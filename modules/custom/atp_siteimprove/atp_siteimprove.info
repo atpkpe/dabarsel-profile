@@ -1,5 +1,0 @@
-name = Atp Siteimprove
-description = Allows your site to be tracked by Siteimprove by adding a Javascript tracking code to every page.
-core = 7.x
-package = ATP
-configure = admin/config/system/atp_siteimprove

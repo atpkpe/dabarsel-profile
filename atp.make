@@ -33,10 +33,7 @@ projects[i18n_menu_overview][download][revision] = '07d0b07ddc9b7b6c7943d302a7b9
 
 projects[l10n_update][type] = 'module'
 projects[l10n_update][subdir] = 'contrib'
-projects[l10n_update][download][branch] = '7.x-2.x'
-projects[l10n_update][download][type] = 'git'
-projects[l10n_update][download][url] = 'http://git.drupal.org/project/l10n_update.git'
-projects[l10n_update][download][revision] = '476c07e9ec71828fd6af00c5b6e7ce7b0ef46665'
+projects[l10n_update][version] = '2.0-rc1'
 
 projects[masquerade][type] = 'module'
 projects[masquerade][subdir] = 'contrib'
@@ -189,3 +186,11 @@ libraries[plupload][download][url] = 'https://github.com/moxiecode/plupload/arch
 libraries[plupload][destination] = libraries
 libraries[plupload][directory_name] = plupload
 libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-16.patch"
+
+projects[css_injector][type] = 'module'
+projects[css_injector][subdir] = 'contrib'
+projects[css_injector][version] = '1.10'
+
+projects[js_injector][type] = 'module'
+projects[js_injector][subdir] = 'contrib'
+projects[js_injector][version] = '2.1'

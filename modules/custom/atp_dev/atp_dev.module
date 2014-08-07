@@ -5,17 +5,3 @@
  */
 
 define('ATP_DEV_UUID_FRONTPAGE', 'f664b3be-0a06-4cbf-bfe7-c9287a9fc1d3');
-
-/**
- * Get the node id of the front page node.
- *
- * @return mixed
- *   nid / FALSE
- */
-function atp_dev_get_frontpage_nid() {
-  $fp = entity_get_id_by_uuid('node', array(ATP_DEV_UUID_FRONTPAGE));
-  if (!empty($fp) && !empty($fp[ATP_DEV_UUID_FRONTPAGE])) {
-    return (int) $fp[ATP_DEV_UUID_FRONTPAGE];
-  }
-  return FALSE;
-}
