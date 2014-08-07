@@ -189,3 +189,11 @@ libraries[plupload][download][url] = 'https://github.com/moxiecode/plupload/arch
 libraries[plupload][destination] = libraries
 libraries[plupload][directory_name] = plupload
 libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-16.patch"
+
+projects[css_injector][type] = 'module'
+projects[css_injector][subdir] = 'contrib'
+projects[css_injector][version] = '1.10'
+
+projects[js_injector][type] = 'module'
+projects[js_injector][subdir] = 'contrib'
+projects[js_injector][version] = '2.1'

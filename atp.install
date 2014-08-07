@@ -133,4 +133,15 @@ function atp_update_7004(&$sandbox) {
    module_enable(array('sites_last'));
 }
 
+/**
+ *  Enable injector modules: css_injector and js_injector.
+ *
+ * @author Mikkel Jakobsen <mikkel@adapt.dk>
+ */
+function atp_update_7005(&$sandbox) {
+  module_enable(array(
+    'css_injector',
+    'js_injector',
+  ));
+}
 
