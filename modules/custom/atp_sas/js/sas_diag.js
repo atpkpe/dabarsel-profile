@@ -7,7 +7,7 @@
   Drupal.behaviors.atp_sas_diag = {
 
     attach: function(context, settings) {
-      if (typeof settings.atp_sas_diag == 'undefined') {
+      if (typeof settings.atp_sas_diag == 'undefined' || typeof Drupal.settings.google == 'undefined') {
         return;
       }
       $(window).on("debouncedresize", function( event ) {
@@ -58,13 +58,15 @@
 
   }
 
-  Drupal.settings.google = google;
-  // Load the Visualization API and the piechart package.
-  Drupal.settings.google.load('visualization', '1.0', {'packages':['corechart']});
-
-  // Set a callback to run when the Google Visualization API is loaded.
-  Drupal.settings.google.setOnLoadCallback(
-    Drupal.behaviors.atp_sas_diag.attach(document, Drupal.settings)
-  );
+  if (typeof google != 'undefined') {
+    Drupal.settings.google = google;
+    // Load the Visualization API and the piechart package.
+    Drupal.settings.google.load('visualization', '1.0', {'packages':['corechart']});
+    // Set a callback to run when the Google Visualization API is loaded.
+    Drupal.settings.google.setOnLoadCallback(
+      Drupal.behaviors.atp_sas_diag.attach(document, Drupal.settings)
+    );
+  }
 
 })(jQuery, Drupal);
+
