@@ -33,6 +33,11 @@ libraries[ckeditor][download][type] = file
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.3_edit.zip
 libraries[ckeditor][type] = library
 
+libraries[ckeditor_widget][download][type] = "get"
+libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.4.3.zip"
+libraries[ckeditor_widget][directory_name] = "widget"
+libraries[ckeditor_widget][destination] = "libraries/ckeditor/plugins"
+
 projects[media][download][revision] = 'fe09f096029e7c495f0023afd7192aa081f0e080'
 projects[media][patch][] = 'http://drupal.org/files/issues/2177893-4-ckeditor4-media-plugin.patch'
 projects[media][patch][] = 'http://drupal.org/files/issues/media-wysiwyg-improve-our-macro-handling-2126755-100.patch'
