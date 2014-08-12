@@ -42,7 +42,8 @@ CKEDITOR.dialog.add( 'textbox', function( editor ) {
                         label: 'Behaviour',
                         items: [
                             [ editor.lang.common.notSet, '' ],
-                            [ 'Expanding', 'expanding' ]
+                            [ 'Expanding - collapsed', 'expanding collapsed' ],
+                            [ 'Expanding - expanded', 'expanding expanded' ]
                         ],
                         setup: function( widget ) {
                             this.setValue( widget.data.behaviour );
