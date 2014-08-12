@@ -53,6 +53,9 @@ CKEDITOR.plugins.add( 'textbox', {
                 if ( this.element.hasClass( 'align-center' ) )
                     this.setData( 'align', 'center' );
 
+                if ( this.element.hasClass( 'floatbox' ) )
+                    this.setData( 'behaviour', 'floatbox' );
+
                 if (  this.element.hasClass( 'expanding' ) && this.element.hasClass( 'expanded' ) )
                   this.setData( 'behaviour', 'expanding expanded' );
 
@@ -74,9 +77,11 @@ CKEDITOR.plugins.add( 'textbox', {
                 if ( this.data.align )
                     this.element.addClass( 'align-' + this.data.align );
 
+                this.element.removeClass( 'floatbox' );
                 this.element.removeClass( 'expanding' );
                 this.element.removeClass( 'expanded' );
                 this.element.removeClass( 'collapsed' );
+
                 if ( this.data.behaviour )
                   this.element.addClass( this.data.behaviour );
 
