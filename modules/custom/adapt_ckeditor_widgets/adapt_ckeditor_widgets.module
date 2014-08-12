@@ -23,3 +23,7 @@ function adapt_ckeditor_widgets_wysiwyg_plugin($editor, $version) {
       break;
   }
 }
+
+function adapt_ckeditor_widgets_preprocess_html(&$variables) {
+  drupal_add_js(drupal_get_path('module', 'adapt_ckeditor_widgets') . '/js/adapt_ckeditor_widgets.js', array('group' => JS_LIBRARY));
+}
