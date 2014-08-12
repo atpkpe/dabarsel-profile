@@ -53,7 +53,9 @@ abstract class sasDiag {
   }
 
   public function render() {
-    return array(
+    $used_ids = &drupal_static($this->id);
+
+    $output = array(
       'diag-wrapper-' . $this->id => array(
         '#type' => 'container',
         '#attributes' => array(
@@ -65,7 +67,10 @@ abstract class sasDiag {
           '#markup' => '&nbsp;',
         ),
       ),
-      '#attached' => array(
+    );
+
+    if (empty($used_ids) || !in_array($this->id, $used_ids)) {
+      $output['#attached'] = array(
         'js' => array(
           array(
             'data' => drupal_get_path('module', 'atp_sas') . '/js/sas_diag.js',
@@ -94,8 +99,11 @@ abstract class sasDiag {
             'type' => 'setting',
           ),
         ),
-      ),
-    );
+      );
+      $used_ids[] = $this->id;
+    }
+
+    return $output;
   }
 
   protected function constructSelector($id) {

@@ -167,7 +167,7 @@ projects[gss][patch][] = 'http://drupal.org/files/issues/gss-autocomplete-overla
 
 projects[focal_point][type] = 'module'
 projects[focal_point][subdir] = 'contrib'
-projects[focal_point][version] = '1.0-alpha4'
+projects[focal_point][version] = '1.0-beta1'
 
 projects[purl][type] = 'module'
 projects[purl][subdir] = 'contrib'

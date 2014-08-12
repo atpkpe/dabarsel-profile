@@ -254,3 +254,14 @@ function atp_sas_chart_test() {
 
   return $output;
 }
+
+/**
+ * Implements hook_js_alter().
+ */
+function atp_sas_js_alter(&$js) {
+  foreach ($js as $k => &$v) {
+    if ($k == 'https://www.google.com/jsapi') {
+      $v['weight'] = -1000;
+    }
+  }
+}
