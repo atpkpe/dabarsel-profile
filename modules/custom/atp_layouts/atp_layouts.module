@@ -28,6 +28,8 @@ function atp_layouts_image_view_modes() {
     '2_wide_text' => 'Full - text',
     '1_wide_text' => 'Full - wide - text',
     'original' => 'Original',
+    'inline' => t('Inline'),
+    'overlay' => t('Overlay'),
   );
 }
 
