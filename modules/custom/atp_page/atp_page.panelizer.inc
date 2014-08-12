@@ -1018,7 +1018,7 @@ function atp_page_panelizer_defaults() {
   $panelizer->relationships = array();
   $panelizer->access = array();
   $panelizer->view_mode = 'default';
-  $panelizer->css_class = '';
+  $panelizer->css_class = 'faq-page';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
@@ -1215,10 +1215,10 @@ function atp_page_panelizer_defaults() {
     $display->content['new-658ff852-c137-4d20-ab15-832d4f974813'] = $pane;
     $display->panels['row2'][2] = 'new-658ff852-c137-4d20-ab15-832d4f974813';
     $pane = new stdClass();
-    $pane->pid = 'new-f4f5f88f-88e3-498d-ac69-00e0dc7f8b57';
+    $pane->pid = 'new-3bbf5de8-d550-404c-b284-f46a7d91ec9f';
     $pane->panel = 'row3';
     $pane->type = 'views_panes';
-    $pane->subtype = 'category_related-panel_pane_1';
+    $pane->subtype = 'category_related-panel_pane_5';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1234,9 +1234,9 @@ function atp_page_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'f4f5f88f-88e3-498d-ac69-00e0dc7f8b57';
-    $display->content['new-f4f5f88f-88e3-498d-ac69-00e0dc7f8b57'] = $pane;
-    $display->panels['row3'][0] = 'new-f4f5f88f-88e3-498d-ac69-00e0dc7f8b57';
+    $pane->uuid = '3bbf5de8-d550-404c-b284-f46a7d91ec9f';
+    $display->content['new-3bbf5de8-d550-404c-b284-f46a7d91ec9f'] = $pane;
+    $display->panels['row3'][0] = 'new-3bbf5de8-d550-404c-b284-f46a7d91ec9f';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-658ff852-c137-4d20-ab15-832d4f974813';
   $panelizer->display = $display;

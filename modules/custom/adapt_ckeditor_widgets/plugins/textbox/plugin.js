@@ -26,7 +26,7 @@ CKEDITOR.plugins.add( 'textbox', {
                 },
                 content: {
                     selector: '.textbox-content',
-                    allowedContent: 'p br ul ol li strong em a[!href,name]'
+                    allowedContent: 'p br ul ol li strong em blockquote a[!href,name]'
                 }
             },
 
