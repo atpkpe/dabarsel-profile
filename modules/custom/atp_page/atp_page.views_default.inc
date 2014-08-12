@@ -47,20 +47,20 @@ function atp_page_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Felt: Broken/missing handler */
+  /* Felt: Handler mangler eller er i stykker */
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['id'] = 'field_page_related_field_ter_category';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['table'] = 'field_data_field_page_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['field'] = 'field_page_related_field_ter_category';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['label'] = '';
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_page_related_field_ter_category']['element_label_colon'] = FALSE;
-  /* Felt: Broken/missing handler */
+  /* Felt: Handler mangler eller er i stykker */
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['id'] = 'field_page_related_field_ter_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['table'] = 'field_data_field_page_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['field'] = 'field_page_related_field_ter_related';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['label'] = '';
   $handler->display->display_options['fields']['field_page_related_field_ter_related']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Broken/missing handler */
+  /* Sorteringskriterie: Handler mangler eller er i stykker */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_page_related';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
@@ -258,7 +258,6 @@ function atp_page_views_default_views() {
     t('Faldende'),
     t('Alle'),
     t('A'),
-    t('more'),
     t('View panes'),
     t('B'),
     t('C'),
