@@ -81,7 +81,7 @@ iframe {
 }
 
 .field-field-page-body, .cke_editable {
-  a { text-decoration: underline; }
+  a:link { text-decoration: underline; }
   ul, ol {
     margin: 0 0 15px $margins;
   }

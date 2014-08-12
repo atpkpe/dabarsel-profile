@@ -1,0 +1,69 @@
+article.expanding {
+  background: #ffffff;
+  padding: $margins;
+  margin-bottom: 5px;
+  &:hover {
+    background: $green-block-hover;
+  }
+  &.collapsed {
+    cursor: pointer;
+    .textbox-title {
+      @include background-image('arrow-down');
+      background-size: 29px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      margin-bottom: 0px;
+    }
+    > p {
+      display: none;
+    }
+  }
+  &.expanded {
+    background: $gray-verylight;
+    cursor: auto;
+    .textbox-title {
+      @include background-image('arrow-up');
+      background-size: 29px;
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    &:hover {
+      background: $gray-verylight;
+    }
+    > p {
+      display: block;
+    }
+  }
+  > .textbox-title {
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+div.expanding {
+  clear: both;
+  margin-bottom: 10px;
+  a {
+    cursor: pointer;
+  }
+  &.collapsed {
+    p {
+      display: none;
+    }
+  }
+  &.expanded {
+    p {
+      display: block;
+    }
+  }
+  .textbox-title {
+    margin-bottom: 2px;
+    a {
+      font-size: 13px;
+    }    
+  }
+  .textbox-content p {
+    font-size: 13px;
+    padding-left: 20px;
+  }
+}
