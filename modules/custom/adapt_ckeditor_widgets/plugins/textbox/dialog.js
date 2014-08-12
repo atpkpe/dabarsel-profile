@@ -24,24 +24,25 @@ CKEDITOR.dialog.add( 'textbox', function( editor ) {
                             widget.setData( 'align', this.getValue() );
                         }
                     },
-                    {
-                        id: 'width',
-                        type: 'text',
-                        label: 'Width',
-                        width: '50px',
-                        setup: function( widget ) {
-                            this.setValue( widget.data.width );
-                        },
-                        commit: function( widget ) {
-                            widget.setData( 'width', this.getValue() );
-                        }
-                    },
+                    // {
+                    //     id: 'width',
+                    //     type: 'text',
+                    //     label: 'Width',
+                    //     width: '50px',
+                    //     setup: function( widget ) {
+                    //         this.setValue( widget.data.width );
+                    //     },
+                    //     commit: function( widget ) {
+                    //         widget.setData( 'width', this.getValue() );
+                    //     }
+                    // },
                      {
                         id: 'behaviour',
                         type: 'select',
                         label: 'Behaviour',
                         items: [
                             [ editor.lang.common.notSet, '' ],
+                            [ 'Small floating box', 'floatbox' ],
                             [ 'Expanding - collapsed', 'expanding collapsed' ],
                             [ 'Expanding - expanded', 'expanding expanded' ]
                         ],

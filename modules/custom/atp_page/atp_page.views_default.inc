@@ -36,13 +36,6 @@ function atp_page_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_page_related_field_ter_category',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -248,6 +241,58 @@ function atp_page_views_default_views() {
       'label' => 'Indhold: Nid',
     ),
   );
+
+  /* Display: FAQ */
+  $handler = $view->new_display('panel_pane', 'FAQ', 'panel_pane_5');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'faq-view';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'expanding collapsed';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Multifield: Title */
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['id'] = 'field_page_twt_field_twt_title';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['table'] = 'field_data_field_page_twt';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['field'] = 'field_page_twt_field_twt_title';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['label'] = '';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['element_class'] = 'textbox-title';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_title']['delta_offset'] = '0';
+  /* Felt: Multifield: Text */
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['id'] = 'field_page_twt_field_twt_text';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['table'] = 'field_data_field_page_twt';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['field'] = 'field_page_twt_field_twt_text';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['label'] = '';
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_twt_field_twt_text']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indhold: Text with title (field_page_twt:delta) */
+  $handler->display->display_options['sorts']['delta']['id'] = 'delta';
+  $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_page_twt';
+  $handler->display->display_options['sorts']['delta']['field'] = 'delta';
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Indhold: Nid',
+    ),
+  );
   $translatables['category_related'] = array(
     t('Master'),
     t('mere'),
@@ -262,6 +307,7 @@ function atp_page_views_default_views() {
     t('B'),
     t('C'),
     t('D'),
+    t('FAQ'),
   );
   $export['category_related'] = $view;
 

@@ -49,6 +49,9 @@ function atp_settings_wysiwyg_default_profiles() {
           'SpellChecker' => 1,
           'Scayt' => 1,
         ),
+        'textbox' => array(
+          'textbox' => 1,
+        ),
         'drupal_path' => array(
           'Link' => 1,
         ),
@@ -68,7 +71,7 @@ function atp_settings_wysiwyg_default_profiles() {
       'css_path' => '%t/css/editor.css',
       'stylesSet' => '',
       'block_formats' => 'p,h2,h3,h4,div',
-      'advanced__active_tab' => 'edit-paste',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 0,
     ),
     'rdf_mapping' => array(),
@@ -95,6 +98,9 @@ function atp_settings_wysiwyg_default_profiles() {
           'PasteText' => 1,
           'PasteFromWord' => 1,
           'Maximize' => 1,
+        ),
+        'textbox' => array(
+          'textbox' => 1,
         ),
         'drupal_path' => array(
           'Link' => 1,
