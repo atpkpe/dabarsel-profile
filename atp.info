@@ -46,6 +46,7 @@ dependencies[] = multiform
 dependencies[] = webform
 dependencies[] = media_browser_plus
 dependencies[] = media_bulk_upload
+dependencies[] = media_qbrick
 dependencies[] = gss
 dependencies[] = focal_point
 dependencies[] = jammer
@@ -77,4 +78,5 @@ dependencies[] = atp_contact
 dependencies[] = atp_signup
 dependencies[] = atp_webform
 dependencies[] = adapt_ckeditor_widgets
+
 
