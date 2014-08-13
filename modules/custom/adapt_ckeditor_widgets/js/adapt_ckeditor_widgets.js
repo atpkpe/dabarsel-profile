@@ -1,8 +1,8 @@
 (function($) {
   Drupal.behaviors.customToggler = {
     attach: function(context, settings){
-      $(".expanding", context).once('textbox-title').click(function(){
-        $(this).toggleClass("expanded").toggleClass("collapsed");
+      $(".expanding .textbox-title", context).once().click(function(){
+        $(this).parent('.expanding').toggleClass("expanded").toggleClass("collapsed");
         return false;
       });
       if (window.location.hash !== '') {
