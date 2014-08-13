@@ -265,7 +265,7 @@ header {
   }
   > ul {
     > li {
-      &:hover {
+      &:hover, &.hover {
         > ul {
           display: block;
         }
