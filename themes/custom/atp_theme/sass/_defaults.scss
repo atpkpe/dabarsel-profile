@@ -80,6 +80,21 @@ iframe {
   line-height: 22px;
 }
 
+blockquote {
+  quotes: "\201D""\201D""\201D""\201D";
+  &:before {
+    font-family: sans-serif;
+    height: 43px;
+    color: #ccc;
+    content: open-quote;
+    font-size: 7em;
+    line-height: 0.9em;
+    margin-right: 10px;
+    vertical-align: -0.4em;
+    float: left;
+  }
+}
+
 .field-field-page-body, .cke_editable {
   a:link { text-decoration: underline; }
   ul, ol {
