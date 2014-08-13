@@ -47,7 +47,7 @@
       padding: $margins/4 $margins/2;
     }
     span {
-      display: block;
+      display: block !important;
       float: left;
       margin-right: $margins/4;
     }

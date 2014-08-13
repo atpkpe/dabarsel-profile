@@ -12,7 +12,7 @@
 .onecol {
   @extend %content;
   @include clearfix;
-  @include device(phone){
+  @include device(tablet-portrait){
     padding: 0 10px;
   }
 }
