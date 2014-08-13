@@ -2,6 +2,14 @@
 // Javascript executed on every page load
 
 (function ($) {
+  $(".main-menu > ul > li").hover(
+    function(){
+      $(this).addClass("hover");
+    },
+    function(){
+      $(this).removeClass("hover");
+    }
+  );
   $(".toggle-menu").click(function(){
     if($("body").hasClass("show-menu")) {
       $("body").removeClass("show-menu");
