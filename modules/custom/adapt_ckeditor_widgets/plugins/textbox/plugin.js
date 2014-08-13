@@ -15,7 +15,7 @@ CKEDITOR.plugins.add( 'textbox', {
 
             template:
                 '<div class="textbox">' +
-                    '<h2 class="textbox-title">' + Drupal.t('Title') + '</h2>' +
+                    '<h3 class="textbox-title">' + Drupal.t('Title') + '</h3>' +
                     '<div class="textbox-content"><p>' + Drupal.t('Content...') + '</p></div>' +
                 '</div>',
 

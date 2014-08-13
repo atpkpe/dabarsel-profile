@@ -107,7 +107,7 @@ function atp_settings_filter_default_formats() {
         'weight' => -10,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <br>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <br> <h2> <h3> <div> <a>',
           'filter_html_help' => 0,
           'filter_html_nofollow' => 0,
         ),
