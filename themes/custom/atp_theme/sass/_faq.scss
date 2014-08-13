@@ -1,6 +1,5 @@
 article.expanding {
   background: #ffffff;
-  padding: $margins;
   margin-bottom: 5px;
   clear: both;
   &:hover {
@@ -9,25 +8,31 @@ article.expanding {
   > .textbox-title {
     font-size: 16px;
     cursor: pointer;
-    padding-right: 45px;
     background-size: 29px;
     background-repeat: no-repeat;
     background-position: right center;
   }
 
   &.collapsed {
+    padding-right: 20px;
     cursor: pointer;
     > .textbox-title {
       @include background-image('arrow-down');
+      padding: $margins;
+      padding-right: 40px;
       margin-bottom: 0px;
     }
     > p { display: none; }
+    .expanding { display: none; }
   }
   &.expanded {
     background: $gray-verylight !important;
+    padding: $margins;
     cursor: auto;
     > .textbox-title {
       @include background-image('arrow-up');
+      padding: 0px;
+      padding-right: 40px;
     }
     > p { display: block; }
   }
@@ -40,9 +45,12 @@ div.expanding {
     cursor: pointer;
   }
   .textbox-title {
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
     margin-bottom: 2px;
     a {
-      font-size: 13px;
+      font-size: inherit;
       &:hover {
         text-decoration: none;
       }
@@ -65,6 +73,6 @@ div.expanding {
   }
   &.expanded {
     p { display: block; }
-    .textbox-title a { color: $green-hover;}
+    .textbox-title, .textbox-title a { color: $green-hover;}
   }
 }

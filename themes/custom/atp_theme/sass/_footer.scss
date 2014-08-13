@@ -8,6 +8,9 @@ footer {
   }
   .bottom {
     background: $gray-dark;
+    @include device(tablet-portrait){
+      padding: 0 10px;
+    }
   }
 }
 .footer-menu {
@@ -23,8 +26,13 @@ footer {
     > li {
       @include float-span(4);
       float: left;
+      @include device(tablet-portrait){
+        @include float-span(7.837);
+        margin-bottom: 20px;
+      }
       @include device(phone){
         @include float-span(16);
+        margin-bottom: 20px;
       }
       &.last {
         margin-right: 0;
@@ -84,6 +92,7 @@ footer {
     width: 100%;
     float: none;
     margin: 0;
+    margin-bottom: 20px;
   }
   h2 {
     @extend %footer-h2;
