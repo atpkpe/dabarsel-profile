@@ -142,7 +142,11 @@ function media_qbrick_file_formatter_image_view($file, $display, $langcode) {
         '#style_name' => $image_style,
         '#path' => $wrapper->getLocalThumbnailPath(),
         '#alt' => isset($file->override['attributes']['alt']) ? $file->override['attributes']['alt'] : $file->filename,
+        '#attributes' => array('data-mfp-src' => '/overlay/' . $file->fid . '/video', 'class' =>'file-overlay-open'),
       );
+      if ($image_style == '470x272') {
+        drupal_add_js(drupal_get_path('module', 'media_qbrick') . '/js/media_qbrick.js', array('group' => JS_LIBRARY));
+      }
     }
 
     return $element;

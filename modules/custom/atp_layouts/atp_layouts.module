@@ -30,6 +30,7 @@ function atp_layouts_image_view_modes() {
     'original' => 'Original',
     'inline' => t('Inline'),
     'overlay' => t('Overlay'),
+    'overlay-open' => t('Open overlay'),
   );
 }
 
