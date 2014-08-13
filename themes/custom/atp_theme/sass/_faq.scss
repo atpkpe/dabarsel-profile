@@ -2,41 +2,34 @@ article.expanding {
   background: #ffffff;
   padding: $margins;
   margin-bottom: 5px;
+  clear: both;
   &:hover {
     background: $green-block-hover;
-  }
-  &.collapsed {
-    cursor: pointer;
-    .textbox-title {
-      @include background-image('arrow-down');
-      background-size: 29px;
-      background-repeat: no-repeat;
-      background-position: right center;
-      margin-bottom: 0px;
-    }
-    > p {
-      display: none;
-    }
-  }
-  &.expanded {
-    background: $gray-verylight;
-    cursor: auto;
-    .textbox-title {
-      @include background-image('arrow-up');
-      background-size: 29px;
-      background-repeat: no-repeat;
-      background-position: right center;
-    }
-    &:hover {
-      background: $gray-verylight;
-    }
-    > p {
-      display: block;
-    }
   }
   > .textbox-title {
     font-size: 16px;
     cursor: pointer;
+    padding-right: 45px;
+    background-size: 29px;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  &.collapsed {
+    cursor: pointer;
+    > .textbox-title {
+      @include background-image('arrow-down');
+      margin-bottom: 0px;
+    }
+    > p { display: none; }
+  }
+  &.expanded {
+    background: $gray-verylight !important;
+    cursor: auto;
+    > .textbox-title {
+      @include background-image('arrow-up');
+    }
+    > p { display: block; }
   }
 }
 
@@ -46,24 +39,32 @@ div.expanding {
   a {
     cursor: pointer;
   }
-  &.collapsed {
-    p {
-      display: none;
-    }
-  }
-  &.expanded {
-    p {
-      display: block;
-    }
-  }
   .textbox-title {
     margin-bottom: 2px;
     a {
       font-size: 13px;
+      &:hover {
+        text-decoration: none;
+      }
     }    
   }
-  .textbox-content p {
+  .textbox-content {
     font-size: 13px;
     padding-left: 20px;
+    p {
+      font-size: inherit;
+    }
+    a {
+      font-size: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &.collapsed {
+    p { display: none; }
+  }
+  &.expanded {
+    p { display: block; }
+    .textbox-title a { color: $green-hover;}
   }
 }
