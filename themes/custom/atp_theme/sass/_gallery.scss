@@ -144,6 +144,7 @@ $gallery-button-size: 43px;
   }
 }
 .gallery-popup, .video-box {
+  @include box-shadow (0px 0px 47px 0px rgba(0, 0, 0, 0.7));
   max-width: 665px;
   height: auto;
   background-color: $gray;
@@ -160,7 +161,7 @@ $gallery-button-size: 43px;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-top: 15px;
+    margin-top: 20px;
   }
   p {
     line-height: 16px;
