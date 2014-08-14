@@ -333,15 +333,15 @@ function atp_file_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'overlay' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_wrapper' => 'p',
-          'item_wrapper' => '',
-          'label_wrapper' => '',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
         ),
         'type' => 'text_default',
         'weight' => 2,
@@ -350,7 +350,7 @@ function atp_file_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'preview' => array(
         'label' => 'above',
@@ -389,7 +389,7 @@ function atp_file_field_default_field_instances() {
       ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
-      'wysiwyg_override' => 1,
+      'wysiwyg_override' => 0,
     ),
     'widget' => array(
       'active' => 1,
@@ -412,20 +412,23 @@ function atp_file_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'title',
         'settings' => array(
           'field_wrapper' => 'h2',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
         ),
-        'type' => 'text_default',
+        'type' => 'title_linked',
         'weight' => 1,
       ),
       'inline' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'overlay' => array(
         'label' => 'hidden',
@@ -442,7 +445,7 @@ function atp_file_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'preview' => array(
         'label' => 'above',
@@ -463,7 +466,7 @@ function atp_file_field_default_field_instances() {
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
-      'wysiwyg_override' => 1,
+      'wysiwyg_override' => 0,
     ),
     'widget' => array(
       'active' => 1,
