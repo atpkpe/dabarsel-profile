@@ -89,7 +89,7 @@ $slideshow-title: 22px;
     }
   }
   .flex-direction-nav {
-    @include device(phone){
+    @include device(tablet-portrait){
       display: none;
     }
     z-index: 100;

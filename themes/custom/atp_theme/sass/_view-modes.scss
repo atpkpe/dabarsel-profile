@@ -9,6 +9,11 @@
   padding: 17px;
   padding: 0 $margins $margins $margins;
   border: 1px solid $gray;
+  @include device(tablet-portrait){
+    @include view-mode(7.45);
+    margin-left: 0px;
+    margin-right: $margins;
+  }
   @include device(phone){
     height: auto;
     width: 100%;
