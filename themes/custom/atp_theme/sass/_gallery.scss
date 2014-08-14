@@ -1,6 +1,6 @@
 $gallery-button-size: 43px;
 
-.view-gallery {
+.view-gallery, .video-box {
   button {
     width: $gallery-button-size;
     height: $gallery-button-size;
@@ -143,12 +143,30 @@ $gallery-button-size: 43px;
     }
   }
 }
-.gallery-popup {
+.gallery-popup, .video-box {
   max-width: 665px;
   height: auto;
   background-color: $gray;
   div.slider {
     bottom: 0;
+  }
+}
+.video-box {
+  position: relative;
+  padding: 20px;
+  width: auto;
+  margin: 20px auto;
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  p {
+    line-height: 16px;
+  }
+  object {
+    width: 100%;
   }
 }
 
