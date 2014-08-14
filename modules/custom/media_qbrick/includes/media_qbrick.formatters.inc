@@ -146,6 +146,7 @@ function media_qbrick_file_formatter_image_view($file, $display, $langcode) {
       );
       if ($image_style == '470x272') {
         drupal_add_js(drupal_get_path('module', 'media_qbrick') . '/js/media_qbrick.js', array('group' => JS_LIBRARY));
+        drupal_add_css(drupal_get_path('module', 'atp_gallery_embed') . '/css/magnific-popup.css');
       }
     }
 
