@@ -1,5 +1,12 @@
 $gallery-button-size: 43px;
 
+.mfp-bg {
+  z-index: 700;
+}
+.mfp-wrap {
+  z-index: 750;
+}
+
 .view-gallery, .video-box {
   button {
     width: $gallery-button-size;
@@ -154,14 +161,14 @@ $gallery-button-size: 43px;
 }
 .video-box {
   position: relative;
-  padding: 20px;
+  padding: $margins;
   width: auto;
-  margin: 20px auto;
+  margin: $margins auto;
   h2 {
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: $margins;
   }
   p {
     line-height: 16px;
