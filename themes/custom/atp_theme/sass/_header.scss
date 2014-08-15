@@ -3,6 +3,8 @@ header {
   @include clearfix;
   background: #fff;
   margin-bottom: 25px;
+  position: relative;
+  z-index: 800;
   .front & {
     margin: 0;
   }

@@ -1,5 +1,12 @@
 $gallery-button-size: 43px;
 
+.mfp-bg {
+  z-index: 700;
+}
+.mfp-wrap {
+  z-index: 750;
+}
+
 .view-gallery, .video-box {
   button {
     width: $gallery-button-size;
