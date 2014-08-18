@@ -159,7 +159,7 @@ header {
   }
 }
 #logo {
-  @include background-image('logo');
+  @include background-svg('logo');
   background-repeat: no-repeat;
   width: 82px;
   height: 30px;
@@ -274,20 +274,27 @@ header {
       }
       &:after {
         @extend %menu-gradient;
-        @include device(phone){
-          display: none;
-        }
-        position: absolute;
-        top: 21px;
-        right: -1px;
+        content: "";
         display: block;
         width: 1px;
         height: 28px;
-        content: "";
+        margin-top: 21px;
+        float: left;
+        @include device(phone){
+          display: none;
+        }
+      }
+      &:nth-child(3){
+        &:after {
+          display: none;
+        }
       }
       &.last {
         $tmp: (70px - 32px)/2;
         padding: $tmp 0;
+        &:after {
+          display: none;
+        }
         > a {
           @include border-radius(20px);
           border: 1px solid $gray;
@@ -300,6 +307,7 @@ header {
         $tmp: 70px;
         line-height: $tmp;
         height: $tmp;
+        float: left;
         &.active-trail {
           border-bottom: 4px solid $green-hover-header;
         }

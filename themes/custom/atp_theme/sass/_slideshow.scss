@@ -107,18 +107,18 @@ $slideshow-title: 22px;
 
     }
     .flex-next {
-      @include background-image('arrow-slide-r');
+      @include background-svg('arrow-slide-r');
       right: $margins;
       &:hover {
-      @include background-image('arrow-slide-r-hover');
+      @include background-svg('arrow-slide-r-hover');
       }
 
     }
     .flex-prev {
-      @include background-image('arrow-slide-l');
+      @include background-svg('arrow-slide-l');
       left: $margins;
       &:hover {
-      @include background-image('arrow-slide-l-hover');
+      @include background-svg('arrow-slide-l-hover');
       }
     }
   }

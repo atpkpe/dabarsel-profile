@@ -58,17 +58,17 @@ $gallery-button-size: 43px;
       }
     }
     .flex-prev {
-      @include background-image('arrow-slide-dark-l');
+      @include background-svg('arrow-slide-dark-l');
       left: -20px;
       &:hover {
-        @include background-image('arrow-slide-l-hover');
+        @include background-svg('arrow-slide-l-hover');
       }
     }
     .flex-next {
-      @include background-image('arrow-slide-dark-r');
+      @include background-svg('arrow-slide-dark-r');
       right: -20px;
       &:hover {
-        @include background-image('arrow-slide-r-hover');
+        @include background-svg('arrow-slide-r-hover');
       }
     }
   }
@@ -135,17 +135,17 @@ $gallery-button-size: 43px;
       }
     }
     .flex-prev {
-      @include background-image('arrow-slide-dark-l');
+      @include background-svg('arrow-slide-dark-l');
       left: -15px;
       &:hover {
-        @include background-image('arrow-slide-l-hover');
+        @include background-svg('arrow-slide-l-hover');
       }
     }
     .flex-next {
-      @include background-image('arrow-slide-dark-r');
+      @include background-svg('arrow-slide-dark-r');
       right: -15px;
       &:hover {
-        @include background-image('arrow-slide-r-hover');
+        @include background-svg('arrow-slide-r-hover');
       }
     }
   }
@@ -195,7 +195,7 @@ a.ajax-popup-link {
     float: right;
   }
   &:after {
-    @include background-image('icon-zoom');
+    @include background-svg('icon-zoom');
     background-color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -208,6 +208,6 @@ a.ajax-popup-link {
     right: 0;
   }
   &:hover:after {
-    @include background-image('icon-zoom-green');
+    @include background-svg('icon-zoom-green');
   }
 }

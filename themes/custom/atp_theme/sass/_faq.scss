@@ -17,7 +17,7 @@ article.expanding {
     padding-right: 20px;
     cursor: pointer;
     > .textbox-title {
-      @include background-image('arrow-down');
+      @include background-svg('arrow-down');
       padding: $margins;
       padding-right: 40px;
       margin-bottom: 0px;
@@ -30,7 +30,7 @@ article.expanding {
     padding: $margins;
     cursor: auto;
     > .textbox-title {
-      @include background-image('arrow-up');
+      @include background-svg('arrow-up');
       padding: 0px;
       padding-right: 40px;
     }
@@ -54,7 +54,7 @@ div.expanding {
       &:hover {
         text-decoration: none;
       }
-    }    
+    }
   }
   .textbox-content {
     font-size: 13px;

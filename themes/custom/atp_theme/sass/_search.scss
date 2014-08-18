@@ -2,7 +2,7 @@ $mobile-side-padding: ($margins/2);
 
 
 .toggle-search {
-  @include background-image('icon-search');
+  @include background-svg('icon-search');
   background-size: 16px auto;
   width: 16px;
   height: 16px;
@@ -47,7 +47,7 @@ $mobile-side-padding: ($margins/2);
     }
   }
   input.form-submit {
-    @include background-image('icon-search');
+    @include background-svg('icon-search');
     background-size: 12px 12px;
     background-color: transparent;
     background-position: center center;
