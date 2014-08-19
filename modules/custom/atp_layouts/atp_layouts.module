@@ -18,6 +18,7 @@ function atp_layouts_view_modes() {
   	//'3_4_h' => '3-4-H',
   	'1_1_l' => '1/1-L',
     'teaser_with_img' => 'Teaser with image',
+    'menu_box' => 'Menubox',
   );
 }
 

@@ -5,3 +5,41 @@
  */
 
 include_once 'atp_structure.features.inc';
+
+/**
+*Implementation of hook_menu()
+*/
+function atp_structure_menu() {
+  
+  $items['<info>/%'] = array(
+    'page callback' => 'drupal_not_found',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+ return $items;
+}
+
+/**
+ * Override of theme_link()
+ * This function will render link if it is "<info:da>" or "<info:en>". 
+ * Otherwise it will call originally overwritten menu_item_link function.
+ */
+function atp_structure_link(array $variables) {
+  if (stristr($variables['path'], '<info>/')) {
+    if (preg_match("/<info>\/(\d+)/i",$variables['path'], $matches)) {
+      $eid = $matches[1];
+      $entity = entity_load('node', array($eid));
+      $content = entity_view('node', $entity, 'menu_box');
+      return '<div class="view-mode-menu-box">' . drupal_render($content) . '</div>';
+    }
+  }
+  // Call the original theme function for normal menu link.
+  return theme('atp_structure_link_default', $variables);
+}
+
+function atp_structure_theme_registry_alter(&$registry) {
+  // Save previous value from registry in case another theme overwrites menu_item_link
+  $registry['atp_structure_link_default'] = $registry['link'];
+  $registry['link']['function'] = 'atp_structure_link';
+}

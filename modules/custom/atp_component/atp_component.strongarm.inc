@@ -98,6 +98,9 @@ function atp_component_strongarm() {
       '1_4_compressed' => array(
         'custom_settings' => TRUE,
       ),
+      'menu_box' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -157,6 +160,10 @@ function atp_component_strongarm() {
           ),
           '1_4_compressed' => array(
             'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'menu_box' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
