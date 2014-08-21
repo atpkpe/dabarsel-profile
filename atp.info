@@ -55,7 +55,7 @@ dependencies[] = menu_admin_per_menu
 dependencies[] = ultimate_cron
 dependencies[] = css_injector
 dependencies[] = js_injector
-; dependencies[] = rabbit_hole
+dependencies[] = wysiwyg_filter
 
 ; Project features
 dependencies[] = atp_settings

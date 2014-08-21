@@ -119,3 +119,12 @@ function atp_settings_variable_info_alter(&$variables, $options) {
   $variables['gss_api_key']['localize'] = TRUE;
 }
 
+/**
+ * Implements hook_wysiwyg_filter_elements_blocklist_alter().
+ */
+function atp_settings_wysiwyg_filter_elements_blacklist_alter(&$blacklist) {
+  // Remove iframe from the blacklist so we can embed media.
+  if (($pos = array_search('iframe', $blacklist)) !== FALSE) {
+    unset($blacklist[$pos]);
+  }
+}

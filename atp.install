@@ -151,3 +151,10 @@ function atp_update_7005(&$sandbox) {
 function atp_update_7006(&$sandbox) {
   module_enable(array('adapt_ckeditor_widgets'));
 }
+
+/**
+ *  Enable wysiwyg_filter.
+ */
+function atp_update_7007(&$sandbox) {
+  module_enable(array('wysiwyg_filter'));
+}
