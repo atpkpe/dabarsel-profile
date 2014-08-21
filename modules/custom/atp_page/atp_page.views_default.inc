@@ -293,6 +293,51 @@ function atp_page_views_default_views() {
       'label' => 'Indhold: Nid',
     ),
   );
+
+  /* Display: Right column */
+  $handler = $view->new_display('panel_pane', 'Right column', 'panel_pane_6');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'magazine-right';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'view-mode-1-4-l';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: page relations */
+  $handler->display->display_options['fields']['field_page_relations']['id'] = 'field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['table'] = 'field_data_field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['field'] = 'field_page_relations';
+  $handler->display->display_options['fields']['field_page_relations']['label'] = '';
+  $handler->display->display_options['fields']['field_page_relations']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['type'] = 'entityreference_entity_view';
+  $handler->display->display_options['fields']['field_page_relations']['settings'] = array(
+    'view_mode' => '1_4_l',
+    'links' => 0,
+  );
+  $handler->display->display_options['fields']['field_page_relations']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indhold: page relations (field_page_relations:delta) */
+  $handler->display->display_options['sorts']['delta_1']['id'] = 'delta_1';
+  $handler->display->display_options['sorts']['delta_1']['table'] = 'field_data_field_page_relations';
+  $handler->display->display_options['sorts']['delta_1']['field'] = 'delta';
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Indhold: Nid',
+    ),
+  );
   $translatables['category_related'] = array(
     t('Master'),
     t('mere'),
@@ -308,6 +353,7 @@ function atp_page_views_default_views() {
     t('C'),
     t('D'),
     t('FAQ'),
+    t('Right column'),
   );
   $export['category_related'] = $view;
 

@@ -93,10 +93,6 @@ projects[menu_admin_per_menu] = 'module'
 projects[menu_admin_per_menu][subdir] = 'contrib'
 projects[menu_admin_per_menu][version] = '1.0'
 
-; projects[rabbit_hole] = 'module'
-; projects[rabbit_hole][subdir] = 'contrib'
-; projects[rabbit_hole][version] = '2.22'
-
 projects[date][type] = 'module'
 projects[date][subdir] = 'contrib'
 projects[date][version] = '2.8'
@@ -156,6 +152,12 @@ projects[plupload][version] = '1.6'
 projects[ckeditor_link][type] = 'module'
 projects[ckeditor_link][subdir] = 'contrib'
 projects[ckeditor_link][version] = '2.3'
+
+
+projects[wysiwyg_filter][type] = 'module'
+projects[wysiwyg_filter][subdir] = 'contrib'
+projects[wysiwyg_filter][version] = '1.6-rc2'
+projects[wysiwyg_filter][patch][] = 'http://www.drupal.org/files/wysiwyg_filter_alter_blacklist-1783966-4.patch'
 
 projects[gss][type] = 'module'
 projects[gss][subdir] = 'contrib'

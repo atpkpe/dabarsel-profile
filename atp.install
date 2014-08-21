@@ -153,12 +153,19 @@ function atp_update_7006(&$sandbox) {
 }
 
 /**
+ *  Enable wysiwyg_filter.
+ */
+function atp_update_7007(&$sandbox) {
+  module_enable(array('wysiwyg_filter'));
+}
+
+/**
  * ATP-43 - Notifikation (K38)
  * Activating notification related modules.
  *
  * @author Mikkel Jakobsen <mikkel@adapt.dk>
  */
-function atp_update_7007(&$sandbox) {
+function atp_update_7008(&$sandbox) {
   module_enable(array(
     'node_expire',
     'node_expire_extras',

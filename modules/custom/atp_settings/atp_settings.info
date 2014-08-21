@@ -14,6 +14,7 @@ dependencies[] = media_wysiwyg
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = wysiwyg
+dependencies[] = wysiwyg_filter
 features[ctools][] = linkit:linkit_profiles:1
 features[ctools][] = strongarm:strongarm:1
 features[custom_date_formats][] = \<\s\p\a\n\>d F\<\/\s\p\a\n\> Y
