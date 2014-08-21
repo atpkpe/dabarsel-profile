@@ -175,6 +175,9 @@ EOD;
 
 }
 
+/**
+ * Implements hook_mail().
+ */
 function atp_notifications_mail($key, &$message, $params) {
 
   $options = array(
