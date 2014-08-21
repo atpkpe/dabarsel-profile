@@ -208,8 +208,3 @@ projects[node_expire_extras][version] = '1.0-rc2'
 projects[better_exposed_filters][type] = 'module'
 projects[better_exposed_filters][subdir] = 'contrib'
 projects[better_exposed_filters][version] = '3.0-beta4'
-
-;Atodo: Rememeber rules patch
-; rules
-projects[rules][subdir] = 'contrib'
-projects[rules][version] = '2.7'
