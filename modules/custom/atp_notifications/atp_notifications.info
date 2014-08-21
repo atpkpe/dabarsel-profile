@@ -1,0 +1,10 @@
+name = ATP Notifications
+description = Handles notifications across the system
+core = 7.x
+package = ATP
+dependencies[] = flag
+dependencies[] = rules
+dependencies[] = node_expire
+dependencies[] = node_expire_extras
+dependencies[] = token
+project path = profiles/atp/modules/custom

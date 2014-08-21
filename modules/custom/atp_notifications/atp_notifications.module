@@ -1,0 +1,224 @@
+<?php
+/**
+ * @file
+ * Notifications.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function atp_notifications_menu() {
+
+  $items['admin/config/content/notifications'] = array(
+    'title' => 'ATP notification settings',
+    'description' => 'Configuration of content notification.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('atp_notifications_configuration_form'),
+    'access arguments' => array('administer atp notifications'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'atp_notifications.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function atp_notifications_permission() {
+  return array(
+    'administer atp notificationss' => array(
+      'title' => t('Administer ATP notifications'),
+      'description' => t('Change settings of notifications.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function atp_notifications_token_info() {
+  $info['tokens']['site']['notification-expired-url'] = array(
+    'name' => t('Link'),
+    'description' => t('Link to page with overview of expired content.'),
+  );
+  $info['tokens']['site']['notification-unpublished-url'] = array(
+    'name' => t('Link'),
+    'description' => t('Link to page with overview of scheduled unpublished content.'),
+  );
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function atp_notifications_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  global $base_url;
+  $replacements = array();
+
+  if ($type == 'site') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        // Define replacement for the 'session-status' token.
+        case 'notification-expired-url':
+          $view = views_get_view('notification_overview');
+          $view->set_display('expired');
+          $replacements[$original] = sprintf('%s/%s', $base_url, $view->get_url());
+          break;
+        case 'notification-unpublished-url':
+          $view = views_get_view('notification_overview');
+          $view->set_display('unpublished');
+          $replacements[$original] = sprintf('%s/%s', $base_url, $view->get_url());
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Implements hook_cronapi().
+ */
+function atp_notifications_queue_cronapi($op, $job = NULL) {
+  switch ($op) {
+    case 'list':
+      return array(
+        'atp_notifications_cron_expired' => 'Notify users about expired nodes',
+        'atp_notifications_cron_unpublished' => 'Notify users about nodes about to get unpublished',
+      );
+
+    case 'rule':
+      switch ($job) {
+        case 'atp_notifications_cron_expired': return '*/03 */4 * * *';
+        case 'atp_notifications_cron_unpublished': return '*/05 */4 * * *';
+          break;
+      }
+      break;
+
+    case 'execute':
+      switch ($job) {
+        case 'atp_notifications_cron_expired':
+          atp_notifications_cron_expired();
+          break;
+
+        case 'atp_notifications_cron_unpublished':
+          atp_notifications_cron_unpublished();
+          break;
+      }
+      break;
+  }
+
+}
+
+/**
+ * Send mails to subscribers of expired nodes.
+ */
+function atp_notifications_cron_expired() {
+  $flag = flag_get_flag('notification_node_expiration');
+  $query = db_select('flagging', 'fc');
+  $query->leftjoin('node_expire', 'ne', 'ne.nid = fc.entity_id');
+  $query->fields('fc')
+    ->condition('fc.fid', $flag->fid, '=')
+    ->condition('ne.expired', 1, '=');
+  $result = $query->execute()->fetchAllAssoc('uid');
+
+  foreach($result as $uid => $data) {
+    $account = user_load($uid);
+    drupal_mail(
+      'atp_notifications',
+      'atp_notifications_expire',
+      $account->mail,
+      language_default(),
+      array('account' => $account)
+    );
+  }
+
+}
+
+/**
+ * Send mails to subscribers of nodes scheduled for unpublishing.
+ */
+function atp_notifications_cron_unpublished() {
+  $notice_threshold = variable_get('atp_notifications_threshold_unpublished', 5);
+  $flag = flag_get_flag('notification_node_auto_unpublish');
+  $query = <<<EOD
+  SELECT f.uid FROM flagging f
+  LEFT JOIN scheduler s ON s.nid = f.entity_id
+  WHERE
+    f.fid = :fid
+  AND
+    s.unpublish_on > UNIX_TIMESTAMP()
+  AND
+    (s.unpublish_on - :notification_threshold) < UNIX_TIMESTAMP()
+;
+EOD;
+
+  $result = db_query(
+    $query,
+    array(
+      ':fid' => $flag->fid,
+      ':notification_threshold' => (60 * 60 * 24) * $notice_threshold,
+    )
+  );
+
+  while($uid = $result->fetchColumn()) {
+    $account = user_load($uid);
+    drupal_mail(
+      'atp_notifications',
+      'atp_notifications_unpublished',
+      $account->mail,
+      language_default(),
+      array('account' => $account)
+    );
+  }
+
+}
+
+function atp_notifications_mail($key, &$message, $params) {
+
+  $options = array(
+    'langcode' => $message['language']->language,
+//    'context' => 'atp_notifications',
+  );
+
+  $site = variable_get('site_name', 'atp');
+
+  switch ($key) {
+    case 'atp_notifications_expire':
+      $message['subject'] = t(
+        'Some content has expired at !site',
+        array('!site' => $site),
+        $options
+      );
+      $message['body'][] = t('Hi !name.', array('!name' => $params['account']->name), $options);
+      $message['body'][] = t(
+        'Some content has expired at !site. Take a look at:',
+        array('!site' => $site),
+        $options
+      );
+      $message['body'][] = '[site:notification-expired-url]';
+      break;
+
+    case 'atp_notifications_unpublished':
+      $message['subject'] = t(
+        'Some content is about to get unpublished at !site',
+        array('!site' => $site),
+        $options
+      );
+      $message['body'][] = t('Hi !name.', array('!name' => $params['account']->name), $options);
+      $message['body'][] = t(
+        'Some content is about to get unpublished at !site. Take a look at:',
+        array('!site' => $site),
+        $options
+      );
+      $message['body'][] = '[site:notification-unpublished-url]';
+      break;
+  }
+
+  if (!empty($message['body'])) {
+    foreach ($message['body'] as &$body) {
+      $body = token_replace($body, array(), $options);
+    }
+  }
+}

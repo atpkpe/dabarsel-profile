@@ -1,0 +1,31 @@
+# Danish translation of ATP notifications
+# Created by Mikkel Jakobsen <mikkel@adapt.dk>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: atp_notifications\n"
+"POT-Creation-Date: 2014-08-21 23:05+0200\n"
+"PO-Revision-Date: 2014-08-21 23:05+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Hi !name."
+msgstr "Hej !name."
+
+msgid "Some content has expired at !site"
+msgstr "Noget indhold er udløbet på !site"
+
+msgid "Some content has expired at !site. Take a look at:"
+msgstr "Noget indhold er udløbet på !site. Se oversigt:"
+
+msgid "Some content is about to get unpublished at !site"
+msgstr "Noget indhold bliver snart afpubliceret på !site"
+
+msgid "Some content is about to get unpublished at !site. Take a look at:"
+msgstr "Noget indhold bliver snart afpubliceret på !site. Se oversigt:"
+
+

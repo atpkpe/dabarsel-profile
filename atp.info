@@ -55,7 +55,11 @@ dependencies[] = menu_admin_per_menu
 dependencies[] = ultimate_cron
 dependencies[] = css_injector
 dependencies[] = js_injector
-; dependencies[] = rabbit_hole
+dependencies[] = node_expire
+dependencies[] = node_expire_extras
+dependencies[] = flag
+dependencies[] = flag_actions
+dependencies[] = better_exposed_filters
 
 ; Project features
 dependencies[] = atp_settings

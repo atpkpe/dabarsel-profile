@@ -151,3 +151,19 @@ function atp_update_7005(&$sandbox) {
 function atp_update_7006(&$sandbox) {
   module_enable(array('adapt_ckeditor_widgets'));
 }
+
+/**
+ * ATP-43 - Notifikation (K38)
+ * Activating notification related modules.
+ *
+ * @author Mikkel Jakobsen <mikkel@adapt.dk>
+ */
+function atp_update_7007(&$sandbox) {
+  module_enable(array(
+    'node_expire',
+    'node_expire_extras',
+    'flag',
+    'flag_actions',
+    'better_exposed_filters',
+  ));
+}
