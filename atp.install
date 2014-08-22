@@ -174,3 +174,10 @@ function atp_update_7008(&$sandbox) {
     'better_exposed_filters',
   ));
 }
+
+/**
+ *  Enable smtp.
+ */
+function atp_update_7009(&$sandbox) {
+  module_enable(array('smtp'));
+}
