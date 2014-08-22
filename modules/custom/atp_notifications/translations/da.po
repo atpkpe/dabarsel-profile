@@ -28,4 +28,15 @@ msgstr "Noget indhold bliver snart afpubliceret på !site"
 msgid "Some content is about to get unpublished at !site. Take a look at:"
 msgstr "Noget indhold bliver snart afpubliceret på !site. Se oversigt:"
 
+msgid "Notification threshold for scheduled unpublishing."
+msgstr "Notifikations-periode for indhold der har planlagt afpublicering."
+
+msgid "Threshold is measured in days. Default is 5 days of notification before scheduled day."
+msgstr "Perioden er målt i dage. Deafult er 5 dage med notifikationer før afpubliceringsdato."
+
+msgid "Some content has changed at !site"
+msgstr "Noget indhold er ændret på !site"
+
+msgid "Some content has changed at !site. Take a look at:"
+msgstr "Noget indhold er ændret på !site. Se her:"
 

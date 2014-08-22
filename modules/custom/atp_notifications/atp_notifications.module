@@ -9,15 +9,23 @@
  */
 function atp_notifications_menu() {
 
-  $items['admin/config/content/notifications'] = array(
-    'title' => 'ATP notification settings',
-    'description' => 'Configuration of content notification.',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('atp_notifications_configuration_form'),
+  $items['admin/content/notifications'] = array(
+    'title' => 'ATP notification overviews',
+    'description' => 'Links to notification overviews.',
+    'page callback' => 'atp_notifications_overview_list',
     'access arguments' => array('administer atp notifications'),
     'type' => MENU_NORMAL_ITEM,
     'file' => 'atp_notifications.admin.inc',
   );
+//  $items['admin/config/content/notifications'] = array(
+//    'title' => 'ATP notification settings',
+//    'description' => 'Configuration of content notification.',
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('atp_notifications_configuration_form'),
+//    'access arguments' => array('administer atp notifications'),
+//    'type' => MENU_NORMAL_ITEM,
+//    'file' => 'atp_notifications.admin.inc',
+//  );
 
   return $items;
 }
@@ -54,12 +62,13 @@ function atp_notifications_token_info() {
  */
 function atp_notifications_tokens($type, $tokens, array $data = array(), array $options = array()) {
   global $base_url;
+  $site = variable_get('site_name', 'atp');
+
   $replacements = array();
 
   if ($type == 'site') {
     foreach ($tokens as $name => $original) {
       switch ($name) {
-        // Define replacement for the 'session-status' token.
         case 'notification-expired-url':
           $view = views_get_view('notification_overview');
           $view->set_display('expired');
@@ -179,10 +188,9 @@ EOD;
  * Implements hook_mail().
  */
 function atp_notifications_mail($key, &$message, $params) {
-
+  global $base_url;
   $options = array(
     'langcode' => $message['language']->language,
-//    'context' => 'atp_notifications',
   );
 
   $site = variable_get('site_name', 'atp');
@@ -217,6 +225,22 @@ function atp_notifications_mail($key, &$message, $params) {
       );
       $message['body'][] = '[site:notification-unpublished-url]';
       break;
+
+    case 'atp_notifications_node_changed':
+      $message['subject'] = t(
+        'Some content has changed at !site',
+        array('!site' => $site),
+        $options
+      );
+      $message['body'][] = t('Hi !name.', array('!name' => $params['account']->name), $options);
+
+      $message['body'][] = t(
+        'Some content has changed at !site. Take a look at:',
+        array('!site' => $site),
+        $options
+      );
+      $message['body'][] = sprintf('%s/node/%s/edit', $base_url, $params['node']->nid);
+      break;
   }
 
   if (!empty($message['body'])) {
@@ -224,4 +248,51 @@ function atp_notifications_mail($key, &$message, $params) {
       $body = token_replace($body, array(), $options);
     }
   }
+}
+
+/**
+ * Implements hook_rules_action_info().
+ */
+function atp_notifications_rules_action_info() {
+  return array(
+    'atp_notifications_mail_user_node_changed' => array(
+      'label' => t('Send a "node changed" mail to a user'),
+      'parameter' => array(
+        'user' => array('type' => 'user', 'label' => t('User')),
+        'node' => array('type' => 'node', 'label' => t('Node')),
+      ),
+      'group' => t('System'),
+    ),
+  );
+}
+
+/**
+ * Rules action callback. Sends mail to a user about changed content.
+ *
+ * @param object $account
+ *   Drupal user object.
+ * @param object $node
+ *   Drupal node object.
+ */
+function atp_notifications_mail_user_node_changed($account, $node) {
+  $var_name = 'atp_notifications_user_node_changed_last_uid';
+  $last_uid = variable_get($var_name, 0);
+
+  if ($last_uid == 0 || $account->uid != $last_uid) {
+    drupal_mail(
+      'atp_notifications',
+      'atp_notifications_node_changed',
+      $account->mail,
+      language_default(),
+      array(
+        'node' => $node,
+        'account' => $account,
+      )
+    );
+    variable_set($var_name, $account->uid);
+    return;
+  }
+
+  variable_del($var_name);
+
 }
