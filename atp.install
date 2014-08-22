@@ -175,3 +175,10 @@ function atp_update_7008(&$sandbox) {
     'rules',
   ));
 }
+
+/**
+ *  Enable smtp.
+ */
+function atp_update_7009(&$sandbox) {
+  module_enable(array('smtp'));
+}

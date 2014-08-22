@@ -76,6 +76,13 @@ projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/1955938
 ; Schedule revisions, https://drupal.org/node/2048999
 projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/scheduler_workbench-revision_publish-707484-22.patch'
 
+projects[smtp][type] = 'module'
+projects[smtp][subdir] = 'contrib'
+projects[smtp][download][branch] = '7.x-1.x'
+projects[smtp][download][type] = 'git'
+projects[smtp][download][url] = 'http://git.drupal.org/project/smtp.git'
+projects[smtp][download][revision] = 'd4493ff4fb116f5933e45111b510e4b1c3bdf727'
+
 projects[menu_view_unpublished][type] = 'module'
 projects[menu_view_unpublished][subdir] = 'contrib'
 projects[menu_view_unpublished][download][branch] = '7.x-1.x'
@@ -139,7 +146,7 @@ projects[multiform][version] = '1.1'
 
 projects[webform][type] = 'module'
 projects[webform][subdir] = 'contrib'
-projects[webform][version] = '4.0-rc5'
+projects[webform][version] = '4.0-rc6'
 
 projects[jammer][type] = 'module'
 projects[jammer][subdir] = 'contrib'
