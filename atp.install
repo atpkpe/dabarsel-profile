@@ -172,5 +172,6 @@ function atp_update_7008(&$sandbox) {
     'flag',
     'flag_actions',
     'better_exposed_filters',
+    'rules',
   ));
 }
