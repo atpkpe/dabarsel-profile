@@ -139,7 +139,7 @@ projects[multiform][version] = '1.1'
 
 projects[webform][type] = 'module'
 projects[webform][subdir] = 'contrib'
-projects[webform][version] = '4.0-rc5'
+projects[webform][version] = '4.0-rc6'
 
 projects[jammer][type] = 'module'
 projects[jammer][subdir] = 'contrib'
