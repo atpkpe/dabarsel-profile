@@ -117,7 +117,7 @@ function atp_settings_default_linkit_profiles() {
   $linkit_profile->profile_type = '2';
   $linkit_profile->data = array(
     'search_plugins' => array(
-      'entity:file' => array(
+      'entity:taxonomy_term' => array(
         'enabled' => 1,
         'weight' => '-10',
       ),
@@ -125,7 +125,7 @@ function atp_settings_default_linkit_profiles() {
         'enabled' => 1,
         'weight' => '-10',
       ),
-      'entity:taxonomy_term' => array(
+      'entity:file' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
@@ -137,50 +137,37 @@ function atp_settings_default_linkit_profiles() {
     'entity:node' => array(
       'result_description' => '',
       'bundles' => array(
-        'component' => 'component',
-        'news' => 'news',
-        'section' => 'section',
-        'page' => 'page',
-        'webform' => 'webform',
-        'gallery' => 0,
-        'contact' => 0,
+        'page' => 0,
         'slide' => 0,
       ),
       'group_by_bundle' => 0,
-      'include_unpublished' => 1,
-    ),
-    'entity:taxonomy_term' => array(
-      'result_description' => '',
-      'bundles' => array(
-        'sites' => 0,
-        'media_folders' => 0,
-        'news_categories' => 0,
-      ),
-      'group_by_bundle' => 0,
+      'include_unpublished' => 0,
     ),
     'entity:file' => array(
       'result_description' => '',
       'bundles' => array(
-        'document' => 'document',
         'image' => 0,
         'video' => 0,
         'audio' => 0,
+        'document' => 0,
       ),
       'group_by_bundle' => 0,
       'show_scheme' => 0,
       'group_by_scheme' => 0,
-      'direct_download' => 1,
       'image_extra_info' => array(
         'thumbnail' => 'thumbnail',
         'dimensions' => 'dimensions',
       ),
+    ),
+    'entity:taxonomy_term' => array(
+      'result_description' => '',
     ),
     'entity:user' => array(
       'result_description' => '',
     ),
     'insert_plugin' => array(
       'plugin' => 'raw_url',
-      'url_method' => '1',
+      'url_method' => '2',
     ),
     'attribute_plugins' => array(
       'accesskey' => array(
