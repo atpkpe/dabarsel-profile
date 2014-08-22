@@ -30,16 +30,16 @@ projects[wysiwyg][download][revision] = '52e2675b9dc92d8d71ac421d59e12a7f5b53ca6
 
 libraries[ckeditor][directory_name] = ckeditor
 libraries[ckeditor][download][type] = file
-libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.3_edit.zip
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.4_edit.zip
 libraries[ckeditor][type] = library
 
 libraries[ckeditor_widget][download][type] = "get"
-libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.4.3.zip"
+libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.4.4.zip"
 libraries[ckeditor_widget][directory_name] = "widget"
 libraries[ckeditor_widget][destination] = "libraries/ckeditor/plugins"
 
 libraries[ckeditor_lineutils][download][type] = "get"
-libraries[ckeditor_lineutils][download][url] = "http://download.ckeditor.com/lineutils/releases/lineutils_4.4.3.zip"
+libraries[ckeditor_lineutils][download][url] = "http://download.ckeditor.com/lineutils/releases/lineutils_4.4.4.zip"
 libraries[ckeditor_lineutils][directory_name] = "lineutils"
 libraries[ckeditor_lineutils][destination] = "libraries/ckeditor/plugins"
 
