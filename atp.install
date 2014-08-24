@@ -173,6 +173,7 @@ function atp_update_7008(&$sandbox) {
     'flag_actions',
     'better_exposed_filters',
     'rules',
+    'atp_notifications',
   ));
 }
 
