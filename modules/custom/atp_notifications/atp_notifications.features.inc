@@ -67,11 +67,11 @@ function atp_notifications_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 1,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'atp_notifications',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Notify me about changed content".
   $flags['notification_node_changed'] = array(
@@ -115,11 +115,11 @@ function atp_notifications_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 1,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'atp_notifications',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Notify me about expiration".
   $flags['notification_node_expiration'] = array(
@@ -163,11 +163,11 @@ function atp_notifications_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 1,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'atp_notifications',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
