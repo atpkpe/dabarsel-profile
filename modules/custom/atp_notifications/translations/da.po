@@ -3,15 +3,15 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atp_notifications\n"
-"POT-Creation-Date: 2014-08-21 23:05+0200\n"
-"PO-Revision-Date: 2014-08-21 23:05+0200\n"
-"Last-Translator: NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+msgid "Project-Id-Version: atp_notifications\n"
+msgid "POT-Creation-Date: 2014-08-21 23:05+0200\n"
+msgid "PO-Revision-Date: 2014-08-21 23:05+0200\n"
+msgid "Last-Translator: NAME <EMAIL@ADDRESS>\n"
+msgid "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+msgid "MIME-Version: 1.0\n"
+msgid "Content-Type: text/plain; charset=utf-8\n"
+msgid "Content-Transfer-Encoding: 8bit\n"
+msgid "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 msgid "Hi !name."
 msgstr "Hej !name."
@@ -40,3 +40,20 @@ msgstr "Noget indhold er ændret på !site"
 msgid "Some content has changed at !site. Take a look at:"
 msgstr "Noget indhold er ændret på !site. Se her:"
 
+msgid "Notify me about expiration"
+msgstr "Giv mig besked om udløbet indhold"
+
+msgid "If some content is expiring please let me know"
+msgstr "Hvis indhold udløber så giv mig besked"
+
+msgid "Notify me about changed state of node"
+msgstr "Giv mig besked om ændret indhold"
+
+msgid "If a node is changed and published please let me know"
+msgstr "Hvis indhold er ændret og publiceret så giv mig besked"
+
+msgid "Notify me about unpublishing"
+msgstr "Giv mig besked om afpublicering"
+
+msgid "If some content is scheduled for unpublishing please let me know"
+msgstr "Hvis det er planglangt at indholdet skal afpubliceres så giv mig besked"
