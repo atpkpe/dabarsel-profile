@@ -1,17 +1,6 @@
 # Danish translation of ATP notifications
 # Created by Mikkel Jakobsen <mikkel@adapt.dk>
 #
-msgid ""
-msgstr ""
-msgid "Project-Id-Version: atp_notifications\n"
-msgid "POT-Creation-Date: 2014-08-21 23:05+0200\n"
-msgid "PO-Revision-Date: 2014-08-21 23:05+0200\n"
-msgid "Last-Translator: NAME <EMAIL@ADDRESS>\n"
-msgid "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
-msgid "MIME-Version: 1.0\n"
-msgid "Content-Type: text/plain; charset=utf-8\n"
-msgid "Content-Transfer-Encoding: 8bit\n"
-msgid "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 msgid "Hi !name."
 msgstr "Hej !name."
