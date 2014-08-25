@@ -41,7 +41,7 @@ body {
   border: 1px solid $gray;
 }
 
-#user-login {
+#user-login, .profile {
   @extend %content;
   padding: 40px 0;
 }
