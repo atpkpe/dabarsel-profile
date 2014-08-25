@@ -1,6 +1,7 @@
 .toolbox {
   float: right;
   position: relative;
+  height: 40px;
   .print, .share {
     @include border-radius(3px);
     width: 26px;
