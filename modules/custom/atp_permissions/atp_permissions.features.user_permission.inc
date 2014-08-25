@@ -274,6 +274,16 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer css injection'.
+  $permissions['administer css injection'] = array(
+    'name' => 'administer css injection',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'css_injector',
+  );
+
   // Exported permission: 'administer default config'.
   $permissions['administer default config'] = array(
     'name' => 'administer default config',
@@ -391,6 +401,16 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'image',
+  );
+
+  // Exported permission: 'administer js_injector'.
+  $permissions['administer js_injector'] = array(
+    'name' => 'administer js_injector',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'js_injector',
   );
 
   // Exported permission: 'administer languages'.
