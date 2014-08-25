@@ -40,3 +40,8 @@ body {
   padding: 20px;
   border: 1px solid $gray;
 }
+
+#user-login {
+  @extend %content;
+  padding: 40px 0;
+}
