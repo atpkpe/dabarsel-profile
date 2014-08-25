@@ -137,6 +137,11 @@
     float: none;
     margin: 0 0 ($margins/2) 0;
   }
+  .twocol-right aside & {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+  }
   .section-row > &:first-child, &.first {
     margin-left: 0;
   }

@@ -50,7 +50,7 @@ header {
     position: relative;
   }
   > .top {
-    height: 101px;
+    height: 104px;
     border-bottom: 1px solid $green;
     @include device(phone){
       height: 50px !important;
@@ -300,6 +300,9 @@ header {
           border: 1px solid $gray;
           line-height: 32px;
           height: auto;
+          &.active-trail {
+            border: 1px solid $green-hover-header
+          }
         }
       }
       > a {
