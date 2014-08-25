@@ -18,3 +18,105 @@ function atp_workflow_workbench_access_node_element_alter(&$element) {
   }
 
 }
+
+/**
+ * Implements hook_menu().
+ */
+function atp_workflow_menu() {
+  $items = array();
+
+  // Display a node's moderation history
+  $items["node/%node/email"] = array(
+    'title' => 'Send link',
+    'description' => 'Send email with link to draft.',
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('atp_workflow_email_form', 1),
+    'load arguments' => array(3),
+    'access callback' => '_workbench_moderation_access',
+    'access arguments' => array('view history', 1),
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_admin_paths().
+ */
+function atp_workflow_admin_paths() {
+  if (variable_get('node_admin_theme')) {
+    $paths = array(
+      'node/*/email' => TRUE,
+    );
+    return $paths;
+  }
+}
+
+/**
+ * Form to send email to current revision ( draft ).
+ *
+ * @param $node
+ *   The node being acted upon.
+ *
+ * @return
+ *   A Drupal confirmation form to send an email link to the live revision.
+ */
+function atp_workflow_email_form($form, &$form_state, $node) {
+  global $user;
+
+  $form = array();
+  $form['node'] = array(
+    '#value' => $node,
+    '#type' => 'value',
+  );
+
+  $form['header'] = array(
+    '#markup' =>  '<p>' . t('Send email with link to the draft of this page?') . '</p>',
+  );
+
+  $form['email'] = array(
+    '#title' => t('Recipient address'),
+    '#type' => 'textfield',
+    '#description' => t('Email address of the recipient'),
+  );
+
+  $form['message'] = array(
+    '#title' => t('Message'),
+    '#type' => 'textarea',
+    '#description' => t('The comment will be included in the email.'),
+    '#default_value' => t("Hello\nYou can access a preview to '@title' at this URL:\n!url\nKind regards, @name",
+      array('!url' => url("node/{$node->nid}/draft", array('absolute'=>TRUE)),
+            '@name' => $user->name,
+            '@title' => $node->title
+      ))
+  );
+
+  return confirm_form($form, t('Send email with draft link', array('%title' => $node->title)), "node/{$node->nid}/email", '', t('Send E-mail'));
+}
+
+/**
+ * Implements hook_mail().
+ */
+function atp_workflow_mail($key, &$message, $params) {
+  $message['subject'] = t("Preview link - @title ", $params);
+  $message['body'] = array($params['body']);
+}
+
+/**
+ * Submit handler for unpublishing a live revision of a node.
+ */
+function atp_workflow_email_form_submit($form, &$form_state) {
+  global $user;
+  $node = $form['node']['#value'];
+
+  drupal_mail(
+    'atp_workflow',
+    'atp_workflow_mail',
+    $form_state['values']['email'],
+    language_default(),
+    array('@title'=> $form_state['values']['node']->title, 'body' => $form_state['values']['message'])
+  );
+
+  drupal_set_message(t('Email with link to draft has been sent.'));
+  $form_state['redirect'] ="node/{$node->nid}/moderation";
+}
