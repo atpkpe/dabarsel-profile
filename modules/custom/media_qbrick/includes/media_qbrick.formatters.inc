@@ -140,6 +140,8 @@ function media_qbrick_file_formatter_image_view($file, $display, $langcode) {
       $element = array(
         '#theme' => 'image_style',
         '#style_name' => $image_style,
+        '#prefix' => '<div class="overlay-open-wrapper">',
+        '#suffix' => '</div>',
         '#path' => $wrapper->getLocalThumbnailPath(),
         '#alt' => isset($file->override['attributes']['alt']) ? $file->override['attributes']['alt'] : $file->filename,
         '#attributes' => array('data-mfp-src' => '/overlay/' . $file->fid . '/video', 'class' =>'file-overlay-open'),
