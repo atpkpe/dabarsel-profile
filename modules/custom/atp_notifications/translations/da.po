@@ -46,3 +46,12 @@ msgstr "Giv mig besked om afpublicering"
 
 msgid "If some content is scheduled for unpublishing please let me know"
 msgstr "Hvis det er planglangt at indholdet skal afpubliceres så giv mig besked"
+
+msgid "Expiration date"
+msgstr "Udløbsdato"
+
+msgid "Expiration date limit"
+msgstr "Udløbsdato grænse"
+
+msgid "Expiration date limit"
+msgstr "Udløbsdato påkrævet"
