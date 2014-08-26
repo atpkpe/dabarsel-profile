@@ -63,6 +63,7 @@ dependencies[] = better_exposed_filters
 dependencies[] = wysiwyg_filter
 dependencies[] = rules
 dependencies[] = smtp
+dependencies[] = linkchecker
 
 ; Project features
 dependencies[] = atp_settings

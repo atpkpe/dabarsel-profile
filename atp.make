@@ -220,6 +220,9 @@ projects[better_exposed_filters][type] = 'module'
 projects[better_exposed_filters][subdir] = 'contrib'
 projects[better_exposed_filters][version] = '3.0-beta4'
 
+projects[linkchecker][subdir] = 'contrib'
+projects[linkchecker][version] = '1.2'
+
 ;Atodo: Rememeber rules patch
 ; rules
 projects[rules][subdir] = 'contrib'

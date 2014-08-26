@@ -64,7 +64,7 @@ function atp_add_translation($source, $translation, $langcode = 'da') {
 
 function atp_create_users() {
 
-  $author_role = user_role_load_by_name('Author'); 
+  $author_role = user_role_load_by_name('Author');
   $editor_role = user_role_load_by_name('Editor');
   $extended_role = user_role_load_by_name('Extended layout');
   $atp_role = user_role_load_by_name('atp.dk');
@@ -182,4 +182,11 @@ function atp_update_7008(&$sandbox) {
  */
 function atp_update_7009(&$sandbox) {
   module_enable(array('smtp'));
+}
+
+/**
+ * Enable Linkchecker
+ */
+function atp_update_7010(&$sandbox) {
+  module_enable(array('linkchecker'));
 }
