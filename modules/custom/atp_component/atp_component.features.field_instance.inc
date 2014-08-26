@@ -74,7 +74,7 @@ function atp_component_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'field_wrapper' => 'p',
+          'field_wrapper' => 'div',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
@@ -363,7 +363,7 @@ function atp_component_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
-          'field_wrapper' => 0,
+          'field_wrapper' => 'p',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
