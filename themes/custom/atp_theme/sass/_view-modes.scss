@@ -156,7 +156,10 @@
 .view-mode-menu-box {
   background: #272727;
   border-left: 4px solid $green;
-  padding: $margins $margins 0 $margins;
+  padding: $margins;
+  footer & {
+    display: none;
+  }
   * {
     color: #fff;
   }
@@ -167,6 +170,7 @@
     margin-bottom: $margins;
     a {
       display: inline !important;
+      text-decoration: none;
       &:link, &:visited {
         color: $green;
       }

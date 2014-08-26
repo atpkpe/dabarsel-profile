@@ -259,11 +259,6 @@ header {
   }
   > ul {
     > li {
-      &:hover, &.hover {
-        > ul {
-          display: block;
-        }
-      }
       &:after {
         @extend %menu-gradient;
         content: "";
@@ -284,6 +279,11 @@ header {
       &.last {
         $tmp: (70px - 32px)/2;
         padding: $tmp 0;
+        &:hover, &.hover {
+          > ul {
+            display: block;
+          }
+        }
         &:after {
           display: none;
         }
@@ -314,6 +314,7 @@ header {
         }
       }
       > ul {
+        @include clearfix;
         box-sizing: initial !important;
         background: $gray-light;
         display: none;
@@ -325,7 +326,7 @@ header {
         border-left: 2000px solid $gray-light;
         border-right: 2000px solid $gray-light;
         margin-left: -2000px;
-        padding: $margins/2 0;
+        padding: $margins 0;
         > li {
           float: left;
           width: percentage(300/960);
