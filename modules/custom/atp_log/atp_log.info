@@ -1,0 +1,6 @@
+name = ATP Log
+description = Module implementing logging functionality as required by ATP.
+core = 7.x
+package = ATP
+
+dependencies[] = user
