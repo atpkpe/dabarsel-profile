@@ -562,6 +562,16 @@ function atp_permissions_user_default_permissions() {
     'module' => 'i18n_menu_overview',
   );
 
+  // Exported permission: 'administer meta tags'.
+  $permissions['administer meta tags'] = array(
+    'name' => 'administer meta tags',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'administer mini panels'.
   $permissions['administer mini panels'] = array(
     'name' => 'administer mini panels',
@@ -1830,6 +1840,16 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit meta tags'.
+  $permissions['edit meta tags'] = array(
+    'name' => 'edit meta tags',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'metatag',
   );
 
   // Exported permission: 'edit own audio files'.

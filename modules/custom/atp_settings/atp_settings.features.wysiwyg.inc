@@ -48,6 +48,7 @@ function atp_settings_wysiwyg_default_profiles() {
           'Maximize' => 1,
           'SpellChecker' => 1,
           'Scayt' => 1,
+          'Templates' => 1,
         ),
         'textbox' => array(
           'textbox' => 1,
@@ -71,7 +72,7 @@ function atp_settings_wysiwyg_default_profiles() {
       'css_path' => '%t/css/editor.css',
       'stylesSet' => '',
       'block_formats' => 'p,h2,h3,h4,div',
-      'advanced__active_tab' => 'edit-basic',
+      'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 0,
     ),
     'rdf_mapping' => array(),
