@@ -105,3 +105,58 @@ blockquote {
     line-height: 22px;
   }
 }
+
+table {
+  &.table1 {
+    width: 100% !important;
+    margin-bottom: $margins;
+    border: 1px solid $table-header;
+    border-collapse: collapse;
+    th {
+      border-bottom: 1px solid $table-header;
+      padding: $margins/2 $margins;
+    }
+    td {
+      border-bottom: 1px solid $table-header;
+      padding: $margins/2 $margins;
+      text-align: center;
+      &:first-child {
+        text-align: left;
+      }
+    }
+    thead {
+      th {
+        background: $table-header;
+        text-align: left;
+        color: #fff;
+      }
+    }
+  }
+  &.table2 {
+    width: 100%;
+    margin-bottom: $margins;
+    border: 1px solid $table-header;
+    border-collapse: collapse;
+    border-top: 2px solid $green;
+    th {
+      border-bottom: 1px solid $table-header;
+      padding: $margins/2 $margins;
+    }
+    td {
+      border-bottom: 1px solid $table-header;
+      padding: $margins/2 $margins;
+      text-align: center;
+      &:first-child {
+        text-align: left;
+      }
+    }
+    thead {
+      th {
+        border-top: 2px solid $green;
+      }
+    }
+    tfoot {
+      font-weight: bold;
+    }
+  }
+}
