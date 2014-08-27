@@ -1,0 +1,42 @@
+<?php
+
+
+function atp_login_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  hide($form['account']['pass']);
+}
+
+function atp_login_menu_alter(&$items) {
+  unset($items['user/password']);
+  unset($items['user/register']);
+}
+
+/**
+ * Process variables for user-profile.tpl.php.
+ *
+ * The $variables array contains the following arguments:
+ * - $account
+ *
+ * @see user-profile.tpl.php
+ */
+function atp_login_preprocess_user_profile(&$variables) {
+  $account = $variables['elements']['#account'];
+  foreach ($account->roles as $rid => $role) {
+    $roles[] = array($role);
+  }
+  $variables['roles'] = $roles;
+}
+
+/**
+ * Implements hook_tamauth_login_event().
+ */
+function atp_login_tamauth_login_event($user) {
+
+  drupal_set_message('You are now logged in to Drupal.', 'status', FALSE);
+
+  // Set email to initials + @atp.dk.
+  if (empty($user->mail)) {
+    $edit = array('mail' => $user->name . '@atp.dk');
+    user_save($user, $edit);
+  }
+
+}
