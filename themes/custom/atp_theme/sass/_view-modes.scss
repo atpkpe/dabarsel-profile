@@ -10,9 +10,12 @@
   padding: 0 $margins $margins $margins;
   border: 1px solid $gray;
   @include device(tablet-portrait){
-    @include view-mode(7.45);
+    @include view-mode(7.80);
     margin-left: 0px;
-    margin-right: $margins;
+    margin-right: 0px;
+    &.even {
+      margin-right: $margins;
+    }
   }
   @include device(phone){
     height: auto;
