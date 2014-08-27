@@ -44,6 +44,7 @@ libraries[ckeditor_lineutils][directory_name] = "lineutils"
 libraries[ckeditor_lineutils][destination] = "libraries/ckeditor/plugins"
 
 projects[media][download][revision] = 'b2ba2da9dbfd5deb306fd0724db9e643e1c5e721'
+projects[media][patch][] = 'http://www.drupal.org/files/issues/media-fix_operator_support-2226729-2.patch'
 ; projects[media][patch][] = 'http://www.drupal.org/files/issues/media-ckeditor4-media-plugin-2177893-13.patch'
 ; projects[media][patch][] = 'https://raw.githubusercontent.com/kevinchampion/imagex_patches/update-media-patch/contrib/media/media-ckeditor-bind-unbind-stripping.patch'
 
