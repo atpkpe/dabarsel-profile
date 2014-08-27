@@ -190,3 +190,10 @@ function atp_update_7009(&$sandbox) {
 function atp_update_7010(&$sandbox) {
   module_enable(array('linkchecker'));
 }
+
+/**
+ * Enable syslog
+ */
+function atp_update_7011(&$sandbox) {
+  module_enable(array('syslog'));
+}
