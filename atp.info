@@ -64,6 +64,7 @@ dependencies[] = wysiwyg_filter
 dependencies[] = rules
 dependencies[] = smtp
 dependencies[] = linkchecker
+dependencies[] = syslog
 
 ; Project features
 dependencies[] = atp_settings
