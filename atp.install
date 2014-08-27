@@ -204,3 +204,10 @@ function atp_update_7011(&$sandbox) {
 function atp_update_7012(&$sandbox) {
   module_enable(array('atp_log'));
 }
+
+/**
+ * Enable metatag module.
+ */
+function atp_update_7013(&$sandbox) {
+  module_enable(array('metatag'));
+}
