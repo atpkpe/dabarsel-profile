@@ -91,5 +91,7 @@ dependencies[] = atp_webform
 dependencies[] = atp_notifications
 dependencies[] = adapt_ckeditor_widgets
 dependencies[] = atp_login
+dependencies[] = atp_views
+dependencies[] = atp_log
 
 
