@@ -165,6 +165,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
     ),
     'module' => 'user',
   );
@@ -991,6 +992,16 @@ function atp_permissions_user_default_permissions() {
     'module' => 'sites',
   );
 
+  // Exported permission: 'administer smtp module'.
+  $permissions['administer smtp module'] = array(
+    'name' => 'administer smtp module',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
+    ),
+    'module' => 'smtp',
+  );
+
   // Exported permission: 'administer software updates'.
   $permissions['administer software updates'] = array(
     'name' => 'administer software updates',
@@ -998,6 +1009,16 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'administer tamauth'.
+  $permissions['administer tamauth'] = array(
+    'name' => 'administer tamauth',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
+    ),
+    'module' => 'tamauth',
   );
 
   // Exported permission: 'administer taxonomy'.
@@ -1016,6 +1037,15 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'administer ultimate cron'.
+  $permissions['administer ultimate cron'] = array(
+    'name' => 'administer ultimate cron',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'ultimate_cron',
   );
 
   // Exported permission: 'administer url aliases'.
@@ -1123,6 +1153,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'block IP addresses',
     'roles' => array(
       'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
     ),
     'module' => 'system',
   );
@@ -2060,6 +2091,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'masquerade as any user',
     'roles' => array(
       'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
     ),
     'module' => 'masquerade',
   );
@@ -2069,6 +2101,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'masquerade as user',
     'roles' => array(
       'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
     ),
     'module' => 'masquerade',
   );
@@ -2406,6 +2439,7 @@ function atp_permissions_user_default_permissions() {
     'roles' => array(
       'Author' => 'Author',
       'Developer' => 'Developer',
+      'Employee' => 'Employee',
     ),
     'module' => 'workbench_moderation',
   );

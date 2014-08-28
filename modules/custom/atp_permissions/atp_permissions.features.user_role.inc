@@ -28,10 +28,22 @@ function atp_permissions_user_default_roles() {
     'weight' => 6,
   );
 
+  // Exported role: Employee.
+  $roles['Employee'] = array(
+    'name' => 'Employee',
+    'weight' => 8,
+  );
+
   // Exported role: Extended layout.
   $roles['Extended layout'] = array(
     'name' => 'Extended layout',
     'weight' => 5,
+  );
+
+  // Exported role: IT-ops.
+  $roles['IT-ops'] = array(
+    'name' => 'IT-ops',
+    'weight' => 9,
   );
 
   // Exported role: Site administrator.
