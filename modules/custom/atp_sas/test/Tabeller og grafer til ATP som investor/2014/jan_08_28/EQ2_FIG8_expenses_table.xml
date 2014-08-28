@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<title>Figur 8 - engelsk</title>
+<summary>Expenses</summary>
+<date>2014-08-28 15:38</date>
+<type>table</type>
+<headers>
+<head>
+<item/>
+<item pos="right" span="2">Q1-Q2 2014</item>
+<item pos="right" span="2">2013</item>
+</head>
+<head>
+<item/>
+<item pos="right">DKK million</item>
+<item pos="right">per cent</item>
+<item pos="right">DKK million</item>
+<item pos="right">per cent</item>
+</head>
+</headers>
+<values>
+<value>
+<item pos="left">Investment expenses</item>
+<item pos="right">701</item>
+<item pos="right">0,11</item>
+<item pos="right">1.254</item>
+<item pos="right">0,21</item>
+</value>
+<value>
+<item pos="left"></item>
+<item pos="right"></item>
+<item pos="right"></item>
+<item pos="right"></item>
+<item pos="right"></item>
+</value>
+<value>
+<item pos="left">– hereof direct</item>
+<item pos="right">157</item>
+<item pos="right">0,02</item>
+<item pos="right">258</item>
+<item pos="right">0,04</item>
+</value>
+</values>
+</data>
