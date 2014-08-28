@@ -36,20 +36,22 @@
 ?>
 <div class="profile">
 
-<div class="description">
-  <?php echo t('You are logged in as');?>:
-</div>
-<div class="username"><?php print($elements['#account']->name); ?></div>
-<div class="mail"><?php print($elements['#account']->mail); ?></div>
+	<h1><?php echo t('Profile');?></h1>
+	<div class="profile-info">
+		<div class="profile-info-title">
+		  <?php echo t('You are logged in as');?>:
+		</div>
+		<div class="username"><h2><?php print($elements['#account']->name); ?></h2></div>
+		<div class="mail"><?php print($elements['#account']->mail); ?></div>
+	</div>
 
-<div class="description">
-  <?php echo t('With the following roles');?>:
-</div>
-
-<?php echo theme('table', array(
-  'rows' => $roles,
-  'attributes' => array('class' => array('user-roles'))
-  ));
-?>
+	<div class="description">
+	  <h2><?php echo t('Roles');?></h2>
+		<?php echo theme('table', array(
+		  'rows' => $roles,
+		  'attributes' => array('class' => array('user-roles'))
+		  ));
+		?>
+	</div>
 
 </div>

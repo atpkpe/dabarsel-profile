@@ -119,3 +119,40 @@
 .onecol {
   @extend %content;
 }
+.profile {
+  @include clearfix;
+  .profile-info {
+    @include float-span(8);
+    .profile-info-title {
+      margin-bottom: $margins;
+    }
+  }
+  .description {
+    @include float-span(8);
+    margin-right: 0px;
+    @include device(phone){
+      margin-top: $margins+10px;
+    }
+    .user-roles {
+      background: #ffffff;
+      width: 100%;
+      padding: $margins;
+      padding-left: $margins+20px;
+      td {
+        display: list-item;
+        padding-bottom: 10px;
+      }
+      tr:last-child td {
+        padding-bottom: 0px;
+      }
+    }
+  }
+  .profile-info, .description {
+    @include device(phone){
+      width: 100%;
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+      float: none !important;
+    }
+  }
+}
