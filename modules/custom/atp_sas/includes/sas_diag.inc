@@ -68,6 +68,13 @@ abstract class sasDiag {
         ),
       ),
     );
+     // Only for debug:
+    array_unshift($output, array(
+      'debug' => array(
+        '#type' => 'markup',
+        '#markup' => sprintf('<h3>%s:</h3>', $this->id),
+      ),
+    ));
 
     if (empty($used_ids) || !in_array($this->id, $used_ids)) {
       $output['#attached'] = array(

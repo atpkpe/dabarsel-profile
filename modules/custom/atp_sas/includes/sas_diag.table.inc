@@ -49,8 +49,15 @@ class sasDiagTable extends sasDiag {
         'cellspacing' => array(0),
       ),
     );
-//    var_dump($rows);
-//    die;
+
+    // Only for debug:
+    $table = array(
+      'debug' => array(
+        '#type' => 'markup',
+        '#markup' => sprintf('<h3>%s:</h3>', $this->id),
+      ),
+    ) + array('table' => $table);
+
     return $table;
   }
 

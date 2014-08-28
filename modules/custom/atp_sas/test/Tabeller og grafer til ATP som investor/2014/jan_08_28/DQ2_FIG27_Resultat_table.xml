@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<title>Figur 27 - dansk</title>
+<summary>ATPs resultat</summary>
+<date>2014-08-28 15:38</date>
+<type>table</type>
+<headers>
+<head>
+<item></item><item>mio. kr.</item><item>pct.</item>
+</head>
+</headers>
+<values>
+<value>
+<item pos="left" >Investeringsporteføljen</item>
+<item pos="right">8.685</item>
+<item pos="right">-</item></value>
+<value>
+<item pos="left" >Afdækningsporteføljen</item>
+<item pos="right">51.161</item>
+<item pos="right">-</item></value>
+<value>
+<item pos="left" format="strong">I alt</item>
+<item pos="right">59.846</item>
+<item pos="right">10,3</item></value>
+</values>
+</data>

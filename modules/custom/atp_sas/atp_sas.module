@@ -136,20 +136,22 @@ function atp_sas_ajax_get_file_browser($json = FALSE) {
       case 'file':
         $diag_id = str_replace('.xml', '', $item['node']->getFilename());
         $diag = sasDiagFactory::create($diag_id, $item['node']->getPath());
-        $file_structure_items[] = l(
-          $diag_id,
-          '',
-          array(
-            'attributes' => array(
-              'data-path' => $item['node']->getPath(),
-              'data-id' => $diag_id,
-              'data-type' => $diag->getType(),
-              'class' => array(
-                'sas-browser-item-file',
+        if (is_object($diag)) {
+          $file_structure_items[] = l(
+            $diag_id,
+            '',
+            array(
+              'attributes' => array(
+                'data-path' => $item['node']->getPath(),
+                'data-id' => $diag_id,
+                'data-type' => $diag->getType(),
+                'class' => array(
+                  'sas-browser-item-file',
+                ),
               ),
-            ),
-          )
-        );
+            )
+          );
+        }
         break;
     }
   }
@@ -221,8 +223,11 @@ function _atp_sas_diag_embed_process($text, $filter, $format, $langcode, $cache,
     '/\[\[sasDiag\|id:([^|]+)\|path:([^|]+)\|type:([^\]]+)\]\]/',
     function($m){
       $diag = sasDiagFactory::create($m[1], $m[2]);
-      $output = $diag->render();
-      return render($output);
+      if (is_object($diag)) {
+        $output = $diag->render();
+        return render($output);
+      }
+      return;
     },
   $text);
 }

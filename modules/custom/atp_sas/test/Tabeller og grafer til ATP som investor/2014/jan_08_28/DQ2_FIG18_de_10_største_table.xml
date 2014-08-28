@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<title>Figur 18 - dansk</title>
+<summary>De 10 største</summary>
+<date>2014-08-28 15:38</date>
+<type>table</type>
+<headers>
+<head>
+<item>Selskab</item><item>Markedsværdi</item>
+</head>
+</headers>
+<values>
+<value><item pos="left">Novo Nordisk</item>
+<item pos="right">1,6</item></value>
+<value><item pos="left">Danske Bank</item>
+<item pos="right">1,4</item></value>
+<value><item pos="left">A.P. Møller - Mærsk</item>
+<item pos="right">1,4</item></value>
+<value><item pos="left">Genmab</item>
+<item pos="right">0,9</item></value>
+<value><item pos="left">Pandora</item>
+<item pos="right">0,9</item></value>
+<value><item pos="left">Carlsberg</item>
+<item pos="right">0,8</item></value>
+<value><item pos="left">Vestas Wind Systems</item>
+<item pos="right">0,8</item></value>
+<value><item pos="left">Novozymes</item>
+<item pos="right">0,7</item></value>
+<value><item pos="left">GN Store Nord</item>
+<item pos="right">0,7</item></value>
+<value><item pos="left">Coloplast</item>
+<item pos="right">0,5</item></value>
+</values>
+</data>

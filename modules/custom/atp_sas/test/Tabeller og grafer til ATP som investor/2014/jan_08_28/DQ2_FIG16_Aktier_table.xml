@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<title>Figur 16 - dansk</title>
+<summary>Aktier</summary>
+<date>2014-08-28 15:38</date>
+<type>table</type>
+<headers>
+<head>
+<item></item><item>mio. kr.</item>
+</head>
+</headers>
+<values>
+<value>
+<item pos="left" format="strong">Aktier</item>
+<item pos="right">6950</item></value>
+<value>
+<item pos="left" >  Børsnoterede danske aktier</item>
+<item pos="right">3174</item></value>
+<value>
+<item pos="left" >  Børsnoterede udenlandske aktier</item>
+<item pos="right">1337</item></value>
+<value>
+<item pos="left" >  Unoterede aktier</item>
+<item pos="right">2439</item></value>
+</values>
+</data>

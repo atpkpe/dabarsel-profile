@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<title>Figur 23 - dansk</title>
+<summary>Følsomhed</summary>
+<date>2014-08-28 15:38</date>
+<type>table</type>
+<headers>
+<head>
+<item></item><item>Hændelse</item>
+<item>Ekskl. forsikrings-strategier</item><item>Inkl. forsikrings-strategier</item>
+</head>
+</headers>
+<values>
+<value>
+<item pos="left">Renter</item>
+<item pos="left">Rente + 1,5%-point</item>
+<item pos="right">2,8</item>
+<item pos="right">2,8</item></value>
+<value>
+<item pos="left">Kredit</item>
+<item pos="left">Kreditspænd + 7%-point</item>
+<item pos="right">6,4</item>
+<item pos="right">6,4</item></value>
+<value>
+<item pos="left">Aktier</item>
+<item pos="left">Aktier - 50%</item>
+<item pos="right">31,5</item>
+<item pos="right">31,5</item></value>
+<value>
+<item pos="left">Inflation</item>
+<item pos="left">Realrente + 2,0%-point</item>
+<item pos="right">12,1</item>
+<item pos="right">6,6</item></value>
+<value>
+<item pos="left">Råvarer</item>
+<item pos="left">Råvarer - 65%</item>
+<item pos="right">5,4</item>
+<item pos="right">5,4</item></value>
+</values>
+</data>
