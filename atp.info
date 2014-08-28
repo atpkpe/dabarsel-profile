@@ -66,6 +66,7 @@ dependencies[] = smtp
 dependencies[] = linkchecker
 dependencies[] = syslog
 dependencies[] = metatag
+dependencies[] = tamauth
 
 ; Project features
 dependencies[] = atp_settings
@@ -89,5 +90,6 @@ dependencies[] = atp_signup
 dependencies[] = atp_webform
 dependencies[] = atp_notifications
 dependencies[] = adapt_ckeditor_widgets
+dependencies[] = atp_login
 
 

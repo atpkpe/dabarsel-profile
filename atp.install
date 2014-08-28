@@ -20,6 +20,7 @@ function atp_install() {
 
   atp_create_users();
   atp_add_translations();
+  atp_tam_mappings();
 
 }
 
@@ -61,6 +62,33 @@ function atp_add_translation($source, $translation, $langcode = 'da') {
   $location = '';
   _locale_import_one_string_db($report, $langcode, $context, $source, $translation, $textgroup, $location, $mode);
 }
+
+function atp_tam_mappings() {
+
+  $mappings = array(
+    'DRUPAL-EMPLOYEE' => 'Employee',
+    'DRUPAL-AUTHOR' => 'Author',
+    'DRUPAL-EDITOR' => 'Editor',
+    'DRUPAL-EXTENDED-LAYOUT' => 'Extended layout',
+    'DRUPAL-IT-OPS' => 'IT-ops',
+    'DRUPAL-SITE-ADMINISTRATOR' => 'Site administrator',
+    'DRUPAL-ATP' => 'atp.dk',
+    'DRUPAL-ATP-UDBUD' => 'atp-udbud',
+    'DRUPAL-DESIGNMANUAL' => 'designmanual',
+    'DRUPAL-VELKOMMEN-HK' => 'velkommen-hk',
+    'DRUPAL-VELKOMMEN-IT' => 'velkommen-it',
+    'DRUPAL-VELKOMMEN-INDIVIDUEL' => 'velkommen-individuel',
+    'DRUPAL-ATP_ALTERNATIVE_INVESTMENTS' => 'atp-alternative-investments',
+    'DRUPAL-ATP_TIMBERLAND_INVEST' => 'atp-timberland-invest',
+    'DRUPAL-ATP_ALPHA' => 'atp-alpha',
+    'DRUPAL-VELKOMMEN-DJOEF-MAGISTRE' => 'velkommen-djoef-magistre',
+  );
+
+  variable_set('tamauth_redirect', 'user' );
+  variable_set('tamauth_map_roles', $mappings);
+
+}
+
 
 function atp_create_users() {
 
@@ -210,4 +238,12 @@ function atp_update_7012(&$sandbox) {
  */
 function atp_update_7013(&$sandbox) {
   module_enable(array('metatag'));
+}
+
+/**
+ * Enable atp_login and tamauth module.
+ */
+function atp_update_7014(&$sandbox) {
+  module_enable(array('tamauth','atp_login'));
+  atp_tam_mappings();
 }
