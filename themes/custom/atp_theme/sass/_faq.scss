@@ -76,3 +76,52 @@ div.expanding {
     .textbox-title, .textbox-title a { color: $green-hover;}
   }
 }
+
+.floatbox {
+  width: 40%;
+  background: #ffffff;
+  padding: $margins;
+  padding-bottom: 0px;
+  margin: $margins;
+  @include device(tablet){
+    width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    float: none !important;
+  }
+  .textbox-content {
+    letter-spacing: 1px;
+  }
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  a {
+    font-size: inherit;
+    text-decoration: underline;
+  }
+  p {
+    font-size: 15px;
+    margin-bottom: 0px;
+    padding-bottom: $margins;
+  }
+  blockquote {
+    margin-bottom: 0px;
+    quotes: "\201D""\201D""\201D""\201D";
+    &:before {
+      font-family: sans-serif;
+      height: 43px;
+      color: #ccc;
+      content: open-quote;
+      font-size: 7em;
+      line-height: 0.9em;
+      margin-right: 10px;
+      vertical-align: -0.4em;
+      float: left;
+    }
+  }
+  blockquote, blockquote span {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
