@@ -166,6 +166,7 @@ header {
   position: absolute;
   top: 50px;
   left: 0;
+  display: block;
   @include device(tablet-portrait){
     left: $margins/2;
   }

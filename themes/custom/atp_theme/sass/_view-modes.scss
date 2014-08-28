@@ -160,7 +160,7 @@
   background: #272727;
   border-left: 4px solid $green;
   padding: $margins;
-  footer & {
+  footer &, .level-2 & {
     display: none;
   }
   * {
