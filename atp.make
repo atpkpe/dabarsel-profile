@@ -223,6 +223,18 @@ projects[better_exposed_filters][version] = '3.0-beta4'
 projects[linkchecker][subdir] = 'contrib'
 projects[linkchecker][version] = '1.2'
 
+projects[metatag][type] = 'module'
+projects[metatag][subdir] = 'contrib'
+projects[metatag][version] = '1.0-rc2'
+
+projects[tamauth][type] = 'module'
+projects[tamauth][subdir] = 'contrib'
+projects[tamauth][download][branch] = '7.x-1.x'
+projects[tamauth][download][type] = 'git'
+projects[tamauth][download][url] = 'http://git.drupal.org/project/tamauth.git'
+projects[tamauth][download][revision] = '2e787b503848eb42ac26fc2530abbbbd5e3657c7'
+projects[tamauth][patch][] = 'http://www.drupal.org/files/issues/tamauth-security-ui-hook-2328555-1.patch'
+
 ;Atodo: Rememeber rules patch
 ; rules
 projects[rules][subdir] = 'contrib'

@@ -65,6 +65,7 @@ dependencies[] = rules
 dependencies[] = smtp
 dependencies[] = linkchecker
 dependencies[] = syslog
+dependencies[] = metatag
 
 ; Project features
 dependencies[] = atp_settings
