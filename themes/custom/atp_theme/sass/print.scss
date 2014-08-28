@@ -1,0 +1,52 @@
+@import "compass";
+@import "singularitygs";
+@import "variables";
+@import "mixins";
+@import "extend";
+
+body, header, footer {
+  background: #fff;
+}
+
+#admin-menu, .menu, header:before, .languages, #search-block-form, .main-menu, #tabs, .toolbox, .bc, .shortcuts {
+  display: none;
+}
+
+#user-login, .profile, header>div>.inner, .footer-menu, .footer-menu>ul, .bottom-menu, .site-bottom-text, .ui-autocomplete#ui-id-2, .search-form.gss, .google-search-results, .searchhead, footer, .onecol, .twocol-left, .twocol-right {
+  width: 100%;
+}
+
+body {
+  &.admin-menu {
+    margin-top: 0 !important;
+  }
+}
+
+header {
+  > .top {
+    padding: $margins 0;
+    height: auto;
+    .front & {
+      height: auto;
+    }
+  }
+}
+#logo {
+  position: relative;
+  left: auto;
+  top: auto;
+}
+.twocol-left {
+  > aside {
+    display: none;
+  }
+  > article {
+    width: 100%;
+    border: 0;
+    padding: 0;
+  }
+}
+.site-footer-text {
+  width: 100%;
+  margin: 0;
+}

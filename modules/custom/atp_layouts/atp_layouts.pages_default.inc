@@ -663,7 +663,7 @@ function atp_layouts_default_page_manager_handlers() {
       'admin_title' => '',
       'level' => '1',
       'follow' => 0,
-      'depth' => '1',
+      'depth' => '3',
       'expanded' => 0,
       'sort' => 0,
       'override_title' => 1,

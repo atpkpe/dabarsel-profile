@@ -44,7 +44,14 @@ function atp_section_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_section_facts',
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -53,18 +60,17 @@ function atp_section_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'eun_base',
+      'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'component' => 'component',
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_section_facts',
+          'view_name' => 'entity_reference_autocomplete',
         ),
       ),
       'target_type' => 'node',
@@ -110,7 +116,14 @@ function atp_section_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_section_related',
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -119,22 +132,17 @@ function atp_section_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'eun_base',
+      'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'component' => 'component',
-          'news' => 'news',
-          'page' => 'page',
-          'section' => 'section',
-          'webform' => 'webform',
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_page_relations',
+          'view_name' => 'entity_reference_autocomplete',
         ),
       ),
       'target_type' => 'node',
@@ -150,7 +158,14 @@ function atp_section_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_section_slides',
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -159,18 +174,17 @@ function atp_section_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'eun_base',
+      'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'slide' => 'slide',
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_section_slide',
+          'view_name' => 'entity_reference_autocomplete',
         ),
       ),
       'target_type' => 'node',
