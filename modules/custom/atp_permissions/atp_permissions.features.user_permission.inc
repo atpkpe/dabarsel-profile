@@ -180,16 +180,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench',
   );
 
-  // Exported permission: 'access workbench access by role'.
-  $permissions['access workbench access by role'] = array(
-    'name' => 'access workbench access by role',
-    'roles' => array(
-      'Developer' => 'Developer',
-      'atp.dk' => 'atp.dk',
-    ),
-    'module' => 'workbench_access',
-  );
-
   // Exported permission: 'add media from remote sources'.
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',

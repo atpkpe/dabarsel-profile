@@ -78,7 +78,6 @@ features[user_permission][] = access site in maintenance mode
 features[user_permission][] = access site reports
 features[user_permission][] = access user profiles
 features[user_permission][] = access workbench
-features[user_permission][] = access workbench access by role
 features[user_permission][] = add media from remote sources
 features[user_permission][] = add terms in media_folders
 features[user_permission][] = add terms in news_categories
