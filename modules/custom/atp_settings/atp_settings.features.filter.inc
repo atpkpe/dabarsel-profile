@@ -23,10 +23,15 @@ function atp_settings_filter_default_formats() {
         'status' => 1,
         'settings' => array(
           'valid_elements' => 'a[href|target<_blank|title|name],
+
 div,p,br,span,em,strong,blockquote,ul,ol,li,dl,dt,dd,i,
+
 img, iframe[src|frameborder|height|scrolling|width],
+
 h1, h2, h3, h4,
+
 table,tr,th[colspan],td[colspan],thead,tbody,tfoot,
+
 @[class|style|align]',
           'allow_comments' => 0,
           'nofollow_policy' => 'whitelist',
@@ -156,6 +161,7 @@ table,tr,th[colspan],td[colspan],thead,tbody,tfoot,
             10 => 'collapsed',
             12 => 'table1',
             14 => 'table2',
+            16 => 'no-title',
           ),
           'rule_valid_ids' => array(),
           'rule_style_urls' => array(),
@@ -242,10 +248,15 @@ table,tr,th[colspan],td[colspan],thead,tbody,tfoot,
         'status' => 1,
         'settings' => array(
           'valid_elements' => 'a[href|target<_blank|title|name],
+
 div,p,br,span,em,strong,blockquote,ul,ol,li,dl,dt,dd,i,
+
 img, iframe[src|frameborder|height|scrolling|width],
+
 h1, h2, h3, h4,
+
 table,tr,th,td,tbody,
+
 @[class|style|align]',
           'allow_comments' => 0,
           'nofollow_policy' => 'whitelist',
@@ -373,6 +384,7 @@ table,tr,th,td,tbody,
             6 => 'expanding',
             8 => 'expanded',
             10 => 'collapsed',
+            12 => 'no-title',
           ),
           'rule_valid_ids' => array(),
           'rule_style_urls' => array(),
