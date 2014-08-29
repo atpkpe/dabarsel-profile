@@ -37,21 +37,23 @@
 <div class="profile">
 
 	<h1><?php echo t('Profile');?></h1>
-	<div class="profile-info">
-		<div class="profile-info-title">
-		  <?php echo t('You are logged in as');?>:
+	<div class="profile-infowrap">
+		<h2><?php echo t('You are logged in as');?></h2>
+		<div class="profile-infodata">
+			<div class="username"><?php print($elements['#account']->name); ?></div>
+			<div class="mail"><?php print($elements['#account']->mail); ?></div>
 		</div>
-		<div class="username"><h2><?php print($elements['#account']->name); ?></h2></div>
-		<div class="mail"><?php print($elements['#account']->mail); ?></div>
 	</div>
 
-	<div class="description">
+	<div class="profile-descwrap">
 	  <h2><?php echo t('Roles');?></h2>
-		<?php echo theme('table', array(
-		  'rows' => $roles,
-		  'attributes' => array('class' => array('user-roles'))
-		  ));
-		?>
+		<div class="profile-descdata">
+			<?php echo theme('table', array(
+			  'rows' => $roles,
+			  'attributes' => array('class' => array('user-roles'))
+			  ));
+			?>
+		</div>
 	</div>
 
 </div>
