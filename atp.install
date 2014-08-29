@@ -66,22 +66,22 @@ function atp_add_translation($source, $translation, $langcode = 'da') {
 function atp_tam_mappings() {
 
   $mappings = array(
-    'DRUPAL-EMPLOYEE' => 'Employee',
-    'DRUPAL-AUTHOR' => 'Author',
-    'DRUPAL-EDITOR' => 'Editor',
-    'DRUPAL-EXTENDED-LAYOUT' => 'Extended layout',
-    'DRUPAL-IT-OPS' => 'IT-ops',
-    'DRUPAL-SITE-ADMINISTRATOR' => 'Site administrator',
-    'DRUPAL-ATP' => 'atp.dk',
-    'DRUPAL-ATP-UDBUD' => 'atp-udbud',
-    'DRUPAL-DESIGNMANUAL' => 'designmanual',
-    'DRUPAL-VELKOMMEN-HK' => 'velkommen-hk',
-    'DRUPAL-VELKOMMEN-IT' => 'velkommen-it',
-    'DRUPAL-VELKOMMEN-INDIVIDUEL' => 'velkommen-individuel',
-    'DRUPAL-ATP_ALTERNATIVE_INVESTMENTS' => 'atp-alternative-investments',
-    'DRUPAL-ATP_TIMBERLAND_INVEST' => 'atp-timberland-invest',
-    'DRUPAL-ATP_ALPHA' => 'atp-alpha',
-    'DRUPAL-VELKOMMEN-DJOEF-MAGISTRE' => 'velkommen-djoef-magistre',
+    'DRUPAL_EMPLOYEE' => 'Employee',
+    'DRUPAL_AUTHOR' => 'Author',
+    'DRUPAL_EDITOR' => 'Editor',
+    'DRUPAL_EXTENDED_LAYOUT' => 'Extended layout',
+    'DRUPAL_IT_OPS' => 'IT-ops',
+    'DRUPAL_SITE_ADMINISTRATOR' => 'Site administrator',
+    'DRUPAL_ATP' => 'atp.dk',
+    'DRUPAL_ATP_UDBUD' => 'atp-udbud',
+    'DRUPAL_DESIGNMANUAL' => 'designmanual',
+    'DRUPAL_VELKOMMEN_HK' => 'velkommen-hk',
+    'DRUPAL_VELKOMMEN_IT' => 'velkommen-it',
+    'DRUPAL_VELKOMMEN_INDIVIDUEL' => 'velkommen-individuel',
+    'DRUPAL_ATP_ALTERNATIVE_INVESTMENTS' => 'atp-alternative-investments',
+    'DRUPAL_ATP_TIMBERLAND_INVEST' => 'atp-timberland-invest',
+    'DRUPAL_ATP_ALPHA' => 'atp-alpha',
+    'DRUPAL_VELKOMMEN_DJOEF_MAGISTRE' => 'velkommen-djoef-magistre',
   );
 
   variable_set('tamauth_redirect', 'user' );
