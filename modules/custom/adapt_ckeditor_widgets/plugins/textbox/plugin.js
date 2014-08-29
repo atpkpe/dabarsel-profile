@@ -15,7 +15,7 @@ CKEDITOR.plugins.add( 'textbox', {
 
             template:
                 '<div class="textbox">' +
-                    '<h3 class="textbox-title">' + Drupal.t('Title') + '</h3>' +
+                    '<div class="textbox-title">' + Drupal.t('Title') + '</div>' +
                     '<div class="textbox-content"><p>' + Drupal.t('Content...') + '</p></div>' +
                 '</div>',
 
@@ -55,6 +55,9 @@ CKEDITOR.plugins.add( 'textbox', {
 
                 if ( this.element.hasClass( 'floatbox' ) )
                     this.setData( 'behaviour', 'floatbox' );
+                
+                if (  this.element.hasClass( 'floatbox' ) && this.element.hasClass( 'no-title' ) )
+                  this.setData( 'behaviour', 'floatbox no-title' );
 
                 if (  this.element.hasClass( 'expanding' ) && this.element.hasClass( 'expanded' ) )
                   this.setData( 'behaviour', 'expanding expanded' );
@@ -78,6 +81,7 @@ CKEDITOR.plugins.add( 'textbox', {
                     this.element.addClass( 'align-' + this.data.align );
 
                 this.element.removeClass( 'floatbox' );
+                this.element.removeClass( 'no-title' );
                 this.element.removeClass( 'expanding' );
                 this.element.removeClass( 'expanded' );
                 this.element.removeClass( 'collapsed' );

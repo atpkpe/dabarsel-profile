@@ -42,7 +42,8 @@ CKEDITOR.dialog.add( 'textbox', function( editor ) {
                         label: 'Behaviour',
                         items: [
                             [ editor.lang.common.notSet, '' ],
-                            [ 'Small floating box', 'floatbox' ],
+                            [ 'Small floating box with title', 'floatbox' ],
+                            [ 'Small floating box without title', 'floatbox no-title' ],
                             [ 'Expanding - collapsed', 'expanding collapsed' ],
                             [ 'Expanding - expanded', 'expanding expanded' ]
                         ],
