@@ -247,9 +247,17 @@ function atp_update_7014(&$sandbox) {
   module_enable(array('tamauth','atp_login'));
   atp_tam_mappings();
 }
-  /**
- * Enable metatag module.
+
+/**
+ * Enable metatag ATP views.
  */
 function atp_update_7015(&$sandbox) {
   module_enable(array('atp_views'));
+}
+
+  /**
+ * Enable Fast Permissions Administration module.
+ */
+function atp_update_7016(&$sandbox) {
+  module_enable(array('fpa'));
 }

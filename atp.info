@@ -67,6 +67,7 @@ dependencies[] = linkchecker
 dependencies[] = syslog
 dependencies[] = metatag
 dependencies[] = tamauth
+dependencies[] = fpa
 
 ; Project features
 dependencies[] = atp_settings
