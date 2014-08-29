@@ -121,21 +121,28 @@
 }
 .profile {
   @include clearfix;
-  .profile-info {
+  .profile-infowrap {
     @include float-span(8);
-    .profile-info-title {
-      margin-bottom: $margins;
+    .profile-infodata {
+      background: #ffffff;
+      min-height: 90px;
+      padding: $margins;
+      .username {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
     }
   }
-  .description {
+  .profile-descwrap {
     @include float-span(8);
     margin-right: 0px;
     @include device(phone){
       margin-top: $margins+10px;
     }
-    .user-roles {
+    .profile-descdata {
       background: #ffffff;
       width: 100%;
+      min-height: 90px;
       padding: $margins;
       padding-left: $margins+20px;
       td {
@@ -147,7 +154,7 @@
       }
     }
   }
-  .profile-info, .description {
+  .profile-infowrap, .profile-descwrap {
     @include device(phone){
       width: 100%;
       margin-left: 0px !important;
