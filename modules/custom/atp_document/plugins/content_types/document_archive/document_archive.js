@@ -16,8 +16,8 @@
           success: function (xhr) {
             if (typeof(xhr.html) != 'undefined') {
               $("ul.atp-document-archive-tree", context).replaceWith(xhr.html);
-              $('.atp-document-archive-nav-item', context).removeClass('active');
-              $link.addClass('active');
+              $('.atp-document-archive-nav li', context).removeClass('active');
+              $link.parent().addClass('active');
             }
           }
         });

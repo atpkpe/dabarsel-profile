@@ -35,8 +35,8 @@ function document_archive_nav_content_type_render($subtype, $conf, $panel_args, 
   foreach($term_tree as $term) {
     // Collect root items.
     if ($term->parents[0] == $conf['media_folder_root_tid']) {
-      $classes = array('atp-document-archive-nav-item');
       // Set active class on first element.
+      $classes = array();
       if (!$active_isset) {
         $classes[] = 'active';
         $active_isset = TRUE;
@@ -45,7 +45,9 @@ function document_archive_nav_content_type_render($subtype, $conf, $panel_args, 
         'data' => l(
           $term->name,
           sprintf('atp-document/archive/ajax/load-tree/%s/%s', $conf['media_folder_vocab'], $term->tid),
-          array('attributes' => array('class' => array('atp-document-archive-nav-item')))),
+          array('attributes' => array('class' => array('atp-document-archive-nav-item')))
+        ),
+        'class' => $classes,
       );
     }
 
