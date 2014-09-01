@@ -1,0 +1,10 @@
+name = Wysiwyg entity embed
+description = Embed an entity into a wysiwyg field
+core = 7.x
+package = User interface
+
+dependencies[] = wysiwyg
+dependencies[] = views
+dependencies[] = views_json
+
+scripts[] = js/jquery.magnific-popup.min.js

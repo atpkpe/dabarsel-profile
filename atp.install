@@ -255,9 +255,16 @@ function atp_update_7015(&$sandbox) {
   module_enable(array('atp_views'));
 }
 
-  /**
+/**
  * Enable Fast Permissions Administration module.
  */
 function atp_update_7016(&$sandbox) {
   module_enable(array('fpa'));
+}
+
+/**
+ * Enable Wysiwyg entity embed
+ */
+function atp_update_7017(&$sandbox) {
+  module_enable(array('wysiwyg_entity_embed', 'atp_entity_embed'));
 }

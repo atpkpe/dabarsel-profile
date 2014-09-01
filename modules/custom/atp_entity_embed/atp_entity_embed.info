@@ -1,0 +1,11 @@
+name = ATP entity embed
+core = 7.x
+package = atp
+dependencies[] = views
+dependencies[] = views_content
+dependencies[] = views_json
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = wysiwyg_entity_embed
+features_exclude[dependencies][ctools] = ctools
+project path = profiles/atp/modules/custom

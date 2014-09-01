@@ -1,0 +1,253 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function wysiwyg_entity_embed_menu() {
+
+  $items['wysiwyg-entity-embed/%'] = array(
+    'page callback' => 'wysiwyg_entity_embed_results',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['admin/wysiwyg-entity-embed/insert/nojs/%'] = array(
+    'page callback' => 'wysiwyg_entity_embed_insert',
+    'page arguments' => array(3, 4),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['admin/wysiwyg-entity-embed/insert/ajax/%'] = array(
+      'delivery callback' => 'ajax_deliver'
+    ) + $items['admin/wysiwyg-entity-embed/insert/nojs/%'];
+
+  return $items;
+}
+
+/**
+ * Register a directory containing Wysiwyg plugins.
+ *
+ * @param $type
+ *   The type of objects being collected: either 'plugins' or 'editors'.
+ * @return
+ *   A sub-directory of the implementing module that contains the corresponding
+ *   plugin files. This directory must only contain integration files for
+ *   Wysiwyg module.
+ */
+function wysiwyg_entity_embed_wysiwyg_include_directory($type) {
+  switch ($type) {
+    case 'plugins':
+      return $type;
+  }
+}
+
+/**
+ * Implementation of hook_filter_info()
+ */
+function wysiwyg_entity_embed_filter_info() {
+
+  $filters['wysiwyg_entity_embed'] = array(
+    'title' => t('Insert entity'),
+    'description' => t('By including the syntax [[entity:entity_type:entity_id]], this filter will embed the entity with given id'),
+    'prepare callback' => '_wysiwyg_entity_embed_prepare',
+    'process callback' => '_wysiwyg_entity_embed_process',
+    'tips callback'  => '_wysiwyg_entity_embed_tips',
+    'cache' => FALSE,
+    'settings callback' => '_wysiwyg_entity_embed_filter_settings',
+    'default settings' => array(
+      'autocomplete_view' => '',
+    ),
+  );
+
+  return $filters;
+}
+
+/**
+ * Callback for getting results for autocomplete.
+ *
+ * @param string $filter_format_name
+ * @param string $string
+ */
+function wysiwyg_entity_embed_results($filter_format_name, $string) {
+  $filter_format = filter_list_format($filter_format_name);
+  $autocomplete_view = $filter_format['wysiwyg_entity_embed']->settings['autocomplete_view'];
+
+  $view_info = explode(':', $autocomplete_view);
+
+  $view = views_get_view($view_info[0]);
+  $display = $view_info[1];
+  $view->set_display($display);
+
+  $filters = $view->get_items('filter', $display);
+
+  foreach ($filters AS $field_name => $filter) {
+    if ($filter['exposed'] && ($filter['operator'] == 'starts' || $filter['operator'] == 'ends' || $filter['operator'] == 'contains')) {
+      $filter['value'] = $string;
+      $view->set_item($display, 'filter', $field_name, $filter);
+    }
+  }
+
+  $view->pre_execute();
+  $view->execute();
+
+  $display_fields = array();
+  foreach ($view->field AS $field_name => $field) {
+    if ($field->options['exclude'] != 1) {
+      $display_fields[$field->field_alias] = $field->options['label'];
+    }
+  }
+
+  foreach ($view->result AS $result) {
+    $string = '';
+    foreach ($result AS $field_name => $field_value) {
+      if (isset($display_fields[$field_name])) {
+        if (!empty($display_fields[$field_name])) {
+          $string .= '(' . $display_fields[$field_name] . ': ' . $field_value . ')';
+        }
+        else {
+          $string .= $field_value;
+        }
+        $string .= ' ';
+      }
+    }
+    $data['entity:' . $view->base_table . ':' . $result->{$view->base_field}] = trim($string);
+  }
+
+  return drupal_json_output($data);
+
+
+}
+
+/**
+ * Callback for getting the embed insert form.
+ *
+ * @param string $ajax
+ * @param string $filter_format
+ * @return array|mixed|string
+ */
+function wysiwyg_entity_embed_insert($ajax, $filter_format) {
+  $is_ajax = $ajax === 'ajax';
+  $form = drupal_get_form('wysiwyg_entity_embed_insert_form', $filter_format);
+  if ($is_ajax) {
+    $form = drupal_render($form);
+    die($form);
+  }
+  else {
+    return $form;
+  }
+}
+
+/**
+ * Form callback for entity lookup form.
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $filter_format_name
+ * @return mixed
+ */
+function wysiwyg_entity_embed_insert_form($form, $form_state, $filter_format_name) {
+  drupal_add_library('system', 'ui.dialog');
+
+  $form['find_entity'] = array(
+    '#title' => t('Search'),
+    '#type' => 'textfield',
+    '#autocomplete_path' => 'wysiwyg-entity-embed/' . $filter_format_name,
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
+
+  return $form;
+}
+
+/**
+ * Prepare callback for hook_filter
+ */
+function _wysiwyg_entity_embed_prepare($text, $filter, $format, $langcode, $cache, $cache_id) {
+  return $text;
+}
+
+/**
+ * Process callback for hook_filter
+ */
+function _wysiwyg_entity_embed_process($text, $filter, $format, $langcode, $cache, $cache_id) {
+  preg_match_all('/(\[\[entity:([a-z]+):(\d+)\]\])/', $text, $matches);
+  $text = _wysiwyg_entity_embed_replacements($matches, $text);
+  return $text;
+}
+
+/**
+ * Tips callback for hook_filter
+ */
+function _wysiwyg_entity_embed_tips($filter, $format, $long) {
+  return t('[[entity:node:123]] - Insert a node with id 123');
+}
+
+/**
+ * Replace matches with rendered entities.
+ *
+ * @param array $matches
+ * @param string $text
+ * @return string
+ */
+function _wysiwyg_entity_embed_replacements($matches, $text) {
+  $view_mode = 'teaser';
+
+  foreach($matches[0] AS $delta => $match) {
+    $entity = entity_load_single($matches[2][$delta], $matches[3][$delta]);
+    $entity_view = entity_view($matches[2][$delta], array($entity), $view_mode);
+    $entity_render = render($entity_view);
+    $text = str_replace($match, $entity_render, $text);
+  }
+
+  return $text;
+}
+
+/**
+ * Filter settings callback which loads displays with view_json style plugins.
+ *
+ * @param $form
+ * @param $form_state
+ * @param $filter
+ * @param $format
+ * @param $defaults
+ * @param $filters
+ * @return mixed
+ */
+function _wysiwyg_entity_embed_filter_settings($form, &$form_state, $filter, $format, $defaults, $filters) {
+
+  $views = views_get_all_views(TRUE);
+  $options = array('' => '[' . t('Select one') . ']');
+
+  foreach ($views AS $view) {
+    foreach ($view->display AS $display_name => $display) {
+      if ($display_name == 'default') {
+        $default_style = $display->display_options['style_plugin'];
+      }
+
+      if ($display_name != 'default') {
+        if (($default_style == 'views_json' && empty($display->display_options['style_plugin'])) || $display->display_options['style_plugin'] == 'views_json') {
+          $display_title = (empty($display->display_title) ? $display_name : $display->display_title);
+          $options[$view->name . ':' . $display_name] = $view->human_name . ' - ' . $display_title;
+        }
+      }
+    }
+  }
+
+  $default_value = empty($filters['wysiwyg_entity_embed']->settings['autocomplete_view']) ? $defaults['autocomplete_view'] : $filters['wysiwyg_entity_embed']->settings['autocomplete_view'];
+
+  $elements['autocomplete_view'] = array(
+    '#title' => t('Autocomplete view'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => $default_value,
+    '#required' => TRUE,
+  );
+
+  return $elements;
+}
+
