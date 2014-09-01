@@ -185,6 +185,32 @@ function sites_url_outbound_alter(&$path, &$options, $original_path) {
     }
   }
 
+  // Set the correct prefix for outbound URL's.
+  if (stripos($path, 'node/') === 0) {
+    $parts = explode('/', $path);
+
+    $query = db_select('`workbench_access_node`', 'w');
+    $query->join('sites', 's', 'w.access_id = s.site_term');
+
+    $result = $query
+              ->fields('s', array('site_term', 'purl_prefix'))
+              ->condition('nid', $parts[1])
+              ->execute()
+              ->fetchObject();
+
+    $lang_parts = explode('/', $options['prefix']);
+    $lang_prefix = '';
+    if ($lang_parts[0] == 'en') { $lang_prefix = 'en/'; }
+
+    if (empty($result) || $result->site_term == 1) {
+      // Don't add any prefix for the main site.
+      $options['prefix'] = $lang_prefix;
+    } else {
+      $options['prefix'] = $lang_prefix . $result->purl_prefix . '/';
+    }
+
+  }
+
 }
 
 /**
@@ -192,9 +218,6 @@ function sites_url_outbound_alter(&$path, &$options, $original_path) {
  */
 function sites_panels_pane_prerender($pane) {
   $site = SiteController::getCurrentSite();
-
-  //dpr($pane->type . ':' . print_r($pane->configuration,TRUE));
-
   if ($pane->type == 'menu_tree' && $site->sid > 1) {
     if ($pane->configuration['menu_name'] == 'main-menu') {
       $main_menu = sites_get_current_menu_source('main_menu');
@@ -202,7 +225,6 @@ function sites_panels_pane_prerender($pane) {
       $pane->configuration['parent'] = $main_menu . ':0';
     }
   }
-
 }
 
 /**
