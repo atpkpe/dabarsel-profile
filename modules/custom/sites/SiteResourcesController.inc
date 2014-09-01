@@ -60,7 +60,7 @@ class SiteResourcesController {
     $menu = array();
     $menu['title'] = 'Subsite:' . $site->title;
     $menu['description'] = 'Menu for the ' . $site->title . ' subsite';
-    $menu['menu_name'] = str_replace(' ', '-', drupal_strtolower($site->title));
+    $menu['menu_name'] = $site->machine_name;
     $menu['i18n_mode'] = 5; // Translate and Localize.
     menu_save($menu);
     $site->menu_main_menu = $menu['menu_name'];
