@@ -68,6 +68,8 @@ dependencies[] = syslog
 dependencies[] = metatag
 dependencies[] = tamauth
 dependencies[] = fpa
+dependencies[] = views_json
+dependencies[] = wysiwyg_entity_embed
 
 ; Project features
 dependencies[] = atp_settings
@@ -94,5 +96,6 @@ dependencies[] = adapt_ckeditor_widgets
 dependencies[] = atp_login
 dependencies[] = atp_views
 dependencies[] = atp_log
+dependencies[] = atp_entity_embed
 
 

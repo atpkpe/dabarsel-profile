@@ -15,6 +15,7 @@ dependencies[] = media_wysiwyg
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = wysiwyg
+dependencies[] = wysiwyg_entity_embed
 dependencies[] = wysiwyg_filter
 features[ctools][] = linkit:linkit_profiles:1
 features[ctools][] = strongarm:strongarm:1

@@ -18,8 +18,47 @@ function atp_settings_filter_default_formats() {
     'status' => 1,
     'weight' => -10,
     'filters' => array(
-      'wysiwyg' => array(
+      'wysiwyg_entity_embed' => array(
         'weight' => -50,
+        'status' => 1,
+        'settings' => array(
+          'autocomplete_view' => 'wysiwyg_entity_embed:contacts',
+        ),
+      ),
+      'atp_gallery_embed' => array(
+        'weight' => -49,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'atp_sas_diag_embed' => array(
+        'weight' => -48,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'media_filter' => array(
+        'weight' => -47,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_autop' => array(
+        'weight' => -46,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_url' => array(
+        'weight' => -45,
+        'status' => 1,
+        'settings' => array(
+          'filter_url_length' => 72,
+        ),
+      ),
+      'filter_htmlcorrector' => array(
+        'weight' => -44,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'wysiwyg' => array(
+        'weight' => -43,
         'status' => 1,
         'settings' => array(
           'valid_elements' => 'a[href|target<_blank|title|name],
@@ -167,40 +206,8 @@ table,tr,th[colspan],td[colspan],thead,tbody,tfoot,
           'rule_style_urls' => array(),
         ),
       ),
-      'atp_gallery_embed' => array(
-        'weight' => -49,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'atp_sas_diag_embed' => array(
-        'weight' => -47,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'media_filter' => array(
-        'weight' => -46,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_autop' => array(
-        'weight' => -45,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_url' => array(
-        'weight' => -44,
-        'status' => 1,
-        'settings' => array(
-          'filter_url_length' => 72,
-        ),
-      ),
-      'filter_htmlcorrector' => array(
-        'weight' => -43,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'ckeditor_link_filter' => array(
-        'weight' => -40,
+        'weight' => -42,
         'status' => 1,
         'settings' => array(),
       ),

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ATP entity embed feature.
+ */
+
+include_once 'atp_entity_embed.features.inc';
