@@ -60,6 +60,26 @@ function atp_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ckeditor_link_file_autocomplete_file_types';
+  $strongarm->value = array(
+    'document' => 'document',
+    '- any -' => 0,
+    'image' => 0,
+    'video' => 0,
+    'audio' => 0,
+  );
+  $export['ckeditor_link_file_autocomplete_file_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ckeditor_link_file_link_method';
+  $strongarm->value = 'url';
+  $export['ckeditor_link_file_link_method'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ckeditor_link_limit';
   $strongarm->value = '10';
   $export['ckeditor_link_limit'] = $strongarm;
@@ -387,7 +407,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'R9D24ntG_Zg0QlK5vUM5cEvhT9pbR6ykg2HtgeeluQM',
+    'javascript' => 'UbaWz4g-obq_7cmidOFmXLRE_CaDosliy7dOsyKswRg',
   );
   $export['language_default'] = $strongarm;
 

@@ -70,6 +70,7 @@ dependencies[] = tamauth
 dependencies[] = fpa
 dependencies[] = views_json
 dependencies[] = wysiwyg_entity_embed
+dependencies[] = ckeditor_link_file
 
 ; Project features
 dependencies[] = atp_settings

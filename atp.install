@@ -280,3 +280,10 @@ function atp_update_7018(&$sandbox) {
     'atp_document',
   ));
 }
+
+/**
+ * ATP-Enable ckeditor link file
+ */
+function atp_update_7019(&$sandbox) {
+  module_enable(array('ckeditor_link_file'));
+}
