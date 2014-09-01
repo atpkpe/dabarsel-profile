@@ -45,6 +45,29 @@ function atp_layouts_image_default_styles() {
     ),
   );
 
+  // Exported image style: 360x126.
+  $styles['360x126'] = array(
+    'name' => '360x126',
+    'label' => '360x126',
+    'effects' => array(
+      2 => array(
+        'label' => 'Focal Point Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>Focal Point</em>.',
+        'effect callback' => 'focal_point_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'focal_point',
+        'name' => 'focal_point_scale_and_crop',
+        'data' => array(
+          'width' => 360,
+          'height' => 126,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: 470x126.
   $styles['470x126'] = array(
     'name' => '470x126',
@@ -108,6 +131,29 @@ function atp_layouts_image_default_styles() {
         'data' => array(
           'width' => 715,
           'height' => 300,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 720x126.
+  $styles['720x126'] = array(
+    'name' => '720x126',
+    'label' => '720x126',
+    'effects' => array(
+      1 => array(
+        'label' => 'Focal Point Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>Focal Point</em>.',
+        'effect callback' => 'focal_point_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'focal_point',
+        'name' => 'focal_point_scale_and_crop',
+        'data' => array(
+          'width' => 720,
+          'height' => 126,
         ),
         'weight' => 1,
       ),
