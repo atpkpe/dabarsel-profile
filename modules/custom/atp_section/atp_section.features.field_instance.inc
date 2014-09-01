@@ -140,14 +140,9 @@ function atp_section_field_default_field_instances() {
       ),
       '3_4_h' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_wrapper' => 0,
-          'item_wrapper' => 0,
-          'label_wrapper' => 0,
-        ),
-        'type' => 'text_default',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       '3_8_H' => array(
         'label' => 'hidden',
@@ -162,14 +157,9 @@ function atp_section_field_default_field_instances() {
       ),
       '3_8_h' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_wrapper' => 0,
-          'item_wrapper' => 0,
-          'label_wrapper' => 0,
-        ),
-        'type' => 'text_default',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -353,15 +343,9 @@ function atp_section_field_default_field_instances() {
       ),
       '3_4_h' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_wrapper' => 0,
-          'item_wrapper' => 0,
-          'label_wrapper' => 0,
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 5,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       '3_8_H' => array(
         'label' => 'above',
@@ -377,14 +361,8 @@ function atp_section_field_default_field_instances() {
       ),
       '3_8_h' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_wrapper' => 0,
-          'item_wrapper' => 0,
-          'label_wrapper' => 0,
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'default' => array(
@@ -510,6 +488,32 @@ function atp_section_field_default_field_instances() {
           'field_wrapper' => 0,
           'image_link' => 'content',
           'image_style' => '225x126',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      '3_4_h' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'image_link' => 'content',
+          'image_style' => '720x126',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      '3_8_h' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'image_link' => 'content',
+          'image_style' => '360x126',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
@@ -676,7 +680,7 @@ function atp_section_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 7,
       ),
       '3_8_H' => array(
         'label' => 'hidden',
@@ -688,7 +692,7 @@ function atp_section_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'default' => array(
         'label' => 'inline',
@@ -871,15 +875,9 @@ function atp_section_field_default_field_instances() {
       ),
       '3_4_h' => array(
         'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_wrapper' => 0,
-          'item_wrapper' => 0,
-          'label_wrapper' => 0,
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       '3_8_H' => array(
         'label' => 'hidden',
@@ -895,15 +893,9 @@ function atp_section_field_default_field_instances() {
       ),
       '3_8_h' => array(
         'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_wrapper' => 0,
-          'item_wrapper' => 0,
-          'label_wrapper' => 0,
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -1084,8 +1076,20 @@ function atp_section_field_default_field_instances() {
       ),
       '3_4_h' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'field_wrapper' => 'p',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'more_link' => FALSE,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_options' => array(),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
         'weight' => 3,
       ),
       '3_8_H' => array(
@@ -1096,9 +1100,21 @@ function atp_section_field_default_field_instances() {
       ),
       '3_8_h' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'module' => 'smart_trim',
+        'settings' => array(
+          'field_wrapper' => 'p',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'more_link' => FALSE,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_options' => array(),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 2,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -1318,10 +1334,15 @@ function atp_section_field_default_field_instances() {
         'weight' => 4,
       ),
       '3_4_h' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 'h2',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 2,
       ),
       '3_8_H' => array(
         'label' => 'above',
@@ -1330,10 +1351,15 @@ function atp_section_field_default_field_instances() {
         'weight' => 4,
       ),
       '3_8_h' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_wrapper' => 'h2',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 1,
       ),
       'default' => array(
         'label' => 'above',

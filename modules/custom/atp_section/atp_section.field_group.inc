@@ -214,6 +214,62 @@ function atp_section_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_section_image_overlay|node|section|3_4_h';
+  $field_group->group_name = 'group_section_image_overlay';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'section';
+  $field_group->mode = '3_4_h';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Image overlay',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_section_summary',
+      1 => 'title_field',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Image overlay',
+      'instance_settings' => array(
+        'link_to' => 'entity',
+        'classes' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_section_image_overlay|node|section|3_4_h'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_section_image_overlay|node|section|3_8_h';
+  $field_group->group_name = 'group_section_image_overlay';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'section';
+  $field_group->mode = '3_8_h';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Image overlay',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_section_summary',
+      1 => 'title_field',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Image overlay',
+      'instance_settings' => array(
+        'link_to' => 'entity',
+        'classes' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_section_image_overlay|node|section|3_8_h'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_section_related|node|section|form';
   $field_group->group_name = 'group_section_related';
   $field_group->entity_type = 'node';
