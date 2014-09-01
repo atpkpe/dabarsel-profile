@@ -1,0 +1,5 @@
+name = ATP Document
+description = Handles documents across the system
+core = 7.x
+package = ATP
+project path = profiles/atp/modules/custom

@@ -97,5 +97,6 @@ dependencies[] = atp_login
 dependencies[] = atp_views
 dependencies[] = atp_log
 dependencies[] = atp_entity_embed
+dependencies[] = atp_document
 
 

@@ -268,3 +268,15 @@ function atp_update_7016(&$sandbox) {
 function atp_update_7017(&$sandbox) {
   module_enable(array('wysiwyg_entity_embed', 'atp_entity_embed'));
 }
+
+/**
+ * ATP-204 - Document archive (K38)
+ * Making it work.
+ *
+ * @author Mikkel Jakobsen <mikkel@adapt.dk>
+ */
+function atp_update_7018(&$sandbox) {
+  module_enable(array(
+    'atp_document',
+  ));
+}
