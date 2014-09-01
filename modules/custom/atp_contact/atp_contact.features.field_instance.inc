@@ -278,7 +278,7 @@ function atp_contact_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contact_phone',
-    'label' => 'Tlf.:',
+    'label' => 'Tlf:',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -362,7 +362,7 @@ function atp_contact_field_default_field_instances() {
   t('Job title');
   t('Mobil:');
   t('Name');
-  t('Tlf.:');
+  t('Tlf:');
 
   return $field_instances;
 }
