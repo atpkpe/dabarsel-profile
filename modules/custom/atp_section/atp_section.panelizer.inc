@@ -2260,7 +2260,7 @@ function atp_section_panelizer_defaults() {
       'delta_offset' => '3',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'view_mode' => '1_4_l',
+        'view_mode' => '3_8_h',
         'links' => 0,
       ),
       'context' => 'panelizer',
@@ -2279,7 +2279,39 @@ function atp_section_panelizer_defaults() {
     $display->content['new-09dfe41e-5b53-45e2-928e-011cc09f54da'] = $pane;
     $display->panels['row2'][0] = 'new-09dfe41e-5b53-45e2-928e-011cc09f54da';
     $pane = new stdClass();
-    $pane->pid = 'new-16a0cccd-e2e8-4b94-bc0b-17e7af759a96';
+    $pane->pid = 'new-ee92d609-e380-4bad-adff-9b8d8374caa8';
+    $pane->panel = 'row2';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_section_related';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'inline',
+      'formatter' => 'entityreference_entity_view',
+      'delta_limit' => '1',
+      'delta_offset' => '4',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'view_mode' => '3_8_h',
+        'links' => 0,
+      ),
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'ee92d609-e380-4bad-adff-9b8d8374caa8';
+    $display->content['new-ee92d609-e380-4bad-adff-9b8d8374caa8'] = $pane;
+    $display->panels['row2'][1] = 'new-ee92d609-e380-4bad-adff-9b8d8374caa8';
+    $pane = new stdClass();
+    $pane->pid = 'new-5e78417e-0c36-403e-9c78-8f30c55eb993';
     $pane->panel = 'row2';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_section_related';
@@ -2289,7 +2321,7 @@ function atp_section_panelizer_defaults() {
       'label' => 'hidden',
       'formatter' => 'entityreference_entity_view',
       'delta_limit' => '1',
-      'delta_offset' => '4',
+      'delta_offset' => '5',
       'delta_reversed' => 0,
       'formatter_settings' => array(
         'view_mode' => '1_4_l',
@@ -2305,11 +2337,44 @@ function atp_section_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = '16a0cccd-e2e8-4b94-bc0b-17e7af759a96';
-    $display->content['new-16a0cccd-e2e8-4b94-bc0b-17e7af759a96'] = $pane;
-    $display->panels['row2'][1] = 'new-16a0cccd-e2e8-4b94-bc0b-17e7af759a96';
+    $pane->uuid = '5e78417e-0c36-403e-9c78-8f30c55eb993';
+    $display->content['new-5e78417e-0c36-403e-9c78-8f30c55eb993'] = $pane;
+    $display->panels['row2'][2] = 'new-5e78417e-0c36-403e-9c78-8f30c55eb993';
+    $pane = new stdClass();
+    $pane->pid = 'new-d05be5ec-82db-477e-8910-dc9a684e419b';
+    $pane->panel = 'row2';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_section_related';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'entityreference_entity_view',
+      'delta_limit' => '1',
+      'delta_offset' => '6',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'link' => 0,
+        'view_mode' => '1_4_l',
+        'links' => 0,
+      ),
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'd05be5ec-82db-477e-8910-dc9a684e419b';
+    $display->content['new-d05be5ec-82db-477e-8910-dc9a684e419b'] = $pane;
+    $display->panels['row2'][3] = 'new-d05be5ec-82db-477e-8910-dc9a684e419b';
     $pane = new stdClass();
     $pane->pid = 'new-5cd74e30-36d2-44d5-9add-243740d7d9c9';
     $pane->panel = 'slideshow';
