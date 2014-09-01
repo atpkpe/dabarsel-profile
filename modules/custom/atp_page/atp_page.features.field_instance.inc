@@ -267,7 +267,7 @@ function atp_page_field_default_field_instances() {
         'settings' => array(
           'field_wrapper' => 0,
           'image_link' => 'content',
-          'image_style' => '720x126',
+          'image_style' => '720x272',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
@@ -280,7 +280,7 @@ function atp_page_field_default_field_instances() {
         'settings' => array(
           'field_wrapper' => 0,
           'image_link' => 'content',
-          'image_style' => '360x126',
+          'image_style' => '360x272',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),

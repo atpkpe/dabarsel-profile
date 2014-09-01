@@ -219,7 +219,7 @@ function atp_component_field_default_field_instances() {
         'settings' => array(
           'field_wrapper' => 0,
           'image_link' => '',
-          'image_style' => '720x126',
+          'image_style' => '720x272',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
@@ -232,7 +232,7 @@ function atp_component_field_default_field_instances() {
         'settings' => array(
           'field_wrapper' => 0,
           'image_link' => '',
-          'image_style' => '470x126',
+          'image_style' => '470x272',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
