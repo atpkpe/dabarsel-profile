@@ -60,7 +60,7 @@ function atp_component_strongarm() {
         'custom_settings' => TRUE,
       ),
       '3_8_h' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       '1_2_l' => array(
         'custom_settings' => TRUE,
@@ -69,7 +69,7 @@ function atp_component_strongarm() {
         'custom_settings' => TRUE,
       ),
       '3_4_h' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       '1_1_l' => array(
         'custom_settings' => FALSE,
@@ -164,6 +164,14 @@ function atp_component_strongarm() {
           ),
           'menu_box' => array(
             'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '3_8_h' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '3_4_h' => array(
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
