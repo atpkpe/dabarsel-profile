@@ -1,0 +1,3 @@
+# Danish translation of ATP document
+# Created by Mikkel Jakobsen <mikkel@adapt.dk>
+#
