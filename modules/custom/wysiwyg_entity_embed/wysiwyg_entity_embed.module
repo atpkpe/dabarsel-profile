@@ -99,6 +99,7 @@ function wysiwyg_entity_embed_results($filter_format_name, $string) {
     }
   }
 
+  $data = array();
   foreach ($view->result AS $result) {
     $string = '';
     foreach ($result AS $field_name => $field_value) {
