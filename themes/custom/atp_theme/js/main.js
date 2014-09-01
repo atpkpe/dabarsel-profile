@@ -1,7 +1,16 @@
 
 // Javascript executed on every page load
 
+function stickyHeader() {
+  var body = jQuery('body');
+  if (jQuery(window).scrollTop() > 90)
+    body.addClass('stickyhead');
+  else
+    body.removeClass('stickyhead');
+}
 (function ($) {
+  $(window).scroll(stickyHeader);
+  stickyHeader();
   $(".main-menu > ul > li").hover(
     function(){
       $(this).addClass("hover");
