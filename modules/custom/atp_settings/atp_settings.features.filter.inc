@@ -63,7 +63,7 @@ function atp_settings_filter_default_formats() {
         'settings' => array(
           'valid_elements' => 'a[href|target<_blank|title|name],
 
-div,p,br,span,em,strong,blockquote,ul,ol,li,dl,dt,dd,i,
+div,p,br,span,em,strong,blockquote,ul,ol,li,dl,dt,dd,i,article,
 
 img, iframe[src|frameborder|height|scrolling|width],
 
@@ -201,6 +201,7 @@ table,tr,th[colspan],td[colspan],thead,tbody,tfoot,
             12 => 'table1',
             14 => 'table2',
             16 => 'no-title',
+            18 => 'contact',
           ),
           'rule_valid_ids' => array(),
           'rule_style_urls' => array(),
