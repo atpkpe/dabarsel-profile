@@ -294,3 +294,12 @@ function atp_update_7019(&$sandbox) {
 function atp_update_7020(&$sandbox) {
   module_enable(array('tmgmt_node_ui', 'tmgmt_field', 'tmgmt_node', 'tmgmt_local', 'actions_permissions', 'tmgmt_file', 'atp_content_translation'));
 }
+
+/**
+ * ATP-203 Enable views_rss to expose news feeds.
+ *
+ * @author Mikkel Jakobsen <mikkel@adapt.dk>
+ */
+function atp_update_7021(&$sandbox) {
+  module_enable(array('views_rss'));
+}

@@ -3,7 +3,9 @@
   <a class="share"><?php print t("Share") ?></a>
   <div class="addthis_toolbox addthis_default_style">
     <a class="addthis_button_email"><?php print t("E-mail") ?></a>
-    <a class="addthis_button_rss_follow"></a>
+    <? if (!empty($feed_url)): ?>
+      <a href="<?php echo $feed_url ?>" class="rss">RSS</a>
+    <? endif; ?>
     <a class="addthis_button_facebook"><?php print t("Facebook") ?></a>
     <a class="addthis_button_linkedin"><?php print t("LinkedIn") ?></a>
     <a class="addthis_button_twitter"><?php print t("Twitter") ?></a>

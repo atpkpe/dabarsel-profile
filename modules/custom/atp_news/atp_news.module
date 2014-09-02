@@ -9,20 +9,14 @@ define('ATP_NEWS_TID_NEWS_CATEGORIES', 1);
 include_once 'atp_news.features.inc';
 
 /**
- * Implements hook_views_api().
- */
-//function atp_news_views_api() {
-//  return array(
-//    'api' => 3,
-//  );
-//}
-
-/**
  * Implements hook_ctools_plugin_directory()
  */
 function atp_news_ctools_plugin_directory($module, $plugin) {
   if ($module == 'ctools' && $plugin == 'content_types') {
     return 'plugins/content_types';
+  }
+  if ($module == 'ctools' && $plugin == 'contexts') {
+    return 'plugins/contexts';
   }
 }
 
@@ -33,4 +27,22 @@ function atp_news_get_news_categories_vocab_id() {
     $vid = $vocab_categories->vid;
   }
   return $vid;
+}
+/**
+ * An array of possible news list types.
+ *
+ * @return array
+ *   List types.
+ */
+function atp_news_list_type_options() {
+  return array(
+    'fixed_categories' => array(
+      'title' => t('Fixed categories'),
+      'description' => t('News list with fixed categories.'),
+    ),
+    'filtered' => array(
+      'title' => t('Filtered'),
+      'description' => t('News list with category filter options.'),
+    ),
+  );
 }

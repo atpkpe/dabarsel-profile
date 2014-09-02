@@ -146,6 +146,90 @@ function atp_news_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'default_display');
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'rss_fields';
+  $handler->display->display_options['row_options']['title_field'] = 'title';
+  $handler->display->display_options['row_options']['link_field'] = 'path';
+  $handler->display->display_options['row_options']['description_field'] = 'field_news_summary';
+  $handler->display->display_options['row_options']['creator_field'] = 'uid';
+  $handler->display->display_options['row_options']['date_field'] = 'changed';
+  $handler->display->display_options['row_options']['guid_field_options'] = array(
+    'guid_field' => 'nid',
+    'guid_field_is_permalink' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Opdateringsdato */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = '';
+  $handler->display->display_options['fields']['changed']['element_type'] = 'div';
+  $handler->display->display_options['fields']['changed']['element_class'] = 'date';
+  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['changed']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['changed']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['changed']['date_format'] = 'adapt_long';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
+  $handler->display->display_options['fields']['changed']['timezone'] = 'Europe/Copenhagen';
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Felt: Indhold: Summary */
+  $handler->display->display_options['fields']['field_news_summary']['id'] = 'field_news_summary';
+  $handler->display->display_options['fields']['field_news_summary']['table'] = 'field_data_field_news_summary';
+  $handler->display->display_options['fields']['field_news_summary']['field'] = 'field_news_summary';
+  $handler->display->display_options['fields']['field_news_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_news_summary']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_news_summary']['alter']['text'] = '[field_news_summary-value] ';
+  $handler->display->display_options['fields']['field_news_summary']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_news_summary']['alter']['max_length'] = '200';
+  $handler->display->display_options['fields']['field_news_summary']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_news_summary']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_news_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_summary']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['field_news_summary']['element_wrapper_class'] = 'summary';
+  $handler->display->display_options['fields']['field_news_summary']['element_default_classes'] = FALSE;
+  /* Felt: Indhold: Forfatter uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'node';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['uid']['alter']['text'] = 'http://atp.dk/user/[uid]';
+  $handler->display->display_options['fields']['uid']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['uid']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['uid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Felt: Indhold: Sti */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  $handler->display->display_options['path'] = 'news/rss.xml';
+  $handler->display->display_options['displays'] = array(
+    'default' => 0,
+    'default_display' => 0,
+  );
   $translatables['news_list'] = array(
     t('Master'),
     t('mere'),
@@ -165,6 +249,10 @@ function atp_news_views_default_views() {
     t('Har taksonomiterm'),
     t('Content pane'),
     t('View panes'),
+    t('Feed'),
+    t('Forfatter uid'),
+    t('http://atp.dk/user/[uid]'),
+    t('Sti'),
   );
   $export['news_list'] = $view;
 

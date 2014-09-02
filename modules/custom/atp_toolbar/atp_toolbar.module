@@ -18,7 +18,7 @@ function atp_toolbar_theme($existing, $type, $theme, $path) {
   $themes = array(
     'toolbar' => array(
       'template' => 'toolbar',
-      'variables' => array(),
+      'variables' => array('feed_url' => NULL),
       'path' => $tpl_path,
      ),
   );
