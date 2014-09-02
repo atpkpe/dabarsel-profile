@@ -89,6 +89,15 @@ function atp_news_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      '3_4_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '3_8_h' => array(
+        'custom_settings' => FALSE,
+      ),
+      'menu_box' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -123,6 +132,10 @@ function atp_news_strongarm() {
             'visible' => FALSE,
           ),
           '1_4_l' => array(
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
+          '3_4_h' => array(
             'weight' => '7',
             'visible' => FALSE,
           ),

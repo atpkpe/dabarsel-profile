@@ -97,3 +97,12 @@ function atp_theme_file_link($variables) {
   return '<span class="file">' . l($link_text, $url, $options) . '</span>';
 
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function atp_preprocess_node(&$variables) {
+  if ($variables['type'] == 'contact' && $variables['view_mode'] == 'teaser') {
+    hide($variables['content']['links']);
+  }
+}

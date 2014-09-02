@@ -3,7 +3,7 @@
 
 function stickyHeader() {
   var body = jQuery('body');
-  if (jQuery(window).scrollTop() > 90)
+  if (jQuery(window).scrollTop() > 30)
     body.addClass('stickyhead');
   else
     body.removeClass('stickyhead');

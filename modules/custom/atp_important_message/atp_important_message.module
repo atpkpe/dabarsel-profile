@@ -1,0 +1,67 @@
+<?php
+
+// ./contrib/jquery_update/replace/ui/external/jquery.cookie.js
+
+/**
+ * Implementation of hook_ctools_plugin_directory().
+ */
+function atp_important_message_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
+
+/**
+ * Implements hook_js().
+ */
+function atp_important_message_js() {
+  // URL is /js/atp_important_message/results/%id.
+  return array(
+    'results' => array(
+      'callback' => 'atp_important_message_results',
+      'includes' => array('unicode', 'locale', 'language'),
+      'dependencies' => array(),
+      'bootstrap' => DRUPAL_BOOTSTRAP_DATABASE,
+      'page arguments' => array(1),
+      'skip_hook_init' => TRUE,
+    ),
+  );
+}
+
+/**
+ * Dismissible pane ajax result handler
+ */
+function atp_important_message_results($id) {
+
+  $current = db_select('variable', 'v')
+             ->fields('v', array('value'))
+             ->condition('name', 'atp_important_message_id')
+             ->execute()
+             ->fetchField();
+
+  $current = unserialize($current);
+
+  if ($current > $id) {
+    drupal_json_output(array(
+      'important_message_id' => $current,
+      'title' => 'Hejsan',
+      'success' => TRUE,
+      'show_message' => TRUE,
+    ));
+  } else {
+    drupal_json_output(array(
+      'success' => TRUE,
+      'show_message' => FALSE,
+    ));
+  }
+
+  drupal_exit();
+}
+
+/**
+ * Internal function that increases counter
+ */
+function atp_important_message_increase_id() {
+  $counter = variable_get('atp_important_message_id', 0);
+  variable_set('atp_important_message_id', ++$counter);
+}

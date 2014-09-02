@@ -1,0 +1,5 @@
+name = ATP important message
+package = ATP
+description = "Provides important messages dismissible per user."
+core = 7.x
+dependencies[] = ctools

@@ -55,6 +55,15 @@ function atp_file_strongarm() {
       '1_wide_text' => array(
         'custom_settings' => TRUE,
       ),
+      'inline' => array(
+        'custom_settings' => FALSE,
+      ),
+      'overlay' => array(
+        'custom_settings' => FALSE,
+      ),
+      'overlay-open' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

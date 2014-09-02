@@ -19,10 +19,18 @@
 .twocol-left {
   @extend %content;
   @include clearfix;
-  @include margin(0,0,1,0);
+  &:after {
+    @extend %content;
+    background: $body-color;
+    content: "";
+    height: $margins;
+    position: relative;
+    z-index: 10;
+  }
   > aside {
     @include grid-span(4, 1);
     padding-top: 2*$margins;
+    padding-right: $margins;
     @include device(phone){
       width: 100%;
       float: none;
@@ -33,14 +41,23 @@
   }
   > article {
     @include grid-span(12, 5);
-    padding-left: $margins;
-    border-left: 1px solid $gray;
     @include device(phone){
       width: 100%;
       float: none;
       margin-left: 0;
       margin-right: 0;
       padding: 0 ($margins/2);
+    }
+    &:before {
+      content: "";
+      position: fixed;
+      z-index: 0;
+      margin-left: -$margins;
+      border-left: 1px solid $gray;
+      height: 2000px;
+      .stickyhead & {
+        top: 0;
+      }
     }
   }
 }

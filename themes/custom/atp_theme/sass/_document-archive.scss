@@ -1,0 +1,76 @@
+.atp-document-archive-nav {
+  @include clearfix;
+  list-style: none;
+  position: relative;
+  &:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: $gray;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+  }
+  li {
+    margin: 0px 10px;
+    float: left;
+    @include device(tablet-portrait){
+      margin: 0px;
+    }
+    a {
+      font-size: 13px;
+      padding: 5px 15px;
+      display: inline-block;
+      &:hover {
+        text-decoration: none;
+      }
+      @include device(tablet-portrait){
+        padding: 5px 10px;
+      }
+    }
+    &.active {
+      background: #ffffff;
+      a {
+        color: $green-hover;
+      }
+    }
+  }
+}
+
+.atp-document-archive-tree {
+  @include clearfix;
+  background: #ffffff;
+  padding: 40px $margins;
+  list-style: none;
+  > li {
+    @include float-span(8);
+    font-weight: 600;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+    @include device(tablet-portrait){
+      float: none;
+      width: 100%;
+    }
+    &.last {
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
+    div {
+      font-weight: 400;
+      font-size: 13px;
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid $gray;
+      ul, li, a, span {
+        font-size: inherit;
+      }
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+  }
+}

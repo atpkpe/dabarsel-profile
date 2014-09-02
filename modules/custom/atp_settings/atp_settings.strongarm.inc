@@ -109,7 +109,7 @@ function atp_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_default_timezone';
-  $strongarm->value = 'Europe/Copenhagen';
+  $strongarm->value = 'UTC';
   $export['date_default_timezone'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -407,7 +407,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'UbaWz4g-obq_7cmidOFmXLRE_CaDosliy7dOsyKswRg',
+    'javascript' => 'sEY5HW_DjeSF6zY5Ngns1Xtup3VnIEkXX8Z_l7zEWsA',
   );
   $export['language_default'] = $strongarm;
 
