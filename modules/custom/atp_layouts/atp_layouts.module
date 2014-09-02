@@ -24,10 +24,10 @@ function atp_layouts_view_modes() {
 
 function atp_layouts_image_view_modes() {
   return array(
-    '2_wide' => 'Full',
-    '1_wide' => 'Full - wide',
-    '2_wide_text' => 'Full - text',
-    '1_wide_text' => 'Full - wide - text',
+    '2_wide' => 'Full (715x300)',
+    '1_wide' => 'Full - wide (960x300)',
+    '2_wide_text' => 'Full - text (715x300)',
+    '1_wide_text' => 'Full - wide - text (960x300)',
     'original' => 'Original',
     'inline' => t('Inline'),
     'overlay' => t('Overlay'),

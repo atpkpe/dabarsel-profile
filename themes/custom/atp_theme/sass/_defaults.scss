@@ -18,6 +18,9 @@ html {
 body {
   background: $body-color;
   height: 100%;
+  &.stickyhead {
+    padding-top: 145px !important;
+  }
 }
 
 a {
