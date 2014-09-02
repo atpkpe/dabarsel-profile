@@ -1,3 +1,5 @@
 name = ATP toolbar
 core = 7.x
 package = ATP
+
+dependencies[] = views_rss
