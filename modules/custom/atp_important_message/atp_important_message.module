@@ -19,8 +19,8 @@ function atp_important_message_js() {
   return array(
     'results' => array(
       'callback' => 'atp_important_message_results',
-      'includes' => array('unicode', 'locale', 'language'),
-      'dependencies' => array(),
+      'includes' => array('unicode'),
+      'dependencies' => array('filter'),
       'bootstrap' => DRUPAL_BOOTSTRAP_DATABASE,
       'page arguments' => array(1),
       'skip_hook_init' => TRUE,
@@ -33,21 +33,36 @@ function atp_important_message_js() {
  */
 function atp_important_message_results($id) {
 
-  $current = db_select('variable', 'v')
-             ->fields('v', array('value'))
-             ->condition('name', 'atp_important_message_id')
+  $current = db_select('node', 'n')
+             ->fields('n', array('nid','vid'))
+             ->condition('status', 1)
+             ->condition('type', 'important_message')
+             ->orderBy('vid', 'DESC')
+             ->range(0,1)
              ->execute()
-             ->fetchField();
+             ->fetchObject();
 
-  $current = unserialize($current);
+  if ($current->vid > $id) {
 
-  if ($current > $id) {
-    drupal_json_output(array(
-      'important_message_id' => $current,
-      'title' => 'Hejsan',
-      'success' => TRUE,
-      'show_message' => TRUE,
-    ));
+    if ($cache = cache_get('atp_important_message_results')) {
+      $result = $cache->data;
+    }
+
+    if (!$cache || $cache->data->message_id != $current->vid) {
+      // Now raise the bootstrap level so text filters are available.
+      drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
+      $body = atp_important_message_get_field($current, 'field_important_message_body_da');
+      $result = array(
+        'message_id' => $current->vid,
+        'title' => atp_important_message_get_field($current, 'title_field'),
+        'body' => check_markup($body, 'simple_html'),
+        'success' => TRUE,
+        'show_message' => TRUE,
+      );
+      cache_set('atp_important_message_results', $result, 'cache');
+    }
+
+    drupal_json_output($result);
   } else {
     drupal_json_output(array(
       'success' => TRUE,
@@ -58,10 +73,12 @@ function atp_important_message_results($id) {
   drupal_exit();
 }
 
-/**
- * Internal function that increases counter
- */
-function atp_important_message_increase_id() {
-  $counter = variable_get('atp_important_message_id', 0);
-  variable_set('atp_important_message_id', ++$counter);
+function atp_important_message_get_field($node, $field_name) {
+  return db_select('field_data_' . $field_name, 'f')
+         ->fields('f', array($field_name . '_value'))
+         ->condition('entity_id', $node->nid)
+         ->condition('revision_id', $node->vid)
+         ->execute()
+         ->fetchField();
 }
+
