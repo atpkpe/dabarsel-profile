@@ -35,30 +35,8 @@ function atp_settings_filter_default_formats() {
         'status' => 1,
         'settings' => array(),
       ),
-      'atp_gallery_embed' => array(
-        'weight' => -47,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'atp_sas_diag_embed' => array(
-        'weight' => -46,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'wysiwyg_entity_embed' => array(
-        'weight' => -45,
-        'status' => 1,
-        'settings' => array(
-          'autocomplete_view' => 'wysiwyg_entity_embed:contacts',
-        ),
-      ),
-      'media_filter' => array(
-        'weight' => -44,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'wysiwyg' => array(
-        'weight' => -43,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(
           'valid_elements' => 'a[href|target<_blank|title|name],
@@ -206,6 +184,28 @@ table,tr,th[colspan],td[colspan],thead,tbody,tfoot,
           'rule_valid_ids' => array(),
           'rule_style_urls' => array(),
         ),
+      ),
+      'atp_gallery_embed' => array(
+        'weight' => -46,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'atp_sas_diag_embed' => array(
+        'weight' => -45,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'wysiwyg_entity_embed' => array(
+        'weight' => -44,
+        'status' => 1,
+        'settings' => array(
+          'autocomplete_view' => 'wysiwyg_entity_embed:contacts',
+        ),
+      ),
+      'media_filter' => array(
+        'weight' => -43,
+        'status' => 1,
+        'settings' => array(),
       ),
       'ckeditor_link_filter' => array(
         'weight' => -42,
