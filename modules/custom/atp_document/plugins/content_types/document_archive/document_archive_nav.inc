@@ -31,15 +31,23 @@ function document_archive_nav_content_type_render($subtype, $conf, $panel_args, 
   $media_folder_vocab = taxonomy_vocabulary_machine_name_load($conf['media_folder_vocab']);
   // Get term tree.
   $term_tree = taxonomy_get_tree($media_folder_vocab->vid, $conf['media_folder_root_tid']);
-
+  $active_isset = FALSE;
   foreach($term_tree as $term) {
     // Collect root items.
     if ($term->parents[0] == $conf['media_folder_root_tid']) {
+      // Set active class on first element.
+      $classes = array();
+      if (!$active_isset) {
+        $classes[] = 'active';
+        $active_isset = TRUE;
+      }
       $items_nav[$term->tid] = array(
         'data' => l(
           $term->name,
           sprintf('atp-document/archive/ajax/load-tree/%s/%s', $conf['media_folder_vocab'], $term->tid),
-          array('attributes' => array('class' => array('atp-document-archive-nav-item')))),
+          array('attributes' => array('class' => array('atp-document-archive-nav-item')))
+        ),
+        'class' => $classes,
       );
     }
 

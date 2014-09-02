@@ -175,7 +175,7 @@ function atp_section_strongarm() {
             'visible' => FALSE,
           ),
           '3_8_h' => array(
-            'weight' => '4',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           '1_2_l' => array(
@@ -187,7 +187,7 @@ function atp_section_strongarm() {
             'visible' => FALSE,
           ),
           '3_4_h' => array(
-            'weight' => '4',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           '1_1_l' => array(
