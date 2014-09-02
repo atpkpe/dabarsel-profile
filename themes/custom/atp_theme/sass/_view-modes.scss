@@ -62,6 +62,9 @@
     @include view-mode-overlay;
   }
 }
+.view-mode-3-4-h, .view-mode-3-4-l {
+  @include view-mode(12);
+}
 .view-mode-1-2-h, .view-mode-1-2-l {
   @include view-mode(8);
 }
@@ -71,10 +74,10 @@
 .view-mode-1-4-h, .view-mode-1-4-l {
   @include view-mode(4);
 }
-.view-mode-1-1-l, .view-mode-1-2-l, .view-mode-3-8-l, .view-mode-1-4-l {
+.view-mode-1-1-l, .view-mode-3-4-l, .view-mode-1-2-l, .view-mode-3-8-l, .view-mode-1-4-l {
   height: $block-height;
 }
-.view-mode-1-1-h, .view-mode-1-2-h, .view-mode-3-8-h, .view-mode-1-4-h {
+.view-mode-1-1-h, .view-mode-3-4-h, .view-mode-1-2-h, .view-mode-3-8-h, .view-mode-1-4-h {
   height: ($block-height*2)+20px;
 }
 
