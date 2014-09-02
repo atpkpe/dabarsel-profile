@@ -231,11 +231,12 @@ function atp_component_field_group_info() {
     ),
     'format_type' => 'link',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'Image overlay',
       'instance_settings' => array(
-        'link_to' => 'entity',
-        'classes' => 'group-section-image-overlay field-group-link',
+        'link_to' => 'field_component_link',
+        'classes' => 'group-section-image-overlay',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_section_image_overlay|node|component|3_4_h'] = $field_group;

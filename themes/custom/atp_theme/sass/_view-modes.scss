@@ -64,6 +64,9 @@
 }
 .view-mode-3-4-h, .view-mode-3-4-l {
   @include view-mode(12);
+  .group-news-image-overlay {
+    @include view-mode-overlay;
+  }
 }
 .view-mode-1-2-h, .view-mode-1-2-l {
   @include view-mode(8);

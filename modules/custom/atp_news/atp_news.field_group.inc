@@ -100,6 +100,34 @@ function atp_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_section_image_overlay|node|news|3_4_h';
+  $field_group->group_name = 'group_section_image_overlay';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'news';
+  $field_group->mode = '3_4_h';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Image overlay',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_news_summary',
+      1 => 'title_field',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Image overlay',
+      'instance_settings' => array(
+        'link_to' => 'entity',
+        'classes' => 'group-section-image-overlay',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_section_image_overlay|node|news|3_4_h'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_wrapper|node|news|teaser';
   $field_group->group_name = 'group_wrapper';
   $field_group->entity_type = 'node';
