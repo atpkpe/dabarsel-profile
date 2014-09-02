@@ -112,8 +112,9 @@
   @include device(phone){
     padding: $margins/2;
   }
-  * {
+  *, &:link, &:visited, &:hover {
     color: #fff;
+    line-height: 18px;
   }
   p {
     margin:0;

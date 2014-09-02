@@ -8,6 +8,9 @@
   @include clearfix;
 }
 #main {
+  .admin-menu & {
+    min-height: 400px;
+  }
   aside {
     .menu {
       margin: 0;
@@ -55,50 +58,6 @@
 }
 .onecol {
   @extend %content;
-}
-.profile {
-  @include clearfix;
-  .profile-infowrap {
-    @include float-span(8);
-    .profile-infodata {
-      background: #ffffff;
-      min-height: 90px;
-      padding: $margins;
-      .username {
-        font-weight: 600;
-        margin-bottom: 5px;
-      }
-    }
-  }
-  .profile-descwrap {
-    @include float-span(8);
-    margin-right: 0px;
-    @include device(phone){
-      margin-top: $margins+10px;
-    }
-    .profile-descdata {
-      background: #ffffff;
-      width: 100%;
-      min-height: 90px;
-      padding: $margins;
-      padding-left: $margins+20px;
-      td {
-        display: list-item;
-        padding-bottom: 10px;
-      }
-      tr:last-child td {
-        padding-bottom: 0px;
-      }
-    }
-  }
-  .profile-infowrap, .profile-descwrap {
-    @include device(phone){
-      width: 100%;
-      margin-left: 0px !important;
-      margin-right: 0px !important;
-      float: none !important;
-    }
-  }
 }
 .field-field-file-description {
   font-size: 11px;

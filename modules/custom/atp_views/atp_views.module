@@ -5,3 +5,27 @@
  */
 
 include_once 'atp_views.features.inc';
+
+/**
+ * Implements hook_ckeditor_link_autocomplete().
+ */
+function atp_views_ckeditor_link_autocomplete_alter(&$results, $string) {
+
+  $entity_ids = array();
+  foreach ($results AS $key => $text) {
+    $key = explode('/', $key);
+    $entity_ids[$key[0]][$key[1]] = $text;
+  }
+
+  foreach ($entity_ids AS $entity_type => $data) {
+    $ids = array_keys($data);
+    $entities = entity_load($entity_type, $ids);
+    $entity_info = entity_get_info($entity_type);
+
+    foreach ($entities AS $id => $entity) {
+      $status = ($entity->status == 1) ? t('Published') : t('Not published');
+      $results[$entity_type . '/' . $id] = $data[$id] . ' (Type: ' . $entity_info['bundles'][$entity->type]['label'] . ') (ID: ' . $id . ') (' . $status . ')';
+    }
+
+  }
+}
