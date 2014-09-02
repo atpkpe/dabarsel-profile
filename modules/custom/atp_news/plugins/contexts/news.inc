@@ -22,6 +22,9 @@ $plugin = array(
     'news_vocab' => 'news_categories',
     'categories' => array(),
     'list_type' => 'fixed_categories',
+    'view_name' => 'news_list',
+    'view_display' => 'default_display',
+    'view_rss_display' => 'feed',
     'items_per_page' => 5,
   ),
 );
@@ -92,6 +95,36 @@ function ctools_context_news_settings_form($form, &$form_state) {
       ),
     ),
     '#default_value' => $conf['categories'],
+  );
+  $form['view'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('View settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['view']['view_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('View name'),
+    '#description' => t('Internal settings. Leave this alone unless necessary.'),
+    '#size' => 60,
+    '#maxlength' => 60,
+    '#default_value' => $conf['view_name'],
+  );
+  $form['view']['view_display'] = array(
+    '#type' => 'textfield',
+    '#title' => t('View display'),
+    '#description' => t('The display of the news view. Leave this alone unless necessary.'),
+    '#size' => 60,
+    '#maxlength' => 60,
+    '#default_value' => $conf['view_display'],
+  );
+  $form['view']['view_rss_display'] = array(
+    '#type' => 'textfield',
+    '#title' => t('RSS View display'),
+    '#description' => t('The display name of the news feed. Leave this alone unless necessary.'),
+    '#size' => 60,
+    '#maxlength' => 60,
+    '#default_value' => $conf['view_rss_display'],
   );
 
   return $form;
