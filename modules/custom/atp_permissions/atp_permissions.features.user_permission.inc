@@ -10,6 +10,16 @@
 function atp_permissions_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'accept translation jobs'.
+  $permissions['accept translation jobs'] = array(
+    'name' => 'accept translation jobs',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'tmgmt',
+  );
+
   // Exported permission: 'access administration menu'.
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
@@ -1029,6 +1039,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer tmgmt'.
+  $permissions['administer tmgmt'] = array(
+    'name' => 'administer tmgmt',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'tmgmt',
+  );
+
   // Exported permission: 'administer ultimate cron'.
   $permissions['administer ultimate cron'] = array(
     'name' => 'administer ultimate cron',
@@ -1319,6 +1338,16 @@ function atp_permissions_user_default_permissions() {
       'Author' => 'Author',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'create translation jobs'.
+  $permissions['create translation jobs'] = array(
+    'name' => 'create translation jobs',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'tmgmt',
   );
 
   // Exported permission: 'create url aliases'.
@@ -2268,6 +2297,16 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'submit translation jobs'.
+  $permissions['submit translation jobs'] = array(
+    'name' => 'submit translation jobs',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'tmgmt',
   );
 
   // Exported permission: 'switch users'.

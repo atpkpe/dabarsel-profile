@@ -1,0 +1,6 @@
+<?php
+
+function atp_content_translation_tmgmt_source_plugin_info_alter(&$info) {
+  // Swap the node source plugin for our own.
+  $info['node']['plugin controller class'] = 'ATPNodeSourcePluginController';
+}

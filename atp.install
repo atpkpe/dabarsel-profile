@@ -287,3 +287,10 @@ function atp_update_7018(&$sandbox) {
 function atp_update_7019(&$sandbox) {
   module_enable(array('ckeditor_link_file'));
 }
+
+/**
+ * Enable Translation management module
+ */
+function atp_update_7020(&$sandbox) {
+  module_enable(array('tmgmt_node_ui', 'tmgmt_field', 'tmgmt_node', 'tmgmt_local', 'actions_permissions', 'tmgmt_file', 'atp_content_translation'));
+}

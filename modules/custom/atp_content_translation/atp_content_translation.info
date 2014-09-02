@@ -1,0 +1,10 @@
+name = ATP Content Translation
+description = Adds custom content implementation to translation management module.
+core = 7.x
+package = ATP
+
+dependencies[] = tmgmt_field
+dependencies[] = atp_news
+dependencies[] = atp_page
+
+files[] = ATPNodeSourcePluginController.inc

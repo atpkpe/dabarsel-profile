@@ -253,3 +253,7 @@ projects[views_datasource][download][revision] = 'c15e455cebe36c1a2ef1082da4b0ea
 projects[ckeditor_link_file][type] = 'module'
 projects[ckeditor_link_file][subdir] = 'contrib'
 projects[ckeditor_link_file][version] = '1.3'
+
+projects[tmgmt][type] = 'module'
+projects[tmgmt][subdir] = 'contrib'
+projects[tmgmt][version] = '1.0-rc1'

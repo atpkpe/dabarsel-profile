@@ -71,6 +71,12 @@ dependencies[] = fpa
 dependencies[] = views_json
 dependencies[] = wysiwyg_entity_embed
 dependencies[] = ckeditor_link_file
+dependencies[] = tmgmt_node_ui
+dependencies[] = tmgmt_field
+dependencies[] = tmgmt_node
+dependencies[] = tmgmt_local
+dependencies[] = actions_permissions
+dependencies[] = tmgmt_file
 
 ; Project features
 dependencies[] = atp_settings
@@ -99,5 +105,6 @@ dependencies[] = atp_views
 dependencies[] = atp_log
 dependencies[] = atp_entity_embed
 dependencies[] = atp_document
+dependencies[] = atp_content_translation
 
 
