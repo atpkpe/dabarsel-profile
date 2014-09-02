@@ -8,6 +8,9 @@
   @include clearfix;
 }
 #main {
+  .admin-menu & {
+    min-height: 400px;
+  }
   aside {
     .menu {
       margin: 0;
