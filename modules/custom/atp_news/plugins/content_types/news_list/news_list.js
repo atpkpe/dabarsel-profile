@@ -28,6 +28,17 @@
               var response = xhr[2];
               $(response.selector)[response.method](response.data);
               Drupal.attachBehaviors(context, settings);
+
+              if ($(selectorRssLink).length != 0) {
+                var params = {tid: []};
+                for (var tid in instanceSettings.tid) {
+                  params.tid.push(tid);
+                }
+                var $rssLink = $(selectorRssLink, context);
+                var href = $rssLink.attr('href');
+                $rssLink.attr('href', href + '?' + $.param(params));
+              }
+
             }
           }
         });

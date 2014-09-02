@@ -14,10 +14,11 @@ $plugin = array(
   'admin title' => 'news_list_content_type_admin_title',
   'admin info' => 'news_list_content_type_admin_info',
   'defaults' => array(
-    'items_per_page' => 5,
-    'list_type' => 'fixed_categories',
-    'categories' => array(),
+//    'items_per_page' => 5,
+//    'list_type' => 'fixed_categories',
+//    'categories' => array(),
   ),
+  'required context' => new ctools_context_required(t('News'), 'news'),
 );
 
 
@@ -25,11 +26,12 @@ $plugin = array(
  * Content pane render function.
  */
 function news_list_content_type_render($subtype, $conf, $panel_args, &$context) {
-  $categories = array_filter($conf['categories']);
-  $view = views_get_view('news_list');
-  $view->set_display('default_display');
-  $view->set_use_ajax(TRUE);
-
+//  $categories = array_filter($conf['categories']);
+//  $view = views_get_view('news_list');
+//  $view->set_display('default_display');
+//  $view->set_use_ajax(TRUE);
+  var_dump($context);die;
+return;
   if ($conf['items_per_page']) {
     // Options to set the number of items per page, add pager.
     $pager = $view->display_handler->get_option('pager');
@@ -120,7 +122,7 @@ function news_list_content_type_render($subtype, $conf, $panel_args, &$context) 
  * Content pane admin title function.
  */
 function news_list_content_type_admin_title($subtype, $conf, $context) {
-  $types = news_list_type_options();
+  $types = atp_news_list_type_options();
   if (!empty($types[$conf['list_type']]['description'])) {
     return $types[$conf['list_type']]['description'];
   }
@@ -159,42 +161,36 @@ function news_list_content_type_edit_form($form, &$form_state) {
   $conf = $form_state['conf'];
   $conf += $form_state['plugin']['defaults'];
 
-  $tid_categories = array();
-  foreach (taxonomy_get_tree(atp_news_get_news_categories_vocab_id()) as $term) {
-    $tid_categories[$term->tid] = $term->name;
-  }
-  $list_type_options = news_list_type_options();
-  $list_type_options = array_map(function($v){
-    return $v['title'];
-  }, $list_type_options);
+//  $tid_categories = array();
+//  foreach (taxonomy_get_tree(atp_news_get_news_categories_vocab_id()) as $term) {
+//    $tid_categories[$term->tid] = $term->name;
+//  }
+//  $list_type_options = atp_news_list_type_options();
+//  $list_type_options = array_map(function($v){
+//    return $v['title'];
+//  }, $list_type_options);
+//
+//  $form['items_per_page'] = array(
+//    '#type' => 'textfield',
+//    '#title' => t('Items per page.'),
+//    '#description' => t('Number of items shown per page. 0 = unlimted.'),
+//    '#size' => 2,
+//    '#maxlength' => 2,
+//    '#default_value' => $conf['items_per_page'],
+//  );
 
-  $form['items_per_page'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Items per page.'),
-    '#description' => t('Number of items shown per page. 0 = unlimted.'),
-    '#size' => 2,
-    '#maxlength' => 2,
-    '#default_value' => $conf['items_per_page'],
-  );
-  $form['list_type'] = array(
-    '#type' => 'radios',
-    '#title' => t('Choose news list type.'),
-    '#description' => t('Choose if the list should be a plain list or a list with filtering options.'),
-    '#options' => $list_type_options,
-    '#default_value' => $conf['list_type'],
-  );
-  $form['categories'] = array(
-    '#title' => t('Categories'),
-    '#description' => t('Choose one ore more categories to filter list by. No categories chosen exposes all news items.'),
-    '#type' => 'checkboxes',
-    '#options' => $tid_categories,
-    '#states' => array(
-      'visible' => array(
-        ':input[name="list_type"]' => array('value' => 'fixed_categories'),
-      ),
-    ),
-    '#default_value' => $conf['categories'],
-  );
+//  $form['categories'] = array(
+//    '#title' => t('Categories'),
+//    '#description' => t('Choose one ore more categories to filter list by. No categories chosen exposes all news items.'),
+//    '#type' => 'checkboxes',
+//    '#options' => $tid_categories,
+//    '#states' => array(
+//      'visible' => array(
+//        ':input[name="list_type"]' => array('value' => 'fixed_categories'),
+//      ),
+//    ),
+//    '#default_value' => $conf['categories'],
+//  );
 
   return $form;
 }
@@ -210,21 +206,21 @@ function news_list_content_type_edit_form_submit($form, &$form_state) {
   }
 }
 
-/**
- * An array of possible news list types.
- *
- * @return array
- *   List types.
- */
-function news_list_type_options() {
-  return array(
-    'fixed_categories' => array(
-      'title' => t('Fixed categories'),
-      'description' => t('News list with fixed categories.'),
-    ),
-    'filtered' => array(
-      'title' => t('Filtered'),
-      'description' => t('News list with category filter options.'),
-    ),
-  );
-}
+///**
+// * An array of possible news list types.
+// *
+// * @return array
+// *   List types.
+// */
+//function news_list_type_options() {
+//  return array(
+//    'fixed_categories' => array(
+//      'title' => t('Fixed categories'),
+//      'description' => t('News list with fixed categories.'),
+//    ),
+//    'filtered' => array(
+//      'title' => t('Filtered'),
+//      'description' => t('News list with category filter options.'),
+//    ),
+//  );
+//}
