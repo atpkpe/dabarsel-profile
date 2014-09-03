@@ -160,7 +160,6 @@ projects[ckeditor_link][type] = 'module'
 projects[ckeditor_link][subdir] = 'contrib'
 projects[ckeditor_link][version] = '2.3'
 
-
 projects[wysiwyg_filter][type] = 'module'
 projects[wysiwyg_filter][subdir] = 'contrib'
 projects[wysiwyg_filter][version] = '1.6-rc2'
@@ -257,3 +256,7 @@ projects[ckeditor_link_file][version] = '1.3'
 projects[tmgmt][type] = 'module'
 projects[tmgmt][subdir] = 'contrib'
 projects[tmgmt][version] = '1.0-rc1'
+
+projects[js][type] = 'module'
+projects[js][subdir] = 'contrib'
+projects[js][version] = '1.0'
