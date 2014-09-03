@@ -1,6 +1,10 @@
 <?php
+/**
+ * @file
+ * Code for the ATP important message feature.
+ */
 
-// ./contrib/jquery_update/replace/ui/external/jquery.cookie.js
+include_once 'atp_important_message.features.inc';
 
 /**
  * Implementation of hook_ctools_plugin_directory().
@@ -20,7 +24,7 @@ function atp_important_message_js() {
     'results' => array(
       'callback' => 'atp_important_message_results',
       'includes' => array('unicode'),
-      'dependencies' => array('filter'),
+      'dependencies' => array(),
       'bootstrap' => DRUPAL_BOOTSTRAP_DATABASE,
       'page arguments' => array(1),
       'skip_hook_init' => TRUE,
@@ -43,24 +47,25 @@ function atp_important_message_results($id) {
              ->fetchObject();
 
   if ($current->vid > $id) {
-
-    if ($cache = cache_get('atp_important_message_results')) {
-      $result = $cache->data;
+    global $language;
+    $lang = '';
+    if ($language->language == 'en') {
+      $lang = '_en';
     }
 
-    if (!$cache || $cache->data->message_id != $current->vid) {
-      // Now raise the bootstrap level so text filters are available.
-      drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
-      $body = atp_important_message_get_field($current, 'field_important_message_body_da');
-      $result = array(
-        'message_id' => $current->vid,
-        'title' => atp_important_message_get_field($current, 'title_field'),
-        'body' => check_markup($body, 'simple_html'),
-        'success' => TRUE,
-        'show_message' => TRUE,
-      );
-      cache_set('atp_important_message_results', $result, 'cache');
-    }
+    $title = atp_important_message_get_field($current, 'important_message_title' . $lang );
+    $body = atp_important_message_get_field($current, 'important_message_body' . $lang);
+    $link = atp_important_message_get_link($current, 'important_message_link' . $lang);
+
+    $html = '<div class="important-message-content"><h2>' .
+            $title . '</h2><p>' . $body . '</p>' . $link . '</div>';
+
+    $result = array(
+      'message_id' => $current->vid,
+      'html' => $html,
+      'success' => TRUE,
+      'show_message' => TRUE,
+    );
 
     drupal_json_output($result);
   } else {
@@ -73,12 +78,35 @@ function atp_important_message_results($id) {
   drupal_exit();
 }
 
+function atp_important_message_get_alias($path) {
+  return db_select('url_alias', 'u')
+         ->fields('u', array('alias'))
+         ->condition('source', $path)
+         ->orderBy('pid', 'DESC')
+         ->execute()
+         ->fetchField();
+}
+
 function atp_important_message_get_field($node, $field_name) {
-  return db_select('field_data_' . $field_name, 'f')
-         ->fields('f', array($field_name . '_value'))
+  return db_select('field_data_field_' . $field_name, 'f')
+         ->fields('f', array('field_' . $field_name . '_value'))
          ->condition('entity_id', $node->nid)
          ->condition('revision_id', $node->vid)
          ->execute()
          ->fetchField();
+}
+
+function atp_important_message_get_link($node, $field_name) {
+  $result = db_select('field_data_field_' . $field_name, 'f')
+         ->fields('f', array('field_' . $field_name . '_url', 'field_' . $field_name . '_title'))
+         ->condition('entity_id', $node->nid)
+         ->condition('revision_id', $node->vid)
+         ->execute()
+         ->fetchObject();
+
+  $url = ltrim($result->field_important_message_link_url, '/');
+  if ( $alias = atp_important_message_get_alias($url) ){ $url = $alias; }
+  return '<a href="' . $link->url . '">' . $result->field_important_message_link_title . '</a>';
+
 }
 
