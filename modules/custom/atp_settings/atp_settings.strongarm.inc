@@ -13,6 +13,13 @@ function atp_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'admin_menu_cache_client';
+  $strongarm->value = 0;
+  $export['admin_menu_cache_client'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ckeditor_link_autocomplete_menus';
   $strongarm->value = array(
     '- any -' => 0,
@@ -109,7 +116,7 @@ function atp_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_default_timezone';
-  $strongarm->value = 'UTC';
+  $strongarm->value = 'Europe/Copenhagen';
   $export['date_default_timezone'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -407,7 +414,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'sEY5HW_DjeSF6zY5Ngns1Xtup3VnIEkXX8Z_l7zEWsA',
+    'javascript' => 'rqT2MjcFsumFzUlJ9vVDSriXeYCqx9k4j5ORrs0BJiI',
   );
   $export['language_default'] = $strongarm;
 

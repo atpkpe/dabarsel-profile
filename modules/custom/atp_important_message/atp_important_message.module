@@ -47,9 +47,9 @@ function atp_important_message_results($id) {
              ->fetchObject();
 
   if ($current->vid > $id) {
-    global $language;
+
     $lang = '';
-    if ($language->language == 'en') {
+    if (stripos($_REQUEST['q'], 'en/') === 0) {
       $lang = '_en';
     }
 
@@ -104,9 +104,11 @@ function atp_important_message_get_link($node, $field_name) {
          ->execute()
          ->fetchObject();
 
-  $url = ltrim($result->field_important_message_link_url, '/');
-  if ( $alias = atp_important_message_get_alias($url) ){ $url = $alias; }
-  return '<a href="' . $link->url . '">' . $result->field_important_message_link_title . '</a>';
+  if ($result) {
+    $url = ltrim($result->field_important_message_link_url, '/');
+    if ( $alias = atp_important_message_get_alias($url) ){ $url = $alias; }
+    return '<a href="' . $link->url . '">' . $result->field_important_message_link_title . '</a>';
+  }
 
 }
 
