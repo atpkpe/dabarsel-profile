@@ -530,7 +530,7 @@ function atp_news_test_content_uuid_default_entities() {
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -724,7 +724,7 @@ Esca persto verto ymo. Abigo diam dolus lucidus minim nisl tation zelus. Exputo 
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -980,7 +980,7 @@ Consectetuer duis eligo et facilisis ille utinam valetudo. Abigo ea exputo inter
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -1197,7 +1197,7 @@ Bene dignissim exputo ludus quae turpis. Capto iustum neo probo quae ullamcorper
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -1386,7 +1386,7 @@ Amet iriure nulla praesent saepius vulputate. Imputo jus refero veniam voco. Inc
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -1582,7 +1582,7 @@ Aliquip distineo dolus ibidem luctus magna nobis quae saluto uxor. Lenis premo v
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -1764,7 +1764,7 @@ Aliquip distineo dolus ibidem luctus magna nobis quae saluto uxor. Lenis premo v
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -1953,7 +1953,7 @@ Exerci iustum paratus. Acsi elit et euismod haero in obruo olim typicus vero. Da
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -2213,7 +2213,7 @@ Abluo brevitas commoveo persto quae. Abbas amet capto damnum humo inhibeo lucidu
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',
@@ -2429,7 +2429,7 @@ Eligo gravis minim. Accumsan aptent suscipere. Aliquam aptent feugiat genitus ho
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',

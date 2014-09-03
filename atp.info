@@ -106,5 +106,7 @@ dependencies[] = atp_log
 dependencies[] = atp_entity_embed
 dependencies[] = atp_document
 dependencies[] = atp_content_translation
+dependencies[] = atp_faktum
+dependencies[] = atp_fields
 
 

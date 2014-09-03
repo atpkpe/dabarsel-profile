@@ -1,53 +1,50 @@
 <?php
 /**
  * @file
- * atp_news.strongarm.inc
+ * atp_faktum.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function atp_news_strongarm() {
+function atp_faktum_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_news';
+  $strongarm->name = 'additional_settings__active_tab_faktum';
   $strongarm->value = 'edit-panelizer';
-  $export['additional_settings__active_tab_news'] = $strongarm;
+  $export['additional_settings__active_tab_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_enable_revisions_page_node_news';
+  $strongarm->name = 'diff_enable_revisions_page_node_faktum';
   $strongarm->value = 1;
-  $export['diff_enable_revisions_page_node_news'] = $strongarm;
+  $export['diff_enable_revisions_page_node_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_show_preview_changes_node_news';
+  $strongarm->name = 'diff_show_preview_changes_node_faktum';
   $strongarm->value = 1;
-  $export['diff_show_preview_changes_node_news'] = $strongarm;
+  $export['diff_show_preview_changes_node_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'diff_view_mode_preview_node_news';
+  $strongarm->name = 'diff_view_mode_preview_node_faktum';
   $strongarm->value = 'full';
-  $export['diff_view_mode_preview_node_news'] = $strongarm;
+  $export['diff_view_mode_preview_node_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__news';
+  $strongarm->name = 'field_bundle_settings_node__faktum';
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => TRUE,
-      ),
-      'teaser_with_img' => array(
         'custom_settings' => TRUE,
       ),
       'full' => array(
@@ -56,19 +53,43 @@ function atp_news_strongarm() {
       'rss' => array(
         'custom_settings' => FALSE,
       ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
       '1_4_fact' => array(
         'custom_settings' => FALSE,
       ),
       '1_4_l' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
+      ),
+      '1_4_compressed' => array(
+        'custom_settings' => FALSE,
+      ),
+      '3_8_h' => array(
+        'custom_settings' => FALSE,
       ),
       '1_2_l' => array(
+        'custom_settings' => FALSE,
+      ),
+      '1_2_square' => array(
         'custom_settings' => FALSE,
       ),
       '1_2_h' => array(
         'custom_settings' => FALSE,
       ),
+      '3_4_h' => array(
+        'custom_settings' => FALSE,
+      ),
       '1_1_l' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_with_img' => array(
+        'custom_settings' => FALSE,
+      ),
+      'menu_box' => array(
         'custom_settings' => FALSE,
       ),
       'diff_standard' => array(
@@ -77,153 +98,166 @@ function atp_news_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
-      '1_2_square' => array(
-        'custom_settings' => FALSE,
-      ),
-      '1_4_compressed' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_index' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_result' => array(
-        'custom_settings' => FALSE,
-      ),
-      '3_4_h' => array(
-        'custom_settings' => TRUE,
-      ),
-      '3_8_h' => array(
-        'custom_settings' => FALSE,
-      ),
-      'menu_box' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '2',
-        ),
-        'title' => array(
-          'weight' => '1',
-        ),
-        'path' => array(
-          'weight' => '2',
-        ),
-        'xmlsitemap' => array(
-          'weight' => '3',
-        ),
-        'workbench_access' => array(
-          'weight' => '0',
-        ),
-        'flag' => array(
-          'weight' => '10',
+          'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '6',
+        ),
+        'title' => array(
+          'weight' => '4',
+        ),
+        'path' => array(
+          'weight' => '5',
+        ),
+        'workbench_access' => array(
+          'weight' => '3',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '4',
         ),
       ),
       'display' => array(
         'language' => array(
-          'teaser' => array(
-            'weight' => '0',
-            'visible' => FALSE,
-          ),
           'default' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => FALSE,
           ),
-          'teaser_with_img' => array(
-            'weight' => '2',
-            'visible' => FALSE,
-          ),
-          '1_4_l' => array(
-            'weight' => '7',
-            'visible' => FALSE,
-          ),
-          '3_4_h' => array(
-            'weight' => '7',
+          'teaser' => array(
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
       ),
     ),
   );
-  $export['field_bundle_settings_node__news'] = $strongarm;
+  $export['field_bundle_settings_node__faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'i18n_node_extended_news';
+  $strongarm->name = 'i18n_node_extended_faktum';
   $strongarm->value = '1';
-  $export['i18n_node_extended_news'] = $strongarm;
+  $export['i18n_node_extended_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'i18n_node_options_news';
+  $strongarm->name = 'i18n_node_options_faktum';
   $strongarm->value = array(
     0 => 'required',
   );
-  $export['i18n_node_options_news'] = $strongarm;
+  $export['i18n_node_options_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_news';
+  $strongarm->name = 'language_content_type_faktum';
   $strongarm->value = '2';
-  $export['language_content_type_news'] = $strongarm;
+  $export['language_content_type_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_news';
+  $strongarm->name = 'menu_options_faktum';
   $strongarm->value = array();
-  $export['menu_options_news'] = $strongarm;
+  $export['menu_options_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_news';
+  $strongarm->name = 'menu_parent_faktum';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_news'] = $strongarm;
+  $export['menu_parent_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_news';
+  $strongarm->name = 'node_expire_enabled_faktum';
+  $strongarm->value = 1;
+  $export['node_expire_enabled_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_expire_faktum';
+  $strongarm->value = '';
+  $export['node_expire_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_expire_max_faktum';
+  $strongarm->value = '';
+  $export['node_expire_max_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_expire_required_faktum';
+  $strongarm->value = 0;
+  $export['node_expire_required_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_expire_update_expiry_interval_faktum';
+  $strongarm->value = '4';
+  $export['node_expire_update_expiry_interval_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_expire_update_expiry_multiplier_faktum';
+  $strongarm->value = '1';
+  $export['node_expire_update_expiry_multiplier_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_expire_update_expiry_start_faktum';
+  $strongarm->value = '1';
+  $export['node_expire_update_expiry_start_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_faktum';
   $strongarm->value = array(
     0 => 'moderation',
     1 => 'revision',
   );
-  $export['node_options_news'] = $strongarm;
+  $export['node_options_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_news';
+  $strongarm->name = 'node_preview_faktum';
   $strongarm->value = '1';
-  $export['node_preview_news'] = $strongarm;
+  $export['node_preview_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_news';
+  $strongarm->name = 'node_submitted_faktum';
   $strongarm->value = 0;
-  $export['node_submitted_news'] = $strongarm;
+  $export['node_submitted_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_node_news';
+  $strongarm->name = 'panelizer_defaults_node_faktum';
   $strongarm->value = array(
     'status' => 1,
     'view modes' => array(
       'page_manager' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
       ),
       'default' => array(
         'status' => 1,
@@ -233,60 +267,38 @@ function atp_news_strongarm() {
       'teaser' => array(
         'status' => 0,
         'default' => 0,
+        'default display' => 0,
         'choice' => 0,
-        'selection' => 0,
-      ),
-      '1_4_l' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-        'selection' => 0,
-      ),
-      'teaser_with_img' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-        'selection' => 0,
       ),
     ),
   );
-  $export['panelizer_defaults_node_news'] = $strongarm;
+  $export['panelizer_defaults_node_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_taxonomy_term_news_categories';
-  $strongarm->value = array(
-    'status' => 0,
-    'view modes' => array(),
-  );
-  $export['panelizer_defaults_taxonomy_term_news_categories'] = $strongarm;
+  $strongarm->name = 'panelizer_node:faktum:default_selection';
+  $strongarm->value = 'node:faktum:standard_2_col:default';
+  $export['panelizer_node:faktum:default_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:news:default_selection';
-  $strongarm->value = 'node:news:standard_2_col:default';
-  $export['panelizer_node:news:default_selection'] = $strongarm;
+  $strongarm->name = 'panelizer_node:faktum_allowed_layouts';
+  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:19:"panelizer_node:faktum";s:23:"allowed_layout_settings";a:14:{s:8:"flexible";b:0;s:14:"twocol_stacked";b:0;s:13:"twocol_bricks";b:0;s:6:"twocol";b:0;s:25:"threecol_33_34_33_stacked";b:0;s:17:"threecol_33_34_33";b:0;s:25:"threecol_25_50_25_stacked";b:0;s:17:"threecol_25_50_25";b:1;s:6:"onecol";b:0;s:13:"site_template";b:0;s:16:"atp_twocol-right";b:1;s:10:"atp_twocol";b:1;s:11:"atp_section";b:1;s:10:"atp_onecol";b:1;}s:10:"form_state";N;}';
+  $export['panelizer_node:faktum_allowed_layouts'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:news_allowed_layouts';
-  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:19:"panelizer_node:news";s:23:"allowed_layout_settings";a:14:{s:8:"flexible";b:0;s:14:"twocol_stacked";b:0;s:13:"twocol_bricks";b:0;s:6:"twocol";b:0;s:25:"threecol_33_34_33_stacked";b:0;s:17:"threecol_33_34_33";b:0;s:25:"threecol_25_50_25_stacked";b:0;s:17:"threecol_25_50_25";b:1;s:6:"onecol";b:0;s:13:"site_template";b:0;s:16:"atp_twocol-right";b:1;s:10:"atp_twocol";b:1;s:11:"atp_section";b:1;s:10:"atp_onecol";b:1;}s:10:"form_state";N;}';
-  $export['panelizer_node:news_allowed_layouts'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:news_allowed_layouts_default';
+  $strongarm->name = 'panelizer_node:faktum_allowed_layouts_default';
   $strongarm->value = 0;
-  $export['panelizer_node:news_allowed_layouts_default'] = $strongarm;
+  $export['panelizer_node:faktum_allowed_layouts_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:news_allowed_types';
+  $strongarm->name = 'panelizer_node:faktum_allowed_types';
   $strongarm->value = array(
     'news_list-news_list' => 'news_list-news_list',
     'signup-signup' => 'signup-signup',
@@ -392,11 +404,10 @@ function atp_news_strongarm() {
     'token-node:field-component-image' => 0,
     'token-node:field-component-link' => 0,
     'token-node:field-component-summary' => 0,
-    'token-node:field-news-body' => 0,
-    'token-node:field-news-categories' => 0,
-    'token-node:field-news-image' => 0,
-    'token-node:field-news-publishdate' => 0,
-    'token-node:field-news-summary' => 0,
+    'token-node:field-faktum-body' => 0,
+    'token-node:field-faktum-image' => 0,
+    'token-node:field-faktum-publishdate' => 0,
+    'token-node:field-faktum-summary' => 0,
     'token-node:field-slide-body' => 0,
     'token-node:field-slide-image' => 0,
     'token-node:field-slide-link' => 0,
@@ -422,11 +433,10 @@ function atp_news_strongarm() {
     'token-node:field_component_image' => 0,
     'token-node:field_component_link' => 0,
     'token-node:field_component_summary' => 0,
-    'token-node:field_news_body' => 0,
-    'token-node:field_news_categories' => 0,
-    'token-node:field_news_image' => 0,
-    'token-node:field_published_date' => 0,
-    'token-node:field_news_summary' => 0,
+    'token-node:field_faktum_body' => 0,
+    'token-node:field_faktum_image' => 0,
+    'token-node:field_faktum_publishdate' => 0,
+    'token-node:field_faktum_summary' => 0,
     'token-node:field_slide_body' => 0,
     'token-node:field_slide_image' => 0,
     'token-node:field_slide_link' => 0,
@@ -665,11 +675,10 @@ function atp_news_strongarm() {
     'entity_form_field-node:field_contact_jobtitle' => 0,
     'entity_form_field-node:field_contact_mobile' => 0,
     'entity_form_field-node:field_contact_phone' => 0,
-    'entity_form_field-node:field_news_body' => 0,
-    'entity_form_field-node:field_news_categories' => 0,
-    'entity_form_field-node:field_news_image' => 0,
-    'entity_form_field-node:field_published_date' => 0,
-    'entity_form_field-node:field_news_summary' => 0,
+    'entity_form_field-node:field_faktum_body' => 0,
+    'entity_form_field-node:field_faktum_image' => 0,
+    'entity_form_field-node:field_faktum_publishdate' => 0,
+    'entity_form_field-node:field_faktum_summary' => 0,
     'entity_form_field-node:field_section_body' => 0,
     'entity_form_field-node:field_section_facts' => 0,
     'entity_form_field-node:field_section_image' => 0,
@@ -703,11 +712,10 @@ function atp_news_strongarm() {
     'entity_field-node:field_contact_jobtitle' => 0,
     'entity_field-node:field_contact_mobile' => 0,
     'entity_field-node:field_contact_phone' => 0,
-    'entity_field-node:field_news_body' => 0,
-    'entity_field-node:field_news_categories' => 0,
-    'entity_field-node:field_news_image' => 0,
-    'entity_field-node:field_published_date' => 0,
-    'entity_field-node:field_news_summary' => 0,
+    'entity_field-node:field_faktum_body' => 0,
+    'entity_field-node:field_faktum_image' => 0,
+    'entity_field-node:field_faktum_publishdate' => 0,
+    'entity_field-node:field_faktum_summary' => 0,
     'entity_field-node:field_section_body' => 0,
     'entity_field-node:field_section_facts' => 0,
     'entity_field-node:field_section_image' => 0,
@@ -806,19 +814,19 @@ function atp_news_strongarm() {
     'site_contact-site_contact' => 0,
     'site_bottom-site_bottom' => 0,
   );
-  $export['panelizer_node:news_allowed_types'] = $strongarm;
+  $export['panelizer_node:faktum_allowed_types'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:news_allowed_types_default';
+  $strongarm->name = 'panelizer_node:faktum_allowed_types_default';
   $strongarm->value = 0;
-  $export['panelizer_node:news_allowed_types_default'] = $strongarm;
+  $export['panelizer_node:faktum_allowed_types_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:news_default';
+  $strongarm->name = 'panelizer_node:faktum_default';
   $strongarm->value = array(
     'news_list' => 'news_list',
     'signup' => 'signup',
@@ -841,129 +849,143 @@ function atp_news_strongarm() {
     'site_bottom' => 0,
     'other' => 0,
   );
-  $export['panelizer_node:news_default'] = $strongarm;
+  $export['panelizer_node:faktum_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'save_continue_news';
-  $strongarm->value = 'Save and add fields';
-  $export['save_continue_news'] = $strongarm;
+  $strongarm->name = 'save_continue_faktum';
+  $strongarm->value = 'Gem og tilføj felter';
+  $export['save_continue_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_expand_fieldset_news';
+  $strongarm->name = 'scheduler_expand_fieldset_faktum';
   $strongarm->value = '0';
-  $export['scheduler_expand_fieldset_news'] = $strongarm;
+  $export['scheduler_expand_fieldset_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_allow_state_news';
+  $strongarm->name = 'scheduler_publish_allow_state_faktum';
   $strongarm->value = 'approved';
-  $export['scheduler_publish_allow_state_news'] = $strongarm;
+  $export['scheduler_publish_allow_state_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_enable_news';
+  $strongarm->name = 'scheduler_publish_enable_faktum';
   $strongarm->value = 1;
-  $export['scheduler_publish_enable_news'] = $strongarm;
+  $export['scheduler_publish_enable_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_moderation_state_news';
+  $strongarm->name = 'scheduler_publish_moderation_state_faktum';
   $strongarm->value = 'published';
-  $export['scheduler_publish_moderation_state_news'] = $strongarm;
+  $export['scheduler_publish_moderation_state_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_past_date_news';
+  $strongarm->name = 'scheduler_publish_past_date_faktum';
   $strongarm->value = 'error';
-  $export['scheduler_publish_past_date_news'] = $strongarm;
+  $export['scheduler_publish_past_date_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_required_news';
+  $strongarm->name = 'scheduler_publish_required_faktum';
   $strongarm->value = 0;
-  $export['scheduler_publish_required_news'] = $strongarm;
+  $export['scheduler_publish_required_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_revision_news';
+  $strongarm->name = 'scheduler_publish_revision_faktum';
   $strongarm->value = 0;
-  $export['scheduler_publish_revision_news'] = $strongarm;
+  $export['scheduler_publish_revision_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_touch_news';
+  $strongarm->name = 'scheduler_publish_touch_faktum';
   $strongarm->value = 0;
-  $export['scheduler_publish_touch_news'] = $strongarm;
+  $export['scheduler_publish_touch_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_default_time_news';
+  $strongarm->name = 'scheduler_unpublish_default_time_faktum';
   $strongarm->value = '';
-  $export['scheduler_unpublish_default_time_news'] = $strongarm;
+  $export['scheduler_unpublish_default_time_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_enable_news';
+  $strongarm->name = 'scheduler_unpublish_enable_faktum';
   $strongarm->value = 1;
-  $export['scheduler_unpublish_enable_news'] = $strongarm;
+  $export['scheduler_unpublish_enable_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_moderation_state_news';
+  $strongarm->name = 'scheduler_unpublish_moderation_state_faktum';
   $strongarm->value = 'published';
-  $export['scheduler_unpublish_moderation_state_news'] = $strongarm;
+  $export['scheduler_unpublish_moderation_state_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_required_news';
+  $strongarm->name = 'scheduler_unpublish_required_faktum';
   $strongarm->value = 0;
-  $export['scheduler_unpublish_required_news'] = $strongarm;
+  $export['scheduler_unpublish_required_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_revision_news';
+  $strongarm->name = 'scheduler_unpublish_revision_faktum';
   $strongarm->value = 0;
-  $export['scheduler_unpublish_revision_news'] = $strongarm;
+  $export['scheduler_unpublish_revision_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_use_vertical_tabs_news';
+  $strongarm->name = 'scheduler_use_vertical_tabs_faktum';
   $strongarm->value = '1';
-  $export['scheduler_use_vertical_tabs_news'] = $strongarm;
+  $export['scheduler_use_vertical_tabs_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_moderation_default_state_news';
+  $strongarm->name = 'webform_node_faktum';
+  $strongarm->value = 0;
+  $export['webform_node_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_faktum';
+  $strongarm->value = 1;
+  $export['workbench_access_node_type_faktum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_faktum';
   $strongarm->value = 'draft';
-  $export['workbench_moderation_default_state_news'] = $strongarm;
+  $export['workbench_moderation_default_state_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_settings_node_news';
+  $strongarm->name = 'xmlsitemap_settings_node_faktum';
   $strongarm->value = array(
     'status' => '0',
     'priority' => '0.5',
   );
-  $export['xmlsitemap_settings_node_news'] = $strongarm;
+  $export['xmlsitemap_settings_node_faktum'] = $strongarm;
 
   return $export;
 }

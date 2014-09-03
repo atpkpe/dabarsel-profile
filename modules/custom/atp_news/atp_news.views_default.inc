@@ -103,11 +103,11 @@ function atp_news_views_default_views() {
   $handler->display->display_options['fields']['field_news_summary']['element_wrapper_type'] = 'p';
   $handler->display->display_options['fields']['field_news_summary']['element_wrapper_class'] = 'summary';
   $handler->display->display_options['fields']['field_news_summary']['element_default_classes'] = FALSE;
-  /* Sorteringskriterie: Indhold: Published date (field_news_publishdate) */
-  $handler->display->display_options['sorts']['field_news_publishdate_value']['id'] = 'field_news_publishdate_value';
-  $handler->display->display_options['sorts']['field_news_publishdate_value']['table'] = 'field_data_field_news_publishdate';
-  $handler->display->display_options['sorts']['field_news_publishdate_value']['field'] = 'field_news_publishdate_value';
-  $handler->display->display_options['sorts']['field_news_publishdate_value']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Published Date (field_published_date) */
+  $handler->display->display_options['sorts']['field_published_date_value']['id'] = 'field_published_date_value';
+  $handler->display->display_options['sorts']['field_published_date_value']['table'] = 'field_data_field_published_date';
+  $handler->display->display_options['sorts']['field_published_date_value']['field'] = 'field_published_date_value';
+  $handler->display->display_options['sorts']['field_published_date_value']['order'] = 'DESC';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -120,6 +120,7 @@ function atp_news_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'faktum' => 'faktum',
     'news' => 'news',
   );
   /* Filterkriterie: Indhold: Har taksonomiterm */
