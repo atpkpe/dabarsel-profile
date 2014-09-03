@@ -48,10 +48,7 @@ function atp_important_message_results($id) {
 
   if ($current->vid > $id) {
 
-    $lang = '';
-    if (stripos($_REQUEST['q'], 'en/') === 0) {
-      $lang = '_en';
-    }
+    $lang = ( 0 === strpos($_REQUEST['q'], 'en/') ? '_en' : '' );
 
     $title = atp_important_message_get_field($current, 'important_message_title' . $lang );
     $body = atp_important_message_get_field($current, 'important_message_body' . $lang);
@@ -97,18 +94,24 @@ function atp_important_message_get_field($node, $field_name) {
 }
 
 function atp_important_message_get_link($node, $field_name) {
-  $result = db_select('field_data_field_' . $field_name, 'f')
-         ->fields('f', array('field_' . $field_name . '_url', 'field_' . $field_name . '_title'))
-         ->condition('entity_id', $node->nid)
-         ->condition('revision_id', $node->vid)
-         ->execute()
-         ->fetchObject();
+
+  $query = db_select('field_data_field_' . $field_name, 'f')
+           ->condition('entity_id', $node->nid)
+           ->condition('revision_id', $node->vid);
+
+  $query->addField('f', 'field_' . $field_name . '_url', 'url');
+  $query->addField('f', 'field_' . $field_name . '_title', 'title');
+
+  $result = $query->execute()->fetchObject();
 
   if ($result) {
-    $url = ltrim($result->field_important_message_link_url, '/');
-    if ( $alias = atp_important_message_get_alias($url) ){ $url = $alias; }
-    return '<a href="' . $link->url . '">' . $result->field_important_message_link_title . '</a>';
+    $url = ltrim($result->url, '/');
+    if (0 === strpos($url, 'node')) {
+      if ( $alias = atp_important_message_get_alias($url)) {
+        $url = $alias;
+      }
+    }
+    return '<a href="' . $url . '">' . $result->title . '</a>';
   }
 
 }
-
