@@ -45,13 +45,28 @@ function ctools_context_create_news($empty, $data = NULL, $conf = FALSE) {
   }
 
   if ($data !== FALSE ) {
+    $view_params = array();
     if (!empty($data['categories'])) {
+      // Only use term ids that are selected.
       $data['categories'] = array_filter($data['categories']);
+      // Construct views params if needed.
+      $view_params = array('tid' => $data['categories']);
     }
-    $context->data = $data;
-    $context->title = ($conf) ? check_plain($data['identifier']) : check_plain($data);
-    return $context;
+    // Construct rss feed path.
+    $data['rss_path'] = '';
+    $view = views_get_view($data['view_name']);
+    if (is_object($view)) {
+      $view->set_display($conf['view_rss_display']);
+      $path = $view->get_path();
+      if (!empty($path)) {
+        $options = !empty($view_params['tid']) ? array('query' => $view_params) : array();
+        $data['rss_path'] = url($view->get_path(), $options);
+      }
+    }
   }
+  $context->data = $data;
+  $context->title = ($conf) ? check_plain($data['identifier']) : check_plain($data);
+  return $context;
 }
 
 function ctools_context_news_settings_form($form, &$form_state) {

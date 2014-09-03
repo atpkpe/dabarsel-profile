@@ -34,11 +34,19 @@
               if ($(selectorRssLink).length != 0) {
                 var params = {tid: []};
                 for (var tid in instanceSettings.tid) {
-                  params.tid.push(tid);
+                  if (typeof(params.tid[tid] == 'undefined')) {
+                    params.tid.push(tid);
+                  }
                 }
                 var $rssLink = $(selectorRssLink, context);
                 var href = $rssLink.attr('href');
-                $rssLink.attr('href', href + '?' + decodeURIComponent($.param(params)));
+                href = href.replace(/\?.*$/, "");
+                var queryParams = $.param(params);
+                var query = '';
+                if (queryParams.length) {
+                  query = '?' + decodeURIComponent($.param(params));
+                }
+                $rssLink.attr('href', href + query);
               }
             }
           }
