@@ -58,7 +58,7 @@ function atp_important_message_results($id) {
     $link = atp_important_message_get_link($current, 'important_message_link' . $lang);
 
     $html = '<div class="important-message-content"><h2>' .
-            $title . '</h2><p>' . $body . '</p>' . $link . '</div>';
+            $title . '</h2><p>' . nl2br($body) . '</p>' . $link . '</div>';
 
     $result = array(
       'message_id' => $current->vid,
