@@ -9,7 +9,6 @@ $plugin = array(
   'description' => t('Shows the print and sharing toolbar.'),
   'category' => array(t('ATP'), -9),
   'render callback' => 'tools_content_type_render',
-  'required context' => new ctools_context_required(t('News'), 'news'),
 );
 
 /**
