@@ -1295,6 +1295,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create important_message content'.
+  $permissions['create important_message content'] = array(
+    'name' => 'create important_message content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create mini panels'.
   $permissions['create mini panels'] = array(
     'name' => 'create mini panels',
@@ -1432,6 +1441,13 @@ function atp_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'delete any important_message content'.
+  $permissions['delete any important_message content'] = array(
+    'name' => 'delete any important_message content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any news content'.
   $permissions['delete any news content'] = array(
     'name' => 'delete any news content',
@@ -1555,6 +1571,13 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own important_message content'.
+  $permissions['delete own important_message content'] = array(
+    'name' => 'delete own important_message content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete own news content'.
@@ -1807,6 +1830,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit any important_message content'.
+  $permissions['edit any important_message content'] = array(
+    'name' => 'edit any important_message content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any news content'.
   $permissions['edit any news content'] = array(
     'name' => 'edit any news content',
@@ -1959,6 +1991,15 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own important_message content'.
+  $permissions['edit own important_message content'] = array(
+    'name' => 'edit own important_message content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit own news content'.
