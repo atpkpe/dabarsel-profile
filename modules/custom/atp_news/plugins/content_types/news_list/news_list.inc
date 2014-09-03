@@ -20,9 +20,14 @@ $plugin = array(
  */
 function news_list_content_type_render($subtype, $conf, $panel_args, &$context) {
   $data = $context->data;
+  $block = new stdClass();
+  $block->content = array();
 
   $categories = array_filter($data['categories']);
   $view = views_get_view($data['view_name']);
+  if (!is_object($view)) {
+    return $block;
+  }
   $view->set_display($data['view_display']);
   $view->set_use_ajax(TRUE);
 
@@ -33,9 +38,6 @@ function news_list_content_type_render($subtype, $conf, $panel_args, &$context) 
     $pager['options']['items_per_page'] = $data['items_per_page'];
     $view->display_handler->set_option('pager', $pager);
   }
-
-  $block = new stdClass();
-  $block->content = array();
 
   switch ($data['list_type']) {
     case 'filtered':
