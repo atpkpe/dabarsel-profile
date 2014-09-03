@@ -17,28 +17,12 @@ $plugin = array(
  */
 function tools_content_type_render($subtype, $conf, $panel_args, &$context) {
   $data = $context->data;
-  // Construct feed url.
-  $feed_url = '';
-  $view = views_get_view($data['view_name']);
-  if (is_object($view)) {
-    $view->set_display($conf['view_rss_display']);
-    $path = $view->get_path();
-    if (!empty($path)) {
-      $view_params = array();
-      if (!empty($data['categories'])) {
-        $view_params = array('tid' => $data['categories']);
-      }
-      $feed_url = url(
-        $view->get_path(),
-        array('query' => $view_params)
-      );
-    }
-  }
+
   // Render the toolbar
   $block = new stdClass();
   $block->content = array(
     '#theme' => 'toolbar',
-    '#feed_url' => $feed_url,
+    '#feed_url' => !empty($data['rss_path']) ? $data['rss_path'] : '',
   );
   return $block;
 }
