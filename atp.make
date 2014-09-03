@@ -249,6 +249,10 @@ projects[views_datasource][download][type] = 'git'
 projects[views_datasource][download][url] = 'http://git.drupal.org/project/views_datasource.git'
 projects[views_datasource][download][revision] = 'c15e455cebe36c1a2ef1082da4b0ea7d93db2ed5'
 
+projects[views_rss][type] = 'module'
+projects[views_rss][subdir] = 'contrib'
+projects[views_rss][version] = '2.0-rc3'
+
 projects[ckeditor_link_file][type] = 'module'
 projects[ckeditor_link_file][subdir] = 'contrib'
 projects[ckeditor_link_file][version] = '1.3'
