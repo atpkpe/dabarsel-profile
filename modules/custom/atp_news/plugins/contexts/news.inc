@@ -47,7 +47,9 @@ function ctools_context_create_news($empty, $data = NULL, $conf = FALSE) {
   if ($data !== FALSE ) {
     $view_params = array();
     if (!empty($data['categories'])) {
+      // Only use term ids that are selected.
       $data['categories'] = array_filter($data['categories']);
+      // Construct views params if needed.
       $view_params = array('tid' => $data['categories']);
     }
     // Construct rss feed path.
