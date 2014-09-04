@@ -32,6 +32,7 @@ function sites_install() {
   // Create the default site.
   $site = new Site();
   $site->title = 'ATP';
+  $site->status = 1;
   $site->front_page = '';
   $site->contact_page = '';
   $site->machine_name = 'atp_main';
@@ -91,6 +92,13 @@ function sites_schema() {
       ),
       'site_term' => array(
         'description' => 'Site term.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+        'default' => 0,
+      ),
+      'status' => array(
+        'description' => 'Publish status',
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => FALSE,
@@ -213,4 +221,14 @@ $schema['sites_multilanguage'] = array(
   );
 
   return $schema;
+}
+
+/**
+ * ATP-70 Add status field to {sites} table.
+ * @author Tom Helmer Hansen <tom@adapt.dk>
+ */
+function sites_update_7001() {
+  $schema = sites_schema();
+  db_add_field( 'sites', 'status', $schema['sites']['fields']['status']);
+  db_query('UPDATE sites SET status = 1');
 }
