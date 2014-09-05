@@ -34,7 +34,12 @@ article.expanding {
       padding: 0px;
       padding-right: 40px;
     }
-    > p { display: block; }
+    > p {
+      display: block;
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
