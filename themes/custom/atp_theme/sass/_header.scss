@@ -275,6 +275,13 @@ header {
     }
   }
 }
+.menu-backdrop {
+  background: $gray-light;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  display: none;
+}
 .main-menu {
   @include clearfix;
   float: right;
@@ -361,7 +368,6 @@ header {
       }
       > ul {
         @include clearfix;
-        box-sizing: initial !important;
         background: $gray-light;
         display: none;
         position: absolute;
@@ -369,9 +375,6 @@ header {
         left: 0;
         top: 104px;
         z-index: 100;
-        border-left: 2000px solid $gray-light;
-        border-right: 2000px solid $gray-light;
-        margin-left: -2000px;
         padding: $margins 0;
         .front & {
           top: 100px;
@@ -383,6 +386,7 @@ header {
           float: left;
           width: percentage(300/960);
           margin-right: percentage(30/960);
+          list-style: none;
           &.last {
             margin-right: 0;
           }

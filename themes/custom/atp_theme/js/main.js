@@ -11,12 +11,16 @@ function stickyHeader() {
 (function ($) {
   $(window).scroll(stickyHeader);
   stickyHeader();
-  $(".main-menu > ul > li").hover(
+  $("header").append('<div class="menu-backdrop"/>');
+  $(".menu-backdrop").css("height",$(".main-menu > ul > li.last > ul").height()+"px")
+  $(".main-menu > ul > li.last").hover(
     function(){
       $(this).addClass("hover");
+      $(".menu-backdrop").show();
     },
     function(){
       $(this).removeClass("hover");
+      $(".menu-backdrop").hide();
     }
   );
   $(".toggle-menu").click(function(){
