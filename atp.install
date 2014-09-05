@@ -354,7 +354,6 @@ function atp_update_7022(&$sandbox) {
     $faktum['language'] = $node->language;
     $faktum['status'] = $node->status;
 
-
     $faktum = entity_metadata_create_node($faktum);
     $sandbox['progress']++;
     $faktum = entity_save('node', $faktum);
@@ -424,6 +423,39 @@ function atp_update_7025(&$sandbox) {
   module_enable(array('js','atp_important_message'));
 }
 
+/**
+ * ATP-469 Update all faktum and set panelizer default.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7026(&$sandbox) {
+  $efq = new EntityFieldQuery();
+  $efq->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'faktum');
 
+  $entities = $efq->execute();
 
+  foreach ($entities['node'] AS $node) {
 
+    if (empty($node->panelizer)) {
+      $default = new stdClass();
+      $default->entity_type = 'node';
+      $default->entity_id = $node->nid;
+      $default->revision_id = $node->vid;
+      $default->name = 'node:faktum:standard_2_col:default';
+      $default->no_blocks = 0;
+      $default->css_id = '';
+      $default->pipeline = 'standard';
+      $default->contexts = array();
+      $default->relationships = array();
+      $default->did = 0;
+      $default->view_mode = 'default';
+      $default->css_class = '';
+      $default->title_element = 'H2';
+      $default->link_to_entity = 1;
+      $default->extra = array();
+
+      drupal_write_record('panelizer_entity', $default);
+    }
+  }
+}
