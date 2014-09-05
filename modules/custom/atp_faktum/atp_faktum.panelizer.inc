@@ -81,7 +81,7 @@ function atp_faktum_panelizer_defaults() {
     $display->content['new-1517fdba-5203-411e-bd03-7b87ef3983c8'] = $pane;
     $display->panels['left'][0] = 'new-1517fdba-5203-411e-bd03-7b87ef3983c8';
     $pane = new stdClass();
-    $pane->pid = 'new-57c3b5d3-f1b5-42c4-9a97-ec78c3767f81';
+    $pane->pid = 'new-2051b0b3-0348-449e-b0a8-966252120a6b';
     $pane->panel = 'left';
     $pane->type = 'menu_tree';
     $pane->subtype = 'menu-top';
@@ -89,16 +89,16 @@ function atp_faktum_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'menu-top',
-      'parent_mlid' => 0,
-      'parent' => 'menu-top:0',
+      'parent_mlid' => 1481,
+      'parent' => 'menu-top:1481',
       'title_link' => 0,
       'admin_title' => '',
-      'level' => '3',
+      'level' => '1',
       'follow' => 0,
-      'depth' => '1',
+      'depth' => '0',
       'expanded' => 0,
       'sort' => 0,
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -109,9 +109,9 @@ function atp_faktum_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '57c3b5d3-f1b5-42c4-9a97-ec78c3767f81';
-    $display->content['new-57c3b5d3-f1b5-42c4-9a97-ec78c3767f81'] = $pane;
-    $display->panels['left'][1] = 'new-57c3b5d3-f1b5-42c4-9a97-ec78c3767f81';
+    $pane->uuid = '2051b0b3-0348-449e-b0a8-966252120a6b';
+    $display->content['new-2051b0b3-0348-449e-b0a8-966252120a6b'] = $pane;
+    $display->panels['left'][1] = 'new-2051b0b3-0348-449e-b0a8-966252120a6b';
     $pane = new stdClass();
     $pane->pid = 'new-f5a0e7ed-7d9f-411a-a23b-1ccd5c35b33e';
     $pane->panel = 'row1';

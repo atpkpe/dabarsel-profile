@@ -405,3 +405,12 @@ function atp_update_7023(&$sandbox) {
     //field_delete_field('field_news_publishdate');
   }
 }
+
+/**
+ * ATP-366 enable path_breadcrumbs module.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7024(&$sandbox) {
+  module_enable(array('path_breadcrumbs'));
+}
