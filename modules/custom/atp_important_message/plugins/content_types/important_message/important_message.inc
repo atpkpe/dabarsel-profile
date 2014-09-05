@@ -18,6 +18,6 @@ function atp_important_message_render($subtype, $conf, $panel_args, &$context) {
   drupal_add_library('system', 'jquery.cookie');
   ctools_add_js('important_message', 'atp_important_message');
   $block = new stdClass();
-  $block->content = '<div id="important-message" class="important-message"><div class="content"></div><div class="close"></div></div>';
+  $block->content = '<div id="important-message" class="important-message"><div class="content"></div><div class="close">×</div></div>';
   return $block;
 }
