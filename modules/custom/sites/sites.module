@@ -35,6 +35,7 @@ function sites_init() {
   global $language;
   global $user;
 
+  // Dont' allow acces to anonymous users if site is unpublished
   if (0 == $site->status && 0 == $user->uid) {
     drupal_access_denied();
   }

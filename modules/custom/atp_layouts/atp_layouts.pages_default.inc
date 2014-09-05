@@ -559,7 +559,15 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->type = 'block';
     $pane->subtype = 'search-form';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'sites_search',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 1,
       'override_title_text' => '',
