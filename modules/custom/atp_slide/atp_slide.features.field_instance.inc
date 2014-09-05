@@ -26,7 +26,7 @@ function atp_slide_field_default_field_instances() {
           'label_wrapper' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -145,7 +145,7 @@ function atp_slide_field_default_field_instances() {
           'label_wrapper' => 0,
         ),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -203,7 +203,7 @@ function atp_slide_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',

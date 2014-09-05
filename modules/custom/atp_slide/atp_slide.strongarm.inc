@@ -83,6 +83,21 @@ function atp_slide_strongarm() {
       '1_4_compressed' => array(
         'custom_settings' => FALSE,
       ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      '3_8_h' => array(
+        'custom_settings' => FALSE,
+      ),
+      '3_4_h' => array(
+        'custom_settings' => FALSE,
+      ),
+      'menu_box' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

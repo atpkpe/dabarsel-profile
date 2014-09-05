@@ -23,6 +23,7 @@ features[field_base][] = field_slide_body
 features[field_base][] = field_slide_image
 features[field_base][] = field_slide_link
 features[field_group][] = group_slide_content|node|slide|form
+features[field_group][] = group_slide_wrapper|node|slide|default
 features[field_group][] = group_wrapper|node|slide|default
 features[field_instance][] = node-slide-field_slide_body
 features[field_instance][] = node-slide-field_slide_image
