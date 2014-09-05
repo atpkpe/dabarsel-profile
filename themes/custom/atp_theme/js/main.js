@@ -40,7 +40,7 @@ function stickyHeader() {
       $("body").addClass("show-share");
     }
   });
-  $('.level-2-3').bind( "touchstart, click", function(){
+  $('.level-2-3, .atp-document-archive-nav').bind( "touchstart, click", function(){
     $(this).toggleClass("expand");
   });
   Drupal.behaviors.main = {

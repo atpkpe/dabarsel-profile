@@ -12,11 +12,38 @@
     bottom: 0px;
     z-index: -1;
   }
+  @include device(phone){
+    background: #fff;
+    padding: 5px 0px;
+    margin-bottom: $margins;
+    &:after {
+      @include arrow(bottom, $gray-dark, 9px);
+      content: "";
+      position: absolute;
+      right: $margins/2;
+      top: $margins*.75;
+    }
+    &.expand {
+      &:after {
+        @include arrow(top, $gray-dark, 9px);
+      }
+      li {
+        display: block !important;
+      }
+    }
+  }
   li {
     margin: 0px 10px;
     float: left;
     @include device(tablet-portrait){
       margin: 0px;
+    }
+    @include device(phone){
+      float: none;
+      display: none;
+      &.active {
+        display: block;
+      }
     }
     a {
       font-size: 13px;
@@ -27,6 +54,11 @@
       }
       @include device(tablet-portrait){
         padding: 5px 10px;
+      }
+      @include device(phone){
+        font-size: $default-fontsize;
+        display: block;
+        margin-right: 40px;
       }
     }
     &.active {
