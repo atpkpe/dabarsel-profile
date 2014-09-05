@@ -97,6 +97,14 @@ function sites_site_form($form, &$form_state, $site_id = NULL) {
     '#group' => 'settings'
   );
 
+  $form['general']['status'] = array(
+    '#title' => t('Published'),
+    '#description' => t('Unpublished sites are not visible for anonymous users.'),
+    '#type' => 'checkbox',
+    '#default_value' => $site->status,
+    '#group' => 'settings'
+  );
+
   $form['general']['title'] = array(
     '#title' => t('Admin title (used in administrative interface only)'),
     '#type' => 'textfield',
@@ -278,6 +286,7 @@ function sites_site_form_submit($form, &$form_state) {
   $site->front_page = $form_state['values']['front_page'];
   $site->contact_page = $form_state['values']['contact_page'];
   $site->machine_name = $form_state['values']['machine_name'];
+  $site->status = empty($form_state['values']['status']) ? 0 : 1;
   $site->theme = $form_state['values']['theme'];
 
   if (isset($form_state['values']['site_term'])) {
@@ -311,6 +320,13 @@ function sites_site_form_submit($form, &$form_state) {
     if ($form['general']['purl']['value']['#default_value'] !== $form_state['values']['purl']['value']) {
       SiteResourcesController::updatePaths($site_id, $form['general']['purl']['value']['#default_value'], $form_state['values']['purl']['value']);
     }
+
+    if ($site_id > 1) {
+      // $cache_id = $GLOBALS['base_url'] . '/' . $site->purl_prefix . '*';
+      // Clearing cache with a prefix dont work for some reason, so clear all
+      cache_clear_all('*', 'cache_page', TRUE);
+     }
+
   }
 
   // Redirect to the sites admin overview page.

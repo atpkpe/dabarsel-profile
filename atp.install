@@ -303,3 +303,127 @@ function atp_update_7020(&$sandbox) {
 function atp_update_7021(&$sandbox) {
   module_enable(array('views_rss'));
 }
+
+/**
+ * ATP-469 Add atp_faktum content type and migrate content.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7022(&$sandbox) {
+  if (!isset($sandbox['progress'])) {
+    module_enable(array('atp_fields', 'atp_faktum'));
+
+    $term_list = taxonomy_get_term_by_name('Faktum', 'news_categories');
+    $sandbox['faktum_term'] = reset($term_list);
+
+    $efq = new EntityFieldQuery();
+    $efq->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'news')
+      ->fieldCondition('field_news_categories', 'tid', $sandbox['faktum_term']->tid);
+
+    $max = $efq->count()->execute();
+
+    $sandbox['progress'] = 0;
+    $sandbox['max'] = $max;
+  }
+
+  $limit = 10;
+
+  $efq = new EntityFieldQuery();
+  $efq->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'news')
+    ->fieldCondition('field_news_categories', 'tid', $sandbox['faktum_term']->tid)
+    ->range($sandbox['progress'], $limit);
+
+  $entities = $efq->execute();
+
+  foreach ($entities['node'] AS $node) {
+    $node = entity_load_single('node', $node->nid);
+
+    $faktum = array('type' => 'faktum');
+    $faktum['title_field'] = $node->title_field;
+    $faktum['field_published_date'] = $node->field_news_publishdate;
+    $faktum['field_faktum_summary'] = $node->field_news_summary;
+    $faktum['field_faktum_body'] = $node->field_news_body;
+    $faktum['sites'] = $node->sites;
+    $faktum['name'] = $node->name;
+    $faktum['uid'] = $node->uid;
+    $faktum['title_original'] = $node->title_original;
+    $faktum['created'] = $node->created;
+    $faktum['changed'] = $node->changed;
+    $faktum['language'] = $node->language;
+    $faktum['status'] = $node->status;
+
+
+    $faktum = entity_metadata_create_node($faktum);
+    $sandbox['progress']++;
+    $faktum = entity_save('node', $faktum);
+
+    entity_delete('node', $node->nid);
+  }
+
+  $sandbox['#finished'] = ($sandbox['progress'] == $sandbox['max']) ? 1 : $sandbox['progress'] / $sandbox['max'];
+}
+
+/**
+ * ATP-469 Move data from field_news_publishedate to field_published_date.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7023(&$sandbox) {
+  if (!isset($sandbox['progress'])) {
+    $efq = new EntityFieldQuery();
+    $efq->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'news');
+
+    $max = $efq->count()->execute();
+
+    $sandbox['progress'] = 0;
+    $sandbox['max'] = $max;
+  }
+
+  $limit = 10;
+
+  $efq = new EntityFieldQuery();
+  $efq->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'news')
+    ->range($sandbox['progress'], $limit);
+
+  $entities = $efq->execute();
+
+  foreach ($entities['node'] AS $node) {
+    $node = entity_load_single('node', $node->nid);
+    $node->field_published_date = $node->field_news_publishdate;
+
+    entity_save('node', $node);
+    $sandbox['progress']++;
+  }
+
+  $sandbox['#finished'] = ($sandbox['progress'] == $sandbox['max']) ? 1 : $sandbox['progress'] / $sandbox['max'];
+
+  if ($sandbox['#finished'] == 1) {
+    //field_delete_field('field_news_publishdate');
+  }
+}
+
+/**
+ * ATP-366 enable path_breadcrumbs module.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7024(&$sandbox) {
+  module_enable(array('path_breadcrumbs'));
+}
+
+/**
+ * ATP-463 enable js and atp_important_message modules.
+ *
+ * @author Tom Helmer Hansen <tom@adapt.dk>
+ */
+function atp_update_7025(&$sandbox) {
+  module_enable(array('js','atp_important_message'));
+}
+
+
+
+

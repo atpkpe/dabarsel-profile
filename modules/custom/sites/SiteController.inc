@@ -375,7 +375,7 @@ class SiteController {
                         'front_page', 'menu_main_menu', 'menu_secondary_menu',
                         'theme', 'language_switcher','sharing_links',
                         'site_term', 'contact_page', 'footer', 'footer_format',
-                        'name', 'gss_api_key',
+                        'name', 'gss_api_key', 'status'
                        );
     $site = new Site();
     if (is_array($raw_data)) {

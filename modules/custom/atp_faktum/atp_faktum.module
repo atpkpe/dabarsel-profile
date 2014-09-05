@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Faktum feature.
+ */
+
+include_once 'atp_faktum.features.inc';

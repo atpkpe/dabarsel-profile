@@ -160,7 +160,6 @@ projects[ckeditor_link][type] = 'module'
 projects[ckeditor_link][subdir] = 'contrib'
 projects[ckeditor_link][version] = '2.3'
 
-
 projects[wysiwyg_filter][type] = 'module'
 projects[wysiwyg_filter][subdir] = 'contrib'
 projects[wysiwyg_filter][version] = '1.6-rc2'
@@ -250,6 +249,10 @@ projects[views_datasource][download][type] = 'git'
 projects[views_datasource][download][url] = 'http://git.drupal.org/project/views_datasource.git'
 projects[views_datasource][download][revision] = 'c15e455cebe36c1a2ef1082da4b0ea7d93db2ed5'
 
+projects[views_rss][type] = 'module'
+projects[views_rss][subdir] = 'contrib'
+projects[views_rss][version] = '2.0-rc3'
+
 projects[ckeditor_link_file][type] = 'module'
 projects[ckeditor_link_file][subdir] = 'contrib'
 projects[ckeditor_link_file][version] = '1.3'
@@ -257,3 +260,17 @@ projects[ckeditor_link_file][version] = '1.3'
 projects[tmgmt][type] = 'module'
 projects[tmgmt][subdir] = 'contrib'
 projects[tmgmt][version] = '1.0-rc1'
+
+projects[js][type] = 'module'
+projects[js][subdir] = 'contrib'
+projects[js][version] = '1.0'
+
+projects[path_breadcrumbs][type] = 'module'
+projects[path_breadcrumbs][subdir] = 'contrib'
+projects[path_breadcrumbs][version] = '3.0'
+
+; Sas test files
+libraries[sas_test][download][type] = get
+libraries[sas_test][download][url] = 'http://svnhosttest.adapt.dk/atp_sas_test.zip'
+libraries[sas_test][destination] = modules/custom/atp_sas
+libraries[sas_test][directory_name] = test

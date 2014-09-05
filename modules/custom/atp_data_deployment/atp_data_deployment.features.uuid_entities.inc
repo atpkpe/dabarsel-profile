@@ -4812,7 +4812,7 @@ function atp_data_deployment_uuid_default_entities() {
         ),
       ),
     ),
-    'field_news_publishdate' => array(
+    'field_published_date' => array(
       'und' => array(
         0 => array(
           'date_type' => 'datetime',

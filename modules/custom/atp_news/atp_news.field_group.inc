@@ -52,11 +52,11 @@ function atp_news_field_group_info() {
     'children' => array(
       0 => 'field_news_body',
       1 => 'field_news_image',
-      2 => 'field_news_publishdate',
+      2 => 'field_published_date',
       3 => 'field_news_summary',
       4 => 'title_field',
-      5 => 'language',
-      6 => 'workbench_access',
+      6 => 'language',
+      7 => 'workbench_access',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -138,7 +138,7 @@ function atp_news_field_group_info() {
     'label' => 'Wrapper',
     'weight' => '7',
     'children' => array(
-      0 => 'field_news_publishdate',
+      0 => 'field_published_date',
       1 => 'field_news_summary',
       2 => 'title_field',
     ),
