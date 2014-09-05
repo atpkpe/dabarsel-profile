@@ -103,6 +103,7 @@
 
 /* VIEWMODES */
 @mixin view-mode-overlay {
+  background: #000;
   background: $black-transparent;
   position : absolute;
   bottom : 0;
