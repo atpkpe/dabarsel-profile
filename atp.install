@@ -414,3 +414,16 @@ function atp_update_7023(&$sandbox) {
 function atp_update_7024(&$sandbox) {
   module_enable(array('path_breadcrumbs'));
 }
+
+/**
+ * ATP-463 enable js and atp_important_message modules.
+ *
+ * @author Tom Helmer Hansen <tom@adapt.dk>
+ */
+function atp_update_7025(&$sandbox) {
+  module_enable(array('js','atp_important_message'));
+}
+
+
+
+
