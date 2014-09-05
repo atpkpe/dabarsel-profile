@@ -278,6 +278,7 @@ header {
 .menu-backdrop {
   background: $gray-light;
   position: absolute;
+  z-index: 90;
   width: 100%;
   top: 100px;
   display: none;

@@ -4,6 +4,7 @@
   padding: $margins;
   margin-bottom: $margins;
   h2 {
+    margin-top: $margins;
     margin-bottom: $margins/2;
   }
   h3 {
@@ -11,10 +12,15 @@
     margin-bottom: $margins/2;
   }
   > div {
-    @include float-span(4);
+    @include float-span(3.5);
     &:last-child {
-      @include float-span(8);
+      float: none;
+      width: auto;
       margin: 0;
     }
+  }
+  > span {
+    float: left;
+    margin-right: $margins;
   }
 }
