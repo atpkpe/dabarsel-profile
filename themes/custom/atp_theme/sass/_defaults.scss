@@ -9,6 +9,7 @@
   margin: 0px;
   padding: 0px;
   outline: 0;
+  list-style: none;
 }
 
 html {
@@ -21,6 +22,10 @@ body {
   &.stickyhead {
     padding-top: 145px !important;
   }
+}
+
+img {
+  border: 0;
 }
 
 a {

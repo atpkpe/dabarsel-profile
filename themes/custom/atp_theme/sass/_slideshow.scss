@@ -9,18 +9,14 @@ $slideshow-title: 22px;
   width: 100%;
   overflow: hidden;
   z-index: 0;
-
+  article {
+    @extend %content;
+    padding: 60px 0 0 0;
+  }
   .group-wrapper {
     @include view-mode-overlay;
     @include view-mode(4);
-    position: absolute;
-    width: 480px; // half of the grid
-    top: 60px;
-    left:0;
-    bottom: auto;
-    right: 480px; // let the content follow the 960grid
-    margin: 0 auto;
-
+    width: 50%;
     h2 {
       color: #fff;
       font-size: $slideshow-title;

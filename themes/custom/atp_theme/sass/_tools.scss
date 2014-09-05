@@ -52,5 +52,12 @@
       float: left;
       margin-right: $margins/4;
     }
+    .rss {
+      span {
+        background: url('../images/rss.png') no-repeat left top;
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
 }
