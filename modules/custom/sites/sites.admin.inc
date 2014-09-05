@@ -322,16 +322,11 @@ function sites_site_form_submit($form, &$form_state) {
     }
 
     if ($site_id > 1) {
-      $query = db_select('`workbench_access_node`', 'w');
-      $result = $query
-                ->fields('w', array('nid'))
-                ->condition('access_id', $site->site_term)
-                ->execute()
-                ->fetchAll();
-       foreach ($result as $node) {
-         // cache_clear_all('content:' . $node->nid, 'cache_content', TRUE);
-       }
+      // $cache_id = $GLOBALS['base_url'] . '/' . $site->purl_prefix . '*';
+      // Clearing cache with a prefix dont work for some reason, so clear all
+      cache_clear_all('*', 'cache_page', TRUE);
      }
+
   }
 
   // Redirect to the sites admin overview page.

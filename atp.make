@@ -265,6 +265,10 @@ projects[js][type] = 'module'
 projects[js][subdir] = 'contrib'
 projects[js][version] = '1.0'
 
+projects[path_breadcrumbs][type] = 'module'
+projects[path_breadcrumbs][subdir] = 'contrib'
+projects[path_breadcrumbs][version] = '3.0'
+
 ; Sas test files
 libraries[sas_test][download][type] = get
 libraries[sas_test][download][url] = 'http://svnhosttest.adapt.dk/atp_sas_test.zip'

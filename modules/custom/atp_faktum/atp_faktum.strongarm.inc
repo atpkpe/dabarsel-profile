@@ -177,7 +177,7 @@ function atp_faktum_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_expire_enabled_faktum';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_expire_enabled_faktum'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -850,6 +850,13 @@ function atp_faktum_strongarm() {
     'other' => 0,
   );
   $export['panelizer_node:faktum_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_faktum_pattern';
+  $strongarm->value = 'presse/nyhedsbrevet-faktum/[node:title-field]';
+  $export['pathauto_node_faktum_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

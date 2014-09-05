@@ -77,6 +77,8 @@ dependencies[] = tmgmt_node
 dependencies[] = tmgmt_local
 dependencies[] = actions_permissions
 dependencies[] = tmgmt_file
+dependencies[] = path_breadcrumbs
+dependencies[] = js
 
 ; Project features
 dependencies[] = atp_settings
@@ -108,5 +110,6 @@ dependencies[] = atp_document
 dependencies[] = atp_content_translation
 dependencies[] = atp_faktum
 dependencies[] = atp_fields
+dependencies[] = atp_important_message
 
 
