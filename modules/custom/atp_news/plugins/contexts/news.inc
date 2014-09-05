@@ -56,7 +56,7 @@ function ctools_context_create_news($empty, $data = NULL, $conf = FALSE) {
     $data['rss_path'] = '';
     $view = views_get_view($data['view_name']);
     if (is_object($view)) {
-      $view->set_display($conf['view_rss_display']);
+      $view->set_display($data['view_rss_display']);
       $path = $view->get_path();
       if (!empty($path)) {
         $options = !empty($view_params['tid']) ? array('query' => $view_params) : array();
