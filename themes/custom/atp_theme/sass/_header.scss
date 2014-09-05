@@ -488,3 +488,40 @@ header {
     }
   }
 }
+
+.important-message {
+  @extend %content;
+  background: #ffffff;
+  border: 1px solid #e6e7e4;
+  padding: $margins;
+  margin-top: $margins;
+  margin-bottom: $margins;
+  display: none;
+  position: relative;
+  h2 {
+    padding-right: 40px;
+  }
+  p {
+    a {
+      text-decoration: underline;
+    }
+  }
+  .close {
+    width: 43px;
+    height: 43px;
+    opacity: 1;
+    padding: 0px 10px;
+    cursor: pointer;
+    position: absolute;
+    top:8px;
+    right:5px;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, Baskerville, monospace;
+  }
+  .important-message-content > a {
+    @extend %btn-green;
+    padding: 0px $margins;
+    display: inline-block;
+  }
+}
