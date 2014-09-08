@@ -100,6 +100,10 @@ function atp_file_strongarm() {
             'weight' => '0',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
         ),
       ),
     ),
