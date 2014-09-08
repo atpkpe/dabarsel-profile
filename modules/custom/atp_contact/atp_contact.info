@@ -6,6 +6,7 @@ dependencies[] = atp_settings
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_group
+dependencies[] = file_entity
 dependencies[] = image
 dependencies[] = media
 dependencies[] = node

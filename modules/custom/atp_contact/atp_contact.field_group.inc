@@ -57,10 +57,11 @@ function atp_contact_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_contact_email',
-      1 => 'field_contact_jobtitle',
-      2 => 'field_contact_mobile',
-      3 => 'field_contact_phone',
-      4 => 'title_field',
+      1 => 'field_contact_image',
+      2 => 'field_contact_jobtitle',
+      3 => 'field_contact_mobile',
+      4 => 'field_contact_phone',
+      5 => 'title_field',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
