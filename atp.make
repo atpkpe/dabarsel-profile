@@ -15,6 +15,7 @@ projects[adapt_basetheme][subdir] = 'global'
 projects[adapt_basetheme][download][type] = 'git'
 projects[adapt_basetheme][download][url] = 'https://github.com/adaptdk/adapt_basetheme.git'
 projects[adapt_basetheme][download][tag] = '0.5'
+projects[adapt_basetheme][patch][] = 'http://svnhosttest.adapt.dk/adapt_basetheme-0.5-enable-filepath-patterns-in-js-and-css-theme-settings-ATP-293.patch'
 
 ; ATP modules
 projects[i18n][type] = 'module'
