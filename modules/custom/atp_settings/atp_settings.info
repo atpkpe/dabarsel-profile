@@ -33,6 +33,7 @@ features[field_base][] = title_field
 features[filter][] = filtered_html
 features[filter][] = plain_text
 features[filter][] = simple_html
+features[image][] = 120x120
 features[image][] = 126x126
 features[image][] = 1600x300
 features[language][] = da

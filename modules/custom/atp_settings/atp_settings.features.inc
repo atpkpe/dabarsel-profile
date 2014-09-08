@@ -47,6 +47,29 @@ function atp_settings_date_format_types() {
 function atp_settings_image_default_styles() {
   $styles = array();
 
+  // Exported image style: 120x120.
+  $styles['120x120'] = array(
+    'name' => '120x120',
+    'label' => '120x120',
+    'effects' => array(
+      2 => array(
+        'label' => 'Focal Point Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>Focal Point</em>.',
+        'effect callback' => 'focal_point_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'focal_point',
+        'name' => 'focal_point_scale_and_crop',
+        'data' => array(
+          'width' => 120,
+          'height' => 120,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: 126x126.
   $styles['126x126'] = array(
     'name' => '126x126',
