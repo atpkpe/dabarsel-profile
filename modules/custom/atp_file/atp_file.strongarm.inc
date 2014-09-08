@@ -26,7 +26,7 @@ function atp_file_strongarm() {
         'custom_settings' => TRUE,
       ),
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'preview' => array(
         'custom_settings' => TRUE,
