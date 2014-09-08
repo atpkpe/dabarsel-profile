@@ -12,7 +12,7 @@ function stickyHeader() {
   $(window).scroll(stickyHeader);
   stickyHeader();
   $("header").append('<div class="menu-backdrop"/>');
-  $(".menu-backdrop").css("height",$(".main-menu > ul > li.last > ul").height()+"px")
+  $(".menu-backdrop").css("height",$(".main-menu > ul > li.last > ul").height()+40+"px")
   $(".main-menu > ul > li.last").hover(
     function(){
       $(this).addClass("hover");
