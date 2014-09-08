@@ -17,9 +17,12 @@
       padding: 10px 20px;
       border-left: 3px solid $green;
       list-style: none;
+      li {
+        margin-bottom: $margins/2;
+      }
       a {
         display: block;
-        line-height: 22px;
+        line-height: 18px;
         &:hover {
           text-decoration: none;
         }
