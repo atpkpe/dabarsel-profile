@@ -946,7 +946,9 @@ example.org';
   $strongarm->api_version = 1;
   $strongarm->name = 'theme_atp_theme_settings';
   $strongarm->value = array(
-    'css_to_keep' => 'magnific-popup.css',
+    'css_to_keep' => '*/magnific-popup.css
+*/css_injector*.css
+',
     'js_to_strip' => '',
     'toggle_logo' => 1,
     'toggle_name' => 1,
