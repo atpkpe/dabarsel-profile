@@ -152,4 +152,5 @@ features[variable][] = field_bundle_settings_file__video
 features[variable][] = file_entity_file_upload_wizard_skip_file_type
 features[variable][] = file_entity_file_upload_wizard_skip_scheme
 features[variable][] = file_entity_max_filesize
+features_exclude[dependencies][metatag] = metatag
 project path = profiles/atp/modules/custom

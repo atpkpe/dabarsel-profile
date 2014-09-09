@@ -216,17 +216,6 @@ function atp_file_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
-  $file_display->name = 'image__teaser__file_field_image';
-  $file_display->weight = 0;
-  $file_display->status = TRUE;
-  $file_display->settings = array(
-    'image_style' => '120x120',
-    'image_link' => '',
-  );
-  $export['image__teaser__file_field_image'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
   $file_display->name = 'image__1_wide__file_field_image_preset_field_image_preset';
   $file_display->weight = 0;
   $file_display->status = FALSE;
