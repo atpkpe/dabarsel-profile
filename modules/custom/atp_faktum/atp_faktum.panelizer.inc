@@ -176,10 +176,10 @@ function atp_faktum_panelizer_defaults() {
     $display->content['new-053f773e-d534-4c36-a947-d7fac77e2840'] = $pane;
     $display->panels['row2'][0] = 'new-053f773e-d534-4c36-a947-d7fac77e2840';
     $pane = new stdClass();
-    $pane->pid = 'new-e1233d3c-8cc5-4566-ae96-c8948ea7ef4c';
+    $pane->pid = 'new-b739d24b-e96d-4b60-9ef9-4eaea2f95960';
     $pane->panel = 'row2';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_faktum_published_date';
+    $pane->subtype = 'node:field_published_date';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -189,30 +189,30 @@ function atp_faktum_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'field_wrapper' => 0,
         'format_type' => 'adapt_long',
-        'fromto' => 'both',
-        'item_wrapper' => 0,
-        'label_wrapper' => 0,
-        'multiple_from' => '',
         'multiple_number' => '',
+        'multiple_from' => '',
         'multiple_to' => '',
+        'fromto' => 'both',
       ),
       'context' => 'panelizer',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'date',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'e1233d3c-8cc5-4566-ae96-c8948ea7ef4c';
-    $display->content['new-e1233d3c-8cc5-4566-ae96-c8948ea7ef4c'] = $pane;
-    $display->panels['row2'][1] = 'new-e1233d3c-8cc5-4566-ae96-c8948ea7ef4c';
+    $pane->uuid = 'b739d24b-e96d-4b60-9ef9-4eaea2f95960';
+    $display->content['new-b739d24b-e96d-4b60-9ef9-4eaea2f95960'] = $pane;
+    $display->panels['row2'][1] = 'new-b739d24b-e96d-4b60-9ef9-4eaea2f95960';
     $pane = new stdClass();
     $pane->pid = 'new-6fa7ec0d-ff59-412f-b9dd-b994fbcccaeb';
     $pane->panel = 'row2';
@@ -235,7 +235,10 @@ function atp_faktum_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'summary',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
