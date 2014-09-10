@@ -87,12 +87,12 @@ function sites_menu() {
     'file' => 'sites.admin.inc',
   );
 
-   $items['admin/subsites'] = array(
+   $items['admin/sites/list'] = array(
     'title' => 'List with subsites',
     'page callback' => 'sites_page_subsites',
     'access arguments' => array('access administration pages'),
     'file' => 'sites.admin.inc',
-    'type' => MENU_LOCAL_ACTION,
+    'type' => MENU_CALLBACK,
   );
 
   return $items;
@@ -108,7 +108,7 @@ function sites_admin_menu_output_build(&$content) {
     $content['icon']['icon']['sites'] = array(
       '#title' => t('Subsites'),
       '#access' => user_access('administer site configuration'),
-      '#href' => 'admin/subsites',
+      '#href' => 'admin/sites/list',
     );
 
     $sites = SiteController::getSites();
