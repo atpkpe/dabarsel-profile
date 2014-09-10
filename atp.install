@@ -459,3 +459,44 @@ function atp_update_7026(&$sandbox) {
     }
   }
 }
+
+/**
+ * ATP-386 Move data from field_news_publishedate to field_published_date and delete old field.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7027(&$sandbox) {
+  if (!isset($sandbox['progress'])) {
+    $efq = new EntityFieldQuery();
+    $efq->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'news');
+
+    $max = $efq->count()->execute();
+
+    $sandbox['progress'] = 0;
+    $sandbox['max'] = $max;
+  }
+
+  $limit = 10;
+
+  $efq = new EntityFieldQuery();
+  $efq->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'news')
+    ->range($sandbox['progress'], $limit);
+
+  $entities = $efq->execute();
+
+  foreach ($entities['node'] AS $node) {
+    $node = node_load($node->nid);
+    $node->field_published_date = $node->field_news_publishdate;
+
+    node_save($node);
+    $sandbox['progress']++;
+  }
+
+  $sandbox['#finished'] = ($sandbox['progress'] == $sandbox['max']) ? 1 : $sandbox['progress'] / $sandbox['max'];
+
+  if ($sandbox['#finished'] == 1) {
+    field_delete_field('field_news_publishdate');
+  }
+}
