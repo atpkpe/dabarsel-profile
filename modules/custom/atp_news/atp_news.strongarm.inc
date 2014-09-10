@@ -126,7 +126,7 @@ function atp_news_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '2',
             'visible' => FALSE,
           ),
           'default' => array(
