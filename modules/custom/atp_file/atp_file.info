@@ -158,6 +158,7 @@ features[user_permission][] = edit any zip_archive files
 features[user_permission][] = edit own zip_archive files
 features[variable][] = field_bundle_settings_file__image
 features[variable][] = field_bundle_settings_file__video
+features[variable][] = file_entity_default_allowed_extensions
 features[variable][] = file_entity_file_upload_wizard_skip_file_type
 features[variable][] = file_entity_file_upload_wizard_skip_scheme
 features[variable][] = file_entity_max_filesize
