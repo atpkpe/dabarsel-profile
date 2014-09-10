@@ -92,6 +92,7 @@ function sites_menu() {
     'page callback' => 'sites_page_subsites',
     'access arguments' => array('access administration pages'),
     'file' => 'sites.admin.inc',
+    'type' => MENU_LOCAL_ACTION,
   );
 
   return $items;
