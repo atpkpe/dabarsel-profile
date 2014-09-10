@@ -272,6 +272,6 @@ projects[path_breadcrumbs][version] = '3.0'
 
 ; Sas test files
 libraries[sas_test][download][type] = get
-libraries[sas_test][download][url] = 'http://svnhosttest.adapt.dk/atp_sas_test_20140905_1146.tar.gz'
+libraries[sas_test][download][url] = 'http://svnhosttest.adapt.dk/atp_sas_test_20140910_0952.tar.gz'
 libraries[sas_test][destination] = modules/custom/atp_sas
 libraries[sas_test][directory_name] = test

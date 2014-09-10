@@ -483,11 +483,120 @@ function atp_file_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'file-zip_archive-field_folder'
+  $field_instances['file-zip_archive-field_folder'] = array(
+    'active' => 1,
+    'bundle' => 'zip_archive',
+    'bundles' => array(
+      'file' => array(
+        0 => 'image',
+        1 => 'video',
+        2 => 'audio',
+        3 => 'document',
+      ),
+    ),
+    'cardinality' => 1,
+    'columns' => array(
+      'tid' => array(
+        'not null' => FALSE,
+        'type' => 'int',
+        'unsigned' => TRUE,
+      ),
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+        ),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'entity_types' => array(),
+    'field_name' => 'field_folder',
+    'foreign keys' => array(
+      'tid' => array(
+        'columns' => array(
+          'tid' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
+    ),
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'label' => 'Media Folder',
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'required' => TRUE,
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'media_folders',
+          'parent' => 0,
+        ),
+      ),
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+      'user_register_form' => FALSE,
+    ),
+    'storage' => array(
+      'active' => 1,
+      'details' => array(
+        'sql' => array(
+          'FIELD_LOAD_CURRENT' => array(
+            'field_data_field_folder' => array(
+              'tid' => 'field_folder_tid',
+            ),
+          ),
+          'FIELD_LOAD_REVISION' => array(
+            'field_revision_field_folder' => array(
+              'tid' => 'field_folder_tid',
+            ),
+          ),
+        ),
+      ),
+      'module' => 'field_sql_storage',
+      'settings' => array(),
+      'type' => 'field_sql_storage',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 41,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Alt Text');
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
   t('Description');
+  t('Media Folder');
   t('Text inserted under the image in some view modes');
   t('Title');
   t('Title Text');

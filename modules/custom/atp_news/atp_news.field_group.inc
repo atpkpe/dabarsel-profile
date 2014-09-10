@@ -136,11 +136,10 @@ function atp_news_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Wrapper',
-    'weight' => '7',
+    'weight' => '1',
     'children' => array(
-      0 => 'field_published_date',
-      1 => 'field_news_summary',
-      2 => 'title_field',
+      0 => 'field_news_summary',
+      1 => 'title_field',
     ),
     'format_type' => 'link',
     'format_settings' => array(
