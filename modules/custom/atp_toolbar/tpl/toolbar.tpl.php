@@ -4,7 +4,7 @@
   <div class="addthis_toolbox addthis_default_style">
     <a class="addthis_button_email"><?php print t("E-mail") ?></a>
     <? if (!empty($feed_url)): ?>
-      <a href="<?php echo $feed_url ?>" class="rss"><span></span><?php print t("RSS") ?></a>
+      <a href="<?php echo $feed_url ?>" class="rss" target="_blank"><span></span><?php print t("RSS") ?></a>
     <? endif; ?>
     <a class="addthis_button_facebook"><?php print t("Facebook") ?></a>
     <a class="addthis_button_linkedin"><?php print t("LinkedIn") ?></a>
