@@ -427,7 +427,7 @@ function atp_page_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_page_relations',
-    'label' => 'Relations',
+    'label' => 'Related',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -442,6 +442,95 @@ function atp_page_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 8,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-page-field_page_relations_right'
+  $field_instances['node-page-field_page_relations_right'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      '1_2_h' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '1_2_l' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '1_2_square' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '1_4_l' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '3_4_h' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      '3_8_h' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser_with_img' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_page_relations_right',
+    'label' => 'Related - right column',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -515,7 +604,7 @@ function atp_page_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_page_relations_title',
-    'label' => 'Relations title',
+    'label' => 'Related title',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -1019,8 +1108,9 @@ function atp_page_field_default_field_instances() {
   t('Body');
   t('Contacts');
   t('Image');
-  t('Relations');
-  t('Relations title');
+  t('Related');
+  t('Related - right column');
+  t('Related title');
   t('Summary');
   t('Text with title');
   t('These fields are used in contact overview, and FAQ. The items can be reordered.');

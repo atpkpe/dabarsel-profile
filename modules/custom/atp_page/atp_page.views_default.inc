@@ -84,7 +84,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Relations */
+  /* Felt: Indhold: Related */
   $handler->display->display_options['fields']['field_page_relations']['id'] = 'field_page_relations';
   $handler->display->display_options['fields']['field_page_relations']['table'] = 'field_data_field_page_relations';
   $handler->display->display_options['fields']['field_page_relations']['field'] = 'field_page_relations';
@@ -98,7 +98,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['fields']['field_page_relations']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_page_relations']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Relations (field_page_relations:delta) */
+  /* Sorteringskriterie: Indhold: Related (field_page_relations:delta) */
   $handler->display->display_options['sorts']['delta_1']['id'] = 'delta_1';
   $handler->display->display_options['sorts']['delta_1']['table'] = 'field_data_field_page_relations';
   $handler->display->display_options['sorts']['delta_1']['field'] = 'delta';
@@ -127,7 +127,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Relations */
+  /* Felt: Indhold: Related */
   $handler->display->display_options['fields']['field_page_relations']['id'] = 'field_page_relations';
   $handler->display->display_options['fields']['field_page_relations']['table'] = 'field_data_field_page_relations';
   $handler->display->display_options['fields']['field_page_relations']['field'] = 'field_page_relations';
@@ -142,7 +142,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['fields']['field_page_relations']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_page_relations']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Relations (field_page_relations:delta) */
+  /* Sorteringskriterie: Indhold: Related (field_page_relations:delta) */
   $handler->display->display_options['sorts']['delta_1']['id'] = 'delta_1';
   $handler->display->display_options['sorts']['delta_1']['table'] = 'field_data_field_page_relations';
   $handler->display->display_options['sorts']['delta_1']['field'] = 'delta';
@@ -171,7 +171,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Relations */
+  /* Felt: Indhold: Related */
   $handler->display->display_options['fields']['field_page_relations']['id'] = 'field_page_relations';
   $handler->display->display_options['fields']['field_page_relations']['table'] = 'field_data_field_page_relations';
   $handler->display->display_options['fields']['field_page_relations']['field'] = 'field_page_relations';
@@ -186,7 +186,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['fields']['field_page_relations']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_page_relations']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Relations (field_page_relations:delta) */
+  /* Sorteringskriterie: Indhold: Related (field_page_relations:delta) */
   $handler->display->display_options['sorts']['delta_1']['id'] = 'delta_1';
   $handler->display->display_options['sorts']['delta_1']['table'] = 'field_data_field_page_relations';
   $handler->display->display_options['sorts']['delta_1']['field'] = 'delta';
@@ -309,7 +309,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Relations - right column */
+  /* Felt: Indhold: Related - right column */
   $handler->display->display_options['fields']['field_page_relations_right']['id'] = 'field_page_relations_right';
   $handler->display->display_options['fields']['field_page_relations_right']['table'] = 'field_data_field_page_relations_right';
   $handler->display->display_options['fields']['field_page_relations_right']['field'] = 'field_page_relations_right';
@@ -328,7 +328,7 @@ function atp_page_views_default_views() {
   $handler->display->display_options['fields']['field_page_relations_right']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_page_relations_right']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Relations - right column (field_page_relations_right:delta) */
+  /* Sorteringskriterie: Indhold: Related - right column (field_page_relations_right:delta) */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_page_relations_right';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
