@@ -491,38 +491,61 @@ header {
 }
 
 .important-message {
-  @extend %content;
-  background: #ffffff;
-  border: 1px solid #e6e7e4;
-  padding: $margins;
-  margin-top: $margins;
-  margin-bottom: $margins;
+  margin: auto;
+  position: absolute;
+  z-index: 1000;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: none;
-  position: relative;
+  @include device(phone){
+    top: 45px;
+  }
+  > .content {
+    @include clearfix;
+    @extend %content;
+    background: #ffffff;
+    border: 5px solid $green;
+    padding: $margins;
+    position: relative;
+    z-index: 1024;
+  }
   h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
     padding-right: 40px;
+    margin-bottom: 15px;
   }
   p {
+    font-size: 18px;
+    line-height: 25px;
     a {
       text-decoration: underline;
     }
   }
   .close {
-    width: 43px;
-    height: 43px;
-    opacity: 1;
-    padding: 0px 10px;
-    cursor: pointer;
-    position: absolute;
-    top:8px;
-    right:5px;
-    font-size: 36px;
-    font-weight: bold;
-    font-family: Arial, Baskerville, monospace;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    text-indent: -9999px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    overflow: hidden;
   }
   .important-message-content > a {
+    @include clearfix;
     @extend %btn-green;
     padding: 0px $margins;
     display: inline-block;
+    float: right;
+    &:before, &:after {
+      height: 1px;
+    }
   }
 }

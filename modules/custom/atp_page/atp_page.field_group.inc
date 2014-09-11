@@ -84,6 +84,7 @@ function atp_page_field_group_info() {
     'children' => array(
       0 => 'field_page_relations',
       1 => 'field_page_relations_title',
+      2 => 'field_page_relations_right',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

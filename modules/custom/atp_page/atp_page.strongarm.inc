@@ -71,6 +71,15 @@ function atp_page_strongarm() {
       '1_4_compressed' => array(
         'custom_settings' => FALSE,
       ),
+      '3_8_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      '3_4_h' => array(
+        'custom_settings' => TRUE,
+      ),
+      'menu_box' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -88,6 +97,12 @@ function atp_page_strongarm() {
         ),
         'workbench_access' => array(
           'weight' => '0',
+        ),
+        'flag' => array(
+          'weight' => '10',
+        ),
+        'metatags' => array(
+          'weight' => '40',
         ),
       ),
       'display' => array(
@@ -122,6 +137,14 @@ function atp_page_strongarm() {
           ),
           '1_2_square' => array(
             'weight' => '4',
+            'visible' => FALSE,
+          ),
+          '3_8_h' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          '3_4_h' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

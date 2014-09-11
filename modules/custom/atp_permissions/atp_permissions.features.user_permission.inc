@@ -1248,6 +1248,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create faktum content'.
+  $permissions['create faktum content'] = array(
+    'name' => 'create faktum content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create fieldable image'.
   $permissions['create fieldable image'] = array(
     'name' => 'create fieldable image',
@@ -1423,6 +1432,13 @@ function atp_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'delete any faktum content'.
+  $permissions['delete any faktum content'] = array(
+    'name' => 'delete any faktum content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any gallery content'.
   $permissions['delete any gallery content'] = array(
     'name' => 'delete any gallery content',
@@ -1553,6 +1569,13 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own faktum content'.
+  $permissions['delete own faktum content'] = array(
+    'name' => 'delete own faktum content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete own gallery content'.
@@ -1810,6 +1833,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit any faktum content'.
+  $permissions['edit any faktum content'] = array(
+    'name' => 'edit any faktum content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any gallery content'.
   $permissions['edit any gallery content'] = array(
     'name' => 'edit any gallery content',
@@ -1971,6 +2003,15 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own faktum content'.
+  $permissions['edit own faktum content'] = array(
+    'name' => 'edit own faktum content',
+    'roles' => array(
+      'Author' => 'Author',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit own gallery content'.
