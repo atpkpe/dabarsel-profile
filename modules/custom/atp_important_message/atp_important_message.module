@@ -52,10 +52,11 @@ function atp_important_message_results($id) {
 
     $title = atp_important_message_get_field($current, 'important_message_title' . $lang );
     $body = atp_important_message_get_field($current, 'important_message_body' . $lang);
-    $link = atp_important_message_get_link($current, 'important_message_link' . $lang);
+    // Link not used anymore.
+    // $link = atp_important_message_get_link($current, 'important_message_link' . $lang);
 
     $html = '<div class="important-message-content"><h2>' .
-            $title . '</h2><p>' . nl2br($body) . '</p>' . $link . '</div>';
+            $title . '</h2><p>' . nl2br($body) . '</p><a href="javascript:void(0);" class="close-button">'. t('Dismiss message', array(), array('context' => 'Important message')) . '</a></div>';
 
     $result = array(
       'message_id' => $current->vid,

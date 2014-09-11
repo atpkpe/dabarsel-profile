@@ -17,6 +17,12 @@
             $('#important-message div.content').html( data.html );
             Drupal.settings.important_message_id = data.message_id;
             $('#important-message').show();
+
+            $('#important-message a.close-button', context).click(function() {
+              $.cookie('important_message', data.message_id, {expires:1000, path:'/'});
+              $('#important-message').hide();
+            });
+
           }
         });
       });
