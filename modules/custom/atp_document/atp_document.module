@@ -43,11 +43,12 @@ function atp_document_menu() {
 function atp_document_archive_tree($vocab_name, $tid) {
   $media_folder_vocab = taxonomy_vocabulary_machine_name_load($vocab_name);
   $term_tree = taxonomy_get_tree($media_folder_vocab->vid, $tid);
+  $terms = $children = array();
   foreach ($term_tree as $term) {
     $children[$term->parents[0]][] = $term->tid;
     $terms[$term->tid] = $term;
   }
-  $processed = array();
+  $processed = $items_tree = array();
   foreach ($term_tree as $term) {
     $items_tree[$term->tid] = array(
       'data' => $term->name,
