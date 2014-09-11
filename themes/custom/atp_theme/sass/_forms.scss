@@ -59,3 +59,12 @@ textarea {
     }
   }
 }
+
+/* WEBFORM */
+.webform-confirmation {
+  @extend %content;
+}
+
+.not-front #main > div > .links {
+  @extend %content;
+}
