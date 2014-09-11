@@ -427,7 +427,7 @@ function atp_page_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_page_relations',
-    'label' => 'page relations',
+    'label' => 'Relations',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -515,7 +515,7 @@ function atp_page_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_page_relations_title',
-    'label' => 'Page relations title',
+    'label' => 'Relations title',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -1019,12 +1019,12 @@ function atp_page_field_default_field_instances() {
   t('Body');
   t('Contacts');
   t('Image');
-  t('Page relations title');
+  t('Relations');
+  t('Relations title');
   t('Summary');
   t('Text with title');
   t('These fields are used in contact overview, and FAQ. The items can be reordered.');
   t('Titel');
-  t('page relations');
 
   return $field_instances;
 }

@@ -4,6 +4,7 @@ core = 7.x
 package = ATP
 dependencies[] = atp_multifields
 dependencies[] = atp_settings
+dependencies[] = atp_slide
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
