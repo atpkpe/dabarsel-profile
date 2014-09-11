@@ -6,6 +6,29 @@
  */
 
 /**
+ * List with subsites for the admin.
+ */
+
+function sites_page_subsites() {
+  $sites = SiteController::getSites();
+
+  $header = array(t('Subsite'));
+  $rows = array();
+
+  foreach ($sites as $site) {
+    if ($site->sid > 1) {
+      $rows[] = array(l($site->title, $site->purl_prefix));
+    }
+  }
+
+  // Build the output.
+  $output = theme('table', array('header' => $header, 'rows' => $rows, 'caption' => '', 'sticky' => TRUE, 'empty' => t("You haven't created any sites yet.")));
+
+  return $output;
+}
+
+
+/**
  * Provide variables to theme_sites_list_sites().
  */
 function sites_preprocess_sites_list_sites(&$vars) {
@@ -32,7 +55,7 @@ function sites_preprocess_sites_list_sites(&$vars) {
 }
 
 /**
- * Page callback: sites admin overview page.
+ * Page callback: sites structure admin overview page.
  */
 function sites_page_admin_overview() {
   return SiteController::pageAdminOverview();

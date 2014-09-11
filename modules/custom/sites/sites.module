@@ -87,7 +87,42 @@ function sites_menu() {
     'file' => 'sites.admin.inc',
   );
 
+   $items['admin/sites/list'] = array(
+    'title' => 'List with subsites',
+    'page callback' => 'sites_page_subsites',
+    'access arguments' => array('access administration pages'),
+    'file' => 'sites.admin.inc',
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
+}
+
+/**
+ * Implement hook_admin_menu_output_build().
+ */
+function sites_admin_menu_output_build(&$content) {
+  // Add link to the icon menu to manually run cron.
+  if (isset($content['icon'])) {
+
+    $content['icon']['icon']['sites'] = array(
+      '#title' => t('Subsites'),
+      '#access' => user_access('administer site configuration'),
+      '#href' => 'admin/sites/list',
+    );
+
+    $sites = SiteController::getSites();
+    foreach ($sites as $site) {
+      if ($site->sid > 1) {
+        $content['icon']['icon']['sites'][$site->machine_name] = array(
+          '#title' => $site->title,
+          '#access' => user_access('access administration pages'),
+          '#href' => $site->purl_prefix,
+        );
+      }
+    }
+
+  }
 }
 
 /**
