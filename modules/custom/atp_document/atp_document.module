@@ -8,7 +8,7 @@ define('ATP_DOCUMENT_VOCAB_MEDIA_FOLDERS_MACHINE_NAME', 'media_folders');
 
 
 /**
- * Implements hook_ctools_plugin_directory()
+ * Implements hook_ctools_plugin_directory().
  */
 function atp_document_ctools_plugin_directory($module, $plugin) {
   if ($module == 'ctools' && $plugin == 'content_types') {
@@ -34,10 +34,11 @@ function atp_document_menu() {
  *
  * @param string $vocab_name
  *   Vocabulary name to fetch tree from.
- * @param integer $tid
+ * @param int $tid
  *   The parent where we start the tree.
  *
- * @return array $content
+ * @return array
+ *   Render array.
  */
 function atp_document_archive_tree($vocab_name, $tid) {
   $media_folder_vocab = taxonomy_vocabulary_machine_name_load($vocab_name);
@@ -58,16 +59,18 @@ function atp_document_archive_tree($vocab_name, $tid) {
       $processed
     );
     if (!empty($children_items)) {
-      $items_tree[$term->tid]['children'] = _atp_document_archive_children_items(
-        $term->tid,
-        $terms,
-        $children,
-        $processed
-      );
+      $items_tree[$term->tid]['children'] = $children_items;
     }
   }
 
-  $items = array_diff_key($items_tree, $processed);
+  // First get eventual file items.
+  $items = _atp_document_get_archive_file_items($tid);
+  // Get eventual directory items.
+  $dir_items = array_diff_key($items_tree, $processed);
+  if (!empty($dir_items)) {
+    $items = array_merge($items, $dir_items);
+  }
+
   $content = array(
     '#theme' => 'item_list',
     '#items' => !empty($items) ? $items : array('&nbsp'),
@@ -75,7 +78,6 @@ function atp_document_archive_tree($vocab_name, $tid) {
       'class' => 'atp-document-archive-tree',
     ),
   );
-//  var_dump($content); die;
   return $content;
 }
 
@@ -83,7 +85,8 @@ function atp_document_archive_tree($vocab_name, $tid) {
  * Get item list children.
  *
  * @see atp_document_archive_tree
- * @param integer $tid
+ *
+ * @param int $tid
  *   Current term id in the tree traversal.
  * @param array $terms
  *   An array of all known terms indexed by term id.
@@ -91,33 +94,16 @@ function atp_document_archive_tree($vocab_name, $tid) {
  *   An array of the children of each branch indexed by term id.
  * @param array $processed
  *   An array of processed term ids. Used for cleanup afterwards.
+ *
  * @return array
  *   Item list formatted array.
  */
 function _atp_document_archive_children_items($tid, $terms, $children, &$processed) {
-  $items = array();
-  // Find all files belonging to current tid (media folder).
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'file')
-    ->entityCondition('bundle', 'document')
-    ->propertyCondition('status', 1)
-    ->fieldCondition('field_folder', 'tid', $tid, '=')
-    ->addMetaData('account', user_load(1)); // Run the query as user 1.
-  $result = $query->execute();
-  // If files are found add them to the item list array.
-  if (!empty($result['file'])) {
-    $files = entity_load('file', array_keys($result['file']));
-    foreach($files as $file) {
-      $file_output = render(file_view_file($file));
-      $items[] = array(
-        'data' => $file_output,
-        'class' => array('file'),
-      );
-    }
-  }
+  // First get eventual file items.
+  $items = _atp_document_get_archive_file_items($tid);
   // If media folder children exist then walk through those as well.
   if (!empty($children[$tid])) {
-    foreach($children[$tid] as $child) {
+    foreach ($children[$tid] as $child) {
       $processed[$child] = $child;
       $items[] = array(
         'data' => $terms[$child]->name,
@@ -130,11 +116,47 @@ function _atp_document_archive_children_items($tid, $terms, $children, &$process
 }
 
 /**
- * Ajax callback function. Fetches document archive tree.
- * Based on vocabulary name and parent term id.
+ * Get file list items.
+ *
+ * @param int $tid
+ *   Term id.
+ *
+ * @return array
+ *   Array of list items.
+ */
+function _atp_document_get_archive_file_items($tid) {
+  $items = array();
+  // Find all files belonging to current tid (media folder).
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'file')
+    ->entityCondition('bundle', 'document')
+    ->propertyCondition('status', 1)
+    ->fieldCondition('field_folder', 'tid', $tid, '=')
+    ->addMetaData('account', user_load(1));
+  $result = $query->execute();
+  // If files are found add them to the item list array.
+  if (!empty($result['file'])) {
+    $files = entity_load('file', array_keys($result['file']));
+    foreach ($files as $file) {
+      $file_output = render(file_view_file($file));
+      $items[] = array(
+        'data' => $file_output,
+        'class' => array('file'),
+      );
+    }
+  }
+  return $items;
+}
+
+/**
+ * Ajax callback function.
+ *
+ * Fetches document archive tree based on vocabulary name and parent term id.
  *
  * @param string $vocab_name
- * @param $tid
+ *   Vocabulary machine name.
+ * @param int $tid
+ *   Term id.
  */
 function atp_document_archive_tree_ajax($vocab_name, $tid) {
   $tree = atp_document_archive_tree($vocab_name, $tid);
