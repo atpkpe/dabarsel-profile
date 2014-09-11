@@ -42,30 +42,40 @@ function atp_document_menu() {
 function atp_document_archive_tree($vocab_name, $tid) {
   $media_folder_vocab = taxonomy_vocabulary_machine_name_load($vocab_name);
   $term_tree = taxonomy_get_tree($media_folder_vocab->vid, $tid);
-  foreach($term_tree as $term) {
+  foreach ($term_tree as $term) {
     $children[$term->parents[0]][] = $term->tid;
     $terms[$term->tid] = $term;
   }
   $processed = array();
-  foreach($term_tree as $term) {
+  foreach ($term_tree as $term) {
     $items_tree[$term->tid] = array(
       'data' => $term->name,
     );
-    $items_tree[$term->tid]['children'] = _atp_document_archive_children_items(
+    $children_items = _atp_document_archive_children_items(
       $term->tid,
       $terms,
       $children,
       $processed
     );
+    if (!empty($children_items)) {
+      $items_tree[$term->tid]['children'] = _atp_document_archive_children_items(
+        $term->tid,
+        $terms,
+        $children,
+        $processed
+      );
+    }
   }
 
+  $items = array_diff_key($items_tree, $processed);
   $content = array(
     '#theme' => 'item_list',
-    '#items' => array_diff_key($items_tree, $processed),
+    '#items' => !empty($items) ? $items : array('&nbsp'),
     '#attributes' => array(
       'class' => 'atp-document-archive-tree',
     ),
   );
+//  var_dump($content); die;
   return $content;
 }
 
@@ -98,8 +108,9 @@ function _atp_document_archive_children_items($tid, $terms, $children, &$process
   if (!empty($result['file'])) {
     $files = entity_load('file', array_keys($result['file']));
     foreach($files as $file) {
+      $file_output = render(file_view_file($file));
       $items[] = array(
-        'data' => render(file_view_file($file)),
+        'data' => $file_output,
         'class' => array('file'),
       );
     }
