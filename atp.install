@@ -500,3 +500,29 @@ function atp_update_7027(&$sandbox) {
     field_delete_field('field_news_publishdate');
   }
 }
+
+/**
+ * ATP-469 add title to node table for all faktum node types.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7028(&$sandbox) {
+  $efq = new EntityFieldQuery();
+  $efq->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'faktum');
+
+  $entities = $efq->execute();
+
+  foreach ($entities['node'] AS $node) {
+    $node = node_load($node->nid);
+
+    $lang = 'da';
+    if (!isset($node->title_field[$lang])) {
+      $lang = 'und';
+    }
+
+    $node->title = $node->title_field[$lang][0]['safe_value'];
+
+    node_save($node);
+  }
+}
