@@ -9,20 +9,18 @@ function stickyHeader() {
     body.removeClass('stickyhead');
 }
 (function ($) {
-  if ($(window).width() <= 960) {
-    $(window).scroll(stickyHeader);
-    stickyHeader();
-  }
   $("header").append('<div class="menu-backdrop"/>');
-  $(".menu-backdrop").css("height",$(".main-menu > ul > li.last > ul").height()+41+"px")
+  $(".menu-backdrop").css("height",$(".main-menu > ul > li.last > ul").height()+41+"px");
   $(".main-menu > ul > li.last").hover(
     function(){
       $(this).addClass("hover");
       $(".menu-backdrop").show();
+      $("header").css("margin-bottom",$(".main-menu > ul > li.last > ul").height()+38+"px")
     },
     function(){
       $(this).removeClass("hover");
       $(".menu-backdrop").hide();
+      $("header").css("margin-bottom","");
     }
   );
   $(".toggle-menu").click(function(){
