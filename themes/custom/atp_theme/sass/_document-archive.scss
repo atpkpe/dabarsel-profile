@@ -103,8 +103,13 @@
     }
   }
   > li.file {
+      width: 100%;
+      font-size: 13px;
       font-weight: 400;
       margin-bottom: 20px;
+      a, span {
+        font-size: inherit;
+      }
   }
   ul {
     list-style: none;
