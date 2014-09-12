@@ -58,32 +58,32 @@ function _atp_log_action($action, $entity, $type) {
  * @return stdClass
  */
 function _atp_log_get_user() {
-  $remote_user = drupal_static(__FUNCTION__, FALSE);
+  $remote_user = drupal_static(__FUNCTION__, array());
 
-  if (!$remote_user) {
+  if (empty($remote_user)) {
     global $user;
     if (function_exists('getallheaders')) {
       $headers = getallheaders();
       if (!empty($headers['HTTP_IV_USER']) && !empty($headers['HTTP_IV_GROUPS']) && !empty($headers['HTTP_IV_REMOTE_ADDRESS'])) {
-        $remote_user->name = $headers['HTTP_IV_USER'];
-        $remote_user->group = $headers['HTTP_IV_GROUPS'];
-        $remote_user->ip = $headers['HTTP_IV_REMOTE_ADDRESS'];
-        $remote_user->is_drupal = FALSE;
+        $remote_user['name'] = $headers['HTTP_IV_USER'];
+        $remote_user['group'] = $headers['HTTP_IV_GROUPS'];
+        $remote_user['ip'] = $headers['HTTP_IV_REMOTE_ADDRESS'];
+        $remote_user['is_drupal'] = FALSE;
       }
       else {
-        $remote_user->name = $user->name;
-        $remote_user->group = implode(', ', $user->roles);
-        $remote_user->ip = empty($_SERVER['REMOTE_ADDR']) ? 'unknown' : $_SERVER['REMOTE_ADDR'];
-        $remote_user->is_drupal = TRUE;
+        $remote_user['name'] = empty($user->name) ? 'Anonymous' : $user->name;
+        $remote_user['group'] = implode(', ', $user->roles);
+        $remote_user['ip'] = empty($_SERVER['REMOTE_ADDR']) ? 'unknown' : $_SERVER['REMOTE_ADDR'];
+        $remote_user['is_drupal'] = TRUE;
       }
     }
     else {
-      $remote_user->name = $user->name;
-      $remote_user->group = implode(', ', $user->roles);
-      $remote_user->ip = empty($_SERVER['REMOTE_ADDR']) ? 'unknown' : $_SERVER['REMOTE_ADDR'];
-      $remote_user->is_drupal = TRUE;
+      $remote_user['name'] = empty($user->name) ? 'Anonymous' : $user->name;
+      $remote_user['group'] = implode(', ', $user->roles);
+      $remote_user['ip'] = empty($_SERVER['REMOTE_ADDR']) ? 'unknown' : $_SERVER['REMOTE_ADDR'];
+      $remote_user['is_drupal'] = TRUE;
     }
   }
 
-  return $remote_user;
+  return (object) $remote_user;
 }
