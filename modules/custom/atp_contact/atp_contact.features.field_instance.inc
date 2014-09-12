@@ -86,14 +86,15 @@ function atp_contact_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'image',
         'settings' => array(
           'field_wrapper' => 'span',
-          'file_view_mode' => 'teaser',
+          'image_link' => '',
+          'image_style' => '120x120',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
         ),
-        'type' => 'file_rendered',
+        'type' => 'image',
         'weight' => 3,
       ),
     ),
