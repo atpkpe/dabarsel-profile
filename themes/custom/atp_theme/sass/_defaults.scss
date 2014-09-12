@@ -241,4 +241,22 @@ table {
       font-weight: bold;
     }
   }
+  &.table3 {
+    width: 100%;
+    margin-bottom: $margins;
+    border-collapse: collapse;
+    td {
+      background: #fff;
+      vertical-align: top;
+      border: 1px solid $table-header;
+      padding: $margins;
+      &.spacing {
+        background: transparent;
+        width: $margins/2;
+        padding: 0;
+        border-top: 0;
+        border-bottom: 0;
+      }
+    }
+  }
 }
