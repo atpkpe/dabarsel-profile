@@ -50,13 +50,15 @@ function atp_important_message_results($id) {
 
     $lang = ( 0 === strpos($_REQUEST['q'], 'en/') ? '_en' : '' );
 
+    // t don't work at this bootstrap level.
+    $button_text = ($lang == '_en' ? 'Dismiss message' : 'Luk meddelelse');
     $title = atp_important_message_get_field($current, 'important_message_title' . $lang );
     $body = atp_important_message_get_field($current, 'important_message_body' . $lang);
     // Link not used anymore.
     // $link = atp_important_message_get_link($current, 'important_message_link' . $lang);
 
-    $html = '<div class="important-message-content"><h2>' .
-            $title . '</h2><p>' . nl2br($body) . '</p><a href="javascript:void(0);" class="close-button">'. t('Dismiss message', array(), array('context' => 'Important message')) . '</a></div>';
+    $html = '<div class="important-message-content"><h2>' . $title . '</h2><p>' . nl2br($body) .
+            '</p><a href="javascript:void(0);" class="close-button">' . $button_text . '</a></div>';
 
     $result = array(
       'message_id' => $current->vid,
