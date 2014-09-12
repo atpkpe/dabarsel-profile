@@ -41,6 +41,16 @@ templates :
         +'<tr><td>Omkostninger i alt</td><td>1.527</td><td>20</td><td>1.527</td><td>20</td></tr>'
         +'</tfoot>'
         +'</table>'
+    },
+    {
+        title: 'Tabel i indhold 2',
+        image: 'table3.png',
+        description: '',
+        html: '<table class="table3">'
+        +'<tbody>'
+        +'<tr><td><h3>Afdækning</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis mattis felis. Suspendisse magna felis, scelerisque accumsan dolor ut, suscipit faucibus velit. Nulla fermentum tristique dolor, id dapibus tortor congue eu. Morbi auctor volutpat tellus ac placerat.Vivamus ut consequat tellus. Sed vel feugiat neque, vel lobortis urna. Maecenas imperdiet.</p></td><td class="spacing">&nbsp;</td><td><h3>Investering</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis mattis felis. Suspendisse magna felis, scelerisque accumsan dolor ut, suscipit faucibus velit. Nulla fermentum tristique dolor, id dapibus tortor congue eu. Morbi auctor volutpat tellus ac placerat.Vivamus ut consequat tellus. Sed vel feugiat neque, vel lobortis urna. Maecenas imperdiet.</p></td></tr>'
+        +'</tbody>'
+        +'</table>'
     }
   ]
 });
