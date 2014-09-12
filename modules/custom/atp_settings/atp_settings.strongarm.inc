@@ -40,6 +40,7 @@ function atp_settings_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'ckeditor_link_autocomplete_node_types';
   $strongarm->value = array(
+    'faktum' => 'faktum',
     'component' => 'component',
     'news' => 'news',
     'section' => 'section',
@@ -47,6 +48,7 @@ function atp_settings_strongarm() {
     'webform' => 'webform',
     '- any -' => 0,
     'gallery' => 0,
+    'important_message' => 0,
     'contact' => 0,
     'slide' => 0,
   );
@@ -69,6 +71,7 @@ function atp_settings_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'ckeditor_link_file_autocomplete_file_types';
   $strongarm->value = array(
+    'zip_archive' => 'zip_archive',
     'document' => 'document',
     '- any -' => 0,
     'image' => 0,
@@ -414,7 +417,7 @@ function atp_settings_strongarm() {
     'domain' => '',
     'prefix' => '',
     'weight' => '-10',
-    'javascript' => 'iErQF6He8-OxUhrnrF56aVVN6EijSw6mWjrHyNyf3j0',
+    'javascript' => 'yuTRD0T43a8wbJTaAiF9ZAiDSF_4uZDXRr8jqHM-Ryk',
   );
   $export['language_default'] = $strongarm;
 
