@@ -526,3 +526,13 @@ function atp_update_7028(&$sandbox) {
     node_save($node);
   }
 }
+
+/**
+ * ATP-20 enable expire module.
+ *
+ * @author Tom Helmer Hansen <tom@adapt.dk>
+ */
+function atp_update_7029(&$sandbox) {
+  module_enable(array('expire'));
+}
+

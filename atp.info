@@ -79,6 +79,7 @@ dependencies[] = actions_permissions
 dependencies[] = tmgmt_file
 dependencies[] = path_breadcrumbs
 dependencies[] = js
+dependencies[] = expire
 
 ; Project features
 dependencies[] = atp_settings

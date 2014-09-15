@@ -270,6 +270,10 @@ projects[path_breadcrumbs][type] = 'module'
 projects[path_breadcrumbs][subdir] = 'contrib'
 projects[path_breadcrumbs][version] = '3.0'
 
+projects[expire][type] = 'module'
+projects[expire][subdir] = 'contrib'
+projects[expire][version] = '2.0-rc3'
+
 ; Sas test files
 libraries[sas_test][download][type] = get
 libraries[sas_test][download][url] = 'http://svnhosttest.adapt.dk/atp_sas_test_20140910_2154.tar.gz'
