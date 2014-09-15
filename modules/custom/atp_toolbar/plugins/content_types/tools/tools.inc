@@ -15,7 +15,7 @@ $plugin = array(
  * Content pane render function.
  */
 function tools_content_type_render($subtype, $conf, $panel_args, &$context) {
-  $data = $context->data;
+  $data = is_object($context) ? $context->data : array();
 
   // Render the toolbar
   $block = new stdClass();
