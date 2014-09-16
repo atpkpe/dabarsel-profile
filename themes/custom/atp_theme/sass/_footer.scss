@@ -101,6 +101,7 @@ footer {
   }
   > p {
     @include float-span(8);
+    margin-right: $margins;
     @include device(phone){
       width: 100%;
       float: none;
