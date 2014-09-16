@@ -41,8 +41,21 @@ $filter-text-color-hover: $text-color;
         padding-right: $margins/2;
         width: 100px;
         display: block;
+        @include device(phone){
+          float: none;
+          border: 0;
+          border-bottom: $border-width solid $border-color;
+          margin-right: 0;
+          margin-bottom: $margins/2;
+          padding-right: 0;
+          padding-bottom: $margins/2;
+          width: 100%;
+        }
         span {
           display: block;
+          @include device(phone){
+            display: inline;
+          }
         }
       }
     }
