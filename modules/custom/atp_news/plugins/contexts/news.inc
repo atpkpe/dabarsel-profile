@@ -22,8 +22,8 @@ $plugin = array(
     'categories' => array(),
     'list_type' => 'fixed_categories',
     'view_name' => 'news_list',
-    'view_display' => 'default_display',
-    'view_rss_display' => 'feed',
+    'view_display' => 'news',
+    'view_rss_display' => 'news_feed',
     'items_per_page' => 5,
   ),
 );
