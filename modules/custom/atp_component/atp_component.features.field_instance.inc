@@ -571,8 +571,8 @@ function atp_component_field_default_field_instances() {
           'more_link' => 0,
           'more_text' => 'Read more',
           'summary_handler' => 'full',
-          'trim_length' => 60,
-          'trim_link' => FALSE,
+          'trim_length' => 110,
+          'trim_link' => 0,
           'trim_options' => array(
             'text' => 'text',
           ),
