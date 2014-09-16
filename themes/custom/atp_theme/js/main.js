@@ -10,12 +10,12 @@ function stickyHeader() {
 }
 (function ($) {
   $("header").append('<div class="menu-backdrop"/>');
-  $(".menu-backdrop").css("height",$(".main-menu > ul > li.last > ul").height()+41+"px");
+  $(".menu-backdrop").css("height",$(".main-menu > ul > li.last > ul").height()+50+"px");
   $(".main-menu > ul > li.last").hover(
     function(){
       $(this).addClass("hover");
       $(".menu-backdrop").show();
-      $("header").css("margin-bottom",$(".main-menu > ul > li.last > ul").height()+38+"px")
+      $("header").css("margin-bottom",$(".main-menu > ul > li.last > ul").height()+50+"px")
     },
     function(){
       $(this).removeClass("hover");
