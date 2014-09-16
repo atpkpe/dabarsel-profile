@@ -41,7 +41,8 @@ h1, h2, h3, h4, header * {
 h1 {
   margin-bottom: 15px;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 26px;
+  line-height: 32px;
   @include device(phone){
     font-size: 26px;
   }
