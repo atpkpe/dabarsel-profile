@@ -1,7 +1,6 @@
 .contact {
   @include clearfix;
   background: #fff;
-  padding: $margins;
   margin-bottom: $margins;
   h2 {
     margin-top: $margins;
@@ -22,5 +21,8 @@
   > span {
     float: left;
     margin-right: $margins;
+  }
+  img {
+    display: block;
   }
 }
