@@ -192,6 +192,12 @@ blockquote {
     margin-bottom: ($margins/4);
     line-height: 22px;
   }
+  @include device(tablet){
+    img, object {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 table {
