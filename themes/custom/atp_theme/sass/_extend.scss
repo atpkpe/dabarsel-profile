@@ -113,7 +113,7 @@
   background-repeat: no-repeat;
   background-position: right $margins center;
   @include device(phone){
-    background-position: right $margins/2 center;
+    background-position: right $margins/2 top 65%;
     padding: $margins/2;
     padding-right: $margins*2;
   }

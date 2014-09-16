@@ -291,8 +291,8 @@ function atp_faktum_field_default_field_instances() {
         'module' => 'title',
         'settings' => array(
           'field_wrapper' => 'h3',
-          'item_wrapper' => '',
-          'label_wrapper' => '',
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
           'title_class' => '',
           'title_link' => '',
           'title_style' => '',
