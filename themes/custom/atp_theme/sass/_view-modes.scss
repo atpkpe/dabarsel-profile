@@ -48,6 +48,10 @@
       margin-bottom: 0;
       height: 115px;
       font-size: 13px;
+      @include device(phone){
+        height: auto;
+        margin-bottom: $margins;
+      }
   }
   a {
     > div {
