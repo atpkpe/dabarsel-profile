@@ -2,7 +2,6 @@
 
 /**
  * @file
- *
  * Plugin to provide a news context
  */
 
@@ -30,8 +29,7 @@ $plugin = array(
 );
 
 /**
- * It's important to remember that $conf is optional here, because contexts
- * are not always created from the UI.
+ * Create news context.
  */
 function ctools_context_create_news($empty, $data = NULL, $conf = FALSE) {
   // The input is expected to be an object as created by ctools_break_phrase
@@ -44,7 +42,7 @@ function ctools_context_create_news($empty, $data = NULL, $conf = FALSE) {
     return $context;
   }
 
-  if ($data !== FALSE ) {
+  if ($data !== FALSE) {
     $view_params = array();
     if (!empty($data['categories'])) {
       // Only use term ids that are selected.
@@ -69,6 +67,9 @@ function ctools_context_create_news($empty, $data = NULL, $conf = FALSE) {
   return $context;
 }
 
+/**
+ * Context settings form.
+ */
 function ctools_context_news_settings_form($form, &$form_state) {
   $conf = $form_state['conf'];
   $conf += $form_state['plugin']['defaults'];
@@ -144,4 +145,3 @@ function ctools_context_news_settings_form($form, &$form_state) {
 
   return $form;
 }
-
