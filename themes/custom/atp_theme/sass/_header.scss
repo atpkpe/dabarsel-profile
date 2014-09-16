@@ -182,9 +182,17 @@ header {
   left: 0;
   display: block;
   @include device(tablet-portrait){
+    background-size: 50px auto;
+    background-position: left center;
     left: $margins/2;
+    height: 35px;
+    img {
+      width: 50px;
+      height: auto;
+    }
   }
   @include device(phone){
+    background-size: 41px auto;
     top: $margins/2;
     img {
       width: 41px;
@@ -202,6 +210,9 @@ header {
 .languages {
   float: right;
   margin-right: 15px;
+  @include device(tablet-portrait){
+    margin-right: $margins/2;
+  }
   @include device(phone){
     @include clearfix;
     float: none;
@@ -268,6 +279,9 @@ header {
   > ul {
     > li {
       margin-right: 35px;
+      @include device(tablet-portrait){
+        margin-right: $margins/2;
+      }
       &.last {
         float: right;
         margin-right: 15px;
@@ -288,6 +302,9 @@ header {
   @include clearfix;
   float: right;
   height: 70px;
+  @include device(tablet-portrait){
+    margin-right: $margins/2;
+  }
   @include device(phone){
     display: none;
   }
@@ -358,6 +375,7 @@ header {
         font-size: 14px;
         @include device(tablet-portrait){
           font-size: 12px;
+          padding: 0 $margins/2;
         }
         .stickyhead & {
           $tmp: 30px;
@@ -378,6 +396,10 @@ header {
         top: 104px;
         z-index: 100;
         padding: $margins 0;
+        @include device(tablet-portrait){
+          width: 100%;
+          padding: 0 $margins/2;
+        }
         .front & {
           top: 100px;
         }

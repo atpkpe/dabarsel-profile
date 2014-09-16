@@ -31,17 +31,20 @@
     @include grid-span(4, 1);
     padding-top: 2*$margins;
     padding-right: $margins;
-    @include device(phone){
+    @include device(tablet-portrait){
       width: 100%;
       float: none;
       margin-left: 0;
       margin-right: 0;
       display: none;
     }
+    @include device(phone){
+      display: none;
+    }
   }
   > article {
     @include grid-span(12, 5);
-    @include device(phone){
+    @include device(tablet-portrait){
       width: 100%;
       float: none;
       margin-left: 0;
@@ -55,6 +58,9 @@
       margin-left: -$margins;
       border-left: 1px solid $gray;
       height: 2000px;
+      @include device(tablet-portrait){
+        display: none;
+      }
       .stickyhead & {
         top: 0;
       }

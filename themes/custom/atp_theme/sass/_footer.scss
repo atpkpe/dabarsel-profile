@@ -7,11 +7,14 @@ footer {
   }
   .onecol {
     padding-top: 30px;
+    @include device(tablet-portrait){
+      padding: $margins $margins/2;
+    }
   }
   .bottom {
     background: $gray-dark;
     @include device(tablet-portrait){
-      padding: 0 10px;
+      padding: 0 $margins/2;
     }
   }
 }

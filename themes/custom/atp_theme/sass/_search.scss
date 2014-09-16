@@ -27,6 +27,9 @@ $mobile-side-padding: ($margins/2);
   position: relative;
   width: 113px;
   margin-top: ($container-height - $input-height)/2;
+  @include device(tablet-portrait){
+    margin-right: $margins/2;
+  }
   @include device(phone){
     width: 100%;
     padding: 0  $mobile-side-padding;
