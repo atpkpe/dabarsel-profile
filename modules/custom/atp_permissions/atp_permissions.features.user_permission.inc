@@ -161,6 +161,16 @@ function atp_permissions_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'access site map'.
+  $permissions['access site map'] = array(
+    'name' => 'access site map',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'anonymous user' => 'anonymous user',
+    ),
+    'module' => 'site_map',
+  );
+
   // Exported permission: 'access site reports'.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',

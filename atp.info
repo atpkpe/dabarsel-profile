@@ -80,6 +80,7 @@ dependencies[] = tmgmt_file
 dependencies[] = path_breadcrumbs
 dependencies[] = js
 dependencies[] = expire
+dependencies[] = site_map
 
 ; Project features
 dependencies[] = atp_settings

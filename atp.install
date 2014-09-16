@@ -536,3 +536,11 @@ function atp_update_7029(&$sandbox) {
   module_enable(array('expire'));
 }
 
+/**
+ * ATP-512 enable site_map module.
+ *
+ * @author Tom Helmer Hansen <tom@adapt.dk>
+ */
+function atp_update_7030(&$sandbox) {
+  module_enable(array('site_map'));
+}
