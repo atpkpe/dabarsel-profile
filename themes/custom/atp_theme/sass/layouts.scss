@@ -13,7 +13,10 @@
   @extend %content;
   @include clearfix;
   @include device(tablet-portrait){
-    padding: 0 10px;
+    padding: 0 $margins/2 !important;
+  }
+  @include device(iphone){
+    padding: 0 $margins/2 !important;
   }
 }
 .twocol-left {

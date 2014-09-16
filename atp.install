@@ -544,3 +544,12 @@ function atp_update_7029(&$sandbox) {
 function atp_update_7030(&$sandbox) {
   module_enable(array('site_map'));
 }
+
+/**
+ * ATP-507 enable site_map module.
+ *
+ * @author Frank Hansen <frank@adapt.dk>
+ */
+function atp_update_7031(&$sandbox) {
+  module_enable(array('cs_adaptive_image'));
+}

@@ -81,6 +81,7 @@ dependencies[] = path_breadcrumbs
 dependencies[] = js
 dependencies[] = expire
 dependencies[] = site_map
+dependencies[] = cs_adaptive_image
 
 ; Project features
 dependencies[] = atp_settings
