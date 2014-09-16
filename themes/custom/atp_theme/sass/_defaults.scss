@@ -200,6 +200,9 @@ table {
     margin-bottom: $margins;
     border: 1px solid $table-header;
     border-collapse: collapse;
+    &.wnote {
+      margin-bottom: $margins/2;
+    }
     th {
       border-bottom: 1px solid $table-header;
       padding: $margins/2 $margins;
