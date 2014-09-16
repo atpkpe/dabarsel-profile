@@ -13,6 +13,10 @@ function atp_workflow_workbench_moderation_export_transitions() {
       'from_name' => 'approved',
       'to_name' => 'published',
     ),
+    'draft:approved' => array(
+      'from_name' => 'draft',
+      'to_name' => 'approved',
+    ),
     'draft:deleted' => array(
       'from_name' => 'draft',
       'to_name' => 'deleted',

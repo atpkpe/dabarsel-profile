@@ -2236,6 +2236,15 @@ function atp_permissions_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'moderate content from draft to approved'.
+  $permissions['moderate content from draft to approved'] = array(
+    'name' => 'moderate content from draft to approved',
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
   // Exported permission: 'moderate content from draft to deleted'.
   $permissions['moderate content from draft to deleted'] = array(
     'name' => 'moderate content from draft to deleted',

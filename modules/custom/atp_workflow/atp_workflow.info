@@ -31,6 +31,7 @@ features[workbench_moderation_states][] = draft
 features[workbench_moderation_states][] = needs_review
 features[workbench_moderation_states][] = published
 features[workbench_moderation_transitions][] = approved:published
+features[workbench_moderation_transitions][] = draft:approved
 features[workbench_moderation_transitions][] = draft:deleted
 features[workbench_moderation_transitions][] = draft:needs_review
 features[workbench_moderation_transitions][] = draft:published
