@@ -9,5 +9,8 @@
     &.current {
       @extend %font-bold;
     }
+    div {
+      display: none;
+    }
   }
 }
