@@ -1,0 +1,40 @@
+#site-map {
+  @include clearfix;
+  @extend %content;
+  ul {
+    list-style: none;
+    margin-left: 0;
+    ul {
+      margin-left: $margins;
+      margin-bottom: $margins;
+    }
+  }
+  a {
+    display: block;
+  }
+  > div {
+    > div {
+      float: left;
+      width: percentage(1/2);
+    }
+  }
+  .content {
+    > ul {
+      > li {
+        > a {
+          margin-bottom: $margins/4;
+          font-weight: 600;
+          font-size : 16px;
+        }
+        > ul {
+          > li {
+            > a {
+              font-weight: 600;
+              margin-bottom: $margins/4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
