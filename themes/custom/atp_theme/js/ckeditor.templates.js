@@ -4,7 +4,7 @@ imagesPath: CKEDITOR_BASEPATH + '../../themes/custom/atp_theme/images/' ,
 templates :
   [
     {
-        title: 'Tabel i indhold',
+        title: 'Tabel i indhold uden note',
         image: 'table1.png',
         description: '',
         html: '<table class="table1">'
@@ -20,6 +20,25 @@ templates :
         +'<tr><td>Investering</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>'
         +'</tbody>'
         +'</table>'
+    },
+    {
+        title: 'Tabel i indhold med note',
+        image: 'table1.png',
+        description: '',
+        html: '<table class="table1 wnote">'
+        +'<thead>'
+        +'<tr><th colspan="5">Omkostninger i 2013 og 2014</th></tr>'
+        +'</thead>'
+        +'<tbody>'
+        +'<tr><td></td><th colspan="2">2014</th><th colspan="2">2013</th></tr>'
+        +'<tr><td></td><td>Mio.</td><td>Pct.</td><td>Mio.</td><td>Pct.</td></tr>'
+        +'<tr><td>Udbetalinger</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>'
+        +'<tr><td>Administration</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>'
+        +'<tr><td>Garantier</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>'
+        +'<tr><td>Investering</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>'
+        +'</tbody>'
+        +'</table>'
+        +'<p class="note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>'
     },
     {
         title: 'Tabel fondsløsning',
