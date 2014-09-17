@@ -48,8 +48,7 @@ projects[media][patch][] = 'http://www.drupal.org/files/issues/media-fix_operato
 ; projects[media][patch][] = 'http://www.drupal.org/files/issues/media-ckeditor4-media-plugin-2177893-13.patch'
 ; projects[media][patch][] = 'https://raw.githubusercontent.com/kevinchampion/imagex_patches/update-media-patch/contrib/media/media-ckeditor-bind-unbind-stripping.patch'
 
-projects[file_entity][download][revision] = '58b80010a4fd0e6944a4fe5ea8dbe6fed775523e'
-projects[file_entity][patch][] = 'http://www.drupal.org/files/issues/file_entity-validate-not-executing-2.patch'
+projects[file_entity][download][revision] = 'cd23497321a0c1ff993d3ce8ea6d2d2adb633cee'
 
 projects[linkit][type] = 'module'
 projects[linkit][subdir] = 'contrib'
