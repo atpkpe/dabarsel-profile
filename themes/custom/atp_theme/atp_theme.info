@@ -13,7 +13,7 @@ base theme  = adapt_basetheme
 ; Stylesheets =================================================================
 
 stylesheets[all][] = css/screen.css
-stylesheets[all][] = css/print.css
+stylesheets[print][] = css/print.css
 
 
 ; Scripts =====================================================================
