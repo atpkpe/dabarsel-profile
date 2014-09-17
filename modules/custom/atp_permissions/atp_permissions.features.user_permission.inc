@@ -878,7 +878,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node webform context'.
   $permissions['administer panelizer node webform context'] = array(
     'name' => 'administer panelizer node webform context',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
@@ -892,7 +894,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node webform layout'.
   $permissions['administer panelizer node webform layout'] = array(
     'name' => 'administer panelizer node webform layout',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
@@ -908,7 +912,9 @@ function atp_permissions_user_default_permissions() {
   // Exported permission: 'administer panelizer node webform settings'.
   $permissions['administer panelizer node webform settings'] = array(
     'name' => 'administer panelizer node webform settings',
-    'roles' => array(),
+    'roles' => array(
+      'Extended layout' => 'Extended layout',
+    ),
     'module' => 'panelizer',
   );
 
