@@ -84,9 +84,15 @@
 }
 .view-mode-1-1-l, .view-mode-3-4-l, .view-mode-1-2-l, .view-mode-3-8-l, .view-mode-1-4-l {
   height: $block-height;
+  @include device(phone){
+    height: auto;
+  }
 }
 .view-mode-1-1-h, .view-mode-3-4-h, .view-mode-1-2-h, .view-mode-3-8-h, .view-mode-1-4-h {
   height: ($block-height*2)+20px;
+  @include device(phone){
+    height: auto;
+  }
 }
 
 .view-mode-1-2-square {

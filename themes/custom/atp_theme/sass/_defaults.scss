@@ -91,6 +91,9 @@ hr {
 
 iframe {
   width: 100%;
+  @include device(tablet){
+    min-height: 120px;
+  }
 }
 
 .field-field-page-summary *, blockquote, blockquote * {

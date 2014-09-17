@@ -102,6 +102,9 @@ header {
       }
       a {
         padding: 0 15px;
+        @include device(tablet-portrait){
+          padding: 0 $margins/4;
+        }
       }
     }
     .level-2-3 {
@@ -191,9 +194,21 @@ header {
       height: auto;
     }
   }
+  @include device(phone-landscape){
+    background-size: 41px auto;
+    background-position: left center;
+    top: 0;
+    left: $margins/2;
+    height: 50px;
+    img {
+      width: 41px;
+      height: auto;
+    }
+  }
   @include device(phone){
     background-size: 41px auto;
-    top: $margins/2;
+    top: 0;
+    height: 50px;
     img {
       width: 41px;
       height: auto;

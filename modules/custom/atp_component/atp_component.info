@@ -3,6 +3,7 @@ description = Resuable componets
 core = 7.x
 package = ATP
 dependencies[] = atp_settings
+dependencies[] = cs_adaptive_image
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_group

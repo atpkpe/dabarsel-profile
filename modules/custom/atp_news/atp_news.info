@@ -4,6 +4,7 @@ core = 7.x
 package = ATP
 dependencies[] = atp_fields
 dependencies[] = atp_settings
+dependencies[] = cs_adaptive_image
 dependencies[] = date
 dependencies[] = features
 dependencies[] = field_group

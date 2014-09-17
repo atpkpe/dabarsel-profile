@@ -124,7 +124,7 @@ function atp_news_views_default_views() {
     'news' => 'news',
   );
 
-  /* Display: News and Faktum  */
+  /* Display: News and Faktum */
   $handler = $view->new_display('panel_pane', 'News and Faktum', 'default_display');
 
   /* Display: News and Faktum Feed */

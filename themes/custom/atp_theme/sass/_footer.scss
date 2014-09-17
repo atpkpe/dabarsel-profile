@@ -8,7 +8,7 @@ footer {
   .onecol {
     padding-top: 30px;
     @include device(tablet-portrait){
-      padding: $margins $margins/2;
+      padding: $margins $margins/2 !important;
     }
   }
   .bottom {

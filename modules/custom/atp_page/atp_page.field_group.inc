@@ -72,6 +72,34 @@ function atp_page_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_page_link|node|page|1_4_compressed';
+  $field_group->group_name = 'group_page_link';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = '1_4_compressed';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Link wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_page_summary',
+      1 => 'title_field',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Link wrapper',
+      'instance_settings' => array(
+        'link_to' => 'entity',
+        'classes' => 'vm-1-4-compressed',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_page_link|node|page|1_4_compressed'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_page_related|node|page|form';
   $field_group->group_name = 'group_page_related';
   $field_group->entity_type = 'node';
