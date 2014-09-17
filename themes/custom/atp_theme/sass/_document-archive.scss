@@ -77,16 +77,22 @@
   padding-bottom: $margins;
   list-style: none;
   > li {
-    @include float-span(8);
     font-weight: 600;
     margin-bottom: 50px;
     overflow-x: hidden;
+    margin-left: 0;
+    float: left;
+    width: percentage(1/2);
     @include device(tablet-portrait){
       float: none;
       width: 100%;
     }
-    &.last {
-      margin-right: 0px;
+    &:nth-child(2n+1) {
+      padding-right: $margins/2;
+      clear: left;
+    }
+    &:nth-child(2n+2) {
+      padding-left: $margins/2;
     }
     div {
       font-weight: 400;
