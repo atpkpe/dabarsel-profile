@@ -103,8 +103,8 @@ footer {
     @extend %footer-h2;
   }
   > p {
-    @include float-span(8);
-    margin-right: $margins;
+    $grids: 8;
+    @include float-span(4);
     @include device(phone){
       width: 100%;
       float: none;
