@@ -13,6 +13,7 @@ class sasDiagBar extends sasDiag {
 
   protected function defineOptions() {
     $options = $this->optionsAxisLabels();
+    $options['height'] = '400';
     $options['backgroundColor'] = 'transparent';
     $options['colors'] = array(self::colLightGreen, self::colGreen);
     $options['chartArea']['backgroundColor'] = self::colLightGrey;

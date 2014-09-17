@@ -60,7 +60,8 @@ abstract class sasDiag {
         '#type' => 'container',
         '#attributes' => array(
           'id' => $this->selector,
-          'style' => 'width: 100%; height: 400px',
+          'class' => 'saschart',
+          'style' => 'width: 100%;',
         ),
         'nbsp' => array(
           '#type' => 'markup',

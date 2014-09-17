@@ -13,6 +13,7 @@ class sasDiagLine extends sasDiag {
 
   protected function defineOptions(){
     $options = $this->optionsAxisLabels();
+    $options['height'] = '400';
     $options['backgroundColor'] = 'transparent';
     $options['colors'] = array(
       self::colDarkGreen,
