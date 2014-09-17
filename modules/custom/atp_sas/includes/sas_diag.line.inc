@@ -16,16 +16,17 @@ class sasDiagLine extends sasDiag {
     $options['height'] = '400';
     $options['backgroundColor'] = 'transparent';
     $options['colors'] = array(
-      self::colDarkGreen,
-      self::colDarkGrey,
-      self::colGreen,
-      self::colLightGrey,
-      self::colLightGreen,
-      self::colGrey,
+      self::color1,
+      self::color2,
+      self::color3,
+      self::color4,
+      self::color5,
+      self::color6,
+      self::color7
     );
     $options['legend']['position'] = 'none';
     $options['chartArea']['backgroundColor'] = self::colLightGrey;
-    $options['vAxis']['gridlines']['color'] = self::colWhite;
+    $options['vAxis']['gridlines']['color'] = self::colGrey;
     $options['vAxis']['baselineColor'] = 'none';
     return $options;
   }

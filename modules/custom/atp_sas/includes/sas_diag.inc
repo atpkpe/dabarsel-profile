@@ -8,16 +8,16 @@
 
 
 abstract class sasDiag {
+  const color1 = '#adc200';
+  const color2 = '#5f7200';
+  const color3 = '#878787';
+  const color4 = '#383a34';
+  const color5 = '#efba00';
+  const color6 = '#d96d02';
+  const color7 = '#b41e0a';
 
-  const colWhiteGreen = '#e8efba';
-  const colLightestGreen = '#d1de75';
-  const colLighterGreen = '#bccf37';
-  const colLightGreen = '#acc20e';
-  const colGreen = '#7b9507';
-  const colDarkGreen = '#4c5d02';
-  const colLightGrey = '#e6e7e4';
-  const colGrey = '#A2A2A2';
-  const colDarkGrey = '#6E6E6E';
+  const colGrey = '#c4c4c4';
+  const colLightGrey = '#f2f1f0';
   const colWhite = '#FFFFFF';
 
   protected $id;

@@ -1,11 +1,30 @@
+$sas-color1: #adc200;
+$sas-color2: #5f7200;
+$sas-color3: #878787;
+$sas-color4: #383a34;
+$sas-color5: #efba00;
+$sas-color6: #d96d02;
+$sas-color7: #b41e0a;
+
 // Tables
 .sas-table {
   width: 100%;
-  padding: $margins;
+  border-top: 2px solid $sas-color1;
+  border-left: 1px solid $gray-notsodark;
+  border-right: 1px solid $gray-notsodark;
+  border-bottom: 2px solid $gray-notsodark;
+  margin-bottom: $margins;
+  margin-top: $margins/2;
   tr {
     td {
       border-bottom: 1px solid $gray-notsodark;
-      line-height: 30px;
+      padding: $margins/4;
+      &:first-child {
+        padding-left: $margins;
+      }
+      &:last-child {
+        padding-right: $margins;
+      }
     }
   }
   .format-strong, .header {
@@ -13,12 +32,10 @@
     font-weight: 600;
   }
   .pos-left {
-    padding-left: $margins;
     text-align: left;
   }
   .pos-right {
     text-align: right;
-    padding-right: $margins;
   }
 }
 

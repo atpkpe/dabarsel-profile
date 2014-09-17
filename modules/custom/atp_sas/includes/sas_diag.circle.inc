@@ -20,12 +20,13 @@ class sasDiagCircle extends sasDiag {
       'pieSliceBorderColor' => 'none',
       'pieSliceTextStyle' => array('color' => '#fff', 'fontName' => 'Tahoma'),
       'colors' => array(
-        self::colDarkGreen,
-        self::colGreen,
-        self::colLightGreen,
-        self::colLighterGreen,
-        self::colLightestGreen,
-        self::colWhiteGreen,
+        self::color1,
+        self::color2,
+        self::color3,
+        self::color4,
+        self::color5,
+        self::color6,
+        self::color7
       ),
     );
   }
