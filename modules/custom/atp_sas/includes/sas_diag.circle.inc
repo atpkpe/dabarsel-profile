@@ -13,12 +13,12 @@ class sasDiagCircle extends sasDiag {
 
   protected function defineOptions(){
     return array(
+      'height' => '400',
+      'chartArea' => array('height'=>'360'),
       'backgroundColor' => 'transparent',
       'pieSliceText' => 'value',
       'pieSliceBorderColor' => 'none',
       'pieSliceTextStyle' => array('color' => '#fff', 'fontName' => 'Tahoma'),
-      'backgroundColor.stroke' => 'red',
-      'backgroundColor.strokeWidth' => '10',
       'colors' => array(
         self::colDarkGreen,
         self::colGreen,
