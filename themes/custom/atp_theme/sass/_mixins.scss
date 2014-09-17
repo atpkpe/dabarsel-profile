@@ -1,13 +1,13 @@
 /* MEDIA QUERIES */
 @mixin device($media) {
   @if $media == phone {
-    @media screen and (max-width: 640px) { @content;}
+    @media screen and (max-width: 770px) { @content;}
   }
   @if $media == phone-landscape {
-    @media screen and (max-width: 960px) and (orientation: landscape) { @content;}
+    @media screen and (max-device-width: 640px) and (orientation: landscape) { @content;}
   }
   @else if $media == tablet-portrait {
-    @media screen and (max-width: 960px) and (orientation: portrait) { @content; }
+    @media screen and (max-width: 960px) { @content; }
   }
   @else if $media == tablet {
     @media screen and (max-width: 960px) { @content; }
@@ -140,7 +140,7 @@
     margin: 0 0 ($margins/2) 0;
     img {
       display: block;
-      max-width: 100%;
+      width: 100%;
       height: auto;
     }
   }
