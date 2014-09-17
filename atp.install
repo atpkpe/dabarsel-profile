@@ -553,3 +553,12 @@ function atp_update_7030(&$sandbox) {
 function atp_update_7031(&$sandbox) {
   module_enable(array('cs_adaptive_image'));
 }
+
+/**
+ * ATP-496 enable menu_position module.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7032(&$sandbox) {
+  module_enable(array('menu_position'));
+}

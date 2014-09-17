@@ -278,6 +278,10 @@ projects[site_map][type] = 'module'
 projects[site_map][subdir] = 'contrib'
 projects[site_map][version] = '1.2'
 
+projects[menu_position][type] = 'module'
+projects[menu_position][subdir] = 'contrib'
+projects[menu_position][version] = '1.1'
+
 ; Sas test files
 libraries[sas_test][download][type] = get
 libraries[sas_test][download][url] = 'http://svnhosttest.adapt.dk/atp_sas_test_20140910_2154.tar.gz'
