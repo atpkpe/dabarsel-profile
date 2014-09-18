@@ -23,7 +23,8 @@ function atp_settings_menu_alter(&$items) {
  */
 function atp_settings_system_info_alter(&$info, $file, $type) {
   $ignored_modules = array(
-    'date_migrate_example'
+    'date_migrate_example',
+    'bef_test_content'
   );
 
   if ($type == 'module' && in_array($file->name, $ignored_modules)) {

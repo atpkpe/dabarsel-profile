@@ -167,6 +167,7 @@ function atp_permissions_user_default_permissions() {
     'roles' => array(
       'Developer' => 'Developer',
       'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'site_map',
   );
@@ -971,15 +972,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'rules',
   );
 
-  // Exported permission: 'administer scheduler'.
-  $permissions['administer scheduler'] = array(
-    'name' => 'administer scheduler',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'scheduler',
-  );
-
   // Exported permission: 'administer search'.
   $permissions['administer search'] = array(
     'name' => 'administer search',
@@ -1143,6 +1135,15 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'administer workbench schedules'.
+  $permissions['administer workbench schedules'] = array(
+    'name' => 'administer workbench schedules',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_scheduler',
   );
 
   // Exported permission: 'administer xmlsitemap'.
@@ -1734,6 +1735,7 @@ function atp_permissions_user_default_permissions() {
       'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
+      'anonymous user' => 'anonymous user',
     ),
     'module' => 'file_entity',
   );
@@ -2334,16 +2336,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'pathauto',
   );
 
-  // Exported permission: 'override default scheduler time'.
-  $permissions['override default scheduler time'] = array(
-    'name' => 'override default scheduler time',
-    'roles' => array(
-      'Author' => 'Author',
-      'Developer' => 'Developer',
-    ),
-    'module' => 'scheduler_workbench',
-  );
-
   // Exported permission: 'preview focal point'.
   $permissions['preview focal point'] = array(
     'name' => 'preview focal point',
@@ -2375,16 +2367,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'schedule (un)publishing of nodes'.
-  $permissions['schedule (un)publishing of nodes'] = array(
-    'name' => 'schedule (un)publishing of nodes',
-    'roles' => array(
-      'Author' => 'Author',
-      'Developer' => 'Developer',
-    ),
-    'module' => 'scheduler',
-  );
-
   // Exported permission: 'search content'.
   $permissions['search content'] = array(
     'name' => 'search content',
@@ -2404,6 +2386,32 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'set any workbench schedule'.
+  $permissions['set any workbench schedule'] = array(
+    'name' => 'set any workbench schedule',
+    'roles' => array(
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_scheduler',
+  );
+
+  // Exported permission: 'set workbench schedule'.
+  $permissions['set workbench schedule'] = array(
+    'name' => 'set workbench schedule',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+    ),
+    'module' => 'workbench_scheduler',
+  );
+
+  // Exported permission: 'set workbench schedule for standard'.
+  $permissions['set workbench schedule for standard'] = array(
+    'name' => 'set workbench schedule for standard',
+    'roles' => array(),
+    'module' => 'workbench_scheduler',
   );
 
   // Exported permission: 'submit translation jobs'.

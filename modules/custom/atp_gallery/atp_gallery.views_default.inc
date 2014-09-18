@@ -178,7 +178,6 @@ function atp_gallery_views_default_views() {
     t('sidste »'),
     t('Alle'),
     t('Main image'),
-    t('more'),
     t('View panes'),
     t('Thumbnails'),
   );

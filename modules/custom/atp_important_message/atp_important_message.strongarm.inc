@@ -170,23 +170,9 @@ function atp_important_message_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_expand_fieldset_important_message';
-  $strongarm->value = '0';
-  $export['scheduler_expand_fieldset_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_publish_allow_state_important_message';
   $strongarm->value = 'approved';
   $export['scheduler_publish_allow_state_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_enable_important_message';
-  $strongarm->value = 1;
-  $export['scheduler_publish_enable_important_message'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -198,34 +184,6 @@ function atp_important_message_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_past_date_important_message';
-  $strongarm->value = 'error';
-  $export['scheduler_publish_past_date_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_required_important_message';
-  $strongarm->value = 0;
-  $export['scheduler_publish_required_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_revision_important_message';
-  $strongarm->value = 1;
-  $export['scheduler_publish_revision_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_touch_important_message';
-  $strongarm->value = 0;
-  $export['scheduler_publish_touch_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_default_time_important_message';
   $strongarm->value = '';
   $export['scheduler_unpublish_default_time_important_message'] = $strongarm;
@@ -233,37 +191,9 @@ function atp_important_message_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_enable_important_message';
-  $strongarm->value = 1;
-  $export['scheduler_unpublish_enable_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_moderation_state_important_message';
   $strongarm->value = 'draft';
   $export['scheduler_unpublish_moderation_state_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_required_important_message';
-  $strongarm->value = 0;
-  $export['scheduler_unpublish_required_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_revision_important_message';
-  $strongarm->value = 0;
-  $export['scheduler_unpublish_revision_important_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_use_vertical_tabs_important_message';
-  $strongarm->value = '1';
-  $export['scheduler_use_vertical_tabs_important_message'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

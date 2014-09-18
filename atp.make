@@ -287,3 +287,12 @@ libraries[sas_test][download][type] = get
 libraries[sas_test][download][url] = 'http://svnhosttest.adapt.dk/atp_sas_test_20140910_2154.tar.gz'
 libraries[sas_test][destination] = modules/custom/atp_sas
 libraries[sas_test][directory_name] = test
+
+projects[workbench_scheduler][type] = 'module'
+projects[workbench_scheduler][subdir] = 'contrib'
+projects[workbench_scheduler][download][branch] = '7.x-1.x'
+projects[workbench_scheduler][download][type] = 'git'
+projects[workbench_scheduler][download][url] = 'http://git.drupal.org/project/workbench_scheduler.git'
+projects[workbench_scheduler][download][revision] = 'af6c7ca75a1a295b3a2ed5d77aa65e16a4128356'
+projects[workbench_scheduler][patch][approved][file] = 'patches/workbench-scheduler-only-allow-approved.patch'
+

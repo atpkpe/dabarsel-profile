@@ -39,6 +39,7 @@ function atp_file_user_default_permissions() {
       'Author' => 'Author',
       'Developer' => 'Developer',
       'Site administrator' => 'Site administrator',
+      'anonymous user' => 'anonymous user',
     ),
     'module' => 'file_entity',
   );

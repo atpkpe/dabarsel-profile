@@ -1,0 +1,64 @@
+diff --git a/workbench_scheduler.module b/workbench_scheduler.module
+index 1273265..a95daf8 100644
+--- a/workbench_scheduler.module
++++ b/workbench_scheduler.module
+@@ -958,31 +958,35 @@ function workbench_scheduler_process_start_dates($timestamp) {
+     foreach ($schedule_nodes as $node_schedule) {
+       //need to load the node
+       if ($node = node_load($node_schedule->nid, $node_schedule->vid)) {
+-        //if moderation state is 'unpublished' follow a different workflow
+-        if ($node_schedule->start_state == 'unpublished') {
+-          workbench_scheduler_moderate_unpublish($node);
+-        //moderate the node using workbench_moderation
+-        }
+-        else {
+-          workbench_moderation_moderate($node, $node_schedule->start_state);
+-        }
+-        //if not the 'published' state, set to 'unpublished'
+-        if ($node_schedule->start_state != 'published') {
+-          $node->status = 0;
+-          //update the node
+-          node_save($node);
+-        }
+-        //does this schedule have an end date as well?
+-        if ($node_schedule->end_date) {
+-          //do not mark as completed, since need to wait for end date
+-        }
+-        else {
+-          //no end state so mark schedule as complete
+-          workbench_scheduler_node_set_complete($node_schedule->nid, $node_schedule->vid, $node_schedule->sid);
++        // Only allow scheduler to publish approved nodes
++        $current_state = $node->workbench_moderation['my_revision']->state;
++        if ($current_state == 'approved') {
++          //if moderation state is 'unpublished' follow a different workflow
++          if ($node_schedule->start_state == 'unpublished') {
++            workbench_scheduler_moderate_unpublish($node);
++          //moderate the node using workbench_moderation
++          }
++          else {
++            workbench_moderation_moderate($node, $node_schedule->start_state);
++          }
++          //if not the 'published' state, set to 'unpublished'
++          if ($node_schedule->start_state != 'published') {
++            $node->status = 0;
++            //update the node
++            node_save($node);
++          }
++          //does this schedule have an end date as well?
++          if ($node_schedule->end_date) {
++            //do not mark as completed, since need to wait for end date
++          }
++          else {
++            //no end state so mark schedule as complete
++            workbench_scheduler_node_set_complete($node_schedule->nid, $node_schedule->vid, $node_schedule->sid);
++          }
++          //set the moderated flag to true
++          $moderated = TRUE;
++          module_invoke_all('workbench_scheduler_post_process_start_dates', $node_schedule);
+         }
+-        //set the moderated flag to true
+-        $moderated = TRUE;
+-        module_invoke_all('workbench_scheduler_post_process_start_dates', $node_schedule);
+       }
+     }
+   }

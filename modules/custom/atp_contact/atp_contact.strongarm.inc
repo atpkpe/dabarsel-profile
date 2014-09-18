@@ -191,23 +191,9 @@ function atp_contact_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_expand_fieldset_contact';
-  $strongarm->value = '0';
-  $export['scheduler_expand_fieldset_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_publish_allow_state_contact';
   $strongarm->value = '';
   $export['scheduler_publish_allow_state_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_enable_contact';
-  $strongarm->value = 0;
-  $export['scheduler_publish_enable_contact'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -219,34 +205,6 @@ function atp_contact_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_past_date_contact';
-  $strongarm->value = 'error';
-  $export['scheduler_publish_past_date_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_required_contact';
-  $strongarm->value = 0;
-  $export['scheduler_publish_required_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_revision_contact';
-  $strongarm->value = 0;
-  $export['scheduler_publish_revision_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_touch_contact';
-  $strongarm->value = 0;
-  $export['scheduler_publish_touch_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_default_time_contact';
   $strongarm->value = '';
   $export['scheduler_unpublish_default_time_contact'] = $strongarm;
@@ -254,37 +212,9 @@ function atp_contact_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_enable_contact';
-  $strongarm->value = 0;
-  $export['scheduler_unpublish_enable_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_moderation_state_contact';
   $strongarm->value = 'draft';
   $export['scheduler_unpublish_moderation_state_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_required_contact';
-  $strongarm->value = 0;
-  $export['scheduler_unpublish_required_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_revision_contact';
-  $strongarm->value = 0;
-  $export['scheduler_unpublish_revision_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_use_vertical_tabs_contact';
-  $strongarm->value = '1';
-  $export['scheduler_use_vertical_tabs_contact'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
