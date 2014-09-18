@@ -1,14 +1,6 @@
 api = 2
 core = 7.x
 
-projects[workbench_scheduler][type] = 'module'
-projects[workbench_scheduler][subdir] = 'contrib'
-projects[workbench_scheduler][download][branch] = '7.x-1.x'
-projects[workbench_scheduler][download][type] = 'git'
-projects[workbench_scheduler][download][url] = 'http://git.drupal.org/project/workbench_scheduler.git'
-projects[workbench_scheduler][download][revision] = 'af6c7ca75a1a295b3a2ed5d77aa65e16a4128356'
-projects[workbench_scheduler][patch][local] = 'patches/workbench-scheduler-only-allow-approved.patch'
-
 ; Adapt core
 projects[adapt_core][type] = 'module'
 projects[adapt_core][subdir] = 'global'
@@ -68,6 +60,14 @@ projects[workbench_access][download][branch] = '7.x-1.x'
 projects[workbench_access][download][type] = 'git'
 projects[workbench_access][download][url] = 'http://git.drupal.org/project/workbench_access.git'
 projects[workbench_access][download][revision] = 'dc60f628aa8ba6d5f8dd09c0ebe40c047a0518ce'
+
+projects[workbench_scheduler][type] = 'module'
+projects[workbench_scheduler][subdir] = 'contrib'
+projects[workbench_scheduler][download][branch] = '7.x-1.x'
+projects[workbench_scheduler][download][type] = 'git'
+projects[workbench_scheduler][download][url] = 'http://git.drupal.org/project/workbench_scheduler.git'
+projects[workbench_scheduler][download][revision] = 'af6c7ca75a1a295b3a2ed5d77aa65e16a4128356'
+projects[workbench_scheduler][patch][local] = 'patches/workbench-scheduler-only-allow-approved.patch'
 
 projects[scheduler][type] = 'module'
 projects[scheduler][subdir] = 'contrib'
