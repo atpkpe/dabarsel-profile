@@ -55,7 +55,7 @@ CKEDITOR.plugins.add( 'textbox', {
 
                 if ( this.element.hasClass( 'floatbox' ) )
                     this.setData( 'behaviour', 'floatbox' );
-                
+
                 if (  this.element.hasClass( 'floatbox' ) && this.element.hasClass( 'no-title' ) )
                   this.setData( 'behaviour', 'floatbox no-title' );
 
@@ -94,7 +94,7 @@ CKEDITOR.plugins.add( 'textbox', {
         } );
 
         editor.ui.addButton('textbox', {
-          label: Drupal.t('Create a text box'),
+          label: Drupal.t('Create a text with title element'),
           command: 'textbox',
           icon: this.path + '/icons/textbox.png'
         });

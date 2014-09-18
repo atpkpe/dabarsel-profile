@@ -1,6 +1,6 @@
 CKEDITOR.dialog.add( 'textbox', function( editor ) {
     return {
-        title: Drupal.t('Edit Text Box'),
+        title: Drupal.t('Edit text with title element'),
         minWidth: 200,
         minHeight: 100,
         contents: [
