@@ -89,13 +89,13 @@ function atp_news_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'menu-top',
-      'parent_mlid' => 1475,
-      'parent' => 'menu-top:1475',
+      'parent_mlid' => 0,
+      'parent' => 'menu-top:0',
       'title_link' => 0,
       'admin_title' => '',
-      'level' => '1',
+      'level' => '3',
       'follow' => 0,
-      'depth' => '0',
+      'depth' => '1',
       'expanded' => 0,
       'sort' => 0,
       'override_title' => 1,
