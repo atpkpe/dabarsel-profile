@@ -562,3 +562,52 @@ function atp_update_7031(&$sandbox) {
 function atp_update_7032(&$sandbox) {
   module_enable(array('menu_position'));
 }
+
+/**
+ * ATP-496 Add menu position items
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7033(&$sandbox) {
+  module_load_include('inc', 'menu_position', 'menu_position.admin');
+
+  $rules = array();
+  $rules[] = array(
+    'rid' => '',
+    'admin_title' => 'Faktum',
+    'plid' => 'menu-top:1481',
+    'content_type' => array('faktum' => 'faktum'),
+    'conditions' => array(
+      'content_type' => array(
+        'content_type' => array('faktum' => 'faktum')
+      )
+    )
+  );
+
+  $rules[] = array(
+    'rid' => '',
+    'admin_title' => 'Nyhed',
+    'plid' => 'menu-top:1475',
+    'content_type' => array('news' => 'news'),
+    'conditions' => array(
+      'content_type' => array(
+        'content_type' => array('news' => 'news')
+      )
+    )
+  );
+
+  foreach ($rules AS $rule) {
+    $form_state = array('values' => $rule);
+    drupal_form_submit('menu_position_rule_form', $form_state);
+  }
+}
+
+/**
+ * ATP-496 disable path_breadcrumbs module.
+ *
+ * @author Martin Ricken <martin.ricken@adapt.dk>
+ */
+function atp_update_7034(&$sandbox) {
+  module_disable(array('path_breadcrumbs'));
+  drupal_uninstall_modules(array('path_breadcrumbs'));
+}

@@ -77,11 +77,11 @@ dependencies[] = tmgmt_node
 dependencies[] = tmgmt_local
 dependencies[] = actions_permissions
 dependencies[] = tmgmt_file
-dependencies[] = path_breadcrumbs
 dependencies[] = js
 dependencies[] = expire
 dependencies[] = site_map
 dependencies[] = cs_adaptive_image
+dependencies[] = menu_position
 
 ; Project features
 dependencies[] = atp_settings
