@@ -134,8 +134,15 @@
   @include grid-span(8,9);
   height: ($block-height*2)+20px;
   overflow: hidden;
-  blockquote, blockquote * {
-    font-size: 22px;
+  @include device(phone){
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 0;
+    margin-bottom: $margins;
+  }
+  p, p * {
+    font-size: 18px;
     line-height: normal;
   }
 }
