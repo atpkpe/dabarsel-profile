@@ -14,7 +14,7 @@ function atp_contact_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_contact';
-  $strongarm->value = 'edit-scheduler';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_contact'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -123,7 +123,7 @@ function atp_contact_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_contact';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['i18n_node_extended_contact'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -137,7 +137,7 @@ function atp_contact_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_contact';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['language_content_type_contact'] = $strongarm;
 
   $strongarm = new stdClass();
