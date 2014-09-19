@@ -69,22 +69,6 @@ projects[workbench_scheduler][download][url] = 'http://git.drupal.org/project/wo
 projects[workbench_scheduler][download][revision] = 'af6c7ca75a1a295b3a2ed5d77aa65e16a4128356'
 projects[workbench_scheduler][patch][] = 'http://svnhosttest.adapt.dk/workbench-scheduler-1.4-only-allow-approved.patch'
 
-projects[scheduler][type] = 'module'
-projects[scheduler][subdir] = 'contrib'
-projects[scheduler][version] = '1.2'
-
-projects[scheduler_workbench][type] = 'module'
-projects[scheduler_workbench][subdir] = 'contrib'
-projects[scheduler_workbench][download][branch] = '7.x-1.x'
-projects[scheduler_workbench][download][type] = 'git'
-projects[scheduler_workbench][download][url] = 'http://git.drupal.org/project/scheduler_workbench.git'
-projects[scheduler_workbench][download][revision] = '50c62aefc69390a66cfa111b1b70c461506d046a'
-; Only allow certain states to be published by scheduler, https://drupal.org/node/1955938
-projects[scheduler_workbench][patch][] = 'http://drupal.org/files/1966814-1-scheduler_workbench-tests.patch'
-projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/1955938-22-scheduler_workbench-only_publish_approved.patch'
-; Schedule revisions, https://drupal.org/node/2048999
-projects[scheduler_workbench][patch][] = 'http://drupal.org/files/issues/scheduler_workbench-revision_publish-707484-22.patch'
-
 projects[smtp][type] = 'module'
 projects[smtp][subdir] = 'contrib'
 projects[smtp][download][branch] = '7.x-1.x'
@@ -266,6 +250,7 @@ projects[ckeditor_link_file][type] = 'module'
 projects[ckeditor_link_file][subdir] = 'contrib'
 projects[ckeditor_link_file][version] = '1.3'
 
+; Remove in next deploy !
 projects[tmgmt][type] = 'module'
 projects[tmgmt][subdir] = 'contrib'
 projects[tmgmt][version] = '1.0-rc1'
@@ -273,10 +258,6 @@ projects[tmgmt][version] = '1.0-rc1'
 projects[js][type] = 'module'
 projects[js][subdir] = 'contrib'
 projects[js][version] = '1.0'
-
-projects[path_breadcrumbs][type] = 'module'
-projects[path_breadcrumbs][subdir] = 'contrib'
-projects[path_breadcrumbs][version] = '3.0'
 
 projects[expire][type] = 'module'
 projects[expire][subdir] = 'contrib'
