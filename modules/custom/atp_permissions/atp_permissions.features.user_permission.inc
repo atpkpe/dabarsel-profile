@@ -2392,6 +2392,7 @@ function atp_permissions_user_default_permissions() {
   $permissions['set any workbench schedule'] = array(
     'name' => 'set any workbench schedule',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
     ),
     'module' => 'workbench_scheduler',
