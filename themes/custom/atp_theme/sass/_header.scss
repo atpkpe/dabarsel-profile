@@ -586,3 +586,29 @@ header {
     }
   }
 }
+
+
+.view-mode-menu-box {
+  background: #272727;
+  border-left: 4px solid $green;
+  padding: $margins;
+  footer &, .level-2 & {
+    display: none;
+  }
+  * {
+    color: #fff;
+  }
+  h3 {
+    margin-bottom: $margins;
+  }
+  div {
+    margin-bottom: $margins;
+    a {
+      display: inline !important;
+      text-decoration: none;
+      &:link, &:visited {
+        color: $green;
+      }
+    }
+  }
+}
