@@ -122,38 +122,31 @@ function atp_notifications_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Header: Global: Unfiltered text */
+  /* Overskrift: Global: Ufiltreret tekst */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  /* No results behavior: Global: Unfiltered text */
+  /* Opførsel ved ingen resultater: Global: Ufiltreret tekst */
   $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['empty']['area_text_custom']['content'] = 'Ingen resultater';
-  /* Field: Indhold: Titel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Indhold: Edit link */
+  /* Felt: Indhold: Redigér-link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  /* Field: Scheduler: Unpublish on */
+  /* Felt: Handler mangler eller er i stykker */
   $handler->display->display_options['fields']['unpublish_on']['id'] = 'unpublish_on';
   $handler->display->display_options['fields']['unpublish_on']['table'] = 'scheduler';
   $handler->display->display_options['fields']['unpublish_on']['field'] = 'unpublish_on';
-  $handler->display->display_options['fields']['unpublish_on']['date_format'] = 'atp_short';
-  $handler->display->display_options['fields']['unpublish_on']['second_date_format'] = 'atp_long';
-  /* Sort criterion: Indhold: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Scheduler: Unpublish on */
+  /* Filterkriterie: Handler mangler eller er i stykker */
   $handler->display->display_options['filters']['unpublish_on']['id'] = 'unpublish_on';
   $handler->display->display_options['filters']['unpublish_on']['table'] = 'scheduler';
   $handler->display->display_options['filters']['unpublish_on']['field'] = 'unpublish_on';
@@ -173,7 +166,7 @@ function atp_notifications_views_default_views() {
     6 => 0,
     8 => 0,
   );
-  /* Filter criterion: Scheduler: Unpublish on */
+  /* Filterkriterie: Handler mangler eller er i stykker */
   $handler->display->display_options['filters']['unpublish_on_1']['id'] = 'unpublish_on_1';
   $handler->display->display_options['filters']['unpublish_on_1']['table'] = 'scheduler';
   $handler->display->display_options['filters']['unpublish_on_1']['field'] = 'unpublish_on';
@@ -183,40 +176,47 @@ function atp_notifications_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Udløbsdato-oversigt';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Unfiltered text */
+  /* Overskrift: Global: Ufiltreret tekst */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['content'] = 'Du har tilmeldt din notifikationer på følgende indhold, der har ramt udløbsdato.';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: notification_node_expiration */
+  /* Forbindelse: Flags: notification_node_expiration */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'notification_node_expiration';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indhold: Titel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Indholdselement: Expire date */
+  /* Felt: Indholdselement: Expire date */
   $handler->display->display_options['fields']['expire']['id'] = 'expire';
   $handler->display->display_options['fields']['expire']['table'] = 'node_expire';
   $handler->display->display_options['fields']['expire']['field'] = 'expire';
   $handler->display->display_options['fields']['expire']['date_format'] = 'atp_short';
   $handler->display->display_options['fields']['expire']['second_date_format'] = 'atp_long';
-  /* Field: Indhold: Edit link */
+  /* Felt: Indhold: Redigér-link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indholdselement: Expire date */
+  $handler->display->display_options['sorts']['expire']['id'] = 'expire';
+  $handler->display->display_options['sorts']['expire']['table'] = 'node_expire';
+  $handler->display->display_options['sorts']['expire']['field'] = 'expire';
+  $handler->display->display_options['sorts']['expire']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['expire']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indholdselement: Expired */
+  /* Filterkriterie: Indholdselement: Expired */
   $handler->display->display_options['filters']['expired']['id'] = 'expired';
   $handler->display->display_options['filters']['expired']['table'] = 'node_expire';
   $handler->display->display_options['filters']['expired']['field'] = 'expired';
@@ -281,62 +281,45 @@ function atp_notifications_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'filtered_html';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Unfiltered text */
+  /* Overskrift: Global: Ufiltreret tekst */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['header']['area_text_custom']['content'] = 'Du har tilmeldt din notifikationer på følgende indhold, der nærmer sig auto-afpubliceringsdato';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: notification_node_auto_unpublish */
+  /* Forbindelse: Flags: notification_node_auto_unpublish */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'notification_node_auto_unpublish';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indhold: Titel */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Scheduler: Unpublish countdown */
-  $handler->display->display_options['fields']['unpublish_countdown']['id'] = 'unpublish_countdown';
-  $handler->display->display_options['fields']['unpublish_countdown']['table'] = 'scheduler';
-  $handler->display->display_options['fields']['unpublish_countdown']['field'] = 'unpublish_countdown';
-  /* Field: Indhold: Edit link */
+  /* Felt: Workbench Scheduler: Slutdato */
+  $handler->display->display_options['fields']['end_date']['id'] = 'end_date';
+  $handler->display->display_options['fields']['end_date']['table'] = 'workbench_scheduler_nodes';
+  $handler->display->display_options['fields']['end_date']['field'] = 'end_date';
+  $handler->display->display_options['fields']['end_date']['label'] = 'Afpubliseringsdato';
+  $handler->display->display_options['fields']['end_date']['date_format'] = 'atp_long';
+  $handler->display->display_options['fields']['end_date']['second_date_format'] = 'atp_long';
+  /* Felt: Indhold: Redigér-link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Workbench Scheduler: Slutdato */
+  $handler->display->display_options['sorts']['end_date']['id'] = 'end_date';
+  $handler->display->display_options['sorts']['end_date']['table'] = 'workbench_scheduler_nodes';
+  $handler->display->display_options['sorts']['end_date']['field'] = 'end_date';
+  $handler->display->display_options['sorts']['end_date']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['end_date']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Scheduler: Unpublish on */
-  $handler->display->display_options['filters']['unpublish_on_1']['id'] = 'unpublish_on_1';
-  $handler->display->display_options['filters']['unpublish_on_1']['table'] = 'scheduler';
-  $handler->display->display_options['filters']['unpublish_on_1']['field'] = 'unpublish_on';
-  $handler->display->display_options['filters']['unpublish_on_1']['operator'] = 'not empty';
-  $handler->display->display_options['filters']['unpublish_on_1']['group'] = 1;
-  /* Filter criterion: Scheduler: Unpublish on */
-  $handler->display->display_options['filters']['unpublish_on']['id'] = 'unpublish_on';
-  $handler->display->display_options['filters']['unpublish_on']['table'] = 'scheduler';
-  $handler->display->display_options['filters']['unpublish_on']['field'] = 'unpublish_on';
-  $handler->display->display_options['filters']['unpublish_on']['operator'] = 'between';
-  $handler->display->display_options['filters']['unpublish_on']['group'] = 1;
-  $handler->display->display_options['filters']['unpublish_on']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['unpublish_on']['expose']['operator_id'] = 'unpublish_on_op';
-  $handler->display->display_options['filters']['unpublish_on']['expose']['label'] = 'Søg efter afpublicering mellem';
-  $handler->display->display_options['filters']['unpublish_on']['expose']['operator'] = 'unpublish_on_op';
-  $handler->display->display_options['filters']['unpublish_on']['expose']['identifier'] = 'unpublish_on';
-  $handler->display->display_options['filters']['unpublish_on']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    7 => 0,
-    6 => 0,
-    8 => 0,
-  );
   $handler->display->display_options['path'] = 'admin/content/notification-overview-unpublished';
   $handler->display->display_options['menu']['title'] = 'Notificationer: Auto-afpubliceringsoversigt';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -362,8 +345,8 @@ function atp_notifications_views_default_views() {
     t('sidste »'),
     t('Ingen resultater'),
     t('Titel'),
-    t('Edit link'),
-    t('Unpublish on'),
+    t('Redigér-link'),
+    t('Handler i stykker scheduler.unpublish_on'),
     t('Afpublicér den'),
     t('Expired'),
     t('Udløbsdato-oversigt'),
@@ -374,8 +357,7 @@ function atp_notifications_views_default_views() {
     t('Unpublished'),
     t('Auto-afpubliceringsoversigt'),
     t('Du har tilmeldt din notifikationer på følgende indhold, der nærmer sig auto-afpubliceringsdato'),
-    t('Unpublish countdown'),
-    t('Søg efter afpublicering mellem'),
+    t('Afpubliseringsdato'),
   );
   $export['notification_overview'] = $view;
 

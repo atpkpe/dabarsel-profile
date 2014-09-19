@@ -82,12 +82,12 @@ function atp_notifications_tokens($type, $tokens, array $data = array(), array $
 /**
  * Implements hook_cronapi().
  */
-function atp_notifications_queue_cronapi($op, $job = NULL) {
+function atp_notifications_cronapi($op, $job = NULL) {
   switch ($op) {
     case 'list':
       return array(
         'atp_notifications_cron_expired' => 'Notify users about expired nodes',
-        'atp_notifications_cron_unpublished' => 'Notify users about nodes about to get unpublished',
+        'atp_notifications_cron_unpublished' => 'Notify users about nodes that are scheduled to be unpublished',
       );
 
     case 'rule':
@@ -144,15 +144,20 @@ function atp_notifications_cron_expired() {
 function atp_notifications_cron_unpublished() {
   $notice_threshold = variable_get('atp_notifications_threshold_unpublished', 5);
   $flag = flag_get_flag('notification_node_auto_unpublish');
+  // Select all users that have flagged that they want to be notified
+  // about nodes going to be unpublished IF we are inside of the notification threshold period.
   $query = <<<EOD
-  SELECT f.uid FROM flagging f
-  LEFT JOIN scheduler s ON s.nid = f.entity_id
+  SELECT f.uid FROM {flagging} f
+  LEFT JOIN {workbench_scheduler_nodes} wsn ON wsn.nid = f.entity_id
   WHERE
     f.fid = :fid
   AND
-    s.unpublish_on > UNIX_TIMESTAMP()
+    wsn.sid = 1
   AND
-    (s.unpublish_on - :notification_threshold) < UNIX_TIMESTAMP()
+    wsn.end_date > UNIX_TIMESTAMP()
+  AND
+    (wsn.end_date - :notification_threshold) < UNIX_TIMESTAMP()
+  GROUP BY 1
 ;
 EOD;
 
@@ -164,7 +169,7 @@ EOD;
     )
   );
 
-  while($uid = $result->fetchColumn()) {
+  while ($uid = $result->fetchColumn()) {
     $account = user_load($uid);
     drupal_mail(
       'atp_notifications',
@@ -241,39 +246,4 @@ function atp_notifications_mail($key, &$message, $params) {
       $body = token_replace($body, array(), $options);
     }
   }
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function atp_notifications_form_page_node_form_alter(&$form, &$form_state, $form_id) {
-  $form['#after_build'][] = 'atp_notifications_form_page_node_after_build';
-}
-
-/**
- * @see atp_notifications_form_page_node_form_alter().
- *
- * After build function for atp_notifications_form_page_node_form_alter().
- */
-function atp_notifications_form_page_node_after_build($form, &$form_state) {
-  // If node_expire form element exists in form root level then move it.
-  if (!empty($form['expire'])) {
-    // Get node expire form element.
-    $node_expire = $form['expire'];
-    // Remove element from node edit form.
-    unset($form['expire']);
-    // Run through addition settings form elements.
-    foreach ($form['additional_settings']['group']['#groups']['additional_settings'] as &$settings) {
-      // If a fieldset with id: edit-scheduler-settings exists
-      // then add node expire element to it.
-      if ($settings['#id'] == 'edit-scheduler-settings') {
-        $settings['expire'] = $node_expire;
-        $settings['expire']['#array_parents'][0] = 'scheduler_settings';
-        $settings['expire']['#array_parents'][1] = 'expire';
-        $settings['expire']['#parents'][0] = 'expire';
-      }
-    }
-  }
-
-  return $form;
 }

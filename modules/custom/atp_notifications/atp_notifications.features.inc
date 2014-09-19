@@ -25,7 +25,7 @@ function atp_notifications_views_api($module = NULL, $api = NULL) {
  */
 function atp_notifications_flag_default_flags() {
   $flags = array();
-  // Exported flag: "Notify me about unpublishing".
+  // Exported flag: "Giv mig besked om afpublicering".
   $flags['notification_node_auto_unpublish'] = array(
     'entity_type' => 'node',
     'title' => 'Notify me about unpublishing',
@@ -121,7 +121,7 @@ function atp_notifications_flag_default_flags() {
     ),
     'api_version' => 3,
   );
-  // Exported flag: "Notify me about expiration".
+  // Exported flag: "Giv mig besked om udløbet indhold".
   $flags['notification_node_expiration'] = array(
     'entity_type' => 'node',
     'title' => 'Notify me about expiration',
