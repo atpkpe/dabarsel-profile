@@ -629,6 +629,7 @@ function atp_update_7035(&$sandbox) {
  * @author Tom Helmer Hansen <tom@adapt.dk>
  */
 function atp_update_7036(&$sandbox) {
+  module_disable(array('tmgmt_node_ui', 'tmgmt_field', 'tmgmt_node', 'tmgmt_local', 'tmgmt_file'));
   module_disable(array('tmgmt','atp_content_translation'));
   drupal_uninstall_modules(array('tmgmt','atp_content_translation'));
 }
