@@ -611,3 +611,14 @@ function atp_update_7034(&$sandbox) {
   module_disable(array('path_breadcrumbs'));
   drupal_uninstall_modules(array('path_breadcrumbs'));
 }
+
+/**
+ * ATP-20 change scheduler module.
+ *
+ * @author Tom Helmer Hansen <tom@adapt.dk>
+ */
+function atp_update_7035(&$sandbox) {
+  module_disable(array('scheduler_workbench','scheduler'));
+  drupal_uninstall_modules(array('scheduler_workbench','scheduler'));
+  module_enable(array('workbench_scheduler'));
+}
