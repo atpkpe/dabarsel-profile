@@ -9,7 +9,7 @@
     margin-top: $margins;
     margin-bottom: $margins/2;
     @include device(phone){
-      font-size: 16px;
+      font-size: 14px;
       margin-top: 0;
     }
   }
