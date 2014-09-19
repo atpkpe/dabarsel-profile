@@ -247,3 +247,38 @@ function atp_notifications_mail($key, &$message, $params) {
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function atp_notifications_form_page_node_form_alter(&$form, &$form_state, $form_id) {
+  $form['#after_build'][] = 'atp_notifications_form_page_node_after_build';
+}
+
+/**
+ * After build function for atp_notifications_form_page_node_form_alter().
+ *
+ * @see atp_notifications_form_page_node_form_alter()
+ */
+function atp_notifications_form_page_node_after_build($form, &$form_state) {
+  // If node_expire form element exists in form root level then move it.
+  if (!empty($form['expire'])) {
+    // Get node expire form element.
+    $node_expire = $form['expire'];
+    // Remove element from node edit form.
+    unset($form['expire']);
+    // Run through addition settings form elements.
+    foreach ($form['additional_settings']['group']['#groups']['additional_settings'] as &$settings) {
+      // If a fieldset with id: edit-revision-information exists
+      // then add node expire element to it.
+      if ($settings['#id'] == 'edit-revision-information') {
+        $settings['expire'] = $node_expire;
+        $settings['expire']['#array_parents'][0] = 'scheduler_settings';
+        $settings['expire']['#array_parents'][1] = 'expire';
+        $settings['expire']['#parents'][0] = 'expire';
+      }
+    }
+  }
+
+  return $form;
+}
