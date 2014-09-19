@@ -3,11 +3,14 @@
   background: #fff;
   margin-bottom: $margins;
   @include device(phone){
-    padding-bottom: $margins;
+    padding: $margins/2;
   }
   h2 {
     margin-top: $margins;
     margin-bottom: $margins/2;
+    @include device(phone){
+      font-size: 16px;
+    }
   }
   h3 {
     font-size: 13px;
@@ -20,6 +23,7 @@
       float: none;
       margin: 0;
       margin-bottom: $margins/4;
+      clear: left;
     }
     &:last-child {
       float: none;
@@ -30,6 +34,10 @@
   > span {
     float: left;
     margin-right: $margins;
+    @include device(phone){
+      margin-right: $margins/2;
+      margin-bottom: $margins/2;
+    }
   }
   img {
     display: block;
