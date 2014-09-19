@@ -63,6 +63,7 @@ textarea {
 /* WEBFORM */
 .webform-confirmation {
   @extend %content;
+  margin-bottom: $margins;
 }
 
 .not-front #main > div > .links {
