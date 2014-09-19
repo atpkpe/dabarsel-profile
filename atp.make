@@ -67,7 +67,7 @@ projects[workbench_scheduler][download][branch] = '7.x-1.x'
 projects[workbench_scheduler][download][type] = 'git'
 projects[workbench_scheduler][download][url] = 'http://git.drupal.org/project/workbench_scheduler.git'
 projects[workbench_scheduler][download][revision] = 'af6c7ca75a1a295b3a2ed5d77aa65e16a4128356'
-projects[workbench_scheduler][patch][local] = 'patches/workbench-scheduler-only-allow-approved.patch'
+projects[workbench_scheduler][patch][] = 'http://svnhosttest.adapt.dk/workbench-scheduler-1.4-only-allow-approved.patch'
 
 projects[scheduler][type] = 'module'
 projects[scheduler][subdir] = 'contrib'
