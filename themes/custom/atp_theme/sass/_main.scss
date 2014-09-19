@@ -35,6 +35,9 @@
 }
 .bc {
   margin-bottom: $margins;
+  @include device(phone) {
+    display: none;
+  }
   * {
     color: $gray-green;
     font-size: 12px;

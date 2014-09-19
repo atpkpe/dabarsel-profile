@@ -1,8 +1,10 @@
 .category-a {
   margin-bottom: $margins;
   article {
+    @extend %block-std;
+    height: auto;
     a {
-      @extend %block-std;
+      display: block;
     }
   }
 }
