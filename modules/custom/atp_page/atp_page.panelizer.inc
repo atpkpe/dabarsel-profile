@@ -1878,7 +1878,26 @@ function atp_page_panelizer_defaults() {
   $panelizer->css_id = '';
   $panelizer->css = '';
   $panelizer->pipeline = 'standard';
-  $panelizer->contexts = array();
+  $panelizer->contexts = array(
+    0 => array(
+      'identifier' => 'Nyhed',
+      'keyword' => 'news',
+      'name' => 'news',
+      'news_vocab' => 'news_categories',
+      'categories' => array(
+        195 => 0,
+        196 => 0,
+        93 => 0,
+        54 => 0,
+      ),
+      'list_type' => 'filtered',
+      'view_name' => 'news_list',
+      'view_display' => 'news',
+      'view_rss_display' => 'news_feed',
+      'items_per_page' => '3',
+      'id' => 1,
+    ),
+  );
   $panelizer->relationships = array();
   $panelizer->access = array();
   $panelizer->view_mode = 'default';

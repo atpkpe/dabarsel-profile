@@ -258,6 +258,16 @@ function atp_permissions_user_default_permissions() {
     'module' => 'panels',
   );
 
+  // Exported permission: 'administer atp notifications'.
+  $permissions['administer atp notifications'] = array(
+    'name' => 'administer atp notifications',
+    'roles' => array(
+      'Author' => 'Author',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'atp_notifications',
+  );
+
   // Exported permission: 'administer ckeditor link'.
   $permissions['administer ckeditor link'] = array(
     'name' => 'administer ckeditor link',
@@ -618,6 +628,16 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer node expire'.
+  $permissions['administer node expire'] = array(
+    'name' => 'administer node expire',
+    'roles' => array(
+      'Developer' => 'Developer',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node_expire',
   );
 
   // Exported permission: 'administer nodes'.
@@ -1984,6 +2004,17 @@ function atp_permissions_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit node expire'.
+  $permissions['edit node expire'] = array(
+    'name' => 'edit node expire',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node_expire',
+  );
+
   // Exported permission: 'edit own audio files'.
   $permissions['edit own audio files'] = array(
     'name' => 'edit own audio files',
@@ -2156,6 +2187,36 @@ function atp_permissions_user_default_permissions() {
     'name' => 'execute php code',
     'roles' => array(),
     'module' => 'devel',
+  );
+
+  // Exported permission: 'flag notification_node_auto_unpublish'.
+  $permissions['flag notification_node_auto_unpublish'] = array(
+    'name' => 'flag notification_node_auto_unpublish',
+    'roles' => array(
+      'Author' => 'Author',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'flag',
+  );
+
+  // Exported permission: 'flag notification_node_changed'.
+  $permissions['flag notification_node_changed'] = array(
+    'name' => 'flag notification_node_changed',
+    'roles' => array(
+      'Author' => 'Author',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'flag',
+  );
+
+  // Exported permission: 'flag notification_node_expiration'.
+  $permissions['flag notification_node_expiration'] = array(
+    'name' => 'flag notification_node_expiration',
+    'roles' => array(
+      'Author' => 'Author',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'flag',
   );
 
   // Exported permission: 'flush caches'.
@@ -2467,6 +2528,36 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'unflag notification_node_auto_unpublish'.
+  $permissions['unflag notification_node_auto_unpublish'] = array(
+    'name' => 'unflag notification_node_auto_unpublish',
+    'roles' => array(
+      'Author' => 'Author',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'flag',
+  );
+
+  // Exported permission: 'unflag notification_node_changed'.
+  $permissions['unflag notification_node_changed'] = array(
+    'name' => 'unflag notification_node_changed',
+    'roles' => array(
+      'Author' => 'Author',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'flag',
+  );
+
+  // Exported permission: 'unflag notification_node_expiration'.
+  $permissions['unflag notification_node_expiration'] = array(
+    'name' => 'unflag notification_node_expiration',
+    'roles' => array(
+      'Author' => 'Author',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'flag',
   );
 
   // Exported permission: 'use advanced search'.
