@@ -123,6 +123,13 @@ function atp_news_views_default_views() {
     'faktum' => 'faktum',
     'news' => 'news',
   );
+  /* Filterkriterie: Indhold: Sprog */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: News and Faktum */
   $handler = $view->new_display('panel_pane', 'News and Faktum', 'default_display');
@@ -229,6 +236,13 @@ function atp_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'faktum' => 'faktum',
   );
+  /* Filterkriterie: Indhold: Sprog */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 'offset';
@@ -310,6 +324,13 @@ function atp_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'faktum' => 'faktum',
   );
+  /* Filterkriterie: Indhold: Sprog */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['path'] = 'faktum/rss.xml';
 
   /* Display: News */
@@ -351,6 +372,13 @@ function atp_news_views_default_views() {
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'news_categories';
+  /* Filterkriterie: Indhold: Sprog */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: News Feed */
   $handler = $view->new_display('feed', 'News Feed', 'news_feed');
@@ -448,6 +476,13 @@ function atp_news_views_default_views() {
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'news_categories';
+  /* Filterkriterie: Indhold: Sprog */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['path'] = 'news/rss.xml';
   $translatables['news_list'] = array(
     t('Master'),
