@@ -46,6 +46,7 @@ function news_list_content_type_render($subtype, $conf, $panel_args, &$context) 
       $view_content = $view->preview();
       // Create category 'buttons'.
       foreach (taxonomy_get_tree($vocab->vid) as $term) {
+        $term = i18n_taxonomy_localize_terms($term);
         $news_category_items[] = sprintf(
           '<div class="news-filter-button %s" data-tid="%s">%s</div>',
           !empty($_GET['tid']) && in_array($term->tid, $_GET['tid']) ? 'active' : '',
