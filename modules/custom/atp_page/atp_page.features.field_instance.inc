@@ -65,6 +65,12 @@ function atp_page_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -156,6 +162,12 @@ function atp_page_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 6,
+      ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -332,6 +344,12 @@ function atp_page_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -451,6 +469,12 @@ function atp_page_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 8,
       ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -540,6 +564,12 @@ function atp_page_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 10,
       ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -627,6 +657,12 @@ function atp_page_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 9,
+      ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -822,6 +858,12 @@ function atp_page_field_default_field_instances() {
         'type' => 'smart_trim_format',
         'weight' => 1,
       ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'smart_trim',
@@ -946,6 +988,12 @@ function atp_page_field_default_field_instances() {
         ),
         'type' => 'multifield_default',
         'weight' => 7,
+      ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1095,6 +1143,20 @@ function atp_page_field_default_field_instances() {
           'label_wrapper' => 0,
         ),
         'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'link' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
       'teaser' => array(
