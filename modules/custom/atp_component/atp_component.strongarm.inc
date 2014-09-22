@@ -101,6 +101,9 @@ function atp_component_strongarm() {
       'menu_box' => array(
         'custom_settings' => TRUE,
       ),
+      'link' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -171,6 +174,10 @@ function atp_component_strongarm() {
             'visible' => FALSE,
           ),
           '3_4_h' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'link' => array(
             'weight' => '6',
             'visible' => FALSE,
           ),
