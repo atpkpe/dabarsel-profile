@@ -98,6 +98,9 @@ function atp_news_strongarm() {
       'menu_box' => array(
         'custom_settings' => FALSE,
       ),
+      'link' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -143,6 +146,10 @@ function atp_news_strongarm() {
           ),
           '3_4_h' => array(
             'weight' => '7',
+            'visible' => FALSE,
+          ),
+          'link' => array(
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
