@@ -174,6 +174,12 @@ function atp_section_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -379,6 +385,12 @@ function atp_section_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 5,
       ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -574,6 +586,12 @@ function atp_section_field_default_field_instances() {
         'type' => 'image',
         'weight' => 6,
       ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -746,6 +764,12 @@ function atp_section_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 4,
+      ),
+      'link' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -949,6 +973,12 @@ function atp_section_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 1,
+      ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1192,6 +1222,12 @@ function atp_section_field_default_field_instances() {
         ),
         'type' => 'smart_trim_format',
         'weight' => 2,
+      ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1438,6 +1474,20 @@ function atp_section_field_default_field_instances() {
           'title_class' => '',
           'title_link' => '',
           'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+      'link' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
         ),
         'type' => 'title_linked',
         'weight' => 0,

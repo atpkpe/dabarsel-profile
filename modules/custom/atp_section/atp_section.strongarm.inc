@@ -113,6 +113,18 @@ function atp_section_strongarm() {
       '1_4_compressed' => array(
         'custom_settings' => FALSE,
       ),
+      'link' => array(
+        'custom_settings' => TRUE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'menu_box' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -208,6 +220,10 @@ function atp_section_strongarm() {
           ),
           '1_2_square' => array(
             'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'link' => array(
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
