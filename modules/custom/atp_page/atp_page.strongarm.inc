@@ -80,6 +80,9 @@ function atp_page_strongarm() {
       'menu_box' => array(
         'custom_settings' => FALSE,
       ),
+      'link' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -145,6 +148,10 @@ function atp_page_strongarm() {
           ),
           '3_4_h' => array(
             'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'link' => array(
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),

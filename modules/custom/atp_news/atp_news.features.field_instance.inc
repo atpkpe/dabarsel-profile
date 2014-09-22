@@ -40,6 +40,12 @@ function atp_news_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 4,
       ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -105,6 +111,12 @@ function atp_news_field_default_field_instances() {
           'label_wrapper' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'link' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -192,6 +204,12 @@ function atp_news_field_default_field_instances() {
           'label_wrapper' => 0,
         ),
         'type' => 'image',
+        'weight' => 5,
+      ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'teaser' => array(
@@ -309,6 +327,12 @@ function atp_news_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'smart_trim',
@@ -413,6 +437,12 @@ function atp_news_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 1,
       ),
+      'link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'date',
@@ -514,6 +544,20 @@ function atp_news_field_default_field_instances() {
           'title_class' => '',
           'title_link' => '',
           'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+      'link' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_wrapper' => 0,
+          'item_wrapper' => 0,
+          'label_wrapper' => 0,
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
         ),
         'type' => 'title_linked',
         'weight' => 0,

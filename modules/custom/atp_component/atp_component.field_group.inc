@@ -21,7 +21,7 @@ function atp_component_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '34',
+    'weight' => '0',
     'children' => array(
       0 => 'field_component_body',
       1 => 'field_component_image',
@@ -99,6 +99,33 @@ function atp_component_field_group_info() {
     ),
   );
   $export['group_component_link|node|component|1_4_fact'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_link_group|node|component|link';
+  $field_group->group_name = 'group_link_group';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'component';
+  $field_group->mode = 'link';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Link group',
+    'weight' => '0',
+    'children' => array(
+      0 => 'title_field',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Link group',
+      'instance_settings' => array(
+        'link_to' => 'field_component_link',
+        'classes' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_link_group|node|component|link'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

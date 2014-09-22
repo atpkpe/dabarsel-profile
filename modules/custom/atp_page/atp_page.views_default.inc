@@ -136,8 +136,10 @@ function atp_page_views_default_views() {
   $handler->display->display_options['fields']['field_page_relations']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_page_relations']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_page_relations']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_page_relations']['type'] = 'entityreference_entity_view';
   $handler->display->display_options['fields']['field_page_relations']['settings'] = array(
-    'link' => 1,
+    'view_mode' => 'link',
+    'links' => 0,
   );
   $handler->display->display_options['fields']['field_page_relations']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_page_relations']['delta_offset'] = '0';
