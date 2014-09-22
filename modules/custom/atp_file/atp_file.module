@@ -5,3 +5,13 @@
  */
 
 include_once 'atp_file.features.inc';
+
+/**
+ * Implement hook_file_download_headers_alter().
+ * Show PDF documents inline.
+ */
+function atp_file_file_download_headers_alter(&$headers, $file) {
+  if ($headers['Content-Type'] == 'application/pdf') {
+  	$headers['Content-Disposition'] =  str_replace('attachment;', 'inline;', $headers['Content-Disposition']);
+  }
+}
