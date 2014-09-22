@@ -592,8 +592,9 @@ header {
   background: #272727;
   border-left: 4px solid $green;
   padding: $margins;
-  footer &, .level-2 & {
-    display: none;
+  display: none;
+  .main-menu & {
+    display: block;
   }
   * {
     color: #fff;
