@@ -1183,6 +1183,38 @@ function atp_page_panelizer_defaults() {
     $display->content['new-354b7aee-f101-4a58-8497-0bf52b61b487'] = $pane;
     $display->panels['left'][1] = 'new-354b7aee-f101-4a58-8497-0bf52b61b487';
     $pane = new stdClass();
+    $pane->pid = 'new-7fc317ab-a40d-4ba1-969f-c516a984098f';
+    $pane->panel = 'left';
+    $pane->type = 'atp_page_anchors';
+    $pane->subtype = 'atp_page_anchors';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 5,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '7fc317ab-a40d-4ba1-969f-c516a984098f';
+    $display->content['new-7fc317ab-a40d-4ba1-969f-c516a984098f'] = $pane;
+    $display->panels['left'][2] = 'new-7fc317ab-a40d-4ba1-969f-c516a984098f';
+    $pane = new stdClass();
     $pane->pid = 'new-7dc6913e-654e-43e8-b9ad-376f8d3788b2';
     $pane->panel = 'row1';
     $pane->type = 'tools';

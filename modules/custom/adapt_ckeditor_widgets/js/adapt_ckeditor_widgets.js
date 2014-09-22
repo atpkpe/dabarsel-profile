@@ -10,7 +10,16 @@
         $('a[name=' + name + ']').once().parents('.expanding')
           .addClass("expanded")
           .removeClass("collapsed");
-      }
+      };
+      $('#main a[href^="#"]').not('a[href="#"]').each(function() {
+        var name = $(this).attr('href').substring(1);
+        $(this).click(function(){
+         $('a[name=' + name + ']').parents('.expanding')
+          .addClass("expanded")
+          .removeClass("collapsed");
+        });
+      })
+
     }
   };
 })(jQuery);
