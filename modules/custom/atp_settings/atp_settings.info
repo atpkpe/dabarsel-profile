@@ -90,6 +90,7 @@ features[variable][] = gss_number_of_results
 features[variable][] = gss_page_size
 features[variable][] = gss_pager_size
 features[variable][] = gss_results_tab
+features[variable][] = i18n_hide_translation_links
 features[variable][] = i18n_string_allowed_formats
 features[variable][] = i18n_string_source_language
 features[variable][] = jammer_author_options
