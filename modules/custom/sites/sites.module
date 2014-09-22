@@ -107,7 +107,7 @@ function sites_admin_menu_output_build(&$content) {
 
     $content['icon']['icon']['sites'] = array(
       '#title' => t('Subsites'),
-      '#access' => user_access('administer site configuration'),
+      '#access' => user_access('access administration pages'),
       '#href' => 'admin/sites/list',
     );
 
