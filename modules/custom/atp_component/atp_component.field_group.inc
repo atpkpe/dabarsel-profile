@@ -21,7 +21,7 @@ function atp_component_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '34',
+    'weight' => '0',
     'children' => array(
       0 => 'field_component_body',
       1 => 'field_component_image',
