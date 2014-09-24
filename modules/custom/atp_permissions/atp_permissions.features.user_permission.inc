@@ -2517,6 +2517,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'translate interface',
     'roles' => array(
       'Developer' => 'Developer',
+      'Editor' => 'Editor',
     ),
     'module' => 'locale',
   );
@@ -2526,6 +2527,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'translate user-defined strings',
     'roles' => array(
       'Developer' => 'Developer',
+      'Editor' => 'Editor',
     ),
     'module' => 'i18n_string',
   );
