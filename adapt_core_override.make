@@ -72,3 +72,6 @@ projects[smart_trim][download][type] = 'git'
 projects[smart_trim][download][url] = 'http://git.drupal.org/project/smart_trim.git'
 projects[smart_trim][download][revision] = '2c42de4cdf00a6c6acefd852a03ac4e7840e6605'
 projects[smart_trim][patch][] = 'http://www.drupal.org/files/issues/smart_trim-read-more-plain-2331265-1.patch'
+
+projects[xmlsitemap][patch][] = 'http://www.drupal.org/files/issues/xmlsitemap-remove-filesize-2220707-50-D7.patch'
+
