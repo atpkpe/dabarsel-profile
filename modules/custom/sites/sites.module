@@ -197,7 +197,9 @@ function sites_admin_paths_alter(&$paths) {
 function sites_url_outbound_alter(&$path, &$options, $original_path) {
 
   // Rewrite the outbound url for admin/content and workbench pages.
-  if (current_path() == 'admin/content' || stripos(current_path(), 'admin/workbench') === 0) {
+  if (current_path() == 'admin/content'
+      || stripos(current_path(), 'admin/workbench') === 0
+      || stripos(current_path(), 'admin/structure/menu/manage') === 0) {
     purl_disable(TRUE);
     $paths = explode('/', $path);
     if ($paths[0] == 'node') {
@@ -222,8 +224,32 @@ function sites_url_outbound_alter(&$path, &$options, $original_path) {
         // override the alias again.
         $options['alias'] = TRUE;
       }
-
     }
+
+    if (stripos($path, 'admin/structure/menu/item') === 0) {
+      $mlid = $paths[4];
+      $site = SiteController::getSiteByMenuLink($mlid);
+      if ($site->sid > 1) { // Don't do anything for the main site
+        // Prefix the edit/delete/translate urls.
+        if (!empty($paths[5]) && ( $paths[5] == 'edit' || $paths[5] == 'delete' || $paths[5] == 'translate')) {
+          $path = $site->purl_prefix . '/' . $path;
+          return;
+        }
+      }
+    }
+
+    if (stripos($path, 'admin/structure/menu/manage') === 0) {
+      $menu_name = $paths[4];
+      $site = SiteController::getSiteByMenuName($menu_name);
+      if ($site->sid > 1) { // Don't do anything for the main site
+        // Prefix the add urls.
+        if (!empty($paths[5]) && $paths[5] == 'add') {
+          $path = $site->purl_prefix . '/' . $path;
+          return;
+        }
+      }
+    }
+
   }
 
   // Set the correct prefix for outbound URL's.
@@ -388,6 +414,25 @@ function sites_machine_name_exists($machine_name) {
   $site = SiteController::getSiteByName($machine_name);
   return !empty($site);
 }
+
+/**
+ * Implement hook_entity_info_alter.
+ * Add site menues as options to relevent content types.
+ */
+function sites_entity_info_alter(&$entity_info) {
+  if (!empty($entity_info['node'])) {
+    $sites = SiteController::getSites();
+    foreach(array('page','section','webform') as $bundle) {
+      $menus = variable_get('menu_options_' . $bundle, array('main-menu' => 'main-menu'));
+      foreach ($sites as $site) {
+        if ($site->sid > 1)
+          $menus[$site->menu_main_menu] = $site->menu_main_menu;
+      }
+      variable_set('menu_options_' . $bundle, $menus);
+    }
+  }
+}
+
 
 
 
