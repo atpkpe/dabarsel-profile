@@ -167,8 +167,50 @@ class SiteController {
     return self::getSite($result);
   }
 
+ /**
+  *  Load site object by menu link id.
+  */
+  public static function getSiteByMenuLink($mlid) {
+
+    // Get site sid from database.
+    $query = db_select('sites', 's');
+    $query->join('menu_links', 'm', 'm.menu_name = s.menu_main_menu');
+
+    $result = $query
+      ->fields('s', array('sid','purl_prefix'))
+      ->condition('mlid', $mlid)
+      ->execute()
+      ->fetchObject();
+
+    if(empty($result)) {
+      return FALSE;
+    }
+
+    return $result;
+  }
+
+ /**
+  *  Load site object by menu name.
+  */
+  public static function getSiteByMenuName($menu_name) {
+
+    // Get site sid from database.
+    $result = db_select('sites', 's')
+      ->fields('s', array('sid','purl_prefix'))
+      ->condition('menu_main_menu', $menu_name)
+      ->execute()
+      ->fetchObject();
+
+    if(empty($result)) {
+      return FALSE;
+    }
+
+    return $result;
+  }
+
+
 /**
-  *  Load site object by term id.
+  *  Get all menues for site term id.
   */
   public static function getMenusByTerm($tids) {
 
