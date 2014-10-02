@@ -42,12 +42,6 @@
           } catch (e) {};
         };
 
-        var btns = {};
-        btns[Drupal.t('Cancel')] = function () {
-          $(this).dialog("close");
-        };
-
-
         $('.sas-browser-item-file').live('click', function(evt) {
           evt.preventDefault();
           settings.sasDiag = {
@@ -70,7 +64,6 @@
           namespace: 'jquery_ui_dialog_default_ns',
           dialogClass: 'jquery_ui_dialog-dialog',
           title: Drupal.t('Insert SAS diagram'),
-          buttons: btns,
           width: '70%',
           close: dialogClose
         });
@@ -130,7 +123,7 @@
 
   Drupal.behaviors.atp_sas_diag_browser = {
     attach: function(context, settings) {
-      $('.sas-browser-item-dir').click(function(event) {
+      $('.sas-browser-item-dir a', context).click(function(event) {
         event.preventDefault();
         var $link = $(this);
         $.ajax({

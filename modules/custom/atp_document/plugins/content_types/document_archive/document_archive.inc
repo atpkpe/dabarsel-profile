@@ -62,7 +62,7 @@ function document_archive_content_type_admin_info($subtype, $conf, $context) {
     array(
       '@media_folder_root_tid' => $conf['media_folder_root_tid'],
       '@media_folder_root_term_name' => $root_term->name,
-      '@media_folder_vocab' => $conf['media_folder_vocab']
+      '@media_folder_vocab' => $conf['media_folder_vocab'],
     )
   );
   $output->content = '';

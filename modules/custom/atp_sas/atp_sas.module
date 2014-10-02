@@ -6,18 +6,14 @@
 
 
 define('ATP_SAS_DIAG_BROWSER_ROOT_PATH', 'profiles/atp/modules/custom/atp_sas/test');
+define('ATP_SAS_DIAG_MEDIA_FOLDER_TID', 233);
+define('ATP_SAS_DIAG_MEDIA_FOLDER_VOCAB_NAME', 'media_folders');
 
 /**
  * implements hook_menu
  */
 function atp_sas_menu() {
   $items = array();
-//  $items['atp-sas/chart-test'] = array(
-//    'page callback' => 'atp_sas_chart_test',
-////    'page arguments' => array(2),
-//    'access callback' => TRUE,
-//    'type' => MENU_CALLBACK,
-//  );
   $items['atp-sas/insert/nojs'] = array(
     'page callback' => 'atp_sas_get_file_browser',
     'page arguments' => array(2),
@@ -39,7 +35,7 @@ function atp_sas_menu() {
 }
 
 /**
- * Implementation of hook_filter_info()
+ * Implements hook_filter_info().
  */
 function atp_sas_filter_info() {
 
@@ -75,7 +71,7 @@ function atp_sas_get_file_browser($ajax) {
 }
 
 /**
- * Implements of hook_wysiwyg_include_directory().
+ * Implements hook_wysiwyg_include_directory().
  */
 function atp_sas_wysiwyg_include_directory($type) {
   return $type;
@@ -113,66 +109,74 @@ function atp_sas_get_dir_sctructure($dir) {
 }
 
 function atp_sas_ajax_get_file_browser($json = FALSE) {
-  $root_path = variable_get('atp_sas_diag_browser_root_path', ATP_SAS_DIAG_BROWSER_ROOT_PATH);
-  $path = !empty($_GET['path']) ? $_GET['path'] : $root_path;
-  $structure = atp_sas_get_dir_sctructure($path);
-  $file_structure_items = array();
-  foreach ($structure as $item) {
-    switch ($item['type']) {
-      case 'dir':
-        $file_structure_items[] = l(
-          $item['node']->getFilename(),
-          'atp-sas/ajax/browser/json',
-          array(
-            'query' => array('path' => $item['node']->getPath() . '/' . $item['node']->getFilename()),
-            'attributes' => array(
-              'class' => array(
-                'sas-browser-item-dir',
-              ),
-            ),
-          )
-        );
-        break;
-      case 'file':
-        $diag_id = str_replace('.xml', '', $item['node']->getFilename());
-        $diag = sasDiagFactory::create($diag_id, $item['node']->getPath());
-        if (is_object($diag)) {
-          $file_structure_items[] = l(
-            $diag_id,
-            '',
-            array(
-              'attributes' => array(
-                'data-path' => $item['node']->getPath(),
-                'data-id' => $diag_id,
-                'data-type' => $diag->getType(),
-                'class' => array(
-                  'sas-browser-item-file',
-                ),
-              ),
-            )
-          );
-        }
-        break;
-    }
+  $terms = $browser_items = array();
+  $vocab_name = 'media_folders';
+  $current_tid = ATP_SAS_DIAG_MEDIA_FOLDER_TID;
+  if (!empty($_GET['media_folder'])) {
+    $current_tid = (int) $_GET['media_folder'];
+  }
+  $media_term = taxonomy_term_load($current_tid);
+  $media_folder_vocab = taxonomy_vocabulary_machine_name_load($vocab_name);
+  $term_tree = taxonomy_get_tree($media_folder_vocab->vid, $current_tid, 1);
+
+  foreach ($term_tree as $term) {
+    $terms[$term->tid] = $term;
+    $browser_items[$term->tid] = array(
+      'data' => l(
+        $term->name,
+        'atp-sas/ajax/browser/json',
+        array('query' => array('media_folder' => $term->tid))
+      ),
+      'class' => array('sas-browser-item-dir'),
+    );
+  }
+
+  // First get eventual file items.
+  $file_items = _atp_document_get_media_folder_file_items($current_tid, 'sas', 'fids');
+  $files_dir = variable_get('file_public_path', conf_path() . '/files');
+  array_walk($file_items, function(&$file_item) use ($files_dir) {
+    $file = file_load($file_item);
+    $diag_id = str_replace('.xml', '', $file->filename);
+    $diag = sasDiagFactory::create($diag_id, $files_dir);
+    $file_item = l(
+      $diag_id,
+      '',
+      array(
+        'attributes' => array(
+          'data-path' => $files_dir,
+          'data-id' => $diag_id,
+          'data-type' => $diag->getType(),
+          'class' => array(
+            'sas-browser-item-file',
+          ),
+        ),
+      )
+    );
+  });
+
+  // Get eventual directory items.
+  if (!empty($file_items)) {
+    $browser_items = array_merge($browser_items, $file_items);
   }
   $file_browser_button_items = array();
-  $file_browser_button_items[] = l(
-    t('Back'),
-    'atp-sas/ajax/browser/json',
-    array(
-      'query' => array(
-        'path' => preg_replace(
-          '#(.*)/[^/]+[/]?$#s',
-          '$1',
-          $item['node']->getPath()
-        )
-      ),
-      'attributes' => array(
-        'class' => array(
-          'sas-browser-item-dir',
+  $file_browser_button_items[] = array(
+    'data' => l(
+      t('Back'),
+      'atp-sas/ajax/browser/json',
+      array(
+        'query' => array(
+          'media_folder' => $media_term->parent[0],
         ),
-      ),
-    )
+        'attributes' => array(
+          'class' => array(
+            'sas-browser-item-dir',
+          ),
+        ),
+      )
+    ),
+    'class' => array(
+      'sas-browser-item-dir',
+    ),
   );
   $output = array(
     'file_browser_wrapper' => array(
@@ -186,7 +190,7 @@ function atp_sas_ajax_get_file_browser($json = FALSE) {
           'id' => 'sas-file-structure',
         ),
         'file_structure' => array(
-          '#items' => $file_structure_items,
+          '#items' => $browser_items,
           '#theme' => 'item_list',
         ),
       ),
@@ -199,7 +203,7 @@ function atp_sas_ajax_get_file_browser($json = FALSE) {
       'file_browser_buttons_wrapper' => array(
         '#items' => $file_browser_button_items,
         '#theme' => 'item_list',
-        '#access' => $path != $root_path,
+        '#access' => $current_tid != ATP_SAS_DIAG_MEDIA_FOLDER_TID,
       ),
     ),
   );
@@ -215,7 +219,7 @@ function atp_sas_ajax_get_file_browser($json = FALSE) {
 }
 
 /**
- * Process callback for hook_filter
+ * Process callback for hook_filter.
  */
 function _atp_sas_diag_embed_process($text, $filter, $format, $langcode, $cache, $cache_id) {
   drupal_add_js('https://www.google.com/jsapi', 'external');
@@ -233,31 +237,10 @@ function _atp_sas_diag_embed_process($text, $filter, $format, $langcode, $cache,
 }
 
 /**
- * Tips callback for hook_filter
+ * Tips callback for hook_filter.
  */
 function _atp_sas_diag_embed_tips($filter, $format, $long) {
   return t('[[sasDiag|id:(xml file name without extension)|path:(path to xml file)|type:(type of diagram)]] - Insert a diagram.');
-}
-
-function atp_sas_chart_test() {
-  // Atodo: sas root path variable.
-  drupal_add_js('https://www.google.com/jsapi', 'external');
-  drupal_add_js(drupal_get_path('module', 'atp_sas') . '/js/sas_diag.js');
-  drupal_add_js(drupal_get_path('theme', 'atp_theme') .'/js/jquery.throttledresize.js');
-  drupal_add_js(drupal_get_path('theme', 'atp_theme') .'/js/jquery.debouncedresize.js');
-  $diags = array();
-  $diags[] = sasDiagFactory::create('DQ1_FIG3a_Risikoklasser_Circle');
-  $diags[] = sasDiagFactory::create('DQ1_FIG5_HistoriskeResultater_Bar');
-  $diags[] = sasDiagFactory::create('DQ1_FIG13_Indkomst_Line');
-  $diags[] = sasDiagFactory::create('DQ1_FIG17_Omsætning_Line_ReelDATA');
-  $diags[] = sasDiagFactory::create('EQ1_FIG11_InvestmentPortfolio_Table');
-
-  $output = array();
-  foreach ($diags as $diag) {
-    $output[] = $diag->render();
-  }
-
-  return $output;
 }
 
 /**
