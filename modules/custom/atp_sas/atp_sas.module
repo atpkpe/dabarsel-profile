@@ -6,7 +6,6 @@
 
 
 define('ATP_SAS_DIAG_BROWSER_ROOT_PATH', 'profiles/atp/modules/custom/atp_sas/test');
-define('ATP_SAS_DIAG_MEDIA_FOLDER_TID', 233);
 define('ATP_SAS_DIAG_MEDIA_FOLDER_VOCAB_NAME', 'media_folders');
 
 /**
@@ -21,8 +20,8 @@ function atp_sas_menu() {
     'type' => MENU_CALLBACK,
   );
   $items['atp-sas/insert/ajax'] = array(
-      'delivery callback' => 'ajax_deliver'
-    ) + $items['atp-sas/insert/nojs'];
+    'delivery callback' => 'ajax_deliver',
+  ) + $items['atp-sas/insert/nojs'];
 
   $items['atp-sas/ajax/browser/json'] = array(
     'page callback' => 'atp_sas_ajax_get_file_browser',
@@ -31,7 +30,29 @@ function atp_sas_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['admin/config/media/sas/configuration'] = array(
+    'title' => 'SAS configuration',
+    'description' => 'Administer SAS configuration.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('atp_sas_configuration_form'),
+    'access arguments' => array('administer sas'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'atp_sas.admin.inc',
+  );
+
   return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function atp_sas_permission() {
+  return array(
+    'administer sas' => array(
+      'title' => t('Administer SAS configuration'),
+      'description' => t('Change SAS settings.'),
+    ),
+  );
 }
 
 /**
@@ -111,7 +132,10 @@ function atp_sas_get_dir_sctructure($dir) {
 function atp_sas_ajax_get_file_browser($json = FALSE) {
   $terms = $browser_items = array();
   $vocab_name = 'media_folders';
-  $current_tid = ATP_SAS_DIAG_MEDIA_FOLDER_TID;
+  $current_tid = variable_get('atp_sas_media_folder_tid', 0);
+  if ($current_tid == 0) {
+    return array();
+  }
   if (!empty($_GET['media_folder'])) {
     $current_tid = (int) $_GET['media_folder'];
   }

@@ -10,6 +10,17 @@
 function atp_file_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'administer sas'.
+  $permissions['administer sas'] = array(
+    'name' => 'administer sas',
+    'roles' => array(
+      'Author' => 'Author',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
+    ),
+    'module' => 'atp_sas',
+  );
+
   // Exported permission: 'delete any sas files'.
   $permissions['delete any sas files'] = array(
     'name' => 'delete any sas files',
