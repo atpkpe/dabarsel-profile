@@ -56,7 +56,7 @@ projects[linkit][download][branch] = '7.x-3.x'
 projects[linkit][download][type] = 'git'
 projects[linkit][download][url] = 'http://git.drupal.org/project/linkit.git'
 projects[linkit][download][revision] = '79d91215cfd69bd968e9dce2f4d0e764dca6ed7f'
-projects[linkit][patch][] = 'http://www.drupal.org/files/issues/2158107-9-linking-to-direct-downloads-of-files.patch'
+projects[linkit][patch][] = 'http://svnhosttest.adapt.dk/atp-linkit-download-nolang.patch'
 
 projects[panelizer][type] = 'module'
 projects[panelizer][subdir] = 'contrib'
