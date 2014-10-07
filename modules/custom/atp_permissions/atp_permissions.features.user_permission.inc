@@ -57,6 +57,7 @@ function atp_permissions_user_default_permissions() {
     'roles' => array(
       'Author' => 'Author',
       'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
     ),
     'module' => 'linkchecker',
   );
@@ -128,6 +129,7 @@ function atp_permissions_user_default_permissions() {
     'roles' => array(
       'Author' => 'Author',
       'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
     ),
     'module' => 'linkchecker',
   );
@@ -186,7 +188,9 @@ function atp_permissions_user_default_permissions() {
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
     'roles' => array(
+      'Author' => 'Author',
       'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
     ),
     'module' => 'system',
   );
