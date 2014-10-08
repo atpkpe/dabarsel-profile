@@ -34,6 +34,7 @@ class sasDiagLine extends sasDiag {
     $options['vAxis']['baselineColor'] = 'none';
     $options['vAxis']['titleTextStyle']['italic'] = FALSE;
     $options['annotations']['textStyle']['color'] = self::color4;
+    $options['annotations']['textStyle']['bold'] = TRUE;
     return $options;
   }
 
