@@ -22,9 +22,9 @@
     <ul>
     <!-- Danish -->
     <?php if($lang == "da"): ?>
-			<li><input type="checkbox" value="1" name="group[15001][1]" id="mce-group[15001]-15001-0"><label for="mce-group[15001]-15001-0"><?php print t("Facts"); ?></label></li>
+			<li><input type="checkbox" value="1" name="group[15001][1]" id="mce-group[15001]-15001-0"><label for="mce-group[15001]-15001-0"><?php print t("Faktum"); ?></label></li>
 			<li><input type="checkbox" value="2" name="group[15001][2]" id="mce-group[15001]-15001-1"><label for="mce-group[15001]-15001-1"><?php print t("Investment"); ?></label></li>
-			<li><input type="checkbox" value="4" name="group[15001][4]" id="mce-group[15001]-15001-2"><label for="mce-group[15001]-15001-2"><?php print t("Retirement"); ?></label></li>
+			<li><input type="checkbox" value="4" name="group[15001][4]" id="mce-group[15001]-15001-2"><label for="mce-group[15001]-15001-2"><?php print t("Pension"); ?></label></li>
 			<li><input type="checkbox" value="8" name="group[15001][8]" id="mce-group[15001]-15001-3"><label for="mce-group[15001]-15001-3"><?php print t("Jobs"); ?></label></li>
 			<li><input type="checkbox" value="16" name="group[15001][16]" id="mce-group[15001]-15001-4"><label for="mce-group[15001]-15001-4"><?php print t("Udbetaling Danmark news"); ?></label></li>
 			<li><input type="checkbox" value="32" name="group[15001][32]" id="mce-group[15001]-15001-5"><label for="mce-group[15001]-15001-5"><?php print t("Contracts from Udbetaling Danmark"); ?></label></li>
