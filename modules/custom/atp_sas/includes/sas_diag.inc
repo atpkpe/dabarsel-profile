@@ -5,8 +5,10 @@
  * Date: 6/12/14 - 10:00 AM
  */
 
-
-
+/**
+ * Class sasDiag
+ * Base class for SAS diagrams.
+ */
 abstract class sasDiag {
   const color1 = '#adc200';
   const color2 = '#5f7200';
@@ -69,13 +71,6 @@ abstract class sasDiag {
         ),
       ),
     );
-     // Only for debug:
-    array_unshift($output, array(
-      'debug' => array(
-        '#type' => 'markup',
-        '#markup' => sprintf('<h3>%s:</h3>', $this->id),
-      ),
-    ));
 
     if (empty($used_ids) || !in_array($this->id, $used_ids)) {
       $output['#attached'] = array(
@@ -141,6 +136,10 @@ abstract class sasDiag {
 
 }
 
+/**
+ * Class sasDiagFactory
+ * Create a diagram.
+ */
 class sasDiagFactory {
 
   public static function create($id, $path = '') {

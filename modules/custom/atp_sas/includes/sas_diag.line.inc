@@ -5,6 +5,10 @@
  * Date: 6/12/14 - 10:55 AM
  */
 
+/**
+ * Class sasDiagLine
+ * SAS diagram presenting a single line.
+ */
 class sasDiagLine extends sasDiag {
 
   public function __construct($id, $xml) {

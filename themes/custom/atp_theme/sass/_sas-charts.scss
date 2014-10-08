@@ -29,13 +29,16 @@ $sas-color7: #b41e0a;
   }
   .format-strong, .header {
     @extend %header-fontfamily;
-    font-weight: 600;
+    font-weight: 700;
   }
   .pos-left {
     text-align: left;
   }
   .pos-right {
     text-align: right;
+  }
+  .pos-center {
+    text-align: center;
   }
 }
 

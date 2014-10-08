@@ -5,6 +5,10 @@
  * Date: 6/12/14 - 10:55 AM
  */
 
+/**
+ * Class sasDiagBar
+ * SAS diagram presenting a bar diagram.
+ */
 class sasDiagBar extends sasDiag {
 
   public function __construct($id, $xml) {
@@ -27,6 +31,7 @@ class sasDiagBar extends sasDiag {
     $options['chartArea']['backgroundColor'] = self::colLightGrey;
     $options['vAxis']['gridlines']['color'] = self::colGrey;
     $options['vAxis']['baselineColor'] = 'none';
+    $options['vAxis']['titleTextStyle']['italic'] = FALSE;
     return $options;
   }
 

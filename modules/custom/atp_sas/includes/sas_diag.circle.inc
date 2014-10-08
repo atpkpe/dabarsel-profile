@@ -5,6 +5,10 @@
  * Date: 6/12/14 - 10:55 AM
  */
 
+/**
+ * Class sasDiagCircle
+ * SAS diagram presenting a circle diagram.
+ */
 class sasDiagCircle extends sasDiag {
 
   public function __construct($id, $xml) {
@@ -16,6 +20,7 @@ class sasDiagCircle extends sasDiag {
       'height' => '400',
       'chartArea' => array('height'=>'360'),
       'backgroundColor' => 'transparent',
+      'tooltip' => array('trigger' => 'none'),
       'pieSliceText' => 'value',
       'pieSliceBorderColor' => 'none',
       'pieSliceTextStyle' => array('color' => '#fff', 'fontName' => 'Tahoma'),
