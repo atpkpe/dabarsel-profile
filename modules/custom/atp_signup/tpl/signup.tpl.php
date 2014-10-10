@@ -41,7 +41,7 @@
 		<div class="response" id="mce-success-response" style="display:none"></div>
 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_06eff39be00dbfa57deb5d09a_9bc98b0cb5" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="<?php print t('Signup'); ?>" name="subscribe" id="mc-embedded-subscribe" class="button form-submit"></div>
+    <div class="clear"><input type="submit" value="<?php print t('Sign up'); ?>" name="subscribe" id="mc-embedded-subscribe" class="button form-submit"></div>
     </div>
 </form>
 </div>
