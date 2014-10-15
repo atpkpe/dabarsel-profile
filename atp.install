@@ -633,3 +633,13 @@ function atp_update_7036(&$sandbox) {
   module_disable(array('tmgmt','atp_content_translation'));
   drupal_uninstall_modules(array('tmgmt','atp_content_translation'));
 }
+
+/**
+ * ATP-549, disable/uninstall devel module.
+ *
+ * @author Mikkel Jakobsen <mikkel@adapt.dk>
+ */
+function atp_update_7037(&$sandbox) {
+  module_disable(array('devel'));
+  drupal_uninstall_modules(array('devel'));
+}

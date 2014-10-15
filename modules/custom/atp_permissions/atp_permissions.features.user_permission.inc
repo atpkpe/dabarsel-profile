@@ -105,13 +105,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'contextual',
   );
 
-  // Exported permission: 'access devel information'.
-  $permissions['access devel information'] = array(
-    'name' => 'access devel information',
-    'roles' => array(),
-    'module' => 'devel',
-  );
-
   // Exported permission: 'access media browser'.
   $permissions['access media browser'] = array(
     'name' => 'access media browser',
@@ -2197,13 +2190,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'execute php code'.
-  $permissions['execute php code'] = array(
-    'name' => 'execute php code',
-    'roles' => array(),
-    'module' => 'devel',
-  );
-
   // Exported permission: 'flag notification_node_auto_unpublish'.
   $permissions['flag notification_node_auto_unpublish'] = array(
     'name' => 'flag notification_node_auto_unpublish',
@@ -2489,13 +2475,6 @@ function atp_permissions_user_default_permissions() {
     'name' => 'set workbench schedule for standard',
     'roles' => array(),
     'module' => 'workbench_scheduler',
-  );
-
-  // Exported permission: 'switch users'.
-  $permissions['switch users'] = array(
-    'name' => 'switch users',
-    'roles' => array(),
-    'module' => 'devel',
   );
 
   // Exported permission: 'translate admin strings'.
