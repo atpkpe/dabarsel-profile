@@ -19,6 +19,7 @@ class sasDiagBar extends sasDiag {
     $options = $this->optionsAxisLabels();
     $options['height'] = '400';
     $options['backgroundColor'] = 'transparent';
+    $options['tooltip'] = array('trigger' => 'none');
     $options['colors'] = array(
         self::color1,
         self::color2,
