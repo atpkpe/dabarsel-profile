@@ -331,15 +331,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'deploy',
   );
 
-  // Exported permission: 'administer devel menu items'.
-  $permissions['administer devel menu items'] = array(
-    'name' => 'administer devel menu items',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'menu_admin_per_menu',
-  );
-
   // Exported permission: 'administer entity view modes'.
   $permissions['administer entity view modes'] = array(
     'name' => 'administer entity view modes',
@@ -1014,6 +1005,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'administer search',
     'roles' => array(
       'Developer' => 'Developer',
+      'IT-ops' => 'IT-ops',
     ),
     'module' => 'search',
   );
@@ -1023,6 +1015,7 @@ function atp_permissions_user_default_permissions() {
     'name' => 'administer site configuration',
     'roles' => array(
       'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'system',
   );
