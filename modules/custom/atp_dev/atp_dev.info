@@ -3,6 +3,7 @@ description = Utilities and tools for development
 core = 7.x
 package = ATP
 dependencies[] = deploy_ui
+dependencies[] = field_ui
 dependencies[] = atp_data_deployment
 dependencies[] = atp_news_test_content
 dependencies[] = atp_sas_test_content
