@@ -75,3 +75,8 @@ projects[smart_trim][patch][] = 'http://www.drupal.org/files/issues/smart_trim-r
 
 projects[xmlsitemap][patch][] = 'http://www.drupal.org/files/issues/xmlsitemap-remove-filesize-2220707-50-D7.patch'
 
+; pathauto
+projects[pathauto][type] = 'module'
+projects[pathauto][subdir] = 'contrib'
+projects[pathauto][version] = '1.2'
+projects[pathauto][patch][] = 'https://www.drupal.org/files/issues/pathauto-persist-936222-213-pathauto-state.patch'
