@@ -645,7 +645,7 @@ function atp_update_7037(&$sandbox) {
 }
 
 /**
- * ATP-582, disable/uninstall devel module.
+ * ATP-582, disable/uninstall linkchecker module.
  *
  * @author Mikkel Jakobsen <mikkel@adapt.dk>
  */
