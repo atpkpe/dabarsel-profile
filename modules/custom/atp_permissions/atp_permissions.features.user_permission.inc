@@ -51,17 +51,6 @@ function atp_permissions_user_default_permissions() {
     'module' => 'webform',
   );
 
-  // Exported permission: 'access broken links report'.
-  $permissions['access broken links report'] = array(
-    'name' => 'access broken links report',
-    'roles' => array(
-      'Author' => 'Author',
-      'Developer' => 'Developer',
-      'IT-ops' => 'IT-ops',
-    ),
-    'module' => 'linkchecker',
-  );
-
   // Exported permission: 'access ckeditor link'.
   $permissions['access ckeditor link'] = array(
     'name' => 'access ckeditor link',
@@ -114,17 +103,6 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'media',
-  );
-
-  // Exported permission: 'access own broken links report'.
-  $permissions['access own broken links report'] = array(
-    'name' => 'access own broken links report',
-    'roles' => array(
-      'Author' => 'Author',
-      'Developer' => 'Developer',
-      'IT-ops' => 'IT-ops',
-    ),
-    'module' => 'linkchecker',
   );
 
   // Exported permission: 'access own webform results'.
@@ -440,16 +418,6 @@ function atp_permissions_user_default_permissions() {
       'Developer' => 'Developer',
     ),
     'module' => 'locale',
-  );
-
-  // Exported permission: 'administer linkchecker'.
-  $permissions['administer linkchecker'] = array(
-    'name' => 'administer linkchecker',
-    'roles' => array(
-      'Developer' => 'Developer',
-      'IT-ops' => 'IT-ops',
-    ),
-    'module' => 'linkchecker',
   );
 
   // Exported permission: 'administer linkit'.
@@ -1983,16 +1951,6 @@ function atp_permissions_user_default_permissions() {
       'Site administrator' => 'Site administrator',
     ),
     'module' => 'fieldable_panels_panes',
-  );
-
-  // Exported permission: 'edit link settings'.
-  $permissions['edit link settings'] = array(
-    'name' => 'edit link settings',
-    'roles' => array(
-      'Developer' => 'Developer',
-      'IT-ops' => 'IT-ops',
-    ),
-    'module' => 'linkchecker',
   );
 
   // Exported permission: 'edit meta tags'.

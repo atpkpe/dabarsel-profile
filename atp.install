@@ -643,3 +643,13 @@ function atp_update_7037(&$sandbox) {
   module_disable(array('devel'));
   drupal_uninstall_modules(array('devel'));
 }
+
+/**
+ * ATP-582, disable/uninstall devel module.
+ *
+ * @author Mikkel Jakobsen <mikkel@adapt.dk>
+ */
+function atp_update_7038(&$sandbox) {
+  module_disable(array('linkchecker'));
+  drupal_uninstall_modules(array('linkchecker'));
+}
