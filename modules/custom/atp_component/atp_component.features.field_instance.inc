@@ -855,24 +855,14 @@ function atp_component_field_default_field_instances() {
       ),
       '1_4_fact' => array(
         'label' => 'hidden',
-        'module' => 'smart_trim',
+        'module' => 'text',
         'settings' => array(
           'field_wrapper' => 'h3',
           'item_wrapper' => 0,
           'label_wrapper' => 0,
-          'more_link' => 0,
-          'more_text' => 'Read more',
-          'summary_handler' => 'full',
           'trim_length' => 30,
-          'trim_link' => FALSE,
-          'trim_options' => array(
-            'text' => 'text',
-          ),
-          'trim_preserve_tags' => '',
-          'trim_suffix' => '...',
-          'trim_type' => 'chars',
         ),
-        'type' => 'smart_trim_format',
+        'type' => 'text_trimmed',
         'weight' => 1,
       ),
       '1_4_h' => array(
