@@ -348,7 +348,7 @@ function atp_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'gss_api_key';
-  $strongarm->value = '000892732622498545035:kbzkbgpxtag';
+  $strongarm->value = '017192392234786439632:9g4mdvl5esi';
   $export['gss_api_key'] = $strongarm;
 
   $strongarm = new stdClass();
