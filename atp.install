@@ -177,7 +177,7 @@ function atp_update_7005(&$sandbox) {
  *  Enable adapt_ckeditor_widgets.
  */
 function atp_update_7006(&$sandbox) {
-  module_enable(array('adapt_ckeditor_widgets'));
+  module_enable(array('keditor_widgets'));
 }
 
 /**
@@ -652,4 +652,13 @@ function atp_update_7037(&$sandbox) {
 function atp_update_7038(&$sandbox) {
   module_disable(array('linkchecker'));
   drupal_uninstall_modules(array('linkchecker'));
+}
+
+/**
+ * ATP-570 enable Adapt chaos plugins module.
+ *
+ * @author casper Juel <casper@adapt.dk>
+ */
+function atp_update_7039(&$sandbox) {
+  module_enable(array('adapt_chaos_plugins'));
 }

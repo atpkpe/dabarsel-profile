@@ -1,0 +1,72 @@
+.js-cookie-information-popup {
+  position: fixed;
+  right: 5%;
+  width: 240px;
+  height: auto;
+  bottom: 0;
+  z-index: 3000;
+  @include device (phone) {
+    position: relative;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+  .cookie-information-container {
+    background: $green;
+    position: relative;
+    overflow: visible;
+    padding: 20px;
+    @include device(phone) {
+      text-align: center;
+    }
+    label {
+      font-size:12px;
+      font-weight: 800;
+    }
+    p {
+      font-size: 10px;
+      font-weight: 300;
+      color: #555;
+      line-height: 125%;
+      @include device(phone) {
+        margin:0;
+      }
+    }
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+      text-decoration: underline;
+    }
+
+    .close {
+      @include border-radius(100%);
+      color: #fff;
+      cursor: pointer;
+      background: #7c9500;
+      position: absolute;
+      display: block;
+      line-height: 40px;
+      top: -15px;
+      width: 40px;
+      height: 40px;
+      right: -15px;
+      text-align: center;
+      @include device(phone) {
+        position: relative;
+        padding: 10px 30px;
+        left: auto;
+        right: auto;
+        line-height: 100%;
+        top: auto;
+        display: inline-block;
+        width: auto;
+        margin-top: 20px;
+        @include border-radius(0%);
+      }
+      &:hover {
+        background: $green-dark;
+        color: white;
+      }
+    }
+  }
+}

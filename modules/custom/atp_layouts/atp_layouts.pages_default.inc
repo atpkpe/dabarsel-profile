@@ -449,6 +449,42 @@ function atp_layouts_default_page_manager_handlers() {
     $display->content['new-7c335331-d116-4f75-938e-cf613c87f493'] = $pane;
     $display->panels['bottom'][1] = 'new-7c335331-d116-4f75-938e-cf613c87f493';
     $pane = new stdClass();
+    $pane->pid = 'new-00051eef-6f02-476d-a447-c8cd3c881cad';
+    $pane->panel = 'bottom';
+    $pane->type = 'acp_cookie_info';
+    $pane->subtype = 'acp_cookie_info';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'message' => '<label>Hjemmesiden bruger cookies</label>
+<p>Cookies er nødvendige for at få hjemmesiden til at fungere, men de giver også info om hvordan du bruger vores hjemmeside, så vi kan forbedre den både for dig og for andre. Cookies på denne hjemmeside bruges primært til trafikmåling og optimering af sidens indhold.</p>
+<p>Hvis du klikker videre på siden, accepterer du vores brug af cookies.</p>
+<p>Vil du vide mere om vores cookies, og hvordan du sletter dem, <a href="#">klik her.</a></p>',
+      'translatable' => 1,
+      'return' => 'Finish',
+      'cancel' => 'Annullér',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'form_build_id' => 'form-xp5SZE6OOKLuyaYDMp5DOj6t9w5iYvV_xVCth64Nxxs',
+      'form_token' => 'GnSnTksmcmDwZbms9bNpPkXfZQGcpcrCyM_-ePkt-OM',
+      'form_id' => 'adapt_chaos_plugins_cookie_information_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'cookie-popup',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '00051eef-6f02-476d-a447-c8cd3c881cad';
+    $display->content['new-00051eef-6f02-476d-a447-c8cd3c881cad'] = $pane;
+    $display->panels['bottom'][2] = 'new-00051eef-6f02-476d-a447-c8cd3c881cad';
+    $pane = new stdClass();
     $pane->pid = 'new-0207cc58-2f42-4508-a661-a58414527c06';
     $pane->panel = 'footer';
     $pane->type = 'menu_tree';

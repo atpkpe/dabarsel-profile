@@ -23,4 +23,5 @@ features[page_manager_handlers][] = node_view_panel_context
 features[page_manager_handlers][] = node_view_panel_context_2
 features[page_manager_handlers][] = site_template_panel_context
 features[variable][] = page_manager_node_view_disabled
+no autodetect = 1
 project path = profiles/atp/modules/custom
