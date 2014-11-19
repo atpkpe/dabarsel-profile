@@ -185,6 +185,7 @@ $gallery-button-size: 43px;
   max-width: 100%;
   display: inline-block;
   position: relative;
+  /*
   &:after {
     @include background-svg('icon-videoplayer');
     background-repeat: no-repeat;
@@ -202,9 +203,28 @@ $gallery-button-size: 43px;
     &:after {
       @include background-svg('icon-videoplayer-green');
     }
+  } */
+  &:before {
+    background-image: url('../images/icon-videoplayer.png') !important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+  }
+  &:hover {
+    &:before {
+      background-image: url('../images/icon-videoplayer-green.png') !important;
+      pointer-events: none;
+    }
   }
   .file-overlay-open {
     cursor: pointer;
+
   }
 }
 
