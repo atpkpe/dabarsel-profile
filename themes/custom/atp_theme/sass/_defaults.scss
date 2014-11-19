@@ -270,6 +270,7 @@ table {
       vertical-align: top;
       border: 1px solid $table-header;
       padding: $margins;
+      width: 50%;
       &.spacing {
         background: transparent;
         width: $margins/2;
