@@ -449,42 +449,6 @@ function atp_layouts_default_page_manager_handlers() {
     $display->content['new-7c335331-d116-4f75-938e-cf613c87f493'] = $pane;
     $display->panels['bottom'][1] = 'new-7c335331-d116-4f75-938e-cf613c87f493';
     $pane = new stdClass();
-    $pane->pid = 'new-00051eef-6f02-476d-a447-c8cd3c881cad';
-    $pane->panel = 'bottom';
-    $pane->type = 'acp_cookie_info';
-    $pane->subtype = 'acp_cookie_info';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'message' => '<label>Hjemmesiden bruger cookies</label>
-<p>Cookies er nødvendige for at få hjemmesiden til at fungere, men de giver også info om hvordan du bruger vores hjemmeside, så vi kan forbedre den både for dig og for andre. Cookies på denne hjemmeside bruges primært til trafikmåling og optimering af sidens indhold.</p>
-<p>Hvis du klikker videre på siden, accepterer du vores brug af cookies.</p>
-<p>Vil du vide mere om vores cookies, og hvordan du sletter dem, <a href="#">klik her.</a></p>',
-      'translatable' => 1,
-      'return' => 'Finish',
-      'cancel' => 'Annullér',
-      'override_title' => 1,
-      'override_title_text' => '',
-      'form_build_id' => 'form-xp5SZE6OOKLuyaYDMp5DOj6t9w5iYvV_xVCth64Nxxs',
-      'form_token' => 'GnSnTksmcmDwZbms9bNpPkXfZQGcpcrCyM_-ePkt-OM',
-      'form_id' => 'adapt_chaos_plugins_cookie_information_form',
-      'op' => 'Finish',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'cookie-popup',
-    );
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '00051eef-6f02-476d-a447-c8cd3c881cad';
-    $display->content['new-00051eef-6f02-476d-a447-c8cd3c881cad'] = $pane;
-    $display->panels['bottom'][2] = 'new-00051eef-6f02-476d-a447-c8cd3c881cad';
-    $pane = new stdClass();
     $pane->pid = 'new-0207cc58-2f42-4508-a661-a58414527c06';
     $pane->panel = 'footer';
     $pane->type = 'menu_tree';
@@ -590,6 +554,41 @@ function atp_layouts_default_page_manager_handlers() {
     $display->content['new-9d6986fe-dde2-4e03-99f9-ecfa5148a703'] = $pane;
     $display->panels['footer'][2] = 'new-9d6986fe-dde2-4e03-99f9-ecfa5148a703';
     $pane = new stdClass();
+    $pane->pid = 'new-00051eef-6f02-476d-a447-c8cd3c881cad';
+    $pane->panel = 'header';
+    $pane->type = 'acp_cookie_info';
+    $pane->subtype = 'acp_cookie_info';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'message' => '<label>Accepter cookies</label>
+<p>atp.dk bruger cookies til statistik og optimering af indhold, så vi kan forbedre brugeroplevelsen. </p>
+<p>Bruger du atp.dk, accepterer du automatisk, at vi bruger cookies.  <a href="http://www.atp.dk/file/1264/download">Læs mere om ATP’s brug af cookies her</a></p>',
+      'translatable' => 1,
+      'return' => 'Finish',
+      'cancel' => 'Annullér',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'form_build_id' => 'form-MGe_Y2ZY5BclIdrxYDyzsfi0N6zYAbWveqVzl1KqyG8',
+      'form_token' => 'yuV7sWRLKwNPctGSTkemx4lN7Ue77WRqWiuhsTodECs',
+      'form_id' => 'adapt_chaos_plugins_cookie_information_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'cookie-popup',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '00051eef-6f02-476d-a447-c8cd3c881cad';
+    $display->content['new-00051eef-6f02-476d-a447-c8cd3c881cad'] = $pane;
+    $display->panels['header'][0] = 'new-00051eef-6f02-476d-a447-c8cd3c881cad';
+    $pane = new stdClass();
     $pane->pid = 'new-5c8dd74f-5eba-4a46-b233-d2a7a88e7715';
     $pane->panel = 'header';
     $pane->type = 'block';
@@ -614,11 +613,11 @@ function atp_layouts_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '5c8dd74f-5eba-4a46-b233-d2a7a88e7715';
     $display->content['new-5c8dd74f-5eba-4a46-b233-d2a7a88e7715'] = $pane;
-    $display->panels['header'][0] = 'new-5c8dd74f-5eba-4a46-b233-d2a7a88e7715';
+    $display->panels['header'][1] = 'new-5c8dd74f-5eba-4a46-b233-d2a7a88e7715';
     $pane = new stdClass();
     $pane->pid = 'new-0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03';
     $pane->panel = 'header';
@@ -647,11 +646,11 @@ function atp_layouts_default_page_manager_handlers() {
       'css_class' => 'languages',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03';
     $display->content['new-0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03'] = $pane;
-    $display->panels['header'][1] = 'new-0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03';
+    $display->panels['header'][2] = 'new-0c8f6d3b-8d9d-432c-b8fe-0ad51073ea03';
     $pane = new stdClass();
     $pane->pid = 'new-dc7776ed-32a3-43c8-8ab6-3fd5567b121e';
     $pane->panel = 'header';
@@ -666,11 +665,11 @@ function atp_layouts_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'dc7776ed-32a3-43c8-8ab6-3fd5567b121e';
     $display->content['new-dc7776ed-32a3-43c8-8ab6-3fd5567b121e'] = $pane;
-    $display->panels['header'][2] = 'new-dc7776ed-32a3-43c8-8ab6-3fd5567b121e';
+    $display->panels['header'][3] = 'new-dc7776ed-32a3-43c8-8ab6-3fd5567b121e';
     $pane = new stdClass();
     $pane->pid = 'new-8957f3f3-3afc-46d7-98e0-c7a8d4d0d5c5';
     $pane->panel = 'header';
@@ -686,11 +685,11 @@ function atp_layouts_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '8957f3f3-3afc-46d7-98e0-c7a8d4d0d5c5';
     $display->content['new-8957f3f3-3afc-46d7-98e0-c7a8d4d0d5c5'] = $pane;
-    $display->panels['header'][3] = 'new-8957f3f3-3afc-46d7-98e0-c7a8d4d0d5c5';
+    $display->panels['header'][4] = 'new-8957f3f3-3afc-46d7-98e0-c7a8d4d0d5c5';
     $pane = new stdClass();
     $pane->pid = 'new-715c5776-932e-4d54-b580-5e80c3111971';
     $pane->panel = 'header';
@@ -729,11 +728,11 @@ function atp_layouts_default_page_manager_handlers() {
       'css_class' => 'top-menu',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = '715c5776-932e-4d54-b580-5e80c3111971';
     $display->content['new-715c5776-932e-4d54-b580-5e80c3111971'] = $pane;
-    $display->panels['header'][4] = 'new-715c5776-932e-4d54-b580-5e80c3111971';
+    $display->panels['header'][5] = 'new-715c5776-932e-4d54-b580-5e80c3111971';
     $pane = new stdClass();
     $pane->pid = 'new-c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84';
     $pane->panel = 'header';
@@ -772,11 +771,11 @@ function atp_layouts_default_page_manager_handlers() {
       'css_class' => 'main-menu',
     );
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
     $pane->uuid = 'c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84';
     $display->content['new-c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84'] = $pane;
-    $display->panels['header'][5] = 'new-c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84';
+    $display->panels['header'][6] = 'new-c5ea4bc0-2c36-4dad-bb7e-e04e0c9ecb84';
     $pane = new stdClass();
     $pane->pid = 'new-ac2cc5e7-af62-4f23-99dc-12b78444913e';
     $pane->panel = 'header';
@@ -791,11 +790,11 @@ function atp_layouts_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 7;
     $pane->locks = array();
     $pane->uuid = 'ac2cc5e7-af62-4f23-99dc-12b78444913e';
     $display->content['new-ac2cc5e7-af62-4f23-99dc-12b78444913e'] = $pane;
-    $display->panels['header'][6] = 'new-ac2cc5e7-af62-4f23-99dc-12b78444913e';
+    $display->panels['header'][7] = 'new-ac2cc5e7-af62-4f23-99dc-12b78444913e';
     $pane = new stdClass();
     $pane->pid = 'new-17a620bf-0997-4e75-ac1f-3381aec47aa5';
     $pane->panel = 'header-bottom';
