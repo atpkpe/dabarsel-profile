@@ -250,11 +250,6 @@ projects[ckeditor_link_file][type] = 'module'
 projects[ckeditor_link_file][subdir] = 'contrib'
 projects[ckeditor_link_file][version] = '1.3'
 
-; Remove in next deploy !
-projects[tmgmt][type] = 'module'
-projects[tmgmt][subdir] = 'contrib'
-projects[tmgmt][version] = '1.0-rc1'
-
 projects[js][type] = 'module'
 projects[js][subdir] = 'contrib'
 projects[js][version] = '1.0'
@@ -270,10 +265,4 @@ projects[site_map][version] = '1.2'
 projects[menu_position][type] = 'module'
 projects[menu_position][subdir] = 'contrib'
 projects[menu_position][version] = '1.1'
-
-; Sas test files
-libraries[sas_test][download][type] = get
-libraries[sas_test][download][url] = 'http://svnhosttest.adapt.dk/atp_sas_test_20140910_2154.tar.gz'
-libraries[sas_test][destination] = modules/custom/atp_sas
-libraries[sas_test][directory_name] = test
 
