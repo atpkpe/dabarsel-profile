@@ -11,7 +11,9 @@ function stickyHeader() {
 (function ($) {
   $("header").append('<div class="menu-backdrop"/>');
   $(".menu-backdrop").css("height",$(".main-menu > ul > li.last > ul").height()+50+"px");
-  $(".main-menu > ul > li.last").hover(
+ 
+ /* 
+ $(".main-menu > ul > li.last").hover(
     function(){
       $(this).addClass("hover");
       $(".menu-backdrop").show();
@@ -23,6 +25,7 @@ function stickyHeader() {
       $("header").css("margin-bottom","");
     }
   );
+  */
   $(".toggle-menu").click(function(){
     if($("body").hasClass("show-menu")) {
       $("body").removeClass("show-menu");
