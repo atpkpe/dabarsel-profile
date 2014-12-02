@@ -453,7 +453,7 @@ function atp_layouts_default_page_manager_handlers() {
     $pane->panel = 'footer';
     $pane->type = 'menu_tree';
     $pane->subtype = 'main-menu';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array(
       'plugins' => array(
         0 => array(
